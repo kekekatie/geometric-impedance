@@ -1,0 +1,13 @@
+substrate,subset,condition,address_auc,weave_auc,hybrid_auc
+AB_N30,full_patch,native,0.8433,0.9763,0.9766
+AB_N30,full_patch,rewired,0.8433,0.7403,0.8417
+AB_N30,interior_75pct,native,0.9791,0.9985,0.9987
+AB_N30,interior_75pct,rewired,0.9791,0.9910,0.9904
+AB_N30,boundary_25pct,native,0.7611,0.9441,0.9443
+AB_N30,boundary_25pct,rewired,0.7611,0.5285,0.7779
+Penrose_N24,full_patch,native,0.6193,0.9433,0.9511
+Penrose_N24,full_patch,rewired,0.6193,0.5908,0.6211
+Penrose_N24,interior_75pct,native,0.5516,0.9089,0.9100
+Penrose_N24,interior_75pct,rewired,0.5516,0.8329,0.8535
+Penrose_N24,boundary_25pct,native,0.6368,0.9500,0.9499
+Penrose_N24,boundary_25pct,rewired,0.6368,0.5192,0.6390
