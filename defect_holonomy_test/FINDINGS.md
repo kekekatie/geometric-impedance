@@ -1,3 +1,58 @@
+# Defect-Holonomy Test — Findings (Iterations 1–4)
+
+## Iteration 4 — v3 torus crown jewel: quantised holonomy at the registered quanta
+
+**Result: Outcome A on the approximant torus.** Path memory exists, is quantised,
+and hits the Phase-0 registered quanta exactly on both substrates — with the
+predicted geometric shrink across the convergent sequence.
+
+**Phase 0 (pre-registered, committed before construction, `phase0_registration.json`):**
+holonomy quantum = ideal `π⊥(M_a)` of the approximant period sublattice. Shrink
+ratio derived as `√2−1 ≈ 0.41421` (AB) and `1/φ ≈ 0.61803` (Penrose) — the first
+power, not the squared guess.
+
+**E4 + E2 measurement (`torus_holonomy.py`, `results/v3_torus_pricelist.json`):**
+the approximant torus is built with ideal positions and boundary wrap (the seam
+is the frozen phason wall); edges classified against the substrate's own stars at
+the FP floor; perp increments taken **ideal** (the split convention). Any closed
+torus loop's holonomy is `π⊥(net lift)`, quantised on `π⊥(S)`.
+
+| order | AB conv | AB registered = measured | Penrose conv | Penrose registered = measured |
+|---|---|---|---|---|
+| 1 | 1/1 | 0.414214 | 1/1 | 0.236068 |
+| 2 | 3/2 | 0.171573 | 2/1 | 0.145898 |
+| 3 | 7/5 | 0.071068 | 3/2 | 0.090170 |
+| 4 | 17/12 | 0.029437 | 5/3 | 0.055728 |
+
+Measured = registered to all printed digits at every order; measured shrink ratio
+= 0.41421 (AB) / 0.61803 (Penrose) at every step. **All orders hit registered
+quanta.**
+
+**Why the torus and not the plane (the construction insight).** The ideal-lattice
+theorem (iteration 3) heals *any* physically-closed loop. An approximant with
+ideal positions inherits the theorem (heals); naively rationalising the
+projection collapses (the period sublattice maps every coset to one point). The
+escape is topological: on the torus a non-contractible loop has
+`π∥(m)=P_a ≠ 0`, so it is **not** physically closed — the theorem's hypothesis
+fails, the net lift is a period vector `m ∈ ⟨M_a,M_b⟩`, and the ideal perp of that
+lift is the nonzero quantum. This is the reverse-loop caveat and the iteration-3
+theorem meeting exactly: rigid-edge holonomy lives in `π⊥(ker π∥')`, zero for the
+ideal QC, geometrically small but nonzero for each approximant.
+
+**Honesty on scope.** Holonomy here telescopes to `π⊥(net lift)` exactly (edges
+are ideal stars), so the E4 result is deterministic — its content is the *match*
+between the torus measurement and the *independently computed* Phase-0
+registration (two separate calculations agreeing exactly), the nonzero-ness
+versus ideal/planar, and the geometric scaling. The still-open robustness tests:
+E1 planar surgical dipole (does a real dislocation core with seam misfit hit the
+quantum within the FP floor, or does the phason wall add spread?), E3 M-dependence
+forgery (holonomy must track the chosen period's *direction*, not just magnitude),
+and the §6 calibration statistics on that spread. The torus establishes the
+quantisation and the price list; the surgical tests probe how a real defect
+carries them. Canaries (1+√2, φ²) absent; ramp method remains forbidden.
+
+---
+
 # Defect-Holonomy Test — Findings (Iterations 1, 2 & 3)
 
 ## Iteration 3 — the rigid-edge holonomy theorem (verified)
