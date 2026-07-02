@@ -1,8 +1,13 @@
 # Defect-Holonomy Test — frozen results bundle (paper citation)
 
 This bundle is the immutable result set for the arrow-of-time / geometric-memory
-paper. Cite the tagged commit `defect-holonomy-v3` so the paper references one
-fixed state.
+paper. Cite the frozen reference so the paper references one fixed state:
+
+- **Release branch:** `release/defect-holonomy-v3` (pinned to the commit of this
+  file). This environment's managed git remote does not accept tag pushes, so a
+  pinned branch stands in for a tag.
+- **Immutable anchor:** the commit SHA that this `RELEASE_MANIFEST.md` lands on
+  (reported in the session) — the true fixed reference regardless of ref name.
 
 ## The result, in one line
 
