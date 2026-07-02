@@ -1,3 +1,45 @@
+# Defect-Holonomy Test — Findings (Iterations 1, 2 & 3)
+
+## Iteration 3 — the rigid-edge holonomy theorem (verified)
+
+The boundary-escape mechanism (iteration 2) is the *relaxation pathway*, but a
+deeper theorem makes healing **inevitable**, independent of construction or
+topology:
+
+> **Theorem.** On any structure whose vertices lie on the ideal projected lattice
+> with exact star-vector edges, the perpendicular holonomy of every closed
+> physical loop is identically zero. A closed loop's integer edge-sum
+> `m = Σ s·ê_j` satisfies `π∥(m)=0`; and `ker(π∥) ∩ Z^N` maps to zero under `π⊥`.
+
+Verified numerically (`verify_holonomy_theorem.py`), |mᵢ| ≤ 20:
+
+- **Ammann–Beenker:** `ker(π∥) ∩ Z⁴ = {0}` exactly ⇒ `m = 0` ⇒ holonomy 0.
+- **Penrose:** `ker(π∥) ∩ Z⁵ = Z·(1,1,1,1,1)` exactly (cyclotomic relation Φ₅),
+  and `‖π⊥((1,1,1,1,1))‖ = 3.5×10⁻¹⁶ ≈ 0` ⇒ holonomy 0.
+- **Corollary (strongest form):** the v2 tight-loop integer sums are *literally*
+  the zero vector `[0,0,0,0(,0)]` at every radius, both substrates — not "small
+  perp norm." Healing is the exact algebraic identity, not a numerical accident.
+
+**Consequence — the correction to iteration 2's framing.** Healing is *not*
+fundamentally a free-boundary effect; even an ideal-tiling torus would heal
+(`ker(π∥)` still has zero perp image). The load-bearing ingredient for rigid-edge
+holonomy is **rationality of the projection**: a periodic (rational-approximant)
+tiling gives `π∥` a nonzero integer kernel vector `M` (the approximant period)
+with `π⊥(M) ≠ 0`. That perp image is the **only legal home** for rigid-edge
+holonomy, and it is what v3 must target. Non-simply-connectedness is necessary
+(you need a loop that winds the torus so `m = M`), but rationality is what makes
+`π⊥(M) ≠ 0`.
+
+**Registered v3 predictions (pre-compute before running):** holonomy quantum =
+`π⊥(M)` of the chosen approximant and integer multiples (NOT `±e⊥_{j*}`); across
+the convergent sequence k = 1, 2, 3…, `|π⊥(M_k)|` shrinks geometrically toward
+zero (asymptotic ratio 1/δ_silver² for AB, 1/φ² for Penrose), the ideal QC being
+the k→∞ limit where topological memory is squeezed out. M-dependence replaces
+b-dependence as the forgery test: each approximant order must yield its own
+registered quantum.
+
+---
+
 # Defect-Holonomy Test — Findings (Iterations 1 & 2)
 
 **Programme:** Aperiodic projection tilings / directional balance / arrow-of-time
