@@ -1,0 +1,19 @@
+
+=== ammann_beenker (Z^4) ===
+(a) |m_i|<=20: kernel has 1 vectors (0 nonzero)
+    AB kernel trivial (only 0): True
+(c) v2 tight-loop integer sums m (should be 0 / multiple of ones):
+    r=4 w=1.0: m=[0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=6 w=1.0: m=[0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=8 w=1.0: m=[0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=10 w=1.0: m=[0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+
+=== penrose (Z^5) ===
+(a) |m_i|<=20: kernel has 41 vectors (40 nonzero)
+    Penrose nonzero kernel all multiples of (1,1,1,1,1): True  (e.g. [-20 -20 -20 -20 -20])
+(b) ||pi_perp((1,1,1,1,1))|| = 3.51e-16
+(c) v2 tight-loop integer sums m (should be 0 / multiple of ones):
+    r=4 w=1.0: m=[0, 0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=6 w=1.0: m=[0, 0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=8 w=1.0: m=[0, 0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
+    r=10 w=1.0: m=[0, 0, 0, 0, 0]  ->ZERO  ||pi_perp(m)||=0.00e+00
