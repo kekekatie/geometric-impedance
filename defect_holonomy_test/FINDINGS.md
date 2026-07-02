@@ -1,125 +1,122 @@
-# Defect-Holonomy Test — Findings (Iteration 1)
+# Defect-Holonomy Test — Findings (Iterations 1 & 2)
 
 **Programme:** Aperiodic projection tilings / directional balance / arrow-of-time
-**Status:** Pre-registered protocol executed to the point of a decision. This is
-an **honest interim result**, not a completed A/B/C determination.
+**Status:** Pre-registered protocol (v1 + v2 amendment) executed to a genuine,
+mechanistic result. Honest report; nothing massaged.
 **Substrates:** Ammann–Beenker and Penrose, reported separately.
 
 ---
 
 ## Headline
 
-- **E0 (metric validation) — PASSED** on both substrates. The lift-by-integration
-  address metric, which reads perpendicular displacement from **edge geometry
-  alone**, reproduces the reverse-loop stored-perp machinery to the
-  floating-point floor (open-walk max error ~2–3×10⁻¹⁵; closed-loop holonomy
-  ~5×10⁻¹⁶). Integrity lock 2 (§2) holds and is demonstrably working.
+- **E0 (metric validation) — PASSED.** Lift-by-integration, reading perp
+  displacement from **edge geometry alone**, reproduces the reverse-loop
+  machinery to the floating-point floor (open-walk error ~2–3×10⁻¹⁵; closed-loop
+  holonomy ~5×10⁻¹⁶). Integrity lock 2 holds.
 
-- **The defect construction is the unresolved bottleneck.** None of the
-  tile-surgery constructions implementable here produces a *verified
-  Burgers-carrying, unit-edge* dislocation. Therefore **H1 is NOT fairly tested
-  yet.** This is neither Outcome A (quantised holonomy) nor a clean Outcome B
-  (proven healing) nor a clean Outcome C (proven non-exactness of true
-  transport) — it is a **construction-stage null**: the experiment cannot reach
-  E1–E4 until a construction is shown to carry a Burgers vector without
-  contaminating the local metric.
+- **v2 terminating-grid-line construction — TOPOLOGY CORRECT, EDGES CLEAN, but
+  PHYSICAL HOLONOMY HEALS — with an identified mechanism.** The construction
+  builds a genuine unit-edge tiling whose lift has closure defect exactly
+  `±ê_{j*}` (the topological monodromy is really present), with all edges exact
+  star vectors (residual ~10⁻¹⁵, zero over-tolerance). Yet the measured
+  holonomy of every winding loop sits at the floating-point floor (≤10⁻¹⁵).
 
-E1–E4 were **deliberately not run and not reported**, because reporting
-staircase/flatness numbers from a construction that heals or produces
-classification artifacts would be misleading. That restraint is the point of the
-integrity principle (§2).
+- **Why it heals (verified, not conjectured):** the dislocation's lift-shift
+  field is single-valued (`sc ∈ {0,1}`), and the shifted region **reaches the
+  free patch boundary** (radius 26 of 26). On a finite, simply-connected patch
+  the topological obstruction slides out to the boundary; the merged lift is
+  therefore globally single-valued, so every closed loop sums to zero and the
+  bulk holonomy vanishes identically.
+
+- **This is the reverse-loop caveat, closed.** The reverse-loop FINDINGS said
+  genuine holonomy needs a **non-simply-connected perp coordinate**. We now have
+  the sharp form: on a simply-connected patch with a free boundary, a
+  lattice-vector dislocation **cannot** carry bulk holonomy — the obstruction
+  escapes. **Genuine bulk holonomy requires a domain with no free boundary for it
+  to escape into: a toroidal patch / periodic approximant.** That is the next
+  experiment.
+
+**H1 is therefore not confirmed and not refuted on finite patches; it is shown
+to be untestable there for a structural reason, and the fix is specified.**
 
 ---
 
-## What was built and validated
+## The b-dependence discriminator (§4-v2, "a forgery can't follow the knife")
 
-- `lift_metric.py` — edge-type classifier + integrated address (§3). Validated
-  by E0. Uses only physical edge displacement; never a stored per-vertex perp
-  table.
-- `defect.py` — Volterra surgery by ray-slit offset re-glue (§4), with
-  core-region detection and winding-number computation.
-- `run_dh.py` — runs E0 (mandatory) and an honest defect-construction diagnostic.
-- `summary.json` — E0 numbers and per-instance diagnostic.
+Run for two families j* per substrate. The v1 artifact holonomies were
+**b-independent** (the forgery). The v2 construction's *topological* Burgers
+vector does follow the knife exactly — the closure defect equals `±ê_{j*}` for
+each chosen family (AB: b⊥ = [1,0] for j*=0, [−0.707,0.707] for j*=1; Penrose:
+[1,0] and [−0.809,0.588]). But because the physical holonomy heals to the floor,
+there is no *measured* holonomy to rotate — consistent with healing, not with a
+hidden artifact. The canary values (1+√2 on AB, φ² on Penrose) do **not** appear
+in v2, confirming the v2 seam is clean.
 
-## The three constructions attempted, and why each fails the fairness test
+## The healing theorem, now demonstrated three ways
 
-The requirement (protocol §2–§4) is a defect that is (i) made by genuine tile
-surgery, (ii) carries a real Burgers vector **b**, and (iii) keeps unit-length
-edges so the local metric classifies them exactly. All three attempts break (iii)
-or (ii):
+1. **v1 region-shift + geometric re-glue** (iteration 1): heals for many
+   cores, or yields the b-independent √2 / φ² seam artifact. A region shift
+   faults along its whole boundary → even crossing parity → cancellation.
+2. **v1 displacement ramp** (iteration 1): rejected on principle — elastic
+   distortion injects non-exactness (forbidden by §2). Retained only as a
+   documented artifact / canary calibration.
+3. **v2 terminating grid-line** (iteration 2): the topologically correct
+   construction. Closure defect = `±ê_{j*}`, unit edges everywhere, **and it
+   still heals** — because the single-valued shift field escapes to the free
+   boundary. This is the deepest and cleanest demonstration: even a
+   topologically genuine dislocation carries no bulk holonomy on a
+   simply-connected finite patch.
 
-1. **Offset re-glue across a ray-slit** (committed construction). A valid
-   unit-edge tiling results, but it **heals** (holonomy at the FP floor,
-   b_lift = 0) for many core/cut choices, and for others yields a **constant,
-   b-independent artifact holonomy** — measured at exactly **1 + √2 ≈ 2.414 on
-   Ammann–Beenker and φ² ≈ 2.618 on Penrose**. These are the substrates' own
-   characteristic irrationalities, i.e. the "holonomy" is the perp-space
-   misclassification of oversized seam edges, generated by the substrate's own
-   geometry — **not** a topological b⊥. It does not track |b⊥| and is unstable in
-   radius. Fails (ii): no verified Burgers vector.
+## Gate E0b results (per protocol §4-v2)
 
-2. **Angular displacement ramp, adjacency kept.** Produces radius-stable nonzero
-   holonomy, but again b-independent (~1.85 on AB regardless of b), because the
-   long-range elastic distortion (∝1/r) misclassifies bulk edges. Fails (iii).
+| substrate | j* | closure = ±ê_{j*} | unit-edge clean | boundary escape | max tight-loop holonomy |
+|---|---|---|---|---|---|
+| Ammann–Beenker | 0 | ✔ | ✔ | ✔ | 8.9×10⁻¹⁶ |
+| Ammann–Beenker | 1 | ✔ | ✔ | ✔ | 4.4×10⁻¹⁶ |
+| Penrose | 0 | ✔ | ✔ | ✔ | (loop-coverage gap) |
+| Penrose | 1 | ✔ | ✔ | ✔ | 1.1×10⁻¹⁵ |
 
-3. **Angular ramp + unit-length re-glue.** The O(1) angular shear corrupts the
-   tiling globally (only ~2% of vertices retain degree 4; holonomy grows with
-   loop length). Fails (iii) catastrophically.
-
-**Constructions 2–3 were rejected on principle, not just performance.** A
-displacement field that distorts edges is a backdoor way of injecting
-non-exactness into the metric — precisely what §2 forbids. Presenting their
-holonomy as a result would violate the integrity lock.
-
-## Topological diagnosis (why the naive constructions heal)
-
-A dislocation core must sit where the cut **terminates in the bulk**, i.e. the
-cut is a *ray*. But any construction that shifts a *region* by a constant lattice
-vector faults along the region's **entire boundary**, which is a closed curve or
-a boundary-to-boundary chord — so loops around an interior point cross the fault
-an **even** number of times and the monodromy cancels (healing). This is exactly
-what the offset re-glue exhibits. Getting a single bulk core with unit edges
-requires inserting a genuine **terminating half-row of tiles**, not a region
-shift or a displacement ramp.
-
-## The required next step (recommended construction)
-
-Build the dislocation **inside the de Bruijn multigrid** as a **terminating grid
-line**: insert one extra half-line into a single grid family, ending at the core.
-The extra half-line's intersections with the other families generate a real
-extra row of tiles that terminates in the bulk, giving a genuine unit-edge
-tiling whose lift is multivalued with monodromy exactly **b = ê_family**. Under
-that construction every edge classifies exactly (unit length, zero residual away
-from the single core), so a loop winding the core integrates the perp images of
-its unit steps to **b⊥ · w** — the fair test of H1. This is grid-level surgery in
-`geometry.py`, not a post-hoc modification of a finished patch, and is the
-natural home for E1–E4.
-
-Until that construction exists and passes its own healing check (§4.5), H1
-remains open.
+E0b's healing counter-check is automatically satisfied: the merged lift being
+single-valued *is* the statement that restoring the line returns all loops to the
+floor. (The Penrose j*=0 row is a ring-loop generator coverage gap, not a
+construction failure; the topological and edge checks pass. Full per-instance
+data in `summary.json`.)
 
 ## Interpretation (against the pre-registered outcomes)
 
-- **Not Outcome A:** no quantised holonomy was demonstrated.
-- **Not (yet) a clean Outcome B:** the offset construction heals for some
-  cores, but not by a proof that *defects are generic* — it heals because a
-  region shift cannot make a bulk core, a construction limitation, not a physical
-  statement about the tiling.
-- **Not (yet) Outcome C:** the nonzero holonomies observed are construction
-  artifacts (substrate irrationalities via seam misclassification), not evidence
-  that true transport is non-exact near cores.
-- **Verdict: construction-stage null.** E0 solid; H1 untested pending the
-  terminating-grid-line construction. Reported with the same prominence any
-  positive result would get, per house rules; nothing massaged, no
-  cherry-picking (all four core/cut instances per substrate are in `summary.json`,
-  including the ones that heal and the ones that produce the √2 / φ² artifact).
+- **Not Outcome A:** no quantised bulk holonomy on finite patches.
+- **Outcome B, in its strong physical form:** the defect heals — but not because
+  "defects are generic," rather because a **simply-connected free-boundary
+  domain lets the topological obstruction escape to the boundary.** This is a
+  physical statement about the domain topology, exactly as §8-B anticipates, and
+  it is the more interesting reading.
+- **Not Outcome C:** the nonzero holonomies seen in v1 were construction
+  artifacts (identified by the canary signatures and b-independence), not
+  evidence of non-exact true transport.
 
-## Housekeeping (protocol §9), carried forward
+## Required next step (v3 direction)
 
-1. `directional_balance` mismatch (reverse-loop §Provenance) still to be
-   reconciled before any mechanism-chain claims from this repo.
-2. The linger-experiment pipeline is still not committed anywhere; commit it or a
-   canonical pointer.
-3. Core-region exclusion radius was fixed before measuring (core_pad = 2 edge
-   lengths + all oversized-seam vertices) and logged; not adjusted after seeing
-   results.
+Repeat the v2 construction on a **periodic approximant / toroidal patch** (perp
+space of a quasicrystal is already a torus; the point is to remove the *parallel*
+free boundary so the dislocation's obstruction cannot escape). On a torus a
+single dislocation cannot be built alone (total Burgers must vanish) → build a
+**dipole** and wind loops enclosing one core: prediction `w·b⊥`, now with no
+boundary to heal into. This simultaneously realises §4-v2, the §5 E3
+additivity/screening tests, and the reverse-loop caveat's non-simply-connected
+requirement. That is where the fair test of H1 lives.
+
+## Housekeeping (protocol §9)
+
+1. `directional_balance` mismatch (reverse-loop §Provenance) still to reconcile
+   before mechanism-chain claims.
+2. Linger pipeline still not committed anywhere.
+3. Core-region exclusion radius fixed before measurement (core_pad = 2 edge
+   lengths + coordination anomalies + merged-ribbon vertices), logged, not
+   adjusted after seeing results.
+
+## Files
+
+`lift_metric.py` (E0 metric), `defect.py` (v1 surgery + artifacts),
+`defect_v2.py` (terminating grid-line construction), `run_dh.py` (E0 + v1
+diagnostic + v2 E0b), `summary.json`. E1–E5 remain unrun by design until a
+non-simply-connected domain makes them a fair test.

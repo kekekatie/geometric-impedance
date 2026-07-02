@@ -19,6 +19,7 @@ from geometry import Patch
 import walker as W
 from lift_metric import LiftMetric, positions_of_path
 from defect import WoundedPatch, ring_loop
+from defect_v2 import TerminatingLineDefect
 
 HERE = Path(__file__).parent
 (HERE / "results").mkdir(exist_ok=True)
@@ -101,6 +102,62 @@ def defect_diagnostic(patch):
     return rows, verdict, dict(healed=bool(healed), quantised=quantised)
 
 
+def e0b_v2(patch):
+    """Gate E0b (protocol §4-v2): terminating grid-line construction. For >=2
+    families, check topological closure defect, clean unit edges, tight-loop
+    holonomy at 3 radii for w=+-1, and diagnose the healing mechanism."""
+    lm = LiftMetric(patch.par_star, patch.perp_star)
+    r_patch = float(np.linalg.norm(patch.par, axis=1).max())
+    out = []
+    for j_star in [0, 1]:
+        d = TerminatingLineDefect(patch, j_star=j_star)
+        # tight-loop holonomy at three radii
+        holos = []
+        for radius in [4, 6, 8]:
+            loop = ring_loop(d, radius)
+            if loop is None:
+                continue
+            P = positions_of_path(d, loop)
+            h, _, res, nover = lm.holonomy(P)
+            w = d.winding_number(P)
+            holos.append((radius, float(w), h, res, nover))
+        # healing mechanism: is the shift field single-valued and boundary-reaching?
+        sc = d.shift_count
+        rr = np.linalg.norm(d.par0, axis=1)
+        shifted = sc > 0
+        reaches_boundary = bool(shifted.any() and rr[shifted].max() > 0.9 * r_patch)
+        max_holo = max((h for _, _, h, _, _ in holos), default=float("nan"))
+        clean_edges = all(nover == 0 for *_, nover in holos) if holos else False
+        out.append(dict(
+            j_star=j_star, b_perp=np.round(d.b_perp, 4).tolist(),
+            b_perp_norm=round(float(np.linalg.norm(d.b_perp)), 4),
+            worm_size=d.worm_size, removed=d.removed_size, merged=d.merged,
+            core_size=d.core_size, closure_defect_is_burgers=bool(d.closure_ok),
+            shift_field_single_valued=bool(set(sc.tolist()) <= {0, 1}),
+            shift_region_reaches_boundary=reaches_boundary,
+            clean_unit_edges=clean_edges,
+            max_tight_loop_holonomy=float(max_holo),
+            tight_loops=[dict(r=r, w=w, holo=h, maxres=res, nover=n)
+                         for (r, w, h, res, n) in holos]))
+    # verdict (consider only instances where tight loops could be formed)
+    with_loops = [o for o in out if o["tight_loops"]]
+    heals = bool(with_loops) and all(
+        o["max_tight_loop_holonomy"] < 1e-9 for o in with_loops)
+    topo_ok = all(o["closure_defect_is_burgers"] for o in out)
+    clean = bool(with_loops) and all(o["clean_unit_edges"] for o in with_loops)
+    if topo_ok and clean and heals:
+        verdict = ("TOPOLOGY CORRECT, UNIT-EDGE CLEAN, but PHYSICAL HOLONOMY "
+                   "HEALS: on a finite simply-connected patch the single-valued "
+                   "shift field carries the obstruction to the free boundary. "
+                   "Genuine bulk holonomy needs a non-simply-connected domain "
+                   "(toroidal patch / periodic approximant).")
+    elif topo_ok and not clean:
+        verdict = "topology ok but re-glue not unit-clean -- investigate"
+    else:
+        verdict = "construction did not realise the topological monodromy"
+    return out, verdict, dict(heals_via_boundary_escape=bool(heals and topo_ok))
+
+
 def main():
     t0 = time.time()
     summary = {"config": {"seed": SEED, "radius": 26.0}, "substrates": {}}
@@ -115,15 +172,22 @@ def main():
             summary["substrates"][sub] = {"E0": e0, "aborted": True}
             continue
         diag_rows, verdict, flags = defect_diagnostic(patch)
-        print(f"[{sub}] defect construction verdict: {verdict}", flush=True)
-        for r in diag_rows:
-            print(f"    core={r['core']} b_lift={r['b_lift']} "
-                  f"|b_perp|={r['b_perp_norm']} "
-                  f"w1_holonomy={r['w1_holonomy_median']:.3e} "
-                  f"(spread {r['w1_holonomy_spread']:.2e})", flush=True)
-        summary["substrates"][sub] = {"E0": e0, "defect_verdict": verdict,
-                                      "defect_flags": flags,
-                                      "defect_instances": diag_rows}
+        print(f"[{sub}] v1 defect construction verdict: {verdict}", flush=True)
+        v2_rows, v2_verdict, v2_flags = e0b_v2(patch)
+        print(f"[{sub}] v2 (terminating grid-line) E0b: {v2_verdict}", flush=True)
+        for r in v2_rows:
+            print(f"    j*={r['j_star']} b_perp={r['b_perp']} "
+                  f"closure=Burgers:{r['closure_defect_is_burgers']} "
+                  f"unit_clean:{r['clean_unit_edges']} "
+                  f"boundary_escape:{r['shift_region_reaches_boundary']} "
+                  f"max_holonomy={r['max_tight_loop_holonomy']:.2e}", flush=True)
+        summary["substrates"][sub] = {"E0": e0,
+                                      "v1_defect_verdict": verdict,
+                                      "v1_defect_flags": flags,
+                                      "v1_defect_instances": diag_rows,
+                                      "v2_e0b_verdict": v2_verdict,
+                                      "v2_e0b_flags": v2_flags,
+                                      "v2_e0b_instances": v2_rows}
     summary["runtime_s"] = round(time.time() - t0, 1)
     with open(HERE / "summary.json", "w") as f:
         json.dump(summary, f, indent=2, default=str)

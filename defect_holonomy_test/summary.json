@@ -12,12 +12,12 @@
         "max_loop_holonomy": 4.965068306494546e-16,
         "passed": true
       },
-      "defect_verdict": "NON-QUANTISED / construction-dependent (holonomy present but not equal to b_perp and/or unstable) -- construction artefact, not a fair test of H1",
-      "defect_flags": {
+      "v1_defect_verdict": "NON-QUANTISED / construction-dependent (holonomy present but not equal to b_perp and/or unstable) -- construction artefact, not a fair test of H1",
+      "v1_defect_flags": {
         "healed": false,
         "quantised": false
       },
-      "defect_instances": [
+      "v1_defect_instances": [
         {
           "core": [
             1.3,
@@ -102,6 +102,92 @@
           "w1_holonomy_median": 2.414213562373095,
           "w1_holonomy_spread": 2.220446049250313e-15
         }
+      ],
+      "v2_e0b_verdict": "TOPOLOGY CORRECT, UNIT-EDGE CLEAN, but PHYSICAL HOLONOMY HEALS: on a finite simply-connected patch the single-valued shift field carries the obstruction to the free boundary. Genuine bulk holonomy needs a non-simply-connected domain (toroidal patch / periodic approximant).",
+      "v2_e0b_flags": {
+        "heals_via_boundary_escape": true
+      },
+      "v2_e0b_instances": [
+        {
+          "j_star": 0,
+          "b_perp": [
+            1.0,
+            0.0
+          ],
+          "b_perp_norm": 1.0,
+          "worm_size": 63,
+          "removed": 31,
+          "merged": 31,
+          "core_size": 58,
+          "closure_defect_is_burgers": true,
+          "shift_field_single_valued": true,
+          "shift_region_reaches_boundary": true,
+          "clean_unit_edges": true,
+          "max_tight_loop_holonomy": 8.881784197001252e-16,
+          "tight_loops": [
+            {
+              "r": 4,
+              "w": 1.0,
+              "holo": 8.881784197001252e-16,
+              "maxres": 5.978733960281817e-16,
+              "nover": 0
+            },
+            {
+              "r": 6,
+              "w": 1.0,
+              "holo": 8.881784197001252e-16,
+              "maxres": 8.902866418618592e-16,
+              "nover": 0
+            },
+            {
+              "r": 8,
+              "w": 1.0,
+              "holo": 2.220446049250313e-16,
+              "maxres": 2.1556631856153973e-15,
+              "nover": 0
+            }
+          ]
+        },
+        {
+          "j_star": 1,
+          "b_perp": [
+            -0.7071,
+            0.7071
+          ],
+          "b_perp_norm": 1.0,
+          "worm_size": 63,
+          "removed": 31,
+          "merged": 31,
+          "core_size": 52,
+          "closure_defect_is_burgers": true,
+          "shift_field_single_valued": true,
+          "shift_region_reaches_boundary": true,
+          "clean_unit_edges": true,
+          "max_tight_loop_holonomy": 4.440892098500626e-16,
+          "tight_loops": [
+            {
+              "r": 4,
+              "w": 1.0,
+              "holo": 4.440892098500626e-16,
+              "maxres": 5.978733960281817e-16,
+              "nover": 0
+            },
+            {
+              "r": 6,
+              "w": 1.0,
+              "holo": 4.440892098500626e-16,
+              "maxres": 8.902866418618592e-16,
+              "nover": 0
+            },
+            {
+              "r": 8,
+              "w": 0.9999999999999999,
+              "holo": 3.1401849173675503e-16,
+              "maxres": 2.1556631856153973e-15,
+              "nover": 0
+            }
+          ]
+        }
       ]
     },
     "penrose": {
@@ -112,12 +198,12 @@
         "max_loop_holonomy": 4.710277376051325e-16,
         "passed": true
       },
-      "defect_verdict": "NON-QUANTISED / construction-dependent (holonomy present but not equal to b_perp and/or unstable) -- construction artefact, not a fair test of H1",
-      "defect_flags": {
+      "v1_defect_verdict": "NON-QUANTISED / construction-dependent (holonomy present but not equal to b_perp and/or unstable) -- construction artefact, not a fair test of H1",
+      "v1_defect_flags": {
         "healed": false,
         "quantised": false
       },
-      "defect_instances": [
+      "v1_defect_instances": [
         {
           "core": [
             1.3,
@@ -206,8 +292,72 @@
           "w1_holonomy_median": 8.691300040493333e-16,
           "w1_holonomy_spread": 2.6180339887498936
         }
+      ],
+      "v2_e0b_verdict": "topology ok but re-glue not unit-clean -- investigate",
+      "v2_e0b_flags": {
+        "heals_via_boundary_escape": false
+      },
+      "v2_e0b_instances": [
+        {
+          "j_star": 0,
+          "b_perp": [
+            1.0,
+            0.0
+          ],
+          "b_perp_norm": 1.0,
+          "worm_size": 64,
+          "removed": 31,
+          "merged": 0,
+          "core_size": 29,
+          "closure_defect_is_burgers": true,
+          "shift_field_single_valued": true,
+          "shift_region_reaches_boundary": true,
+          "clean_unit_edges": false,
+          "max_tight_loop_holonomy": NaN,
+          "tight_loops": []
+        },
+        {
+          "j_star": 1,
+          "b_perp": [
+            -0.809,
+            0.5878
+          ],
+          "b_perp_norm": 1.0,
+          "worm_size": 64,
+          "removed": 33,
+          "merged": 33,
+          "core_size": 56,
+          "closure_defect_is_burgers": true,
+          "shift_field_single_valued": true,
+          "shift_region_reaches_boundary": true,
+          "clean_unit_edges": true,
+          "max_tight_loop_holonomy": 1.0532500405730103e-15,
+          "tight_loops": [
+            {
+              "r": 4,
+              "w": 1.0,
+              "holo": 4.965068306494546e-16,
+              "maxres": 5.551115123125783e-16,
+              "nover": 0
+            },
+            {
+              "r": 6,
+              "w": 1.0000000000000002,
+              "holo": 4.041272810440265e-16,
+              "maxres": 1.0532500405730103e-15,
+              "nover": 0
+            },
+            {
+              "r": 8,
+              "w": 1.0000000000000002,
+              "holo": 1.0532500405730103e-15,
+              "maxres": 1.6653345369377348e-15,
+              "nover": 0
+            }
+          ]
+        }
       ]
     }
   },
-  "runtime_s": 34.7
+  "runtime_s": 47.3
 }
