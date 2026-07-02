@@ -1,5 +1,32 @@
 # Defect-Holonomy Test — Findings (Iterations 1–4)
 
+## Iteration 4b — v3.1 surgical leg: attempted, hit a genuine construction wall
+
+Per v3.1, the planar surgical dipole was attempted (Bravais-level Volterra:
+quadrant shift by the period P_a, corner core, split-convention measurement).
+**It hit a genuine wall, reported per house rules (not massaged):**
+
+- The naive planar approximant — tiling the ideal-patch unit cell periodically —
+  is **not a seamless unit-edge crystal**. The order-2 AB tiling showed **1482
+  misfit edges** (residual > 0.3) pervading the bulk, because the ideal
+  quasicrystal cell does not tile periodically without inter-cell misfit at
+  *every* cell boundary. The measurement was consequently dominated by tiling
+  artifacts, not the dislocation.
+- **Why the torus works and the naive plane does not:** the torus has exactly
+  **one** seam (the phason wall at the wrap) with a pristine ideal interior; the
+  naive planar periodic tiling has a seam at every cell boundary. A clean Bravais
+  dislocation needs a genuinely seamless approximant crystal first.
+- **The open construction question:** a proper periodic approximant (seamless,
+  unit-edge — the standard QC-literature construction via a perp-space phason
+  shear that snaps acceptance to periodicity, not naive motif-tiling) is the
+  prerequisite. Building it, then cutting the Bravais dislocation, is the
+  remaining computational step. Flagged open, as pre-agreed: the torus stands as
+  the crown; the surgical robustness of the quantum is untested.
+
+This is an honest negative on the *construction*, not on the physics: the torus
+(iteration 4) already establishes quantisation, the registered quanta, and the
+price-list scaling as theorem-grade verification.
+
 ## Iteration 4 — v3 torus crown jewel: quantised holonomy at the registered quanta
 
 **Result: Outcome A on the approximant torus.** Path memory exists, is quantised,
