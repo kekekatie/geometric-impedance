@@ -1,5 +1,15 @@
 # DRAFT Pre-registration: Does Holonomy Winding Mode-Lock? (Arnold-Tongue / Devil's-Staircase Test)
 
+**Status:** 🔒 **SUPERSEDED — SEALED.** This draft skeleton has been superseded by
+`SEALED_PREREGISTRATION.md` (the Sealing Ruling as amended by Amendments 1 and 2,
+with the topology and ±15% folds applied at seal). Retained only as the record of
+the on-ramp scaffold. Do not treat anything below as the sealed predictions; the
+sealed content lives in `SEALED_PREREGISTRATION.md`.
+
+---
+
+*(original draft header follows, for the record)*
+
 **Status:** ⚠️ **DRAFT SKELETON — NOT SEALED.** Scaffolded by Claude Code as an
 on-ramp. Every prediction, tolerance, and kill condition marked `[AUTHOR TO
 SEAL]` must be filled in and committed *by the author* **before** any sweep is
