@@ -55,9 +55,21 @@ import numpy as np
 # grid-line families in parallel and perpendicular space.
 #   Ammann-Beenker: 4 grids at 45deg (pi/4); perp winding x3.
 #   Penrose:        5 grids at 72deg (2pi/5); perp winding x2.
+#
+# gamma_sum is the de Bruijn "cut" offset sum Sum_j gamma_j (the individual
+# offsets stay generic; only their sum is pinned here). It is *not* a free knob:
+#   * Penrose (pentagrid): a faithful P3 rhombus tiling requires Sum gamma_j in Z.
+#     Integer sum -> exactly four residue classes {1,2,3,4} (the four-pentagon
+#     occupation domain) and maximum vertex coordination 7. A non-integer sum
+#     yields a *generalized* Penrose tiling with a spurious 5th residue class (0)
+#     and coordination up to 10 -- not real Penrose. We pin it to 0.
+#   * Ammann-Beenker (4-grid): its octagonal tiling (max coordination 8) is
+#     unaffected by the sum; 0.5 (maximally generic) is kept as-is. Do not touch.
 SUBSTRATES = {
-    "ammann_beenker": dict(N=4, par_step=np.pi / 4,   perp_step=3 * np.pi / 4),
-    "penrose":        dict(N=5, par_step=2 * np.pi / 5, perp_step=4 * np.pi / 5),
+    "ammann_beenker": dict(N=4, par_step=np.pi / 4,   perp_step=3 * np.pi / 4,
+                           gamma_sum=0.5),
+    "penrose":        dict(N=5, par_step=2 * np.pi / 5, perp_step=4 * np.pi / 5,
+                           gamma_sum=0.0),
 }
 
 
@@ -128,18 +140,22 @@ class Patch:
     """A finite cut-and-project patch with vertex graph, perp coords, depth."""
 
     def __init__(self, substrate, radius=9.0, gammas=None,
-                 n_zones=4, verbose=False):
+                 n_zones=4, gamma_sum=None, verbose=False):
         cfg = SUBSTRATES[substrate]
         self.substrate = substrate
         self.N = cfg["N"]
         self.radius = radius
         self.par_star, self.perp_star = star_vectors(
             self.N, cfg["par_step"], cfg["perp_step"])
-        # grid-line offsets (the "cut"). Sum chosen generic to avoid singular
-        # (>2-line) intersections; logged in summary.json.
+        # grid-line offsets (the "cut"). Individual offsets are generic (distinct,
+        # no >2-line concurrence); their SUM is pinned by the substrate's
+        # gamma_sum (see SUBSTRATES): integer for a faithful Penrose P3, 0.5 for
+        # AB. `gamma_sum` overrides the default (e.g. gamma_sum=0.5 reproduces the
+        # legacy generalized-Penrose substrate for diffing); logged in summary.
         if gammas is None:
+            target = cfg["gamma_sum"] if gamma_sum is None else gamma_sum
             base = np.array([0.2, 0.13, 0.37, 0.06, 0.29])[: self.N]
-            base = base - base.sum() / self.N + (0.5 / self.N)  # generic, small
+            base = base - base.sum() / self.N + (target / self.N)  # generic
             gammas = base
         self.gammas = np.asarray(gammas, dtype=float)
         self._build_multigrid(radius, verbose)
