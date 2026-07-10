@@ -1,0 +1,50 @@
+{
+  "stage": "A",
+  "test": "N1 phason-sweep null + canary F",
+  "n_gamma": 40,
+  "n_loops": 60,
+  "radii": [
+    16.0,
+    22.0,
+    28.0
+  ],
+  "kill_threshold": 1e-10,
+  "substrates": {
+    "ammann_beenker": {
+      "by_radius": {
+        "16.0": {
+          "worst_holonomy": 4.506632616741898e-16,
+          "mean_holonomy": 3.049182714296325e-16
+        },
+        "22.0": {
+          "worst_holonomy": 4.506632616741898e-16,
+          "mean_holonomy": 3.1032619608067983e-16
+        },
+        "28.0": {
+          "worst_holonomy": 4.672704618392933e-16,
+          "mean_holonomy": 3.200211894507986e-16
+        }
+      },
+      "canaryF_N_independent_at_floor": true
+    },
+    "penrose": {
+      "by_radius": {
+        "16.0": {
+          "worst_holonomy": 7.850462293418876e-16,
+          "mean_holonomy": 4.008788998514968e-16
+        },
+        "22.0": {
+          "worst_holonomy": 5.661048867003676e-16,
+          "mean_holonomy": 3.7402468921642057e-16
+        },
+        "28.0": {
+          "worst_holonomy": 4.965068306494546e-16,
+          "mean_holonomy": 3.6907066683501163e-16
+        }
+      },
+      "canaryF_N_independent_at_floor": true
+    }
+  },
+  "N1_passed": true,
+  "N2_note": "analytic (linear projection -> winding=slope, no plateaus); empirical form travels with the approximant construction (next block)."
+}
