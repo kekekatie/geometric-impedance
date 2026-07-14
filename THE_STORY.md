@@ -126,7 +126,18 @@ clean companion measure — the tiling's "connectivity," which *is* stable with 
 that a first look suggests is **flat** up the ladder: leaning toward the honest
 **null** we'd predicted from the start. (Final verdict: see below.)
 
-> **[Stage D verdict — to be filled when the fair race finishes running.]**
+> **Stage D verdict: the null — as predicted, and cleanly.** In the fair race
+> (all tilings compared at controlled size), the connectivity that governs
+> synchronisation **settled to a fixed number for each tiling by the second rung
+> and then stayed flat** — silver at ≈ 44, golden at ≈ 13, both steady to within
+> ~3% up the ladder. It did **not** slide toward either tiling's special
+> shrink-rate, and the convergence a discovery would have needed simply isn't
+> there. In plain words: **the metronomes sync according to how the tiling is
+> wired up close, not according to its deep, never-repeating number.** The
+> geometry's special number reaches into *memory* and *structure* (the earlier
+> results showed that) — but it does **not** reach into *this* dynamics. That was
+> the committed bet, and it's the honest answer. We'd have reported a fireworks
+> show just as readily; the geometry simply chose to stay quiet here.
 
 ---
 

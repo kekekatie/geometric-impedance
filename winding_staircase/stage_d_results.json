@@ -1,0 +1,121 @@
+{
+  "note": "matched-size fair race; lambda2*N primary, Kuramoto K* confirm",
+  "registered_ratio": {
+    "ammann_beenker": 0.41421356237309515,
+    "penrose": 0.6180339887498948
+  },
+  "bands": {
+    "ammann_beenker": [
+      0.352,
+      0.476
+    ],
+    "penrose": [
+      0.525,
+      0.711
+    ]
+  },
+  "substrates": {
+    "ammann_beenker": {
+      "rows": [
+        {
+          "order": 1,
+          "convergent": "1/1",
+          "N": 736,
+          "lam2": 0.050278534581124315,
+          "lam2N": 37.00500145170749,
+          "Kstar": 0.7507376282054087,
+          "Kstar_sd": 0.0,
+          "seconds": 60.1
+        },
+        {
+          "order": 2,
+          "convergent": "3/2",
+          "N": 657,
+          "lam2": 0.06617340369073736,
+          "lam2N": 43.475926224814444,
+          "Kstar": 0.6358588956811231,
+          "Kstar_sd": 0.0,
+          "seconds": 55.5
+        },
+        {
+          "order": 3,
+          "convergent": "7/5",
+          "N": 956,
+          "lam2": 0.046117042545709544,
+          "lam2N": 44.08789267369833,
+          "Kstar": 0.5341896901627049,
+          "Kstar_sd": 0.0,
+          "seconds": 80.1
+        },
+        {
+          "order": 4,
+          "convergent": "17/12",
+          "N": 1393,
+          "lam2": 0.03182093771039788,
+          "lam2N": 44.32656623058425,
+          "Kstar": 0.520157520858678,
+          "Kstar_sd": 0.0,
+          "seconds": 118.3
+        }
+      ],
+      "lam2N_ratios": [
+        0.28058115685486507
+      ],
+      "Kstar_ratios": [
+        0.12127919245178084
+      ],
+      "lam2N_spread_pct": 1.9348794946739611
+    },
+    "penrose": {
+      "rows": [
+        {
+          "order": 1,
+          "convergent": "1/1",
+          "N": 948,
+          "lam2": 0.013234846814135172,
+          "lam2N": 12.546634779800144,
+          "Kstar": 1.1825423512956323,
+          "Kstar_sd": 0.0,
+          "seconds": 75.7
+        },
+        {
+          "order": 2,
+          "convergent": "2/1",
+          "N": 1096,
+          "lam2": 0.011652553683925836,
+          "lam2N": 12.771198837582716,
+          "Kstar": 0.8105955418920849,
+          "Kstar_sd": 0.0,
+          "seconds": 89.8
+        },
+        {
+          "order": 3,
+          "convergent": "3/2",
+          "N": 718,
+          "lam2": 0.018050510686520332,
+          "lam2N": 12.960266672921598,
+          "Kstar": 0.6609035710319954,
+          "Kstar_sd": 0.0,
+          "seconds": 61.8
+        },
+        {
+          "order": 4,
+          "convergent": "5/3",
+          "N": 1882,
+          "lam2": 0.006971080853971074,
+          "lam2N": 13.11957416717356,
+          "Kstar": 0.7997305718719652,
+          "Kstar_sd": 0.0,
+          "seconds": 160.4
+        }
+      ],
+      "lam2N_ratios": [
+        0.4572869566827929
+      ],
+      "Kstar_ratios": [
+        12.77748586354953
+      ],
+      "lam2N_spread_pct": 2.690084995004695
+    }
+  }
+}
