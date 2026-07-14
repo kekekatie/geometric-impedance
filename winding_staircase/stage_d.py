@@ -134,12 +134,15 @@ def frequencies(depth, standardise=True):
     return depth - depth.mean()
 
 
-def find_Kstar(omega, ei, ej, r_c=0.5, seed=0, T_trans=200.0, T_avg=200.0,
+def find_Kstar(omega, ei, ej, r_c=0.5, seeds=(1, 2, 3), T_trans=200.0, T_avg=200.0,
                coarse=(0.1, 0.2, 0.3, 0.45, 0.6, 0.8, 1.0, 1.3, 1.7), n_bisect=7):
     """K* = coupling where steady-state r first crosses r_c (prereg §4). Coarse
-    grid to bracket the crossing, then bisection; linear-interpolated crossing."""
+    grid to bracket the crossing, then bisection; linear-interpolated crossing.
+    r is averaged over several random initial conditions (`seeds`) to damp the
+    finite-network multistability."""
     def R(K):
-        return steady_r(omega, ei, ej, K, T_trans=T_trans, T_avg=T_avg, seed=seed)
+        return float(np.mean([steady_r(omega, ei, ej, K, T_trans=T_trans,
+                                       T_avg=T_avg, seed=s) for s in seeds]))
     grid = list(coarse)
     rs = [R(K) for K in grid]
     lo = hi = None
