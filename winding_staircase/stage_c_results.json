@@ -1,0 +1,62 @@
+{
+  "stage": "C",
+  "role": "calibration-2 (never a finding)",
+  "window": 0.02,
+  "arithmetic_core": {
+    "silver_AB": {
+      "Lagrange_L": 2.8284271247461903,
+      "inv_L": 0.35355339059327373
+    },
+    "golden_Penrose": {
+      "Lagrange_L": 2.23606797749979,
+      "inv_L": 0.4472135954999579
+    }
+  },
+  "golden_farther_from_rationals": true,
+  "unlocked_measure_by_K": {
+    "0.6": {
+      "silver": 0.03847792389619481,
+      "golden": 0.03847192359617981,
+      "golden_more_open": false
+    },
+    "0.7": {
+      "silver": 0.0367878393919696,
+      "golden": 0.03698784939246962,
+      "golden_more_open": true
+    },
+    "0.75": {
+      "silver": 0.03544577228861443,
+      "golden": 0.03624181209060453,
+      "golden_more_open": true
+    },
+    "0.8": {
+      "silver": 0.033819690984549226,
+      "golden": 0.03490574528726437,
+      "golden_more_open": true
+    },
+    "0.85": {
+      "silver": 0.03190959547977399,
+      "golden": 0.03272163608180409,
+      "golden_more_open": true
+    },
+    "0.9": {
+      "silver": 0.029019450972548627,
+      "golden": 0.029455472773638684,
+      "golden_more_open": true
+    },
+    "0.95": {
+      "silver": 0.024607230361518077,
+      "golden": 0.024745237261863093,
+      "golden_more_open": true
+    }
+  },
+  "golden_more_open_K_ge_0.7": true,
+  "both_close_toward_K1": true,
+  "golden_closes_slower": true,
+  "retention_g95_over_g70": {
+    "silver": 0.6688957755667917,
+    "golden": 0.6690098956361867
+  },
+  "P4prime_confirmed": true,
+  "note": "g operationalised as local unlocked MEASURE (robust integral), not a wall-to-wall interval width -- the latter is ill-posed at K<1 (fat Cantor set). Deterministic check; never a finding."
+}
