@@ -108,3 +108,22 @@ Kuramoto oscillators on the substrate's own graph:
 - Canary F is mandatory before any K* is quoted.
 
 *Sealed at implementation time; the master SEALED_PREREGISTRATION.md governs.*
+
+---
+
+## Changelog
+
+- **2026-07-14 — observable revised (finite-size finding; canary F did its job).**
+  The pinned §5 requirement "K*(N) N-independent (plateau)" is **unattainable for
+  this observable**: global-sync K* *grows* with N (0.68 → 0.82 → 1.13 for Penrose
+  order 2 at N = 273 / 1096 / 2479) because these are **2-D tori**, whose spectral
+  gap λ₂ collapses as ≈ 12.9/N. A 2-D sheet of oscillators has no fixed-coupling
+  global-sync transition in the large-N limit (cf. the 2-D XY model / no long-range
+  order). Canary F correctly caught this before any K* was reported as a finding.
+  **Revision:** (i) compare across the ladder at **matched N** (the common
+  N-dependence cancels, isolating the order / Diophantine effect); (ii) use the
+  **N-normalised connectivity λ₂·N** — size-stable (12.3 / 12.8 / 12.9 across the
+  three sizes above), and exactly the *algebraic connectivity* that §1 / master-B1
+  says K* proxies — as the primary quantitative discriminator, with matched-N
+  Kuramoto K* as dynamical confirmation. All other seal choices stand. Logged with
+  reason; not a silent edit.
