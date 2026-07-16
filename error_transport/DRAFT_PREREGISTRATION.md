@@ -1,9 +1,24 @@
 # DRAFT Pre-registration v2 — Aperiodic error-transport impedance
 
-**Status: DRAFT v2 (revised after GPT review; still NOT sealed, nothing run).**
-For K. T. Niedzwiecki + the GPT collaborator. Revised per GPT's 7-point review
-(all accepted) plus 3 additions from Claude (marked ✦). Construction fixes (§7)
-and sealing precede any execution. House style: `winding_staircase/`.
+**Status: DRAFT v3 (nearly sealable; still NOT sealed, nothing run).**
+For K. T. Niedzwiecki + the GPT collaborator. v2 folded GPT's 7-point review (all
+accepted) + 3 Claude additions (✦). v3 folds GPT's second pass (4 decisions, all
+accepted): the oblique-Z² periodic control, the rewire-cutoff ladder, master-seed
+substreams, and the two-stage seal. Construction fixes (§7) and sealing precede any
+execution. House style: `winding_staircase/`.
+
+## Changelog v2 → v3
+- **Periodic control C fully specified** as an oblique Z² grid on the real cell
+  (§4.C) — resolves the commensurability wall; matches cell, linear size/diameter,
+  and mean degree (=4, exactly, by Euler) — residual is degree *variance*, not mean.
+- **Local rewire D:** exact unit-length cutoff replaced by a **construction-only
+  cutoff ladder** (§4.D); pick the smallest cutoff meeting the scrambling +
+  validity criteria, by construction diagnostics only.
+- **RNG (§8):** one documented master seed with deterministic indexed substreams
+  per (substrate, size, control-realisation, trial) — not a single shared stream.
+- **Two-stage seal (§8):** seal design + pilot rule first; then run the
+  runtime-only pilot, exclude its outcomes, record κ in S_max = κ·N, seal that
+  numerical amendment; only then run inference.
 
 ## Changelog v1 → v2
 Accepted from GPT's review: (1) primary outcome is three *unconditional* fractions,
@@ -63,18 +78,29 @@ positions).
 ## 4. Substrates & controls
 - **A. faithful Penrose torus** (class-preserving ×5 cell) — reported separately.
 - **B. Ammann–Beenker torus** — reported separately.
-- **C. geometry-matched periodic control (✦A, replaces "square").** A regular
-  crystalline lattice embedded on the **same oblique torus cell** (same period
-  vectors → identical shape, area, linear size, diameter, aspect ratio *by
-  construction*), matched on mean degree. This is the **primary contrast** for A/B:
-  periodic vs aperiodic, all geometry held. (A literal square torus is rejected:
-  the class-preserving Penrose cell is ~3.5:1 skewed and non-orthogonal; a square
-  cannot match its aspect ratio, and winding probability depends on it — GPT-5.)
-- **D. bounded-length local rewire (✦B).** Degree-preserving edge swaps restricted
-  to geometrically short edges, so edges stay short and winding labels stay ±1
-  (well-defined). Scrambles the aperiodic micro-wiring at fixed degree *and* fixed
-  locality → the clean "degree/locality vs higher-order aperiodic wiring" test,
-  with an honest P_logical.
+- **C. geometry-matched periodic control — oblique Z² grid (primary contrast).**
+  An oblique periodic grid built directly on the real period vectors:
+  `r_ij = (i/m)·P_a + (j/n)·P_b`, i∈0..m−1, j∈0..n−1, with 4-neighbour periodic
+  edges in the i and j directions (winding labels exact: an i-wrap = generator P_a,
+  a j-wrap = P_b). Integers m,n chosen so **mn ≈ target N** while **minimising the
+  anisotropy `|P_a|/m` vs `|P_b|/n`** (isotropic grid cells → linear size / diameter
+  matched to the aperiodic graph, since same N in the same cell = same density).
+  This gives the **same torus cell, exact periodicity, exact winding labels, and
+  mean degree exactly 4** (matching the rhombus-tiling mean by Euler). The primary
+  contrast for A/B: periodic vs aperiodic, geometry held; the **residual is degree
+  *variance*** (grid is 4-regular; aperiodic has a degree distribution), which is
+  reported, not tuned. Resolves the commensurability wall by construction (a literal
+  square is rejected — it cannot match the ~3.5:1 skewed Penrose cell).
+- **D. bounded-length local rewire.** Degree-preserving edge swaps restricted to
+  short new edges — the clean "degree/locality vs higher-order aperiodic wiring"
+  test, winding labels well-defined. The unit-distance native graph may leave no
+  swap freedom, so instead of a fixed unit cutoff we pre-register a
+  **construction-only cutoff ladder** at {1.25, 1.5, 1.75, 2.0}× the native edge
+  length. Pick the **smallest** cutoff achieving the pre-set scrambling target
+  (**≥ 80% edge replacement**) while preserving: degree sequence, connectedness, no
+  duplicate/self edges, unambiguous winding labels, and **no edge spanning more than
+  one torus cell**. Selection uses **construction diagnostics only — never transport
+  outcomes**. Reported with the chosen cutoff stated.
 - **E. arbitrary degree-preserving rewire** — a **labelled locality-destroyed
   reference only** (GPT-7). Its long edges have no clean winding convention, so it
   gets **no headline P_logical**; used for secondary observables (annihilation
@@ -120,20 +146,22 @@ positions).
    built with the identical winding bookkeeping and the same validation.
 3. **S_max / size / seed selection sealed** per §8 before any inference run.
 
-## 8. Numerical values / sealed procedures (GPT-3)
-- **S_max:** chosen by a **runtime-only pilot** so that P_censored ≲ 5% on the
-  largest graph; the constant in S_max = κ·N is fixed *once* by that pilot and
-  then frozen. **Pilot outcomes are excluded from all inference.** (No pilot run
-  until this draft is sealed.)
-- **Trials:** 20,000 per graph per size (Wilson CIs resolve P_logical down to
-  ~10⁻³).
-- **Sizes:** target N ≈ {350, 750, 1500} per substrate via supercells (matched
-  across substrates within each band as closely as the cells allow; actual N
-  reported).
-- **Seeds:** a single fixed RNG stream (documented seed) reused identically across
-  all substrates and controls, so differences are graph-geometry, not luck.
-- **Rewire realisations:** 10 independent D-rewires (and E-rewires) per aperiodic
-  graph; report mean ± spread.
+## 8. Numerical values / sealed procedures
+- **Two-stage seal.** **Stage 1** seals this design and the pilot-selection rule.
+  **Stage 2:** run the runtime-only pilot, exclude its outcomes from all inference,
+  record the selected κ in `S_max = κ·N`, and seal that numerical amendment; only
+  **then** is any inference run permitted. No pilot until Stage 1 is sealed.
+- **S_max (pilot-selected):** κ fixed *once* by the runtime-only pilot so that
+  P_censored ≲ 5% on the largest graph, then frozen. Pilot outcomes excluded.
+- **Trials:** 20,000 per graph per size (Wilson CIs resolve P_logical to ~10⁻³).
+- **Sizes:** target N ≈ {350, 750, 1500} per substrate (supercells / grid m·n),
+  matched across substrates within each band as closely as the cells allow; actual
+  N reported.
+- **RNG:** one documented **master seed**; deterministic **indexed substreams**
+  (e.g. NumPy `SeedSequence.spawn`) keyed by (substrate, size, control-realisation,
+  trial) — reproducible and independent, not a single shared stream.
+- **Rewire realisations:** 10 independent D-rewires (and E-rewires) per graph;
+  report mean ± spread.
 - **Uncertainty:** Wilson score intervals for the three fractions; bootstrap CIs
   for time/length distributions.
 
