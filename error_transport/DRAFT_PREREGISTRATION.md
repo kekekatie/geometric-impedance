@@ -16,9 +16,11 @@ execution. House style: `winding_staircase/`.
   validity criteria, by construction diagnostics only.
 - **RNG (§8):** one documented master seed with deterministic indexed substreams
   per (substrate, size, control-realisation, trial) — not a single shared stream.
-- **Two-stage seal (§8):** seal design + pilot rule first; then run the
-  runtime-only pilot, exclude its outcomes, record κ in S_max = κ·N, seal that
-  numerical amendment; only then run inference.
+- **Two-step sealing (§8):** a **design seal** (freezes design + pilot rule), then
+  the runtime-only pilot (excluded from inference), then a **κ-seal** (freezes κ in
+  S_max = κ·N), then inference. Named "design seal / κ-seal" to avoid colliding with
+  the Stage 1 / Stage 2 *experiment* phases (this unbiased walk vs the future
+  energy-gated one).
 
 ## Changelog v1 → v2
 Accepted from GPT's review: (1) primary outcome is three *unconditional* fractions,
@@ -83,8 +85,10 @@ positions).
   `r_ij = (i/m)·P_a + (j/n)·P_b`, i∈0..m−1, j∈0..n−1, with 4-neighbour periodic
   edges in the i and j directions (winding labels exact: an i-wrap = generator P_a,
   a j-wrap = P_b). Integers m,n chosen so **mn ≈ target N** while **minimising the
-  anisotropy `|P_a|/m` vs `|P_b|/n`** (isotropic grid cells → linear size / diameter
-  matched to the aperiodic graph, since same N in the same cell = same density).
+  grid-cell anisotropy `|P_a|/m` vs `|P_b|/n`**. Same N in the same cell fixes the
+  vertex density; isotropic grid cells fix the per-direction steps-to-cross — so
+  linear size and diameter match the aperiodic graph up to a small residual from the
+  cell's non-orthogonality (reported, not tuned).
   This gives the **same torus cell, exact periodicity, exact winding labels, and
   mean degree exactly 4** (matching the rhombus-tiling mean by Euler). The primary
   contrast for A/B: periodic vs aperiodic, geometry held; the **residual is degree
@@ -123,8 +127,10 @@ positions).
 ## 6. Fairness (pinned)
 - ≥3 sizes per substrate; P_logical is expected size-dependent (Stage-D 2-D
   lesson), so claims are size-scan or matched-N, never single-size.
-- Identical start rule, identical trial count and random-seed stream across all
-  substrates; **AB and Penrose reported separately, never pooled.**
+- Identical start rule and identical trial count across all substrates; RNG per §8
+  (one documented master seed with deterministic indexed substreams), so any
+  difference is graph geometry, not luck; **AB and Penrose reported separately,
+  never pooled.**
 - Degree vs higher-order wiring separated via C (geometry-matched periodic) and D
   (bounded local rewire); E is reference only.
 - No depth-dependent barriers in this primary test.
@@ -147,10 +153,13 @@ positions).
 3. **S_max / size / seed selection sealed** per §8 before any inference run.
 
 ## 8. Numerical values / sealed procedures
-- **Two-stage seal.** **Stage 1** seals this design and the pilot-selection rule.
-  **Stage 2:** run the runtime-only pilot, exclude its outcomes from all inference,
-  record the selected κ in `S_max = κ·N`, and seal that numerical amendment; only
-  **then** is any inference run permitted. No pilot until Stage 1 is sealed.
+- **Two-step sealing** (named to avoid collision with the Stage 1 / Stage 2
+  *experiment* phases in §3/§9):
+  - **Design seal** — freezes this design document and the pilot-selection rule.
+  - **κ-seal** — after the runtime-only pilot, records the selected κ in
+    `S_max = κ·N` and freezes that one number.
+  Order: design seal → runtime-only pilot (outcomes excluded from all inference) →
+  κ-seal → inference. No pilot until the design seal; no inference until the κ-seal.
 - **S_max (pilot-selected):** κ fixed *once* by the runtime-only pilot so that
   P_censored ≲ 5% on the largest graph, then frozen. Pilot outcomes excluded.
 - **Trials:** 20,000 per graph per size (Wilson CIs resolve P_logical to ~10⁻³).
