@@ -1,4 +1,4 @@
-# DRAFT Pre-registration v2 — Aperiodic error-transport impedance
+# DRAFT Pre-registration v3 — Aperiodic error-transport impedance
 
 **Status: DRAFT v3 (nearly sealable; still NOT sealed, nothing run).**
 For K. T. Niedzwiecki + the GPT collaborator. v2 folded GPT's 7-point review (all
@@ -182,4 +182,4 @@ No sweep, no pilot, no torus repair run before this is sealed. Naked geometry
 first. Report full outcome distributions, all controls, all sizes, censored and
 null results with equal prominence. Discard/revise, never massage.
 
-*Draft v2 — awaiting review. §7 construction fixes and sealing precede any run.*
+*Draft v3 — awaiting review. §7 construction fixes and sealing precede any run.*
