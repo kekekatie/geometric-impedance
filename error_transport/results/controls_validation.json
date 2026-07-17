@@ -1,0 +1,238 @@
+{
+  "oblique_Z2": [
+    {
+      "n_nodes": 225,
+      "self_loops": 0,
+      "duplicate_directed_edges": 0,
+      "reverse_winding_antisymmetry": true,
+      "antisymmetry_violations": 0,
+      "mean_degree": 4.0,
+      "degree_hist": {
+        "4": 225
+      },
+      "connected": true,
+      "closure_both_generators": true,
+      "distinct_cycle_windings": 4,
+      "max_edge_length": 0.9381,
+      "edges_spanning_multiple_cells": 0,
+      "GATE_PASS": true,
+      "substrate": "ammann_beenker",
+      "order": 3,
+      "convergent": "7/5",
+      "control": "oblique_Z2",
+      "native_n": 220,
+      "grid_m": 15,
+      "grid_n": 15,
+      "grid_cell_a": 0.9381,
+      "grid_cell_b": 0.9381,
+      "anisotropy": 0.0
+    },
+    {
+      "n_nodes": 1369,
+      "self_loops": 0,
+      "duplicate_directed_edges": 0,
+      "reverse_winding_antisymmetry": true,
+      "antisymmetry_violations": 0,
+      "mean_degree": 4.0,
+      "degree_hist": {
+        "4": 1369
+      },
+      "connected": true,
+      "closure_both_generators": true,
+      "distinct_cycle_windings": 4,
+      "max_edge_length": 0.9181,
+      "edges_spanning_multiple_cells": 0,
+      "GATE_PASS": true,
+      "substrate": "ammann_beenker",
+      "order": 4,
+      "convergent": "17/12",
+      "control": "oblique_Z2",
+      "native_n": 1355,
+      "grid_m": 37,
+      "grid_n": 37,
+      "grid_cell_a": 0.9181,
+      "grid_cell_b": 0.9181,
+      "anisotropy": 0.0
+    },
+    {
+      "n_nodes": 658,
+      "self_loops": 0,
+      "duplicate_directed_edges": 0,
+      "reverse_winding_antisymmetry": true,
+      "antisymmetry_violations": 0,
+      "mean_degree": 4.0,
+      "degree_hist": {
+        "4": 658
+      },
+      "connected": true,
+      "closure_both_generators": true,
+      "distinct_cycle_windings": 4,
+      "max_edge_length": 0.9645,
+      "edges_spanning_multiple_cells": 0,
+      "GATE_PASS": true,
+      "substrate": "penrose",
+      "order": 3,
+      "convergent": "3/2",
+      "control": "oblique_Z2",
+      "native_n": 650,
+      "grid_m": 14,
+      "grid_n": 47,
+      "grid_cell_a": 0.9312,
+      "grid_cell_b": 0.9645,
+      "anisotropy": 0.0333
+    },
+    {
+      "n_nodes": 1694,
+      "self_loops": 0,
+      "duplicate_directed_edges": 0,
+      "reverse_winding_antisymmetry": true,
+      "antisymmetry_violations": 0,
+      "mean_degree": 4.0,
+      "degree_hist": {
+        "4": 1694
+      },
+      "connected": true,
+      "closure_both_generators": true,
+      "distinct_cycle_windings": 4,
+      "max_edge_length": 0.9589,
+      "edges_spanning_multiple_cells": 0,
+      "GATE_PASS": true,
+      "substrate": "penrose",
+      "order": 4,
+      "convergent": "5/3",
+      "control": "oblique_Z2",
+      "native_n": 1700,
+      "grid_m": 22,
+      "grid_n": 77,
+      "grid_cell_a": 0.9589,
+      "grid_cell_b": 0.9526,
+      "anisotropy": 0.0063
+    }
+  ],
+  "bounded_local_rewire": [
+    {
+      "substrate": "ammann_beenker",
+      "order": 3,
+      "convergent": "7/5",
+      "control": "bounded_local_rewire",
+      "native_n": 220,
+      "chosen_cutoff": null,
+      "ladder": [
+        {
+          "cutoff": 1.25,
+          "replaced": 0.0,
+          "n_swaps": 0,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.0,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 1.5,
+          "replaced": 0.327,
+          "n_swaps": 275,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.4142,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 1.75,
+          "replaced": 0.4123,
+          "n_swaps": 494,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.7321,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 2.0,
+          "replaced": 0.7204,
+          "n_swaps": 2237,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 2.0,
+          "closure": true,
+          "meets_criteria": false
+        }
+      ]
+    },
+    {
+      "substrate": "penrose",
+      "order": 3,
+      "convergent": "3/2",
+      "control": "bounded_local_rewire",
+      "native_n": 650,
+      "chosen_cutoff": null,
+      "ladder": [
+        {
+          "cutoff": 1.25,
+          "replaced": 0.1035,
+          "n_swaps": 91,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.1756,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 1.5,
+          "replaced": 0.1035,
+          "n_swaps": 91,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.1756,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 1.75,
+          "replaced": 0.4753,
+          "n_swaps": 831,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 1.618,
+          "closure": true,
+          "meets_criteria": false
+        },
+        {
+          "cutoff": 2.0,
+          "replaced": 0.6904,
+          "n_swaps": 2170,
+          "degree_seq_preserved": true,
+          "connected": true,
+          "antisymmetry": true,
+          "no_self_dup": true,
+          "multicell": 0,
+          "max_len": 2.0,
+          "closure": true,
+          "meets_criteria": false
+        }
+      ]
+    }
+  ]
+}

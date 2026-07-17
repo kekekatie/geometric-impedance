@@ -116,10 +116,81 @@ with defect density reported as a covariate — *unless* the pilot shows outcome
 defect-density-sensitive, in which case escalate to (b)/(c). Flagged for Katie + GPT
 to adjudicate before the κ-seal.
 
-## Next (pending the design-fork decision)
-1. ~~Build + validate the phason-shear-wrapped tori; §7.1 gate.~~ **DONE — gate PASS.**
-2. Build the oblique-Z² periodic controls (§4.C) + validate (independent of fork).
-3. Test the bounded-local-rewire cutoff ladder (§4.D) — construction diagnostics.
-4. Adjudicate the defect design-fork; then (only after) pilot → κ-seal → transport.
+## Finding 3 — oblique-Z² periodic control (§4.C): PASS
+`error_transport/controls.py::build_oblique`. Crystalline 4-regular grid
+`r_ij=(i/m)P_a+(j/n)P_b` on the SAME class-preserving cell as the native torus,
+`m,n` chosen to **minimise grid-cell anisotropy** (primary) at matched N (±5%).
+Validation PASS at every order: mean degree **exactly 4**, reverse-winding
+antisymmetry exact, connected, both generators present in the fundamental-cycle
+windings, no self-loops/dupes, **no edge spanning more than one cell**.
+- AB cell is square → isotropic grids (15×15, 37×37, anisotropy 0).
+- The class-preserving **Penrose cell is genuinely ~3.5:1 elongated** (e.g. 13×45),
+  exactly the skew ✦A anticipated; the isotropic grid tiles it 14×47, 22×77
+  (grid-cell anisotropy ≤0.03). A literal square is correctly rejected.
 
-*Reported as a validation result under the design seal. No inference run.*
+## Finding 4 — bounded-local-rewire (§4.D): integrity PASS, but the 80% target is INFEASIBLE (a real local-rigidity result)
+`controls.py::build_rewire`. Degree-preserving double-edge swaps, each new edge
+≤ cutoff (native length 1), winding recomputed as the shortest torus representative
+(kept within one cell). Cutoff ladder {1.25, 1.5, 1.75, 2.0}. **Every constraint
+holds at every cutoff** — degree sequence preserved, connected, antisymmetry exact,
+no self/dup, zero multi-cell edges. **But no cutoff reaches the pre-registered ≥80%
+edge-replacement target:**
+
+| cutoff | AB (7/5) replaced | Penrose (3/2) replaced |
+|--------|-------------------|------------------------|
+| 1.25   | 0%                | 10%                    |
+| 1.5    | 33%               | 10%                    |
+| 1.75   | 41%               | 48%                    |
+| 2.0    | 72%               | 69%                    |
+
+The ~70% ceiling at cutoff 2.0 is **real, not a search artefact**: 8× the swap
+budget (16.5k vs 2.3k swaps) moved AB replacement only 69.7%→70.4%. Degree-preserving
+short-edge swaps **jam near 70%** — the native aperiodic wiring is *locally rigid*
+(short candidate node-pairs get used up; remaining native edges find no valid short
+partner). This is itself a finding. Review options: (a) lower the scrambling target
+to ~65%; (b) extend the ladder past 2.0 (starts producing long edges); (c) treat the
+local rigidity as the result and use the **oblique-Z² as the primary degree/geometry
+control**, with the rewire reported as a bounded-locality secondary. Recommend (c).
+
+## Finding 5 — defect-free rational-cut approximant (GPT task #3): investigated; NOT cleanly available at accessible orders
+`error_transport/rational_cut.py`. A genuine cut-and-project onto the **rational
+period-plane** `E_par'=span{M_a,M_b}` (internal space = its orthogonal complement,
+window = projected unit cube). `perp'(M_a)=perp'(M_b)=0` exactly → acceptance exactly
+periodic, no shear, no wall; canonical by construction. Origin K=0 is an accepted
+seed. Winding-integrity gate PASSES (antisymmetry, connectivity, closure). But:
+- **AB**: faithful (coord ≤8), edges clean and near-uniform (2 lengths ≈1.0 = the
+  two AB rhombi), but **slightly OVER-dense** — mean degree 4.08 (7/5) → 4.03 (17/12),
+  *decreasing toward 4 with order*. Opposite sign to the phason-shear *under*-density;
+  **nearly defect-free in the limit, not exactly at accessible orders.**
+- **Penrose**: **NOT faithful** — the (1,1,1,1,1) kernel makes the internal window
+  3-D and readmits *generalized-Penrose* over-coordination (max 8 > 7), with badly
+  distorted edge lengths (0.17–1.08) at low order. This is the original gamma-sum
+  pathology resurfacing in a new guise. A faithful Penrose rational cut needs explicit
+  kernel / pentagonal-window handling — a real follow-up sub-project, not a quick fix.
+
+**Bracketing summary (why exactly-defect-free is hard on ideal positions).** For AB
+order 7/5, mean degree is 3.84 (ideal window, under), 4.00-target, 4.08 (rational cut
+/ canonical sheared window, over). The three constructions *bracket* mean-4 but none
+lands it at finite accessible order. A perfect **defect-free + faithful + periodic**
+approximant is genuinely not readily available at experiment sizes.
+
+## Consolidated recommendation for the three-way review
+- **Native substrate:** the **phason-shear torus** remains the most faithful
+  available (faithful Penrose coord 7, exact winding, ~5% *dilute* defects that are
+  characterised and shared across substrates). Use it as Stage-1 native (design-fork
+  option **a**), reporting defect density as a covariate.
+- **Primary degree/geometry control:** the **oblique-Z² grid** (Finding 3, clean PASS).
+- **Locality control:** bounded-local-rewire reported at its ~70% ceiling (Finding 4),
+  secondary — its very rigidity is informative.
+- **Defect-free approximant:** parked as an explicit follow-up. AB is nearly there
+  (defect-free-in-the-limit); faithful Penrose needs the kernel-aware rational cut.
+  Do **not** block Stage 1 on it.
+
+## Next (pending the review's decisions)
+1. ~~Phason-shear tori §7.1 gate~~ **DONE.** ~~Oblique-Z² control~~ **DONE.**
+   ~~Rewire ladder~~ **DONE.** ~~Rational-cut investigation~~ **DONE.**
+2. Adjudicate: (i) native = phason-shear vs faithful-rational-cut-follow-up;
+   (ii) rewire target/role; then (only after) pilot → κ-seal → transport.
+
+*All reported as validation results under the design seal. No inference run, no
+pilot, no walkers, no transport.*
