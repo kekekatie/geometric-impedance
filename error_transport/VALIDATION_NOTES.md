@@ -128,7 +128,14 @@ windings, no self-loops/dupes, **no edge spanning more than one cell**.
   exactly the skew ✦A anticipated; the isotropic grid tiles it 14×47, 22×77
   (grid-cell anisotropy ≤0.03). A literal square is correctly rejected.
 
-## Finding 4 — bounded-local-rewire (§4.D): integrity PASS, but the 80% target is INFEASIBLE (a real local-rigidity result)
+## Finding 4 — bounded-local-rewire (§4.D): integrity PASS, but the 80% target is not reached — replacement saturates near 70% under THIS procedure
+> **Language note (GPT review):** the statement below is a construction finding
+> about *the specified bounded double-edge-swap procedure and cutoff ladder*, not a
+> proof about the substrate. "Quasicrystalline wiring is intrinsically locally rigid"
+> is a *possible interpretation to test later*, **not** an established conclusion — a
+> different local degree-preserving rewiring method might exceed 70%. Do not let this
+> methods limitation become a substrate theorem.
+
 `controls.py::build_rewire`. Degree-preserving double-edge swaps, each new edge
 ≤ cutoff (native length 1), winding recomputed as the shortest torus representative
 (kept within one cell). Cutoff ladder {1.25, 1.5, 1.75, 2.0}. **Every constraint
@@ -143,14 +150,16 @@ edge-replacement target:**
 | 1.75   | 41%               | 48%                    |
 | 2.0    | 72%               | 69%                    |
 
-The ~70% ceiling at cutoff 2.0 is **real, not a search artefact**: 8× the swap
-budget (16.5k vs 2.3k swaps) moved AB replacement only 69.7%→70.4%. Degree-preserving
-short-edge swaps **jam near 70%** — the native aperiodic wiring is *locally rigid*
-(short candidate node-pairs get used up; remaining native edges find no valid short
-partner). This is itself a finding. Review options: (a) lower the scrambling target
-to ~65%; (b) extend the ladder past 2.0 (starts producing long edges); (c) treat the
-local rigidity as the result and use the **oblique-Z² as the primary degree/geometry
-control**, with the rewire reported as a bounded-locality secondary. Recommend (c).
+The ~70% saturation at cutoff 2.0 is **stable within this algorithm**, not a
+search-budget artefact: 8× the swap budget (16.5k vs 2.3k swaps) moved AB
+replacement only 69.7%→70.4%. Under **this** bounded double-edge-swap procedure,
+short candidate node-pairs get used up and the remaining native edges find no valid
+short partner, so replacement saturates near 70%. Whether *any* bounded local
+degree-preserving rewiring could exceed this is an **open question for later**, not
+settled here. Review options: (a) lower the scrambling target to ~65%; (b) extend the
+ladder past 2.0 (starts producing long edges); (c) use the **oblique-Z² as the
+primary degree/geometry control** and report the rewire as a bounded-locality
+secondary at its observed ~70% saturation. Recommend (c).
 
 ## Finding 5 — defect-free rational-cut approximant (GPT task #3): investigated; NOT cleanly available at accessible orders
 `error_transport/rational_cut.py`. A genuine cut-and-project onto the **rational
@@ -174,6 +183,48 @@ order 7/5, mean degree is 3.84 (ideal window, under), 4.00-target, 4.08 (rationa
 lands it at finite accessible order. A perfect **defect-free + faithful + periodic**
 approximant is genuinely not readily available at experiment sizes.
 
+## Finding 6 — defect-matched crystalline control (GPT pre-pilot task): PASS
+`error_transport/matched_control.py`. Purpose (GPT): separate **generic weak
+disorder** from **organised quasicrystalline wiring** — *does a ~5% burden of
+distributed weak disorder produce the same transport effect even without
+quasicrystalline organisation?* Construction: start from the clean oblique-Z² grid;
+sample a target degree from the **native degree histogram** and assign it to grid
+nodes **at random** (defects dispersed by construction — no wall, no motif); realise
+the targets with **short local edge edits** (length cutoff, winding within one cell);
+repair connectivity; then pin the edge count to the native mean. It deliberately does
+**not** imitate Penrose/AB motifs.
+
+Validation PASS for both natives, both orders — matched vs native:
+
+| native | order | N (grid/native) | mean deg (matched/native) | deg-hist TV | defect frac (m/n) | matched max-bin share |
+|--------|-------|-----------------|---------------------------|-------------|-------------------|-----------------------|
+| AB     | 7/5   | 225 / 220       | 3.831 / 3.836             | 0.074       | 0.64 / 0.69       | 0.055 (no wall)       |
+| AB     | 17/12 | 1369 / 1355     | 3.944 / 3.945             | 0.028       | 0.65 / 0.67       | 0.035                 |
+| Penrose| 3/2   | 658 / 650       | 3.806 / 3.806             | 0.032       | 0.86 / 0.90       | 0.039                 |
+| Penrose| 5/3   | 1694 / 1700     | 3.793 / 3.794             | 0.050       | 0.88 / 0.90       | 0.034                 |
+
+Mean degree matched to ≤0.005; degree histogram TV < 0.075; winding integrity exact
+(antisymmetry, connectivity, both-generator closure, no multi-cell edges). Defects
+are **dispersed with no coherent wall** (max single-bin share 3–6%). Note: native
+defects are slightly *more* uniform (lower dispersion χ²) than the random-assigned
+matched defects — expected, since quasicrystalline defects are quasi-regularly
+spaced while random weak disorder has Poisson fluctuations; **both are wall-free.**
+This is the interpretability key GPT asked for: if Penrose differs from the clean
+grid but **not** from this matched-defect grid, the effect is mostly weak disorder;
+if it differs from **both**, the organised weave is the stronger candidate.
+
+## Stage-1 substrate family (GPT-approved) — construction complete
+1. clean oblique-Z² crystalline grid (Finding 3) — primary crystalline control;
+2. **defect-matched crystalline grid (Finding 6)** — weak-disorder control;
+3. phason-shear AB torus (Finding 2) — native;
+4. phason-shear Penrose torus (Finding 2) — native (faithful coord 7);
+5. bounded-local-rewires at ~70% saturation (Finding 4) — secondary scrambling.
+
+**Narrowed primary claim (GPT):** transport on *faithful quasicrystalline
+approximants carrying measured distributed phason-defect density* vs crystalline
+wiring, with controls that separate motif organisation from generic weak disorder —
+**not** "pristine quasicrystal vs pristine crystal."
+
 ## Consolidated recommendation for the three-way review
 - **Native substrate:** the **phason-shear torus** remains the most faithful
   available (faithful Penrose coord 7, exact winding, ~5% *dilute* defects that are
@@ -186,11 +237,15 @@ approximant is genuinely not readily available at experiment sizes.
   (defect-free-in-the-limit); faithful Penrose needs the kernel-aware rational cut.
   Do **not** block Stage 1 on it.
 
-## Next (pending the review's decisions)
+## Next
 1. ~~Phason-shear tori §7.1 gate~~ **DONE.** ~~Oblique-Z² control~~ **DONE.**
    ~~Rewire ladder~~ **DONE.** ~~Rational-cut investigation~~ **DONE.**
-2. Adjudicate: (i) native = phason-shear vs faithful-rational-cut-follow-up;
-   (ii) rewire target/role; then (only after) pilot → κ-seal → transport.
+   ~~Defect-matched crystalline control~~ **DONE (Finding 6).**
+2. All GPT-approved construction is complete and validated. The full Stage-1
+   substrate family (5 above) is built with exact winding bookkeeping.
+3. Remaining before inference (per the sealed two-step plan): runtime-only pilot →
+   choose κ in S_max=κ·N (P_censored ≲5% on largest graph) → κ-seal → transport
+   trials. **Not started — awaits explicit go-ahead. No pilot/walkers/transport yet.**
 
 *All reported as validation results under the design seal. No inference run, no
 pilot, no walkers, no transport.*
