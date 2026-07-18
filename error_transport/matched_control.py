@@ -61,7 +61,13 @@ def _short_candidates(node_par, P_a, P_b, cutoff):
     return cand
 
 
-def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6):
+def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6,
+                  spatial_ref=None):
+    """Defect-matched crystalline control. Default: target degrees sampled from the
+    native histogram and assigned to grid nodes AT RANDOM (dispersed weak disorder).
+    If `spatial_ref` is a SeamlessTorus, each grid node instead inherits the degree
+    of its spatially-nearest native node — transferring the native's DEFECT
+    ARRANGEMENT (hyperuniform-like) onto the grid (the discrimination control)."""
     T = SeamlessTorus(substrate, order_index)
     native_deg = T.degrees()
     native_mean = float(native_deg.mean())
@@ -81,8 +87,21 @@ def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6):
     for (a, b) in edges:
         deg[a] += 1; deg[b] += 1
 
-    # target degree sequence sampled from native histogram, assigned at RANDOM
-    target = rng.choice(native_deg, size=n, replace=True).astype(int)
+    # target degree sequence
+    if spatial_ref is not None:
+        # SPATIAL stamp: each grid node inherits the degree of the nearest native
+        # node (torus-aware via 3x3 tiling) -> transfers the native defect ARRANGEMENT
+        ref = spatial_ref
+        ref_deg = ref.degrees()
+        imgs = [ref.node_par + a * P_a + b * P_b
+                for a in (-1, 0, 1) for b in (-1, 0, 1)]
+        tiled = np.vstack(imgs)
+        base = np.tile(np.arange(ref.n), 9)
+        tree = cKDTree(tiled)
+        _, ti = tree.query(node_par, k=1)
+        target = ref_deg[base[ti]].astype(int)
+    else:
+        target = rng.choice(native_deg, size=n, replace=True).astype(int)
     # pin the mean/edge-deficit: adjust a few targets so sum(target) is even and
     # matches the native mean as closely as the grid allows
     want_sum = int(round(native_mean * n))

@@ -30,15 +30,22 @@ sits **slightly below** the clean grid (N=1700: 0.260 [0.254,0.266] vs 0.271
 [0.264,0.277] — just separated; clearer at N=247). So the organised weave, if
 anything, mildly *suppresses* logical winding for Penrose and is neutral for AB.
 
-**2. The key controlled contrast: QC > defect-matched grid — everywhere, CI-separated.**
+**2. The key controlled contrast: QC > *randomly* defect-matched grid — everywhere, CI-separated.**
 The matched grid has the **same N, mean degree, defect fraction, and degree
 histogram** as its QC native — the only difference is that its defects are placed at
 **random** rather than organised. Result: the QC winds **more** than the matched grid
 at every substrate and size (e.g. Pen N=1700: 0.260 [0.254,0.266] vs 0.234
 [0.228,0.240]; AB N=1355: 0.277 vs 0.250 — all separated). So the QC's transport is
-**not** reproduced by "a crystal carrying the same weak-disorder burden." Per the
-sealed decision rule (differs from *both* clean and matched grids) this points to the
-**organised placement of the defects** mattering, not just their density.
+**not** reproduced by "a crystal carrying the same weak-disorder burden."
+
+> **Correction (GPT review, owned):** the supported pattern is
+> **QC ≈ clean grid > random-defect grid**, *not* "QC differs from both." The
+> clean-grid difference is a whisker (AB: identical; Penrose: marginal), so the
+> claim is **not** that quasicrystalline wiring independently changes winding. The
+> claim the table supports is narrower and still real: **mean degree, degree
+> histogram, and defect count do not determine transport — the spatial/higher-order
+> organisation of the defects does.** The random matched defects *suppress* winding
+> (traps/bottlenecks from clumping); the QC's more even defect field does not.
 
 **3. But name the confound honestly.** *Why* does organised placement wind more than
 random placement? The matched grid's defects are Poisson-random and therefore
@@ -68,16 +75,27 @@ the result is robust to the start rule.
 ## Bottom line (neither a null nor fireworks)
 - Aperiodicity by itself does **not** dramatically change logical error transport:
   **QC ≈ clean crystal** at leading order, all governed by generic 2-D winding.
-- The one **CI-robust geometric signal** is **QC > defect-matched grid**: the same
-  defect burden placed *organised/uniformly* (QC) produces more logical winding than
-  placed *randomly* (matched grid). This is exactly the contrast the matched control
-  was built to expose.
+- The one **CI-robust geometric signal** is **QC > *randomly* defect-matched grid**:
+  the same defect *burden* placed *organised/uniformly* (QC) produces more logical
+  winding than placed *randomly* (matched grid). Equivalently, **random matched
+  defects suppress winding (trapping); the QC's even defect field does not.** So
+  degree + histogram + defect count **do not determine transport** — arrangement does.
 - **Caveat carried openly:** that signal is plausibly driven by defect **uniformity /
   hyperuniformity** rather than quasicrystalline organisation as such; a
-  hyperuniform-defect crystalline control is needed to separate them.
+  hyperuniform-defect crystalline control is needed to separate them (**built + run as
+  the follow-up discrimination test — see `STAGE1B_DISCRIMINATION.md`**).
+- **Two statistical cautions (GPT):** (i) the matched-grid result here is **one graph
+  realisation per size** — walker CIs capture Monte-Carlo but not graph-to-graph
+  variance; the follow-up runs a **~10-graph ensemble** to make the graph the
+  statistical unit. (ii) the **1/log N** size trend is a *candidate description*, not
+  a claimed law — checked against alternatives in the follow-up.
 - Effects are **small residuals** on a large generic background; nothing here supports
   a strong "quasicrystals impede/facilitate error transport" headline. It supports a
   careful statement about *organised vs random defect fields*.
+
+*Stage-1 numbers above are FROZEN. The follow-up (ensemble, spatial diagnostics,
+hyperuniform control, scaling fits) is a labelled discrimination test that adds to —
+never retunes — this table. See `STAGE1B_DISCRIMINATION.md`.*
 
 *All 30 runs (24 primary + 6 seam robustness), exact counts, and Wilson intervals in
 `results/inference_stage1.json`. Reported in full; no runs excluded.*
