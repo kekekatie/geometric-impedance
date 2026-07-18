@@ -151,15 +151,13 @@ def main():
             st["_ndef"] = int((dg != 4).sum())
             stats.append((gg, dg, st))
         # ensemble-mean spatial diagnostics
-        ndef_qc = int((qc_deg != 4).sum()) * stats[0][0]["n_nodes"] // T.n \
-            if False else int((qc_deg != 4).sum())
         mean_ndef = np.mean([s["_ndef"] for _, _, s in stats])
         mean_tv = np.mean([s["_tv"] for _, _, s in stats])
         mean_nv = np.mean([s["numvar"][str(GATE_SCALE)] for _, _, s in stats
                            if s["numvar"].get(str(GATE_SCALE)) is not None])
         mean_nn = np.mean([s["nn_mean"] for _, _, s in stats if s["nn_mean"]])
         # scale QC count to grid N for T1
-        gridN = stats[0][0]["n_nodes"]
+        gridN = stats[0][0]["n"]
         qc_ndef_scaled = int((qc_deg != 4).sum()) * gridN / T.n
         t1 = abs(mean_ndef - qc_ndef_scaled) / qc_ndef_scaled <= TOL_COUNT
         t2 = mean_tv <= TOL_HIST_TV
