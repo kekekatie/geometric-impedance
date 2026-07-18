@@ -1,0 +1,285 @@
+{
+  "discr_master_seed": 27182818,
+  "trials": 8000,
+  "n_random_realisations": 10,
+  "n_spatial_realisations": 4,
+  "kappa": 10,
+  "rows": [
+    {
+      "substrate": "ammann_beenker",
+      "order": 2,
+      "convergent": "3/2",
+      "N": 41,
+      "P_QC": 0.4225,
+      "P_QC_wilson": [
+        0.41172,
+        0.43336
+      ],
+      "P_clean": 0.41987,
+      "P_random_mean": 0.39964,
+      "P_random_graphstd": 0.01659,
+      "P_random_min": 0.35975,
+      "P_random_max": 0.4215,
+      "P_spatial_mean": 0.41103,
+      "P_spatial_graphstd": 0.01687,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.4146,
+          "n_traps": 17,
+          "nn_cv": 0.0,
+          "numvar_ratio": 0.6522
+        },
+        "random": {
+          "trap_frac": 0.2857,
+          "n_traps": 12,
+          "nn_cv": 0.1932,
+          "numvar_ratio": 0.7694
+        },
+        "spatial": {
+          "trap_frac": 0.381,
+          "n_traps": 16,
+          "nn_cv": 0.1808,
+          "numvar_ratio": 0.468
+        }
+      }
+    },
+    {
+      "substrate": "ammann_beenker",
+      "order": 3,
+      "convergent": "7/5",
+      "N": 220,
+      "P_QC": 0.33075,
+      "P_QC_wilson": [
+        0.32052,
+        0.34114
+      ],
+      "P_clean": 0.332,
+      "P_random_mean": 0.30197,
+      "P_random_graphstd": 0.00627,
+      "P_random_min": 0.291,
+      "P_random_max": 0.31225,
+      "P_spatial_mean": 0.30516,
+      "P_spatial_graphstd": 0.00914,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.4818,
+          "n_traps": 106,
+          "nn_cv": 0.1227,
+          "numvar_ratio": 0.1834
+        },
+        "random": {
+          "trap_frac": 0.4489,
+          "n_traps": 101,
+          "nn_cv": 0.1233,
+          "numvar_ratio": 0.3983
+        },
+        "spatial": {
+          "trap_frac": 0.4667,
+          "n_traps": 105,
+          "nn_cv": 0.1599,
+          "numvar_ratio": 0.3664
+        }
+      }
+    },
+    {
+      "substrate": "ammann_beenker",
+      "order": 4,
+      "convergent": "17/12",
+      "N": 1355,
+      "P_QC": 0.2745,
+      "P_QC_wilson": [
+        0.26483,
+        0.28439
+      ],
+      "P_clean": 0.2545,
+      "P_random_mean": 0.25398,
+      "P_random_graphstd": 0.00433,
+      "P_random_min": 0.248,
+      "P_random_max": 0.262,
+      "P_spatial_mean": 0.26578,
+      "P_spatial_graphstd": 0.00323,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.4362,
+          "n_traps": 591,
+          "nn_cv": 0.091,
+          "numvar_ratio": 0.1369
+        },
+        "random": {
+          "trap_frac": 0.4266,
+          "n_traps": 584,
+          "nn_cv": 0.1572,
+          "numvar_ratio": 0.4919
+        },
+        "spatial": {
+          "trap_frac": 0.4134,
+          "n_traps": 566,
+          "nn_cv": 0.1773,
+          "numvar_ratio": 0.3205
+        }
+      }
+    },
+    {
+      "substrate": "penrose",
+      "order": 2,
+      "convergent": "2/1",
+      "N": 247,
+      "P_QC": 0.3295,
+      "P_QC_wilson": [
+        0.31928,
+        0.33988
+      ],
+      "P_clean": 0.351,
+      "P_random_mean": 0.30568,
+      "P_random_graphstd": 0.01133,
+      "P_random_min": 0.28537,
+      "P_random_max": 0.322,
+      "P_spatial_mean": 0.30466,
+      "P_spatial_graphstd": 0.0089,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.5789,
+          "n_traps": 143,
+          "nn_cv": 0.2743,
+          "numvar_ratio": 0.1315
+        },
+        "random": {
+          "trap_frac": 0.55,
+          "n_traps": 132,
+          "nn_cv": 0.1214,
+          "numvar_ratio": 0.5969
+        },
+        "spatial": {
+          "trap_frac": 0.5333,
+          "n_traps": 128,
+          "nn_cv": 0.1218,
+          "numvar_ratio": 0.3781
+        }
+      }
+    },
+    {
+      "substrate": "penrose",
+      "order": 3,
+      "convergent": "3/2",
+      "N": 650,
+      "P_QC": 0.2995,
+      "P_QC_wilson": [
+        0.28956,
+        0.30963
+      ],
+      "P_clean": 0.30362,
+      "P_random_mean": 0.2688,
+      "P_random_graphstd": 0.00612,
+      "P_random_min": 0.26175,
+      "P_random_max": 0.28213,
+      "P_spatial_mean": 0.27613,
+      "P_spatial_graphstd": 0.00812,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.5831,
+          "n_traps": 379,
+          "nn_cv": 0.2796,
+          "numvar_ratio": 0.1055
+        },
+        "random": {
+          "trap_frac": 0.5274,
+          "n_traps": 347,
+          "nn_cv": 0.1031,
+          "numvar_ratio": 0.7358
+        },
+        "spatial": {
+          "trap_frac": 0.5441,
+          "n_traps": 358,
+          "nn_cv": 0.061,
+          "numvar_ratio": 0.5974
+        }
+      }
+    },
+    {
+      "substrate": "penrose",
+      "order": 4,
+      "convergent": "5/3",
+      "N": 1700,
+      "P_QC": 0.25888,
+      "P_QC_wilson": [
+        0.24939,
+        0.26859
+      ],
+      "P_clean": 0.27837,
+      "P_random_mean": 0.23519,
+      "P_random_graphstd": 0.0037,
+      "P_random_min": 0.22987,
+      "P_random_max": 0.23963,
+      "P_spatial_mean": 0.23741,
+      "P_spatial_graphstd": 0.00473,
+      "trap_stats": {
+        "QC": {
+          "trap_frac": 0.5894,
+          "n_traps": 1002,
+          "nn_cv": 0.2772,
+          "numvar_ratio": 0.0847
+        },
+        "random": {
+          "trap_frac": 0.5697,
+          "n_traps": 965,
+          "nn_cv": 0.0707,
+          "numvar_ratio": 0.5868
+        },
+        "spatial": {
+          "trap_frac": 0.5638,
+          "n_traps": 955,
+          "nn_cv": 0.0622,
+          "numvar_ratio": 0.9046
+        }
+      }
+    }
+  ],
+  "scaling_fits": {
+    "ammann_beenker": {
+      "a/logN+b": {
+        "coef": [
+          1.128438375510593,
+          0.1193959764353682
+        ],
+        "sse": 7.04e-06
+      },
+      "a/sqrtN+b": {
+        "coef": [
+          1.1285366459191593,
+          0.24825270207541797
+        ],
+        "sse": 6.456e-05
+      },
+      "a/N+b": {
+        "coef": [
+          5.719982471190468,
+          0.2860056409362548
+        ],
+        "sse": 0.0006078
+      }
+    },
+    "penrose": {
+      "a/logN+b": {
+        "coef": [
+          1.4774667845141707,
+          0.06432310817473888
+        ],
+        "sse": 7.547e-05
+      },
+      "a/sqrtN+b": {
+        "coef": [
+          1.7387019589483867,
+          0.22229394177024225
+        ],
+        "sse": 0.00012406
+      },
+      "a/N+b": {
+        "coef": [
+          18.681729290816637,
+          0.2575050313161169
+        ],
+        "sse": 0.00028135
+      }
+    }
+  }
+}
