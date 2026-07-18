@@ -1,0 +1,200 @@
+{
+  "seed": 16180339,
+  "trials": 8000,
+  "n_realisations": 10,
+  "kappa": 10,
+  "scales": [
+    0.15,
+    0.2,
+    0.25
+  ],
+  "gate_scale": 0.2,
+  "rows": [
+    {
+      "substrate": "ammann_beenker",
+      "order": 2,
+      "convergent": "3/2",
+      "N": 42,
+      "N_native": 41,
+      "QC_numvar": {
+        "0.15": 0.7592,
+        "0.2": 0.5978,
+        "0.25": 0.5139
+      },
+      "QC_nn": 0.7654,
+      "QC_ndef": 27,
+      "ctrl_numvar_gatescale": 0.5315,
+      "ctrl_numvar_all": {
+        "0.15": 0.5599,
+        "0.2": 0.5315,
+        "0.25": 0.4761
+      },
+      "ctrl_nn": 1.239,
+      "ctrl_ndef": 17.4,
+      "ctrl_hist_tv": 0.2531,
+      "gate": {
+        "T1_count": false,
+        "T2_hist": false,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    },
+    {
+      "substrate": "ammann_beenker",
+      "order": 3,
+      "convergent": "7/5",
+      "N": 225,
+      "N_native": 220,
+      "QC_numvar": {
+        "0.15": 0.3437,
+        "0.2": 0.1557,
+        "0.25": 0.1712
+      },
+      "QC_nn": 0.8229,
+      "QC_ndef": 152,
+      "ctrl_numvar_gatescale": 0.5643,
+      "ctrl_numvar_all": {
+        "0.15": 0.6211,
+        "0.2": 0.5643,
+        "0.25": 0.5121
+      },
+      "ctrl_nn": 1.0284,
+      "ctrl_ndef": 140.0,
+      "ctrl_hist_tv": 0.0856,
+      "gate": {
+        "T1_count": false,
+        "T2_hist": false,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    },
+    {
+      "substrate": "ammann_beenker",
+      "order": 4,
+      "convergent": "17/12",
+      "N": 1369,
+      "N_native": 1355,
+      "QC_numvar": {
+        "0.15": 0.1067,
+        "0.2": 0.1444,
+        "0.25": 0.1075
+      },
+      "QC_nn": 0.79,
+      "QC_ndef": 905,
+      "ctrl_numvar_gatescale": 0.4818,
+      "ctrl_numvar_all": {
+        "0.15": 0.5202,
+        "0.2": 0.4818,
+        "0.25": 0.4349
+      },
+      "ctrl_nn": 1.3796,
+      "ctrl_ndef": 477.9,
+      "ctrl_hist_tv": 0.319,
+      "gate": {
+        "T1_count": false,
+        "T2_hist": false,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    },
+    {
+      "substrate": "penrose",
+      "order": 2,
+      "convergent": "2/1",
+      "N": 240,
+      "N_native": 247,
+      "QC_numvar": {
+        "0.15": 0.1666,
+        "0.2": 0.1301,
+        "0.25": 0.1128
+      },
+      "QC_nn": 0.7367,
+      "QC_ndef": 213,
+      "ctrl_numvar_gatescale": 0.4342,
+      "ctrl_numvar_all": {
+        "0.15": 0.4692,
+        "0.2": 0.4342,
+        "0.25": 0.3865
+      },
+      "ctrl_nn": 0.9569,
+      "ctrl_ndef": 203.0,
+      "ctrl_hist_tv": 0.0277,
+      "gate": {
+        "T1_count": true,
+        "T2_hist": true,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    },
+    {
+      "substrate": "penrose",
+      "order": 3,
+      "convergent": "3/2",
+      "N": 658,
+      "N_native": 650,
+      "QC_numvar": {
+        "0.15": 0.1293,
+        "0.2": 0.089,
+        "0.25": 0.0982
+      },
+      "QC_nn": 0.7609,
+      "QC_ndef": 582,
+      "ctrl_numvar_gatescale": 0.4322,
+      "ctrl_numvar_all": {
+        "0.15": 0.4458,
+        "0.2": 0.4322,
+        "0.25": 0.4202
+      },
+      "ctrl_nn": 0.9484,
+      "ctrl_ndef": 571.1,
+      "ctrl_hist_tv": 0.0432,
+      "gate": {
+        "T1_count": true,
+        "T2_hist": true,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    },
+    {
+      "substrate": "penrose",
+      "order": 4,
+      "convergent": "5/3",
+      "N": 1694,
+      "N_native": 1700,
+      "QC_numvar": {
+        "0.15": 0.0956,
+        "0.2": 0.0848,
+        "0.25": 0.097
+      },
+      "QC_nn": 0.7616,
+      "QC_ndef": 1532,
+      "ctrl_numvar_gatescale": 0.4163,
+      "ctrl_numvar_all": {
+        "0.15": 0.4546,
+        "0.2": 0.4163,
+        "0.25": 0.3614
+      },
+      "ctrl_nn": 0.9636,
+      "ctrl_ndef": 1499.3,
+      "ctrl_hist_tv": 0.0247,
+      "gate": {
+        "T1_count": true,
+        "T2_hist": true,
+        "T3_numvar": false,
+        "T4_nn": false,
+        "PASS": false
+      },
+      "transport": null
+    }
+  ]
+}

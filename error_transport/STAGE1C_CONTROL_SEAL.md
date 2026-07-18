@@ -60,5 +60,59 @@ For sizes that pass the gate:
   motif correlations** contribute beyond defect placement.
 - **uniform control between random and QC** → **both** spacing and weave contribute.
 
-*Sealed. Records (achieved spatial stats, gate pass/fail, and — only if passed —
-transport ensemble) appended by `stage1c.py`.*
+*Sealed. Records below.*
+
+---
+
+# Records — the gate FAILED at every size; per the seal, NO transport was run
+
+10 realisations/size, blue-noise (Poisson-disk) trap placement + degree-histogram
+degrees + local-edit realisation. Number variance at s=0.20 (1=Poisson, <1=suppressed):
+
+| substrate | N | QC numvar | control numvar | QC nn | control nn | defcount QC/ctrl | histTV | GATE |
+|-----------|---|-----------|----------------|-------|------------|------------------|--------|------|
+| AB | 42 | 0.598 | 0.532 | 0.77 | 1.24 | 28 / 17 | 0.253 | FAIL |
+| AB | 225 | 0.156 | 0.564 | 0.82 | 1.03 | 155 / 140 | 0.086 | FAIL |
+| AB | 1369 | 0.144 | 0.482 | 0.79 | 1.38 | 914 / 478 | 0.319 | FAIL |
+| Pen | 240 | 0.130 | 0.434 | 0.74 | 0.96 | 207 / 203 | 0.028 | FAIL |
+| Pen | 658 | 0.089 | 0.432 | 0.76 | 0.95 | 589 / 571 | 0.043 | FAIL |
+| Pen | 1694 | 0.085 | 0.416 | 0.76 | 0.96 | 1527 / 1499 | 0.025 | FAIL |
+
+For Penrose the count and histogram matched well (T1, T2 pass), but **T3 (number
+variance) failed everywhere** and by a wide margin: the control's trap field is
+~0.42–0.56 (blue-noise: suppressed vs Poisson=1, but not close), while the QC is
+~0.08–0.16. **The QC defect field is far more uniform than blue noise achieves.**
+
+## The informative failure (the key insight)
+The QC defect field has a **quasicrystal-specific spatial signature that a grid point
+process cannot reproduce**:
+- **small nearest-neighbour spacing** (QC nn ≈ 0.76 < control ≈ 0.96–1.38), i.e. some
+  close trap pairs / locally variable spacing; **yet**
+- **strongly suppressed large-scale number fluctuations** (QC numvar ≈ 0.08–0.16,
+  falling with size — hyperuniform-like), far below blue noise.
+
+Generic point processes cannot hit **both** at once: Poisson → high numvar; blue-noise
+/ jittered-lattice → large *uniform* nn with only moderate (or, if pushed to a lattice,
+very low) numvar — but then *large* nn, not the QC's small nn. The combination
+*small-nn + low-numvar* is characteristic of **quasiperiodic order** itself. So a
+crystalline control that matches the QC's full defect spatial statistics may be
+**fundamentally hard to construct** — which is itself a result about how special the
+QC's defect organisation is.
+
+## Consequence for the discrimination (honest)
+- Per the seal, **transport was NOT run** (gate failed) — no over-interpretation.
+- The clean "spacing vs weave" separation is **harder than anticipated**: the QC's
+  defect *spacing statistics are themselves quasicrystalline* and not reproducible by
+  blue-noise on a grid. A matched control would need a construction whose defect field
+  attains small-nn + low-numvar simultaneously — plausibly only a quasiperiodic
+  arrangement does — which blurs the line between "matched-spacing control" and "a
+  second quasicrystal."
+- **Options for the three-way review:** (a) accept that the QC defect field's spatial
+  signature is quasicrystal-specific and report Stage-1B's leaning result with this
+  boundary stated; (b) attempt a harder construction (e.g. a *different* quasiperiodic
+  tiling's defect pattern stamped on the grid, or a tuned pair-correlation-matched
+  process) as Stage-1D; (c) reframe the question from "spacing vs weave" to
+  "the QC defect field is a distinctive, hard-to-mimic hyperuniform-like point
+  pattern," which is a finding in its own right.
+
+*Gate details in `results/stage1c.json`. Stage-1 and Stage-1B unchanged and frozen.*
