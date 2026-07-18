@@ -1,0 +1,994 @@
+{
+  "kappa": 10,
+  "inference_master_seed": 31415926,
+  "trials_per_graph": 20000,
+  "rows": [
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 41,
+      "N_native": 41,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 11284,
+      "logical": 8711,
+      "censored": 5,
+      "P_heal": 0.5642,
+      "P_logical": 0.43555,
+      "P_censored": 0.00025,
+      "P_logical_wilson": [
+        0.428691,
+        0.442434
+      ],
+      "P_heal_wilson": [
+        0.557316,
+        0.571059
+      ],
+      "P_censored_wilson": [
+        0.000107,
+        0.000585
+      ],
+      "runtime_s": 0.09
+    },
+    {
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "clean_grid",
+      "N": 42,
+      "N_native": 41,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 11579,
+      "logical": 8409,
+      "censored": 12,
+      "P_heal": 0.57895,
+      "P_logical": 0.42045,
+      "P_censored": 0.0006,
+      "P_logical_wilson": [
+        0.413625,
+        0.427306
+      ],
+      "P_heal_wilson": [
+        0.572093,
+        0.585777
+      ],
+      "P_censored_wilson": [
+        0.000343,
+        0.001049
+      ],
+      "runtime_s": 0.1
+    },
+    {
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "matched_grid",
+      "N": 42,
+      "N_native": 41,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 11966,
+      "logical": 8026,
+      "censored": 8,
+      "P_heal": 0.5983,
+      "P_logical": 0.4013,
+      "P_censored": 0.0004,
+      "P_logical_wilson": [
+        0.394526,
+        0.408112
+      ],
+      "P_heal_wilson": [
+        0.591487,
+        0.605075
+      ],
+      "P_censored_wilson": [
+        0.000203,
+        0.000789
+      ],
+      "runtime_s": 0.09
+    },
+    {
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "rewire",
+      "N": 41,
+      "N_native": 41,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 11180,
+      "logical": 8816,
+      "censored": 4,
+      "P_heal": 0.559,
+      "P_logical": 0.4408,
+      "P_censored": 0.0002,
+      "P_logical_wilson": [
+        0.433931,
+        0.447692
+      ],
+      "P_heal_wilson": [
+        0.552108,
+        0.565869
+      ],
+      "P_censored_wilson": [
+        7.8e-05,
+        0.000514
+      ],
+      "runtime_s": 0.08
+    },
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 41,
+      "N_native": 41,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 11405,
+      "logical": 8591,
+      "censored": 4,
+      "P_heal": 0.57025,
+      "P_logical": 0.42955,
+      "P_censored": 0.0002,
+      "P_logical_wilson": [
+        0.422704,
+        0.436423
+      ],
+      "P_heal_wilson": [
+        0.563376,
+        0.577097
+      ],
+      "P_censored_wilson": [
+        7.8e-05,
+        0.000514
+      ],
+      "runtime_s": 0.08
+    },
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 220,
+      "N_native": 220,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13391,
+      "logical": 6561,
+      "censored": 48,
+      "P_heal": 0.66955,
+      "P_logical": 0.32805,
+      "P_censored": 0.0024,
+      "P_logical_wilson": [
+        0.321577,
+        0.334589
+      ],
+      "P_heal_wilson": [
+        0.662999,
+        0.676036
+      ],
+      "P_censored_wilson": [
+        0.001811,
+        0.00318
+      ],
+      "runtime_s": 0.43
+    },
+    {
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "clean_grid",
+      "N": 225,
+      "N_native": 220,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13234,
+      "logical": 6705,
+      "censored": 61,
+      "P_heal": 0.6617,
+      "P_logical": 0.33525,
+      "P_censored": 0.00305,
+      "P_logical_wilson": [
+        0.32874,
+        0.341824
+      ],
+      "P_heal_wilson": [
+        0.655112,
+        0.668226
+      ],
+      "P_censored_wilson": [
+        0.002375,
+        0.003916
+      ],
+      "runtime_s": 0.43
+    },
+    {
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "matched_grid",
+      "N": 225,
+      "N_native": 220,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13918,
+      "logical": 6020,
+      "censored": 62,
+      "P_heal": 0.6959,
+      "P_logical": 0.301,
+      "P_censored": 0.0031,
+      "P_logical_wilson": [
+        0.294682,
+        0.307395
+      ],
+      "P_heal_wilson": [
+        0.689487,
+        0.702238
+      ],
+      "P_censored_wilson": [
+        0.002419,
+        0.003972
+      ],
+      "runtime_s": 0.41
+    },
+    {
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "rewire",
+      "N": 220,
+      "N_native": 220,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 12650,
+      "logical": 7319,
+      "censored": 31,
+      "P_heal": 0.6325,
+      "P_logical": 0.36595,
+      "P_censored": 0.00155,
+      "P_logical_wilson": [
+        0.3593,
+        0.372651
+      ],
+      "P_heal_wilson": [
+        0.625793,
+        0.639156
+      ],
+      "P_censored_wilson": [
+        0.001092,
+        0.002199
+      ],
+      "runtime_s": 0.42
+    },
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 220,
+      "N_native": 220,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 13475,
+      "logical": 6480,
+      "censored": 45,
+      "P_heal": 0.67375,
+      "P_logical": 0.324,
+      "P_censored": 0.00225,
+      "P_logical_wilson": [
+        0.317548,
+        0.330519
+      ],
+      "P_heal_wilson": [
+        0.667219,
+        0.680214
+      ],
+      "P_censored_wilson": [
+        0.001682,
+        0.003009
+      ],
+      "runtime_s": 0.4
+    },
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 1355,
+      "N_native": 1355,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14350,
+      "logical": 5544,
+      "censored": 106,
+      "P_heal": 0.7175,
+      "P_logical": 0.2772,
+      "P_censored": 0.0053,
+      "P_logical_wilson": [
+        0.27104,
+        0.283446
+      ],
+      "P_heal_wilson": [
+        0.711219,
+        0.723697
+      ],
+      "P_censored_wilson": [
+        0.004384,
+        0.006406
+      ],
+      "runtime_s": 2.14
+    },
+    {
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "clean_grid",
+      "N": 1369,
+      "N_native": 1355,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14386,
+      "logical": 5481,
+      "censored": 133,
+      "P_heal": 0.7193,
+      "P_logical": 0.27405,
+      "P_censored": 0.00665,
+      "P_logical_wilson": [
+        0.267912,
+        0.280275
+      ],
+      "P_heal_wilson": [
+        0.713031,
+        0.725485
+      ],
+      "P_censored_wilson": [
+        0.005614,
+        0.007875
+      ],
+      "runtime_s": 2.25
+    },
+    {
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "matched_grid",
+      "N": 1369,
+      "N_native": 1355,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14872,
+      "logical": 4995,
+      "censored": 133,
+      "P_heal": 0.7436,
+      "P_logical": 0.24975,
+      "P_censored": 0.00665,
+      "P_logical_wilson": [
+        0.243799,
+        0.255797
+      ],
+      "P_heal_wilson": [
+        0.737502,
+        0.749604
+      ],
+      "P_censored_wilson": [
+        0.005614,
+        0.007875
+      ],
+      "runtime_s": 2.13
+    },
+    {
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "rewire",
+      "N": 1355,
+      "N_native": 1355,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13615,
+      "logical": 6323,
+      "censored": 62,
+      "P_heal": 0.68075,
+      "P_logical": 0.31615,
+      "P_censored": 0.0031,
+      "P_logical_wilson": [
+        0.309742,
+        0.322629
+      ],
+      "P_heal_wilson": [
+        0.674255,
+        0.687176
+      ],
+      "P_censored_wilson": [
+        0.002419,
+        0.003972
+      ],
+      "runtime_s": 2.17
+    },
+    {
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "family": "QC",
+      "N": 1355,
+      "N_native": 1355,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 14491,
+      "logical": 5414,
+      "censored": 95,
+      "P_heal": 0.72455,
+      "P_logical": 0.2707,
+      "P_censored": 0.00475,
+      "P_logical_wilson": [
+        0.264586,
+        0.276902
+      ],
+      "P_heal_wilson": [
+        0.718316,
+        0.730698
+      ],
+      "P_censored_wilson": [
+        0.003888,
+        0.005803
+      ],
+      "runtime_s": 2.04
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 247,
+      "N_native": 247,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13256,
+      "logical": 6644,
+      "censored": 100,
+      "P_heal": 0.6628,
+      "P_logical": 0.3322,
+      "P_censored": 0.005,
+      "P_logical_wilson": [
+        0.325705,
+        0.338759
+      ],
+      "P_heal_wilson": [
+        0.656217,
+        0.66932
+      ],
+      "P_censored_wilson": [
+        0.004113,
+        0.006077
+      ],
+      "runtime_s": 0.36
+    },
+    {
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "family": "clean_grid",
+      "N": 240,
+      "N_native": 247,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 12875,
+      "logical": 6994,
+      "censored": 131,
+      "P_heal": 0.64375,
+      "P_logical": 0.3497,
+      "P_censored": 0.00655,
+      "P_logical_wilson": [
+        0.34312,
+        0.356337
+      ],
+      "P_heal_wilson": [
+        0.637086,
+        0.650359
+      ],
+      "P_censored_wilson": [
+        0.005523,
+        0.007767
+      ],
+      "runtime_s": 0.37
+    },
+    {
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "family": "matched_grid",
+      "N": 240,
+      "N_native": 247,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13713,
+      "logical": 6133,
+      "censored": 154,
+      "P_heal": 0.68565,
+      "P_logical": 0.30665,
+      "P_censored": 0.0077,
+      "P_logical_wilson": [
+        0.300297,
+        0.313077
+      ],
+      "P_heal_wilson": [
+        0.679181,
+        0.692048
+      ],
+      "P_censored_wilson": [
+        0.00658,
+        0.00901
+      ],
+      "runtime_s": 0.41
+    },
+    {
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "family": "rewire",
+      "N": 247,
+      "N_native": 247,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 12246,
+      "logical": 7696,
+      "censored": 58,
+      "P_heal": 0.6123,
+      "P_logical": 0.3848,
+      "P_censored": 0.0029,
+      "P_logical_wilson": [
+        0.37808,
+        0.391565
+      ],
+      "P_heal_wilson": [
+        0.605526,
+        0.61903
+      ],
+      "P_censored_wilson": [
+        0.002244,
+        0.003747
+      ],
+      "runtime_s": 0.44
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 247,
+      "N_native": 247,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 13207,
+      "logical": 6654,
+      "censored": 139,
+      "P_heal": 0.66035,
+      "P_logical": 0.3327,
+      "P_censored": 0.00695,
+      "P_logical_wilson": [
+        0.326202,
+        0.339262
+      ],
+      "P_heal_wilson": [
+        0.653756,
+        0.666882
+      ],
+      "P_censored_wilson": [
+        0.00589,
+        0.0082
+      ],
+      "runtime_s": 0.37
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 650,
+      "N_native": 650,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13982,
+      "logical": 5827,
+      "censored": 191,
+      "P_heal": 0.6991,
+      "P_logical": 0.29135,
+      "P_censored": 0.00955,
+      "P_logical_wilson": [
+        0.285093,
+        0.297687
+      ],
+      "P_heal_wilson": [
+        0.692706,
+        0.705418
+      ],
+      "P_censored_wilson": [
+        0.008293,
+        0.010995
+      ],
+      "runtime_s": 0.96
+    },
+    {
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "family": "clean_grid",
+      "N": 658,
+      "N_native": 650,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13762,
+      "logical": 6083,
+      "censored": 155,
+      "P_heal": 0.6881,
+      "P_logical": 0.30415,
+      "P_censored": 0.00775,
+      "P_logical_wilson": [
+        0.297812,
+        0.310563
+      ],
+      "P_heal_wilson": [
+        0.681644,
+        0.694484
+      ],
+      "P_censored_wilson": [
+        0.006626,
+        0.009063
+      ],
+      "runtime_s": 1.07
+    },
+    {
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "family": "matched_grid",
+      "N": 658,
+      "N_native": 650,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14330,
+      "logical": 5456,
+      "censored": 214,
+      "P_heal": 0.7165,
+      "P_logical": 0.2728,
+      "P_censored": 0.0107,
+      "P_logical_wilson": [
+        0.266671,
+        0.279016
+      ],
+      "P_heal_wilson": [
+        0.710213,
+        0.722704
+      ],
+      "P_censored_wilson": [
+        0.009365,
+        0.012223
+      ],
+      "runtime_s": 1.06
+    },
+    {
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "family": "rewire",
+      "N": 650,
+      "N_native": 650,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 13273,
+      "logical": 6636,
+      "censored": 91,
+      "P_heal": 0.66365,
+      "P_logical": 0.3318,
+      "P_censored": 0.00455,
+      "P_logical_wilson": [
+        0.325307,
+        0.338358
+      ],
+      "P_heal_wilson": [
+        0.657071,
+        0.670166
+      ],
+      "P_censored_wilson": [
+        0.003708,
+        0.005583
+      ],
+      "runtime_s": 1.07
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 650,
+      "N_native": 650,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 13952,
+      "logical": 5903,
+      "censored": 145,
+      "P_heal": 0.6976,
+      "P_logical": 0.29515,
+      "P_censored": 0.00725,
+      "P_logical_wilson": [
+        0.288868,
+        0.30151
+      ],
+      "P_heal_wilson": [
+        0.691197,
+        0.703927
+      ],
+      "P_censored_wilson": [
+        0.006165,
+        0.008524
+      ],
+      "runtime_s": 0.91
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 1700,
+      "N_native": 1700,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14583,
+      "logical": 5206,
+      "censored": 211,
+      "P_heal": 0.72915,
+      "P_logical": 0.2603,
+      "P_censored": 0.01055,
+      "P_logical_wilson": [
+        0.254265,
+        0.266427
+      ],
+      "P_heal_wilson": [
+        0.722947,
+        0.735265
+      ],
+      "P_censored_wilson": [
+        0.009225,
+        0.012063
+      ],
+      "runtime_s": 2.32
+    },
+    {
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "family": "clean_grid",
+      "N": 1694,
+      "N_native": 1700,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14350,
+      "logical": 5410,
+      "censored": 240,
+      "P_heal": 0.7175,
+      "P_logical": 0.2705,
+      "P_censored": 0.012,
+      "P_logical_wilson": [
+        0.264388,
+        0.2767
+      ],
+      "P_heal_wilson": [
+        0.711219,
+        0.723697
+      ],
+      "P_censored_wilson": [
+        0.010582,
+        0.013606
+      ],
+      "runtime_s": 2.57
+    },
+    {
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "family": "matched_grid",
+      "N": 1694,
+      "N_native": 1700,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 15074,
+      "logical": 4677,
+      "censored": 249,
+      "P_heal": 0.7537,
+      "P_logical": 0.23385,
+      "P_censored": 0.01245,
+      "P_logical_wilson": [
+        0.228035,
+        0.239767
+      ],
+      "P_heal_wilson": [
+        0.74768,
+        0.759622
+      ],
+      "P_censored_wilson": [
+        0.011004,
+        0.014083
+      ],
+      "runtime_s": 2.36
+    },
+    {
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "family": "rewire",
+      "N": 1700,
+      "N_native": 1700,
+      "start": "nonseam",
+      "trials": 20000,
+      "heal": 14233,
+      "logical": 5610,
+      "censored": 157,
+      "P_heal": 0.71165,
+      "P_logical": 0.2805,
+      "P_censored": 0.00785,
+      "P_logical_wilson": [
+        0.274316,
+        0.286768
+      ],
+      "P_heal_wilson": [
+        0.705332,
+        0.717887
+      ],
+      "P_censored_wilson": [
+        0.006718,
+        0.009171
+      ],
+      "runtime_s": 2.43
+    },
+    {
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "family": "QC",
+      "N": 1700,
+      "N_native": 1700,
+      "start": "seam",
+      "trials": 20000,
+      "heal": 14413,
+      "logical": 5360,
+      "censored": 227,
+      "P_heal": 0.72065,
+      "P_logical": 0.268,
+      "P_censored": 0.01135,
+      "P_logical_wilson": [
+        0.261906,
+        0.274183
+      ],
+      "P_heal_wilson": [
+        0.71439,
+        0.726826
+      ],
+      "P_censored_wilson": [
+        0.009973,
+        0.012915
+      ],
+      "runtime_s": 2.3
+    }
+  ],
+  "manifest": [
+    {
+      "graph_id": 0,
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 41
+    },
+    {
+      "graph_id": 1,
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 42
+    },
+    {
+      "graph_id": 2,
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 42
+    },
+    {
+      "graph_id": 3,
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 41
+    },
+    {
+      "graph_id": 5,
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 220
+    },
+    {
+      "graph_id": 6,
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 225
+    },
+    {
+      "graph_id": 7,
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 225
+    },
+    {
+      "graph_id": 8,
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 220
+    },
+    {
+      "graph_id": 10,
+      "name": "QC@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 1355
+    },
+    {
+      "graph_id": 11,
+      "name": "clean_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 1369
+    },
+    {
+      "graph_id": 12,
+      "name": "matched_grid@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 1369
+    },
+    {
+      "graph_id": 13,
+      "name": "rewire@ammann_beenker",
+      "substrate": "ammann_beenker",
+      "N": 1355
+    },
+    {
+      "graph_id": 15,
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "N": 247
+    },
+    {
+      "graph_id": 16,
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "N": 240
+    },
+    {
+      "graph_id": 17,
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "N": 240
+    },
+    {
+      "graph_id": 18,
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "N": 247
+    },
+    {
+      "graph_id": 20,
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "N": 650
+    },
+    {
+      "graph_id": 21,
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "N": 658
+    },
+    {
+      "graph_id": 22,
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "N": 658
+    },
+    {
+      "graph_id": 23,
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "N": 650
+    },
+    {
+      "graph_id": 25,
+      "name": "QC@penrose",
+      "substrate": "penrose",
+      "N": 1700
+    },
+    {
+      "graph_id": 26,
+      "name": "clean_grid@penrose",
+      "substrate": "penrose",
+      "N": 1694
+    },
+    {
+      "graph_id": 27,
+      "name": "matched_grid@penrose",
+      "substrate": "penrose",
+      "N": 1694
+    },
+    {
+      "graph_id": 28,
+      "name": "rewire@penrose",
+      "substrate": "penrose",
+      "N": 1700
+    }
+  ],
+  "pilot_seed_separate": true
+}
