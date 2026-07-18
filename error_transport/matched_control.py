@@ -62,7 +62,7 @@ def _short_candidates(node_par, P_a, P_b, cutoff):
 
 
 def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6,
-                  spatial_ref=None):
+                  spatial_ref=None, target_degrees=None):
     """Defect-matched crystalline control. Default: target degrees sampled from the
     native histogram and assigned to grid nodes AT RANDOM (dispersed weak disorder).
     If `spatial_ref` is a SeamlessTorus, each grid node instead inherits the degree
@@ -88,7 +88,10 @@ def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6,
         deg[a] += 1; deg[b] += 1
 
     # target degree sequence
-    if spatial_ref is not None:
+    if target_degrees is not None:
+        # explicit target (Stage-1C: blue-noise-placed defect sites + histogram)
+        target = np.asarray(target_degrees, dtype=int).copy()
+    elif spatial_ref is not None:
         # SPATIAL stamp: each grid node inherits the degree of the nearest native
         # node (torus-aware via 3x3 tiling) -> transfers the native defect ARRANGEMENT
         ref = spatial_ref
@@ -103,17 +106,20 @@ def build_matched(substrate, order_index, cutoff=2.2, seed=0, rounds=6,
     else:
         target = rng.choice(native_deg, size=n, replace=True).astype(int)
     # pin the mean/edge-deficit: adjust a few targets so sum(target) is even and
-    # matches the native mean as closely as the grid allows
+    # matches the native mean as closely as the grid allows. Skipped for explicit
+    # target_degrees (Stage-1C) to preserve the blue-noise placement — the final
+    # edge-count pin still enforces the native mean.
     want_sum = int(round(native_mean * n))
     want_sum -= want_sum % 2
-    while target.sum() > want_sum:
-        i = rng.integers(n)
-        if target[i] > 1:
-            target[i] -= 1
-    while target.sum() < want_sum:
-        i = rng.integers(n)
-        if target[i] < 8:
-            target[i] += 1
+    if target_degrees is None:
+        while target.sum() > want_sum:
+            i = rng.integers(n)
+            if target[i] > 1:
+                target[i] -= 1
+        while target.sum() < want_sum:
+            i = rng.integers(n)
+            if target[i] < 8:
+                target[i] += 1
 
     cand = _short_candidates(node_par, P_a, P_b, cutoff)
 
