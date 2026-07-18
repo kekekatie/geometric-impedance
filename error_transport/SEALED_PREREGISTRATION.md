@@ -5,11 +5,14 @@ GPT collaborator (three-way review: Claude drafted, GPT reviewed twice, Katie
 adjudicated). This is the frozen design + pilot-selection rule (identical to
 DRAFT v3). Sections are frozen; corrections go in an appended changelog only.
 
-**Remaining seal:** the **κ-seal** (§8) is still open — it fixes the one number
-`κ` in `S_max = κ·N` from a runtime-only pilot, *after* construction+validation
-and *before* any inference. **Order permitted now:** construction + validation
-only (edge-complete tori, oblique-Z² controls, rewire-ladder diagnostics). **Not
-yet:** runtime pilot, walkers, transport, any inference.
+**κ-SEAL APPLIED — 2026-07-18 (κ = 10, `S_max = 10·N`).** All construction +
+validation complete and three-way approved (Stage-1 family: phason-shear AB &
+Penrose natives, clean oblique-Z² control, defect-matched control, ~70% bounded
+rewires secondary). The runtime-only, outcome-blind pilot (`PILOT_SEAL.md`,
+`pilot.py`) selected the smallest ladder κ with worst-case censoring ≤5% on the
+largest eligible graph: κ=5→5.97% (fails), **κ=10→1.43% (sealed)**. Pilot
+trajectories are permanently excluded from inference. **Not yet:** the preregistered
+transport trials / any inference — awaiting the three-way go-ahead for Stage 1.
 
 *(Draft history and full review trail: `DRAFT_PREREGISTRATION.md`.)*
 

@@ -1,0 +1,83 @@
+{
+  "pilot_master_seed": 20250718,
+  "kappa_ladder": [
+    5,
+    10,
+    20,
+    40,
+    80
+  ],
+  "pilot_trials": 4000,
+  "graphs": [
+    {
+      "graph_id": 0,
+      "name": "phason_shear_AB",
+      "n": 1355,
+      "trials": 4000,
+      "censoring": {
+        "5": 0.04525,
+        "10": 0.00475,
+        "20": 0.0,
+        "40": 0.0,
+        "80": 0.0
+      },
+      "median_annih_step": 25,
+      "runtime_s": 0.4
+    },
+    {
+      "graph_id": 1,
+      "name": "phason_shear_Penrose",
+      "n": 1700,
+      "trials": 4000,
+      "censoring": {
+        "5": 0.04825,
+        "10": 0.0105,
+        "20": 0.001,
+        "40": 0.0,
+        "80": 0.0
+      },
+      "median_annih_step": 17,
+      "runtime_s": 0.58
+    },
+    {
+      "graph_id": 2,
+      "name": "clean_oblique_grid",
+      "n": 1694,
+      "trials": 4000,
+      "censoring": {
+        "5": 0.05975,
+        "10": 0.01425,
+        "20": 0.0005,
+        "40": 0.0,
+        "80": 0.0
+      },
+      "median_annih_step": 25,
+      "runtime_s": 0.59
+    },
+    {
+      "graph_id": 3,
+      "name": "defect_matched_grid",
+      "n": 1694,
+      "trials": 4000,
+      "censoring": {
+        "5": 0.0505,
+        "10": 0.0105,
+        "20": 0.0,
+        "40": 0.0,
+        "80": 0.0
+      },
+      "median_annih_step": 13,
+      "runtime_s": 0.47
+    }
+  ],
+  "max_censoring": {
+    "5": 0.05975,
+    "10": 0.01425,
+    "20": 0.001,
+    "40": 0.0,
+    "80": 0.0
+  },
+  "chosen_kappa": 10,
+  "selection_rule": "smallest kappa with worst-case largest-graph censoring <= 5%",
+  "pilot_data_excluded_from_inference": true
+}
