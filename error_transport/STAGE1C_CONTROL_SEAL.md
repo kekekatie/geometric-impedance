@@ -83,36 +83,33 @@ variance) failed everywhere** and by a wide margin: the control's trap field is
 ~0.42–0.56 (blue-noise: suppressed vs Poisson=1, but not close), while the QC is
 ~0.08–0.16. **The QC defect field is far more uniform than blue noise achieves.**
 
-## The informative failure (the key insight)
-The QC defect field has a **quasicrystal-specific spatial signature that a grid point
-process cannot reproduce**:
+## The informative failure (tempered per GPT review)
+**The tested blue-noise controls failed to match the quasicrystalline approximants'
+distinctive multiscale defect-field statistics.** Specifically the QC trap field
+combines:
 - **small nearest-neighbour spacing** (QC nn ≈ 0.76 < control ≈ 0.96–1.38), i.e. some
-  close trap pairs / locally variable spacing; **yet**
-- **strongly suppressed large-scale number fluctuations** (QC numvar ≈ 0.08–0.16,
-  falling with size — hyperuniform-like), far below blue noise.
+  close trap pairs / locally variable spacing; **with**
+- **strongly suppressed finite-scale number fluctuations** (QC numvar ≈ 0.08–0.16,
+  falling with size — hyperuniform-like), far below the blue-noise controls (~0.42–0.56).
 
-Generic point processes cannot hit **both** at once: Poisson → high numvar; blue-noise
-/ jittered-lattice → large *uniform* nn with only moderate (or, if pushed to a lattice,
-very low) numvar — but then *large* nn, not the QC's small nn. The combination
-*small-nn + low-numvar* is characteristic of **quasiperiodic order** itself. So a
-crystalline control that matches the QC's full defect spatial statistics may be
-**fundamentally hard to construct** — which is itself a result about how special the
-QC's defect organisation is.
+The blue-noise / Poisson-disk family we tested could not reproduce **both** at once
+(it gives large, uniform nn with only moderate number-variance suppression). **This
+does NOT prove that no generic correlated process could match it, nor that only
+quasiperiodicity produces this combination** — only that *this* construction failed
+its gate. Whether another correlated point process can hit the QC's multiscale
+statistics is an open, named future question, not a claim of this paper. We use
+"hyperuniform-like" / "strongly suppressed finite-scale number fluctuations," never
+strict or uniquely-quasicrystalline hyperuniformity.
 
 ## Consequence for the discrimination (honest)
 - Per the seal, **transport was NOT run** (gate failed) — no over-interpretation.
-- The clean "spacing vs weave" separation is **harder than anticipated**: the QC's
-  defect *spacing statistics are themselves quasicrystalline* and not reproducible by
-  blue-noise on a grid. A matched control would need a construction whose defect field
-  attains small-nn + low-numvar simultaneously — plausibly only a quasiperiodic
-  arrangement does — which blurs the line between "matched-spacing control" and "a
-  second quasicrystal."
-- **Options for the three-way review:** (a) accept that the QC defect field's spatial
-  signature is quasicrystal-specific and report Stage-1B's leaning result with this
-  boundary stated; (b) attempt a harder construction (e.g. a *different* quasiperiodic
-  tiling's defect pattern stamped on the grid, or a tuned pair-correlation-matched
-  process) as Stage-1D; (c) reframe the question from "spacing vs weave" to
-  "the QC defect field is a distinctive, hard-to-mimic hyperuniform-like point
-  pattern," which is a finding in its own right.
+- The clean "spacing vs weave" separation was **not achieved** by this construction:
+  the tested blue-noise controls did not instantiate the QC's multiscale defect-field
+  statistics, so they cannot discriminate. Exact causal separation of defect spacing
+  from the wider weave is a **named future experiment**, not a prerequisite for
+  Paper 1.
+- **Decision (GPT, adopted): stop control escalation for Paper 1.** No further new
+  controls. The paper is framed around what is already supported (see
+  `paper/CLAIMS_MAP.md`), with the causal separation listed as future work.
 
 *Gate details in `results/stage1c.json`. Stage-1 and Stage-1B unchanged and frozen.*
