@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Local working copy of the original v3 AB lift, supplied by the author.
+# Not committed pending a decision on publishing the raw substrate data;
+# real_ab_edges.csv is fully reconstructible from it via generate_ab.py's
+# adjacency rule, and is committed.
+real_ab_lift.csv
