@@ -48,16 +48,33 @@ below apply to the published analysis and not to a variant of it.
 Note that identity / weave (0.9910) and identity / degree-family-only (0.9910)
 are the same number to four decimal places.
 
-## Confirmation on the original Penrose topology
+## Result table (original Penrose substrate)
 
-The Penrose lift file was not available, so the full audit could not be run —
-but the leakage mechanism needs only the adjacency, and it is present:
+Reproduction against published v3 interior-75% figures, and null controls.
+The supplied edge file reproduces the lift's `degree` column on all 28,719
+vertices with zero mismatches.
 
-| Quantity | value |
-|---|---|
-| edge Jaccard, native vs 5E rewired | 0.000064 |
-| Spearman, packet_score vs 2/(1 + mean neighbour degree) | 0.9993 |
-| packet_priv predicted by mean neighbour degree alone | AUC 0.9993 |
+| arm | features | v3 published | reproduced here |
+|---|---|---|---|
+| identity | address | 0.661 | 0.6535 |
+| identity | weave | 0.830 | 0.8322 |
+| identity | hybrid | 0.855 | 0.8534 |
+| fresh | weave | 0.912 | 0.9162 |
+| fresh | address | 0.524 | 0.5202 |
+
+| arm | graph | features | AUC |
+|---|---|---|---|
+| identity | rewired tiling | **weave minus degree family** | **0.4964** |
+| identity | rewired tiling | degree family only | 0.8349 |
+| fresh | rewired tiling | **weave minus degree family** | **0.4972** |
+| fresh | **config model, no geometry** | weave | **0.9111** |
+| leakage | rewired tiling | nbr_degree_mean alone → packet_priv | 0.9994 |
+| leakage | rewired tiling | hop2_size alone → graph_priv | 0.6527 |
+
+Degree-family features alone (0.8349) slightly exceed the full weave block
+(0.8322) on the identity audit. The published Penrose weave figure of 0.830 and
+hybrid figure of 0.855 are the preserved degree sequence in full; nothing
+remains once it is removed.
 
 ## Result table (synthetic AB substrate)
 
@@ -107,9 +124,11 @@ scores 0.9910 with the degree family present, 0.9910 with the degree family
 alone, and 0.5002 with it removed. The published 0.9914 is the degree sequence.
 
 The identity weave channel is measuring the one property the perturbation was
-designed not to destroy. This affects the v3 claim that Penrose identity is
-"weave/hybrid-led" (weave 0.830, hybrid 0.855): those numbers are most likely
-the preserved degree sequence, not a relational blueprint.
+designed not to destroy. This is confirmed directly on Penrose: the v3 claim
+that Penrose identity is "weave/hybrid-led" (weave 0.830, hybrid 0.855) rests
+on features that fall to 0.4964 — chance — when the degree family is removed,
+and that are fully reproduced by the degree family alone (0.8349). Those figures
+are the preserved degree sequence, not a relational blueprint.
 
 ## Finding 3 — the headline result is untouched, and gets stronger
 
@@ -119,34 +138,28 @@ either leak (0.9792 on the original AB substrate, matching the published 0.9790;
 and 0.5524 — chance — for fresh reconstruction, as v3 reports). The exo/endo
 contrast, AB 0.986 vs Penrose 0.661, stands.
 
-It also sharpens. If the weave-based numbers are degree bookkeeping, then the
-address channel is the *only* thing carrying identity through relational
-scrambling, and Penrose's apparent hybrid rescue to 0.855 disappears. Penrose
-is then more exposed to silent relational corruption than v3 currently claims,
-not less. The paper's thesis survives the correction; its supporting sections
-do not.
+It also sharpens. With the weave-based numbers established as degree
+bookkeeping on both substrates, the address channel is the *only* thing carrying
+identity through relational scrambling, and Penrose's apparent hybrid rescue to
+0.855 disappears. Penrose's entire identity channel is address-only at 0.6535 —
+weak, and unbacked. Penrose is therefore *more* exposed to silent relational
+corruption than v3 claims, not less. The paper's thesis survives the correction
+and is strengthened by it; its supporting sections do not survive.
 
 ## Scope and caveats
 
-- The full audit ran on the original AB substrate and on a synthetic one, with
-  matching results. Penrose was confirmed only at the mechanism level: its lift
-  file (`clean_penrose_full_raw_lift.csv`) is still needed for x/y positions and
-  perpendicular-space coordinates, without which the Euclidean seed sets and the
-  address channel cannot be built.
-- Expected Penrose outcome once the lift is available: identity weave 0.830 and
-  hybrid 0.855 collapse toward chance under the degree-family ablation, leaving
-  address-only 0.661 as the substrate's entire identity channel.
+- The full audit ran on both original v3 substrates and on a synthetic AB patch,
+  with matching results throughout.
 - 3 replicates rather than 10. Replicate variance is small (SD < 0.01) and the
   effects here are large, but the final numbers should be run at 10.
 
 ## Suggested next steps
 
-1. Rerun `audit_with_nulls.py` against the original Penrose inputs (AB is done).
-2. Withdraw §5.4 and the fossil-record / living-ecology passages in §5.4 and
+1. Withdraw §5.4 and the fossil-record / living-ecology passages in §5.4 and
    §6.2, or replace the retention surrogate with a measure that is not a local
    degree functional (random-walk return mass or a spectral quantity).
-3. Requalify the Penrose weave and hybrid identity figures in §5.2 and the
+2. Requalify the Penrose weave and hybrid identity figures in §5.2 and the
    hybrid-rescue claim in §5.3 and §6.2.
-4. Report the address AUC as invariant by construction rather than as a
+3. Report the address AUC as invariant by construction rather than as a
    replicate mean with SD 0.000 (it is the static row, `replicate == -1`).
-5. Add the full-patch figures alongside interior-75% as a robustness row.
+4. Add the full-patch figures alongside interior-75% as a robustness row.

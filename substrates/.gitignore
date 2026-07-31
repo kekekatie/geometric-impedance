@@ -6,3 +6,6 @@ __pycache__/
 # real_ab_edges.csv is fully reconstructible from it via generate_ab.py's
 # adjacency rule, and is committed.
 real_ab_lift.csv
+
+real_penrose_lift.csv
+real_penrose_edges.csv
