@@ -200,8 +200,12 @@ def main():
     ap.add_argument("--rewire-multiple", type=float, default=5.0)
     ap.add_argument("--interior", type=float, default=0.75)
     ap.add_argument("--seed", type=int, default=20260731)
+    ap.add_argument("--address-cols", default=",".join(ADDRESS_COLS),
+                    help="address feature columns; AB lifts use k_sum_mod4, Penrose k_sum_mod5")
+    ap.add_argument("--label", default="", help="tag written into the results file")
     ap.add_argument("--out", default=os.path.join(here, "null_audit_results.csv"))
     args = ap.parse_args()
+    address_cols = [c.strip() for c in args.address_cols.split(",") if c.strip()]
 
     t0 = time.time()
     rows = read_csv_rows(args.lift)
@@ -210,7 +214,7 @@ def main():
     print(f"substrate: {n} vertices, {len(edges)} edges", flush=True)
 
     pts = np.array([[float(r["x"]), float(r["y"])] for r in rows])
-    address = np.array([[float(r[c]) for c in ADDRESS_COLS] for r in rows])
+    address = np.array([[float(r[c]) for c in address_cols] for r in rows])
 
     centre = pts.mean(axis=0)
     radial = np.linalg.norm(pts - centre, axis=1)
@@ -233,6 +237,8 @@ def main():
     results = []
 
     def record(**kw):
+        if args.label:
+            kw = {"substrate": args.label, **kw}
         results.append(kw)
         print("  " + "  ".join(f"{k}={v}" for k, v in kw.items()), flush=True)
 

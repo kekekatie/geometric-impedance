@@ -1,16 +1,65 @@
 # Null-control audit of the v3 weave results
 
-Run: 2026-07-31. Substrate: locally generated Ammann-Beenker patch
-(22,451 vertices / 44,604 edges — matched to the v3 AB substrate at
-22,663 / 44,126). Interior-75% subset, 5E degree-preserving rewiring,
-3 replicates. Reproduce with:
+Run: 2026-07-31. Interior-75% subset, 5E degree-preserving rewiring, 3 replicates.
+
+Run twice: once on a locally generated Ammann-Beenker patch (22,451 vertices /
+44,604 edges), and once on the **original v3 AB substrate** (22,663 / 44,126).
+The AB edge list was rebuilt from the K0–K3 lift coordinates using the audit's
+own adjacency rule; it returns exactly 44,126 edges and reproduces the lift
+file's own `degree` column on all 22,663 vertices with zero mismatches.
 
 ```
-python3 generate_ab.py --extent 37 --prefix ab
+python3 generate_ab.py --extent 37 --prefix ab      # synthetic substrate
 python3 audit_with_nulls.py --reps 3
+
+python3 audit_with_nulls.py --lift real_ab_lift.csv --edges real_ab_edges.csv \
+    --address-cols perp_x,perp_y,perp_r,k_sum_mod4 --reps 3
 ```
 
-## Result table
+## Reproduction check against published v3 figures
+
+Run on the original AB substrate, interior-75%:
+
+| Quantity | v3 published | reproduced here |
+|---|---|---|
+| identity / address | 0.9790 | 0.9792 |
+| identity / weave | 0.9914 | 0.9910 |
+| identity / hybrid | 0.9894 | 0.9901 |
+| fresh / weave | 0.8923 | 0.8886 |
+| fresh / address | 0.5541 | 0.5524 |
+
+The harness is a faithful reproduction of the v3 protocol, so the null results
+below apply to the published analysis and not to a variant of it.
+
+## Result table (original AB substrate)
+
+| arm | graph | features | AUC |
+|---|---|---|---|
+| identity | native | address | 0.9792 |
+| identity | rewired tiling | weave | 0.9910 |
+| identity | rewired tiling | **weave minus degree family** | **0.5002** |
+| identity | rewired tiling | degree family only | 0.9910 |
+| fresh | rewired tiling | weave | 0.8886 |
+| fresh | rewired tiling | address | 0.5524 |
+| fresh | rewired tiling | **weave minus degree family** | **0.4967** |
+| fresh | **config model, no geometry** | weave | **0.8977** |
+| leakage | rewired tiling | nbr_degree_mean alone → packet_priv | 0.9991 |
+
+Note that identity / weave (0.9910) and identity / degree-family-only (0.9910)
+are the same number to four decimal places.
+
+## Confirmation on the original Penrose topology
+
+The Penrose lift file was not available, so the full audit could not be run —
+but the leakage mechanism needs only the adjacency, and it is present:
+
+| Quantity | value |
+|---|---|
+| edge Jaccard, native vs 5E rewired | 0.000064 |
+| Spearman, packet_score vs 2/(1 + mean neighbour degree) | 0.9993 |
+| packet_priv predicted by mean neighbour degree alone | AUC 0.9993 |
+
+## Result table (synthetic AB substrate)
 
 | arm | graph | features | AUC |
 |---|---|---|---|
@@ -31,10 +80,10 @@ confirming the pipeline here is a faithful reproduction of the v3 protocol.
 
 ## Finding 1 — §5.4 does not survive a null
 
-A configuration-model graph carrying the same degree sequence but no tiling
-ancestry of any kind returns 0.9018, statistically indistinguishable from the
-0.9051 obtained on the rewired tiling. The fresh-reconstruction AUC therefore
-carries no information about the substrate.
+On the original AB substrate, a configuration-model graph carrying the same
+degree sequence but no tiling ancestry of any kind returns 0.8977 — slightly
+*higher* than the 0.8886 obtained on the rewired tiling itself. The
+fresh-reconstruction AUC therefore carries no information about the substrate.
 
 The mechanism is algebraic rather than statistical. After 5E rewiring the graph
 is locally tree-like, so the closed-neighbourhood retention score reduces to
@@ -43,17 +92,19 @@ is locally tree-like, so the closed-neighbourhood retention score reduces to
 
 which is a monotone function of `WEAVE_COLS[1]`. One of the three top-quartile
 filters generating the label is a relabelling of a feature subsequently supplied
-to the classifier (empirically: AUC 0.9994). Removing the degree-family features
-drops the fresh audit to 0.4996 — chance. No signal survives the ablation, so
-§5.4 cannot be rescued by feature selection; the reported effect is the leak.
+to the classifier (AUC 0.9991 on AB, 0.9993 on Penrose). Removing the
+degree-family features drops the fresh audit to 0.4967 — chance. No signal
+survives the ablation, so §5.4 cannot be rescued by feature selection; the
+reported effect is the leak.
 
 ## Finding 2 — the identity *weave* channel has the same problem
 
 Identity labels are fixed on the native graph, so they cannot leak from the
 rewired graph's topology — but degree-preserving rewiring preserves the degree
 sequence exactly, and the native label is itself degree-driven by the same
-algebra. Consequently the identity weave channel scores 1.0000 with the degree
-family present, 1.0000 with the degree family alone, and 0.4997 with it removed.
+algebra. Consequently, on the original AB substrate, the identity weave channel
+scores 0.9910 with the degree family present, 0.9910 with the degree family
+alone, and 0.5002 with it removed. The published 0.9914 is the degree sequence.
 
 The identity weave channel is measuring the one property the perturbation was
 designed not to destroy. This affects the v3 claim that Penrose identity is
@@ -64,8 +115,9 @@ the preserved degree sequence, not a relational blueprint.
 
 The address channel uses perpendicular-space coordinates, which are neither
 degree features nor recoverable from the rewired graph. It is unaffected by
-either leak (0.9141 here on native; 0.5296 at chance for fresh reconstruction,
-as v3 reports). The exo/endo contrast — AB 0.986 vs Penrose 0.661 — stands.
+either leak (0.9792 on the original AB substrate, matching the published 0.9790;
+and 0.5524 — chance — for fresh reconstruction, as v3 reports). The exo/endo
+contrast, AB 0.986 vs Penrose 0.661, stands.
 
 It also sharpens. If the weave-based numbers are degree bookkeeping, then the
 address channel is the *only* thing carrying identity through relational
@@ -76,18 +128,20 @@ do not.
 
 ## Scope and caveats
 
-- Run on a locally generated AB substrate, not the v3 input files, which are not
-  in the repository (`large_penrose_v0_2_5E_audit.py` reads them from a local
-  Windows path). Penrose was not tested directly.
-- The leakage algebra is substrate-independent — it holds for any sparse graph
-  that is locally tree-like after rewiring — so it is expected to transfer, but
-  the exact Penrose figures need the original lift and edge files.
+- The full audit ran on the original AB substrate and on a synthetic one, with
+  matching results. Penrose was confirmed only at the mechanism level: its lift
+  file (`clean_penrose_full_raw_lift.csv`) is still needed for x/y positions and
+  perpendicular-space coordinates, without which the Euclidean seed sets and the
+  address channel cannot be built.
+- Expected Penrose outcome once the lift is available: identity weave 0.830 and
+  hybrid 0.855 collapse toward chance under the degree-family ablation, leaving
+  address-only 0.661 as the substrate's entire identity channel.
 - 3 replicates rather than 10. Replicate variance is small (SD < 0.01) and the
   effects here are large, but the final numbers should be run at 10.
 
 ## Suggested next steps
 
-1. Rerun `audit_with_nulls.py` against the original AB and Penrose inputs.
+1. Rerun `audit_with_nulls.py` against the original Penrose inputs (AB is done).
 2. Withdraw §5.4 and the fossil-record / living-ecology passages in §5.4 and
    §6.2, or replace the retention surrogate with a measure that is not a local
    degree functional (random-walk return mass or a spectral quantity).
