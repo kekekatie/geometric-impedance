@@ -1,0 +1,17 @@
+# Python dependencies for the silent_corruption scripts.
+#
+# Install into a fresh virtual environment:
+#     python -m venv .venv
+#     source .venv/bin/activate      # Windows: .venv\Scripts\activate
+#     pip install -r requirements.txt
+#
+# Lower bounds only — the exact versions used for the published runs were not
+# recorded. The APIs relied on here (roc_auc_score, StratifiedKFold,
+# LogisticRegression, KDTree) are long-stable, so any release at or above these
+# floors should reproduce the results. If you re-run the audit, consider
+# freezing your resolved versions with `pip freeze > requirements.lock.txt`
+# and committing that alongside your results.
+
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
