@@ -76,10 +76,13 @@ coupled one, from exactly the same weights. The coherent address layer keeps
 transport spread out; scrambling it into disorder pins transport down.
 
 This is the opposite of the anchoring behaviour the architecture was proposed to
-demonstrate. It is consistent with the general result that quasiperiodic
-potentials resist localisation relative to random potentials of matched strength
-— the Aubry-André phenomenology — though establishing that connection properly
-would need a dedicated study, not this.
+demonstrate. ~~It is consistent with the general result that quasiperiodic
+potentials resist localisation — the Aubry-André phenomenology.~~ **The
+quasiperiodic reading is withdrawn.** Against fields carrying an identical value
+multiset, a smooth radial ramp resists localisation *more* than the
+perpendicular-space field does, and a long-wavelength periodic field more still.
+The effect is spatial correlation length, not quasiperiodic order. See
+`LOCALISATION_MECHANISM.md`.
 
 The shuffle null is what makes the result visible. Without it the only
 observation would be "localisation rises as σ falls", which is true of any

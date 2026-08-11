@@ -1,3 +1,5 @@
+INTERIOR = 0.50
+
 #!/usr/bin/env python3
 """
 Address-channel degradation under phason disorder: Ammann-Beenker vs Penrose.
@@ -24,6 +26,7 @@ sys.path.insert(0, __file__.rsplit("/", 1)[0])
 import generate_ab as GA
 import generate_penrose as GP
 from audit_with_nulls import adjacency, shared_core_labels
+from matched_labels import matched_rate_labels
 from multiplex_ab import substrate_disordered as ab_disordered
 
 AB_OFFSET = np.array([0.1381, 0.0927])
@@ -35,7 +38,7 @@ def penrose_disordered(amplitude, extent, seed):
     return lifts, par, perp, GP.build_edges(lifts)
 
 
-def labels_for(par, edges, interior=0.75):
+def labels_for(par, edges, interior=0.75, fraction=0.03):
     n = len(par)
     rad = np.linalg.norm(par - par.mean(0), axis=1)
     active = np.sort(np.argsort(rad)[:int(round(interior * n))]).tolist()
@@ -43,7 +46,7 @@ def labels_for(par, edges, interior=0.75):
                                          - par[[v for _, v in edges]], axis=1)))
     q = KDTree(par).query_radius(par[active], r=3.0 * med)
     seeds = {active[k]: q[k].tolist() for k in range(len(active))}
-    y, _, _, _ = shared_core_labels(adjacency(n, edges), active, seeds)
+    y, _ = matched_rate_labels(adjacency(n, edges), active, seeds, fraction=fraction)
     return active, y
 
 
@@ -76,7 +79,7 @@ def run(name, maker, extent, amps, seeds):
         aucs, shufs, nv, npos = [], [], [], []
         for s in seeds:
             lifts, par, perp, E = maker(a, extent, s)
-            active, y = labels_for(par, E)
+            active, y = labels_for(par, E, interior=INTERIOR)
             X = address_matrix(lifts, perp, name)[active]
             rng = np.random.default_rng(1000 + s)
             Xs = address_matrix(lifts, perp, name)[rng.permutation(len(perp))][active]
@@ -99,14 +102,18 @@ def main():
     ap.add_argument("--seeds", type=int, default=5)
     ap.add_argument("--ab-extent", type=int, default=18)
     ap.add_argument("--pen-extent", type=int, default=14)
+    ap.add_argument("--interior", type=float, default=0.50,
+                    help="bulk crop; 0.50 is inside both substrates' saturated regime")
     args = ap.parse_args()
 
+    global INTERIOR
+    INTERIOR = args.interior
     amps = [0.0, 0.05, 0.10, 0.20, 0.30, 0.40]
     seeds = list(range(args.seeds))
 
     print("=" * 72)
-    print("Address channel vs phason disorder, matched scale, "
-          f"{args.seeds} seeds per point")
+    print("Address channel vs phason disorder, matched scale + matched positive rate")
+    print(f"interior crop {args.interior:.0%} (bulk), {args.seeds} seeds per point")
     print("=" * 72)
 
     ab = run("Ammann-Beenker", lambda a, e, s: ab_disordered(a, e, s), args.ab_extent, amps, seeds)
