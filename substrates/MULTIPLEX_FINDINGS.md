@@ -49,10 +49,11 @@ the acceptance test, producing scattered flips rather than a coherent shift.
 The channel is robust to weak disorder and degrades sharply past amplitude ~0.2.
 The shuffle null sits at chance throughout, so the measurement is clean.
 
-Worth noting without leaning on it: at amplitude 0.40 the AB address channel
-falls to 0.748, close to where *unperturbed Penrose* sits (0.786). Whether AB
-under strong phason disorder is quantitatively equivalent to Penrose at rest is
-an open question, not a result — but it is a well-posed one.
+~~Worth noting without leaning on it: at amplitude 0.40 the AB address channel
+falls to 0.748, close to where unperturbed Penrose sits (0.786).~~ **Retracted.**
+This was single-seed noise at ~5,400 vertices. At ~16,800 vertices with 4 seeds
+AB reaches only 0.8356 ± 0.0104 at amplitude 0.40, above Penrose's best value
+anywhere in its sweep. See `PHASON_DOSE_RESPONSE.md`.
 
 ## B — the address layer resists localisation
 
