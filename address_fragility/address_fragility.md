@@ -295,22 +295,72 @@ of disorder rather than of perpendicular-space motion as such.
 ### 6.2 Convergent evidence from an independent substrate family
 
 Generalising the construction to **Z**ⁿ makes perpendicular dimension a free
-parameter. At matched scale and matched positive rate, perpendicular dimension 2
-loses 0.005 of its address readability at disorder 0.10 while dimensions 3 and 4
-lose 0.250 and 0.197 — reproducing the Ammann-Beenker/Penrose asymmetry in a
-different symmetry family with a different generator.
+parameter: n = 4, 5, 6 give perpendicular dimensions 2, 3, 4 with 8-, 10- and
+12-fold symmetry. At matched scale (~5,600 vertices), matched positive rate and
+bulk crop, perpendicular dimension 2 loses 0.005 of its address readability at
+disorder 0.10 while dimensions 3 and 4 lose 0.250 and 0.197 — reproducing the
+Ammann-Beenker/Penrose asymmetry in a different symmetry family, with a different
+generator, on substrates that share no code path with Section 5.
 
-We report this as convergent but not conclusive. The perturbation is isotropic in
-perpendicular space, whose dimension is the variable under test, and a
-calibration measurement confirms that a fixed amplitude inflicts more damage at
-higher dimension (9.4%, 12.8% and 15.9% of vertices flipped at amplitude 0.05).
-Whether the effect survives being replotted against measured damage rather than
-nominal amplitude is unresolved at the time of writing. We note also that the
-data show no monotone scaling with dimension — dimensions 3 and 4 behave
-similarly — so any account in terms of "how much was projected away" is not
-supported.
+The comparison requires a calibration. The perturbation is isotropic in
+perpendicular space, whose dimension is the variable under test, so a fixed
+nominal amplitude need not inflict equal damage. It does not: measuring the
+flipped-vertex fraction directly, dimension 4 sustains 1.55 to 1.75 times
+dimension 2's damage at every amplitude tested.
 
----
+Replotting address readability against *measured damage* rather than nominal
+amplitude removes that confound, and the effect survives it:
+
+| vertices flipped | perp dim 2 | perp dim 3 | perp dim 4 |
+|---|---|---|---|
+| 10% | 0.9824 | 0.8883 | 0.8524 |
+| 15% | 0.9768 | 0.8360 | 0.8195 |
+| 20% | 0.9574 | 0.7859 | 0.7868 |
+| 30% | 0.8968 | 0.6893 | 0.7213 |
+| 40% | 0.7944 | 0.5950 | 0.6836 |
+
+Perpendicular dimension 2 holds an advantage of +0.09 to +0.21 over both higher
+dimensions at every matched damage level.
+
+Two features of this deserve emphasis, one supporting and one limiting. It is
+**independent convergent evidence**: a second generator, a different symmetry
+family, and a damage-matched axis all reproduce the fragility asymmetry of
+Section 5. But there is **no monotone scaling with dimension**. Dimensions 3 and
+4 cross over — 3 leads at low damage, 4 leads at high — and neither consistently
+dominates. Any account of the result in terms of "how much was projected away"
+is therefore not supported. What the data show is a cliff at perpendicular
+dimension 2, not a gradient, and we have no explanation for why 2 should be
+distinguished.
+
+### 6.3 The degradation may have a threshold
+
+Sampling the 8-fold substrate finely through the region where degradation begins
+(nine amplitudes, five seeds each) gives a curve that is flat and then falls:
+
+| vertices flipped | address AUC |
+|---|---|
+| 0.0% | 0.9720 ± 0.0028 |
+| 6.4% | 0.9818 ± 0.0048 |
+| 10.1% | 0.9780 ± 0.0068 |
+| 13.3% | 0.9718 ± 0.0100 |
+| 16.6% | 0.9510 ± 0.0129 |
+| 19.8% | 0.9522 ± 0.0165 |
+| 23.1% | 0.9331 ± 0.0064 |
+| 26.3% | 0.9130 ± 0.0210 |
+| 29.1% | 0.8924 ± 0.0268 |
+
+Consecutive slopes in AUC per unit damage run +0.15, −0.10, −0.19, then −0.63,
++0.04, −0.58, −0.62, −0.74. That is a near-zero run followed by a step to a
+roughly constant −0.6, which is the signature of a kink near 13% damage rather
+than of a smooth knee — a smooth knee would show slopes growing steadily from the
+start.
+
+We report this as suggestive and not established. Error bars grow by an order of
+magnitude across the sweep, one interval runs the wrong way, and five seeds
+cannot separate a sharp transition from a gentle sigmoid. If a genuine pinning
+threshold exists it has a *location*, which is a predictable and checkable
+quantity, and establishing one would be a considerably stronger result than any
+degradation curve. We flag it as the obvious next measurement.
 
 ## 7. Discussion
 
@@ -349,7 +399,9 @@ asserted rather than measured.
   calibration.
 - Four disorder seeds per point. The effects reported are large relative to their
   error bars, but ten would be standard.
-- Section 6.2 is explicitly unresolved, as stated there.
+- Section 6.2 shows no monotone scaling with perpendicular dimension, and the
+  distinction of dimension 2 is unexplained.
+- Section 6.3 is suggestive only, as stated there.
 - This is a classical substrate diagnostic. It is not a simulation of any quantum
   error-correcting code, and no claim is made about the performance of the
   Li-Boyle construction or any other.
