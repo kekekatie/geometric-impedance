@@ -42,6 +42,16 @@ replotting against measured damage.
 
 ---
 
+## WITHDRAWN — recent
+
+### Partition granularity as the fragility mechanism
+Neighbour purity orders four hand-picked substrates perfectly but fails across a
+twelve-substrate family: removing Penrose collapses the correlation from -0.66 to
+-0.21, and within the Z5 family it runs the wrong way. Penrose is a single
+4.5-sigma leverage point. → `substrates/GRANULARITY_TEST.md`
+
+---
+
 ## UNTESTED
 
 ### Devil's staircase / threshold structure in the fragility curve
