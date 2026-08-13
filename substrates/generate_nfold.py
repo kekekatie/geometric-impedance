@@ -58,11 +58,15 @@ def window_facets(perp_mat):
     return hull.equations[:, :d], -hull.equations[:, d]
 
 
-def generate(n, extent, offset=None, disorder=0.0, seed=0):
+def generate(n, extent, offset=None, disorder=0.0, seed=0, window_scale=1.0):
+    """Cut-and-project patch. `window_scale` inflates or shrinks the acceptance
+    window, which varies partition granularity while holding lattice, dimension
+    and window connectivity fixed."""
     par_mat, perp_mat = projections(n)
     d = perp_mat.shape[1]
     offset = np.full(d, 0.1123) if offset is None else np.asarray(offset)
     A, b = window_facets(perp_mat)
+    b = b * window_scale
     rng = np.random.default_rng(seed)
 
     axis = np.arange(-extent, extent + 1, dtype=np.int32)
