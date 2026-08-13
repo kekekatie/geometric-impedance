@@ -32,13 +32,33 @@ shuffle null, replication across seeds.
 ## UNDETERMINED
 
 ### Fragility vs perpendicular-space dimension
-Perpendicular dimension 2 is far more robust than 3 or 4 (at disorder 0.10 it has
-lost 0.005 against 0.250 and 0.197). But there is **no monotone scaling** — 3
-collapses as fast as 4. Reads as a cliff at dimension 2, not a gradient.
-Blocked on: the jitter is isotropic in perpendicular space, whose dimension is
-the variable under test, so equal amplitude may not mean equal damage. Needs
-replotting against measured damage.
+Perpendicular dimension 2 is far more robust than 3 or 4. The damage calibration
+is **done**: dimension 4 sustains 1.55–1.75× dimension 2's flipped-vertex
+fraction at equal amplitude, and replotting against measured damage leaves
+dimension 2 ahead by +0.09 to +0.21 throughout. There is **no monotone scaling** —
+3 and 4 cross over. Reads as a cliff at dimension 2, not a gradient.
 → `substrates/PERP_DIMENSION.md`, `substrates/calibrate_damage.py`
+
+### ⚠ The n = 1 problem underneath both "cliff" results
+Two independent measurements have come out as *one special case and everything
+else*: a cliff at perpendicular dimension 2, and a cliff at Penrose. It is
+tempting to read that as a shared structure in the world. But **we have exactly
+one substrate at perpendicular dimension 2, and exactly one fragmented-window
+substrate.** Both cliffs rest on a single point at the special value, so the
+pattern may be describing our sampling rather than the substrates.
+
+Next step before any mechanism is built on it: generate *siblings* — more
+perpendicular-dimension-2 substrates (different Z⁴ windows, different
+parallel-plane slopes) and more fragmented-window substrates at various
+dimensions. If AB's robustness is a property of dimension 2, its siblings share
+it. If it is a property of Ammann-Beenker specifically, they do not. At present
+these cannot be told apart.
+
+*Related framing note:* bimodality is not evidence for binary ontology — it is one
+of the commonest shapes in nature and arises from dozens of unrelated mechanisms.
+The better-posed question is whether this is a **phase transition**, which brings
+order parameters, critical exponents and finite-size scaling, all of which
+produce checkable numbers.
 
 ---
 
