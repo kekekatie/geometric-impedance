@@ -84,6 +84,28 @@ twelve-substrate test that appeared to kill it was malformed — see above — s
 candidate is neither supported nor refuted. Needs a valid family.
 → `substrates/GRANULARITY_TEST.md`
 
+### Discrete address component — REFUTED
+Penrose's lift-sum index carries almost no address information: AUC 0.5398 at
+zero disorder against a chance baseline, rising only to 0.5696 at disorder 0.20.
+It neither carries the signal nor collapses. Penrose's readability is entirely in
+its continuous perpendicular coordinates (0.9517 → 0.6726 across the same range),
+and those are what degrade. The four pentagons are irrelevant to readability.
+→ `substrates/discrete_vs_continuous.py`
+
+**What this eliminates.** Penrose lifts Z⁵ into 2 parallel + 3 perpendicular, and
+the third perpendicular direction *is* the lift-sum direction, now shown inert.
+So Penrose's live address space is 2-dimensional, and so is Ammann-Beenker's.
+Both have a two-dimensional continuous address and Penrose's degrades four times
+faster.
+
+Ruled out to date: presence of an address channel, model class, positive rate,
+boundary crop, window fragmentation, a discrete component, and the dimensionality
+of the continuous part.
+
+**What remains:** the shape of the window in that 2D slice (pentagon vs octagon),
+and the arithmetic behind it (golden vs silver ratio). Both are properties of the
+same 2D object rather than of the ambient construction.
+
 ### Lattice-commensurate window fragmentation
 Arbitrary fragmentation (parallel slabs cut through the window) also destroys the
 tiling — every fragmented variant tested came out with mean degree below 3.2.
