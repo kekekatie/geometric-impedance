@@ -58,7 +58,8 @@ def window_facets(perp_mat):
     return hull.equations[:, :d], -hull.equations[:, d]
 
 
-def generate(n, extent, offset=None, disorder=0.0, seed=0, window_scale=1.0):
+def generate(n, extent, offset=None, disorder=0.0, seed=0, window_scale=1.0,
+             fragments=0, duty=1.0):
     """Cut-and-project patch. `window_scale` inflates or shrinks the acceptance
     window, which varies partition granularity while holding lattice, dimension
     and window connectivity fixed."""
@@ -68,6 +69,12 @@ def generate(n, extent, offset=None, disorder=0.0, seed=0, window_scale=1.0):
     A, b = window_facets(perp_mat)
     b = b * window_scale
     rng = np.random.default_rng(seed)
+    frag_dir = perp_mat[0] / np.linalg.norm(perp_mat[0]) if d else None
+    # Slab period must come from the WINDOW's extent, fixed once, not from each
+    # chunk's coordinate range.
+    _sg = np.array(list(itertools.product([-0.5, 0.5], repeat=n))) @ perp_mat
+    win_span = float(2.0 * np.abs(_sg @ frag_dir).max()) * window_scale
+    period = win_span / max(fragments, 1)
 
     axis = np.arange(-extent, extent + 1, dtype=np.int32)
     tail = np.array(list(itertools.product(axis, repeat=n - 1)), dtype=np.int32)
@@ -90,6 +97,9 @@ def generate(n, extent, offset=None, disorder=0.0, seed=0, window_scale=1.0):
                 keep &= pp @ A[j] <= b[j] + 1e-9
                 if not keep.any():
                     break
+            if fragments > 0 and keep.any():
+                phase = np.mod(pp @ frag_dir + 10.0 * win_span, period) / period
+                keep &= phase < duty
             if keep.any():
                 kept.append(blk[keep])
 

@@ -62,17 +62,43 @@ produce checkable numbers.
 
 ---
 
-## WITHDRAWN — recent
-
-### Partition granularity as the fragility mechanism
-Neighbour purity orders four hand-picked substrates perfectly but fails across a
-twelve-substrate family: removing Penrose collapses the correlation from -0.66 to
--0.21, and within the Z5 family it runs the wrong way. Penrose is a single
-4.5-sigma leverage point. → `substrates/GRANULARITY_TEST.md`
-
----
-
 ## UNTESTED
+
+### ⚠ Window scale is NOT a free parameter — it breaks the tiling
+Discovered while trying to fragment the window. Cut-and-project window size is
+pinned by the tiling requirement: the tile-edge rule needs both endpoints of a
+lattice step accepted, so shrinking the window deletes edges wholesale. Mean
+degree falls 3.95 → 3.28 → 2.39 at scales 1.00 → 0.85 → 0.70, with half the
+vertices below degree 3 at 0.70. Inflating is not neutral either (4.46 and 4.86
+at 1.15 and 1.30).
+
+**This invalidated the granularity family regression**, which used those scales.
+Any future substrate family must verify mean degree before use. Candidate dials
+that may be legitimate: parallel-plane slope, lattice choice, window *shape* at
+fixed measure.
+
+### Partition granularity as the fragility mechanism — back to UNTESTED
+Neighbour purity orders four hand-picked substrates correctly (AB +0.423,
+Z5 +0.348, Z6 +0.268, Penrose −0.062) under two class definitions. The
+twelve-substrate test that appeared to kill it was malformed — see above — so the
+candidate is neither supported nor refuted. Needs a valid family.
+→ `substrates/GRANULARITY_TEST.md`
+
+### Lattice-commensurate window fragmentation
+Arbitrary fragmentation (parallel slabs cut through the window) also destroys the
+tiling — every fragmented variant tested came out with mean degree below 3.2.
+
+But **Penrose's window is already disconnected**, as four pentagons indexed by
+lift sum. That fragmentation is special: lift sum is a lattice invariant, every
+lattice point has a definite integer value of it, so no point falls "between"
+pieces and no edges are destroyed. Arbitrary slabs cut across the lattice
+structure; Penrose's cut along it.
+
+Hypothesis worth testing: it is not fragmentation as such that matters but that
+Penrose's address carries a **discrete component** (which pentagon) alongside a
+continuous one, and the discrete part degrades differently under jitter. Testable
+by building substrates whose windows are fragmented by other lattice invariants,
+or by measuring the discrete and continuous address components separately.
 
 ### Devil's staircase / threshold structure in the fragility curve
 The perp-2 curve is flat within noise from disorder 0.00 to 0.10 (0.979, 0.983,

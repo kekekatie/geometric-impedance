@@ -1,4 +1,27 @@
-# Does partition granularity predict address fragility? Largely no.
+# Does partition granularity predict address fragility? UNRESOLVED — this test was invalid.
+
+> **RETRACTED 2026-08-14.** The substrate family below was built by sweeping the
+> acceptance-window scale, on the assumption that this varies granularity while
+> holding the substrate type fixed. It does not. Window size in cut-and-project is
+> pinned by the requirement that the projection tile: the tile-edge rule needs both
+> endpoints of a lattice step accepted, so shrinking the window deletes edges
+> wholesale. At window scale 0.85 mean degree falls from 3.95 to 3.28 with 8.6% of
+> vertices below degree 3; at 0.70 it falls to 2.39 with 51.5% below degree 3.
+> Inflated windows are also not the same object — mean degree rises to 4.46 and
+> 4.86 at scales 1.15 and 1.30.
+>
+> Of the ten zonotope family members, **only two were quasicrystals.** The
+> regression compared tilings against fragmentary point sets, so neither the
+> correlation nor its collapse on removing Penrose means anything. Partition
+> granularity returns to UNTESTED.
+>
+> A valid family needs substrates that are all genuinely tilings. Window scale is
+> not an available dial; parallel-plane slope and lattice choice may be.
+
+---
+
+## Original text, retained for the record
+
 
 Candidate mechanism: the acceptance window partitions into regions of constant
 local environment; coarse regions let a perpendicular coordinate move without
