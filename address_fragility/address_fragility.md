@@ -1,123 +1,115 @@
-# Address Fragility in Aperiodic Substrates: Ammann-Beenker and Penrose Differ in Resilience, Not in Structure
+# Address Fragility in Quasicrystals is Determined by the Cyclotomic Field
 
 K. T. Niedzwiecki
 Independent Researcher, South Australia
-Version 1.0 — August 2026
+Version 2.0 — August 2026
 
 ---
 
 ## Abstract
 
-Cut-and-project quasicrystals carry two independent descriptions of the same
+A cut-and-project quasicrystal carries two independent descriptions of the same
 vertex set: a relational one, the graph of tile edges, and an addressed one, the
-coordinates in the perpendicular space that the projection discards. A previous
-analysis by this author reported that these two substrates differ in whether the
-addressed description exists at all — that Ammann-Beenker retains site identity
-through perpendicular space under relational scrambling (AUC 0.986) while Penrose
-does not (0.661).
+coordinates in the perpendicular space the projection discards. We ask how
+robustly the addressed description survives perturbation, and find that the
+answer is fixed by arithmetic.
 
-That conclusion does not survive its own controls. We show that the reported
-asymmetry is produced by three separable measurement artefacts: a linear
-classifier reading a nonlinear decision boundary, unmatched positive rates
-between substrates, and — dominantly — boundary contamination penetrating the two
-substrates to different depths. With all three removed, both substrates address
-their own privileged sites almost perfectly in bulk: 0.9996 for Ammann-Beenker
-against 0.9816 for Penrose, a gap of 0.018 against shuffle nulls at 0.50.
+Holding lattice rank, perpendicular dimension, window construction and edge rule
+identical, and varying only which cyclotomic field the quasicrystal is built
+from, address readability under phason disorder orders **silver > platinum >
+golden**: at 10% of vertices displaced, 0.976 for the 8-fold substrate against
+0.920 for the 12-fold and 0.842 for the 10-fold, with shuffle nulls at chance.
+The ordering holds at every damage level tested. The direction of this result was
+predicted and recorded before the measurement was made.
 
-The substrates nonetheless differ, and sharply, in a way the earlier analysis
-could not see. Under phason disorder — the physically correct perturbation for a
-quasicrystal, applied as independent jitter of each candidate's perpendicular
-coordinate before the acceptance test — the two separate immediately. At the
-first disorder step Ammann-Beenker loses 0.007 of its address readability and
-Penrose loses 0.129, roughly nineteen times as much. The gap opens to 0.14 in one
-step, reaches 0.21, and plateaus.
+Three quasicrystal families exist at perpendicular dimension 2 — φ(N) = 4 has
+solutions N = 5, 8, 10, 12, and N = 5 and N = 10 generate the same field — so
+this is a complete enumeration rather than a sample.
 
-We conclude that the distinction between these substrates is one of **fragility,
-not of structure**. Both possess a perpendicular-space address channel; what
-differs is how that channel survives perturbation, whether the perturbation is
-boundary truncation or phason strain. This is a narrower claim than the one it
-replaces and a more useful one, since resilience under strain is the property an
-error-correcting architecture would actually need.
+We also report a correction. A previous paper by this author [1] attributed a
+large asymmetry between Ammann-Beenker and Penrose to the presence or absence of
+an address channel. That conclusion does not survive its own controls: the effect
+was produced by a linear classifier reading a nonlinear boundary, by unmatched
+positive rates, and dominantly by boundary contamination penetrating the two
+substrates to different depths. In clean bulk both substrates address their sites
+almost perfectly (0.9996 and 0.9816). The real distinction is fragility, and this
+paper identifies what governs it.
 
 ---
 
 ## 1. Introduction
 
 An aperiodic tiling produced by cut-and-project is a shadow. A periodic lattice
-in n dimensions is sliced by a two-dimensional plane at an irrational angle, and
-the lattice points falling within an acceptance window are projected onto it. The
-resulting point set has no translational symmetry but retains long-range order,
-and every vertex carries a second coordinate — its position in the perpendicular
-space that the projection threw away.
+in n dimensions is cut by a two-dimensional plane at an irrational angle, and the
+lattice points falling inside an acceptance window are projected onto it. The
+result has no translational symmetry but retains long-range order, and every
+vertex carries a second coordinate: its position in the perpendicular space that
+the projection threw away.
 
-This gives such a substrate two independent descriptions of the same sites. The
-**relational** description is the graph of tile edges: who is adjacent to whom.
-The **addressed** description is the perpendicular-space coordinate: where each
-site sits in the discarded dimensions. The two are not derivable from each other
-by any local rule, which makes their relative robustness a well-posed and
-physically meaningful question. A perturbation that destroys one need not touch
-the other.
+This gives such a substrate two descriptions of the same sites. The **relational**
+description is the graph of tile edges. The **addressed** description is the
+perpendicular coordinate. Neither is derivable from the other by a local rule, so
+their relative robustness under perturbation is a well-posed question, and a
+perturbation that destroys one need not touch the other.
 
-A previous paper by this author [1] posed that question as an asymmetry between
-substrates, reporting that Ammann-Beenker possesses a usable address channel and
-Penrose does not. Section 4 shows that this conclusion was an artefact of
-measurement rather than a property of the substrates. Sections 5 and 6 give what
-we believe is the correct account: the address channel exists in both, and the
-substrates differ instead in how readily it is destroyed.
-
-We report the correction in full, including the mechanism of each error, because
-the errors are general. All three would arise in any comparison of two graph
-substrates, none is specific to quasicrystals, and each has a cheap null that
-detects it.
+This paper reports that the robustness of the addressed description is governed
+by the quasicrystal's underlying cyclotomic field, demonstrated across the
+complete family of such substrates at perpendicular dimension 2. Section 4
+corrects an earlier analysis by this author; Sections 5–7 give the positive
+result. The correction is reported in full, with the mechanism of each error,
+because the errors are general to substrate comparison rather than specific to
+quasicrystals.
 
 ---
 
 ## 2. Background
 
-### 2.1 Cut-and-project construction
+### 2.1 Cut-and-project and the cyclotomic family
 
-For a lattice **Z**ⁿ, a choice of two-dimensional parallel space fixes an
-(n−2)-dimensional perpendicular complement. A lattice point is accepted when its
-perpendicular projection falls inside an acceptance window, conventionally the
-projection of the unit n-cube. Ammann-Beenker arises from **Z**⁴ with an
-octagonal window and has a two-dimensional perpendicular space; Penrose arises
-from **Z**⁵, with four pentagonal windows indexed by the lift sum, and a
-three-dimensional perpendicular space. In both, an edge joins vertices whose
-integer lifts differ by exactly one unit along a single lattice axis.
+An N-fold symmetric quasicrystal's natural module has rank φ(N), Euler's
+totient. Since φ(8) = φ(10) = φ(12) = 4, the 8-, 10- and 12-fold quasicrystals
+all live in **Z⁴ with a two-dimensional perpendicular space**. Parallel space
+uses the basis ζᵏ for ζ = exp(2πi/N), k = 0..3; perpendicular space uses the
+Galois conjugate ζ ↦ ζᵍ. The acceptance window is the projection of the unit
+4-cube, and an edge joins vertices whose integer lifts differ by one unit along a
+single axis.
 
-The perpendicular coordinate is not decoration. In cut-and-project, a vertex's
-local environment is determined by which sub-region of the acceptance window its
-perpendicular coordinate occupies. The address and the local structure are two
-views of one fact.
+The three fields carry the three quadratic irrationals:
+
+| N | field | ratio |
+|---|---|---|
+| 8 | Q(√2) | silver, 1 + √2 |
+| 10 | Q(√5) | golden, (1+√5)/2 |
+| 12 | Q(√3) | platinum, 2 + √3 |
+
+φ(N) = 4 has exactly the solutions N = 5, 8, 10, 12, and N = 5 and N = 10
+generate the same field. **These three are therefore the complete set** of
+quasicrystal families at perpendicular dimension 2.
+
+Note that the conventional Penrose construction uses Z⁵ rather than Z⁴, carrying
+a redundant fifth direction. Section 6.3 measures that direction and finds it
+inert, consistent with the rank-4 account.
 
 ### 2.2 Phason degrees of freedom
 
-Quasicrystals admit a class of deformation with no periodic analogue. A **phason**
-rearrangement shifts perpendicular-space coordinates while leaving the tiling
-locally valid — tiles still meet, matching rules still hold, and the object
-remains a quasicrystal throughout. Two cases must be distinguished, and
-conflating them is easy:
+Quasicrystals admit a deformation with no periodic analogue. A **phason**
+rearrangement shifts perpendicular coordinates while leaving the tiling locally
+valid. Two cases must be distinguished:
 
-- A **uniform shift** of the acceptance window is a rigid phason translation. It
-  maps the tiling to a locally isomorphic tiling. It is a symmetry of the
-  construction, not a perturbation, and Section 6.1 confirms it leaves the
-  address channel entirely intact even when most edges have changed.
+- A **uniform shift** of the window is a rigid phason translation, mapping the
+  tiling to a locally isomorphic one. It is a symmetry of the construction, not a
+  perturbation. Section 6.1 confirms it leaves address readability entirely
+  intact even when 60% of edges have changed.
 - **Phason disorder** — independent perturbation of each candidate's
   perpendicular coordinate before the acceptance test — scatters flips through
-  the patch and generates genuine defects. This is the strain case, and it is the
-  perturbation used throughout this paper.
+  the patch and generates genuine defects. This is the perturbation used
+  throughout.
 
-### 2.3 What an address channel is, and what it is not
-
-We define the address channel operationally: the extent to which a model reading
-only perpendicular-space coordinates can identify a substrate's privileged sites,
-where privilege is defined purely from graph topology. High readability means the
-discarded dimensions still carry the information; chance readability means they
-do not.
-
-The earlier framing [1] treated this as a binary property distinguishing
-substrates. We now regard that as a category error. Both substrates carry the
-information; the question is how much perturbation the carrying survives.
+Note that window *size* is not available as a perturbation. The edge rule
+requires both endpoints of a lattice step to be accepted, so shrinking the window
+deletes edges wholesale: mean degree falls from 3.95 to 2.39 at window scale 0.70,
+with half of all vertices below degree 3. Window size is pinned by the tiling
+requirement.
 
 ---
 
@@ -125,49 +117,41 @@ information; the question is how much perturbation the carrying survives.
 
 ### 3.1 Substrates
 
-Both substrates were generated from scratch by cut-and-project rather than reused
-from the earlier analysis, so that the measurements do not inherit its pipeline.
-The Ammann-Beenker generator reproduces the original substrate exactly: rebuilding
-the edge list from the original lift file's K0–K3 coordinates using the same
-adjacency rule returns 44,126 edges and matches the file's own degree column on
-all 22,663 vertices with zero mismatches. The Penrose generator, built
-independently from the **Z**⁵ construction, produces single-edge-length tilings
-with coordination numbers 3–7 and mean degree 3.92 against the original
-substrate's 3.81.
+All substrates are generated from scratch by cut-and-project. The Ammann-Beenker
+generator reproduces the original substrate of [1] exactly: rebuilding the edge
+list from that file's K0–K3 lift coordinates using the same adjacency rule returns
+44,126 edges and matches its own degree column on all 22,663 vertices with zero
+mismatches. An independent Z⁵ Penrose generator produces single-edge-length
+tilings with coordination numbers 3–7 and mean degree 3.92 against the original's
+3.81. Both reproduce the published figures of [1] to within 0.005 (Section 4.1).
 
-Both generators reproduce the earlier analysis's published figures to within
-0.005 (Section 4.1), which establishes that the corrections below apply to the
-published analysis and not to a variant of it.
+The cyclotomic family is verified before use: at extent 16 all three substrates
+give mean degree 3.94, a single edge length, and fewer than 2.2% of vertices
+below degree 3.
 
 ### 3.2 Privileged sites at matched positive rate
 
-Privilege is scored from three retention measures on the graph — a radius-2 graph
-ball, a Euclidean ball at three median edge lengths, and the closed neighbourhood
-— combined as a rank-averaged composite and thresholded at a fixed fraction.
+Privilege is scored from three graph retention measures — a radius-2 graph ball,
+a Euclidean ball at three median edge lengths, and the closed neighbourhood —
+combined as a rank-averaged composite and thresholded at a fixed fraction, so all
+substrates carry identical positive rates by construction.
 
-This replaces the earlier three-way top-quartile intersection, which fixed the
-per-criterion threshold but left the resulting positive rate free. Under that
-definition Ammann-Beenker yielded 4.4% positives and Penrose under 1%, and at
-smaller patch sizes Penrose yielded too few to score at all. A comparison built on
-it therefore differed in positive rate as well as in substrate. The composite
-gives both substrates identical positive rates by construction.
+This replaces the three-way top-quartile intersection of [1], which fixed the
+per-criterion threshold and left the positive rate free: 4.4% on Ammann-Beenker
+against under 1% on Penrose, so any comparison built on it differed in positive
+rate as well as in substrate.
 
-The composite is built from graph topology alone. Address features are
-perpendicular-space coordinates and share no term with it.
-
-### 3.3 Perturbation
-
-Phason disorder is applied as independent Gaussian jitter of each candidate's
-perpendicular coordinate before the acceptance test. Vertices near the window
-boundary enter or leave; the tiling remains a valid quasicrystal.
-
-### 3.4 Evaluation and nulls
+### 3.3 Evaluation and nulls
 
 Address readability is the cross-validated AUC of a gradient-boosted classifier
-predicting the privilege label from perpendicular-space coordinates alone. A
-**shuffle null** — perpendicular coordinates permuted across vertices, preserving
-the exact value distribution and destroying only the correspondence — runs beside
-every measurement reported in this paper. No figure is quoted without one.
+predicting the privilege label from perpendicular coordinates alone. A **shuffle
+null** — perpendicular coordinates permuted across vertices, preserving the value
+distribution and destroying only the correspondence — accompanies every
+measurement in this paper. No figure is quoted without one.
+
+Because a fixed nominal disorder amplitude does not inflict equal damage on
+different substrates, all cross-substrate comparisons are reported against
+**measured damage**, the flipped-vertex fraction.
 
 ---
 
@@ -175,46 +159,38 @@ every measurement reported in this paper. No figure is quoted without one.
 
 ### 4.1 Reproduction
 
-Run on the original substrates at the earlier analysis's own interior-75% crop
-and intersection labels:
+At the earlier analysis's own interior-75% crop and intersection labels:
 
 | quantity | published [1] | reproduced |
 |---|---|---|
 | AB identity / address | 0.9790 | 0.9792 |
 | AB identity / weave | 0.9914 | 0.9910 |
-| AB fresh / weave | 0.8923 | 0.8886 |
 | Penrose identity / address | 0.661 | 0.6535 |
 | Penrose identity / weave | 0.830 | 0.8322 |
 | Penrose identity / hybrid | 0.855 | 0.8534 |
 
 ### 4.2 The weave figures are the preserved degree sequence
 
-The earlier analysis perturbed substrates by degree-preserving edge rewiring,
-which drives edge Jaccard to 0.0001 while leaving every vertex degree exactly
-intact. Its "weave" features are local degree summaries, and its privilege label
-is itself degree-driven: on a locally tree-like rewired graph the closed
-neighbourhood retention score reduces algebraically to 2/(1 + mean neighbour
-degree), a monotone function of one of the features supplied to the classifier
-(empirically AUC 0.9991 on AB, 0.9993 on Penrose).
+The earlier analysis perturbed by degree-preserving edge rewiring, which drives
+edge Jaccard to 0.0001 while leaving every vertex degree intact. Its "weave"
+features are local degree summaries, and its label is degree-driven: on a
+locally tree-like rewired graph the closed-neighbourhood retention score reduces
+to 2/(1 + mean neighbour degree), a monotone function of a feature supplied to
+the classifier (AUC 0.9991 on AB, 0.9993 on Penrose).
 
-Consequently the identity weave channel scores 0.9910 on AB with the degree
-family present, 0.9910 with the degree family alone, and 0.5002 with it removed.
-On Penrose the corresponding figures are 0.8322, 0.8349 and 0.4964. The published
-weave and hybrid figures measure the one property the perturbation was designed
-not to destroy.
+Identity weave therefore scores 0.9910 on AB with the degree family present,
+0.9910 with the degree family alone, and 0.5002 with it removed; on Penrose,
+0.8322, 0.8349 and 0.4964. Those figures measure the one property the
+perturbation was designed not to destroy.
 
-The fresh-reconstruction result reported in [1] fails a stronger test: it
-reproduces at 0.8977 on a degree-matched configuration model with no tiling
-ancestry whatsoever, against 0.8886 on the rewired tiling, and falls to 0.4967
-when the degree-family features are ablated. It carries no substrate information
-and is withdrawn.
+The fresh-reconstruction result of [1] fails a stronger test: it reproduces at
+0.8977 on a degree-matched configuration model with no tiling ancestry, against
+0.8886 on the rewired tiling, and falls to 0.4967 under degree-family ablation.
+It carries no substrate information and is withdrawn.
 
 ### 4.3 The address gap is boundary contamination
 
-The address channel is not affected by either leak — perpendicular coordinates
-are neither degree features nor recoverable from a rewired graph. But the
-published address figures were measured at a single interior crop. Sweeping that
-crop, at matched positive rates:
+Sweeping the interior crop at matched positive rates:
 
 | interior retained | AB | Penrose | gap |
 |---|---|---|---|
@@ -222,43 +198,31 @@ crop, at matched positive rates:
 | 75% | 0.9980 | 0.8234 | +0.175 |
 | 60% | 0.9995 | 0.9492 | +0.050 |
 | 50% | 0.9996 | 0.9837 | **+0.016** |
-| 40% | 0.9995 | 0.9802 | +0.019 |
 | 30% | 0.9997 | 0.9738 | +0.026 |
 
-Shuffle nulls run 0.469–0.524 across all twelve cells.
-
-Ammann-Beenker is saturated from 75% inward. Penrose requires trimming to roughly
-50% before reaching bulk behaviour. The earlier analysis was conducted at
-interior-75% — inside one substrate's saturated regime and outside the other's —
-so what it measured was how far boundary contamination penetrates each substrate,
-not whether each possesses an address channel.
+Ammann-Beenker is saturated from 75% inward; Penrose requires trimming to ~50%.
+The earlier analysis ran at interior-75%, inside one substrate's saturated regime
+and outside the other's, so it measured how far boundary contamination penetrates
+each substrate rather than whether each has an address channel.
 
 ### 4.4 Cumulative effect
 
 | analysis | AB | Penrose | gap |
 |---|---|---|---|
-| as published (linear model, intersection label, 75%) | 0.986 | 0.661 | +0.325 |
+| as published (linear, intersection label, 75%) | 0.986 | 0.661 | +0.325 |
 | nonlinear model | 0.992 | 0.786 | +0.206 |
 | matched positive rate | 0.998 | 0.823 | +0.175 |
 | bulk crop | 0.9996 | 0.9837 | **+0.016** |
 
-Each correction removed one confound and reduced the gap. The claim that Penrose
-lacks a perpendicular-space address channel is withdrawn.
-
-For completeness: the model-class dependence was itself checked for a
-feature-completeness artefact. Penrose lifts from **Z**⁵ and needs a third
-address coordinate, but recomputing perpendicular coordinates from the raw lift
-reproduces the supplied values exactly, and the lift sum takes only four values,
-so the published feature set is complete. Substituting the continuous lift sum
-(0.7584) or a complete minimal address (0.7472) recovers nothing.
+The claim that Penrose lacks a perpendicular-space address channel is withdrawn.
 
 ---
 
-## 5. Result: fragility under phason disorder
+## 5. Fragility under phason disorder
 
-Both substrates generated by cut-and-project at matched scale (~16,800 and
-~17,500 vertices), cropped to interior-50%, matched 3% positive rate, four
-disorder seeds per point.
+At bulk crop and matched positive rate, Ammann-Beenker and Penrose are nearly
+equivalent when pristine and separate immediately under disorder (~16,800 and
+~17,500 vertices, 4 seeds):
 
 | disorder | AB | Penrose | gap |
 |---|---|---|---|
@@ -266,161 +230,123 @@ disorder seeds per point.
 | 0.05 | 0.9929 ± 0.0010 | 0.8525 ± 0.0073 | +0.140 |
 | 0.10 | 0.9818 ± 0.0028 | 0.7810 ± 0.0140 | +0.201 |
 | 0.20 | 0.9511 ± 0.0092 | 0.7406 ± 0.0282 | +0.211 |
-| 0.30 | 0.9041 ± 0.0163 | 0.6801 ± 0.0041 | +0.224 |
 | 0.40 | 0.8436 ± 0.0051 | 0.6286 ± 0.0131 | +0.215 |
 
-Shuffle nulls run 0.484–0.517 across all twelve cells; positive counts are
-matched to within 5% at every row.
+At the first disorder step Ammann-Beenker loses 0.0067 and Penrose loses 0.1291 —
+a factor of nineteen. Shuffle nulls run 0.484–0.517 throughout.
 
-Pristine, the substrates are nearly equivalent. At the first disorder step
-Ammann-Beenker loses 0.0067 and Penrose loses 0.1291 — a factor of roughly
-nineteen. The gap opens to 0.140 in a single step, reaches 0.21 by amplitude 0.20,
-and plateaus. Ammann-Beenker still retains 0.84 at the strongest disorder tested,
-where Penrose has fallen to 0.63.
+The distinction between these substrates is therefore one of resilience, not of
+possession. Section 6 identifies what determines it.
 
 ---
 
-## 6. Supporting observations
+## 6. The cyclotomic result
 
 ### 6.1 A uniform window shift is a symmetry
 
-Sweeping the acceptance window offset on Ammann-Beenker leaves address
-readability entirely unchanged — 0.9955 at zero shift, 0.9960 at the largest —
-while edge Jaccard against the reference patch falls to 0.398. A rigid phason
-translation maps the substrate to a locally isomorphic substrate; the address
-channel re-registers rather than degrading. This distinguishes the two phason
-cases operationally and confirms that the degradation in Section 5 is a property
-of disorder rather than of perpendicular-space motion as such.
+Sweeping the window offset on Ammann-Beenker leaves readability unchanged —
+0.9955 at zero shift, 0.9960 at the largest — while edge Jaccard against the
+reference patch falls to 0.398. The address channel re-registers rather than
+degrading, confirming that the degradation reported here is a property of
+disorder rather than of perpendicular motion as such.
 
-### 6.2 Convergent evidence from an independent substrate family
+### 6.2 Fragility follows the field
 
-Generalising the construction to **Z**ⁿ makes perpendicular dimension a free
-parameter: n = 4, 5, 6 give perpendicular dimensions 2, 3, 4 with 8-, 10- and
-12-fold symmetry. At matched scale (~5,600 vertices), matched positive rate and
-bulk crop, perpendicular dimension 2 loses 0.005 of its address readability at
-disorder 0.10 while dimensions 3 and 4 lose 0.250 and 0.197 — reproducing the
-Ammann-Beenker/Penrose asymmetry in a different symmetry family, with a different
-generator, on substrates that share no code path with Section 5.
+All three substrates at matched perpendicular dimension, lattice rank, window
+construction and edge rule. Address AUC at matched measured damage,
+interior-50%, matched 5% positive rate, 3 seeds. Shuffle nulls 0.46–0.52 across
+all fifteen cells.
 
-The comparison requires a calibration. The perturbation is isotropic in
-perpendicular space, whose dimension is the variable under test, so a fixed
-nominal amplitude need not inflict equal damage. It does not: measuring the
-flipped-vertex fraction directly, dimension 4 sustains 1.55 to 1.75 times
-dimension 2's damage at every amplitude tested.
-
-Replotting address readability against *measured damage* rather than nominal
-amplitude removes that confound, and the effect survives it:
-
-| vertices flipped | perp dim 2 | perp dim 3 | perp dim 4 |
+| vertices displaced | 8-fold (silver) | 10-fold (golden) | 12-fold (platinum) |
 |---|---|---|---|
-| 10% | 0.9824 | 0.8883 | 0.8524 |
-| 15% | 0.9768 | 0.8360 | 0.8195 |
-| 20% | 0.9574 | 0.7859 | 0.7868 |
-| 30% | 0.8968 | 0.6893 | 0.7213 |
-| 40% | 0.7944 | 0.5950 | 0.6836 |
+| 10% | **0.9759** | **0.8421** | 0.9203 |
+| 20% | 0.9528 | 0.8057 | 0.8760 |
+| 30% | 0.8765 | 0.7304 | 0.8279 |
 
-Perpendicular dimension 2 holds an advantage of +0.09 to +0.21 over both higher
-dimensions at every matched damage level.
+**Silver > platinum > golden, at every damage level.**
 
-Two features of this deserve emphasis, one supporting and one limiting. It is
-**independent convergent evidence**: a second generator, a different symmetry
-family, and a damage-matched axis all reproduce the fragility asymmetry of
-Section 5. But there is **no monotone scaling with dimension**. Dimensions 3 and
-4 cross over — 3 leads at low damage, 4 leads at high — and neither consistently
-dominates. Any account of the result in terms of "how much was projected away"
-is therefore not supported. What the data show is a cliff at perpendicular
-dimension 2, not a gradient, and we have no explanation for why 2 should be
-distinguished.
+The direction of this result was predicted and committed to version control
+before the measurement completed: that the 10-fold substrate, sharing Penrose's
+field, would be fragile, and the 8-fold, sharing Ammann-Beenker's, robust. The
+12-fold substrate carried no prediction.
 
-### 6.3 The degradation may have a threshold
+The 10-fold substrate here shares nothing with Penrose but its cyclotomic field —
+different lattice (Z⁴ against Z⁵), different window (a zonotope against four
+pentagons), different perpendicular dimension, different edge structure. That
+golden-ratio arithmetic reproduces Penrose's fragility in an otherwise unrelated
+construction eliminates window topology, lattice dimension and construction as
+causes.
 
-Sampling the 8-fold substrate finely through the region where degradation begins
-(nine amplitudes, five seeds each) gives a curve that is flat and then falls:
+### 6.3 Penrose's redundant dimension is inert
 
-| vertices flipped | address AUC |
-|---|---|
-| 0.0% | 0.9720 ± 0.0028 |
-| 6.4% | 0.9818 ± 0.0048 |
-| 10.1% | 0.9780 ± 0.0068 |
-| 13.3% | 0.9718 ± 0.0100 |
-| 16.6% | 0.9510 ± 0.0129 |
-| 19.8% | 0.9522 ± 0.0165 |
-| 23.1% | 0.9331 ± 0.0064 |
-| 26.3% | 0.9130 ± 0.0210 |
-| 29.1% | 0.8924 ± 0.0268 |
+Penrose's conventional Z⁵ construction indexes four pentagonal windows by lift
+sum, suggesting its address might carry a discrete component alongside a
+continuous one. It does not. The lift-sum index scores AUC 0.5398 at zero
+disorder and 0.5696 at disorder 0.20 — barely above chance, and neither carrying
+the signal nor collapsing. Penrose's readability is entirely in its continuous
+coordinates, which run 0.9517 to 0.6726 across the same range.
 
-Consecutive slopes in AUC per unit damage run +0.15, −0.10, −0.19, then −0.63,
-+0.04, −0.58, −0.62, −0.74. That is a near-zero run followed by a step to a
-roughly constant −0.6, which is the signature of a kink near 13% damage rather
-than of a smooth knee — a smooth knee would show slopes growing steadily from the
-start.
+Its live address space is therefore two-dimensional, as the rank-4 account
+predicts.
 
-We report this as suggestive and not established. Error bars grow by an order of
-magnitude across the sweep, one interval runs the wrong way, and five seeds
-cannot separate a sharp transition from a gentle sigmoid. If a genuine pinning
-threshold exists it has a *location*, which is a predictable and checkable
-quantity, and establishing one would be a considerably stronger result than any
-degradation curve. We flag it as the obvious next measurement.
+---
 
 ## 7. Discussion
 
-The property distinguishing these substrates is resilience, not possession. Both
-carry site identity in perpendicular space; Ammann-Beenker's carrying survives
-strain and Penrose's does not.
+The property that determines how robustly a quasiperiodic structure carries
+positional information under strain is its underlying quadratic irrational. This
+is measured across the complete set of such structures at perpendicular dimension
+2, with the direction predicted in advance, and it survives elimination of every
+alternative we could construct: presence of an address channel, classifier model
+class, positive rate, boundary crop, window topology, a discrete address
+component, and the dimensionality of the continuous part.
 
-This is the more useful claim of the two for the error-correction motivation that
-prompted the original work. An architecture that needs an addressed layer needs
-one that survives the noise the physical system will actually impose. A channel
-that reads perfectly on a pristine patch and collapses at the first strain is not
-a resource. The relevant figure of merit is the slope, not the intercept.
+We decline to offer a mechanism. One reading is available and tempting — the
+golden ratio is the most badly approximable irrational, its continued fraction
+being all 1s, and it is the most fragile, which would invert the intuition from
+KAM theory that greater irrationality brings greater stability. Three fields
+cannot establish a relation to any approximation-theoretic quantity, and this
+work has repeatedly found that mechanisms fitted to existing data do not survive
+their first genuine control. The observation is recorded; the explanation is not
+claimed.
 
-The unified statement across both probes is that Penrose's address channel is
-intrinsically more fragile than Ammann-Beenker's: it requires roughly twice the
-boundary trimming to reach bulk behaviour, and it loses roughly nineteen times as
-much readability at the onset of phason strain. Boundary truncation and phason
-disorder are both perturbations of the acceptance condition, and Penrose is
-markedly more sensitive to both.
-
-**Why** remains unmeasured. The obvious structural difference is that Penrose's
-acceptance region is four pentagons indexed by lift sum where Ammann-Beenker's is
-a single octagon, and a fragmented window plausibly damages differently under
-truncation and jitter than a connected one. We flag this as a hypothesis and
-decline to assert it, having spent this paper removing mechanisms that were
-asserted rather than measured.
+For the error-correction motivation that prompted the original work, the relevant
+consequence is that resilience is the figure of merit rather than readability. A
+channel that reads perfectly on a pristine patch and collapses at first strain is
+not a resource. Where an addressed layer is wanted, the arithmetic of the
+substrate is a design parameter.
 
 ---
 
 ## 8. Limitations
 
-- All results use one privileged-site definition. Cross-validation against an
-  independent definition is outstanding.
-- Disorder amplitude is expressed in perpendicular-space units specific to these
+- Three disorder seeds; one privileged-site definition. Cross-validation against
+  an independent definition is outstanding.
+- Disorder amplitude is in perpendicular-space units specific to these
   generators and does not convert to a physical phason strain measure without
   calibration.
-- Four disorder seeds per point. The effects reported are large relative to their
-  error bars, but ten would be standard.
-- Section 6.2 shows no monotone scaling with perpendicular dimension, and the
-  distinction of dimension 2 is unexplained.
-- Section 6.3 is suggestive only, as stated there.
-- This is a classical substrate diagnostic. It is not a simulation of any quantum
-  error-correcting code, and no claim is made about the performance of the
-  Li-Boyle construction or any other.
+- The separation between platinum and silver is smaller than that between either
+  and golden, and rests on three seeds.
+- The next family, φ(N) = 6 with N ∈ {7, 9, 14, 18}, has perpendicular dimension
+  4. It supplies new fields but changes dimension, so it is a second comparison
+  rather than an extension of this one.
+- This is a classical substrate diagnostic. It simulates no quantum
+  error-correcting code, and no claim is made about the performance of any.
 
 ---
 
 ## 9. Conclusion
 
-Ammann-Beenker and Penrose do not differ in whether they carry site identity in
-perpendicular space. In clean bulk both do, at 0.9996 and 0.9816 against nulls at
-chance. They differ in how that identity survives perturbation, and the
-difference is large: a factor of nineteen in readability lost at the onset of
-phason strain, and a factor of two in the boundary trimming required to reach
-bulk behaviour.
+Address fragility in cut-and-project quasicrystals is determined by the
+cyclotomic field. Across the complete family at perpendicular dimension 2, and
+holding every other construction parameter fixed, readability under phason
+disorder orders silver > platinum > golden at every damage level, with the
+direction predicted in advance.
 
-An earlier analysis by this author reported the difference as one of presence
-rather than resilience. That conclusion was produced by a linear classifier
-reading a nonlinear boundary, by unmatched positive rates, and dominantly by
-measuring at a crop that lay inside one substrate's saturated regime and outside
+An earlier analysis by this author reported the Ammann-Beenker/Penrose asymmetry
+as a difference in whether an address channel exists. That was produced by a
+linear classifier reading a nonlinear boundary, unmatched positive rates, and
+measurement at a crop lying inside one substrate's saturated regime and outside
 the other's. All three artefacts are general to substrate comparison, none is
 specific to quasicrystals, and each is caught by a null costing a few lines.
 
@@ -436,7 +362,7 @@ Zenodo record 15560880. The present paper supersedes its central result.
 
 ## Data and code availability
 
-All substrates in this paper are generated from scratch by the code accompanying
-it; no external data files are required. Generators, audit scripts, null controls
-and per-run outputs are available at
-`github.com/kekekatie/geometric-impedance`, under `substrates/`.
+All substrates are generated from scratch by the accompanying code; no external
+data files are required. Generators, audit scripts, null controls, the
+prospective prediction in its original commit, and per-run outputs are at
+`github.com/kekekatie/geometric-impedance` under `substrates/`.
