@@ -27,6 +27,22 @@ Survived: nonlinear model, matched positive rate, matched scale, bulk crop,
 shuffle null, replication across seeds.
 → `substrates/PHASON_DOSE_RESPONSE.md`
 
+### Address fragility follows the cyclotomic field — PROSPECTIVE
+At matched perpendicular dimension, lattice rank, window construction and edge
+rule, address fragility orders **silver > platinum > golden** at every damage
+level (0.976 / 0.920 / 0.842 at 10% damage).
+
+Prediction recorded in git before the run: 10-fold fragile, 8-fold robust.
+Confirmed. The 10-fold substrate shares nothing with Penrose but its field —
+different lattice, window, perpendicular dimension and edge structure — so
+golden-ratio arithmetic reproduces Penrose's fragility independently of
+construction.
+
+**The family is complete, not sampled**: φ(N)=4 has solutions N = 5, 8, 10, 12,
+and N=5 and N=10 give the same field, so there are exactly three quasicrystal
+families at perpendicular dimension 2 and all three are measured.
+→ `substrates/CYCLOTOMIC_RESULT.md`
+
 ---
 
 ## UNDETERMINED
