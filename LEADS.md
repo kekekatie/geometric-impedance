@@ -126,7 +126,31 @@ produce checkable numbers.
 
 ## UNTESTED
 
-### ⭐ Rank-4 congruence-window family — the construction that is matched on all axes
+### ⭐ Rank-4 congruence-window family — BUILT AND VALIDATED
+All three members are genuine rhombus tilings at rank 4, perpendicular dimension 2,
+with the complete N-fold star: zero crossings, 100% quadrilaterals, Euler 2, rhombus
+vocabularies 2/2/3, mean degrees 3.907/3.795/3.733. Congruence classes 1, 5, 9 =
+det Gram(K), all occupied.
+
+**Validated against Penrose exactly.** Inside a radius both patches cover: 872 points
+each, 0 differing either way; 1677 edges each, 0 differing. Penrose was always a
+rank-4, perpendicular-dimension-2 cut-and-project — the fifth dimension is bookkeeping.
+
+Two bugs found and fixed en route: the zonotope's extent along each extra direction
+*exactly* equals the preimage spacing (ratio 1.0000), so a closed unoffset window
+double-accepts boundary points; and a rank-4 step by ζ^k is not sufficient for an edge,
+since accepted preimages may differ by e_k *plus a kernel element* — without that check
+12-fold carried mean degree 4.736, impossible for a quadrangulation.
+
+**⚠ Field and fragmentation remain perfectly confounded**: 1, 5, 9 pieces map
+one-to-one onto silver, golden, platinum. This family cannot separate them either, and
+φ(N)=4 has exactly three members so it cannot supply a case where they disagree.
+Recorded now rather than discovered later.
+→ `substrates/RANK4_FAMILY.md`, `generate_rank4.py`, `validate_rank4_penrose.py`
+
+*Original reasoning, kept for the record:*
+
+### Rank-4 congruence-window family — the construction that is matched on all axes
 **Built on a gate that failed.** Perpendicular space splits into the Galois-conjugate
 plane plus a non-primitive remainder (dimension 0, 1, 2 for 8-, 10-, 12-fold). The
 remainder is **not inert**: AUC 0.7937 (10-fold) and 0.6169 (12-fold) at zero disorder
