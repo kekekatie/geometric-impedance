@@ -155,8 +155,17 @@ def _extra_positions(st, a):
 EXTRA_OFFSET = (0.0731, 0.0517)
 
 
-def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None):
-    """Rank-4 cut and project. Lifts are Z^4 points; the address is 2D."""
+def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None,
+             disorder_extra=False):
+    """Rank-4 cut and project. Lifts are Z^4 points; the address is 2D.
+
+    `disorder` jitters the two Galois perpendicular coordinates before the
+    acceptance test. With `disorder_extra`, the coordinates along K (x) R are
+    jittered too, which lets a point be accepted through a different preimage -
+    a congruence-class flip. The extra noise is drawn once per candidate point
+    and shared across that point's preimages, since it models a perturbation of
+    the point rather than of the bookkeeping.
+    """
     st = structure(N)
     r = st["K"].shape[0]
     if offset is None:
@@ -174,10 +183,12 @@ def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None):
         gal = a @ st["perp4"] + np.asarray(offset)
         if disorder > 0:
             gal = gal + rng.normal(0.0, disorder, gal.shape)
+        ex_noise = (rng.normal(0.0, disorder, (len(a), r))
+                    if (disorder > 0 and disorder_extra and r) else 0.0)
         hits = np.zeros(len(a), dtype=np.int8)
         chosen = np.zeros((len(a), r), dtype=np.int64)
         for u, ex in _extra_positions(st, a):
-            pp = np.column_stack([gal, ex + ex_off]) if r else gal
+            pp = np.column_stack([gal, ex + ex_off + ex_noise]) if r else gal
             ok = np.all(pp @ st["A"].T <= st["b"], axis=1)
             hits += ok
             if r:
