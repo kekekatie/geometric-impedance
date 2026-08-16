@@ -47,6 +47,42 @@ families at perpendicular dimension 2 and all three are measured.
 
 ## UNDETERMINED
 
+### Experimental literature check — the matched experiment does not exist
+A deep-research survey of experimental phason literature through Aug 2026 returns
+**underdetermined, not positive and not negative**. There is no matched 8-/10-/12-fold
+dataset in which the same calibrated damage is applied to comparable specimens, so
+the ordering silver > platinum > golden cannot currently be tested against experiment.
+No directly calibrated phason elastic constants exist for any of the three target
+families; the only absolute determination is icosahedral Al–Pd–Mn.
+
+**Spot-checked against primary sources** (3 of ~25 citations; all real journals, two
+verbatim-accurate, one directionally accurate with unverified specifics). The survey
+reads abstracts, not full texts, and says so.
+
+**The awkward observation.** The ten-fold/golden family carries by far the strongest
+direct evidence of phason-mediated *self-repair*: imaged thermal phason flips in
+Al–Cu–Co; growth errors repairing in ~1 s at 1183 K and 10–20 s at 1123 K; grain
+coalescence; defect-free growth around shrinkage pores (PRL 135, 166203, 2025). Taken
+at face value that is hard to square with "golden is least resilient".
+
+**Why it is not yet a refutation.** (a) Al–Ni–Co decagonal is *the* workhorse 2D
+quasicrystal — there is no octagonal single crystal of comparable quality to run these
+experiments on, so "golden has the most repair evidence" is close to "golden has the
+most evidence"; (b) the measured quantities are different — we measure immediate
+address readability under static perpendicular-space jitter, the experiments measure
+kinetic recovery, and stiffness, mobility and healing are not the same axis.
+
+**The defence in (a) is available once.** It makes a prediction: if matched 8- and
+12-fold repair experiments are done and golden still wins on repair, the resilience
+reading is wrong — though the address-readability result could still stand, being a
+different quantity. That is the honest position and it should be stated in the paper.
+
+**Calibration anchor gained.** Real octagonal quasicrystals carry ~5% local tiling
+error (Ammann-line jags, Mn₈₀Si₁₅Al₅). Our damage axis is flipped-vertex fraction,
+quoted at 10%. Not the same quantity, but the first time the x-axis has touched a
+measured number.
+→ `substrates/LITERATURE_CHECK.md`
+
 ### Fragility vs perpendicular-space dimension
 Perpendicular dimension 2 is far more robust than 3 or 4. The damage calibration
 is **done**: dimension 4 sustains 1.55–1.75× dimension 2's flipped-vertex
@@ -79,6 +115,31 @@ produce checkable numbers.
 ---
 
 ## UNTESTED
+
+### Recovery / annealing as a separate axis from immediate loss
+Every result to date measures *immediate* address loss under static disorder. The
+physics literature insists this is only one axis: a substrate can be stiff but
+kinetically frozen, or soft but highly mobile and therefore fast to repair. The
+experimental repair evidence for decagonal alloys is strong precisely on the axis we
+have never measured.
+
+**Our current generator cannot answer this.** The substrate is regenerated from
+scratch at each disorder amplitude — no dynamics, no history, no memory. Turning the
+jitter back down recovers exactly, because there is nothing to anneal; the "recovery
+curve" would be the dose-response curve read backwards. It would look like a result
+and be an artefact.
+
+Doing it properly needs a different model class: a **fixed** vertex set with a local
+flip dynamics (the standard random-tiling Monte Carlo — a phason flip *is* a local tile
+rearrangement), damage applied, then a local relaxation rule allowed to run. Buildable
+with existing machinery, but the local rule is a modelling decision that will drive the
+answer, so it must be fixed and justified in git before running.
+
+**⚠ Designed-in leak to avoid.** The obvious repair rule — re-test each vertex against
+the true window using its neighbours' consensus perpendicular position — is the same
+operation as the address classifier. Annealing with the address channel and then
+measuring the address channel rebuilds the §5.4 leak in a new costume. The relaxation
+rule must use only parallel-space/tiling-local information.
 
 ### ⚠ Window scale is NOT a free parameter — it breaks the tiling
 Discovered while trying to fragment the window. Cut-and-project window size is
