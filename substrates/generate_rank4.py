@@ -130,11 +130,17 @@ def _extra_positions(st, a):
     if not len(K):
         return [(np.zeros((len(a), 0), dtype=np.int64), np.zeros((len(a), 0)))]
     u0 = a @ st["chi"].T                                  # n x rank
+    # The offset z must be centred per point, not swept over a fixed absolute
+    # range. u0 grows linearly with distance from the origin, so a fixed span
+    # stops containing the relevant preimage beyond some radius and the patch
+    # silently saturates - N = 12 froze at 561 vertices for extents 22, 26 and
+    # 30. Reduce u0 into the symmetric residue range first, then look only at
+    # immediate neighbours.
+    base = u0 - mod * np.rint(u0 / mod).astype(np.int64)
     Gi = np.linalg.inv(G)
     out = []
-    span = [np.arange(-2, 3) for _ in range(len(K))]
-    for z in itertools.product(*span):
-        u = u0 + np.array(z, dtype=np.int64) * mod
+    for dz in itertools.product([-1, 0, 1], repeat=len(K)):
+        u = base + np.array(dz, dtype=np.int64) * mod
         out.append((u, (u @ Gi @ K.astype(float)) @ Kb))
     return out
 
