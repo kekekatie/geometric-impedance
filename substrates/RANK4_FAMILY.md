@@ -108,13 +108,29 @@ family cannot separate them either. Separating them needs members where the two
 disagree, which the φ(N)=4 family cannot supply, since it has exactly three members.
 Recorded now so it is not discovered later.
 
-## Note on genericity
+## Note on genericity — SUPERSEDED, see RANK4_HEADLINE.md
 
 The general-N generator uses a generic offset along the extra directions, so its
 10-fold member occupies all 5 classes. Penrose proper is the *singular* member, with
-class 0 empty and four pentagons. Both are in the same local isomorphism class family;
-the generic one avoids degenerate configurations and is the better default. The
-validation above reproduces the singular Penrose convention exactly, on purpose.
+class 0 empty and four pentagons.
+
+**The claim originally made here — that the generic member "avoids degenerate
+configurations and is the better default" — is wrong, and was shown wrong by the
+headline run.** The offset does not avoid degenerate configurations, it creates them:
+slicing the zonotope at arbitrary levels yields near-degenerate slivers (52 points in
+one 10-fold class) and strongly heterogeneous local environments (12-fold class mean
+degrees from 3.49 to 4.84). That makes the congruence class predict vertex degree and
+hence retention, so the class stops being inert — it reads 0.8230 for generic 10-fold
+against 0.5210 for singular Penrose.
+
+The singular convention takes the natural window sections and gives balanced pieces.
+The correct way to break the exact ties documented above is a deterministic half-open
+window rule, not a jitter that moves the cut. Class occupancy and per-class degree
+homogeneity should be acceptance criteria for the substrate before any address
+measurement is taken.
+
+The validation above reproduces the singular Penrose convention exactly, and is
+unaffected.
 
 ## Next
 

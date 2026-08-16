@@ -126,6 +126,35 @@ produce checkable numbers.
 
 ## UNTESTED
 
+### ⭐ Headline re-run — DISCRIMINATING TEST VOID, silver > golden reconfirmed
+Ran to the pre-registered protocol. Ordering came out silver > golden > platinum at
+every damage level, which is H2's ordering, but **it cannot be claimed for H2**:
+platinum failed the pre-registered clean-channel check (0.6658 against a predicted
+≥0.95) and never had a channel to lose. H2's quantitative refinement also failed — the
+golden-to-platinum gap should have been about half the silver-to-golden gap and was
+2.0–2.4× larger at low damage, a case the prediction document names as fitting neither
+hypothesis.
+
+**Diagnosed, and the fault is the generator's extra offset, not the 12-fold substrate.**
+`class_inertness.py` shows singular Penrose's class inert at 0.5210 — vindicating
+`discrete_vs_continuous.py`'s 0.5398, which does *not* need correcting — while the
+generic members read 0.8230 and 0.6619. The generic offset slices the zonotope at
+arbitrary levels, producing near-degenerate slivers (52 points in one 10-fold class) and
+class mean degrees from 3.49 to 4.84. Class then predicts degree, degree predicts
+retention. With the class included, platinum reads 0.8579, not 0.6658 — its address is
+largely discrete and the pre-registered feature set was chosen on silver, which has no
+class at all.
+
+**`RANK4_FAMILY.md`'s "generic is the better default" claim is withdrawn.** The fix is a
+deterministic half-open window rule, not a jitter that moves the cut. Class occupancy and
+per-class degree homogeneity become substrate acceptance criteria, checked before any
+address measurement.
+
+**Survives untouched:** silver > golden at matched damage on audited tilings — 0.98 vs
+0.88 at 5% damage, 0.96 vs 0.84 at 10%, holding to 0.92 vs 0.66 at 25%. Silver has one
+class and no extra offset, so its substrate is unaffected.
+→ `substrates/RANK4_HEADLINE.md`, `rank4_headline.py`, `class_inertness.py`
+
 ### ⭐ Rank-4 congruence-window family — BUILT AND VALIDATED
 All three members are genuine rhombus tilings at rank 4, perpendicular dimension 2,
 with the complete N-fold star: zero crossings, 100% quadrilaterals, Euler 2, rhombus
