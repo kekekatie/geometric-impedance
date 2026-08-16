@@ -27,25 +27,35 @@ Survived: nonlinear model, matched positive rate, matched scale, bulk crop,
 shuffle null, replication across seeds.
 → `substrates/PHASON_DOSE_RESPONSE.md`
 
-### Address fragility follows the cyclotomic field — PROSPECTIVE
-At matched perpendicular dimension, lattice rank, window construction and edge
-rule, address fragility orders **silver > platinum > golden** at every damage
-level (0.976 / 0.920 / 0.842 at 10% damage).
-
-Prediction recorded in git before the run: 10-fold fragile, 8-fold robust.
-Confirmed. The 10-fold substrate shares nothing with Penrose but its field —
-different lattice, window, perpendicular dimension and edge structure — so
-golden-ratio arithmetic reproduces Penrose's fragility independently of
-construction.
-
-**The family is complete, not sampled**: φ(N)=4 has solutions N = 5, 8, 10, 12,
-and N=5 and N=10 give the same field, so there are exactly three quasicrystal
-families at perpendicular dimension 2 and all three are measured.
-→ `substrates/CYCLOTOMIC_RESULT.md`
-
 ---
 
 ## UNDETERMINED
+
+### ⚠ Address fragility follows the cyclotomic field — MOVED DOWN FROM CONFIRMED
+The measurement stands: on the substrates as built, address fragility orders
+**silver > platinum > golden** at every damage level (0.976 / 0.920 / 0.842 at 10%
+damage), with the direction recorded in git before the run.
+
+**The causal claim does not stand.** The edge rule "differ by one basis vector" is
+identical in Z⁴ coordinates and *not* identical in the plane: it gives the complete
+octagonal star for N=8 (because ζ₈⁴ = −1), 4 of 5 decagonal directions for N=10, and
+4 of 6 dodecagonal directions for N=12. As a result the 10-fold substrate is **not a
+tiling at all** — 664 properly crossing edges, Euler characteristic −682 — while the
+8- and 12-fold substrates are perfect rhombus tilings.
+
+Star completeness and planarity therefore vary monotonically with the outcome, so
+"only the cyclotomic field changes" is false as built, and the field cannot be
+isolated by this design. Ammann-Beenker got a complete star by luck of the minimal
+polynomial, not by matched construction.
+→ `substrates/TILING_CONFOUND.md`, `substrates/tile_audit.py`
+
+*Route out:* the Z^n family (`generate_nfold.py`) tiles properly at all three folds —
+zero crossings, 100% quadrilaterals, Euler 2 — but varies perpendicular dimension.
+Except Penrose's extra dimension is already measured **inert**. If Z⁶'s two grading
+dimensions are also inert, that family is matched at 2 *continuous* address dimensions
+and is strictly better on every axis. Gate test is cheap; see UNTESTED.
+
+**⚠ `address_fragility.md` v2.0 §6.2 asserts the false clause. Do not upload.**
 
 ### Experimental literature check — the matched experiment does not exist
 A deep-research survey of experimental phason literature through Aug 2026 returns
@@ -115,6 +125,25 @@ produce checkable numbers.
 ---
 
 ## UNTESTED
+
+### ⭐ Are the extra perpendicular dimensions inert in Z⁵ and Z⁶? — GATES EVERYTHING
+The cheapest decisive test on the board. Penrose's third perpendicular direction (lift
+sum) is already measured inert: AUC 0.5398 at zero disorder against chance, 0.5696 at
+disorder 0.20. If Z⁶'s two grading directions are likewise inert, then the Z^n family
+is matched at **2 continuous address dimensions**, tiles properly at all three folds,
+and carries complete stars — strictly better than the cyclotomic Z⁴ family on every
+axis, and the correct substrate for a re-run of the headline.
+
+Method already exists: `discrete_vs_continuous.py`. Split the address into the 2
+continuous coordinates versus the grading directions, measure each separately at zero
+and nonzero disorder.
+
+If they are *not* inert, the two confounds cannot both be removed at once and the
+comparison needs rethinking from the substrate up.
+
+Downstream, in order: (1) this gate; (2) if inert, re-run the headline on the Z^n
+family with the direction recorded in git first — a real risk to the result; (3) only
+then recovery, which needs proper tilings anyway.
 
 ### Recovery / annealing as a separate axis from immediate loss
 Every result to date measures *immediate* address loss under static disorder. The
