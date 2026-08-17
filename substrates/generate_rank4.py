@@ -148,16 +148,42 @@ def _extra_positions(st, a):
 # The zonotope's extent along each extra direction exactly equals the spacing
 # between successive preimages of the same rank-4 point (measured ratio 1.0000
 # for N = 10 and both directions of N = 12). That is the marginal case: with a
-# closed window and no offset, points sitting exactly on a slice boundary are
-# accepted twice, once for each neighbouring preimage, and the tiling gains
-# spurious edges. A generic offset along the extra directions removes every tie
-# and leaves exactly one accepted preimage per point, which `generate` asserts.
+# closed window and no offset, a point sitting exactly on a slice boundary lands
+# on the shared facet of two neighbouring preimages and is accepted twice, so
+# the tiling gains spurious edges.
+#
+# There are two ways to break the tie. A GENERIC OFFSET along the extra
+# directions removes every tie by moving the cut - but it slices the zonotope at
+# arbitrary levels, producing near-degenerate slivers (52 points in one 10-fold
+# class) and strongly heterogeneous local environments. That makes the
+# congruence class predict vertex degree and hence retention, so the class stops
+# being inert. This is what voided the first headline run; see RANK4_HEADLINE.md.
+#
+# The SINGULAR CONVENTION is the fix Penrose itself uses: take the natural window
+# sections (no offset, ex_off = 0) and break the exact ties with a deterministic
+# HALF-OPEN rule - a boundary point is awarded to exactly one of its neighbouring
+# preimages by a fixed key (the lexicographically smallest congruence label u).
+# The cut is never moved, so the pieces stay balanced, as Penrose's four pentagons
+# are. This is `generate`'s default. The old generic offset is kept below only so
+# the defective substrate can still be reproduced for comparison figures.
 EXTRA_OFFSET = (0.0731, 0.0517)
+
+# Tolerance for "exactly on the commensurate boundary". The extra-direction ties
+# are exact to floating point (the lattice lands on the facet plane to ~1e-10),
+# while the Galois coordinates carry a generic offset and never tie systematically,
+# so a band this tight catches every real tie and no spurious near-miss.
+_TIE_TOL = 1e-7
 
 
 def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None,
              disorder_extra=False):
     """Rank-4 cut and project. Lifts are Z^4 points; the address is 2D.
+
+    By default the extra (K x R) directions use the singular convention: no
+    offset, with exact boundary ties broken half-open by awarding the point to
+    the preimage with the smallest congruence label. Passing `extra_offset`
+    explicitly (e.g. EXTRA_OFFSET) restores the old generic-offset behaviour,
+    which manufactures class slivers and is retained only for comparison.
 
     `disorder` jitters the two Galois perpendicular coordinates before the
     acceptance test. With `disorder_extra`, the coordinates along K (x) R are
@@ -170,7 +196,8 @@ def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None,
     r = st["K"].shape[0]
     if offset is None:
         offset = np.array([0.1123, 0.0847])
-    ex_off = np.array((EXTRA_OFFSET if extra_offset is None else extra_offset)[:r])
+    singular = extra_offset is None                      # the fixed default
+    ex_off = np.zeros(r) if singular else np.array(extra_offset[:r])
     rng = np.random.default_rng(seed)
 
     axis = np.arange(-extent, extent + 1, dtype=np.int64)
@@ -185,17 +212,45 @@ def generate(N, extent, offset=None, disorder=0.0, seed=0, extra_offset=None,
             gal = gal + rng.normal(0.0, disorder, gal.shape)
         ex_noise = (rng.normal(0.0, disorder, (len(a), r))
                     if (disorder > 0 and disorder_extra and r) else 0.0)
-        hits = np.zeros(len(a), dtype=np.int8)
-        chosen = np.zeros((len(a), r), dtype=np.int64)
-        for u, ex in _extra_positions(st, a):
-            pp = np.column_stack([gal, ex + ex_off + ex_noise]) if r else gal
-            ok = np.all(pp @ st["A"].T <= st["b"], axis=1)
-            hits += ok
-            if r:
-                chosen[ok] = u[ok]
-        assert hits.max() <= 1, (N, "point accepted by two preimages")
-        keep = hits == 1
+
+        if r == 0:
+            keep = np.all(gal @ st["A"].T <= st["b"], axis=1)
+            if keep.any():
+                kept.append(a[keep].astype(np.int64))
+            continue
+
+        pre = _extra_positions(st, a)                     # list of (u, ex)
+        P = len(pre)
+        # Slack = how far inside the window each preimage sits (>= 0 inside).
+        slack = np.empty((len(a), P))
+        us = np.empty((len(a), P, r), dtype=np.int64)
+        for p, (u, ex) in enumerate(pre):
+            pp = np.column_stack([gal, ex + ex_off + ex_noise])
+            slack[:, p] = (st["b"] - pp @ st["A"].T).min(axis=1)
+            us[:, p] = u
+
+        if singular:
+            # Half-open: accept inside-or-on-boundary, then, among a point's
+            # qualifying preimages, keep the one with the smallest label u. A
+            # strictly interior point has a single qualifier; only exact-boundary
+            # ties present several, and they are resolved deterministically.
+            qual = slack >= -_TIE_TOL
+            lex = us[:, :, 0].astype(np.float64)
+            for d in range(1, r):
+                lex = lex * 1000.0 + us[:, :, d]
+            lex = np.where(qual, lex, np.inf)
+            best = lex.argmin(axis=1)
+            keep = qual.any(axis=1)
+        else:
+            # Old closed test: the generic offset guarantees at most one hit.
+            ok = slack >= 0.0
+            hits = ok.sum(axis=1)
+            assert hits.max() <= 1, (N, "point accepted by two preimages")
+            best = ok.argmax(axis=1)
+            keep = hits == 1
+
         if keep.any():
+            chosen = us[np.arange(len(a)), best]
             kept.append(np.column_stack([a[keep], chosen[keep]]))
 
     if kept:
