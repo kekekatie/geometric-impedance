@@ -1,161 +1,186 @@
-# Draft pre-registration: intrinsic transition-graph asymmetry (the entropic-geometry test)
+# Draft pre-registration v2: intrinsic transition-graph asymmetry (the entropic-geometry test)
 
-**Status — DRAFT for crew review (Karen, Gemini, GPT). Not sealed, not run.** Once the
-crew agrees the design it is sealed by commit; nothing above the amendment line changes
-after the first result is seen.
+**Status — DRAFT for crew review (Karen, Gemini, GPT). Not sealed, not run.** v2
+incorporates GPT's review of v1 (see the change-log at the foot). Once the crew agrees, it
+is sealed by commit; nothing above the amendment line changes after the first result.
 
 Precedes Branch B. Branch B *imposes* an energy whose ground state is the ideal tiling
-(Case A: "we wrote go-home into the law"). This test asks whether the state space
-*already* contains a directional bias before any energy is imposed (Case B: "we discover
-one"). You try discover before impose, so this runs first and Branch B stays gated behind
-it.
+(Case A: "we wrote go-home into the law"). This test asks whether the state space *already*
+contains a directional bias before any energy is imposed (Case B: "we discover one"). You
+try discover before impose.
 
 ---
 
-## 1. Why this exists
+## 1. The evidential ladder (the spine of the design)
 
-Branch A (`RECOVERY_UNBIASED.md`) gave the null: unbiased flips forget microstructure and
-history, alike across 8/10/12. But it measured **microscopic identity** and it picked
-**uniformly among legal moves** — possibility with no stated preference. The open question
-in `geometry + ? -> P(x_{t+1} | x_t)` is the `?`, and it was never measured.
+Each rung must be passed before the next is claimed:
 
-Two facts sharpen the target:
+1. **Signed quantity exists** — some coordinate has a non-zero one-step expected drift.
+2. **Beats the bounded/degree null** — the drift is not mere regression of a bounded
+   coordinate nor an ordinary random-walk preference for high-degree states.
+3. **Deeper continuation volume** — after conditioning on immediate mobility, alternative
+   legal moves still lead to systematically unequal *future* state-space volume.
+4. **QC-specific** — the effect exceeds a low-order-matched random-tiling scramble; it is a
+   property of quasiperiodic order, not generic rhombus-tiling combinatorics.
+5. **Field-specific** — the surviving effect differs across 8/10/12.
 
-- **Possibility is not preference.** The cut-and-project geometry says which moves are
-  *possible*. It does not, on its own, say which possibility is *realised*. Branch A
-  supplied the trivial answer (uniform); the interesting answer is whether the
-  combinatorics of the state space supply a non-trivial one.
-- **Micro-forgetting is consistent with a macro-drift.** Entropic selection predicts a
-  drift of a **coarse (macrostate) coordinate**, not memory of a microstate. So Branch A's
-  micro-null does not touch it. This is the unmeasured half.
+Rung 3 is the experiment we most want to preserve, and it is **target-free**: it never
+refers to the ideal tiling at all.
 
-**This is a named, established mechanism, not a lone speculation.** The random-tiling
-model of quasicrystals (Henley; Elser) holds that the quasiperiodic symmetry is selected
-by **configurational entropy alone** — the zero-phason-strain macrostate maximises the
-number of tilings, with no energy. GPT's "Ω(coherent) > Ω(incoherent)" is exactly that
-claim. So Case B has real physics behind it and the literature is directly on-target.
+## 2. Why this exists
 
-Operational demand, taken seriously: define the "incompleteness/asymmetry of the present"
-as a **signed quantity** and measure it. No poetry passes this document.
+Branch A forgot microstructure and history, alike across fields — but it measured
+microscopic identity and picked uniformly among moves. Possibility with no stated
+preference. The `?` in `geometry + ? -> P(x_{t+1}|x_t)` was never measured, and entropic
+selection predicts a **coarse (macrostate)** drift, not microstate memory, so the micro-null
+does not touch it.
 
-## 2. Coordinates (defined without rewarding "home")
+**Literature, stated narrowly (per GPT).** Configurational entropy is known to produce
+phason-elastic restoring tendencies in *specific* random-tiling ensembles (Henley; Elser).
+It is **not** a universal theorem that every 8/10/12 rhombus ensemble has its entropy
+maximum at the ideal zero-strain cut. Whether *these* state spaces do is precisely what
+this test decides.
 
-Each is a coarse observable of the current state; measuring drift of one imposes no energy,
-as measuring a ball's height imposes no gravity.
+## 3. Coordinates and observables (with their standing)
 
-- **g_phi — phason strain.** The mean perpendicular-space position of the accepted
-  vertices, and its spatial gradient across the patch. A clean-reference-free variant: the
-  RMS spatial gradient of local perp-position, which is zero for any strain-free tiling and
-  needs no comparison to the specific clean instance.
-- **g_c — coherence.** Fraction of bulk vertices whose local type lies in the ideal
-  vocabulary (1 − defect fraction; the vocabulary is a substrate property, `phason_energy`).
-  Clean-instance-free.
-- **Omega — local state-space volume.** Number of legal flips |A(x)| (mobility), and a
-  short-horizon reachable-set size (count of distinct states reachable within r flips),
-  reported as log Ω.
+- **d(x) — transition-graph degree / mobility.** The number of legal flips |A(x)|. A plain
+  scalar, not an entropy. (v1 wrongly called this Ω.)
+- **Ω_r(x), S_r = log Ω_r — continuation volume.** The number/measure of *distinct* states
+  reachable within flip horizon r (bounded BFS for small r = 2,3, or a sampled distinct-state
+  count). This is the target-free quantity of rung 3.
+- **g_phi — phason strain (PRIMARY drift coordinate, but floor-limited).** The coarse phason
+  field w(r) = ⟨h(a)⟩ locally averaged, h(a) = a·perp4; strain = the offset-subtracted
+  spatial variation of w. A **uniform** perpendicular offset is *not* strain (demonstrated:
+  offset-invariant). **`phason_strain.py` also shows the naive estimator has a large
+  finite-size floor** (clean ~0.10, flipped ~0.14 at extent 12, cell 8), shrinking with cell
+  size — so g_phi may be used only with its clean finite-size floor characterized across
+  extents and cell sizes and subtracted, on patches large enough to separate signal from
+  floor. Raw per-vertex perp gradients are **not** used.
+- **g_c — coherence (SECONDARY, target-informed).** Fraction of bulk vertices whose local
+  type is in the ideal vocabulary. Demoted from v1: vocabulary membership already encodes
+  quasiperiodic admissibility, so this is not target-free. Its ideal vocabulary must be
+  shown stable under extent and boundary exclusion before use.
 
-## 3. Primary estimator — the exact per-state signed drift
+## 4. Primary experiment (rung 3, target-free)
 
-At a sampled state x, enumerate **all** legal flips A(x) and compute, uniformly over that
-state's own moves,
+At sampled states x, **conditioning on immediate mobility d(x)**, ask whether the legal
+moves y ∈ A(x) lead to systematically unequal continuation volumes Ω_r(y):
 
-    b_g(x) = (1/|A(x)|) * sum_{y in A(x)} [ g(y) − g(x) ].
+    delta_S(x) = (1/|A(x)|) * sum_{y in A(x)} [ S_r(y) - S_r(x) ]
 
-This is the one-step expected change of the coordinate, exact per state (an average over
-the actual move set, not a noisy trajectory estimate). Plot ⟨b_g⟩ against g(x) across many
-sampled states. A **restoring drift** — the geometry tending to reduce the coordinate — is
-b_g(x) < 0 where g(x) sits above its strain-free value (and the mirror for g_c: b_{g_c} > 0
-where coherence is low). That signed, coordinate-resolved curve *is* the quantity the
-whole idea has been asking for.
+and whether Ω_r(y) varies across the moves y beyond what d alone predicts. This is the
+clean operational form of "state-space geometry supplies a tendency": at matched present
+coordinates and matched immediate mobility, do alternative futures have unequal volume? It
+refers to no ideal, no energy, no target.
 
-## 4. Controls — the two ways this could fool us
+## 5. Secondary experiment — the signed drift
 
-Two null mechanisms would fake a restoring drift; both must be defeated.
+The one-step expected drift of a coordinate g, exact per state (average over that state's own
+moves):
 
-- **Bounded-coordinate regression (the main trap).** If g is bounded, extreme states
-  trivially have more moves inward than outward, so b_g looks restoring for reasons that
-  have nothing to do with quasiperiodic order. **Control**: compare b_g(x) at a given g to
-  the same quantity in a **low-order-matched scrambled** state at the *same* g — a
-  random-tiling configuration matched on density, degree, tile frequencies and defect
-  count but with quasiperiodic order destroyed (the flip-saturated ensemble from Branch A
-  supplies this for free). Intrinsic drift is only what the genuine substrate shows *over
-  and above* the matched scramble at equal g. This is the dynamic form of the same
-  discipline the degree-control and history tests used.
-- **Proposal-multiplicity artefact.** "Uniform over moves" breaks detailed balance when
-  |A(x)| varies, biasing the *stationary* walk toward many-move states. The per-state b_g
-  above is a property of the move set and does not depend on this, but any **global/flow**
-  claim does. **Control**: recompute stationary drift under a Metropolis-corrected proposal
-  (accept x→y with min(1, |A(x)|/|A(y)|)) that enforces a uniform stationary measure over
-  states; a flow that survives the correction is intrinsic, one that vanishes was
-  bookkeeping.
+    b_g(x) = (1/|A(x)|) * sum_{y in A(x)} [ g(y) - g(x) ],
 
-Boundary: bulk-restrict all coordinates (coordination ≥ 3), open patch. Finite size: this
-is a single-patch, ensemble-over-dynamics design; a positive requires finite-size scaling
-across extents before it is believed.
+plotted against g(x). Restoring drift = b_g < 0 above the strain-free value (mirror for g_c).
+Run for g_phi (floor-characterized) and g_c (secondary).
 
-## 5. Hypotheses
+## 6. Controls — the four ways this could fool us
 
-- **H0 — no intrinsic bias.** After the controls, b_g ≈ 0 in every independently-motivated
-  coordinate, no Ω–coherence gradient, detailed balance holds. Bare geometry has no tipping
-  tendency; the `?` is not entropy/combinatorics.
-- **H1 — intrinsic entropic restoring drift, not family-specific.** A restoring b_g toward
-  the strain-free / higher-coherence macrostate survives both controls, similarly across
-  8/10/12. This is the random-tiling mechanism operating; interesting, but generic to
-  rhombus tilings.
-- **H2 — family-specific intrinsic bias.** The surviving drift or the Ω–coherence gradient
-  **differs across the cyclotomic fields.** This is the outcome that would matter for GIV:
-  the geometry of the specific field supplies a specific tendency.
+- **Bounded-coordinate regression** (main trap for §5). Extreme states trivially drift
+  inward. Defeated by the matched-scramble comparison at equal g (below) and by the
+  conditional analysis (§7).
+- **Degree bias** (main trap for §4). A random walk prefers high-degree states for trivial
+  reasons; that is *not* the claim. The claim is unequal continuation volume **after
+  conditioning on d(x)**. Degree conditioning is built into rung 3.
+- **Matched-scramble specification (fixed before any result, applied blind to b_g).** The
+  control state is a flip-saturated random tiling matched to the genuine state on a
+  pre-declared vector: vertex count, degree distribution, tile/rhombus frequencies, defect
+  count, and the target coordinate g — each within a stated tolerance (±2% on distributional
+  moments; exact on counts where possible). Selection: draw flip-saturated states, accept the
+  nearest match under a fixed weighted distance on those variables; if no state matches
+  within tolerance for a given g bin, that bin is reported as "no admissible control" and
+  excluded, never stretched. **Scramble validity is demonstrated, not assumed**: the accepted
+  controls must retain the low-order vector (by construction/tolerance) *and* be shown to have
+  destroyed higher-order quasiperiodic order (collapsed perp-space structure / decorrelated
+  order metric) — else the "scramble" is not one.
+- **Detailed-balance audit (recast from v1's P4).** On a symmetric reversible flip graph
+  under a Metropolis-corrected proposal (accept x→y with min(1, d(x)/d(y))), detailed balance
+  and zero stationary cycle affinity are *expected*. A non-zero corrected stationary current
+  is therefore treated as a **bug signal** — trigger an implementation / state-definition /
+  boundary audit before any physical reading — not as a discovery.
 
-**Explicitly not tested here:** the strong claim that static asymmetry sustains *endless*
-motion. A closed fixed patch equilibrates; any real drift here is transient (the toddler
-reaches the ground). Sustained falling-forward needs a continually renewed asymmetry —
-plausibly a **growing** accessible state space — which lives one level above a fixed tiling
-and is recorded in §8 as future work, not claimed here.
+## 7. Conditional analysis (not subtraction alone)
 
-## 6. Predictions, to be scored
+Beyond subtracting the matched-scramble baseline, fit whether **order / family label
+predicts b_g (or delta_S) after conditioning on** g, d(x), defect count, and tile
+statistics. A surviving partial effect of the field label, with the low-order variables held,
+is the rigorous form of "the geometry of *this* field supplies the tendency." Report effect
+sizes with CIs, not p-values alone.
 
-- **P1** phason-strain drift b_{g_phi} is restoring at the ensemble level (random-tiling
-  theory expects the zero-strain macrostate to be entropically preferred). **Credence 0.70.**
-- **P2** that restoring drift **survives the matched-scramble control** at equal g (i.e. it
-  is not mere bounded-coordinate regression). **Credence 0.45.**
-- **P3** some coordinate's intrinsic drift or Ω–coherence gradient is **family-specific**
-  (H2). **Credence 0.25.**
-- **P4** the proposal-corrected stationary flow is non-zero (a genuine current, not an
-  artefact). **Credence 0.30.**
+## 8. Hypotheses (H1 split per GPT)
 
-Overall: **H0 0.35 / H1 0.40 / H2 0.25.** Recorded to be scored, not because precise.
+- **H0** — no intrinsic bias survives the controls: b_g ≈ 0, no delta_S gradient after
+  degree conditioning, detailed balance holds.
+- **H1a** — a drift exists but is **reproduced by the matched random-tiling control**:
+  generic constraint/graph combinatorics, not quasiperiodic.
+- **H1b** — a drift **beyond** the low-order controls, i.e. genuinely quasiperiodic-ensemble
+  entropic, but **common across fields**.
+- **H2** — a **robust field-specific excess** drift/volume asymmetry across 8/10/12.
 
-## 7. Protocol
+**Tempering H2 (per GPT):** a field-specific result motivates GIV-level investigation, but
+lower-level causes are ruled out first — move topology, acceptance-window geometry,
+recurrence, state-space connectivity, and finite-size arithmetic. GIV interpretation is the
+*last* resort, not the first.
 
-- Substrates: rank-4 singular family, N = 8/10/12, matched active-set count, bulk-restricted.
-- State sampling: unbiased trajectories over a spread of damage (0 → ~0.30 flips/vertex),
-  plus clustered/dispersed history endpoints, to cover a range of g values.
-- At each sampled state: enumerate A(x); compute exact b_g(x) for every coordinate; record
-  |A(x)| and g_c.
-- Matched-scramble baseline: for each sampled g, the corresponding flip-saturated
-  random-tiling state; compute b_g there for subtraction.
-- Detailed-balance control: a subset rerun under the Metropolis-corrected proposal.
-- Seeds: ≥ 6 trajectories; report mean and CI. State the single-patch caveat.
-- Family comparison across 8/10/12, and a scaling check across at least two extents if a
-  signal appears.
+## 9. Predictions, to be scored
 
-## 8. Out of scope, recorded so it is not lost
+- **P1** g_phi drift is restoring at the ensemble level (random-tiling expectation).
+  **Credence 0.65.**
+- **P2** it survives the matched-scramble control at equal g (not bounded regression).
+  **Credence 0.40.**
+- **P3** delta_S shows unequal continuation volume **after conditioning on d(x)** (rung 3).
+  **Credence 0.40.**
+- **P4 (control, not discovery)** the Metropolis-corrected stationary current is **zero**
+  within noise; non-zero triggers an audit. **Expected outcome: zero.**
+- **P5** any surviving effect is **field-specific** (H2). **Credence 0.20.**
 
-**Expansion / growing state space.** The sustained version of "reconstruction into each new
-slice of now" likely requires the accessible configuration space to keep growing, so that
-there is always more continuation-volume ahead and the drift never equilibrates. This is
-the conceptual home of the cosmological-time reading and of the "constant falling forward"
-image. It is deliberately not part of this test, which measures only the transient,
-present-state drift on a fixed patch. Flagged for a future design once the static asymmetry
-is established or ruled out.
+Overall: **H0 0.35 / H1a 0.20 / H1b 0.25 / H2 0.20.** Scoreable, not precise.
 
-## 9. What would count as a real finding vs a real null
+## 10. Protocol
 
-- **Finding**: a restoring b_g in an independently-defined coordinate that survives the
-  matched-scramble control (not bounded-coordinate regression) and, for the GIV-relevant
-  version, differs across the fields; ideally with a proposal-corrected non-zero stationary
-  flow and a finite-size trend.
-- **Null**: detailed balance, zero surviving signed drift in every coordinate, no
-  Ω–coherence gradient. The bare geometry has no intrinsic tipping tendency; the restoring
-  `?` must enter through energetics, boundaries, or nonequilibrium driving after all — which
-  sends us to Branch B with a clear conscience, having ruled out the cheaper explanation.
+- Substrates: rank-4 singular family, 8/10/12, matched active-set count, bulk-restricted.
+- State sampling: unbiased trajectories over a spread of damage, plus clustered/dispersed
+  endpoints, to cover a range of g and d.
+- Per sampled state: enumerate A(x); compute d(x), b_g(x) for each coordinate, and Ω_r/S_r
+  for small r (BFS r=2, sampled r=3).
+- Matched-scramble baseline (§6) at each g bin; conditional regression (§7).
+- Detailed-balance audit (§6) on a subset.
+- Seeds ≥ 6; report mean and CI; single-patch caveat stated; scaling check across ≥ 2
+  extents (also needed to characterize the g_phi floor).
+
+## 11. Out of scope, recorded so it is not lost
+
+**Growing state space (expansion).** The sustained version of "reconstruction into each new
+slice of now" plausibly needs the accessible configuration space to keep growing, so drift
+never equilibrates — the home of the cosmological-time reading. Strictly downstream; not part
+of this fixed-patch test.
+
+---
+
+## Change-log: v1 -> v2 (GPT review)
+
+1. g_c demoted to secondary/target-informed; vocabulary-stability check required.
+2. g_phi tightened: explicit coarse field w(r); offset≠strain; finite-size floor
+   demonstrated (`phason_strain.py`) and required to be characterized/subtracted; raw
+   per-vertex gradients excluded.
+3. |A(x)| renamed d(x) (degree/mobility); Ω_r/S_r reserved for reachable continuation volume.
+4. Degree bias made an explicit null; the interesting claim is unequal volume *after*
+   conditioning on d(x).
+5. Matched-scramble fully specified (variables, tolerances, algorithm, no-match handling,
+   blind to b_g) and its validity to be demonstrated, not assumed.
+6. Conditional/matched-state analysis added alongside subtraction.
+7. P4 recast from expected discovery to a detailed-balance **audit control**.
+8. Random-tiling literature claim narrowed (specific ensembles, not a universal theorem).
+9. H1 split into H1a / H1b / H2.
+10. H2 wording tempered; lower-level causes ruled out before GIV interpretation.
+Plus: explicit evidential ladder (§1); the target-free continuation-volume experiment
+elevated to primary (§4).
