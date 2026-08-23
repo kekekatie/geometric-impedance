@@ -42,6 +42,26 @@ def defect_fraction(lifts, ustar, star, K, par4, vocab):
     return sum(1 for t in bulk if t not in vocab) / len(bulk)
 
 
+def measure(clean, ust0, star, K, par4, vocab, dmg, R, r, ncenters, margin, rng):
+    """One seed: residual_std, defect fraction and mean d_R at damage `dmg`."""
+    L, U, _ = apply_flips(clean, ust0, star, K, int(round(dmg * len(clean))), rng)
+    P = L @ par4
+    rad = np.linalg.norm(P - P.mean(0), axis=1)
+    bulk = np.where(rad + R + margin < rad.max())[0]
+    pick = rng.choice(bulk, size=min(ncenters, len(bulk)), replace=False)
+    resids, dRs = [], []
+    for ci in pick:
+        ra = region_arrays(L, U, star, K, par4, P[ci], R, r)
+        if ra is None:
+            continue
+        logd, logo = ra
+        resids.append(residual(logd, logo))
+        dRs.append(len(logo))
+    df = defect_fraction(L, U, star, K, par4, vocab)
+    rstd = np.std(np.concatenate(resids)) if resids else np.nan
+    return rstd, df, (np.mean(dRs) if dRs else np.nan)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--extent", type=int, default=9)
@@ -49,44 +69,41 @@ def main():
     ap.add_argument("--r", type=int, default=3)
     ap.add_argument("--ncenters", type=int, default=10)
     ap.add_argument("--margin", type=float, default=1.5)
-    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--seeds", type=int, default=5)
     args = ap.parse_args()
     R, r = args.radius, args.r
 
-    print(f"QC-specificity control: extent {args.extent}, R={R}, r={r}, "
-          f"{args.ncenters} bulk regions/level\n")
+    print(f"QC-specificity control (seeded): extent {args.extent}, R={R}, r={r}, "
+          f"{args.ncenters} regions/level, {args.seeds} seeds\n")
     for N in (8, 10, 12):
         st = structure(N)
         star, K, par4 = st["star"], st["K"], st["par4"]
         clean, _, _, ust0 = generate(N, args.extent)
         vocab = set(clean_frequencies(vertex_types(clean, ust0, star, K, par4)))
-        rng = np.random.default_rng(args.seed)
 
         print(f"=== {NAME[N]} ({N}-fold), n={len(clean)} ===")
-        print(f"{'flips/vtx':>10} {'defect%':>8} {'d_R':>5} {'V':>7} {'resid_std':>10}")
+        print(f"{'flips/vtx':>10} {'defect%':>8} {'resid_std (mean±sem)':>22}")
+        near_qc, saturated = None, None
         for dmg in DAMAGE:
-            L, U, _ = apply_flips(clean, ust0, star, K,
-                                  int(round(dmg * len(clean))), rng)
-            P = L @ par4
-            rad = np.linalg.norm(P - P.mean(0), axis=1)
-            bulk = np.where(rad + R + args.margin < rad.max())[0]
-            pick = rng.choice(bulk, size=min(args.ncenters, len(bulk)), replace=False)
-            Vs, resids, dRs = [], [], []
-            for ci in pick:
-                ra = region_arrays(L, U, star, K, par4, P[ci], R, r)
-                if ra is None:
-                    continue
-                logd, logo = ra
-                Vs.append(float(logo.var()))
-                resids.append(residual(logd, logo))
-                dRs.append(len(logo))
-            df = defect_fraction(L, U, star, K, par4, vocab)
-            dR = np.mean(dRs) if dRs else np.nan
-            rstd = np.std(np.concatenate(resids)) if resids else np.nan
-            vm = np.mean(Vs) if Vs else np.nan
-            print(f"{dmg:>10.2f} {100*df:>7.1f}% {dR:>5.1f} {vm:>7.3f} {rstd:>10.4f}",
-                  flush=True)
-        print()
+            rr, dfs = [], []
+            for s in range(args.seeds):
+                rng = np.random.default_rng(1000 + s)
+                rstd, df, _ = measure(clean, ust0, star, K, par4, vocab, dmg,
+                                      R, r, args.ncenters, margin=args.margin, rng=rng)
+                rr.append(rstd)
+                dfs.append(df)
+            rr = np.array(rr)
+            m, e = float(np.nanmean(rr)), float(np.nanstd(rr, ddof=1) / np.sqrt(len(rr)))
+            if dmg == DAMAGE[0]:
+                near_qc = (m, e)
+            saturated = (m, e)
+            print(f"{dmg:>10.2f} {100*np.nanmean(dfs):>7.1f}% "
+                  f"{m:>13.4f} ± {e:.4f}", flush=True)
+        d = near_qc[0] - saturated[0]
+        se = np.sqrt(near_qc[1] ** 2 + saturated[1] ** 2)
+        verdict = ("QC-elevated" if d > 2 * se else
+                   "flat within noise -> generic (rung 4 fails)")
+        print(f"   near-QC minus saturated: {d:+.4f} ± {se:.4f}  =>  {verdict}\n")
 
 
 if __name__ == "__main__":
