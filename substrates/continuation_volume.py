@@ -59,6 +59,47 @@ def omega_r(lifts, ustar, star, K, r):
     return len(seen) - 1
 
 
+def flippable_local(lifts, ustar, star, K, par4, center, radius):
+    """Flip sites whose vertex lies within `radius` of `center` in parallel space."""
+    P = lifts @ par4
+    return [(i, t, u) for (i, t, u) in flippable(lifts, ustar, star, K)
+            if np.linalg.norm(P[i] - center) <= radius]
+
+
+def one_step_local(lifts, ustar, star, K, par4, center, radius):
+    out = []
+    for i, t, u in flippable_local(lifts, ustar, star, K, par4, center, radius):
+        L = lifts.copy()
+        U = ustar.copy()
+        L[i] = np.array(t, dtype=L.dtype)
+        U[i] = u
+        out.append((L, U))
+    return out
+
+
+def omega_local(lifts, ustar, star, K, par4, center, radius, r):
+    """Distinct configurations reachable within r flips restricted to a local disk.
+
+    Only vertices inside the disk ever move, so this counts the local future
+    volume accessible from the current tiling around `center` -- the physically
+    local 'future behind the doors', and computationally bounded, so r can go
+    deeper than the whole-patch BFS allows."""
+    seen = {state_key(lifts)}
+    frontier = [(lifts, ustar)]
+    for _ in range(r):
+        nxt = []
+        for L, U in frontier:
+            for L2, U2 in one_step_local(L, U, star, K, par4, center, radius):
+                k = state_key(L2)
+                if k not in seen:
+                    seen.add(k)
+                    nxt.append((L2, U2))
+        frontier = nxt
+        if not frontier:
+            break
+    return len(seen) - 1
+
+
 def main():
     print("Engine test: Omega_1 should equal mobility d(x); Omega_2 sane.\n")
     print(f"{'':>9} {'verts':>6} {'d=Omega_1':>10} {'Omega_2':>9}")
