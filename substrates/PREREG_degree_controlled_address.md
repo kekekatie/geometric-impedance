@@ -1,8 +1,11 @@
 # Draft pre-registration: the degree-controlled address channel
 
-**Status — DRAFT for group review (Karen, Gemini, GPT). Not sealed. The
-confirmatory run has NOT been made.** Once the group agrees the design, this is
-sealed by commit and nothing above the dated-amendment line may change.
+**Status — SEALED on the crew's pivot (Karen, Gemini; Claude). Confirmatory run not yet
+made.** Sealed by this commit; nothing above the dated-amendment line changes. Note: this
+doc predates the intrinsic-drift detour and had a lighter review than the sibling pre-reg —
+GPT has not line-reviewed it, so any refinement he raises goes in a dated amendment below,
+not by editing the sealed body. The 2-seed table in §1 is exploratory and motivating only;
+the ≥8-seed confirmatory run is what §2 pre-registers.
 
 This supersedes the feature-set decision in `PREDICTION_rank4_headline.md`. It does
 not touch the substrates (rebuilt on the singular convention, `RANK4_FAMILY.md`),

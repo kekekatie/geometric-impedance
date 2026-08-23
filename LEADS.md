@@ -27,6 +27,26 @@ Survived: nonlinear model, matched positive rate, matched scale, bulk crop,
 shuffle null, replication across seeds.
 → `substrates/PHASON_DOSE_RESPONSE.md`
 
+### Quasiperiodicity governs static structure, not free dynamics — CONFIRMED (null → H1a)
+Three independent energy-free phason-dynamics probes return one verdict: the
+quasiperiodic substrates show nothing special under free dynamics.
+- **Branch A** — structural loss per flip is family-independent, monotone, no
+  spontaneous recovery.
+- **History** — unbiased mobility erases spatial history within ~0.06 flips/vertex,
+  alike across all three fields.
+  Both → `substrates/RECOVERY_UNBIASED.md`
+- **Intrinsic drift** — deeper *local* continuation volume does carry structure beyond
+  immediate degree (real, robust across radius R in the bulk, grows with horizon), **but
+  it is not quasiperiodic-specific**: a 5-seed matched-scramble control finds it equal or
+  *lower* near the QC than in the random-tiling bulk (near-QC minus saturated: silver
+  −0.026±.006, golden −0.036±.025, platinum −0.002±.021). H1a, generic rhombus-tiling
+  combinatorics. The platinum/family ordering is retired as finite-size/small-scale noise.
+  → `substrates/RESULTS_INTRINSIC_DRIFT.md`, sealed `PREREG_intrinsic_drift.md`
+
+Cross-validates the Stage D metronome null: **the geometry reaches into static structure
+and memory-in-the-pattern, not into the free dynamics** — a border now drawn from two
+independent directions. Branch B (imposed energetics) abandoned without remorse.
+
 ---
 
 ## UNDETERMINED
