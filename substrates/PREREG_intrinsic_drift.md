@@ -1,8 +1,8 @@
 # Draft pre-registration v3: intrinsic transition-graph asymmetry (the entropic-geometry test)
 
-**Status — DRAFT, believed sealable, awaiting the crew's go (Karen, Gemini, GPT).** v3
-incorporates GPT's second review; change-log at the foot. Once sealed by commit, nothing
-above the amendment line changes after the first result.
+**Status — SEALED. Crew agreed (Karen, Gemini, GPT).** Sealed by this commit; nothing above
+the amendment line may change — corrections go only in a dated amendment appended below the
+change-log. v3 incorporates GPT's two review rounds; change-log at the foot.
 
 Precedes Branch B. Branch B *imposes* an energy whose ground state is the ideal tiling
 (Case A: "we wrote go-home into the law"). This asks whether the state space *already*
