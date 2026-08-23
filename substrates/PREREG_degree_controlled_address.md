@@ -191,3 +191,47 @@ H_confound / H_reorder / H0 it supports, **before** any interpretation, and scor
 against the credences above. If the honest metric overturns silver-first, the confirmed
 dose-response result (Penrose degrades faster than Ammann–Beenker) must itself be re-read
 through the degree-controlled lens before it is quoted again.
+
+---
+
+## Amendment 1 (post-seal; date = this commit) — secondary metric repaired (v2), frozen before damage
+
+Per GPT's ruling. The sealed secondary (v1, coarse degree-based features,
+`reconstruct_address.py`) is a **failed calibration**: R² ≤ 0 for all three families even
+at zero damage, so it cannot perform its intended task and is **not** reinterpreted as
+evidence for or against the primary. A clean diagnostic established the address IS locally
+reconstructible from the **vertex type** (canonical cyclic sequence of incident edge
+directions), R² ≈ 0.9 — so v1 was mis-specified, not defeated. v1 is preserved as part of
+the methods record. Repairing a thermometer that reads −273 °C is not metric-shopping; the
+repair was motivated by calibration failure, provably independent of the primary outcome.
+
+**Secondary v2 — frozen here BEFORE any damage outcome is seen; run on fresh offsets/seeds
+not used in the diagnostic:**
+1. **Target:** the true, offset-free, **current-state** address `a·perp4` of each present
+   vertex (encodability, matching v1's intent — NOT the historical/pre-damage address,
+   which is a separate future test and must not be silently substituted).
+2. **Predictor:** vertex type = canonical minimal-rotation cyclic sequence of incident edge
+   star-line indices, from **parallel-space geometry only** (contains no perpendicular-space
+   coordinate — no target leakage by construction).
+3. **Model:** vertex-type → mean-address lookup (target encoding) learned on train, applied
+   to test; unseen/rare test types predict the train grand-mean address.
+4. **CV — held-out-offset:** train on a set of window offsets, test on a fresh unseen
+   offset (4-fold over offsets). This guards against the spatial-autocorrelation leakage a
+   random vertex split hides; a random-split R² is reported alongside only to quantify that
+   inflation.
+5. **Damage:** Galois-plane jitter, same amplitude grid; measured flipped-vertex fraction.
+6. **Decay statistic & amended decision rule:** report ΔR² = R²(0) − R²(D) per family.
+   **Clean-level ordering is NOT required to match the primary** — the metrics measure
+   different constructs (primary = address information *incremental to degree*; secondary =
+   *local encodability*). Agreement = the family with the largest unique address channel
+   (primary: golden) also shows a correspondingly measurable **loss** of reconstructible
+   address under damage. Disagreement triggers decomposition, not an ordering claim.
+
+**Decomposition (added):** at zero damage, held-out-offset R²(degree→address) vs
+R²(degree+type→address) — the address information vertex type carries *conditional on
+degree*. Hypothesis: silver's type-increment-over-degree ≈ 0 (reconstructible but redundant
+with degree), golden's larger (differentiated encoding), which would explain how the clean
+reconstruction ordering (S>G>P) can invert the primary's (G>P>S) with no contradiction.
+
+**Recorded distinctions:** reconstructibility ≠ uniqueness; persistence ≠ information
+richness; possibility ≠ preference.
