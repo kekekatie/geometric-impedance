@@ -190,3 +190,42 @@ control added; g_phi baseline-characterisation procedure specified (§6); micros
 vs coarse-field wording made careful; horizon-locality caveat strengthened; "least resistance ~
 continuation volume" interpretation stated as earned-not-assumed (§11); compute-honesty note
 (§13).
+
+---
+
+## Amendment 1 (post-seal; date = this commit) — method result and control plan
+
+Recorded after the first runs, per the seal rule that changes go only in a dated amendment.
+Nothing above is altered.
+
+**Methodological result (the real finding so far, not the family ordering).** The whole-patch
+BFS at horizon r=2 found continuation volume almost perfectly explained by immediate degree,
+`corr(d, Omega_2) ~ 1.00` for all three families: one-step mobility and short-horizon volume
+are nearly the same quantity, so r=2 is too shallow to test rung 3. Method (a), agreed by the
+crew: a **local-region** continuation volume (flips restricted to a disk, `continuation_volume.
+omega_local`) that is computationally bounded and can reach deeper horizons. At r=3 local, at
+matched local mobility (d_R ~ 9-10), `corr(d, Omega_r)` falls below 1 and does so unequally by
+field (silver 0.967, golden 0.892, platinum 0.910), with branch dispersion V_r largest for
+platinum. **These family numbers are pre-control and are NOT interpreted**; the only claim is
+methodological: deeper *local* continuation volume carries structure beyond one-step mobility.
+
+**Safe wording fixed.** The observed negative mean drift Delta S_r is stated only as "the
+average immediate move leads to smaller local continuation volume at this sampled scale" -- the
+"near a local volume peak" reading is withdrawn as unestablished.
+
+**Controls now being run (gate before any interpretation):**
+- **(R, r) sensitivity** — the decoupling must appear as a qualitative pattern (r=1 degree only
+  -> r=2 mostly degree -> r>=3 decoupling) stable across local radii, or it is a scale artefact.
+  Run first; it gates the rest.
+- **Degree-matched within-family control** — does V_r vary among states at essentially equal d_R?
+- **Matched-scramble control** — genuine vs flip-saturated random-tiling at matched degree and
+  low-order local statistics: different V_r / C_r / decoupling, or not?
+- **Label-shuffle negative control** — shuffle family/order labels preserving degree and measured
+  quantities; does the apparent family relationship vanish?
+- **Conditional H2** — after conditioning on d_R and low-order descriptors, does family/order
+  still explain deeper continuation volume (the clean form of rung 5)?
+- Seeds / error bars throughout.
+
+**Rung 6 remains untouched.** Branch asymmetry (uneven doors) is not branch exploitation (the
+walk preferring the richer door). No Branch B, no energy, no "least resistance" language in any
+results until the ladder is climbed.
