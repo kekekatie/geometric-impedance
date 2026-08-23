@@ -68,7 +68,7 @@ def main():
             states.append((L.copy(), U.copy(), centers))
 
         print(f"=== {NAME[N]} ({N}-fold) ===")
-        print(f"{'R \\ r':>7}" + "".join(f"{r:>18}" for r in HORIZONS))
+        print(f"{'R/r':>7}" + "".join(f"{r:>18}" for r in HORIZONS))
         for R in RADII:
             cells = []
             for r in HORIZONS:
