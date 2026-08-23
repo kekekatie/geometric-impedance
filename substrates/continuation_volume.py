@@ -60,10 +60,42 @@ def omega_r(lifts, ustar, star, K, r):
 
 
 def flippable_local(lifts, ustar, star, K, par4, center, radius):
-    """Flip sites whose vertex lies within `radius` of `center` in parallel space."""
+    """Flip sites whose vertex lies within `radius` of `center` in parallel space.
+
+    Evaluates flippability only for vertices inside the disk (O(disk) checks) rather
+    than scanning the whole patch, so cost is set by the region, not the patch size.
+    Identical output to filtering the full `flippable` by disk membership -- asserted
+    by the engine self-test."""
     P = lifts @ par4
-    return [(i, t, u) for (i, t, u) in flippable(lifts, ustar, star, K)
-            if np.linalg.norm(P[i] - center) <= radius]
+    within = np.where(np.linalg.norm(P - center, axis=1) <= radius)[0]
+    idx = {tuple(r): i for i, r in enumerate(lifts)}
+    m = len(star)
+    rk = len(K)
+    sites = []
+    for i in within:
+        row = lifts[i]
+        steps = []
+        for k in range(m):
+            for s in (1, -1):
+                j = idx.get(tuple(row + s * star[k]))
+                if j is None:
+                    continue
+                if rk and not np.array_equal(ustar[j] - ustar[i], s * K[:, k]):
+                    continue
+                steps.append((k, s))
+        if len(steps) != 3 or len({k for k, _ in steps}) != 3:
+            continue
+        d = np.array([s * star[k] for k, s in steps])
+        du = (np.array([s * K[:, k] for k, s in steps]).sum(0)
+              if rk else np.zeros(0, dtype=np.int64))
+        tgt = tuple(row + d.sum(0))
+        if tgt in idx:
+            continue
+        corners = [tuple(row + d[j]) for j in range(3)] + \
+                  [tuple(row + d[j] + d[(j + 1) % 3]) for j in range(3)]
+        if all(c in idx for c in corners):
+            sites.append((i, tgt, ustar[i] + du))
+    return sites
 
 
 def one_step_local(lifts, ustar, star, K, par4, center, radius):
