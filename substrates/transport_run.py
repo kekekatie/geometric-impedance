@@ -94,6 +94,19 @@ def build_features(N, offset):
     dens = gcount(2.0)
     g_small = [gcount(1.6), gcount(2.6)]
     g_med = [gcount(4.0), gcount(6.0)]
+    # long-range PHYSICAL descriptors (no address) for the WHAT diagnostic: is M4
+    # just a compressed encoding of long-range real-space organization?
+    g_far = [gcount(8.0), gcount(12.0)]
+    nbr_deg = []
+    for rr in (5.0, 9.0):
+        nb = tree.query_ball_point(par, rr)
+        nbr_deg.append(np.array([deg[b].mean() if len(b) else deg[i]
+                                 for i, b in enumerate(nb)]))
+    cg_psi = []                                            # coarse-grained angular order
+    for rr in (5.0, 9.0):
+        nb = tree.query_ball_point(par, rr)
+        cg_psi.append(np.array([psi[N][b].mean() if len(b) else psi[N][i]
+                                for i, b in enumerate(nb)]))
 
     # motif type: canonical multiset of incident star (line, sign) -> KEY (global
     # codebook is built later so one-hot width is consistent across offsets)
@@ -134,6 +147,7 @@ def build_features(N, offset):
     return dict(N=N, n=n, bulk=bulk, perp=perp, adj=adj, par=par, tree=tree,
                 shell_r=shell_r, deg=deg, dens=dens, edge_len_mean=edge_len_mean,
                 edge_len_var=edge_len_var, g_small=g_small, g_med=g_med,
+                g_far=g_far, nbr_deg=nbr_deg, cg_psi=cg_psi,
                 psi=psi, motif_keys=motif_keys,
                 ld_primary=ld_primary, ld_secondary=ld_secondary, ret=ret)
 
@@ -195,8 +209,14 @@ def assemble(f, codebook, rng=None):
     posc = np.column_stack([par, np.hypot(par[:, 0], par[:, 1])])
     M3pos = np.column_stack([M3, posc])
     M4pos = np.column_stack([M3pos, m4])
+    # WHAT diagnostic: enrich M3 with LONG-RANGE PHYSICAL descriptors (no address);
+    # does the address block still add over that richer physical description?
+    M3far = np.column_stack([M3, f["g_far"][0], f["g_far"][1],
+                             f["nbr_deg"][0], f["nbr_deg"][1],
+                             f["cg_psi"][0], f["cg_psi"][1]])
+    M4far = np.column_stack([M3far, m4])
     return dict(M0=M0, M1=M1, M2=M2, M3=M3, M4=M4, M4shuf=M4shuf,
-                M3pos=M3pos, M4pos=M4pos)
+                M3pos=M3pos, M4pos=M4pos, M3far=M3far, M4far=M4far)
 
 
 def held_out_r2(blocks, y, bulk_list, rung):
@@ -232,7 +252,8 @@ def run_family(N):
         y = ([f["ret"][10] for f in feats] if key is None
              else [f[key] for f in feats])
         rungs = {}
-        for r in ("M0", "M1", "M2", "M3", "M4", "M4shuf", "M3pos", "M4pos"):
+        for r in ("M0", "M1", "M2", "M3", "M4", "M4shuf", "M3pos", "M4pos",
+                  "M3far", "M4far"):
             rungs[r] = held_out_r2(B, y, bulk_list, r)
         out[label] = rungs
     return out, feats
@@ -246,14 +267,16 @@ def main(families=(8, 10, 12)):
               f"{nb} bulk vertices total\n{'='*72}")
         for label, rungs in out.items():
             print(f"  {label}:")
-            for r in ("M0", "M1", "M2", "M3", "M4", "M4shuf", "M3pos", "M4pos"):
+            for r in ("M0", "M1", "M2", "M3", "M4", "M4shuf", "M3pos", "M4pos",
+                      "M3far", "M4far"):
                 mu, sd = rungs[r]
                 print(f"     {r:7s} R2 = {mu:+.4f} ± {sd:.4f}")
             dm = rungs["M4"][0] - rungs["M3"][0]
             ds = rungs["M4shuf"][0] - rungs["M3"][0]
             dp = rungs["M4pos"][0] - rungs["M3pos"][0]
-            print(f"     --> M4-over-M3 increment = {dm:+.4f}   "
-                  f"(stratified-shuffle = {ds:+.4f};  M4-over-M3+position = {dp:+.4f})")
+            dfar = rungs["M4far"][0] - rungs["M3far"][0]
+            print(f"     --> M4-over-M3 = {dm:+.4f}   (shuffle = {ds:+.4f};  "
+                  f"over M3+position = {dp:+.4f};  over M3+long-range-physical = {dfar:+.4f})")
 
 
 if __name__ == "__main__":
