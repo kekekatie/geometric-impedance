@@ -1,7 +1,9 @@
 # Draft pre-registration: can the map carry a localized conserved defect? (lifted Burgers audit)
 
-**Status — DRAFT for crew review (Karen, Gemini, GPT, Fable; Claude). Not sealed. No run
-made.** From GPT's handoff spec, Fable's cautions, and the materials report's Experiment 5.
+**Status — SEALED. Crew agreed (Karen, Gemini, GPT, Fable; Claude), with Fable's two knives
+incorporated (Gate 0 null via the periodic control; Test 2 loop census). Sealed by this
+commit; corrections go only in a dated amendment.** From GPT's handoff spec, Fable's cautions,
+and the materials report's Experiment 5.
 
 The foundational "thing made of map" question, kept clean: **can the existing rank-4 map
 support a genuine localized *conserved* defect carried entirely by its own lift variables,
@@ -35,16 +37,26 @@ lift the tiling already carries.
 
 **Gate 0 — constructability.** Can we build a **legal** rhombus tiling (existing tiles and
 matching, existing lift variables) containing a controlled dislocation dipole **+B, −B** with
-a well-defined nonzero closure on an enclosing loop, via a Volterra-type cut-and-displace? If
-**no legal such configuration exists in the grammar**, the map does not support endogenous
-lifted defects — **that is the result**, and the audit stops there, reported plainly.
+a well-defined nonzero closure on an enclosing loop, via a Volterra-type cut-and-displace?
+
+**Gate 0's own null (Fable's knife 1).** A construction can fail for boring reasons —
+implementation fiddliness, too-small patch, an awkward cut path — and that failure is
+outwardly identical to "the grammar forbids it." So before concluding H_none, **run the
+identical construction on the periodic lift control.** Three outcomes, three different reports:
+(a) succeeds on the periodic lift but **not** on the QC → a real grammar difference, H_none
+earned; (b) fails on **both** → an implementation limit, reported honestly as "**Gate 0 not
+resolved**", never as H_none; (c) succeeds on the QC → proceed to the tests below. The control
+ladder thus extends *downward into the gate*, not just into the dynamics.
 
 If Gate 0 passes:
 - **Test 1 — core mobility vs charge invariance.** Apply legal flips near and far from the
   core; does the microscopic core move/reshape while **b∥ and b⊥ around an enclosing loop stay
   invariant**?
-- **Test 2 — annihilation.** Can a +B and −B pair be brought together by flips and annihilate
-  to defect-free?
+- **Test 2 — annihilation.** Can a +B and −B pair be brought together by flips and annihilate?
+  **Pass condition, by loop census (Fable's knife 2):** *every* loop in a stated family —
+  all elementary tile boundaries, plus a set of nested loops around each former core site —
+  has zero closure afterward, not merely the one large enclosing loop. (Otherwise a pair that
+  "annihilates" into two smaller offsetting mismatches would falsely pass.)
 - **Test 3 — no bulk vanishing.** Can a single isolated B disappear in the bulk under flips?
   (It should not — it must reach a boundary or annihilate with its opposite.)
 - **Test 4 — identity is the charge, not the patch.** Compare charge persistence against
