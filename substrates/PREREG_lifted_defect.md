@@ -111,3 +111,19 @@ statement (generic lifted-lattice object, or none).
 ## 9. Out of scope
 
 Energetics (Branch B, parked); coherent transport (its own pre-reg, `PREREG_transport_hierarchy.md`).
+
+---
+
+## Amendment 1 (dated 2026-08-25) — Gate 0 outcome recorded
+
+Gate 0 has been run (`lifted_defect_gate0.py`; results in `RESULTS_GATE0_DEFECT.md`).
+**Outcome (b): not resolved, implementation-limited — H_none NOT earned or claimed.**
+The periodic control (square lattice) constructs a genuine localized dislocation whose
+radius-invariant Burgers vector the instrument reads correctly (also the first
+validation of the functional on a *nonzero* charge). The QC failures are a missing
+coupled phonon–phason elasticity relaxation, not a grammar obstruction. One off-menu
+finding stands: a pure phason-offset winding on the QC yields only **kernel** holonomy
+(b∥ = b⊥ = 0) — the phason relabels congruence classes, it does not carry a physical
+charge. Tests 1–4 remain untested pending a legal constructor (elasticity solve or de
+Bruijn multigrid). This amendment records an outcome only; it does not alter the sealed
+plan above.
