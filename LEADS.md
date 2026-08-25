@@ -16,6 +16,46 @@ Status values: **UNTESTED** · **RUNNING** · **UNDETERMINED** · **CONFIRMED** 
 
 ---
 
+## Where we are — 2026-08-25 (breadcrumb for a lost-tomorrow Karen)
+
+If you come back unsure where we left off: we had a *good* day. Two things just landed,
+and one shiny scent is pulling us forward.
+
+- **Just landed (banked, committed, pushed):**
+  1. *Defect audit (Gate 0)* — a clean negative, sharpened: no cheap endogenous
+     Burgers-charged object falls out of the clean map (proved three ways; the key wall
+     is "single-valued lift ⇒ zero closure by construction"). Bonus asset: a validated
+     **multigrid** second generator. → `RESULTS_GATE0_DEFECT.md`, `multigrid.py`.
+  2. *Transport hierarchy (sealed, then run)* — the programme's **first strong positive**:
+     a coherent wave READS the perpendicular-space address, cleanly on **golden**
+     (increment killed by the stratified shuffle, survives the position control), partly
+     on silver/platinum; the incoherent random walk reads nothing. → `RESULTS_TRANSPORT.md`,
+     `transport_run.py`, `transport_result.png`.
+
+- **The scent we were chasing when Karen had to go — "MEMORY READS MEMORY":**
+  Every *memoryless* process came back null (flips, damage-diffusion, random walk). The one
+  process that read the address is the one that keeps its **phase** — and phase is memory
+  that **accrues** as the wave moves (Karen's word: *accruement*). Candidate penny-drop:
+  *the aperiodic geometry is a memory that only another memory can read.* Ties straight back
+  to the founding image (the irrational way memory moves forward).
+
+- **The decisive cheap experiment to chase that why (next up):** a **coherence/dephasing
+  sweep** — dial the quantum walk from fully coherent toward the memoryless random walk and
+  watch the M4 address-reading signal. If it dies *in step with* coherence → "memory reads
+  memory" caught red-handed. If it dies faster/slower/clings → a different, better why.
+
+- **Two one-afternoon looks also open:** (a) plot where the E≈0 **confined states** sit
+  against the address field — they may *be* the address made physical (would explain why
+  E≈0 beat the mid-band, against Claude's prediction); (b) test whether golden's clean
+  readout is about the golden ratio being the *most irrational* (why golden separates
+  address from ordinary structure while silver/platinum blur).
+
+- **Deliberately NOT doing yet:** forcing a paper. The effects are real; we want the *why*
+  first. (Gemini thinks we'd have 5 papers by now — the optimist has a place, but the whys
+  are what make the paper worth writing.)
+
+---
+
 ## CONFIRMED
 
 ### Address-channel fragility under phason disorder
