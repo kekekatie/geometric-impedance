@@ -63,10 +63,10 @@ def hull_depth(perp):
     return -(perp @ A.T + b).max(axis=1)                    # >0 inside = depth
 
 
-def build_features(N, offset):
+def build_features(N, offset, extent=None, return_dynamics=False):
     st = structure(N)
     star, par4 = st["star"], st["par4"]
-    lifts, par, perp, ustar = generate(N, EXTENT[N], offset=np.array(offset))
+    lifts, par, perp, ustar = generate(N, extent or EXTENT[N], offset=np.array(offset))
     n = len(par)
     E = build_edges(lifts, N, ustar)
     adj = adjacency_list(n, E)
@@ -144,12 +144,15 @@ def build_features(N, offset):
 
     R = np.hypot(par[:, 0], par[:, 1])
     bulk = R < 0.8 * R.max()
-    return dict(N=N, n=n, bulk=bulk, perp=perp, adj=adj, par=par, tree=tree,
-                shell_r=shell_r, deg=deg, dens=dens, edge_len_mean=edge_len_mean,
-                edge_len_var=edge_len_var, g_small=g_small, g_med=g_med,
-                g_far=g_far, nbr_deg=nbr_deg, cg_psi=cg_psi,
-                psi=psi, motif_keys=motif_keys,
-                ld_primary=ld_primary, ld_secondary=ld_secondary, ret=ret)
+    out = dict(N=N, n=n, bulk=bulk, perp=perp, adj=adj, par=par, tree=tree,
+               shell_r=shell_r, deg=deg, dens=dens, edge_len_mean=edge_len_mean,
+               edge_len_var=edge_len_var, g_small=g_small, g_med=g_med,
+               g_far=g_far, nbr_deg=nbr_deg, cg_psi=cg_psi,
+               psi=psi, motif_keys=motif_keys,
+               ld_primary=ld_primary, ld_secondary=ld_secondary, ret=ret)
+    if return_dynamics:
+        out.update(evals=evals, evecs=evecs, w2=w2, A=A)
+    return out
 
 
 def _m4_cols(f, perp_field):
