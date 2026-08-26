@@ -27,8 +27,11 @@ coherence, all from the eigenstates (no noisy simulation needed for this rung):
    interference (short times t = 0.3/0.6/1.2, so interference is genuinely present).
 2. **diagonal ensemble** P_diag(v) = Σ_{k∈win} |φ_k(v)|⁴ — the infinite-time average:
    dynamical phases between eigenstates gone, eigenstate structure intact.
-3. **classical return** — the sealed incoherent null (random-walk return): no quantum
-   eigenstates at all.
+3. **classical return** — the sealed incoherent null (random-walk return): diffusive
+   relaxation, no coherent signed-amplitude structure. (It is *not* "no eigenstates" — a
+   classical diffusion operator has spectral modes too; the difference is that they are
+   nonnegative relaxation patterns, not signed/complex amplitudes bound by a global
+   Hψ = Eψ consistency constraint.)
 
 Address increment (M4-over-M3, held-out-offset CV, extent 12, 4 offsets):
 
@@ -49,25 +52,37 @@ interference (going to the diagonal ensemble) barely changes the address increme
 identical; silver identical; platinum a faint +0.014 interference bonus). Then it **falls off
 a cliff** to classical (rung 3 ≈ 0).
 
-So the mechanism is **not dynamical phase-accrual over paths.** It is the **eigenstate
-structure itself** — the wave's stationary, geometry-shaped standing-wave patterns |φ_k(v)|².
-The classical walker reads nothing because it has no such standing states, not because it
-lacks path-interference.
+So the mechanism is **not dynamical phase-accrual over paths.** The precise, safe statement
+(GPT's cleanup): **the address sensitivity resides in the stationary spectral structure of
+the coherent tight-binding Hamiltonian, and does not require dynamical inter-eigenstate phase
+interference.** The coherent eigenmode |φ_k⟩ satisfies Hψ = Eψ — one amplitude pattern that
+must be *globally* self-consistent across the whole graph at once — so it can be sensitive to
+global quasiperiodic placement beyond any local motif. The classical walker's diffusion modes
+solve no such signed, globally-constrained amplitude problem, so they carry degree /
+bottleneck / local-connectivity structure but not this address-relevant organization.
 
 ## The reframe (honest correction of the poetry)
 
 "Memory reads memory" survives, but transformed and made precise:
 
 - The reader's requisite "memory" is **not** dynamical phase-history accrued along paths
-  (that adds almost nothing here). It is the capacity to form **spatially-coherent standing
-  states**. An eigenstate is coherent amplitude accrued *across space* into a fixed pattern —
-  Karen's "accruement", but **spatial**, not temporal.
+  (that adds almost nothing here). It is the wave's **global standing-mode consistency** — one
+  signed amplitude pattern that must fit the whole graph's connectivity at once (Hψ = Eψ).
+  Not "spatial accrual in time" (an eigenmode does not literally accrue — GPT's caution) but
+  *global self-consistency across space*. Karen's "accruement" survives as: the pattern is
+  fixed by fitting the entire arrangement simultaneously, not built up step by step.
+- **map-memory + shape-memory** (GPT's phrasing): the geometry embodies relations; the
+  eigenmode embodies the geometry in a globally-constrained standing pattern. One static
+  relational structure becomes legible through another static relational structure — which is
+  eerily close to the programme's reconstructive-memory theme: *no transcript required, the
+  relation survives in form.*
 - This snaps neatly onto the programme's oldest theme: **quasiperiodicity governs static
   structure, not free dynamics.** Eigenstates are *static*. So even the wave reads the
   geometry through its *stationary* structure — the address is a static property, read by a
   static (standing) structure. The border wall holds even here.
-- Coherence is still necessary — you need phase coherence to *have* eigenstates at all — but
-  *interfering* them dynamically is not what does the reading.
+- Coherence is still necessary — you need the coherent, signed-amplitude Hamiltonian to have
+  these globally-constrained stationary modes — but *interfering* them dynamically is not what
+  does the reading.
 
 ## Status and caveats
 
