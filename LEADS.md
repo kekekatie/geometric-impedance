@@ -16,10 +16,36 @@ Status values: **UNTESTED** · **RUNNING** · **UNDETERMINED** · **CONFIRMED** 
 
 ---
 
-## Where we are — 2026-08-25 (breadcrumb for a lost-tomorrow Karen)
+## Where we are — 2026-08-26 (breadcrumb for a lost-tomorrow Karen)
 
-If you come back unsure where we left off: we had a *good* day. Two things just landed,
-and one shiny scent is pulling us forward.
+The wave arc is now largely *done and consolidated* — see the new **Part II of
+`SYNTHESIS.md`**. In one line: a coherent law reads golden's address (four controls); the
+mechanism is the wave's **stationary spectral structure**, not dynamical interference
+("shape-memory", not "journey-memory"); and it shows up physically as same-vertex-type,
+different-address → different confined-state role. The border wall from Part I *holds at the
+mechanism level*: static geometry, read by static standing structure.
+
+- **Landed & written up (Part II):** defect Gate-0 (no cheap endogenous object; multigrid
+  asset) · transport positive (`RESULTS_TRANSPORT.md`) · coherence-ladder mechanism
+  (`RESULTS_COHERENCE.md`) · address-made-physical + refinement (`RESULTS_CONFINED*.md`).
+- **Open / candidate next steps (deliberate choice, not reflex):**
+  1. the full **Haken–Strobl γ death-curve** — does address-reading fade smoothly or collapse
+     at a threshold as standing structure is dismantled? (home of the "compounding" intuition);
+  2. the **class-specific preferred-depth** rule — why does each vertex type prefer its own
+     internal-space depth? does it relate to the type's own window geometry?
+  3. sharpen the **silver/platinum** partial-address attribution (M4 orthogonalized vs M3).
+- **Superseded from the last breadcrumb:** "memory reads memory / dephasing sweep next" — the
+  cheap coherence ladder already answered the conceptual question, reframing it to
+  shape-memory; the expensive sweep is now optional, for the curve shape only.
+
+If you come back unsure where we left off: we had a *very* good couple of days. The scent we
+chased ("why can coherent dynamics read it?") has been caught and consolidated.
+
+---
+
+### (earlier breadcrumb, 2026-08-25 — kept for the record)
+
+Two things just landed, and one shiny scent is pulling us forward.
 
 - **Just landed (banked, committed, pushed):**
   1. *Defect audit (Gate 0)* — a clean negative, sharpened: no cheap endogenous
