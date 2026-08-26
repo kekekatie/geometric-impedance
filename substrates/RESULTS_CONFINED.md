@@ -36,22 +36,26 @@ classes:
 | silver (N=8)    | #5 (978; **+0.261**), #2 (2353; **+0.193**), #7 (403; +0.069), #3 (2830; +0.047) |
 | platinum (N=12) | #5 (858; **+0.215**), #3 (1998; **+0.127**), #7 (947; +0.117), #12 (620; +0.116) |
 
-Every common, well-behaved class shows a **positive** within-motif address effect; several are
-large (silver up to +0.26). (Two pathological classes with already-negative held-out physical
-R² — platinum #11, golden #1 — are broken regressions, not counter-evidence; excluded from
-interpretation.) So **the same local vertex configuration carries systematically different
-confined-state weight depending on where it sits in perpendicular space** — controlling for
-long-range physical structure.
+Every common, well-conditioned class shows a **positive** within-motif address effect; several
+are large (silver up to +0.26). (Ill-conditioned classes with already-negative held-out
+physical R² — platinum #11, golden #1 — give unstable regressions and are marked
+**inconclusive**, not counter-evidence.) The clean, non-overreaching statement (GPT's wording,
+adopted): **within the same *coarse* local vertex class, perpendicular-space placement
+predicts confined-state participation beyond the tested long-range physical features.** (These
+vertices share the coarse angular-gap vertex type, *not* every fine local detail — a finer-
+control check is in `RESULTS_CONFINED_REFINE.md`.)
 
 ## The picture (`confined_address_golden.png`)
 
-Left: all vertices of a single motif class in physical space, coloured by confined weight —
-bright and dark copies of the *identical* local configuration, spatially organized. Right:
-confined weight vs hull/window depth for that one motif — a clear, **non-monotonic** relation
-with a **resonant peak at intermediate depth** (~0.35): confined states preferentially inhabit
-a specific perpendicular-space depth, within a fixed motif. (That preferred-depth resonance is
-a candidate home for Karen's "compounding, depending on circumstances" intuition — a special
-placement where the standing mode piles up.)
+Left: all vertices of a single coarse motif class in physical space, coloured by confined
+weight — bright and dark copies of the same *coarse* vertex type, spatially organized. Right:
+confined weight vs hull/window depth for that one class — a clear **non-monotonic** relation
+with a **preferred-depth region** (peak near depth ~0.35): confined states favour a particular
+perpendicular-space depth, within the class. ("Preferred/perked depth", not "resonance" — the
+latter would claim a mechanism we have not shown. Whether this is a genuine internal-space
+selection rule is exactly what the refinement pass tests.) That preferred depth is a candidate
+home for Karen's "compounding, depending on circumstances" intuition — a special placement
+where the standing mode piles up.
 
 ## Interpretation
 

@@ -34,10 +34,10 @@ ax.annotate("the cliff:\ncoherent Hψ=Eψ modes → classical diffusion\nkills t
 
 ax.text(0.5, -0.15,
         "The diagonal ensemble has NO dynamical phase between eigenstates, yet reads the "
-        "address as well as the fully coherent wave.\nThe classical walker's diffusion modes "
-        "(nonnegative relaxation, not signed amplitudes bound by a global Hψ=Eψ constraint) "
-        "read nothing.\n→ the address lives in the coherent Hamiltonian's stationary spectral "
-        "structure, not in dynamical phase interference between eigenstates.",
+        "address as well as the fully coherent wave.\nThe classical walker (stochastic "
+        "probability relaxation, no interference) reads nothing.\n→ the address lives in the "
+        "coherent Hamiltonian's stationary spectral structure, not in dynamical phase "
+        "interference between eigenstates.",
         transform=ax.transAxes, ha="center", va="top", fontsize=8.3, color="0.3")
 
 out = __file__.rsplit("/", 1)[0] + "/coherence_ladder.png"

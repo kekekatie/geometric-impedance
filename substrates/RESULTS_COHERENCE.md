@@ -27,11 +27,13 @@ coherence, all from the eigenstates (no noisy simulation needed for this rung):
    interference (short times t = 0.3/0.6/1.2, so interference is genuinely present).
 2. **diagonal ensemble** P_diag(v) = Σ_{k∈win} |φ_k(v)|⁴ — the infinite-time average:
    dynamical phases between eigenstates gone, eigenstate structure intact.
-3. **classical return** — the sealed incoherent null (random-walk return): diffusive
-   relaxation, no coherent signed-amplitude structure. (It is *not* "no eigenstates" — a
-   classical diffusion operator has spectral modes too; the difference is that they are
-   nonnegative relaxation patterns, not signed/complex amplitudes bound by a global
-   Hψ = Eψ consistency constraint.)
+3. **classical return** — the sealed incoherent null (random-walk return). (It is *not* "no
+   eigenstates" — a classical diffusion operator has spectral modes too, and they can even
+   carry signed components. The real distinction, GPT's cleanup: **coherent amplitude
+   dynamics** — complex amplitudes, unitary phase evolution, interference, standing modes
+   bound by a global Hψ = Eψ consistency — versus **stochastic probability dynamics** —
+   real, contractive relaxation of probabilities, no interference. The address sensitivity
+   sits with the former.)
 
 Address increment (M4-over-M3, held-out-offset CV, extent 12, 4 offsets):
 
