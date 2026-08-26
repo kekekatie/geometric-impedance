@@ -107,6 +107,51 @@ and whose M4 channel is only partly address. The static "what is encoded" and th
   remain stage-two. The clean rungs (motif, structure factor, stratified shuffle, position)
   are what this run establishes.
 
+## Addendum (2026-08-26) — WHAT is M4 carrying? (the address-vs-compression diagnostic)
+
+GPT's "WHAT before WHY": before telling a mechanism story, check whether the address is
+*special* or merely an efficient compressed encoding of long-range physical structure our
+M3 was too local to capture. Test: enrich M3 with **long-range physical descriptors carrying
+no perp-space information** (shell density at r=8,12; mean neighbour degree at r=5,9;
+coarse-grained angular order at r=5,9) → **M3far**, and ask whether the address block still
+adds. Figure: `transport_what.png` (`plot_transport_what.py`). Coherent primary window,
+M4 address increment over successively richer baselines:
+
+| family | over M3 (raw) | over M3+position | over **M3+long-range-physical** | after address-shuffle |
+|---|---|---|---|---|
+| golden (N=10)   | +0.031 | +0.032 | **+0.029 (survives)** | −0.005 (killed) |
+| platinum (N=12) | +0.089 | +0.090 | +0.073 (mostly survives) | +0.013 |
+| silver (N=8)    | +0.090 | +0.091 | **+0.039 (~half absorbed)** | +0.026 |
+| incoherent (all)| ≈0.003 | ≈0.003 | ≈0.003 | ≈0 |
+
+**Reading.** The internal control is the incoherent null: it uses the *same* M4 features and
+reads ≈0 over M3far too, so any coherent survival is a real coherent-specific signal, not a
+feature-count artefact.
+
+- **Golden — genuine, non-redundant address.** The increment is barely touched by long-range
+  physical enrichment (+0.031 → +0.029) yet is destroyed by scrambling the address (−0.005).
+  So golden's signal is address organization that is **not** captured by degree, motif, local
+  *or* long-range physical structure. Now survived FOUR controls (held-out CV, position,
+  long-range physical, stratified shuffle). For golden, address is not mere compression — the
+  "stranger, more interesting" outcome.
+- **Silver — largely long-range physical.** ~Half the raw increment is absorbed once M3 sees
+  long-range structure (M3 0.899 → M3far 0.952; increment 0.090 → 0.039). Much of what looked
+  like "address" on silver was long-range real-space organization that perpendicular space
+  compactly encodes. Consistent with silver's degree-dominated response throughout.
+- **Platinum — mostly non-redundant** (0.089 → 0.073), between the two.
+
+**Net.** The address-reading is *not* trivially reducible to long-range physical structure —
+decisively so on golden, largely on platinum, only half on silver. This is the WHAT answer
+GPT wanted before the WHY (dephasing) experiment: on golden at least, there is genuine
+address information for a coherent law to read.
+
+**Honest caveats.** (1) M3far is one finite enrichment step, not GPT's full progression
+r=2→4→8→… ; a still richer physical description could absorb more, though survival against
+density+coordination+angular-order out to r=12 is already strong. (2) The complementary
+nonlinear-residualization cross-check (residualize each M4 feature against M3 with the same
+model, keep residuals) is not yet run — a clean next diagnostic. (3) Same single-patch /
+bulk-only caveats as the main run.
+
 ## Files
 
 `transport_run.py` (harness) · sealed `PREREG_transport_hierarchy.md` · pilot
