@@ -31,10 +31,13 @@ type sees a **different portion of the same profile**:
   shallow end.
 
 So the "class-specific preferred depths" of the previous result (normalized 0.19–0.72) are not
-independent quirks — they are one global radial profile, sampled at the different radii the
-types happen to occupy. It also reconciles the earlier caution: there **is** a universal
-internal-space band (the peak at depth ≈ 0.35); it simply gets *sampled* differently by
-radially-ordered types, so it did not show up as a shared normalized-depth number.
+independent quirks — they are one **strong first-order radial profile with a broad preferred
+band** (peak ≈ 0.35), sampled at the different radii the types happen to occupy. It reconciles
+the earlier caution without overclaiming: rather than "no shared band" vs "one universal band",
+the truth is a broad shared radial band that radially-ordered types *taste differently*, on top
+of which finer, non-radial structure still sits (the spread is wide and the painted window is
+mottled — see below). And vertex type is **strongly organized by window depth** (ordered
+depth-bands), not *purely* set by it — the window is 2D, and angular / finer placement remain.
 
 ## How strong is the radial story
 
@@ -64,6 +67,20 @@ field.
   partly patch-specific structure), nor yet shown across families (golden only here; the two
   facts — radial type-tiling and a window confined-weight profile — should generalize, and
   that is the cheap next check).
+
+## The decomposition, and the next split (GPT's steer)
+
+The picture that fits everything, including the earlier within-fine-type survival, is:
+
+> spectral role ≈ **global radial field** + **type-specific radial sampling** + **residual
+> non-radial structure**.
+
+The first-order term is the radial profile; the residual is the mottling and the within-type
+address effect that survived exact fine-configuration controls. The sharpening step is to
+**split the address effect into a radial-depth component and a non-radial (angular / finer
+placement) component**, and quantify: (1) how much confined weight depth alone predicts;
+(2) how much the non-radial part adds after depth is included; (3) whether, within a fixed fine
+type, non-radial address still helps. Reported in `RESULTS_ADDRESS_SPLIT.md`.
 
 ## Files
 
