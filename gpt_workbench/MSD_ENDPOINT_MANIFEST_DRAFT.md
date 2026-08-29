@@ -1,295 +1,201 @@
-# DRAFT v2 — frozen protocol for the MSD transport endpoint (radius-saturation, stage-two)
+# DRAFT v3 — frozen protocol for the MSD transport endpoint (radius-saturation, stage-two)
 
-**Status — DRAFT for crew knife-sharpening. NOT sealed, NOT run. No data touched to write
-this. No science-branch file altered.** A workbench design artifact only. It gives the
-"required dynamical endpoint" of `substrates/PREREG_radius_saturation.md §6` — the bulk
-wavepacket mean-square-displacement (MSD) exponent — the same a-priori freezing the address
-block M4 already has (`PREREG_transport_hierarchy.md §4a` → `transport_run.py::_m4_cols`). It
-addresses **blocking item #8** of the 2026-08-28 radius-saturation adversarial review.
+**Status — DRAFT for crew review. NOT sealed, NOT run. No dynamics/address/LDOS/targets/scores
+accessed to write this. No science-branch file altered.** The "required dynamical endpoint" of
+`substrates/PREREG_radius_saturation.md §6` — the bulk wavepacket MSD exponent — frozen to the
+same a-priori discipline as the address block M4.
 
-**v2 (2026-08-28)** repairs four blockers raised by Work-GPT against v1: (1) the initial state
-is now the genuinely localized unfiltered site quench (energy-filtering demoted to a rigorously
-defined secondary); (2) boundary leakage is now a geometrically correct hull-depth strip, not a
-circle; (3) the classical null is a well-defined continuous-time Markov generator; (4) no
-per-site fit-quality culling (β is defined for every admitted site), and the fit window comes
-from a geometry-only Lieb-Robinson feasibility bound rather than an assumed front velocity. Full
-change log at the end.
+**v3 (2026-08-29)** incorporates crew decisions B1–B8 after the geometry-only preflights, which
+showed the analytic Lieb–Robinson (LR) window is infeasible at every family/extent/launch-depth
+(`PREFLIGHT_GEOMETRY_REPORT_V2.md` `6ab1647`, F6). Full dated change log at the end. Several items
+are flagged for crew judgement (§ "Open choices").
 
-*Source: drafted by the `gpt/workbench` Claude collaborator at Work-GPT's request (relayed by
-Katie). A proposal to be verified and amended by the crew; it enters no experimental record and
-changes no scientific meaning of any existing result until reviewed and merged.*
+*Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
+not part of the scientific record until reviewed and merged.*
 
 ---
 
-## 0. Why this exists, and what it is for
+## 0. What this endpoint is for
 
-The transport result is currently **spectral** (per-vertex LDOS in the sealed mid-band). The
-pre-reg forbids the word "transport" until the address increment **also** appears on a genuinely
-**dynamical** quantity, analysed with the identical nested-increment ladder and controls. On
-quasicrystals the wavepacket exponent is anomalous and notoriously fit-window-sensitive, so the
-endpoint is only meaningful if launch site, initial state, time window, boundary cutoff, and the
-fit are all frozen in advance. That is this document.
+The transport claim is currently **spectral** (per-vertex LDOS). The pre-reg forbids the word
+"transport" until an address increment also appears on a genuinely **dynamical** quantity. The
+observable is per-vertex — a spreading exponent `β(v0)` per admitted launch — regressed on M0→M4
+by the identical `transport_run.py` machinery. This document freezes **how `β(v0)` is defined**.
 
-**The observable is per-vertex, to match the ladder.** For each admitted bulk launch vertex
-`v0` we compute a spreading exponent `β(v0)`, and regress the vector `{β(v0)}` on M0→M4 exactly
-as `transport_run.py` regresses LDOS. The decisive quantity remains the **M4-over-M3 increment**
-under the stratified-shuffle / position / M3far / conditional-null controls. Nothing new in the
-statistics; the new content is *how `β(v0)` is defined*, frozen below.
+## 1. Frozen physical setup
+- **Hamiltonian** `H = A` (adjacency, uniform hopping `J=1`, ħ=1); the address appears nowhere in
+  H. Edge-length-weighted H is a robustness variant only.
+- **Distance** Euclidean `‖par[v]−par[v0]‖`. **Boundary** `d_bound(i)=hull_depth(par)[i]`,
+  per-vertex. **Unit** `ℓ = median edge length`; time in units `ħ/J`. All constants a-priori.
 
----
+## 2. Launch-site selection (B3) — admission `d_bound ≥ 16ℓ`, spatially-balanced subsample
 
-## 1. Frozen physical setup (fix before any run)
+- **Admission raised to `d_bound(v0) ≥ 16ℓ`** (was 8ℓ): launches come from the **same
+  `d_bound≥16ℓ` common set** the radius manifest evaluates, so the two endpoints share a
+  population. (Preflight counts: 592–1714 per patch across tiers.)
+- **Deterministic, spatially-balanced subsample (PROPOSAL, flagged for crew).** From the common
+  set, select launches balanced across the **four PCA slabs** defined exactly as in the physical
+  manifest §5 (PC1 of the common-set coordinates, contiguous equal-count slabs). Proposed count
+  **`L = 400` per patch (100 per slab)**; if a patch's common set has `< 400`, use all of it.
+  Within each slab, sort by `(PC1 projection, vertex index)` and take **evenly-spaced** indices to
+  hit the per-slab quota (spatially spread along the slab). Uses no address; identical across
+  engines and controls.
+  - *Justification (geometry/compute, for crew):* exact-diagonalisation propagation costs
+    `O(48·n²)` per launch (48 log-times × one length-n mode sum per time); `L=400` launches per
+    patch × ~5k vertices × 54 patches is tractable offline, while `L` stays ≫ the ~6-offset
+    replication level so per-offset β distributions are well sampled. **`L=400` is a proposal —
+    the crew may raise/lower it; it must be frozen before sealing.**
+- Every selected launch yields a `β(v0)` (§7); nothing downstream culls sites (B4, §8).
 
-- **Hamiltonian:** the sealed engine `H = A` (tiling adjacency, uniform hopping, ħ = 1, hopping
-  amplitude `J = 1`), from `build_features(..., return_dynamics=True)` (`evals`, `evecs`). The
-  perpendicular-space address appears NOWHERE in H — only later as an analysis feature. The
-  edge-length-weighted H is a robustness variant, not primary.
-- **Distance metric:** Euclidean parallel-space distance `‖par[v] − par[v0]‖`. (Graph-distance
-  MSD is a robustness variant, §11.)
-- **Distance-to-boundary:** `d_bound(i) := hull_depth(par)[i]` — reuse the existing signed
-  distance-to-convex-hull function (`transport_run.py:59`), applied to the parallel-space cloud.
-  This is a **per-vertex** quantity for *every* vertex, and is the basis of the boundary strip
-  (§5), not just of launch admissibility.
-- **Units:** `ℓ := median edge length`; times are in units of inverse hopping (ħ/J = 1). Every
-  constant below is chosen a priori and is **not** tuned to any outcome.
+## 3. Initial state — primary is unfiltered, full-spectrum (B2)
 
-## 2. Launch-site selection (frozen, deterministic, offset-independent)
+**Primary — unfiltered site quench** `|ψ0⟩ = |v0⟩` (exactly localised: `MSD(0)=0`,
+`P_strip(0)=0`). It spans the **full spectrum**. **This is a full-spectrum wavepacket-transport
+test; it is NOT a mid-band test and must not be described as one.** It gates only the general word
+"transport"; it does **not** by itself reproduce or establish the mid-band LDOS mechanism — that
+is a separate, weaker claim (§12).
 
-1. **Interior requirement.** A vertex `v0` is *admissible* iff `d_bound(v0) ≥ R_min·ℓ` with
-   **`R_min = 8`** (frozen). (Set before the run; matches the largest address shell and the
-   mid-ladder physical radius.)
-2. **Deterministic subsample (only if needed for cost).** If the admissible set for an offset has
-   `≤ 1500` vertices, use all of them. Otherwise use the **1500 admissible vertices with the
-   largest `d_bound`** (ties broken by ascending vertex index). This rule is fixed, uses no
-   perp/address information, and is identical across offsets and families. Record the count used.
-3. The same admitted launch set is used for the coherent engine, the classical null, and every
-   control, per offset.
-4. **Every admitted site produces a `β(v0)`** (§7–§8). Admissibility depends only on `d_bound`
-   (a physical boundary-distance quantity, already inside the M3pos position control), never on
-   the perpendicular-space address — so the *admitted set itself* carries no address-correlated
-   selection. See §8 for why nothing downstream re-introduces it.
+**Secondary — mid-band-projected mechanistic diagnostic (B5, no β fit).** `|χ0⟩ = P_W|v0⟩/‖·‖`
+(`P_W` = projector onto `|E|∈[0.8,2.5]`) has **nonlocal** initial support and its excess MSD
+`ΔMSD(t)=MSD(t)−MSD(0)` **can be zero or negative** (breathing/recoherence), so `log ΔMSD` is
+undefined. **The β fit is removed from the secondary.** It is retained only as a **clearly
+secondary signed-curve / integrated mechanistic diagnostic** (e.g. the signed `ΔMSD(t)` curve, or
+`∫ΔMSD dt` over the common window), reported descriptively, **never called a localised launch**
+and never the basis of the transport claim.
 
-## 3. Initial state (frozen)
+## 4. Time evolution and grid
+- **Exact by definition:** `ψ_t(v)=Σ_k e^{−iE_k t} φ_k(v0) φ_k(v)`. (Chebyshev/Krylov allowed iff
+  they reproduce exact-diag β within `Δβ≤0.01` on a fixed 100-site check.)
+- **Fixed log-time grid**, 48 points, on the frozen fit window `[2, 8]` (§7). Same grid for both
+  engines and all controls. Deterministic; no stochastic repetitions (coherent evolution from a
+  fixed state is deterministic; the ensemble is launches × the six offsets).
 
-**Primary — unfiltered site quench (genuinely localized).**
+## 5. Boundary strip and excess mass (unchanged from v2; used by the §7 rule)
+`STRIP := {v : d_bound(v) < w·ℓ}`, `w=2` (frozen). `P_strip(t)=Σ_{v∈STRIP}|ψ_t(v)|²`,
+`ΔP_strip(t)=P_strip(t)−P_strip(0)`. Per-destination hull-depth strip (correctly classifies
+interior sites in every direction). For the primary launch `P_strip(0)=0`.
 
-    |ψ0⟩ = |v0⟩   (unit amplitude on v0, zero elsewhere)
+## 6. MSD definition
+`MSD(t;v0)=Σ_v |ψ_t(v)|²·‖par[v]−par[v0]‖²`; `ΔMSD=MSD−MSD(0)` (= MSD for the primary).
 
-This is exactly site-localized: `MSD(0; v0) = 0` and `P_strip(0) = 0` for every admitted `v0`
-(admitted sites are interior, `d_bound ≥ 8ℓ`, so v0 is not in the boundary strip). It spans the
-full spectrum, which is the honest meaning of "a wavepacket from a localized start"; the mid-band
-connection is preserved by the analysis window and by the secondary state below, not by
-pre-localizing in energy.
+## 7. Fit window (B1, B4) — LR retired as a gate; measured-boundary rule instead
 
-**Secondary — mid-band-projected state (rigorously defined, NOT called site-localized).**
+**B1 — the analytic LR bound is RETIRED as an admissibility gate.** The preflight proved it
+vacuous at every family/extent/depth (`t_hi≈0.12–0.90 ≪ t_lo=2`; extent-invariant at fixed depth;
+would need ~145ℓ launch depth). It is **kept only as a documented, failed conservative diagnostic**
+(Appendix LR) — reported, never used to admit or reject a window.
 
-    |χ0⟩ = P_W |v0⟩ / ‖P_W |v0⟩‖,     P_W = projector onto |E| ∈ [0.8, 2.5]
+**B4 — pre-registered measured-boundary rule (run only AFTER sealing):**
+- Retain the **fixed log-time grid** and the hull-depth **excess strip mass** `ΔP_strip(t)` (§5).
+- Compute boundary crossing for **both** the coherent and the classical engine.
+- Define **one common global admissible window** across **all** preselected launches, families,
+  tiers, offsets **and both engines**.
+- The **global boundary endpoint `t_bound*`** = the **earliest** time at which `ΔP_strip(t)`
+  reaches the frozen **1% (`0.01`)** excess-boundary-mass threshold, over that entire set.
+- **Primary β fit uses the fixed interval `[2, 8]` only if `t_bound* ≥ 8`.** If `t_bound* < 8`,
+  the primary transport endpoint is declared **finite-size-limited** — do **not** shorten, retune
+  or rescue the window after seeing results (B8; an authorised outcome, §12).
+- **Retain every admitted site**; fit quality is a diagnostic, **never** a site-level exclusion.
 
-Spectral projection gives `|χ0⟩` **nonlocal initial support**, so for this state we must:
-- **report and use excess MSD** `ΔMSD(t) := MSD(t) − MSD(0)`, since `MSD(0; χ0) > 0`;
-- quantify the initial support: report `MSD(0; χ0)` and the initial participation radius
-  `ρ0 := sqrt(MSD(0; χ0))` per site;
-- apply an **initial-boundary-mass admissibility rule**: admit `|χ0⟩` only if
-  `P_strip(0) < 10⁻³` **and** `ρ0 ≤ R_min·ℓ / 2` (its initial cloud is well inside the interior);
-  sites failing either are reported separately, **not silently dropped** (their β is flagged, not
-  culled — same anti-missingness principle as §8).
+**Exponent (every admitted site):** with `ΔMSD∝t^{2β}`, `β(v0)=½·slope` of an OLS fit of
+`log ΔMSD` on `log t` over the `[2,8]` grid points. Record `R²_fit(v0)` as a **diagnostic**.
 
-The primary claim rests on the unfiltered state; `|χ0⟩` is reported as a robustness check that
-ties the spreading to the mid-band states specifically. (The excess-MSD convention `ΔMSD` is also
-applied to the primary, where it is identical to `MSD` because `MSD(0)=0` — so the pipeline is
-uniform.)
+## 8. No feature-correlated missingness (B4) — both engines
+- **Every admitted launch yields a `β`**; **no per-site `R²_fit` / curvature / dynamics-derived
+  exclusion** (such a filter could correlate with the address). Admission uses only `d_bound`.
+- **Address-correlated-admission check (retained from the review):** admission by `d_bound` is not
+  *guaranteed* address-independent, so **report and test** the admitted population's M4-feature
+  distribution vs the excluded population; any imbalance is a stated caveat.
+- `R²_fit` is used only as (a) a per-site diagnostic and (b) an **aggregate** family/engine stop
+  rule (median `R²_fit < 0.90` ⇒ that engine's exponent is descriptive, no transport claim).
+- These rules apply **explicitly to both** the coherent and classical engines, on the **same
+  common window**.
 
-## 4. Time evolution (frozen)
+## 9. Aggregation & uncertainty (B7) — offsets are the replication unit
 
-- **Evolution (exact by definition):**
-  `ψ_t(v) = Σ_k e^{−iE_k t} c_k φ_k(v)`, `c_k = ⟨k|ψ0⟩`, over the eigenpairs already computed.
-  This defines the endpoint. (Implementations may use Chebyshev/Krylov propagation for speed
-  **iff** they reproduce the exact-diagonalization `β` to within `Δβ ≤ 0.01` on a fixed
-  100-site validation subset; otherwise exact diagonalization is required. The *definition* is
-  exact-diagonalization.)
-- **Time grid:** log-spaced, `N_t = 48` points on the common fit interval `[t_lo, t_hi]` derived
-  in §7 (geometry-only). Same grid for coherent and classical engines and all controls.
-- **No stochastic repetitions.** Coherent evolution from a fixed state on a fixed H is
-  **deterministic** — there is nothing to average over per site. The statistical ensemble is the
-  set of admitted launch sites × the 5 window offsets (§9). Seeds do not enter the endpoint;
-  the only rng in the pipeline is the stratified-shuffle control's `default_rng(0)`, already
-  frozen in `transport_run.py`.
+`{β(v0)}` replaces `ld_primary` in the identical `transport_run.py` pipeline (nested M0→M4, the
+`M4shuf`/`M3pos`/`M4pos`/`M3far`/`M4far` controls, the pre-reg §2 conditional nulls and §3 parity
+/ capacity controls) — for both engines, all families/tiers.
 
-## 5. Boundary strip and leakage cutoff (frozen — geometric, per destination vertex)
+**Replace "mean − 1·fold-SD > 0"** (fold SD understates correlated-fold uncertainty). **Proposed
+offset-level rule (thresholds flagged for crew):**
+- treat the **six leave-one-offset-out held-out increments `{Δ_o}` as the six replication units**;
+  **report all six `Δ_o` individually**, always, regardless of the aggregate verdict;
+- **primary inference:** `median_o(Δ_o)` must exceed the **95th percentile of the offset-level
+  stratified-shuffle null** `{Δ_o^shuf}` (the null the pipeline already produces, which preserves
+  all M3-conditional structure);
+- **supporting consistency:** report the sign pattern; require **≥ 5 of 6** offsets with `Δ_o > 0`
+  as a supporting (not sole) criterion;
+- **CI:** an **offset-level block bootstrap** (resample the six offsets with replacement), not a
+  fold-variance CI.
+This treats offsets — not vertices or CV folds — as independent replicates.
 
-The boundary region is defined by **each destination vertex's own hull depth**, not by a circle
-around `v0`:
+## 10. Classical null engine (unchanged) — continuous-time Markov generator
+`Q = A·D⁻¹ − I` (column-stochastic), `p(t;v0)=e^{Qt}e_{v0}`,
+`MSD_cl(t;v0)=Σ_v p_v(t;v0)·‖par[v]−par[v0]‖²`. Valid at all real `t`; same log grid, same common
+window (§7), same excess-strip cutoff, same OLS exponent → `β_cl`. Time axis matched to the
+quantum engine (unit exit rate ↔ `J=1`). Expected diffusive, address-blind.
 
-    STRIP := { v : d_bound(v) < w·ℓ },     w = 2   (frozen strip width)
+## 11. Robustness variants (secondary; never the primary basis)
+Graph-distance MSD; the mid-band secondary **signed-curve** diagnostic (§3, no β); secondary
+window `|E|≤0.2`; edge-length-weighted H; classical exit-rate ×2; strip `w∈{1.5,3}`.
 
-Leaked probability, accounting for any initial mass already in the strip:
+## 12. Decision threshold (B2, B7, B8)
 
-    P_strip(t) = Σ_{v ∈ STRIP} |ψ_t(v)|²,     ΔP_strip(t) = P_strip(t) − P_strip(0)
+The endpoint **earns the word "transport"** only if, on `β(v0)` from the **primary full-spectrum**
+launch on the common `[2,8]` window, **all** hold:
+1. the coherent increment passes the **offset-level rule** (§9): `median_o(Δ_o)` above the 95th
+   percentile of the offset-level shuffle null, with ≥5/6 offsets positive;
+2. it is **killed by the stratified shuffle** (`M4shuf−M3` consistent with 0; ≥70% of the plain
+   increment removed);
+3. it is **not reproduced by the classical engine** (`β_cl` increment ≤ 0.2× the coherent);
+4. it **survives both conditional nulls** and **exceeds both** the representation-matched parity
+   block and the capacity control (radius manifest §4);
+5. the aggregate gates pass (median `R²_fit ≥ 0.90` per engine; global `t_bound* ≥ 8`; admitted
+   launch count adequate per offset).
 
-This correctly labels near-boundary sites as "boundary" regardless of their direction or distance
-from `v0`, and correctly ignores interior sites that merely happen to be far from `v0`. For the
-primary unfiltered launch from an interior site, `P_strip(0) = 0`. `ΔP_strip(t)` is used only as
-a **reported diagnostic** confirming the geometry-derived window (§7) kept the packet interior
-(must stay `< ε = 0.01` across the fit window; if a whole family violates this, that family's
-endpoint is flagged finite-size-limited — an *aggregate* rule, never a per-site cull).
+**Claim scope (B2):** success licences only **"a physical law reads the address in full-spectrum
+wavepacket transport."** It does **not** establish the *mid-band* mechanism — that remains a
+separate, weaker claim probed only by the descriptive secondary (§3).
 
-## 6. MSD definition (frozen)
+**Authorised non-positive outcomes (B8):** if (1) holds but not (2) → "reads multiscale geometry
+dynamically, not cleanly the address." If (5) fails on `t_bound*<8` → **finite-size-limited**
+(a legitimate, publishable outcome, **not** a failed run). If (1) fails → "the spectral address
+signal does not surface in bulk wavepacket spreading at this size/coupling." No family ordering;
+no "perp space is physical" ontology, regardless of result. This endpoint gates only the word
+*transport*, never the already-earned spectral claim.
 
-    MSD(t; v0) = Σ_v |ψ_t(v)|² · ‖par[v] − par[v0]‖²      (Euclidean, parallel space)
-    ΔMSD(t; v0) = MSD(t; v0) − MSD(0; v0)                 (excess over the initial spread)
+## 13. Open choices requiring crew judgement
+- **Launch count `L`** (§2): 400/patch proposed; crew to freeze.
+- **Offset-level thresholds** (§9): the 95th-percentile null rule and ≥5/6 sign rule are proposals.
+- **Global `t_bound*`** is measured post-seal; if the crew wants an a-priori feasibility read,
+  only a geometry/measured-boundary calibration (which touches dynamics) can give it, and that must
+  be sealed first — the analytic route is retired (B1).
 
-`ΔMSD` is the fitted quantity (= `MSD` for the primary state since `MSD(0)=0`; genuinely needed
-for the secondary state, §3).
-
-## 7. Fit window from a geometry-only feasibility bound, and exponent extraction (frozen)
-
-**No assumed front velocity.** The window `[t_lo, t_hi]` is fixed **before any dynamics**, per
-family, from the patch graph geometry and a conservative Lieb-Robinson (LR) series bound:
-
-- Let `d_max` = maximum graph degree in the patch, and `G_strip` = the minimum over admitted
-  launch sites of the **graph distance** from `v0` to `STRIP` (computed from the fixed graph
-  before any evolution; deterministic geometry, not an experiment). Let `N_strip` = |STRIP|.
-- Single-amplitude LR tail bound (from `(A^k)_{v,v0}=0` for `k <` graph distance, and
-  `|(A^k)_{v,v0}| ≤ d_max^k`):
-  `|(e^{−iAt})_{v,v0}| ≤ B(t;G) := Σ_{k ≥ G} (d_max·t)^k / k!`.
-  Union-bounded leaked probability into the strip:
-  `P_strip(t) ≤ N_strip · B(t; G_strip)²`.
-- **`t_hi`** = the largest `t` satisfying `N_strip · B(t; G_strip)² ≤ ε'`, **`ε' = 5·10⁻³`**
-  (frozen). This is a rigorous, geometry-only upper bound on leakage; it is conservative (it may
-  cut the window shorter than strictly necessary — the safe direction).
-- **`t_lo = 2.0`** (frozen; drops the first couple of hops of transient).
-- **Leverage / feasibility:** require `t_hi / t_lo ≥ 4` and `≥ 6` grid points in-window. If the
-  geometry does not afford this (LR bound too tight for the patch size), the endpoint is
-  **finite-size-limited for that family** — report exponents descriptively, make no transport
-  claim (an honest, expected possibility for these patch sizes; §8 aggregate rule).
-
-**Exponent (defined for every admitted site).** With `ΔMSD(t) ∝ t^{2β}`,
-`β(v0) = ½ · slope` of an OLS fit of `log ΔMSD` on `log t` over the in-window grid points
-(unweighted). Interpretation: β = 1 ballistic, β = ½ diffusive, β < ½ sub-diffusive; critical
-states give `0 < β < 1`. Record `R²_fit(v0)` as a **diagnostic only** (see §8).
-
-## 8. No feature-correlated missingness (frozen)
-
-- **Every admitted site (§2) yields a `β(v0)`** and enters the regression. There is **no per-site
-  exclusion on `R²_fit`**, on curvature, or on any dynamics-derived quantity, because such a
-  filter could correlate with the address (e.g. confined vs extended launch neighbourhoods fit
-  power laws differently), manufacturing address-correlated missingness in exactly the variable
-  under test. `β` from OLS is always defined.
-- The fit window is **common to all admitted sites in a family** (§7, derived from the guaranteed
-  interior depth `R_min` and `G_strip`), so no site is dropped for "too small a window" either —
-  admissibility (a pure `d_bound` geometric criterion) already guarantees the window applies.
-- `R²_fit` is retained **only** as (a) a per-site diagnostic reported alongside β, and (b) an
-  **aggregate stop rule**: if the median `R²_fit` across admitted sites in a family is `< 0.90`,
-  or `ΔP_strip` exceeds `ε` anywhere in the window, the MSD-power-law summary is judged unmet for
-  that family — report β descriptively, make no transport claim. These are whole-family verdicts,
-  never per-site filters, so the regressed sample is never thinned by an address-correlated rule.
-- The secondary state's admissibility (§3) likewise **flags-not-drops** sites, and its
-  missingness (if any) is confined to the secondary robustness analysis, never the primary claim.
-
-Aggregate finite-size rule (unchanged in spirit): if the admitted launch count per offset is
-`< 300`, or §7 feasibility fails, treat as finite-size-limited (the pre-reg's outcome-4
-analogue): report as unresolved, do not interpret.
-
-## 9. Aggregation across offsets (frozen — reuse the sealed pipeline verbatim)
-
-The per-vertex target vector `{β(v0)}` replaces `ld_primary` and is fed to the **identical**
-`transport_run.py` machinery: nested M0→M4, `held_out_r2` leave-one-offset-out CV over the 5
-`OFFSETS`, same GBT, with the `M4shuf` (stratified shuffle), `M3pos`/`M4pos` (position), and
-`M3far`/`M4far` (long-range physical) controls, plus the pre-reg §2 conditional nulls and §3
-fake-address / equal-count controls at the fixed reference radius. Report `M4−M3` ± std across
-the 5 CV folds, for coherent and classical engines, all three families. No per-offset tuning.
-
-## 10. Classical null engine (frozen — continuous-time Markov generator)
-
-A single, unambiguous continuous-time random walk (no discrete-power / interpolation ambiguity,
-no row/column orientation ambiguity):
-
-    Q = A·D⁻¹ − I        (D = diag(deg));  columns of Q sum to 0 ⇒ column-stochastic generator
-    p(t; v0) = e^{Q t} · e_{v0}            (always a valid probability vector, Σ_v p_v = 1)
-    MSD_cl(t; v0) = Σ_v p_v(t; v0) · ‖par[v] − par[v0]‖²
-
-- `Q_{vw} = A_{vw}/deg_w` for `v ≠ w` (rate from `w` to a neighbour `v`), `Q_{ww} = −1` (unit
-  total exit rate). Stationary distribution `π ∝ deg`. Defined for **all real `t ≥ 0`**;
-  evaluated on the **same** log time grid, with the **same** strip cutoff (§5), the **same**
-  common fit window (§7), and the **same** OLS exponent extraction (§7) — yielding `β_cl(v0)`.
-- **Time comparability with the quantum engine:** both use the identical continuous `t` in units
-  `ħ/J` with `J = 1`; the classical unit exit rate (`Q_{ww} = −1`) sets one expected hop per unit
-  time, matching the quantum hopping matrix element `J = 1`. This rate normalization is an
-  explicit a-priori convention (stated, not tuned); a `2×` rate variant is a §11 robustness check.
-- Expected outcome: diffusive (`β_cl ≈ ½`) and address-blind — the incoherent contrast.
-
-## 11. Robustness variants (secondary; reported, never the basis of the claim)
-- Graph-distance MSD (BFS distance in place of Euclidean).
-- Mid-band-projected secondary state `|χ0⟩` (§3), with excess MSD and its admissibility flags.
-- Secondary window |E| ≤ 0.2; edge-length-weighted H.
-- Classical exit-rate `×2`; strip width `w ∈ {1.5, 3}`; `R_min ∈ {6, 12}`; LR `ε' ∈ {10⁻³,10⁻²}`
-  — a sensitivity band showing the exponent's stability to the frozen constants (the frozen
-  values above define the primary claim).
-
-## 12. Decision threshold (frozen)
-
-The dynamical endpoint **earns the word "transport"** only if, on `β(v0)` from the **primary**
-unfiltered state in the sealed mid-band-analysed window, **all** hold (mirroring
-`PREREG_transport_hierarchy.md §10`, applied to β, plus the radius-saturation §2/§3 controls):
-
-1. the coherent `M4−M3` increment on β is **positive held-out** (mean − 1·std across the 5 CV
-   folds `> 0`);
-2. it is **killed by the stratified shuffle** — `M4shuf−M3` within `±1·std` of 0, and the
-   shuffle removes **≥ 70 %** of the plain increment (the golden threshold met by the spectral
-   result);
-3. it is **not reproduced by the classical engine** — `β_cl` shows `M4−M3 ≤ 0.2 ×` the coherent
-   increment;
-4. it **survives both conditional nulls** (§2 of the pre-reg) and **exceeds both** the
-   fake-address and equal-count controls (§3), at the fixed reference radius;
-5. the §8 aggregate quality gates pass (median `R²_fit ≥ 0.90`, `ΔP_strip < ε` across the window,
-   admitted count `≥ 300`/offset, §7 feasibility met).
-
-If (1) holds but the increment is not shuffle-killed → "reads multiscale geometry dynamically,
-not cleanly the address." If (1) fails, or (5) fails → "the spectral address signal does not
-surface in bulk wavepacket spreading at this coupling / patch size" (a real, publishable
-negative, not a failure of the programme). No family ordering is claimed. No new ontology ("perp
-space is physical") regardless of result. This endpoint gates only the word **transport**, not
-the already-earned spectral claim.
-
----
-
-## 13. What this manifest deliberately does NOT decide
-- It does not seal the pre-reg, and does not run.
-- It inherits — does not re-decide — the interior mask (physical-radius manifest App-B), the
-  reference radius for §12(4), and the silver/platinum-vs-golden scope.
-- The frozen constants (`R_min = 8`, strip `w = 2`, LR `ε' = 5·10⁻³`, diagnostic `ε = 0.01`,
-  grid `N_t = 48`, `t_lo = 2.0`, leverage `≥ 4×` & `≥ 6` pts, aggregate `R²_fit ≥ 0.90`,
-  count `≥ 300`) are proposals for crew red-pencil; once the crew signs off they are sealed and
-  any later change is a dated amendment.
+## Appendix LR — the retired analytic bound (documented failed diagnostic)
+`t_hi` = largest `t` with `N_strip·(Σ_{k≥G_strip}(d_max t)^k/k!)² ≤ 5e-3`. Preflight result:
+`t_hi≈0.12–0.90` at every family/extent/launch-depth (0/6 feasible everywhere); invariant with
+patch size at fixed depth; ~145ℓ depth needed to reach `t_hi=8`. Retained for transparency; **not**
+an admissibility gate.
 
 ---
 
 ## Change log
+**v3 — 2026-08-29** (crew decisions B1–B8): retired the analytic LR bound as a gate, keeping it as
+a documented failed diagnostic (B1); restated the primary launch as unfiltered full-spectrum and
+struck all "mid-band-analysed" wording, separating full-spectrum-transport from the mid-band
+mechanism (B2); raised launch admission to `d_bound≥16ℓ` with a deterministic PCA-slab
+spatially-balanced subsample and a flagged `L=400` proposal (B3); replaced the LR window with the
+pre-registered measured-boundary rule — fixed grid, hull-depth excess mass, both engines, one
+common global window, earliest 1% crossing, fixed `[2,8]` fit only if `t_bound*≥8`, else
+finite-size-limited with no rescue, every site retained (B4); removed the β fit from the
+energy-filtered secondary, keeping it as a signed-curve mechanistic diagnostic (B5); applied
+boundary/quality rules to both engines on the same window (B6); replaced "mean−1·fold-SD>0" with an
+offset-level rule treating the six offsets as replicates and reporting all six effects (B7); and
+made a clean negative / finite-size-limited result an authorised outcome (B8).
 
-**v2 — 2026-08-28** (repairs to Work-GPT's four blockers on v1):
-1. **Initial state (§3).** Primary is now the **unfiltered site quench** `|v0⟩` (genuinely
-   localized, `MSD(0)=0`). The energy-filtered state is demoted to a **secondary** `|χ0⟩`, is no
-   longer called "site-localized," and is defined rigorously via **excess MSD** `ΔMSD = MSD −
-   MSD(0)` plus an **initial-boundary-mass / initial-support admissibility rule**
-   (`P_strip(0) < 10⁻³`, `ρ0 ≤ R_min·ℓ/2`), with flag-not-drop handling.
-2. **Boundary leakage (§5).** Replaced the circle `‖par[v]−par[v0]‖ > d_bound(v0)` with a
-   **hull-depth boundary strip** `STRIP = {v : d_bound(v) < w·ℓ}` and `ΔP_strip(t) = P_strip(t) −
-   P_strip(0)`, accounting for initial strip mass and correctly classifying interior sites in all
-   directions.
-3. **Classical engine (§10).** Replaced the ambiguous `P = A/deg`, `[P^t]_{v,v0}`, noninteger-t
-   interpolation with a **continuous-time Markov generator** `Q = A·D⁻¹ − I`,
-   `p(t) = e^{Qt}e_{v0}` — column-stochastic, valid at all real `t`, orientation-explicit, on the
-   same time axis as the quantum engine (comparability convention stated).
-4. **Missingness & `t_cap` (§7, §8).** Removed per-site `R²_fit` culling — **β is defined for
-   every admitted site**, `R²_fit` is diagnostic + an **aggregate** family-level stop rule only,
-   with an explicit argument that admission depends solely on `d_bound` (physical, not address).
-   Deleted the "unit front velocity" justification for `t_cap`; the fit window now comes from a
-   **geometry-only Lieb-Robinson feasibility bound** (`t_hi` from `N_strip·B(t;G_strip)² ≤ ε'`),
-   with a stated finite-size-limited outcome when geometry can't afford the leverage.
+**v2 — 2026-08-28.** Four-blocker repair (unfiltered primary, hull-depth strip, CTMC classical, no
+per-site culling). **v1 — 2026-08-28.** Initial frozen MSD-endpoint draft.
 
-**v1 — 2026-08-28.** Initial frozen MSD-endpoint draft (blocking review item #8).
-
----
-
-*End of draft v2. Committed to `gpt/workbench` only. No experiment was run; no pre-registration
-was sealed; no file on `claude/giv-quasicrystal-phason-5syx5s` was touched.*
+*End of draft v3. Committed to `gpt/workbench` only. Nothing sealed; no dynamics/address/targets
+accessed; no science-branch file altered.*
