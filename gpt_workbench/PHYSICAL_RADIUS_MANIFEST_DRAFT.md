@@ -1,11 +1,11 @@
-# DRAFT v3 — frozen `physical(r)` column manifest + design (radius-saturation experiment)
+# DRAFT v4 — frozen `physical(r)` column manifest + design (radius-saturation experiment)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only geometry-only checks were run to
 produce this (no dynamics/address/LDOS/targets/scores). No science-branch file altered.**
 
-**v3 (2026-08-29)** applies Sol's exact-audit repairs A1–A8 on top of v2, using the authorised
-geometry-only checks (`gpt_workbench/compute_checks_v3.py`). Full dated change log at the end.
-Structure was accepted by Sol; these are the final repairs before sealing/conditional-null.
+**v4 (2026-08-29)** applies Sol's narrow closure corrections on top of the structurally-accepted v3
+(which applied audit repairs A1–A8 using `gpt_workbench/compute_checks_v3.py`). Full dated change
+log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -44,13 +44,13 @@ large 1210–1370) — within ~20% / ~15%. The tiers are **confirmed**, not re-o
 strongly elongated (**aspect ≈ 3.0**) vs silver (~1.02, near-round) and platinum (~1.25). Per A3
 this is a **reported morphology / control issue, not grounds for a golden radius-12 ceiling** — the
 ladder stays through r=16 for golden; the elongation is handled by the PCA-slab inner CV (§5) and
-reported as a covariate.
+**reported as a morphology diagnostic/control**. It is **not** added as a regression feature.
 
 ## 3. `physical(r)` column groups (A6/A7 applied)
 
 ### Group A — radial histogram g(ρ) — **A6-corrected, right-closed bins**
 - Centre **excluded**; bin index **`k = ceil(d/ℓ − τ)`, `τ = 1e-9`, retaining `k = 1 … r`**.
-- Bin `k` represents the half-open annulus **`((k−1)ℓ, kℓ]`** (up to `τ`). Exact unit-edge
+- Bin `k` represents the **left-open, right-closed** annulus **`((k−1)ℓ, kℓ]`** (up to `τ`). Exact unit-edge
   neighbours (`d=ℓ`) → bin 1; sub-edge thin-rhombus diagonals → bin 1; **rung `r` never uses any
   point beyond `rℓ`** (fixes the v2 `(r+0.5)ℓ` overrun). **r columns per rung.**
 - **Geometry check ran (A6):** min inter-vertex distance = **0.765ℓ (silver), 0.618ℓ (golden),
@@ -82,16 +82,22 @@ tests **repackaging**, not arbitrary new content.
   `voro_var ≈ 0.006–0.017` — comfortably rank 2 everywhere. (For the deep `r16` vertices, the
   padded and core Voronoi cell areas are identical to machine precision by the §A5 convergence
   result, so the padded area is well-defined and equals what the rank check used.)
-- **Zero-variance handling (frozen):** if either component's within-set std `< 1e-9` on a patch,
-  that patch is flagged and the capacity control (§6) is used in its place — never a silent
-  divide-by-zero. (No patch triggered this in the check.)
-Capacity control retained separately (§6).
+- **Zero-variance handling (frozen):** if either physical component's within-set std `< 1e-9` on a
+  patch, that patch's **representation-parity verdict is marked unavailable / infeasible and
+  reported** — the capacity control is **not** substituted for a failed physical parity field
+  (capacity and physical parity answer different questions: capacity guards column-count inflation;
+  physical parity guards *representational* repackaging). No silent divide-by-zero. (No patch
+  triggered this in the check.)
+Capacity control retained separately (§6), for its own distinct question.
 
 ## 5. Validation (A6/A9 clarified)
 - **Outer (primary):** leave one of the six offsets out **entirely**; features are geometry-only,
   the held-out offset's targets are never seen.
-- **Replication level:** the **six offsets** are the independent replication unit (not vertices or
-  folds).
+- **Replication level:** the **six offsets are the sampling clusters** — the level over which
+  statistical conclusions are stated (not vertices or folds). The six leave-one-offset-out
+  estimates themselves remain **correlated through their overlapping training sets**, and are never
+  treated as independent replicates (the inference uses the randomisation test of the conditional-
+  null manifest §3, which preserves this fold dependence).
 - **Inner CV (frozen, A6):** within each *training* patch, PC1 of the centred `r16` common-set
   coordinates → project → **4 contiguous equal-count slabs**. **Inner fold `j` simultaneously
   holds out slab `j` from *every* training-offset patch**, while the outer offset stays wholly
@@ -102,10 +108,12 @@ Capacity control retained separately (§6).
   tier has `r16 ≥ 400` (min 581) and every equal-count slab `≥ 100` (min slab 148).
 
 ## 6. Capacity control (A8) — frozen seeds/repetitions
-The pure-capacity null is **not** one arbitrary Gaussian draw. Frozen: **20 independent
-i.i.d.-Gaussian blocks** of the same dimensionality as the parity block, seeds `0…19`; report the
-**mean and 95th-percentile** of their increment as the capacity baseline the address increment must
-exceed. All seeds frozen pre-seal.
+The pure-capacity null is **not** one arbitrary Gaussian draw (20 was insufficient for a stable
+95th percentile). Frozen: **200 independent i.i.d.-Gaussian blocks** of the same dimensionality as
+the parity block, **seeds `0…199`**; report the **full distribution** and the predeclared summary
+(**mean and 95th percentile**) of their increment as the capacity noise-floor the address increment
+must exceed. All seeds frozen pre-seal. (This 95th percentile is also the proposed outcome-
+independent calibration for `δ*`; see §7 and conditional-null manifest §5.)
 
 ## 7. Hierarchical decision procedure (A7-repaired)
 Evaluated in order:
@@ -116,11 +124,17 @@ Evaluated in order:
    families beyond the offset-level randomisation uncertainty. → report as a **mixed** scientific
    outcome, explicitly **not** "infeasible."
 3. **Radius fade compatible with physical compression** — declared by a **predeclared equivalence
-   rule**, requiring **both**: (a) relative reduction `ΔR²_addr(16)/ΔR²_addr(2) < ρ*` (propose
-   `ρ* = 0.25`) **and** (b) the absolute increment below a frozen **practical-equivalence margin**
-   `ΔR²_addr(16) < δ*`. **"CI includes zero" is NOT accepted as evidence of equivalence.** Propose
-   `δ* = 0.005` R² — **flagged for crew approval** (the parent prereg does not yet justify a margin;
-   the crew must ratify δ*).
+   rule**, requiring **both**: (a) relative reduction `ΔR²_addr(16)/ΔR²_addr(2) < ρ*` **and**
+   (b) the absolute increment below a **practical-equivalence margin** `ΔR²_addr(16) < δ*`.
+   **"CI includes zero" is NOT accepted as evidence of equivalence.**
+   - **`δ*` — outcome-independent justification required.** `δ*` **must not** be chosen to sit just
+     above the known `+0.004` fully-M3-residual result. Proposed **calibration:** `δ*` = the **95th
+     percentile of the 200-draw Gaussian capacity null** (§6) at the reference radius — a measured
+     noise-floor, independent of any address outcome. A fixed `δ* = 0.005` R² is retained only as a
+     fallback and is **explicitly provisional / unratified**.
+   - **`ρ* = 0.25` is likewise provisional / unratified.** Denominator handling: `ρ` is defined only
+     if `ΔR²_addr(2) > δ*` and its six-offset sign is stable (≥5/6); otherwise `ρ` is undefined and
+     the outcome routes to branch 2/1, never to "fade" (see conditional-null manifest §5).
 4. **Representation collapse** — increment survives radius but collapses to the (degree,Voronoi)
    parity block (§4). → representational.
 5. **Stable residual increment** — survives radius, exceeds **both** the parity block and the
@@ -128,13 +142,24 @@ Evaluated in order:
    irreducible.
 
 ## 8. Open choices for crew
-- **`δ*` practical-equivalence margin** (§7, branch 3) — proposed 0.005 R², needs crew ratification.
-- **`ρ*` relative-reduction threshold** (§7) — proposed 0.25.
+- **`δ*`** (§7): capacity-95th-percentile calibration proposed (outcome-independent); fixed 0.005 R²
+  fallback is provisional/unratified.
+- **`ρ*`** (§7): 0.25 provisional/unratified.
 - Whether golden's aspect ≈ 3.0 (§2) warrants any extra boundary control beyond the PCA-slab CV.
 
 ---
 
 ## Change log
+**v4 — 2026-08-29** (Sol narrow closure): golden elongation reworded to a reported morphology
+diagnostic/control, **not** a regression feature; the parity zero-variance rule now marks a
+degenerate patch's representation-parity verdict **unavailable/infeasible** rather than substituting
+the (differently-purposed) capacity control; the Gaussian capacity null raised from 20 to **200
+draws (seeds 0…199)** reporting the full distribution; offsets clarified as **sampling clusters**
+with the six LOO estimates correlated through overlapping training sets; `ρ*=0.25` / `δ*=0.005`
+marked **provisional/unratified** with an outcome-independent `δ*` calibration (capacity 95th
+percentile) and an explicit "not chosen to sit above +0.004" caution; and the annulus wording fixed
+to **left-open, right-closed**.
+
 **v3 — 2026-08-29** (Sol audit A1–A8): right-closed radial bins `k=ceil(d/ℓ−τ)` with the geometry
 occupancy/min-distance check (A1); measured the missing silver e14/e16, platinum e16 metrics and
 confirmed the tiers on count+usable-area with a flagged aspect-ratio mismatch (A2); kept the golden
@@ -147,7 +172,8 @@ hierarchical tree (feasibility vs mixed separated; "CI includes zero" ≠ equiva
 equivalence rule with relative + absolute margin flagged for crew) (A7); and froze a 20-draw
 capacity control with fixed seeds (A8).
 
-**v2 — 2026-08-29.** Crew decisions A1–A11. **v1 — 2026-08-28.** Initial column manifest.
+**v3 — 2026-08-29** (Sol audit A1–A8). **v2 — 2026-08-29.** Crew decisions A1–A11.
+**v1 — 2026-08-28.** Initial column manifest.
 
-*End of draft v3. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
+*End of draft v4. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
 no science-branch file altered.*

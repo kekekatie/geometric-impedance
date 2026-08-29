@@ -1,10 +1,12 @@
-# DRAFT v4 — frozen protocol for the MSD transport endpoint (radius-saturation, stage-two)
+# DRAFT v5 — frozen protocol for the MSD transport endpoint (radius-saturation, stage-two)
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. Only a synthetic engineering benchmark was
+**Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks were
 run (no study geometry/dynamics/address/LDOS/targets/β/outcomes). No science-branch file altered.**
 
-**v4 (2026-08-29)** applies Sol's exact-audit repairs B1–B7 on top of v3, using the authorised
-synthetic benchmark (`gpt_workbench/benchmark_msd.py`). Full dated change log at the end.
+**v5 (2026-08-29)** ratifies `L=200`, `Δt=0.05`, the batching rule and the numerical tolerance from
+the actual-combined-workload benchmark (`gpt_workbench/benchmark_msd_grid.py`), and removes the
+family-specific toy-validation requirement. Builds on v4 (Sol audit B1–B7 via
+`gpt_workbench/benchmark_msd.py`). Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -36,16 +38,24 @@ geometry/dynamics/outcomes):**
 | 4000 | 36 s | 5.9 s | 60 s | 46 s | 2.6 GB |
 | 6000 | 67 s | 9.0 s | 105 s | 85 s | 4.2 GB |
 
-Projected over 54 patches at largest n: **Krylov coherent+CTMC, L=400 ≈ 158 min, ~4.2 GB peak**;
-L scales ~linearly, so **L=200 ≈ 80 min, ~2.5–3 GB**.
+**Actual-combined-workload benchmark (v5, `benchmark_msd_grid.py`) — L=200, the 161-point boundary
+grid + the 48 β-times, both engines, launch-batches of 50, reduce-on-the-fly:** at n=6000, the
+**shared 161-grid** propagation is **188.6 s per patch (both engines)**, **peak RSS ~1.6 GB** (the
+batch/reduce strategy avoids the (T×V×L) tensor), agreement with the exact reference **3.4e-15** at
+shared times. Computing the 48 log β-times *separately* would add ~129 s/patch. **Projected over 54
+patches: shared-grid ≈ 170 min; separate-β ≈ 286 min.**
 
-- **Proposed frozen launch count `L = 200` per patch** (100 fewer than v3's un-benchmarked 400):
-  feasible (~80 min total, memory comfortable), and ≫ the 6-offset replication level so per-offset
-  β distributions are well sampled. **Flagged for crew** — L may be set to 400 if the compute
-  budget allows (benchmark shows it is possible at ~2.6 h / ~4.2 GB). Krylov numerical agreement
-  must be **re-validated on a small toy of each family before sealing** (B2).
+- **FROZEN (benchmark-ratified): `L = 200` per patch; launch-batch size 50; sparse-Krylov primary;
+  numerical tolerance ≤ 1e-10** (observed 3.4e-15). Feasible at ~170 min / ~1.6 GB. Validation is on
+  **synthetic sparse graphs spanning the planned size/degree range — sufficient; no family-specific
+  toy validation is required** (it would needlessly touch study substrates). L=400 remains an
+  optional crew upgrade (~2× cost).
+- **FROZEN batching rule:** propagate once on the **shared 161-point linear `[0,8]` grid** per
+  launch-batch; the 48 log β-times are **snapped to the nearest shared-grid points** (max snap error
+  `Δt/2 = 0.025` t-units, negligible for a log-log slope), so the β grid shares all propagation work
+  with the boundary grid — no separate β propagation.
 - Launches are the **deterministic PCA-slab spatially-balanced subsample** (physical manifest §5):
-  `L/4` per slab, evenly spaced by sorted PC1 (lift-coordinate tie-break). No address used.
+  `L/4 = 50` per slab, evenly spaced by sorted PC1 (lift-coordinate tie-break). No address used.
 
 ## 3. Initial state (unchanged from v3) — primary unfiltered, full-spectrum
 `|ψ0⟩ = |v0⟩` (localised, `MSD(0)=0`). **A full-spectrum wavepacket-transport test; not a mid-band
@@ -53,11 +63,12 @@ test.** Secondary state handled in §6.
 
 ## 4. Time grids and boundary detection (B3) — separate monitoring grid
 
-- **β-fit grid:** retain the **48 log-spaced points on `[2,8]`** for the exponent fit.
-- **Boundary-monitoring grid (new, frozen):** a dense **linear grid on `[0,8]`** to detect a
-  *transient* 1% excess-boundary-mass crossing that the log `[2,8]` grid could miss. **Proposed
-  spacing `Δt = 0.05` → 161 points on `[0,8]`; flagged for crew review** (fine enough to catch a
-  brief crossing at these hopping rates; crew may tighten).
+- **β-fit grid:** the **48 log-spaced points on `[2,8]`** for the exponent fit, realised by
+  **snapping to the nearest shared-grid points** (§2 batching rule; max error 0.025 t-units).
+- **Boundary-monitoring grid (FROZEN, benchmark-ratified): a linear grid on `[0,8]` with
+  `Δt = 0.05` → 161 points**, to detect a *transient* 1% excess-boundary-mass crossing the log
+  `[2,8]` grid could miss. The benchmark confirms this grid drives the whole propagation at ~170 min
+  / ~1.6 GB; the crew may tighten `Δt` (cost scales ~linearly).
 - On the monitoring grid compute `ΔP_strip(t) = P_strip(t) − P_strip(0)` (hull-depth strip, `w=2ℓ`)
   for **both** engines and **every** selected launch.
 - **`t_bound*` = the earliest sampled monitoring-grid time at which any launch, on either engine,
@@ -87,10 +98,10 @@ open-endedness.)
 - **Always report the six held-out (leave-one-offset-out) increments `{Δ_o}` and their sign
   pattern.** The six overlapping LOO folds are **not** treated as independent replicates.
 - **Removed:** the ordinary six-offset bootstrap CI (v3) — it wrongly assumed fold independence.
-- **Randomisation test (frozen):** for each of **≥ 1000 frozen stratified-shuffle repetitions**,
-  recompute the **full six-offset held-out vector** and its **median**, building a null
-  distribution of six-offset medians. This carries the **same fold dependence** in the observed and
-  shuffled statistics.
+- **Randomisation test (frozen):** for each of **exactly `B = 1000` stratified-shuffle
+  repetitions** (seeds frozen; see conditional-null manifest §4), recompute the **full six-offset
+  held-out vector** and its **median**, building a null distribution of six-offset medians. This
+  carries the **same fold dependence** in the observed and shuffled statistics.
 - **Decision:** report the **randomisation tail probability** of the observed six-offset median
   against that null, with **≥ 5/6 offsets positive** as a **supporting** consistency criterion
   (not the sole test). **All seeds frozen** pre-seal.
@@ -117,9 +128,10 @@ the address"; `t_bound*<8` → **finite-size-limited** (legitimate, not a failed
 non-significant → address signal does not surface in spreading at this size/coupling.
 
 ## 10. Open choices for crew
-- **`L`** (§2): 200 proposed (benchmarked feasible); 400 possible with more compute.
-- **Boundary-monitoring spacing** (§4): `Δt=0.05` proposed; crew may tighten.
-- **Randomisation repetitions** (§8): ≥1000 proposed; freeze the exact count and seeds at seal.
+- **`L`** (§2): **frozen 200** (benchmark-ratified); 400 an optional ~2× upgrade.
+- **Boundary spacing** (§4): **frozen `Δt=0.05`**; crew may tighten (cost ~linear).
+- **Randomisation repetitions** (§8): **`B=1000`** (conditional-null manifest §4); raise to 5000 if
+  a tight `p≈0.01` is needed.
 
 ## Appendix LR — retired analytic bound (documented failed diagnostic)
 `t_hi ≈ 0.12–0.90` at every family/extent/depth (preflight v2), extent-invariant at fixed depth,
@@ -128,6 +140,14 @@ non-significant → address signal does not surface in spreading at this size/co
 ---
 
 ## Change log
+**v5 — 2026-08-29** (Sol narrow closure + actual-grid benchmark): ran the actual-combined-workload
+synthetic benchmark (L=200; 161-pt boundary grid + 48 β-times; both engines; batch 50; reduce-on-
+fly) → **froze `L=200`, `Δt=0.05`, launch-batch 50, sparse-Krylov primary, numerical tolerance
+≤1e-10** (observed 3.4e-15; ~170 min / ~1.6 GB over 54 patches), with the **48 log β-times snapped
+to the shared 161-grid** so they add no propagation; **removed the family-specific toy-validation
+requirement** (synthetic-graph validation over the planned size/degree range suffices); and set the
+offset-median randomisation count to **exactly `B=1000`** (conditional-null manifest §4).
+
 **v4 — 2026-08-29** (Sol audit B1–B7): benchmarked the propagation cost on synthetic graphs and
 **proposed a frozen `L=200` with sparse Krylov as the primary method** (validated to 3.4e-15),
 retiring the un-benchmarked L=400 and the "exact-diag is tractable" assumption (B1, B2); added a
@@ -143,5 +163,5 @@ coherent-vs-classical contrast **inconclusive** without erasing a well-defined q
 
 **v3 — 2026-08-29.** Crew decisions B1–B8. **v2 — 2026-08-28.** Four-blocker repair. **v1.** Initial.
 
-*End of draft v4. Committed to `gpt/workbench` only. Nothing sealed; only the synthetic benchmark
-run; no science-branch file altered.*
+*End of draft v5. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks run;
+no science-branch file altered.*
