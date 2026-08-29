@@ -1,15 +1,11 @@
-# DRAFT v2 — frozen `physical(r)` column manifest + design (radius-saturation experiment)
+# DRAFT v3 — frozen `physical(r)` column manifest + design (radius-saturation experiment)
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. No dynamics/address/LDOS/targets/scores
-accessed to write this. No science-branch file altered.** A workbench design artifact only. It
-gives the `physical(r)` block, geometry tiers, validation and controls of
-`substrates/PREREG_radius_saturation.md` the same a-priori discipline as the sealed address block
-M4 (`transport_run.py::_m4_cols`, 11 columns).
+**Status — DRAFT for crew review. NOT sealed, NOT run. Only geometry-only checks were run to
+produce this (no dynamics/address/LDOS/targets/scores). No science-branch file altered.**
 
-**v2 (2026-08-29)** incorporates crew decisions A1–A11 after the v1/v2 geometry-only preflights
-(`PREFLIGHT_GEOMETRY_REPORT.md` `49d37be`, `PREFLIGHT_GEOMETRY_REPORT_V2.md` `6ab1647`) and the
-padding-convergence check (§A5). Full dated change log at the end. It remains a proposal; several
-items are explicitly flagged for crew judgement (§ "Open choices").
+**v3 (2026-08-29)** applies Sol's exact-audit repairs A1–A8 on top of v2, using the authorised
+geometry-only checks (`gpt_workbench/compute_checks_v3.py`). Full dated change log at the end.
+Structure was accepted by Sol; these are the final repairs before sealing/conditional-null.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -17,225 +13,141 @@ not part of the scientific record until reviewed and merged.*
 ---
 
 ## 1. Frozen conventions
+- `ℓ := median edge length` (measured `= 1.000` all families). Radius `r` = Euclidean par-space
+  distance. Radius ladder **`{2,4,8,12,16}`, retained for all families incl. golden (A3)**.
+- **Evaluated population:** the `d_bound ≥ 16ℓ` common interior set, **fixed across all rungs**
+  within a tier (changing `r` changes only which columns are included, never the vertices).
+- **Six frozen offsets:** `(0.13,0.37)(0.29,0.11)(0.41,0.23)(0.05,0.47)(0.19,0.31)(0.37,0.09)`.
+- **Regressor:** sealed harness GBT, identical everywhere.
 
-- **Radius unit** `ℓ := median edge length` (measured `= 1.000` for all families). "Radius r"
-  means Euclidean parallel-space distance `≤ r·ℓ` (address M4 stays graph-shell; the contrast is
-  intended).
-- **Radius ladder (A1):** `S = {2, 4, 8, 12, 16}`, retained for all families. `S(r)={s∈S:s≤r}`,
-  `m(r)=|S(r)|`.
-- **Evaluated population (A3):** every rung within a tier is evaluated on the **same** fixed
-  vertex set — the `d_bound ≥ 16ℓ` common interior set (`d_bound(i)=hull_depth(par)[i]`). Changing
-  `r` changes only which `physical(r)` columns are included, **never which vertices are scored**.
-  This removes the shrinking-sample confound entirely.
-- **Six fresh offsets (A4), frozen:**
-  `(0.13,0.37) (0.29,0.11) (0.41,0.23) (0.05,0.47) (0.19,0.31) (0.37,0.09)` — the offsets used in
-  both preflights (disjoint from the sealed transport run's five).
-- **Regressor:** the sealed harness GBT (`HistGradientBoostingRegressor(max_depth=3, max_iter=250,
-  learning_rate=0.06, l2_regularization=1.0, random_state=0)`), identical for every rung, control
-  and family.
-- **Moment definitions:** `mean`, population `variance`, `skewness`, `excess kurtosis`; the three
-  higher moments set to 0 when `σ<1e-9`.
+## 2. Geometry-matched tiers (A2) — now with the measured metrics
 
-## 2. Geometry-matched tiers (A2) — replacing equal generator extents
+The three missing patches (silver e14/e16, platinum e16) were measured (geometry only); **all nine
+planned patches now have full metrics** (mean over the six offsets):
 
-Equal generator extent does **not** mean equal physical size (preflight F2), so the three tiers
-below were chosen **outcome-blind** to approximately match the radius-16 common-set count across
-families:
+| tier | patch | n | hull area | diameter | **aspect(r16)** | usable r16 area | r16 count (min) |
+|---|---|---|---|---|---|---|---|
+| small  | silver e14   | 3360 | 2753 | 61.4 | **1.02** | 516  | 653 |
+| small  | golden e18   | 3999 | 3272 | 95.9 | **3.12** | 452  | 581 |
+| small  | platinum e16 | 3651 | 2977 | 80.2 | **1.25** | 569  | 725 |
+| medium | silver e16   | 4341 | 3552 | 70.0 | **1.04** | 885  | 1102 |
+| medium | golden e20   | 4913 | 4032 | 106.5| **3.07** | 794  | 1012 |
+| medium | platinum e18 | 4604 | 3726 | 88.6 | **1.27** | 921  | 1165 |
+| large  | silver e18   | 5463 | 4478 | 78.8 | **1.02** | 1370 | 1698 |
+| large  | golden e22   | 5920 | 4840 | 116.7| **2.98** | 1210 | 1535 |
+| large  | platinum e20 | 5660 | 4554 | 99.9 | **1.25** | 1345 | 1704 |
 
-| tier | silver(8) | golden(10) | platinum(12) | r=16 common count (silver / golden / platinum) |
-|---|---|---|---|---|
-| small  | e14 | e18 | e16 | 660 / 592 / 728 |
-| medium | e16 | e20 | e18 | 1117 / 1020 / 1168 |
-| large  | e18 | e22 | e20 | 1714 / 1544 / 1713 |
+**Tier confirmation (A2, outcome-blind):** the tiers match well on **r16 count** (small 581–725,
+medium 1012–1165, large 1535–1704) **and on usable r16 area** (small 452–569, medium 794–921,
+large 1210–1370) — within ~20% / ~15%. The tiers are **confirmed**, not re-optimised.
+**⚠️ Reported morphology mismatch (A3):** they do **not** match on shape — golden's r16 interior is
+strongly elongated (**aspect ≈ 3.0**) vs silver (~1.02, near-round) and platinum (~1.25). Per A3
+this is a **reported morphology / control issue, not grounds for a golden radius-12 ceiling** — the
+ladder stays through r=16 for golden; the elongation is handled by the PCA-slab inner CV (§5) and
+reported as a covariate.
 
-Radius-16 counts are well matched within each tier (spread ≤ ~15%). Physical area / diameter /
-usable-r16-area (from preflight v2, per-offset spread <1%):
+## 3. `physical(r)` column groups (A6/A7 applied)
 
-| patch | n | hull area | diameter | usable r16 area |
-|---|---|---|---|---|
-| silver e18 (large) | 5463 | 4478 | 78.8 | 1370 |
-| golden e18 (small) | 3999 | 3272 | 95.9 | 452 |
-| golden e20 (medium)| 4913 | 4032 | 106.5 | 794 |
-| golden e22 (large) | 5920 | 4840 | 116.7 | 1210 |
-| platinum e18 (medium)| 4604 | 3726 | 88.6 | 921 |
-| platinum e20 (large)| 5660 | 4554 | 99.9 | 1345 |
+### Group A — radial histogram g(ρ) — **A6-corrected, right-closed bins**
+- Centre **excluded**; bin index **`k = ceil(d/ℓ − τ)`, `τ = 1e-9`, retaining `k = 1 … r`**.
+- Bin `k` represents the half-open annulus **`((k−1)ℓ, kℓ]`** (up to `τ`). Exact unit-edge
+  neighbours (`d=ℓ`) → bin 1; sub-edge thin-rhombus diagonals → bin 1; **rung `r` never uses any
+  point beyond `rℓ`** (fixes the v2 `(r+0.5)ℓ` overrun). **r columns per rung.**
+- **Geometry check ran (A6):** min inter-vertex distance = **0.765ℓ (silver), 0.618ℓ (golden),
+  0.518ℓ (platinum)** — all `< ℓ`, confirming sub-edge diagonals exist; bin-1 occupancy ≈ 4.7–5.5.
+  **The innermost bin is genuinely non-empty and is retained** (the v1 "empty bin" claim was
+  wrong; the v2 correction is now confirmed by direct measurement).
 
-**⚠️ Flagged mismatches (A2 requires flagging, not silent tier changes):**
-1. **Missing physical metrics.** Area / diameter / usable-area for **silver e14, silver e16,
-   platinum e16** were **not measured** — computing them needs a geometry run beyond the single
-   padding-convergence check the crew authorised, so they are left as a **required pre-seal
-   geometry-only measurement**, not fabricated. Counts (from the first preflight) match; physical
-   size must be confirmed.
-2. **Residual shape mismatch.** Even matched on r=16 count, **golden stays elongated**: in the
-   large tier, areas are comparable (silver 4478 / golden 4840 / platinum 4554) but diameters are
-   not (78.8 / 116.7 / 99.9). Matching count does not match diameter/aspect. This bears on
-   boundary effects and on the inner-CV slab construction (§5); flagged for crew.
+### Group B — neighbour-degree moments within each `s∈S(r)` → 4 cols × m(r).
+### Group D — coarse-grained ψₙ (`n∈{N/2,N,2N}`) within each `s` → 3 cols × m(r).
+### Group E — packing/void via **padded-super-patch** Voronoi (mandatory, §A5) → 2 cols × m(r).
+Edge-length moments removed from the primary (A7); robustness diagnostic only.
+Per-rung dim `= r + 9·m(r)` → **11, 22, 35, 48, 61** for r = 2,4,8,12,16.
 
-## 3. The `physical(r)` column groups (A6, A7 applied)
+## 4. Parity control (A5-repaired) — z_N rejected, (degree, Voronoi-area) adopted
 
-Per-vertex, address-free, prefix `phys_`. **Group C (edge-length moments) is removed from the
-primary (A7)** — unit-rhombus edges make it degenerate — and appears only as a pre-labelled
-robustness diagnostic (§6).
+**z_N is degenerate — rejected as the parity field.** Geometry check: `Var(Re z_N) ≈ Var(Im z_N)
+≈ 0.000` on **every** tier (the complex bond-orientational order is a near-**constant** field on the
+deep interior — the tiling's global orientational order makes it nearly uniform), with rising
+condition number (3.2 → 19.8 as elongation grows). A near-constant field through `_m4_cols`
+produces near-constant, noise-amplified columns — an inadequate parity control.
 
-### Group A — radial histogram g(ρ) (A6-corrected)
-The centre is **excluded**, and bins are **integer-centred** to eliminate the boundary pile-up of
-edge-neighbours (which all sit at exactly `d=ℓ`):
-- bin index `k(j) = round(‖par[j]−par[i]‖ / ℓ)` with round-half-up tolerance `+1e-9`
-  (i.e. `k = floor(d/ℓ + 0.5 + 1e-9)`), excluding `j=i`;
-- `phys_gann_k = #{ j≠i : k(j)=k }`, for **k = 1 … r** (`k=0`, i.e. `d<0.5ℓ` incl. the centre, is
-  excluded → no self-count, no ambiguous edge). **r columns per rung.**
-- **Correction to the v1 "empty innermost bin" claim (adversarial, both directions):** the
-  innermost retained bin `k=1` (`[0.5,1.5)ℓ`) is **expected to be non-empty** — it captures both
-  the unit-length edge-neighbours (`d=ℓ`) *and* the sub-edge thin-rhombus short-diagonal partners
-  (`≈0.6–0.77ℓ` for AB/Penrose thin rhombi). It should therefore be **retained**, not eliminated;
-  what v1 got wrong was calling it empty. A one-line geometry check (min inter-vertex distance and
-  the `k=1` occupancy) should confirm this before sealing.
+**Adopted parity field (A5): the two-component, address-free physical field
+`(local graph degree, padded Voronoi-cell area)`**, each **z-scored within the `d_bound≥16ℓ`
+common set**, passed through the exact 11-column `_m4_cols` pipeline. Both are physical quantities
+already represented in the physical feature family (degree ∈ M1/B; Voronoi area ∈ Group E), so this
+tests **repackaging**, not arbitrary new content.
+- **Rank-2 verified on every planned patch (geometry check):** covariance eigenvalues
+  ≈ 0.29–0.55 (min) / 1.45–1.72 (max), **condition number 2.6–6.0**, `deg_var ≈ 1.2–1.4`,
+  `voro_var ≈ 0.006–0.017` — comfortably rank 2 everywhere. (For the deep `r16` vertices, the
+  padded and core Voronoi cell areas are identical to machine precision by the §A5 convergence
+  result, so the padded area is well-defined and equals what the rank check used.)
+- **Zero-variance handling (frozen):** if either component's within-set std `< 1e-9` on a patch,
+  that patch is flagged and the capacity control (§6) is used in its place — never a silent
+  divide-by-zero. (No patch triggered this in the check.)
+Capacity control retained separately (§6).
 
-### Group B — neighbour-degree moments within each `s∈S(r)`
-`{deg[j] : j∈Nb(i,s)}` (Euclidean ball `Nb(i,s)={j≠i:‖par_j−par_i‖≤s·ℓ}`); 4 moments →
-**4 columns × m(r)**.
+## 5. Validation (A6/A9 clarified)
+- **Outer (primary):** leave one of the six offsets out **entirely**; features are geometry-only,
+  the held-out offset's targets are never seen.
+- **Replication level:** the **six offsets** are the independent replication unit (not vertices or
+  folds).
+- **Inner CV (frozen, A6):** within each *training* patch, PC1 of the centred `r16` common-set
+  coordinates → project → **4 contiguous equal-count slabs**. **Inner fold `j` simultaneously
+  holds out slab `j` from *every* training-offset patch**, while the outer offset stays wholly
+  unseen. Frozen: PCA centring = subtract the common-set mean; PC1 sign rule `PC1[0] ≥ 0`
+  (else `PC1[1] ≥ 0`); **ties in the PC1 projection broken by lexicographic order of the integer
+  lift coordinates** `lifts[i]` (canonical and offset-robust — replaces vertex-index tie-breaking);
+  remainder vertices to the lowest-index slabs. **Floor check (A4): all nine tiers PASS** — every
+  tier has `r16 ≥ 400` (min 581) and every equal-count slab `≥ 100` (min slab 148).
 
-### Group D — coarse-grained bond-orientational order ψₙ within each `s∈S(r)`
-`ψₙ(i)=|mean_bond exp(i n θ)|` for `n∈{N/2,N,2N}`, averaged over `{i}∪Nb(i,s)` →
-**3 columns × m(r)**.
+## 6. Capacity control (A8) — frozen seeds/repetitions
+The pure-capacity null is **not** one arbitrary Gaussian draw. Frozen: **20 independent
+i.i.d.-Gaussian blocks** of the same dimensionality as the parity block, seeds `0…19`; report the
+**mean and 95th-percentile** of their increment as the capacity baseline the address increment must
+exceed. All seeds frozen pre-seal.
 
-### Group E — packing/void via **padded-super-patch** Voronoi (A5, mandatory)
-Voronoi cell areas of the parallel-space point set, per-vertex mean and variance over `Nb(i,s)`:
-`phys_voro_mean_s{s}`, `phys_voro_var_s{s}` → **2 columns × m(r)**. **Cells are computed on a
-padded super-patch** (§A5), so every cell contributing to a core descriptor is bounded/uncensored.
+## 7. Hierarchical decision procedure (A7-repaired)
+Evaluated in order:
+1. **Infeasible (physical/count only)** — a tier's `r16` common set `< 400`, or a slab `< 100`, or
+   a required physical-size match unmet. → stop; do not interpret. (Purely feasibility; **tier
+   instability does NOT live here.**)
+2. **Mixed / unstable (a scientific result)** — the address increment varies across tiers or
+   families beyond the offset-level randomisation uncertainty. → report as a **mixed** scientific
+   outcome, explicitly **not** "infeasible."
+3. **Radius fade compatible with physical compression** — declared by a **predeclared equivalence
+   rule**, requiring **both**: (a) relative reduction `ΔR²_addr(16)/ΔR²_addr(2) < ρ*` (propose
+   `ρ* = 0.25`) **and** (b) the absolute increment below a frozen **practical-equivalence margin**
+   `ΔR²_addr(16) < δ*`. **"CI includes zero" is NOT accepted as evidence of equivalence.** Propose
+   `δ* = 0.005` R² — **flagged for crew approval** (the parent prereg does not yet justify a margin;
+   the crew must ratify δ*).
+4. **Representation collapse** — increment survives radius but collapses to the (degree,Voronoi)
+   parity block (§4). → representational.
+5. **Stable residual increment** — survives radius, exceeds **both** the parity block and the
+   capacity control (§6), and survives the conditional nulls at the offset level. → provisional
+   irreducible.
 
-### Exact dimensions (A8)
-Per-rung dim `= r + 9·m(r)` (A=r; B+D+E = 4+3+2 = 9 per radius-slice):
-
-| rung r | m(r) | A | B(×4) | D(×3) | E(×2) | **total** |
-|---|---|---|---|---|---|---|
-| 2 | 1 | 2 | 4 | 3 | 2 | **11** |
-| 4 | 2 | 4 | 8 | 6 | 4 | **22** |
-| 8 | 3 | 8 | 12 | 9 | 6 | **35** |
-| 12| 4 | 12| 16 | 12 | 8 | **48** |
-| 16| 5 | 16| 20 | 15 | 10 | **61** |
-
-Strictly nested; every column at rung r persists unchanged at larger r.
-
-## A5. Padded-super-patch Voronoi + convergence check (mandatory)
-
-Voronoi for Group E (and for any packing descriptor) is computed on a **padded super-patch**
-generated at `core extent + Δ`, then restricted to core vertices; this gives a valid bounded cell
-to every vertex contributing to an r=16 descriptor (preflight v2 F5: with padding, **zero** cells
-remain invalid).
-
-**Convergence result (the one authorised geometry-only run;** `gpt_workbench/pad_convergence_check.py`):
-comparing per-core-cell **area and perimeter** at `Δ=4` vs `Δ=6` on silver e14, golden e18,
-platinum e18 (2 offsets each):
-
-| case | core cells compared | max rel Δarea | max rel Δperimeter |
-|---|---|---|---|
-| silver e14 | 3365 | 3.0e-13 | 3.5e-15 |
-| golden e18 | 3995 | 1.2e-12 | 3.5e-15 |
-| platinum e18 | 4605 | 6.7e-13 | 3.5e-15 |
-| **worst case** | — | **1.2e-12** | **3.5e-15** |
-
-**Tolerance & verdict:** pass bar = **1e-6 relative** on both area and perimeter; observed worst
-case is **~6 orders below** it. `Δ=4` and `Δ=6` cells are identical to machine precision (a
-Voronoi cell depends only on its Delaunay neighbours, which `Δ=4` already fully includes).
-**Therefore `Δ=4` is a converged, validated padding, and platinum e22's `Δ=4` result stands.**
-Frozen rule: **`Δ ≥ 4`, and the padding ring width must be `≥ 3ℓ`** (verified 10–16ℓ in preflight);
-if a family/tier cannot afford `≥3ℓ` (generator too slow/saturated), flag it, do not reduce Δ.
-
-## 4. Parity control (A11) — genuine 2-component physical field through the exact pipeline
-
-Inspecting `transport_run.py::_m4_cols(f, field)`: it takes a **2-component** field `(n,2)` and
-returns exactly 11 columns — for each shell `r∈{2,4,8}`: shell-mean (2 cols) + shell-variance-sum
-(1 col) = 9; plus gradient magnitude (1) and `hull_depth(field)` of the field-value cloud (1).
-
-**Representation-matched parity block (frozen):** feed an **address-free, genuinely 2-component
-physical field** through the *identical* `_m4_cols`:
-- **Field = the complex bond-orientational order parameter** `z_N(i) = mean_{bond b at i}
-  exp(i·N·θ_b)` (N = family fold; θ_b = `arctan2` of `par[j]−par[i]`). Its two components are
-  `(Re z_N, Im z_N)` — physical (bond geometry only), **no perpendicular-space content**. (Note:
-  M3 already uses the *magnitude* `|z_N|`; the parity field uses the *complex* value, a distinct,
-  genuinely 2-D physical field.)
-- **Normalisation:** z-score each of `Re z_N`, `Im z_N` across the `d_bound≥16ℓ` common set
-  (subtract mean, divide by std) so the 2-D cloud is well-conditioned.
-- **Pipeline:** `parity_block = _m4_cols(f, column_stack([Re z_N, Im z_N]_zscored))` → **exactly
-  11 columns by the identical construction** (shell-means, shell-variances at {2,4,8}, gradient,
-  and a hull-depth of the field cloud).
-
-**Honest caveat (A11 requires it):** this achieves **exact pipeline / representation parity** (the
-same 11-column multiscale machinery, no 8+3 padding). It is **not** a physically interpretable
-block: `hull_depth` of an orientational-order cloud has no physical meaning — it is a
-representational analogue of M4's window-depth column. So the parity block answers "does the
-identical multiscale machinery on a real physical 2-field reproduce the address increment?", and
-must not be over-read further. The pure-capacity control (11 i.i.d. Gaussian columns) is retained
-alongside.
-
-## 5. Validation (A9)
-
-- **Outer (primary):** leave **one of the six offsets out entirely**; feature construction is
-  geometry-only and the held-out offset's targets are **never** seen during training.
-- **Replication level:** **offsets are the independent replication unit** — statistical
-  conclusions are stated over the six offsets, **not** over vertices or CV folds (which are
-  correlated).
-- **Inner (frozen deterministic slabs; NOT equal-angle quadrants):** within each *training* patch,
-  take the `d_bound≥16ℓ` common-set coordinates `par`, **centre** them (subtract the common-set
-  mean), compute the `2×2` covariance, take **PC1** = eigenvector of the larger eigenvalue with a
-  frozen **sign rule** (fix `PC1[0] ≥ 0`; if `PC1[0]=0`, require `PC1[1] ≥ 0`), project the
-  centred coordinates onto PC1, **stable-sort** by `(projection, vertex-index)` (tie handling
-  frozen), and split into **4 contiguous equal-count slabs** (remainder vertices assigned to the
-  lowest-index slabs). Fit separately within each training patch. This yields balanced folds even
-  for golden's elongated interior (§2 caveat 2), which equal-angle quadrants do not (preflight v2
-  F4).
-
-## 6. Robustness diagnostics (pre-labelled, secondary; never the primary basis)
-- **Edge-length moments** (former Group C) — reported only if a family shows non-trivial
-  edge-length spread (none expected).
-- Graph-distance variant of `physical(r)`; rhombus thick/thin fraction as an alt Group-E.
-
-## 7. Hierarchical decision procedure (A10) — replaces the overlapping outcomes
-
-Evaluated in order; the first matching branch is the verdict (per tier/family, then reconciled):
-1. **Infeasible / finite-size-limited** — the tier's `d_bound≥16ℓ` common set is below the frozen
-   floor, or physical-size matching (§2) is unmet, or ΔR²_addr is unstable across tiers beyond the
-   offset-level uncertainty. → stop; do not interpret shape.
-2. **Radius fade (physical compression)** — `ΔR²_addr(r)` decays to ≈0 as r→16
-   (`ΔR²_addr(16)/ΔR²_addr(2) < 0.25`, offset-level CI includes 0 at r=16). → address is a compact
-   encoding of finite-radius real-space structure.
-3. **Representation collapse** — the increment survives radius but **collapses to the
-   representation-matched parity block** (§4). → the advantage was representational, not
-   informational.
-4. **Stable residual address increment** — survives the radius ladder, exceeds **both** the parity
-   block and the capacity control, and survives the conditional nulls at the offset level. →
-   provisional irreducible increment.
-5. **Inconclusive / mixed** — families or tiers disagree beyond the offset-level uncertainty. →
-   report as mixed; make no single verdict.
-
-## 8. Open choices requiring crew judgement
-- The three **missing physical-size metrics** (silver e14/e16, platinum e16) need a geometry-only
-  measurement before sealing (§2 flag 1).
-- **Radius-16 adequacy floor** (minimum common-set count per tier) is not yet fixed — needed for
-  branch 1.
-- Whether to **cap golden's ladder at r=12** given its residual elongation (§2 flag 2), or accept
-  the large-tier golden e22 count as adequate.
-- Parity-field choice (§4): `z_N` complex components are proposed; the crew may prefer a different
-  address-free 2-field, but it must go through the exact `_m4_cols` (no padding).
+## 8. Open choices for crew
+- **`δ*` practical-equivalence margin** (§7, branch 3) — proposed 0.005 R², needs crew ratification.
+- **`ρ*` relative-reduction threshold** (§7) — proposed 0.25.
+- Whether golden's aspect ≈ 3.0 (§2) warrants any extra boundary control beyond the PCA-slab CV.
 
 ---
 
 ## Change log
-**v2 — 2026-08-29** (crew decisions A1–A11): retained ladder {2,4,8,12,16} (A1); replaced equal
-extents with geometry-matched tiers + physical metrics, with flagged missing e14/e16 metrics and a
-residual golden-elongation mismatch (A2); fixed the evaluated set to the `d_bound≥16ℓ` common
-population for all rungs (A3); froze the six preflight offsets (A4); made padded-super-patch
-Voronoi mandatory and added the Δ=4-vs-Δ=6 convergence check with a 1e-6 tolerance (A5); corrected
-Group A annuli (exclude centre, integer-centred round-bins with tolerance, and *corrected the
-"empty innermost bin" claim* — it is expected non-empty) (A6); removed edge-length moments from the
-primary (A7); updated all feature counts to `r+9·m(r)` (A8); specified outer leave-one-offset-out
-validation with offsets as the replication unit and a frozen PCA-slab inner CV, not equal-angle
-quadrants (A9); replaced the overlapping outcomes with a 5-branch hierarchical procedure (A10); and
-rebuilt the parity control as a genuine 2-component physical field (complex `z_N`) through the exact
-11-column `_m4_cols`, with an honest depth-column caveat (A11).
+**v3 — 2026-08-29** (Sol audit A1–A8): right-closed radial bins `k=ceil(d/ℓ−τ)` with the geometry
+occupancy/min-distance check (A1); measured the missing silver e14/e16, platinum e16 metrics and
+confirmed the tiers on count+usable-area with a flagged aspect-ratio mismatch (A2); kept the golden
+ladder through r=16, treating elongation as a reported control issue (A3); froze and verified the
+≥400/≥100-per-slab floor — all nine tiers pass (A4); rejected the degenerate `z_N` parity field
+(var≈0 measured) and adopted the rank-2-verified `(degree, Voronoi-area)` field through the exact
+`_m4_cols`, with frozen zero-variance handling (A5); clarified the inner CV (fold `j` holds out
+slab `j` across all training patches; lift-coordinate lexicographic tie-break) (A6); repaired the
+hierarchical tree (feasibility vs mixed separated; "CI includes zero" ≠ equivalence; predeclared
+equivalence rule with relative + absolute margin flagged for crew) (A7); and froze a 20-draw
+capacity control with fixed seeds (A8).
 
-**v1 — 2026-08-28.** Initial frozen `physical(r)` column manifest.
+**v2 — 2026-08-29.** Crew decisions A1–A11. **v1 — 2026-08-28.** Initial column manifest.
 
-*End of draft v2. Committed to `gpt/workbench` only. Nothing sealed; no dynamics/address/targets
-accessed; no science-branch file altered.*
+*End of draft v3. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
+no science-branch file altered.*
