@@ -1,167 +1,165 @@
-# DRAFT v5 — frozen protocol for the MSD transport endpoint (radius-saturation, stage-two)
+# DRAFT v6 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks were
 run (no study geometry/dynamics/address/LDOS/targets/β/outcomes). No science-branch file altered.**
+This manifest is **self-contained**.
 
-**v5 (2026-08-29)** ratifies `L=200`, `Δt=0.05`, the batching rule and the numerical tolerance from
-the actual-combined-workload benchmark (`gpt_workbench/benchmark_msd_grid.py`), and removes the
-family-specific toy-validation requirement. Builds on v4 (Sol audit B1–B7 via
-`gpt_workbench/benchmark_msd.py`). Full dated change log at the end.
+**v6 (2026-08-31)** restores the definitions shortened in v5, froze the time-grid details, removed
+optionality, and removed the mid-band secondary from the sealable endpoint (points 8–9). Full dated
+change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
 
 ---
 
-## 0. What this endpoint is for
-A per-vertex spreading exponent `β(v0)` per admitted launch, regressed on M0→M4 by the identical
-`transport_run.py` machinery. This document freezes **how `β(v0)` is defined and computed**.
+## 1. Physical setup (frozen)
+- **Hamiltonian** `H = A` — the tiling adjacency (uniform hopping, `ħ = 1`, `J = 1`). The
+  perpendicular-space address appears **nowhere** in `H`; it enters only later as an analysis
+  feature. (Edge-length-weighted `H` is a robustness variant only.)
+- **Distance** Euclidean parallel-space `‖par[v] − par[v0]‖`.
+- **Boundary** `d_bound(i) = hull_depth(par)[i]` (signed distance of i to the patch's par-space
+  convex hull), per vertex. **Unit** `ℓ = median edge length`; time in units `ħ/J`. All constants
+  a-priori.
 
-## 1. Frozen physical setup
-`H = A` (adjacency, `J=1`); Euclidean distance; `d_bound(i)=hull_depth(par)[i]`; `ℓ = median edge
-length`. Address nowhere in H.
+## 2. Launch-site selection (frozen)
+- **Admission `d_bound(v0) ≥ 16ℓ`** — launches come from the same `d_bound≥16ℓ` common set the
+  radius manifest evaluates.
+- **Deterministic, spatially-balanced subsample: `L = 200` per patch, `L/4 = 50` per PCA slab**
+  (the 4 slabs of physical manifest §5). Within each slab, sort by `(PC1 projection, lift-coordinate
+  lexicographic)` and take **evenly-spaced** indices to the per-slab quota. No address used. If a
+  patch's common set has `< 200`, use all of it (all nine tiers have `≥ 581`, so `L=200` is met).
+- Every selected launch yields a `β(v0)`; nothing downstream culls sites (§7).
 
-## 2. Algorithm & launch count (B1, B2) — benchmarked, not asserted
+## 3. Initial state (frozen) — unfiltered, full-spectrum
+`|ψ0⟩ = |v0⟩` (unit amplitude on `v0`, zero elsewhere): exactly localised, `MSD(0)=0`,
+`P_strip(0)=0`. It spans the **full spectrum**. **This is a full-spectrum wavepacket-transport
+test — NOT a mid-band test**, and it does not by itself establish the mid-band LDOS mechanism
+(§8). *The mid-band-projected secondary is removed from this sealable endpoint (see §11).*
 
-**Primary method: sparse/block Krylov propagation** (`scipy.sparse.linalg.expm_multiply`),
-**validated** against exact diagonalisation to `max|Δ| = 3.4e-15` on an n=500 toy (benchmark).
-**Exact diagonalisation is NOT the production method:** its per-vertex/all-time reconstruction is
-`O(n²·L·T)` (≈`6000²·L·48`), intractable; even the eigendecomposition alone projects to ~57 min
-across the 54 patches, before the infeasible reconstruction.
+## 4. Algorithm (frozen, benchmark-ratified)
+- **Primary: sparse/block Krylov propagation** (`scipy.sparse.linalg.expm_multiply`), validated vs
+  exact diagonalisation to `max|Δ| = 3.4e-15` on synthetic graphs spanning the planned size/degree
+  range — **sufficient; no family-specific toy validation required** (it would needlessly touch
+  study substrates). Exact diagonalisation is **not** the production method (its per-vertex/all-time
+  reconstruction is `O(n²·L·T)`, intractable).
+- **Frozen constants:** `L = 200`; **launch-batch size 50**; propagate once on the **shared 161-point
+  boundary grid** (§5) per batch and **reduce each time-slice on the fly** to the scalars `MSD(t;v0)`
+  and `P_strip(t;v0)` — never materialise the `(T×V×L)` tensor (benchmark peak RSS ~1.6 GB, ~170 min
+  over 54 patches × both engines). Numerical tolerances in §9.
 
-**Engineering benchmark (synthetic sparse graphs, matched only in n and degree; no study
-geometry/dynamics/outcomes):**
+## 5. Time grids and boundary detection (frozen)
+- **Boundary-monitoring grid:** the **linear grid `linspace(0, 8, 161)`, `Δt = 0.05`** — drives the
+  whole propagation.
+- **β-fit grid:** the **48 log-spaced times on `[2,8]` snapped to the nearest boundary-grid points**
+  — the exact snapped list is **generated and stored pre-seal** at
+  `gpt_workbench/snapped_beta_times.txt` (checked: **48 unique** values, **max snap error 0.0231**).
+  The fit uses the **actual snapped times**, not the unsnapped ideal times; the implementation
+  **asserts 48 unique values**.
+- **Boundary strip (frozen):** `STRIP := { v : d_bound(v) < w·ℓ }`, **`w = 2`**.
+  `P_strip(t) = Σ_{v ∈ STRIP} |ψ_t(v)|²`; **excess mass** `ΔP_strip(t) = P_strip(t) − P_strip(0)`
+  (per-destination hull-depth strip; for the interior primary launch `P_strip(0)=0`).
+- **Boundary crossing:** the earliest monitoring-grid time with `ΔP_strip(t) ≥ 0.01`.
+- **`t_bound*` = the earliest crossing over all selected launches, all families/tiers/offsets, and
+  both engines** — a single global endpoint.
+- **Primary β fit uses the fixed interval `[2,8]` only if `t_bound* ≥ 8`.** If `t_bound* < 8`, the
+  primary transport endpoint is **finite-size-limited — no shortening, retuning or rescue after
+  seeing results**.
 
-| n | exact eigh | Krylov coh. L=50 | Krylov coh. L=400 | Krylov CTMC L=400 | peak RSS |
-|---|---|---|---|---|---|
-| 2000 | 5.2 s | 2.5 s | 26.7 s | 18.9 s | 1.3 GB |
-| 4000 | 36 s | 5.9 s | 60 s | 46 s | 2.6 GB |
-| 6000 | 67 s | 9.0 s | 105 s | 85 s | 4.2 GB |
+## 6. MSD and exponent (frozen)
+`MSD(t;v0) = Σ_v |ψ_t(v)|² · ‖par[v] − par[v0]‖²` (`= ΔMSD` for the primary since `MSD(0)=0`).
+With `MSD(t) ∝ t^{2β}`, **`β(v0) = ½ · slope`** of an OLS fit of `log MSD` on `log t` over the
+**snapped `[2,8]` grid points** (§5). Record `R²_fit(v0)` as a diagnostic. β = 1 ballistic,
+½ diffusive, `<½` sub-diffusive; critical states `0 < β < 1`.
 
-**Actual-combined-workload benchmark (v5, `benchmark_msd_grid.py`) — L=200, the 161-point boundary
-grid + the 48 β-times, both engines, launch-batches of 50, reduce-on-the-fly:** at n=6000, the
-**shared 161-grid** propagation is **188.6 s per patch (both engines)**, **peak RSS ~1.6 GB** (the
-batch/reduce strategy avoids the (T×V×L) tensor), agreement with the exact reference **3.4e-15** at
-shared times. Computing the 48 log β-times *separately* would add ~129 s/patch. **Projected over 54
-patches: shared-grid ≈ 170 min; separate-β ≈ 286 min.**
+## 7. Missingness and admission checks (frozen; both engines)
+- **Every admitted launch yields a `β`.** There is **no per-site `R²_fit` / curvature / dynamics-
+  derived exclusion** (such a filter could correlate with the address). Admission uses only
+  `d_bound`.
+- **Address-correlated-admission check:** admission by `d_bound` is not assumed address-independent
+  — report and test the admitted vs excluded population's M4-feature distributions; any imbalance is
+  a stated caveat.
+- **Aggregate quality stop (per engine):** if the median `R²_fit` across admitted launches `< 0.90`
+  for an engine, that engine's exponent is **descriptive** (no transport claim); this is a whole-
+  engine verdict, never a per-site cull.
+- All rules apply to **both** the coherent and classical engines on the **same common window**.
 
-- **FROZEN (benchmark-ratified): `L = 200` per patch; launch-batch size 50; sparse-Krylov primary;
-  numerical tolerance ≤ 1e-10** (observed 3.4e-15). Feasible at ~170 min / ~1.6 GB. Validation is on
-  **synthetic sparse graphs spanning the planned size/degree range — sufficient; no family-specific
-  toy validation is required** (it would needlessly touch study substrates). L=400 remains an
-  optional crew upgrade (~2× cost).
-- **FROZEN batching rule:** propagate once on the **shared 161-point linear `[0,8]` grid** per
-  launch-batch; the 48 log β-times are **snapped to the nearest shared-grid points** (max snap error
-  `Δt/2 = 0.025` t-units, negligible for a log-log slope), so the β grid shares all propagation work
-  with the boundary grid — no separate β propagation.
-- Launches are the **deterministic PCA-slab spatially-balanced subsample** (physical manifest §5):
-  `L/4 = 50` per slab, evenly spaced by sorted PC1 (lift-coordinate tie-break). No address used.
+## 8. Aggregation and inference (offset-level randomisation)
+The per-vertex target `{β(v0)}` replaces `ld_primary` in the identical `transport_run.py` nested
+M0→M4 pipeline (with the `M4shuf`/`M3pos`/`M4pos`/`M3far`/`M4far` controls, the parity and capacity
+controls, and the conditional nulls), for both engines and all family×tier configs. **Inference is
+the offset-level randomisation test of conditional-null manifest §4–§5:** the six leave-one-offset-
+out increments are **not** independent replicates; the primary statistic is the median across the
+nine family×tier configs then across the six offsets; the one-sided
+`p = (1 + #{M_null ≥ M_obs})/(B+1)` with **`B = 1000`** and `α = 0.05`; **all six offset effects and
+signs are always reported**; ≥5/6 positive is a supporting criterion.
 
-## 3. Initial state (unchanged from v3) — primary unfiltered, full-spectrum
-`|ψ0⟩ = |v0⟩` (localised, `MSD(0)=0`). **A full-spectrum wavepacket-transport test; not a mid-band
-test.** Secondary state handled in §6.
+## 9. Numerical tolerances (frozen, precise)
+- **State/probability agreement:** the production propagator (Krylov) must match an exact-
+  diagonalisation reference on a synthetic graph to **`max|ψ_t(v) − ψ_t^{exact}(v)| ≤ 1e-10`**
+  (observed `3.4e-15`) at shared grid times, checked pre-seal.
+- **Norm / probability conservation:** coherent `| ‖ψ_t‖² − 1 | ≤ 1e-8` at every grid time;
+  classical `| Σ_v p_v(t) − 1 | ≤ 1e-8` and `p_v(t) ≥ −1e-10`. A patch/time violating these is
+  flagged, not silently used.
 
-## 4. Time grids and boundary detection (B3) — separate monitoring grid
+## 10. Classical null engine (frozen) — continuous-time Markov generator
+`Q = A·D⁻¹ − I` (`D = diag(deg)`; column-stochastic: columns of `Q` sum to 0). `Q_{vw} = A_{vw}/deg_w`
+for `v≠w`, `Q_{ww} = −1` (unit exit rate; stationary `π ∝ deg`). `p(t;v0) = e^{Qt} e_{v0}` (valid
+for all real `t ≥ 0`, via the same Krylov method), `MSD_cl(t;v0) = Σ_v p_v(t;v0)·‖par[v]−par[v0]‖²`.
+Same grids, same window (§5), same OLS exponent → `β_cl`. Time axis matched to the quantum engine
+(unit exit rate ↔ `J=1`). Expected diffusive, address-blind.
 
-- **β-fit grid:** the **48 log-spaced points on `[2,8]`** for the exponent fit, realised by
-  **snapping to the nearest shared-grid points** (§2 batching rule; max error 0.025 t-units).
-- **Boundary-monitoring grid (FROZEN, benchmark-ratified): a linear grid on `[0,8]` with
-  `Δt = 0.05` → 161 points**, to detect a *transient* 1% excess-boundary-mass crossing the log
-  `[2,8]` grid could miss. The benchmark confirms this grid drives the whole propagation at ~170 min
-  / ~1.6 GB; the crew may tighten `Δt` (cost scales ~linearly).
-- On the monitoring grid compute `ΔP_strip(t) = P_strip(t) − P_strip(0)` (hull-depth strip, `w=2ℓ`)
-  for **both** engines and **every** selected launch.
-- **`t_bound*` = the earliest sampled monitoring-grid time at which any launch, on either engine,
-  reaches `ΔP_strip = 0.01`** — a **single global endpoint** over all launches/families/tiers/
-  offsets/engines.
-- **Primary β fit uses `[2,8]` only if `t_bound* ≥ 8`.** If `t_bound* < 8`, the primary transport
-  endpoint is **finite-size-limited — no shortening, retuning, or rescue after seeing results**.
+## 11. Removed: mid-band secondary (point 9)
+The mid-band-projected state `|χ0⟩ = P_W|v0⟩/‖·‖` requires constructing the spectral projector
+`P_W` (`|E|∈[0.8,2.5]`), which **reintroduces an eigendecomposition / spectral-filter problem the
+Krylov benchmark did not resolve**. It is **removed from this sealable endpoint** and preserved only
+as a **future, separately preregistered mechanistic study** requiring a specified and benchmarked
+spectral-filter algorithm (e.g. a polynomial/Chebyshev band-pass with its own numerical validation).
+The primary full-spectrum transport endpoint is unaffected.
 
-## 5. MSD, exponent, missingness (unchanged)
-`MSD(t;v0)=Σ_v|ψ_t(v)|²‖par[v]−par[v0]‖²`; `β(v0)=½·slope` of OLS `log MSD` on `log t` over the
-`[2,8]` grid. **Every admitted launch yields a β**; `R²_fit` is a diagnostic + aggregate stop
-(median `R²_fit<0.90` ⇒ that engine descriptive), never a per-site cull. Admitted-vs-excluded
-population M4-feature distributions reported and tested (admission not assumed address-independent).
-Rules apply to **both engines on the same common window**.
+## 12. Decision threshold and claim wording
+The endpoint is met only if the coherent primary statistic (§8) is significant by the randomisation
+test, is **killed by the stratified shuffle** (`M4shuf` consistent with 0; ≥70% of the plain
+increment removed), is **not reproduced by the classical engine** (`β_cl` increment ≤ 0.2× the
+coherent), **exceeds** the parity and capacity detection floors, **survives both conditional nulls**,
+and the aggregate gates pass (median `R²_fit ≥ 0.90` per engine; global `t_bound* ≥ 8`).
 
-## 6. Mid-band secondary (B4) — frozen as the signed ΔMSD(t) curve only
-The mid-band-projected state `|χ0⟩=P_W|v0⟩/‖·‖` (`P_W`: `|E|∈[0.8,2.5]`) is reported **only as the
-signed `ΔMSD(t)` curve on the common grid** — a descriptive mechanistic diagnostic. **No β fit, no
-post-hoc AUC, no scalar endpoint**, and it is never called a localised launch. (Removed v3's "e.g."
-open-endedness.)
-
-## 7. Classical null engine (unchanged) — continuous-time Markov generator
-`Q=A·D⁻¹−I`, `p(t)=e^{Qt}e_{v0}` via the same Krylov method; same grids, same window; yields
-`β_cl`. Expected diffusive, address-blind.
-
-## 8. Offset-level inference (B5-repaired) — randomisation over the same fold structure
-- **Always report the six held-out (leave-one-offset-out) increments `{Δ_o}` and their sign
-  pattern.** The six overlapping LOO folds are **not** treated as independent replicates.
-- **Removed:** the ordinary six-offset bootstrap CI (v3) — it wrongly assumed fold independence.
-- **Randomisation test (frozen):** for each of **exactly `B = 1000` stratified-shuffle
-  repetitions** (seeds frozen; see conditional-null manifest §4), recompute the **full six-offset
-  held-out vector** and its **median**, building a null distribution of six-offset medians. This
-  carries the **same fold dependence** in the observed and shuffled statistics.
-- **Decision:** report the **randomisation tail probability** of the observed six-offset median
-  against that null, with **≥ 5/6 offsets positive** as a **supporting** consistency criterion
-  (not the sole test). **All seeds frozen** pre-seal.
-
-## 9. Decision threshold & claim wording (B6, B7)
-The endpoint is met only if the coherent six-offset-median increment is significant by the §8
-randomisation test, is shuffle-killed (≥70% removed), exceeds the parity and capacity controls and
-the conditional nulls, and the aggregate gates pass (`R²_fit`, `t_bound* ≥ 8`, launch count).
-
-**Claim wording (B6, frozen):** success licences only —
+**Claim wording (frozen):** at most —
 > *"The address representation predicts heterogeneity in full-spectrum wavepacket spreading beyond
 > the frozen physical descriptions and controls."*
 
-**No inference that perpendicular space is a literal physical degree of freedom.** The older phrase
-"a physical law reads the address" is retired.
+**No inference that perpendicular space is a literal physical degree of freedom.**
 
-**Classical-diagnostic caveat (B7, frozen):** if the **classical** power-law diagnostic fails
-(median `β_cl` `R²_fit < 0.90`), the **coherent-vs-classical contrast is inconclusive**. This does
-**not** erase a well-defined quantum `β` result, but it **prevents the strongest coherence-specific
-claim** — report the quantum β with that limitation stated.
+**Classical-diagnostic caveat:** if the **classical** power-law diagnostic fails (median `β_cl`
+`R²_fit < 0.90`), the **coherent-vs-classical contrast is inconclusive** — this does **not** erase a
+well-defined quantum β result, but it **prevents the strongest coherence-specific claim**.
 
 **Authorised non-positive outcomes:** shuffle-not-killed → "reads multiscale geometry, not cleanly
-the address"; `t_bound*<8` → **finite-size-limited** (legitimate, not a failed run); randomisation
-non-significant → address signal does not surface in spreading at this size/coupling.
-
-## 10. Open choices for crew
-- **`L`** (§2): **frozen 200** (benchmark-ratified); 400 an optional ~2× upgrade.
-- **Boundary spacing** (§4): **frozen `Δt=0.05`**; crew may tighten (cost ~linear).
-- **Randomisation repetitions** (§8): **`B=1000`** (conditional-null manifest §4); raise to 5000 if
-  a tight `p≈0.01` is needed.
+the address"; `t_bound* < 8` → **finite-size-limited** (legitimate, not a failed run); randomisation
+non-significant → the address signal does not surface in spreading at this size/coupling. No family
+ordering; no perp-space ontology.
 
 ## Appendix LR — retired analytic bound (documented failed diagnostic)
-`t_hi ≈ 0.12–0.90` at every family/extent/depth (preflight v2), extent-invariant at fixed depth,
-~145ℓ depth needed for `t_hi=8`. Kept for transparency; **never** an admissibility gate (B1, prior).
+`t_hi ≈ 0.12–0.90` at every family/extent/launch-depth (preflight v2), extent-invariant at fixed
+depth, ~145ℓ depth needed for `t_hi=8`. Retained for transparency; **never** an admissibility gate.
+
+## 13. Open choices for crew
+- Whether platinum small/medium (permutation-null-infeasible per conditional-null §9) affect the
+  MSD endpoint's config set the same way.
 
 ---
-
 ## Change log
-**v5 — 2026-08-29** (Sol narrow closure + actual-grid benchmark): ran the actual-combined-workload
-synthetic benchmark (L=200; 161-pt boundary grid + 48 β-times; both engines; batch 50; reduce-on-
-fly) → **froze `L=200`, `Δt=0.05`, launch-batch 50, sparse-Krylov primary, numerical tolerance
-≤1e-10** (observed 3.4e-15; ~170 min / ~1.6 GB over 54 patches), with the **48 log β-times snapped
-to the shared 161-grid** so they add no propagation; **removed the family-specific toy-validation
-requirement** (synthetic-graph validation over the planned size/degree range suffices); and set the
-offset-median randomisation count to **exactly `B=1000`** (conditional-null manifest §4).
+**v6 — 2026-08-31** (Sol pre-seal, standalone): restored the full boundary-strip / excess-mass /
+exponent / engine / admission definitions self-contained; **froze the time-grid** — stored the
+48-point snapped β-time list (48 unique, max error 0.0231), fit against the **actual snapped times**
+with an assert of 48 unique values, and froze `L=200`, batch 50, `Δt=0.05`, `B=1000`, **removing the
+optional L=400 / tighter-Δt / B=5000 language**; defined **boundary crossing as `ΔP_strip ≥ 0.01`**;
+stated **precise numerical tolerances** (state ≤1e-10, norm/probability conservation ≤1e-8); and
+**removed the mid-band secondary** from the sealable endpoint, preserving it only as a future
+separately-preregistered spectral-filter study (pts 8–9).
 
-**v4 — 2026-08-29** (Sol audit B1–B7): benchmarked the propagation cost on synthetic graphs and
-**proposed a frozen `L=200` with sparse Krylov as the primary method** (validated to 3.4e-15),
-retiring the un-benchmarked L=400 and the "exact-diag is tractable" assumption (B1, B2); added a
-separate dense **boundary-monitoring grid on `[0,8]` (Δt=0.05)** with `t_bound*` as the earliest
-global crossing over both engines and no post-hoc rescue (B3); froze the mid-band secondary as the
-**signed ΔMSD(t) curve only** — no AUC/scalar (B4); repaired offset-level inference to a
-**randomisation test over the same six-offset fold structure** (≥1000 shuffles, median-of-six null,
-tail probability + ≥5/6 supporting), removing the invalid bootstrap CI (B5); replaced the claim
-wording with **"the address representation predicts heterogeneity in full-spectrum wavepacket
-spreading beyond the frozen physical descriptions and controls"** and forbade the literal-physical-
-DOF inference (B6); and stated that a failed classical power-law diagnostic makes the
-coherent-vs-classical contrast **inconclusive** without erasing a well-defined quantum β (B7).
+**v5 — 2026-08-29** (closure + actual-grid benchmark). **v4 — 2026-08-29** (audit B1–B7).
+**v3 — 2026-08-29** (crew B1–B8). **v2 — 2026-08-28** (four-blocker repair). **v1** initial.
 
-**v3 — 2026-08-29.** Crew decisions B1–B8. **v2 — 2026-08-28.** Four-blocker repair. **v1.** Initial.
-
-*End of draft v5. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks run;
+*End of draft v6. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks run;
 no science-branch file altered.*
