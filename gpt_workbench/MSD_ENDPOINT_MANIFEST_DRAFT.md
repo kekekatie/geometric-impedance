@@ -1,4 +1,4 @@
-# DRAFT v8 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
+# DRAFT v8.1 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks +
 geometry/feature diagnostics were run (no study geometry/dynamics/address/LDOS/targets/β/outcomes).
@@ -9,6 +9,11 @@ nine-config primary is fixed a priori; a G1 failure downgrades the global claim,
 `M₉`); shuffle-kill is now a **paired fold/config reduction then aggregate** (not
 difference-of-medians); permutation tail renamed **`q_ref`** (extremeness, not significance);
 Westfall–Young over the **seven** feasible cells; finite-size at **`t_bound* ≤ 8`**. Builds on v7.
+**v8.1 (2026-08-31)** applies the external-scout claim audit (implication 3, documentation-only): **G5
+is relabelled cross-engine non-reproduction** and **"coherence-specific" is removed as an earned
+verdict** — a G5 pass is engine-specific (coherent `H=A` vs the degree-normalised CTMC `Q=A·D⁻¹−I`)
+and does not isolate coherence from generator choice. No endpoints, thresholds, other gates,
+denominators, config sets or runtime design changed; the top-line claim is unchanged.
 Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
@@ -109,8 +114,9 @@ With `MSD(t) ∝ t^{2β}`, **`β(v0) = ½ · slope`** of an OLS fit of `log MSD`
   - if a **coherent** config has median `R²_fit < 0.90`, that config is **descriptive** and the
     **global strongest transport claim fails or is downgraded** — `M₉` is **not** silently
     recomputed over the surviving cells;
-  - if a **classical** config fails, the corresponding **coherence-specific (G5) comparison is
-    inconclusive**; again `M₉` membership is unchanged.
+  - if a **classical** config fails, the **cross-engine non-reproduction (G5) comparison is
+    inconclusive** (failure of the specified classical comparator makes it inconclusive); again
+    `M₉` membership is unchanged.
 - All rules apply to **both** the coherent and classical engines on the **same common window**.
 
 ## 8. Aggregation and inference (offset-level randomisation)
@@ -175,12 +181,17 @@ coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (
   `plain_{c,o} ≤ δ_cap` or `≤ 0` has `red` **undefined** → that fold/config routes to
   **mixed/undetectable** (a kill of an undetected signal is meaningless); if that leaves the global
   statistic undefined, the endpoint is mixed/undetectable. Set: **`M₉`** (paired).
-- **G5 Classical contrast:** stat = classical `M₉,address` (CTMC); threshold
-  `classical M₉,address ≤ 0.2 × coherent M₉,address`. **Denominator handling:** if coherent
-  `M₉,address ≤ δ_cap` or `≤ 0` → undefined → **mixed/undetectable**. **Classical-diagnostic
-  caveat:** if the classical per-`(config,engine)` median `R²_fit < 0.90` (G1), the
-  coherent-vs-classical contrast is **inconclusive** — it does not erase a well-defined quantum β,
-  but it **prevents the strongest coherence-specific claim**. Set: **`M₉`**.
+- **G5 Cross-engine non-reproduction (NOT a "coherence-specific" verdict):** stat = classical
+  `M₉,address` from the **specified degree-normalised classical CTMC** (§10); threshold
+  `classical M₉,address ≤ 0.2 × coherent M₉,address`. **Interpretation (frozen):** a G5 pass
+  establishes an **engine-specific non-reproduction** result — coherent adjacency propagation
+  (`H = A`) versus the frozen degree-normalised CTMC (`Q = A·D⁻¹ − I`). It does **not** isolate
+  coherence from generator choice, because `H = A` and `Q = A·D⁻¹ − I` are **different operators**
+  on these irregular graphs. **Denominator handling:** if coherent `M₉,address ≤ δ_cap` or `≤ 0`
+  → undefined → **mixed/undetectable**. **Classical-diagnostic caveat:** if the classical
+  per-`(config,engine)` median `R²_fit < 0.90` (G1), **failure of the specified classical comparator
+  makes the cross-engine non-reproduction comparison inconclusive** — it does not erase a
+  well-defined quantum β. Set: **`M₉`**.
 - **G6 Residual-orthogonal null "survives" (explicit pre-sealed criterion):** stat = deterministic
   `M₉` of `ΔR²_resid` (conditional-null §2); reference `δ_cap`; threshold `> δ_cap`. Stated as a
   **lower-bound detection** check, **not** a randomisation test. Set: **`M₉`**.
@@ -216,6 +227,17 @@ depth, ~145ℓ depth needed for `t_hi=8`. Retained for transparency; **never** a
 
 ---
 ## Change log
+**v8.1 — 2026-08-31** (external-scout claim audit, implication 3; documentation-only): relabelled
+**G5** "Classical contrast" → **"Cross-engine non-reproduction"** and removed **"coherence-specific"**
+as an earned verdict in §7 and §12; stated explicitly that a G5 pass is **engine-specific** (coherent
+`H=A` vs the specified degree-normalised CTMC `Q=A·D⁻¹−I`) and does **not** isolate coherence from
+generator choice because the two are different operators on irregular graphs; replaced "prevents the
+strongest coherence-specific claim" with "failure of the specified classical comparator makes the
+cross-engine non-reproduction comparison inconclusive". No new propagation control; no change to
+endpoints, thresholds, other gates, denominators, config sets, runtime design, or the frozen top-line
+claim. (The generator-matched paired-Laplacian study — quantum `e^{−itL}` vs classical `e^{−tL}` — is
+recorded as a separate future study, not a pre-seal addition; see `EXTERNAL_SCOUT_CLAIM_AUDIT.md`.)
+
 **v8 — 2026-08-31** (Sol 3rd pre-seal pass): **G1 no longer mutates `M₉`** — the nine-config
 membership is fixed a priori, and a poor-`R²_fit` config becomes descriptive with the global claim
 downgraded rather than recomputing `M₉` over a subset (with the exact coherent/classical

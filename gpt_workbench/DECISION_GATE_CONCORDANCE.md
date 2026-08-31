@@ -1,6 +1,6 @@
 # Decision-gate concordance — statistic & configuration set per gate
 
-**Companion to physical-radius v7, MSD v8, conditional-null v4.** Which aggregate statistic and
+**Companion to physical-radius v7, MSD v8.1, conditional-null v4.1.** Which aggregate statistic and
 which configuration set each decision gate uses. `δ_cap` = 95th percentile of the 200-draw
 capacity distribution of `M₉` (physical §6) — a capacity detection floor, **not** a threshold for
 `address − parity`. All at reference radius r=16, coherent engine unless noted.
@@ -19,7 +19,7 @@ e16/e18 excluded by the geometry-only six-offset audit). `Δ_ap = M₉,address �
 | **G2** permutation stress | address beyond the constrained shuffle? | `M_perm,7,address` | B=1000 constrained-permutation (distance-weighted, k=32, λ=1.0) **stress reference** | `q_ref < 0.05` (extremeness, not significance) | none (difference) | **`M_perm,7`** (7 feasible cells; infeasible never pass) |
 | **G3** capacity | above the pipeline noise floor? | `M₉,address` | 200-draw capacity `M₉` | `> δ_cap` | none | **`M₉`** (9 cells) |
 | **G4** shuffle-kill | killed by the sealed stratified shuffle? | `R_kill` = **paired** `red_{c,o}=(plain−shuf)/plain` aggregated by `M₉` | — | `R_kill ≥ 0.70` | any fold/config `plain ≤ δ_cap` or `≤0` → `red` undefined → mixed | **`M₉`** (paired) |
-| **G5** classical contrast | not reproduced by the classical walk? | classical `M₉,address` | — | `≤ 0.2 × coherent M₉,address` | coherent `≤ δ_cap` or `≤0` → mixed; classical G1 fail → inconclusive | **`M₉`** |
+| **G5** cross-engine non-reproduction | not reproduced by the specified degree-normalised classical CTMC? (engine-specific — does **not** isolate coherence from generator choice: `H=A` vs `Q=A·D⁻¹−I` are different operators) | classical `M₉,address` | — | `≤ 0.2 × coherent M₉,address` | coherent `≤ δ_cap` or `≤0` → mixed; classical G1 fail → inconclusive | **`M₉`** |
 | **G6** residual null | orthogonal-to-`X_r` content present? | deterministic `M₉` of `ΔR²_resid` | `δ_cap` | `> δ_cap` (lower-bound detection, not a test) | none | **`M₉`** |
 | **G7** vs parity | beyond representation repackaging? | `Δ_ap` | — | **DESCRIPTIVE ONLY — no threshold, no gate** (`δ_cap` not valid for `Δ_ap`) | — | **`M₉`** (descriptive) |
 | **G8** per-config secondary | which configs individually? | per-config `T_c` | B=1000 permutation, Westfall–Young step-down max-T over the **7 feasible cells** | extremeness `q̃` | — | per config (7 feasible; platinum e16/e18 descriptive) |

@@ -1,13 +1,15 @@
 # External-scout claim-language audit — current manifests vs the six implications
 
-**Date 2026-08-31. Read-only audit; NO manifest was amended from it (only this record + the scout
-synthesis exist). No study dynamics / address / LDOS / β / targets accessed; nothing sealed; science
-branch untouched.** Companion to `EXTERNAL_LITERATURE_SCOUT_SYNTHESIS_DRAFT.md` (commit `03d5f40`),
-which committed the provisional lead-map + a summary of this audit. This file makes the full
-sentence-level audit durable and attachable for Work-GPT/Sol review.
+**Date 2026-08-31. Documentation-only audit. No study dynamics / address / LDOS / β / targets
+accessed; nothing sealed; science branch untouched.** Originally read-only; following Work-GPT/Sol's
+approval, its single indispensable finding (implication 3) was applied as a documentation-only
+wording repair — G5 relabelled cross-engine non-reproduction, "coherence-specific" removed as an
+earned verdict (MSD v8.1 §7/§12; concordance G5). No endpoints, thresholds, other gates, denominators,
+config sets, or runtime design were changed. Companion to
+`EXTERNAL_LITERATURE_SCOUT_SYNTHESIS_DRAFT.md` (commit `03d5f40`).
 
-Audited: conditional-null **v4** (now v4.1), physical-radius **v7**, MSD **v8**, decision-gate
-concordance. The six implications are quoted in the scout synthesis §"Provisional implications".
+Audited: conditional-null **v4.1**, physical-radius **v7**, MSD **v8.1**, decision-gate concordance.
+The six implications are quoted in the scout synthesis §"Provisional implications".
 
 ---
 
@@ -39,15 +41,20 @@ one-line generator-mismatch caveat. The frozen top-line claim (MSD §12: *"predi
 full-spectrum wavepacket spreading beyond the frozen physical descriptions and controls"*) is
 **already correct** and needs no change — only the G5-adjacent "coherence-specific" language does.
 
-**Optional robustness control — NOT pre-seal.** A second, generator-matched classical comparator
-(e.g. combinatorial-Laplacian walk `Q' = A − D`, or a symmetric normalised-adjacency walk) to
-separate coherence from generator choice.
-- *Cost:* ~doubles classical propagation for the endpoint — modest (classical is far cheaper than the
-  ~84k permutation-null quantum fits; marginal cost ≈ the existing capacity-scale runs).
-- *Scientific tradeoff:* there is **no unique** classical analogue of `H = A`; adding one generator
-  only **brackets** the confound, it does not close it, and choosing "the fair" generator is itself a
-  modelling commitment. Doing it pre-seal is protocol creep (implication 6). Register it as a **named
-  future study**, the way MSD §11 defers the mid-band secondary.
+**Optional robustness control — NOT pre-seal (corrected per Work-GPT/Sol).** To separate coherence
+from generator choice one must **match the generators, which changes BOTH engines** — not swap only
+the classical side. Simply substituting a classical combinatorial-Laplacian walk `Q' = A − D = −L`
+against the present quantum `H = A` is **not** generator-matched (it pairs a Laplacian classical
+process with an adjacency quantum process). The correct future study is a **paired Laplacian
+comparison**: quantum `e^{−itL}` versus classical `e^{−tL}` (with `L = D − A`), **signs and
+conventions frozen at design time**.
+- *Cost:* it re-runs **both** engines under a new generator — a whole second propagation design, not a
+  cheap add-on.
+- *Scientific caveat:* even the paired-Laplacian comparison is **not a uniquely definitive** classical
+  analogue; there is **no unique** classical counterpart of a given quantum generator. It **brackets**
+  the coherence-vs-generator confound, it does not close it. It **changes both engines** and is a
+  **separate future study**, **not a pre-seal addition** (adding it now would be protocol creep —
+  implication 6), the way MSD §11 defers the mid-band secondary.
 
 ## Implications already satisfied — no manifest change
 
@@ -67,15 +74,21 @@ matching, Scout-1 style (implication 1).
 
 ## Recommendation — indispensable vs future
 
-- **Indispensable pre-seal:** the implication-3 wording repair in MSD §7/§12 and concordance G5 —
-  remove "coherence-specific" as a G5-earned verdict, relabel to the degree-normalised classical
-  walk, state the generator-mismatch caveat. This is a claim-language fix, not a protocol expansion.
-- **Future exploratory (register, do not build now):** the matched-generator second classical
-  comparator; the three optional documentation notes; and — only if a "beyond the rooted
+- **Indispensable pre-seal — DONE (approved by Work-GPT/Sol; applied MSD v8.1 + concordance):** the
+  implication-3 wording repair in MSD §7/§12 and concordance G5 — removed "coherence-specific" as a
+  G5-earned verdict, relabelled G5 **cross-engine non-reproduction** against the specified
+  degree-normalised classical CTMC, stated the generator-mismatch caveat explicitly. Claim-language
+  only; no protocol expansion; top-line claim unchanged.
+- **Future exploratory (register, do not build now):** the **paired-Laplacian** comparison (quantum
+  `e^{−itL}` vs classical `e^{−tL}`, signs frozen — changes **both** engines, not a uniquely
+  definitive analogue); the three optional documentation notes; and — only if a "beyond the rooted
   neighbourhood" claim is ever desired — exact weighted radius-`r` patch-isomorphism matching.
 
 Per implication 6, only the one wording repair is treated as blocking; everything else is deferred.
-**The manifests were NOT amended from this audit** — it is offered for Work-GPT/Sol to direct whether
-to apply the G5 wording repair.
+**Update (2026-08-31):** Work-GPT/Sol approved this conclusion — implication 3 is an indispensable
+claim-language repair, with **no new propagation control** added. The G5 wording repair has been
+applied as a documentation-only amendment (MSD v8.1 §7/§12, `DECISION_GATE_CONCORDANCE.md` G5); no
+endpoints, thresholds, other gates, denominators, config sets, or runtime design were changed, and the
+frozen top-line claim is unchanged.
 
 *Not part of the scientific record until reviewed and merged.*

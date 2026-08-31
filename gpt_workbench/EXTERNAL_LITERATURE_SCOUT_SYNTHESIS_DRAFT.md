@@ -141,19 +141,20 @@ range; apparent enhanced delocalisation can also be **finite-size dependent.**
 
 ## Audit trace against the current manifests (summary; full analysis returned to crew)
 
-A narrow, read-only audit of conditional-null v4 / physical v7 / MSD v8 against the six implications
-was performed on 2026-08-31. **No manifest was amended.** Headline: five of the six implications are
-already substantially satisfied by the current claim language; **the one genuine pre-seal
-claim-language repair is implication 3** — the term "coherence-specific" is used as a verdict earned
-via **G5**, whose only classical comparator is the **degree-normalised CTMC `Q = A·D⁻¹ − I`**, while
-the coherent engine uses **`H = A`**. On the irregular quasicrystal graphs these are **different
-operators**, so a G5 divergence can reflect **generator choice, not coherence** (Scout 1 caution).
-The audit recommends **relabelling G5 and removing "coherence-specific" as an earned verdict**
-(cheap, indispensable) and **registering a matched-generator second classical comparator as a named
-future robustness study** (not a pre-seal expansion — implication 6). The remaining implications
-(1, 2, 4, 5) require **no manifest change**; a small set of optional documentation notes is listed
-in the crew-returned audit. Full sentence-level findings, costs, and the indispensable-vs-future
-split are in the crew review response accompanying this commit.
+A narrow audit against the six implications was performed on 2026-08-31 (full findings in
+`EXTERNAL_SCOUT_CLAIM_AUDIT.md`). Headline: five of the six implications are already substantially
+satisfied by the current claim language; **the one genuine pre-seal claim-language repair is
+implication 3** — the term "coherence-specific" was used as a verdict earned via **G5**, whose only
+classical comparator is the **degree-normalised CTMC `Q = A·D⁻¹ − I`**, while the coherent engine uses
+**`H = A`**. On the irregular quasicrystal graphs these are **different operators**, so a G5 divergence
+can reflect **generator choice, not coherence** (Scout 1 caution). **Following Work-GPT/Sol's
+approval this was applied as a documentation-only repair** (MSD v8.1 §7/§12; concordance G5): G5 is
+relabelled **cross-engine non-reproduction** and "coherence-specific" removed as an earned verdict —
+no new propagation control, no endpoint/threshold/gate/denominator/config-set/runtime change, top-line
+claim unchanged. The remaining implications (1, 2, 4, 5) require **no manifest change**. The only
+generator-matched way to separate coherence from generator choice would be a **paired-Laplacian**
+study (quantum `e^{−itL}` vs classical `e^{−tL}`, signs frozen — changes **both** engines), registered
+as a **separate future study**, not a pre-seal addition.
 
 *Not part of the scientific record until reviewed and merged. Leads unverified; check primary sources
 before any citation or claim.*
