@@ -1,4 +1,4 @@
-# DRAFT v4 — conditional-null design manifest (radius-saturation §2), standalone
+# DRAFT v4.1 — conditional-null design manifest (radius-saturation §2), standalone
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. No study dynamics/address/LDOS/targets/β/
 scores accessed. Only geometry/feature diagnostics + synthetic checks were run.** Self-contained.
@@ -151,9 +151,15 @@ result. **The empirical result remains the held-out predictive increment** (`M�
   never proof of equality.
 
 ## 7. Authorised outcomes (distinct; cautious language)
+**Routing (exhaustive, by named frozen gates only):** first **feasibility** (else *infeasible*);
+then a cell is *compression* if the exact compression criteria pass, or *survives-the-frozen-stress-
+controls* if those exact criteria pass; **any admissible cell meeting neither is *mixed/undetectable***
+(the catch-all). Parity is reported **descriptively alongside**, never as an outcome branch. No cell
+is routed by an unnamed "configs disagree" judgement.
 - **compression (at the pipeline's resolution):** `M₉,address(2)` positive, sign-stable (≥5/6),
-  `> δ_cap`; `M₉,address(16) < δ_cap`; `ρ = M₉,address(16)/M₉,address(2) < ρ* = 0.25`. `ρ*` is a
-  **frozen classification heuristic**, not an equivalence margin. If `M₉,address(2)` is
+  `> δ_cap`; `M₉,address(16) < δ_cap`; `ρ = M₉,address(16)/M₉,address(2) < ρ* = 0.25`. **`ρ* = 0.25`
+  is RATIFIED by Work-GPT/Sol (2026-09-01) as a frozen classification heuristic, NOT an equivalence
+  margin.** If `M₉,address(2)` is
   non-positive, `< δ_cap`, or sign-unstable, `ρ` is **undefined → mixed/undetectable, never
   infeasible.**
 - **survives the frozen stress controls (replaces "stable residual"):** `M₉,address > δ_cap`
@@ -162,8 +168,11 @@ result. **The empirical result remains the held-out predictive increment** (`M�
   increment survives the frozen capacity, residual and permutation stress controls; the parity
   comparison is reported descriptively."* **This is NOT a categorical "irreducible" verdict**, and
   `Δ_ap` is **not** an ingredient.
-- **mixed / undetectable:** configs disagree beyond null uncertainty, or `ρ` undefined, or an
-  undefined-denominator gate route.
+- **mixed / undetectable (the exhaustive fallback):** any admissible cell (feasibility met) that
+  meets **neither** the exact `compression` criteria **nor** the exact
+  `survives-the-frozen-stress-controls` criteria — this **includes** `ρ` undefined and any
+  undefined-denominator gate route (e.g. G4 undefined per MSD §12). Defined only by the named gates,
+  **not** by any unnamed "configs disagree" test.
 - **infeasible:** physical/count floor unmet, or a patch >5% singletons (local permutation control
   unavailable for that cell only).
 - **Claim language:** at most *"the address representation predicts heterogeneity beyond the frozen
@@ -225,16 +234,25 @@ one-standardised-unit candidate in a flat robustness region, not the after-the-f
 (`distance × U` is explicitly rejected — it can make a distant edge near-free.)
 
 ## 10. Open choices for crew (ratified items removed)
-- **`ρ* = 0.25`** (classification heuristic).
+- *(none outstanding for this manifest — see the resolved note below.)*
 
 *(Resolved/removed from open choices: **the full matching law — distance-weighted, `k=32`, `λ=1.0`,
 Policy-A escalation, 40-rep diagnostic — RATIFIED by Work-GPT/Sol 2026-08-31 after the reproducibility
-repair (commit `be929df`)**; `δ_cap` ratified §6; the seven-cell `M_perm,7` feasible set
-finalised §9; `B=1000` frozen; the address-vs-parity comparison is settled as descriptive-only §6;
-the k=32 locality blocker is resolved by the distance-weighted law §3/§9.)*
+repair (commit `be929df`)**; **`ρ* = 0.25` RATIFIED (2026-09-01) as a classification heuristic, not an
+equivalence margin (§7)**; `δ_cap` ratified §6; the seven-cell `M_perm,7` feasible set finalised §9;
+`B=1000` frozen; the address-vs-parity comparison is settled as descriptive-only §6; the k=32 locality
+blocker is resolved by the distance-weighted law §3/§9.)*
 
 ---
 ## Change log
+**v4.1 — 2026-09-01** (Work-GPT/Sol final concordance verdict; textual/logical only): **ratified
+`ρ* = 0.25`** as a classification heuristic (not an equivalence margin, §7/§10); made the §7 outcome
+routing **exhaustive by named frozen gates** (feasibility → compression / survives-controls where
+their exact criteria pass → otherwise mixed/undetectable; parity descriptive alongside), removing the
+undefined "configs disagree beyond null uncertainty" wording; corrected the stale title and end-marker
+`v4`→`v4.1`. No endpoint, numeric threshold (other than ratifying `ρ*=0.25`), config membership,
+computation, or runtime design changed.
+
 **v4.1 — 2026-08-31** (Sol locality reproducibility repair): rewrote `locality_ladder.py` with a
 stable `blake2b` seed registry (no salted `hash()`), a real committed λ-sweep `{0.25,0.5,1,2}`,
 replicated **paired** unrestricted derangements, a frozen infeasibility Policy A (deterministic
@@ -261,5 +279,5 @@ materially more local than an unrestricted shuffle (pt 1).
 seed registry; descriptive parity; Westfall–Young; `δ_cap` ratified. **v2 — 2026-08-31** (1st
 pre-seal). **v1 — 2026-08-29** (initial).
 
-*End of draft v4. Committed to `gpt/workbench` only. Nothing sealed; only geometry/feature +
+*End of draft v4.1. Committed to `gpt/workbench` only. Nothing sealed; only geometry/feature +
 synthetic diagnostics run; no science-branch file altered.*

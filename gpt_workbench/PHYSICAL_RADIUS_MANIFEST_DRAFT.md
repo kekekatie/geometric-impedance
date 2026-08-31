@@ -155,8 +155,12 @@ groups requiring k-escalation**; and a **comparison against an unrestricted with
 1. **Infeasible** — a tier's `r16` common set `< 400`, a slab `< 100`, a required physical-size
    match unmet, **or the local conditional null infeasible for that patch (>5% singletons)**. →
    that cell's permutation-null result is unavailable; report, do not interpret its permutation test.
-2. **Mixed / undetectable** — configs disagree beyond the null uncertainty, **or** `ρ` is undefined
-   (`ΔR²(2)` non-positive, `< δ_cap`, or sign-unstable). → mixed, **never "infeasible."**
+2. **Mixed / undetectable (exhaustive fallback)** — any admissible cell (feasibility met, step 1
+   passed) meeting **neither** the exact `compression` criteria (branch 3) **nor** the exact
+   `survives-the-frozen-stress-controls` criteria (branch 5); this **includes** `ρ` undefined
+   (`ΔR²(2)` non-positive, `< δ_cap`, or sign-unstable) and any undefined-denominator gate route. →
+   mixed, **never "infeasible"**, and **not** decided by any unnamed "configs disagree" test. (Parity,
+   branch 4, is reported descriptively alongside — not a routing branch.)
 3. **Compression (at the pipeline's resolution)** — the fade rule holds: `ΔR²(2)` positive,
    sign-stable (≥5/6), `> δ_cap`; `ΔR²(16) < δ_cap`; and `ρ = ΔR²(16)/ΔR²(2) < ρ* = 0.25`. **Not
    proof the true effect is zero.** "CI includes zero" is never accepted as equivalence.
@@ -179,29 +183,45 @@ groups requiring k-escalation**; and a **comparison against an unrestricted with
 | medium | silver e16 / golden e20 / platinum e18 | 4341/4913/4604 | 3552/4032/3726 | 70.0/106.5/88.6 | 1.04/**3.07**/1.27 | 885/794/921 | 1102/1012/1165 |
 | large  | silver e18 / golden e22 / platinum e20 | 5463/5920/5660 | 4478/4840/4554 | 78.8/116.7/99.9 | 1.02/**2.98**/1.25 | 1370/1210/1345 | 1698/1535/1704 |
 
-Matched on r16 count and usable area. **Golden's r16 interior is elongated (aspect ≈ 3.0);
-reported as a morphology diagnostic/control — it is NOT added as a regression feature**, and the
-ladder stays through r=16 for golden (not a radius-12 ceiling). The PCA-slab inner CV (§5) handles
-the elongation.
+Matched on r16 count and usable area. **Golden's r16 interior is elongated (aspect ≈ 3.0); retained
+as a MANDATORY morphology diagnostic — it is NOT added as a regression feature and takes NO extra
+pre-seal control**, and the ladder stays through r=16 for golden (not a radius-12 ceiling). The
+PCA-slab inner CV (§5) **spatially balances the cross-validation folds along the elongated axis**
+(each slab spans the long axis); it does **not** remove, correct, or "handle away" the morphology,
+which remains reported as the mandatory aspect diagnostic.
 **⚠️ Platinum small/medium local-null infeasibility (finalised by the six-offset audit,
 `SIX_OFFSET_AUDIT_REPORT.md`):** singletons **8.9–9.8% (e16)** and **5.1–6.2% (e18)** on **all six
-offsets** — consistently > 5%. Their **local permutation null is infeasible**; they retain the `M₉`
-family (plain increment, residual null, parity, capacity) but the permutation reference is
-**`M_perm,7`** over the seven feasible configs (silver×3, golden×3, platinum e20). Crew may accept
-this, re-tier platinum upward (breaks r16-count matching), or ratify a different threshold.
+offsets** — consistently > 5%. Their **local permutation null is infeasible** — platinum e16/e18
+**cannot pass the local-permutation stress control (G2)** and are never described as doing so. They
+remain full members of the **`M₉`** family (plain increment, residual null, parity, capacity) at their
+frozen membership; the permutation reference is **`M_perm,7`** over the seven feasible configs
+(silver×3, golden×3, platinum e20). **`M₉` always spans the nine configs; `M_perm,7` the seven.** This
+is frozen — no re-tiering, no threshold change.
 
 ## 9. Open choices for crew (ratified items removed)
-- `ρ* = 0.25` (classification heuristic) accepted?
-- Golden aspect-3.0 extra boundary control (§8)?
+- *(none outstanding for this manifest — see the resolved note below.)*
 
-*(Resolved/removed: **the matching law — distance-weighted, `k=32`, `λ=1.0`, Policy-A escalation,
-40-rep diagnostic — RATIFIED by Work-GPT/Sol 2026-08-31 after the reproducibility repair (commit
+*(Resolved/removed: **`ρ* = 0.25` RATIFIED by Work-GPT/Sol (2026-09-01) as a classification heuristic,
+not an equivalence margin**; **golden aspect-3.0 takes NO extra pre-seal control** — retained as the
+mandatory aspect diagnostic (§8); **the matching law — distance-weighted, `k=32`, `λ=1.0`, Policy-A
+escalation, 40-rep diagnostic — RATIFIED by Work-GPT/Sol 2026-08-31 after the reproducibility repair
+(commit
 `be929df`)** (conditional-null §3/§9); `δ_cap` calibration ratified §6; the seven-cell `M_perm,7`
 feasible set finalised by the six-offset audit §8; the k=32-only locality blocker is resolved by the
 distance-weighted law, §9 above.)*
 
 ---
 ## Change log
+**v7 — 2026-09-01** (Work-GPT/Sol final concordance verdict; textual/logical only, no computation):
+**ratified `ρ* = 0.25`** as a classification heuristic, not an equivalence margin (§7/§9); **golden
+morphology** resolved — no extra pre-seal control, retained as the mandatory aspect diagnostic, and
+the PCA slabs are described as **spatially balancing** the CV folds along the elongated axis, not
+removing/"handling" the morphology (§8/§9); removed the stale platinum re-tier/threshold choice —
+**`M₉=9` always, `M_perm,7=7`, platinum e16/e18 cannot pass the local-permutation stress control**
+(§8); made §7 outcome routing **exhaustive by named frozen gates**, removing "configs disagree beyond
+the null uncertainty" (§7 branch 2). No endpoint, numeric threshold (other than ratifying `ρ*=0.25`),
+config membership, computation, or runtime design changed.
+
 **v7 — 2026-08-31** (Sol 3rd pre-seal pass): removed the categorical "stable residual/irreducible"
 verdict — replaced with *"survives the frozen capacity, residual and permutation stress controls;
 parity descriptive"* (§7 branch 5), with **`Δ_ap` no longer an ingredient** and `δ_cap` explicitly
@@ -213,9 +233,10 @@ items from open choices.
 **v6 — 2026-08-31** (Sol 2nd pre-seal pass): specified the **outer-fold parity scaler** exactly
 (pooled five training offsets, applied unchanged to held-out); added the **Group E
 empty-neighbourhood convention**; **ratified `δ_cap`** as the 95th percentile of the 200-draw
-nine-config `M₉` capacity distribution (detection floor only); aligned the parity comparison to the
-**descriptive downgrade** (`Δ_ap ≤ δ_cap`, no significance threshold); and finalised the platinum
-small/medium **`M_perm,7`** policy from the six-offset audit.
+nine-config `M₉` capacity distribution (detection floor only); aligned the parity comparison to a
+**descriptive downgrade** (parity qualitative, no significance threshold; `δ_cap` not a threshold for
+`Δ_ap` — see v7 §7 branch 4 and the 2026-09-01 entry); and finalised the platinum small/medium
+**`M_perm,7`** policy from the six-offset audit.
 
 **v5 — 2026-08-31** (Sol pre-seal, standalone): made the manifest self-contained (restored the full
 Group A/B/D/E definitions, moment conventions, padded-super-patch construction + convergence rule,

@@ -100,9 +100,10 @@ With `MSD(t) ∝ t^{2β}`, **`β(v0) = ½ · slope`** of an OLS fit of `log MSD`
 - **Every admitted launch yields a `β`.** There is **no per-site `R²_fit` / curvature / dynamics-
   derived exclusion** (such a filter could correlate with the address). Admission uses only
   `d_bound`.
-- **Address-correlated-admission check:** admission by `d_bound` is not assumed address-independent
-  — report and test the admitted vs excluded population's M4-feature distributions; any imbalance is
-  a stated caveat.
+- **Address-correlated-admission diagnostic (frozen, DESCRIPTIVE — no threshold, no gate):** admission
+  by `d_bound` is not assumed address-independent. Report, per M4 column, the admitted-vs-excluded
+  **means, standard deviations, and standardized mean differences**. This is a descriptive diagnostic
+  reported as a stated caveat — **not** a test, with **no threshold and no pass/fail gate**.
 - **Aggregate quality stop — scope frozen: per (family×tier configuration, engine).** For each
   config and engine, the median `R²_fit` over that config's admitted launches **pooled across the
   six offsets** (a whole-`(config,engine)` verdict, never a per-site cull; not global-engine-wide,
@@ -145,7 +146,9 @@ criterion.
 for `v≠w`, `Q_{ww} = −1` (unit exit rate; stationary `π ∝ deg`). `p(t;v0) = e^{Qt} e_{v0}` (valid
 for all real `t ≥ 0`, via the same Krylov method), `MSD_cl(t;v0) = Σ_v p_v(t;v0)·‖par[v]−par[v0]‖²`.
 Same grids, same window (§5), same OLS exponent → `β_cl`. Time axis matched to the quantum engine
-(unit exit rate ↔ `J=1`). Expected diffusive, address-blind.
+(unit exit rate ↔ `J=1`). This CTMC is **the specified classical comparator** for G5 (§12); whether
+its address increment is non-zero — i.e. how address-sensitive it is — is an **empirical** question
+measured by the same pipeline, **not** assumed a priori.
 
 ## 11. Removed: mid-band secondary (point 9)
 The mid-band-projected state `|χ0⟩ = P_W|v0⟩/‖·‖` requires constructing the spectral projector
@@ -177,10 +180,10 @@ coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (
   `red_{c,o} = (plain_{c,o} − shuf_{c,o}) / plain_{c,o}`, then **aggregate `red` by the `M₉`
   construction** (median across configs, then across offsets) → `R_kill`. (Median-of-differences ≠
   difference-of-medians, so the reduction is built before aggregating, not from separately-computed
-  medians.) Reference —; threshold `R_kill ≥ 0.70`. **Denominator handling:** any fold/config with
-  `plain_{c,o} ≤ δ_cap` or `≤ 0` has `red` **undefined** → that fold/config routes to
-  **mixed/undetectable** (a kill of an undetected signal is meaningless); if that leaves the global
-  statistic undefined, the endpoint is mixed/undetectable. Set: **`M₉`** (paired).
+  medians.) Reference —; threshold `R_kill ≥ 0.70`. **Denominator handling (frozen):** if **any**
+  required fold/config `red_{c,o}` is **undefined** (`plain_{c,o} ≤ δ_cap` or `≤ 0` — a kill of an
+  undetected signal is meaningless), the **global G4 is undefined → mixed/undetectable**. G4 is
+  **never** recomputed over a surviving subset of folds/configs. Set: **`M₉`** (paired).
 - **G5 Cross-engine non-reproduction (NOT a "coherence-specific" verdict):** stat = classical
   `M₉,address` from the **specified degree-normalised classical CTMC** (§10); threshold
   `classical M₉,address ≤ 0.2 × coherent M₉,address`. **Interpretation (frozen):** a G5 pass
@@ -195,17 +198,22 @@ coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (
 - **G6 Residual-orthogonal null "survives" (explicit pre-sealed criterion):** stat = deterministic
   `M₉` of `ΔR²_resid` (conditional-null §2); reference `δ_cap`; threshold `> δ_cap`. Stated as a
   **lower-bound detection** check, **not** a randomisation test. Set: **`M₉`**.
-- **G7 Address vs parity — DESCRIPTIVE ONLY (no gate):** report `Δ_ap = M₉,address − M₉,parity` vs
-  `δ_cap`. "**Compatible with representation collapse**" iff `Δ_ap ≤ δ_cap`. Parity is deterministic
-  → **no significance threshold**, no pass/fail. Set: **`M₉`** (descriptive).
+- **G7 Address vs parity — DESCRIPTIVE ONLY (no gate):** report `M₉,address`, `M₉,parity`, and
+  `Δ_ap = M₉,address − M₉,parity` qualitatively. Parity is deterministic → **no significance
+  threshold, no comparison to `δ_cap`, no pass/fail**. "**Compatible with representation collapse**"
+  is used only qualitatively for a small `Δ_ap` and is never proof of equality. Set: **`M₉`**
+  (descriptive).
 - **G8 Config-specific secondary:** Westfall–Young step-down max-T over the **seven feasible cells**
   (the permutation null exists only there; platinum e16/e18 remain descriptive for this control),
   giving extremeness values `q̃` (conditional-null §4); **secondary/descriptive**, never uncorrected
   selection. Set: per config (the seven feasible).
 
-**"Transport" is earned** only if **G0, G1, G2, G3, G4, G5, G6 all pass** (G7 descriptive, G8
-secondary). Any undefined-denominator route → **mixed/undetectable**. **Claim wording (frozen):** at
-most —
+**The primary coherent transport claim is earned** iff **G0 ∧ (coherent G1) ∧ G2 ∧ G3 ∧ G4 ∧ G6**
+pass — G5 is **not** required for it. The **additional cross-engine non-reproduction modifier**
+(that the specified degree-normalised classical CTMC does not reproduce the coherent effect) requires
+**(classical G1) ∧ G5**; **a G5 failure does NOT erase the coherent transport result** — it only
+withholds the cross-engine modifier. (G7 descriptive, G8 secondary.) Any undefined-denominator route
+→ **mixed/undetectable**. **Claim wording (frozen):** at most —
 > *"The address representation predicts heterogeneity in full-spectrum wavepacket spreading beyond
 > the frozen physical descriptions and controls."*
 
@@ -221,12 +229,27 @@ ordering; no perp-space ontology.
 `t_hi ≈ 0.12–0.90` at every family/extent/launch-depth (preflight v2), extent-invariant at fixed
 depth, ~145ℓ depth needed for `t_hi=8`. Retained for transparency; **never** an admissibility gate.
 
-## 13. Open choices for crew
-- Whether platinum small/medium (permutation-null-infeasible per conditional-null §9) affect the
-  MSD endpoint's config set the same way.
+## 13. Config-set policy (frozen; no open choice)
+- **`M₉` always spans the nine family×tier configs; `M_perm,7` spans the seven permutation-feasible
+  configs.** Platinum e16/e18 are permutation-null-infeasible (conditional-null §9) and therefore
+  **cannot pass the local-permutation stress control (G2)** and are never described as doing so; they
+  remain full members of the `M₉` family (plain increment, capacity, residual null, parity) at their
+  frozen membership. This applies identically to the MSD endpoint. No re-tiering, no threshold change.
 
 ---
 ## Change log
+**v8.1 — 2026-09-01** (Work-GPT/Sol final concordance verdict; textual/logical only, no computation):
+**split the primary coherent transport claim from G5** — primary coherent claim = `G0 ∧ coherent G1 ∧
+G2 ∧ G3 ∧ G4 ∧ G6`, the cross-engine non-reproduction modifier = `classical G1 ∧ G5`, and a G5 failure
+does not erase the coherent transport result (§12); **G7** no longer compares `Δ_ap` to `δ_cap` (no
+"iff", no "versus δ_cap" — parity stays qualitative, §12); **G4** frozen so that any undefined required
+`red_{c,o}` makes global G4 undefined → mixed/undetectable, never recomputed over a surviving subset
+(§12); the admitted-vs-excluded M4 check is now a **frozen descriptive diagnostic** (per-column means,
+SDs, standardized mean differences; no threshold/gate, §7); replaced "Expected diffusive, address-blind"
+with wording that the CTMC is the specified classical comparator whose address sensitivity is empirical
+(§10); §13 platinum open-choice resolved (`M₉=9` always, `M_perm,7=7`, platinum e16/e18 cannot pass the
+local-permutation stress control); corrected the stale end-marker `v8`→`v8.1`.
+
 **v8.1 — 2026-08-31** (external-scout claim audit, implication 3; documentation-only): relabelled
 **G5** "Classical contrast" → **"Cross-engine non-reproduction"** and removed **"coherence-specific"**
 as an earned verdict in §7 and §12; stated explicitly that a G5 pass is **engine-specific** (coherent
@@ -268,5 +291,5 @@ separately-preregistered spectral-filter study (pts 8–9).
 **v5 — 2026-08-29** (closure + actual-grid benchmark). **v4 — 2026-08-29** (audit B1–B7).
 **v3 — 2026-08-29** (crew B1–B8). **v2 — 2026-08-28** (four-blocker repair). **v1** initial.
 
-*End of draft v8. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks +
+*End of draft v8.1. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks +
 geometry diagnostics run; no science-branch file altered.*
