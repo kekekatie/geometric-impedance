@@ -1,13 +1,14 @@
-# DRAFT v5 — `physical(r)` / radius-saturation manifest (STANDALONE)
+# DRAFT v6 — `physical(r)` / radius-saturation manifest (STANDALONE)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only geometry-only checks were run (no
 dynamics/address/LDOS/targets/scores). No science-branch file altered.** This manifest is
 **self-contained**: every definition needed to reproduce the design is stated here without relying
 on earlier versions.
 
-**v5 (2026-08-31)** restores the full definitions shortened in v4 and applies Sol's pre-seal
-corrections (standalone; `X_r` baseline; `δ_cap`; new balance diagnostic; broken cross-refs
-removed). Full dated change log at the end.
+**v6 (2026-08-31)** applies Sol's second pre-seal pass: precise outer-fold parity scaler; Group E
+empty-neighbourhood convention; `δ_cap` ratified (95th percentile of the 200-draw nine-config `M₉`
+capacity distribution); parity comparison aligned to the descriptive downgrade. Builds on the
+standalone v5. Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -66,7 +67,10 @@ For each `s`, the sample `{deg[j] : j ∈ Nb(i,s)}` (if empty, `{deg[i]}`); colu
 
 ### Group E — packing/void via padded-super-patch Voronoi within each `s ∈ S(r)`
 Voronoi-cell areas of the parallel-space point set (§3a): `phys_voro_{mean,var}_s{s} =
-mean/var_{j∈Nb(i,s)} area[j]`. **2 columns × m(r).**
+mean/var_{j∈Nb(i,s)} area[j]` over the **bounded** cells in `Nb(i,s)`. **2 columns × m(r).**
+**Empty-neighbourhood convention (frozen; never expected for deep r16 vertices):** if `Nb(i,s)`
+contains no bounded cell, set `phys_voro_mean_s{s} = area[i]` (the vertex's own cell area) and
+`phys_voro_var_s{s} = 0`.
 
 ### Exact dimensions
 `dim(physical_extra(r)) = r + 9·m(r)`:
@@ -96,11 +100,13 @@ relative — identical to machine precision (a cell depends only on its Delaunay
 - **z_N rejected (measured):** the complex bond-orientational order is near-**constant** on the deep
   interior (`Var(Re z_N) ≈ Var(Im z_N) ≈ 0` on every tier); a near-constant field through `_m4_cols`
   gives near-constant, noise-amplified columns — inadequate.
-- **Adopted parity field: `(local graph degree, padded-Voronoi-cell area)`**, each **z-scored within
-  the `d_bound≥16ℓ` common set (training-only scaler)**, passed through the exact 11-column
-  `_m4_cols` pipeline (shell-mean + shell-variance at {2,4,8} + gradient + a hull-depth of the field
-  cloud). Both are physical quantities already in the physical family (degree, Voronoi area), so
-  this tests **repackaging**, not new content.
+- **Adopted parity field: `(local graph degree, padded-Voronoi-cell area)`**, passed through the
+  exact 11-column `_m4_cols` pipeline (shell-mean + shell-variance at {2,4,8} + gradient + a
+  hull-depth of the field cloud). Both are physical quantities already in the physical family
+  (degree, Voronoi area), so this tests **repackaging**, not new content.
+  - **Outer-fold scaler (frozen, precise):** for each family×tier **outer fold**, fit the z-score
+    scaler (per-component mean/std) on the **pooled five training offsets' r16 common sets** and
+    apply it **unchanged** to the held-out offset. No held-out data enters the scaler.
   - **Rank-2 verified on every planned patch:** covariance eigenvalues ≈ 0.29–0.55 / 1.45–1.72,
     condition 2.6–6.0. (For deep `r16` vertices padded = core Voronoi area to machine precision, §3a.)
   - **Zero-variance rule (frozen):** if either physical component's within-set std `< 1e-9` on a
@@ -137,11 +143,11 @@ groups requiring k-escalation**; and a **comparison against an unrestricted with
 - **Capacity null:** **200 independent i.i.d.-Gaussian blocks** of the same dimensionality as the
   parity block, **seeds `0…199`**; report the **full distribution** and the summary (mean, 95th
   percentile) of the increment.
-- **`δ_cap` (empirical pipeline detection / noise floor — NOT a practical-equivalence margin):**
-  each of the 200 draws is run through the **exact same primary aggregate statistic used for
-  address** (per-offset median across configs, then median across offsets — conditional-null §4);
-  `δ_cap` = the **95th percentile** of those 200 aggregate values. The old fixed `0.005` margin is
-  **deleted**.
+- **`δ_cap` (RATIFIED — empirical pipeline detection / noise floor, NOT a practical-equivalence
+  margin):** each of the 200 Gaussian draws is run through the **exact same nine-config aggregate
+  statistic `M₉`** used for address (per-offset median across the nine configs, then median across
+  the six offsets — conditional-null §4); `δ_cap` = the **95th percentile** of those 200 `M₉`
+  values. Detection floor only — not evidence of zero. The old fixed `0.005` margin is **deleted**.
 
 ## 7. Hierarchical decision procedure (evaluated in order)
 1. **Infeasible** — a tier's `r16` common set `< 400`, a slab `< 100`, a required physical-size
@@ -152,12 +158,13 @@ groups requiring k-escalation**; and a **comparison against an unrestricted with
 3. **Compression (at the pipeline's resolution)** — the fade rule holds: `ΔR²(2)` positive,
    sign-stable (≥5/6), `> δ_cap`; `ΔR²(16) < δ_cap`; and `ρ = ΔR²(16)/ΔR²(2) < ρ* = 0.25`. **Not
    proof the true effect is zero.** "CI includes zero" is never accepted as equivalence.
-4. **Representation collapse (compatible with)** — the **paired `address − parity` aggregate** does
-   not exceed its synchronised detection floor though the increment survives radius. Not proof of
-   equality.
-5. **Stable residual** — the paired aggregate exceeds **both** the parity and capacity detection
-   floors and survives **both** conditional nulls (residual-orthogonal + permutation). → provisional
-   irreducible increment.
+4. **Compatible with representation collapse (descriptive)** — the paired difference
+   `Δ_ap = M₉,address − M₉,parity ≤ δ_cap` though the increment survives radius. Parity is
+   deterministic (no null), so this is a **preregistered descriptive** comparison with **no
+   significance threshold**; not proof of equality.
+5. **Stable residual** — `M₉,address > δ_cap`, `Δ_ap > δ_cap`, the residual-orthogonal null passes
+   (`ΔR²_resid > δ_cap`, a lower-bound detection check), **and** the permutation null passes on
+   `M_perm,7` (conditional-null §6). → provisional irreducible increment.
 
 ## 8. Geometry-matched tiers (measured; morphology flagged)
 | tier | patch | n | hull area | diameter | **aspect(r16)** | usable r16 area | r16 (min) |
@@ -170,16 +177,30 @@ Matched on r16 count and usable area. **Golden's r16 interior is elongated (aspe
 reported as a morphology diagnostic/control — it is NOT added as a regression feature**, and the
 ladder stays through r=16 for golden (not a radius-12 ceiling). The PCA-slab inner CV (§5) handles
 the elongation.
-**⚠️ Platinum small/medium local-null infeasibility** (singletons 9.1% / 5.4% > 5%): flagged for
-crew (see conditional-null §9) — accept those two cells as permutation-null-infeasible, re-tier
-platinum upward, or ratify a different threshold.
+**⚠️ Platinum small/medium local-null infeasibility (finalised by the six-offset audit,
+`SIX_OFFSET_AUDIT_REPORT.md`):** singletons **8.9–9.8% (e16)** and **5.1–6.2% (e18)** on **all six
+offsets** — consistently > 5%. Their **local permutation null is infeasible**; they retain the `M₉`
+family (plain increment, residual null, parity, capacity) but the permutation reference is
+**`M_perm,7`** over the seven feasible configs (silver×3, golden×3, platinum e20). Crew may accept
+this, re-tier platinum upward (breaks r16-count matching), or ratify a different threshold.
 
 ## 9. Open choices for crew
-- `δ_cap` (§6) calibration accepted? `ρ* = 0.25`? Platinum small/medium local-null decision (§8)?
-  Golden aspect-3.0 extra boundary control (§8)?
+- `δ_cap` (§6, ratified) and `ρ* = 0.25` (classification heuristic) accepted?
+- Platinum small/medium → `M_perm,7` (§8) accepted, or re-tier?
+- **Permutation-null locality (blocker):** at `k=32` the constrained shuffle ≈ an unrestricted
+  within-motif shuffle (conditional-null §9) — reduce `k`, use distance-weighted costs, or rename
+  the null *motif-conditional*?
+- Golden aspect-3.0 extra boundary control (§8)?
 
 ---
 ## Change log
+**v6 — 2026-08-31** (Sol 2nd pre-seal pass): specified the **outer-fold parity scaler** exactly
+(pooled five training offsets, applied unchanged to held-out); added the **Group E
+empty-neighbourhood convention**; **ratified `δ_cap`** as the 95th percentile of the 200-draw
+nine-config `M₉` capacity distribution (detection floor only); aligned the parity comparison to the
+**descriptive downgrade** (`Δ_ap ≤ δ_cap`, no significance threshold); and finalised the platinum
+small/medium **`M_perm,7`** policy from the six-offset audit.
+
 **v5 — 2026-08-31** (Sol pre-seal, standalone): made the manifest self-contained (restored the full
 Group A/B/D/E definitions, moment conventions, padded-super-patch construction + convergence rule,
 regressor parameters and dimensions); defined the baseline **`X_r = [M3, physical_extra(r)]`** with
@@ -193,5 +214,5 @@ references; and cleaned the duplicated change-log entry.
 **v4 — 2026-08-29** (narrow closure). **v3 — 2026-08-29** (audit A1–A8). **v2 — 2026-08-29** (crew
 A1–A11). **v1 — 2026-08-28** (initial column manifest).
 
-*End of draft v5. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
+*End of draft v6. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
 no science-branch file altered.*

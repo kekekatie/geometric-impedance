@@ -1,12 +1,14 @@
-# DRAFT v6 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
+# DRAFT v7 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks were
 run (no study geometry/dynamics/address/LDOS/targets/β/outcomes). No science-branch file altered.**
-This manifest is **self-contained**.
+This manifest is **self-contained**, including the embedded frozen snapped β-time list (§5).
 
-**v6 (2026-08-31)** restores the definitions shortened in v5, froze the time-grid details, removed
-optionality, and removed the mid-band secondary from the sealable endpoint (points 8–9). Full dated
-change log at the end.
+**v7 (2026-08-31)** applies Sol's second pre-seal pass: embedded the 48 snapped β-times inline;
+separated coherent/classical boundary sums; made the boundary gate **strict (`t_bound* > 8`)** and
+computed **before any β inference**; fully defined every decision gate (statistic / reference /
+threshold / denominator / config set); and froze the `R²_fit` gate scope. Builds on standalone v6.
+Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -51,20 +53,36 @@ test — NOT a mid-band test**, and it does not by itself establish the mid-band
 ## 5. Time grids and boundary detection (frozen)
 - **Boundary-monitoring grid:** the **linear grid `linspace(0, 8, 161)`, `Δt = 0.05`** — drives the
   whole propagation.
-- **β-fit grid:** the **48 log-spaced times on `[2,8]` snapped to the nearest boundary-grid points**
-  — the exact snapped list is **generated and stored pre-seal** at
-  `gpt_workbench/snapped_beta_times.txt` (checked: **48 unique** values, **max snap error 0.0231**).
-  The fit uses the **actual snapped times**, not the unsnapped ideal times; the implementation
-  **asserts 48 unique values**.
+- **β-fit grid (embedded; the manifest is self-contained):** the 48 log-spaced times on `[2,8]`
+  **snapped to the nearest boundary-grid point** — **48 unique** values, **max snap error 0.0231**.
+  The fit uses these **actual snapped times** (not the unsnapped ideal times); the implementation
+  **asserts exactly 48 unique values**. A copy is also stored at `snapped_beta_times.txt`.
+  ```
+  2.0000 2.0500 2.1000 2.2000 2.2500 2.3000 2.4000 2.4500 2.5500 2.6000 2.7000 2.7500
+  2.8500 2.9500 3.0000 3.1000 3.2000 3.3000 3.4000 3.5000 3.6000 3.7000 3.8500 3.9500
+  4.0500 4.2000 4.3000 4.4500 4.5500 4.7000 4.8500 5.0000 5.1500 5.3000 5.4500 5.6000
+  5.8000 5.9500 6.1500 6.3000 6.5000 6.7000 6.9000 7.1000 7.3000 7.5500 7.7500 8.0000
+  ```
 - **Boundary strip (frozen):** `STRIP := { v : d_bound(v) < w·ℓ }`, **`w = 2`**.
-  `P_strip(t) = Σ_{v ∈ STRIP} |ψ_t(v)|²`; **excess mass** `ΔP_strip(t) = P_strip(t) − P_strip(0)`
-  (per-destination hull-depth strip; for the interior primary launch `P_strip(0)=0`).
-- **Boundary crossing:** the earliest monitoring-grid time with `ΔP_strip(t) ≥ 0.01`.
-- **`t_bound*` = the earliest crossing over all selected launches, all families/tiers/offsets, and
-  both engines** — a single global endpoint.
-- **Primary β fit uses the fixed interval `[2,8]` only if `t_bound* ≥ 8`.** If `t_bound* < 8`, the
-  primary transport endpoint is **finite-size-limited — no shortening, retuning or rescue after
-  seeing results**.
+- **Boundary sums stated separately per engine:**
+  - coherent: `P_strip(t) = Σ_{v ∈ STRIP} |ψ_v(t)|²`;
+  - classical: `P_strip,cl(t) = Σ_{v ∈ STRIP} p_v(t)`.
+  - **excess mass** `ΔP_strip(t) = P_strip(t) − P_strip(0)` (and `ΔP_strip,cl` likewise); for the
+    interior primary launch `P_strip(0) = 0`.
+- **Boundary crossing:** a launch/engine **crosses** at the earliest monitoring-grid time (including
+  `t = 8`) with `ΔP_strip(t) ≥ 0.01`.
+- **`t_bound*`** = the earliest crossing over **all** selected launches, all families/tiers/offsets,
+  **and both engines** — a single global endpoint. If **no** launch/engine crosses on the entire
+  grid through and including `t = 8`, `t_bound*` is recorded explicitly as **"no crossing observed"**
+  (`t_bound* = +∞`).
+- **The global boundary gate is computed BEFORE any β-based inference** (it depends only on
+  `ΔP_strip`, not on β or any target).
+- **Primary β fit uses the fixed interval `[2, 8]` only if `t_bound* > 8`** — i.e. **strictly**: no
+  crossing anywhere on the grid *through and including* `t = 8` (a crossing at exactly `t = 8` would
+  contaminate the final fit point 8.0000). Equivalently, admissible iff `t_bound* =` "no crossing
+  observed". **If any crossing occurs at or before `t = 8`, the primary transport endpoint is
+  finite-size-limited — no shortening, retuning or rescue after seeing results** (an authorised
+  outcome, §12).
 
 ## 6. MSD and exponent (frozen)
 `MSD(t;v0) = Σ_v |ψ_t(v)|² · ‖par[v] − par[v0]‖²` (`= ΔMSD` for the primary since `MSD(0)=0`).
@@ -79,9 +97,12 @@ With `MSD(t) ∝ t^{2β}`, **`β(v0) = ½ · slope`** of an OLS fit of `log MSD`
 - **Address-correlated-admission check:** admission by `d_bound` is not assumed address-independent
   — report and test the admitted vs excluded population's M4-feature distributions; any imbalance is
   a stated caveat.
-- **Aggregate quality stop (per engine):** if the median `R²_fit` across admitted launches `< 0.90`
-  for an engine, that engine's exponent is **descriptive** (no transport claim); this is a whole-
-  engine verdict, never a per-site cull.
+- **Aggregate quality stop — scope frozen: per (family×tier configuration, engine).** For each
+  config and engine, the median `R²_fit` over that config's admitted launches **pooled across the
+  six offsets**; if `< 0.90`, that `(config, engine)` exponent is **descriptive** and **excluded
+  from that engine's aggregate** (treated like an infeasible cell for that engine). This is a
+  whole-`(config,engine)` verdict, **never a per-site cull**. (Not global-engine-wide and not
+  per-patch — frozen at the config level.)
 - All rules apply to **both** the coherent and classical engines on the **same common window**.
 
 ## 8. Aggregation and inference (offset-level randomisation)
@@ -117,22 +138,47 @@ as a **future, separately preregistered mechanistic study** requiring a specifie
 spectral-filter algorithm (e.g. a polynomial/Chebyshev band-pass with its own numerical validation).
 The primary full-spectrum transport endpoint is unaffected.
 
-## 12. Decision threshold and claim wording
-The endpoint is met only if the coherent primary statistic (§8) is significant by the randomisation
-test, is **killed by the stratified shuffle** (`M4shuf` consistent with 0; ≥70% of the plain
-increment removed), is **not reproduced by the classical engine** (`β_cl` increment ≤ 0.2× the
-coherent), **exceeds** the parity and capacity detection floors, **survives both conditional nulls**,
-and the aggregate gates pass (median `R²_fit ≥ 0.90` per engine; global `t_bound* ≥ 8`).
+## 12. Decision gates (each fully defined: statistic · reference · threshold · denominator · set)
 
-**Claim wording (frozen):** at most —
+All increments are `ΔR² = R²(X_r + •) − R²(X_r)` at the reference radius r=16 unless noted, on the
+coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (physical §6).
+
+- **G0 Boundary gate (computed first, before any β inference):** stat `t_bound*` (§5); reference —;
+  threshold **`t_bound* > 8` (strict)**; else **finite-size-limited**, stop. Set: global.
+- **G1 Quality:** stat = per-`(config,engine)` median `R²_fit`; threshold `≥ 0.90`; a failing
+  `(config,engine)` is descriptive and dropped from that engine's aggregate (§7). Set: per config.
+- **G2 Primary detection (permutation null):** stat `M_perm,7,address` (coherent); reference = its
+  `B=1000` constrained-permutation null (conditional-null §3–4); threshold one-sided
+  `p=(1+#{null ≥ obs})/(B+1) < α = 0.05`. Denominator: none (a difference). Set: **`M_perm,7`**
+  (feasible cells only; infeasible cells never "survive" this null).
+- **G3 Exceeds capacity:** stat `M₉,address`; reference the 200-draw capacity distribution;
+  threshold `M₉,address > δ_cap`. Denominator: none. Set: **`M₉`**.
+- **G4 Shuffle-kill:** stat = fractional reduction `(M₉,plain − M₉,shuf)/M₉,plain` (the sealed
+  stratified motif×degree shuffle, aggregated as `M₉`); reference —; threshold `≥ 0.70`.
+  **Denominator handling:** if `M₉,plain ≤ δ_cap` or `≤ 0`, the ratio is **undefined → route to
+  mixed/undetectable** (a kill of an undetected signal is meaningless). Set: **`M₉`**.
+- **G5 Classical contrast:** stat = classical `M₉,address` (CTMC); threshold
+  `classical M₉,address ≤ 0.2 × coherent M₉,address`. **Denominator handling:** if coherent
+  `M₉,address ≤ δ_cap` or `≤ 0` → undefined → **mixed/undetectable**. **Classical-diagnostic
+  caveat:** if the classical per-`(config,engine)` median `R²_fit < 0.90` (G1), the
+  coherent-vs-classical contrast is **inconclusive** — it does not erase a well-defined quantum β,
+  but it **prevents the strongest coherence-specific claim**. Set: **`M₉`**.
+- **G6 Residual-orthogonal null "survives" (explicit pre-sealed criterion):** stat = deterministic
+  `M₉` of `ΔR²_resid` (conditional-null §2); reference `δ_cap`; threshold `> δ_cap`. Stated as a
+  **lower-bound detection** check, **not** a randomisation test. Set: **`M₉`**.
+- **G7 Address vs parity — DESCRIPTIVE ONLY (no gate):** report `Δ_ap = M₉,address − M₉,parity` vs
+  `δ_cap`. "**Compatible with representation collapse**" iff `Δ_ap ≤ δ_cap`. Parity is deterministic
+  → **no significance threshold**, no pass/fail. Set: **`M₉`** (descriptive).
+- **G8 Config-specific secondary:** Westfall–Young step-down max-T adjusted p per config
+  (conditional-null §4); **secondary/descriptive**, never uncorrected selection. Set: per config.
+
+**"Transport" is earned** only if **G0, G1, G2, G3, G4, G5, G6 all pass** (G7 descriptive, G8
+secondary). Any undefined-denominator route → **mixed/undetectable**. **Claim wording (frozen):** at
+most —
 > *"The address representation predicts heterogeneity in full-spectrum wavepacket spreading beyond
 > the frozen physical descriptions and controls."*
 
 **No inference that perpendicular space is a literal physical degree of freedom.**
-
-**Classical-diagnostic caveat:** if the **classical** power-law diagnostic fails (median `β_cl`
-`R²_fit < 0.90`), the **coherent-vs-classical contrast is inconclusive** — this does **not** erase a
-well-defined quantum β result, but it **prevents the strongest coherence-specific claim**.
 
 **Authorised non-positive outcomes:** shuffle-not-killed → "reads multiscale geometry, not cleanly
 the address"; `t_bound* < 8` → **finite-size-limited** (legitimate, not a failed run); randomisation
@@ -149,6 +195,15 @@ depth, ~145ℓ depth needed for `t_hi=8`. Retained for transparency; **never** a
 
 ---
 ## Change log
+**v7 — 2026-08-31** (Sol 2nd pre-seal pass): **embedded the 48 snapped β-times inline** (self-
+contained); **separated** the coherent `P_strip = Σ|ψ|²` and classical `P_strip,cl = Σ p` boundary
+sums; made the boundary gate **strict `t_bound* > 8`** with an explicit **"no crossing observed"**
+state and computed it **before any β inference** (a crossing at exactly t=8 would contaminate the
+final fit point); **fully defined every decision gate** (G0–G8: statistic, reference, threshold,
+denominator handling, and whether it uses `M₉`, `M_perm,7`, or config-specific), gave the residual
+null an explicit lower-bound "survives" criterion, and downgraded address-vs-parity to descriptive;
+and **froze the `R²_fit` gate scope to per-(config,engine)**.
+
 **v6 — 2026-08-31** (Sol pre-seal, standalone): restored the full boundary-strip / excess-mass /
 exponent / engine / admission definitions self-contained; **froze the time-grid** — stored the
 48-point snapped β-time list (48 unique, max error 0.0231), fit against the **actual snapped times**
@@ -161,5 +216,5 @@ separately-preregistered spectral-filter study (pts 8–9).
 **v5 — 2026-08-29** (closure + actual-grid benchmark). **v4 — 2026-08-29** (audit B1–B7).
 **v3 — 2026-08-29** (crew B1–B8). **v2 — 2026-08-28** (four-blocker repair). **v1** initial.
 
-*End of draft v6. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks run;
-no science-branch file altered.*
+*End of draft v7. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks +
+geometry diagnostics run; no science-branch file altered.*
