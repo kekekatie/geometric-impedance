@@ -191,15 +191,14 @@ family (plain increment, residual null, parity, capacity) but the permutation re
 this, re-tier platinum upward (breaks r16-count matching), or ratify a different threshold.
 
 ## 9. Open choices for crew (ratified items removed)
-- **Matching-law `λ`:** the locality ladder resolves the law as **distance-weighted, `k=32`,
-  `λ=1.0`** (conditional-null §3/§9) — the crew ratifies `λ` from the λ-sweep (proposed, not silently
-  frozen).
 - `ρ* = 0.25` (classification heuristic) accepted?
 - Golden aspect-3.0 extra boundary control (§8)?
 
-*(Resolved/removed: `δ_cap` calibration ratified §6; the seven-cell `M_perm,7` feasible set finalised
-by the six-offset audit §8; the k=32-only locality blocker is now resolved by the distance-weighted
-law, §9 above.)*
+*(Resolved/removed: **the matching law — distance-weighted, `k=32`, `λ=1.0`, Policy-A escalation,
+40-rep diagnostic — RATIFIED by Work-GPT/Sol 2026-08-31 after the reproducibility repair (commit
+`be929df`)** (conditional-null §3/§9); `δ_cap` calibration ratified §6; the seven-cell `M_perm,7`
+feasible set finalised by the six-offset audit §8; the k=32-only locality blocker is resolved by the
+distance-weighted law, §9 above.)*
 
 ---
 ## Change log

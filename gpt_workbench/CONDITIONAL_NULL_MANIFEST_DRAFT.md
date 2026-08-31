@@ -49,17 +49,20 @@ motif)` group:
    neighbours (self excluded), features standardised with the **training-only** scaler. (`k=32`
    is the smallest single `k` that is broadly bijective across *all seven* feasible configs — the
    large silver motif groups require it, §9.)
-2. **Distance-weighted per-repetition randomisation (PROPOSED — λ pending crew ratification):** for
-   repetition `b`, assign each allowed edge the cost **`cost = feature_distance + λ·U(0,1)`** with
-   **`λ = 1.0`** in standardised-feature units (child seed `b`, §5); solve the **minimum-cost
+2. **Distance-weighted per-repetition randomisation (RATIFIED by Work-GPT/Sol 2026-08-31 after the
+   reproducibility repair, commit `be929df`):** for repetition `b`, assign each allowed edge the cost
+   **`cost = feature_distance + λ·U(0,1)`** with **`λ = 1.0`** in standardised-feature units (child
+   seed `b`, §5); solve the **minimum-cost
    perfect assignment** (`scipy.optimize.linear_sum_assignment`), giving a bijection/derangement.
    The distance term makes each replicate favour **near** partners (locality), while `λ·U` supplies
    randomisation. **Do NOT use `distance × U`** (it can make a distant edge artificially near-free).
    The locality-ladder diagnostic (§9, reproducibility-repaired) shows this law at k=32 is **fully
    diverse (distinct = 1.0) and materially more local than an unrestricted within-motif shuffle**
    (paired tail p95 source→dest distance ≈ **0.375** of unrestricted at λ=1.0; **0.37–0.41** across
-   the λ-sweep), whereas a uniform-cost law at k=32 is not. **λ is proposed, not silently selected**
-   — the crew ratifies it from the λ-sweep in §9.
+   the λ-sweep), whereas a uniform-cost law at k=32 is not. **λ = 1.0 was the predeclared candidate
+   and is RATIFIED** (Work-GPT/Sol 2026-08-31): it is the natural one-standardised-unit balance of
+   distance and stochasticity, retains strong partner turnover, and sits in a flat robustness region
+   (§9) — not the after-the-fact prettiest number.
 3. **Deterministic, outcome-blind escalation:** if no perfect assignment exists at `k=32`, increase
    to `k=64`, then the full same-motif group; flag the escalation. `k` is never chosen from outcomes.
 4. **Permute the raw two-component address field, then recompute the exact 11-column `_m4_cols`.**
@@ -216,16 +219,17 @@ nested median over `M_perm,7`. Two findings:
 
 **Verdict:** the distance-weighted law at `k=32`, `λ=1.0` **genuinely conditions on the continuous
 descriptors** (not motif alone) while remaining broadly bijective and diverse — it meets the ladder's
-aim, reproducibly. It is the **proposed final matching law (§3)**; `λ` is offered for crew
-ratification, not silently frozen. (`distance × U` is explicitly rejected — it can make a distant
-edge near-free.)
+aim, reproducibly. It is the **final matching law (§3)**; `λ = 1.0` is **ratified by Work-GPT/Sol
+(2026-08-31, after the reproducibility repair, commit `be929df`)** — chosen as the predeclared
+one-standardised-unit candidate in a flat robustness region, not the after-the-fact prettiest number.
+(`distance × U` is explicitly rejected — it can make a distant edge near-free.)
 
 ## 10. Open choices for crew (ratified items removed)
-- **`λ = 1.0`** for the distance-weighted matching law (§3): proposed from the locality ladder (§9);
-  the crew ratifies from the λ-sweep. `k = 32` is fixed (smallest broadly-bijective single k).
 - **`ρ* = 0.25`** (classification heuristic).
 
-*(Resolved/removed from open choices: `δ_cap` ratified §6; the seven-cell `M_perm,7` feasible set
+*(Resolved/removed from open choices: **the full matching law — distance-weighted, `k=32`, `λ=1.0`,
+Policy-A escalation, 40-rep diagnostic — RATIFIED by Work-GPT/Sol 2026-08-31 after the reproducibility
+repair (commit `be929df`)**; `δ_cap` ratified §6; the seven-cell `M_perm,7` feasible set
 finalised §9; `B=1000` frozen; the address-vs-parity comparison is settled as descriptive-only §6;
 the k=32 locality blocker is resolved by the distance-weighted law §3/§9.)*
 
@@ -238,7 +242,9 @@ k=32→64→full escalation, no silent dropping) vs Policy B, `REPS=40`, absolut
 statistics with a defined nested-`M_perm,7` aggregation, and features reconciled exactly to the M3
 continuous physical family (`dens=g(2.0)` etc.). Updated §3/§9 to the reproducible figures
 (movable-feasible 1.000 under Policy A; distinct 1.000; partner-turnover 0.541; paired p95 ratio
-0.375; λ-sweep 0.37–0.41). Conclusion and λ-pending-ratification unchanged.
+0.375; λ-sweep 0.37–0.41). On this regenerated evidence Work-GPT/Sol **ratified** the full matching
+law (distance-weighted, `k=32`, `λ=1.0`, Policy-A escalation, 40-rep diagnostic) on 2026-08-31; §3,
+§9 and §10 updated from "offered for ratification" to "ratified".
 
 **v4 — 2026-08-31** (Sol 3rd pre-seal pass): froze **`M₉` membership a priori** — never changed by
 observed fit quality (pt 3); kept the **seven-cell `M_perm,7`** explicitly separate from the

@@ -102,15 +102,18 @@ deterministically to k=64/full → **movable-feasible 1.000 with no silent dropp
 outcome is **robust to the policy choice**. Policy A is frozen because it attains full feasibility
 without discarding any vertex.
 
-## Conclusion (reproducible; λ still offered for ratification)
+## Conclusion (reproducible; RATIFIED by Work-GPT/Sol 2026-08-31, commit `be929df`)
 The final matching law meets the ladder's aim under fully reproducible, stable-seeded computation:
 **distance-weighted additive stochastic assignment, candidate graph `k=32`, `cost = feature_distance
 + λ·U(0,1)`, `λ=1.0`, Policy-A escalation, at r=16.** It is broadly bijective (movable-feasible
 1.000), genuinely diverse (distinct 1.000; partner-turnover 0.541), and materially local (p95 move
 0.375× unrestricted; absolute p95 1.62 vs 4.81), robustly across `λ∈{0.25,0.5,1,2}` and across the
 infeasibility policy. It genuinely conditions on the continuous physical descriptors, not motif alone.
-**`λ` is offered for crew ratification** (sweep shown), not silently frozen; `k=32` is fixed as the
-smallest broadly-bijective single k.
+**`λ = 1.0` is RATIFIED by Work-GPT/Sol (2026-08-31, commit `be929df`)** — the predeclared
+one-standardised-unit candidate in a flat robustness region (p95 ratio 0.370/0.372/0.375/0.413),
+chosen over the marginally-smaller `λ=0.25` to avoid after-the-fact result-shopping since the
+conclusion is unchanged across the whole sweep; `k=32` is fixed as the smallest broadly-bijective
+single k; Policy-A escalation and the 40-rep stable-seeded diagnostic are ratified with it.
 
 *Source: run by the `gpt/workbench` Claude collaborator; geometry/feature/synthetic only; not part
 of the scientific record until reviewed.*
