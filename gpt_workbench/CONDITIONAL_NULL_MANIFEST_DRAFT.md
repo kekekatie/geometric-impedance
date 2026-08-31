@@ -1,7 +1,10 @@
 # DRAFT v4.1 — conditional-null design manifest (radius-saturation §2), standalone
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. No study dynamics/address/LDOS/targets/β/
-scores accessed. Only geometry/feature diagnostics + synthetic checks were run.** Self-contained.
+**Status — SEALED (design frozen) / NOT RUN. Sealed at reviewed design commit `e3d7af3`; see
+`SEAL_RECORD.md`. No study dynamics/address/LDOS/targets/β/scores accessed. Only geometry/feature
+diagnostics + synthetic checks were run; the study has NOT been run. Implementation is pending and
+must pass conformance review before any scientific run; post-seal amendments require a dated amendment
+record before outcome access (see `SEAL_RECORD.md`).** Self-contained.
 
 **v4 (2026-08-31)** applies Sol's third pre-seal pass: `M₉` membership frozen a priori (never
 changed by observed fit quality); the permutation tail renamed **`q_ref`** (extremeness under an

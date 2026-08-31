@@ -1,9 +1,11 @@
 # DRAFT v7 — `physical(r)` / radius-saturation manifest (STANDALONE)
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. Only geometry-only checks were run (no
-dynamics/address/LDOS/targets/scores). No science-branch file altered.** This manifest is
-**self-contained**: every definition needed to reproduce the design is stated here without relying
-on earlier versions.
+**Status — SEALED (design frozen) / NOT RUN. Sealed at reviewed design commit `e3d7af3`; see
+`SEAL_RECORD.md`. Only geometry-only checks were run (no dynamics/address/LDOS/targets/scores). No
+science-branch file altered; the study has NOT been run. Implementation is pending and must pass
+conformance review before any scientific run; post-seal amendments require a dated amendment record
+before outcome access (see `SEAL_RECORD.md`).** This manifest is **self-contained**: every definition
+needed to reproduce the design is stated here without relying on earlier versions.
 
 **v7 (2026-08-31)** applies Sol's third pre-seal pass: removed the categorical "stable
 residual/irreducible" verdict (now *"survives the frozen stress controls; parity descriptive"* with

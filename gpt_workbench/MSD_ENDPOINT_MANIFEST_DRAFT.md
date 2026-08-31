@@ -1,8 +1,11 @@
 # DRAFT v8.1 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks +
-geometry/feature diagnostics were run (no study geometry/dynamics/address/LDOS/targets/β/outcomes).
-No science-branch file altered.** Self-contained, incl. the embedded snapped β-time list (§5).
+**Status — SEALED (design frozen) / NOT RUN. Sealed at reviewed design commit `e3d7af3`; see
+`SEAL_RECORD.md`. Only synthetic engineering benchmarks + geometry/feature diagnostics were run (no
+study geometry/dynamics/address/LDOS/targets/β/outcomes). No science-branch file altered; the study
+has NOT been run. Implementation is pending and must pass conformance review before any scientific
+run; post-seal amendments require a dated amendment record before outcome access (see
+`SEAL_RECORD.md`).** Self-contained, incl. the embedded snapped β-time list (§5).
 
 **v8 (2026-08-31)** applies Sol's third pre-seal pass: **G1 no longer changes `M₉` membership** (the
 nine-config primary is fixed a priori; a G1 failure downgrades the global claim, never recomputes
