@@ -1,12 +1,13 @@
-# DRAFT v3 — conditional-null design manifest (radius-saturation §2), standalone
+# DRAFT v4 — conditional-null design manifest (radius-saturation §2), standalone
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. No study dynamics/address/LDOS/targets/β/
 scores accessed. Only geometry/feature diagnostics + synthetic checks were run.** Self-contained.
 
-**v3 (2026-08-31)** applies Sol's second pre-seal pass: completed six-offset feasibility policy
-(M₉ vs M_perm,7); a genuine stochastic assignment law (not jitter); an explicit seed registry;
-the downgraded (descriptive) address-vs-parity comparison; an exact Westfall–Young definition; and
-`δ_cap` ratified. Full dated change log at the end.
+**v4 (2026-08-31)** applies Sol's third pre-seal pass: `M₉` membership frozen a priori (never
+changed by observed fit quality); the permutation tail renamed **`q_ref`** (extremeness under an
+algorithmic reference, not significance); Westfall–Young over the **seven** feasible cells;
+order-stable keyed seed substreams; address-vs-parity fully **descriptive** (no gate); and the
+locality-ladder investigation (§9). Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -39,16 +40,25 @@ For each **outer** held-out offset `o` (train = five offsets):
 nonlinear residual is hard for a second GBT). Its "survives" criterion is defined in §6.
 
 ## 3. Local permutation null — genuine stochastic one-to-one law (reference radius r=16)
-Overlapping per-vertex kNN "cells" cannot support one global permutation, and jitter-only
-tie-breaking returns essentially one matching every repetition (not a randomisation). Replaced by a
-**stochastic minimum-cost assignment** within each `(family, tier, offset, exact motif)` group:
-1. **Frozen candidate graph:** the `k = 32` nearest same-motif physical-feature neighbours (self
-   excluded), features standardised with the **training-only** scaler.
-2. **Per-repetition randomisation:** for repetition `b`, assign **independent seeded U(0,1) random
-   costs** to the allowed edges (child seed `b`, §5); solve the **minimum-cost perfect assignment**
-   (`scipy.optimize.linear_sum_assignment`), giving a bijection/derangement. Independent random edge
-   costs yield **materially different** admissible matchings across repetitions while the candidate
-   graph enforces locality (diversity diagnostic §9).
+Overlapping per-vertex kNN "cells" cannot support one global permutation; jitter-only tie-breaking
+returns essentially one matching every repetition; and a **uniform** random-cost law at any single
+`k` cannot be both broadly bijective and materially local (locality ladder §9). Replaced by a
+**distance-weighted stochastic minimum-cost assignment** within each `(family, tier, offset, exact
+motif)` group:
+1. **Candidate graph (broad, for bijectivity):** the `k = 32` nearest same-motif physical-feature
+   neighbours (self excluded), features standardised with the **training-only** scaler. (`k=32`
+   is the smallest single `k` that is broadly bijective across *all seven* feasible configs — the
+   large silver motif groups require it, §9.)
+2. **Distance-weighted per-repetition randomisation (PROPOSED — λ pending crew ratification):** for
+   repetition `b`, assign each allowed edge the cost **`cost = feature_distance + λ·U(0,1)`** with
+   **`λ = 1.0`** in standardised-feature units (child seed `b`, §5); solve the **minimum-cost
+   perfect assignment** (`scipy.optimize.linear_sum_assignment`), giving a bijection/derangement.
+   The distance term makes each replicate favour **near** partners (locality), while `λ·U` supplies
+   randomisation. **Do NOT use `distance × U`** (it can make a distant edge artificially near-free).
+   The locality-ladder diagnostic (§9) shows this law at k=32 is **fully diverse (distinct = 1.0)
+   and materially more local than an unrestricted within-motif shuffle** (tail p95 source→dest
+   distance ≈ 0.35–0.42 of unrestricted), whereas a uniform-cost law at k=32 is not. **λ is proposed,
+   not silently selected** — the crew ratifies it from the λ-sweep in §9.
 3. **Deterministic, outcome-blind escalation:** if no perfect assignment exists at `k=32`, increase
    to `k=64`, then the full same-motif group; flag the escalation. `k` is never chosen from outcomes.
 4. **Permute the raw two-component address field, then recompute the exact 11-column `_m4_cols`.**
@@ -60,40 +70,58 @@ tie-breaking returns essentially one matching every repetition (not a randomisat
    described as surviving the local permutation null for an infeasible cell.** Observed and null
    analyses retain **exactly the same vertex population** (singletons fixed in both).
 
-**Honesty on the reference distribution:** because the candidate graph constrains which permutations
-are admissible, this is **not** an exact exchangeable conditional-randomisation test. Its p-value is
-a **Monte-Carlo tail probability under the frozen constrained-permutation reference distribution**,
-not an "exact conditional" p-value.
+**Honesty on the reference distribution (this is a STRESS reference, not inferential significance):**
+because the candidate graph constrains which permutations are admissible, this is **not** an exact
+exchangeable conditional-randomisation test. Its Monte-Carlo tail fraction is therefore named
+**`q_ref = (1 + #{ M_null^(b) ≥ M_obs }) / (B+1)`** and is described as **extremeness under the
+algorithmically-defined constrained-permutation reference distribution** — **not** a frequentist
+significance p-value under an exchangeable null. It may serve as a **frozen operational stress-test
+gate (`q_ref < 0.05`)**, but it is an adversarial control on interpretation, not a significance
+result. **The empirical result remains the held-out predictive increment** (`M₉` / `M_perm,7`).
 
 ## 4. Fold dependence, statistics, and multiplicity
 - Every null repetition recomputes the **full six-offset LOO vector**; offsets are the sampling
   clusters (correlated through overlapping training sets — never independent replicates).
-- **`M₉` (ordinary primary):** for each held-out offset `o`, the equal-weight median increment
-  across the **nine** family×tier configs; then the **median across the six offsets**. Used for the
-  plain increment, residual null, parity and capacity.
-- **`M_perm,7` (local-permutation reference):** the same construction restricted to the **fixed set
-  of permutation-feasible configs** (determined by the geometry-only six-offset audit §9 — outcome-
-  blind). If platinum-small/medium are infeasible, this is the **seven** feasible cells;
-  **`M_perm,7` is distinct from `M₉`** and is the only statistic used for the local permutation
-  test. Infeasible cells are **never** described as surviving the permutation null.
-- **Randomisation p (frozen):** one-sided `p = (1 + #{ M_null^(b) ≥ M_obs }) / (B+1)`, `B=1000`,
-  `α=0.05`.
+- **`M₉` (ordinary primary) — membership FROZEN a priori, never changed from observed dynamics:**
+  for each held-out offset `o`, the equal-weight median increment across the **nine** family×tier
+  configs; then the **median across the six offsets**. Used for the plain increment, residual null,
+  parity and capacity. **`M₉` always contains all nine configs.** A configuration's poor observed
+  fit quality (MSD G1) does **not** remove it from `M₉` — that would make membership a function of
+  the data and invalidate comparisons; instead the consequences of a G1 failure are the ones stated
+  in MSD v8 §7/§12 (the config becomes descriptive and the *global* claim fails/downgrades — the
+  statistic is never recomputed over a subset).
+- **`M_perm,7` (local-permutation reference) — membership from GEOMETRY only:** the same construction
+  restricted to the **fixed seven permutation-feasible configs** (silver×3, golden×3, platinum e20;
+  determined by the geometry-only six-offset audit §9 — outcome-blind). Distinct from `M₉`; the only
+  statistic used for the local permutation test. Platinum e16/e18 are **never** described as surviving
+  the permutation null.
+- **Stress-reference tail (frozen):** `q_ref = (1 + #{ M_null^(b) ≥ M_obs }) / (B+1)`, `B=1000`,
+  operational gate `q_ref < 0.05` (extremeness under the algorithmic reference, §3 — not a
+  significance p).
 - **Always report all six `Δ_o` and signs**; ≥5/6 positive is supporting, not the test.
-- **Config-specific secondary — Westfall–Young step-down max-T (exact):** the per-config statistic
-  `T_c` = that config's six-offset-median increment (a **signed one-sided** statistic; larger = more
-  evidence). Null statistics `T_c^(b)` are the **raw permutation increments, not additionally
-  centered** (the permutation already removes the address signal, so null `T_c^(b)` cluster near the
-  physical baseline). Order observed `T_(1) ≥ … ≥ T_(9)`. For rank `i` (step-down),
-  `p̃_(i) = (1 + #{ b : max_{c ∈ {(i),…,(9)}} T_c^(b) ≥ T_(i) }) / (B+1)`, then enforce monotone
-  non-decreasing `p̃`. Same child seeds across configs (synchronised max). **No uncorrected
-  selection of the nicest family/tier.**
+- **Config-specific secondary — Westfall–Young step-down max-T over the SEVEN feasible cells** (the
+  permutation null is only defined there; platinum e16/e18 remain descriptive for this control). The
+  per-config statistic `T_c` = that config's six-offset-median increment (a **signed one-sided**
+  statistic). Null statistics `T_c^(b)` are the **raw permutation increments, not additionally
+  centered**. Order observed `T_(1) ≥ … ≥ T_(7)`. For rank `i` (step-down),
+  `q̃_(i) = (1 + #{ b : max_{c ∈ {(i),…,(7)}} T_c^(b) ≥ T_(i) }) / (B+1)`, then enforce monotone
+  non-decreasing `q̃`. These `q̃` are **extremeness values under the same algorithmic reference**
+  (§3), not exchangeable-null significances. Same child seeds across configs (synchronised max). **No
+  uncorrected selection of the nicest family/tier.**
 
-## 5. Seed registry (explicit, no fictional parity seed)
-- **Address-permutation registry:** root `SeedSequence(20260829)` → **1000 children**; repetition `b`
-  uses child `b` for its random edge costs, **synchronised across engines (coherent, CTMC) and
-  configs** where pairing/max-T is intended.
-- **Capacity registry (separate):** root `SeedSequence(20260830)` → **200 children** (seeds 0…199),
-  one Gaussian block per child (physical §6).
+## 5. Seed registry (explicit, no fictional parity seed; order-stable)
+- **Address-permutation registry:** root `SeedSequence(20260829)` → **1000 child streams**;
+  repetition `b` uses child `b` for its random edge costs, **synchronised across engines (coherent,
+  CTMC) and configs** where pairing/max-T is intended.
+- **Order-stability (frozen):** a substream is addressed by **stable identifiers
+  `(family, tier, offset, motif-key, b)`** — the motif-key from the canonical sorted incident-star
+  multiset, offsets in the frozen list order — **not** by Python `dict`/group **traversal order**.
+  Concretely, each group's per-repetition edge-cost RNG is
+  `default_rng(SeedSequence(20260829, spawn_key=(hash64(family,tier,offset,motif), b)))` (or an
+  equivalent stable keyed derivation), so results are invariant to dictionary/iteration order.
+- **Capacity registry (separate):** root `SeedSequence(20260830)` → **200 child streams indexed
+  `0…199`** (child-stream indices under the capacity root — **not** literal integer RNG seeds and
+  not the address children), one Gaussian block per child (physical §6).
 - **Parity has NO seed** — it is deterministic (fit the fixed physical field through `_m4_cols`).
 - **Randomised conditional nulls run at `r=16` only (frozen).** The plain increment and the
   deterministic residual null are reported at every rung.
@@ -107,15 +135,16 @@ not an "exact conditional" p-value.
 - **"survives the residual-orthogonal null" (explicit pre-sealed criterion):** the deterministic
   `M₉` of `ΔR²_resid` (§2) `> δ_cap`. Stated as a **lower-bound detection** check, not a
   randomisation test.
-- **"survives the local permutation null":** `p = (1+#{M_perm null ≥ M_perm,7 obs})/(B+1) < α` — and
-  only for feasible cells.
-- **Address vs parity — DOWNGRADED to a preregistered descriptive paired aggregate.** Parity is
-  deterministic (no null), so no statistically defensible paired *significance* distribution exists;
-  inventing one would collapse to the address permutation test shifted by a constant. Therefore we
-  **report descriptively**: `M₉,address`, `M₉,parity`, and the paired difference
-  `Δ_ap = M₉,address − M₉,parity`, each against `δ_cap`. "**Compatible with representation
-  collapse**" = `Δ_ap ≤ δ_cap` (address not detectably beyond parity); it is **not** proof of
-  equality and carries **no significance threshold**.
+- **"passes the local permutation stress gate":** `q_ref = (1+#{M_perm,7 null ≥ M_perm,7 obs})/(B+1)
+  < 0.05` — extremeness under the algorithmic reference (§3), for feasible cells only. **Not** a
+  significance test.
+- **Address vs parity — DESCRIPTIVE ONLY, never a pass/fail ingredient.** Parity is deterministic
+  (no null); no defensible paired *significance* reference exists, and `δ_cap` was calibrated for a
+  *capacity* increment, **not** for the difference `Δ_ap`, so `δ_cap` is **not** a calibrated
+  detection floor for `address − parity`. We therefore **report** `M₉,address`, `M₉,parity`, and
+  `Δ_ap = M₉,address − M₉,parity` **descriptively**, with **no threshold and no gate**. The phrase
+  "**compatible with representation collapse**" is used only qualitatively (small `Δ_ap`) and is
+  never proof of equality.
 
 ## 7. Authorised outcomes (distinct; cautious language)
 - **compression (at the pipeline's resolution):** `M₉,address(2)` positive, sign-stable (≥5/6),
@@ -123,21 +152,24 @@ not an "exact conditional" p-value.
   **frozen classification heuristic**, not an equivalence margin. If `M₉,address(2)` is
   non-positive, `< δ_cap`, or sign-unstable, `ρ` is **undefined → mixed/undetectable, never
   infeasible.**
-- **representational:** survives radius; `Δ_ap ≤ δ_cap` (**compatible with** representation collapse,
-  descriptive).
-- **stable residual:** `M₉,address > δ_cap`, `Δ_ap > δ_cap`, residual null passes (§6), **and** the
-  permutation null passes on `M_perm,7`.
-- **mixed / undetectable:** configs disagree beyond null uncertainty, or `ρ` undefined.
-- **infeasible:** physical/count floor unmet, or a patch >5% singletons (local null infeasible for
-  that cell only).
+- **survives the frozen stress controls (replaces "stable residual"):** `M₉,address > δ_cap`
+  (capacity), the residual-orthogonal lower-bound check passes (`M₉` of `ΔR²_resid > δ_cap`), **and**
+  the permutation stress gate passes on `M_perm,7` (`q_ref < 0.05`). Reported as *"the address
+  increment survives the frozen capacity, residual and permutation stress controls; the parity
+  comparison is reported descriptively."* **This is NOT a categorical "irreducible" verdict**, and
+  `Δ_ap` is **not** an ingredient.
+- **mixed / undetectable:** configs disagree beyond null uncertainty, or `ρ` undefined, or an
+  undefined-denominator gate route.
+- **infeasible:** physical/count floor unmet, or a patch >5% singletons (local permutation control
+  unavailable for that cell only).
 - **Claim language:** at most *"the address representation predicts heterogeneity beyond the frozen
   physical descriptions and controls."* No literal perpendicular-space DOF ontology.
 
 ## 8. Computational feasibility
-Deterministic (plain + residual null, every rung): a few thousand GBT fits. Randomised (permutation
-+ capacity, r=16 only, both engines): `B(1000)×6×(feasible configs)×2 ≈ 84k–108k` outcome fits +
-`200×6×9×2 ≈ 21.6k` capacity fits, ~5–6 h, parallelisable; cache the `X_r` baseline per fold, refit
-only `[X_r+permuted-address]`. No target/outcome regression is run here.
+Deterministic (plain + residual null, every rung): a few thousand GBT fits. Randomised permutation
+(r=16 only, both engines, the **7 feasible configs**): `B(1000)×6×7×2 ≈ 84k` outcome fits; capacity
+`200×6×9×2 ≈ 21.6k`. ~5–6 h, parallelisable; cache the `X_r` baseline per fold, refit only
+`[X_r+permuted-address]`. No target/outcome regression is run here.
 
 ## 9. Geometry/feature feasibility diagnostics (authorised; results)
 `gpt_workbench/singleton_audit_v2.py` — six-offset per-patch audit + randomisation diversity
@@ -159,41 +191,50 @@ so **`M_perm,7`** is over these seven cells (§4). The bijection matching is fea
 (`k=32` primary; a handful escalate to 64, and golden e22 once to full). Chosen from geometry alone
 → outcome-blind.
 
-**Randomisation-diversity diagnostic (40 reps):** the stochastic random-cost law produces
-**40/40 distinct assignments** with **~80–85% of movable vertices changing destination between
-repetitions** — a genuine randomisation distribution (the jitter-degeneracy problem is fixed).
+**Locality ladder (`gpt_workbench/locality_ladder.py`; `locality_ladder.csv`, 588 rows; report
+`LOCALITY_LADDER_REPORT.md`).** Two findings:
+1. **Uniform-cost law:** no single `k` gives both broad bijectivity and locality. Silver's large
+   motif groups need `k=32` (at `k≤16`, movable-feasible drops to ~0.30–0.75 for silver e16/e18),
+   but at `k=32` the uniform law is **not local** (mean source→dest distance ratio to an unrestricted
+   within-motif shuffle: **median 0.89, p95 0.87**). So `k=32` uniform ≈ motif-only shuffle.
+2. **Distance-weighted additive law at `k=32`, `λ=1.0` (`cost = feature_distance + λ·U(0,1)`) —
+   RESOLUTION:** broadly bijective (**movable-feasible 0.986**), **fully diverse** (distinct
+   assignments 1.000; 55% of movable vertices change destination between repetitions), and
+   **materially more local** than unrestricted (distance ratio **median 0.155, p95 0.396**; a
+   λ-sweep 0.25–2.0 gives p95 ratio 0.32–0.42 — robust). Median ratio ≈ 0 for several configs
+   because the median move is to a **feature-identical** partner (duplicate integer-count features);
+   the **p95 ≈ 0.40** is the informative locality measure and is well below the unrestricted 1.0.
 
-**⚠️ Locality caveat (blocker for crew — honest finding):** at `k=32`, the constrained source→
-destination standardised-feature distance is **essentially equal to an unrestricted within-motif
-shuffle** (golden e18: constrained median 1.398 vs unrestricted 1.387; platinum e20: 1.795 vs
-1.886). Because `k=32` spans a large fraction of typical motif-group sizes (~30–180 here) and the
-costs are random, a partner is drawn ~uniformly from most of the group — so **the permutation null
-at k=32 conditions essentially on motif only, NOT tightly on the continuous descriptors** (its
-intended purpose). **This defeats the point of the "local" null.** Options for crew: (a) **reduce
-`k` substantially** (e.g. `k≈4–8`) so all admissible partners are genuinely near — then re-run this
-diagnostic to confirm; (b) adopt **distance-weighted random costs** (cost = feature-distance × U(0,1))
-to bias toward near partners while randomising; (c) accept and **rename** the null as a
-*motif-conditional* shuffle (honest about what it holds fixed). `k=16/64` sensitivity will not fix
-this — even `k=32` already behaves like the unrestricted shuffle. **Flagged; not silently resolved.**
+**Verdict:** the distance-weighted law at `k=32`, `λ=1.0` **genuinely conditions on the continuous
+descriptors** (not motif alone) while remaining broadly bijective and diverse — it meets the ladder's
+aim. It is the **proposed final matching law (§3)**; `λ` is offered for crew ratification, not
+silently frozen. (`distance × U` is explicitly rejected — it can make a distant edge near-free.)
 
-## 10. Open choices for crew
-`k=32` primary (16/64 balance-sensitivity only); `B=1000`; `ρ*=0.25` (classification heuristic);
-`δ_cap` calibration; the final feasible-config set for `M_perm` (from §9); the descriptive-only
-status of the address-vs-parity comparison.
+## 10. Open choices for crew (ratified items removed)
+- **`λ = 1.0`** for the distance-weighted matching law (§3): proposed from the locality ladder (§9);
+  the crew ratifies from the λ-sweep. `k = 32` is fixed (smallest broadly-bijective single k).
+- **`ρ* = 0.25`** (classification heuristic).
+
+*(Resolved/removed from open choices: `δ_cap` ratified §6; the seven-cell `M_perm,7` feasible set
+finalised §9; `B=1000` frozen; the address-vs-parity comparison is settled as descriptive-only §6;
+the k=32 locality blocker is resolved by the distance-weighted law §3/§9.)*
 
 ---
 ## Change log
-**v3 — 2026-08-31** (Sol 2nd pre-seal pass): finalised the **M₉ / M_perm,7** policy from a full
-six-offset feasibility audit (pt 1); replaced jitter-tie-break with a **stochastic random-cost
-assignment law** and stated its p-value is a **Monte-Carlo tail probability under a constrained-
-permutation reference**, not exact-conditional (pt 2); built an explicit **seed registry** (1000
-address-permutation children; separate 200 capacity draws; **no parity seed**), **downgraded the
-address-vs-parity comparison to a descriptive paired aggregate**, and gave an **exact Westfall–Young
-step-down max-T** with uncentered signed one-sided statistics (pt 3); **ratified `δ_cap`** as the
-95th percentile of the 200-draw nine-config aggregate and reworded `ρ*` as a classification heuristic
-(pt 7); and gave every "survives" an explicit pre-sealed criterion (pt 6).
+**v4 — 2026-08-31** (Sol 3rd pre-seal pass): froze **`M₉` membership a priori** — never changed by
+observed fit quality (pt 3); kept the **seven-cell `M_perm,7`** explicitly separate from the
+nine-cell `M₉` (pt 3); made the address-vs-parity comparison **fully descriptive, no gate**, and
+noted `δ_cap` is not valid for `Δ_ap`, removing the categorical "stable residual/irreducible" verdict
+(pt 4); renamed the permutation tail **`q_ref`** — extremeness under the algorithmic reference, not
+exact-conditional; applied the same to the Westfall–Young `q̃` **over the 7 feasible cells** (pt 5,6);
+made the seed substreams **order-stable keyed** and fixed the capacity-seed wording to child-stream
+indices 0…199 (pt 6); and **resolved the locality blocker** — the locality ladder (§9) shows a
+**distance-weighted additive law (`k=32`, `λ=1.0`)** is broadly bijective, fully diverse and
+materially more local than an unrestricted shuffle (pt 1).
 
-**v2 — 2026-08-31** (Sol 1st pre-seal). **v1 — 2026-08-29** (initial).
+**v3 — 2026-08-31** (Sol 2nd pre-seal): six-offset M₉/M_perm,7 policy; stochastic assignment law;
+seed registry; descriptive parity; Westfall–Young; `δ_cap` ratified. **v2 — 2026-08-31** (1st
+pre-seal). **v1 — 2026-08-29** (initial).
 
-*End of draft v3. Committed to `gpt/workbench` only. Nothing sealed; only geometry/feature +
+*End of draft v4. Committed to `gpt/workbench` only. Nothing sealed; only geometry/feature +
 synthetic diagnostics run; no science-branch file altered.*

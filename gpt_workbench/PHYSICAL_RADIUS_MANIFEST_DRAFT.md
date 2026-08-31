@@ -1,14 +1,16 @@
-# DRAFT v6 — `physical(r)` / radius-saturation manifest (STANDALONE)
+# DRAFT v7 — `physical(r)` / radius-saturation manifest (STANDALONE)
 
 **Status — DRAFT for crew review. NOT sealed, NOT run. Only geometry-only checks were run (no
 dynamics/address/LDOS/targets/scores). No science-branch file altered.** This manifest is
 **self-contained**: every definition needed to reproduce the design is stated here without relying
 on earlier versions.
 
-**v6 (2026-08-31)** applies Sol's second pre-seal pass: precise outer-fold parity scaler; Group E
-empty-neighbourhood convention; `δ_cap` ratified (95th percentile of the 200-draw nine-config `M₉`
-capacity distribution); parity comparison aligned to the descriptive downgrade. Builds on the
-standalone v5. Full dated change log at the end.
+**v7 (2026-08-31)** applies Sol's third pre-seal pass: removed the categorical "stable
+residual/irreducible" verdict (now *"survives the frozen stress controls; parity descriptive"* with
+`Δ_ap` no longer an ingredient and `δ_cap` never a threshold for `address − parity`); renamed the
+permutation gate **`q_ref`**; confirmed **`M₉` membership fixed a priori**; and finalised the
+locality-ladder matching law. Builds on the standalone v6 (outer-fold parity scaler, Group E
+empty-neighbourhood convention, `δ_cap` ratified). Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
 not part of the scientific record until reviewed and merged.*
@@ -158,13 +160,17 @@ groups requiring k-escalation**; and a **comparison against an unrestricted with
 3. **Compression (at the pipeline's resolution)** — the fade rule holds: `ΔR²(2)` positive,
    sign-stable (≥5/6), `> δ_cap`; `ΔR²(16) < δ_cap`; and `ρ = ΔR²(16)/ΔR²(2) < ρ* = 0.25`. **Not
    proof the true effect is zero.** "CI includes zero" is never accepted as equivalence.
-4. **Compatible with representation collapse (descriptive)** — the paired difference
-   `Δ_ap = M₉,address − M₉,parity ≤ δ_cap` though the increment survives radius. Parity is
-   deterministic (no null), so this is a **preregistered descriptive** comparison with **no
-   significance threshold**; not proof of equality.
-5. **Stable residual** — `M₉,address > δ_cap`, `Δ_ap > δ_cap`, the residual-orthogonal null passes
-   (`ΔR²_resid > δ_cap`, a lower-bound detection check), **and** the permutation null passes on
-   `M_perm,7` (conditional-null §6). → provisional irreducible increment.
+4. **Compatible with representation collapse (DESCRIPTIVE ONLY, qualitative)** — the paired
+   difference `Δ_ap = M₉,address − M₉,parity` is **small** while the increment survives radius.
+   Parity is deterministic (no null) and **`δ_cap` was calibrated for a *capacity* increment, not
+   for `Δ_ap`**, so `δ_cap` is **not** used as a threshold for `Δ_ap`; the comparison is reported
+   **qualitatively** with **no significance threshold and no gate**. Not proof of equality.
+5. **Survives the frozen stress controls (replaces "stable residual" — NOT a categorical
+   "irreducible" verdict)** — `M₉,address > δ_cap` (capacity), the residual-orthogonal lower-bound
+   check passes (`M₉` of `ΔR²_resid > δ_cap`), **and** the permutation stress gate passes on
+   `M_perm,7` (`q_ref < 0.05`, conditional-null §6). Reported as *"the address increment survives the
+   frozen capacity, residual and permutation stress controls; the parity comparison is reported
+   descriptively."* **`Δ_ap` is NOT an ingredient** (it is descriptive only, §4/§7 branch 4).
 
 ## 8. Geometry-matched tiers (measured; morphology flagged)
 | tier | patch | n | hull area | diameter | **aspect(r16)** | usable r16 area | r16 (min) |
@@ -184,16 +190,27 @@ family (plain increment, residual null, parity, capacity) but the permutation re
 **`M_perm,7`** over the seven feasible configs (silver×3, golden×3, platinum e20). Crew may accept
 this, re-tier platinum upward (breaks r16-count matching), or ratify a different threshold.
 
-## 9. Open choices for crew
-- `δ_cap` (§6, ratified) and `ρ* = 0.25` (classification heuristic) accepted?
-- Platinum small/medium → `M_perm,7` (§8) accepted, or re-tier?
-- **Permutation-null locality (blocker):** at `k=32` the constrained shuffle ≈ an unrestricted
-  within-motif shuffle (conditional-null §9) — reduce `k`, use distance-weighted costs, or rename
-  the null *motif-conditional*?
+## 9. Open choices for crew (ratified items removed)
+- **Matching-law `λ`:** the locality ladder resolves the law as **distance-weighted, `k=32`,
+  `λ=1.0`** (conditional-null §3/§9) — the crew ratifies `λ` from the λ-sweep (proposed, not silently
+  frozen).
+- `ρ* = 0.25` (classification heuristic) accepted?
 - Golden aspect-3.0 extra boundary control (§8)?
+
+*(Resolved/removed: `δ_cap` calibration ratified §6; the seven-cell `M_perm,7` feasible set finalised
+by the six-offset audit §8; the k=32-only locality blocker is now resolved by the distance-weighted
+law, §9 above.)*
 
 ---
 ## Change log
+**v7 — 2026-08-31** (Sol 3rd pre-seal pass): removed the categorical "stable residual/irreducible"
+verdict — replaced with *"survives the frozen capacity, residual and permutation stress controls;
+parity descriptive"* (§7 branch 5), with **`Δ_ap` no longer an ingredient** and `δ_cap` explicitly
+**not** used as a threshold for `address − parity` (§7 branch 4); renamed the permutation gate
+**`q_ref`**; confirmed **`M₉` membership is fixed a priori** (never changed by fit quality);
+finalised the locality-ladder resolution (distance-weighted `k=32`, `λ=1.0`) and pruned ratified
+items from open choices.
+
 **v6 — 2026-08-31** (Sol 2nd pre-seal pass): specified the **outer-fold parity scaler** exactly
 (pooled five training offsets, applied unchanged to held-out); added the **Group E
 empty-neighbourhood convention**; **ratified `δ_cap`** as the 95th percentile of the 200-draw
@@ -214,5 +231,5 @@ references; and cleaned the duplicated change-log entry.
 **v4 — 2026-08-29** (narrow closure). **v3 — 2026-08-29** (audit A1–A8). **v2 — 2026-08-29** (crew
 A1–A11). **v1 — 2026-08-28** (initial column manifest).
 
-*End of draft v6. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
+*End of draft v7. Committed to `gpt/workbench` only. Nothing sealed; only geometry-only checks run;
 no science-branch file altered.*

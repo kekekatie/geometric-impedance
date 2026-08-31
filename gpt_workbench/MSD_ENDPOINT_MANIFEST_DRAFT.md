@@ -1,13 +1,14 @@
-# DRAFT v7 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
+# DRAFT v8 — MSD transport-endpoint manifest (radius-saturation stage-two, STANDALONE)
 
-**Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks were
-run (no study geometry/dynamics/address/LDOS/targets/β/outcomes). No science-branch file altered.**
-This manifest is **self-contained**, including the embedded frozen snapped β-time list (§5).
+**Status — DRAFT for crew review. NOT sealed, NOT run. Only synthetic engineering benchmarks +
+geometry/feature diagnostics were run (no study geometry/dynamics/address/LDOS/targets/β/outcomes).
+No science-branch file altered.** Self-contained, incl. the embedded snapped β-time list (§5).
 
-**v7 (2026-08-31)** applies Sol's second pre-seal pass: embedded the 48 snapped β-times inline;
-separated coherent/classical boundary sums; made the boundary gate **strict (`t_bound* > 8`)** and
-computed **before any β inference**; fully defined every decision gate (statistic / reference /
-threshold / denominator / config set); and froze the `R²_fit` gate scope. Builds on standalone v6.
+**v8 (2026-08-31)** applies Sol's third pre-seal pass: **G1 no longer changes `M₉` membership** (the
+nine-config primary is fixed a priori; a G1 failure downgrades the global claim, never recomputes
+`M₉`); shuffle-kill is now a **paired fold/config reduction then aggregate** (not
+difference-of-medians); permutation tail renamed **`q_ref`** (extremeness, not significance);
+Westfall–Young over the **seven** feasible cells; finite-size at **`t_bound* ≤ 8`**. Builds on v7.
 Full dated change log at the end.
 
 *Source: drafted by the `gpt/workbench` Claude collaborator from crew decisions relayed by Katie;
@@ -99,10 +100,17 @@ With `MSD(t) ∝ t^{2β}`, **`β(v0) = ½ · slope`** of an OLS fit of `log MSD`
   a stated caveat.
 - **Aggregate quality stop — scope frozen: per (family×tier configuration, engine).** For each
   config and engine, the median `R²_fit` over that config's admitted launches **pooled across the
-  six offsets**; if `< 0.90`, that `(config, engine)` exponent is **descriptive** and **excluded
-  from that engine's aggregate** (treated like an infeasible cell for that engine). This is a
-  whole-`(config,engine)` verdict, **never a per-site cull**. (Not global-engine-wide and not
-  per-patch — frozen at the config level.)
+  six offsets** (a whole-`(config,engine)` verdict, never a per-site cull; not global-engine-wide,
+  not per-patch).
+- **G1 must NOT change the frozen `M₉` membership (critical).** `M₉` **always** aggregates all nine
+  configs; its membership is fixed a priori and is **never** recomputed from observed fit quality
+  (doing so would make the statistic data-dependent and differ between engines, invalidating
+  comparisons). Exact global consequences of a G1 failure:
+  - if a **coherent** config has median `R²_fit < 0.90`, that config is **descriptive** and the
+    **global strongest transport claim fails or is downgraded** — `M₉` is **not** silently
+    recomputed over the surviving cells;
+  - if a **classical** config fails, the corresponding **coherence-specific (G5) comparison is
+    inconclusive**; again `M₉` membership is unchanged.
 - All rules apply to **both** the coherent and classical engines on the **same common window**.
 
 ## 8. Aggregation and inference (offset-level randomisation)
@@ -110,10 +118,13 @@ The per-vertex target `{β(v0)}` replaces `ld_primary` in the identical `transpo
 M0→M4 pipeline (with the `M4shuf`/`M3pos`/`M4pos`/`M3far`/`M4far` controls, the parity and capacity
 controls, and the conditional nulls), for both engines and all family×tier configs. **Inference is
 the offset-level randomisation test of conditional-null manifest §4–§5:** the six leave-one-offset-
-out increments are **not** independent replicates; the primary statistic is the median across the
-nine family×tier configs then across the six offsets; the one-sided
-`p = (1 + #{M_null ≥ M_obs})/(B+1)` with **`B = 1000`** and `α = 0.05`; **all six offset effects and
-signs are always reported**; ≥5/6 positive is a supporting criterion.
+out increments are **not** independent replicates; the primary statistic is `M₉` = the median across
+the nine family×tier configs then across the six offsets (membership fixed a priori, §7); the
+permutation stress reference gives the constrained-reference tail
+`q_ref = (1 + #{M_null ≥ M_obs})/(B+1)` with **`B = 1000`**, operational gate `q_ref < 0.05`
+(extremeness under the algorithmic reference — **not** exact-conditional inference; conditional-null
+§3); **all six offset effects and signs are always reported**; ≥5/6 positive is a supporting
+criterion.
 
 ## 9. Numerical tolerances (frozen, precise)
 - **State/probability agreement:** the production propagator (Krylov) must match an exact-
@@ -146,17 +157,24 @@ coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (
 - **G0 Boundary gate (computed first, before any β inference):** stat `t_bound*` (§5); reference —;
   threshold **`t_bound* > 8` (strict)**; else **finite-size-limited**, stop. Set: global.
 - **G1 Quality:** stat = per-`(config,engine)` median `R²_fit`; threshold `≥ 0.90`; a failing
-  `(config,engine)` is descriptive and dropped from that engine's aggregate (§7). Set: per config.
-- **G2 Primary detection (permutation null):** stat `M_perm,7,address` (coherent); reference = its
-  `B=1000` constrained-permutation null (conditional-null §3–4); threshold one-sided
-  `p=(1+#{null ≥ obs})/(B+1) < α = 0.05`. Denominator: none (a difference). Set: **`M_perm,7`**
-  (feasible cells only; infeasible cells never "survive" this null).
+  `(config,engine)` is **descriptive** and its **global claim fails/downgrades — `M₉` membership is
+  NEVER changed** (§7). Set: per config.
+- **G2 Primary permutation stress gate:** stat `M_perm,7,address` (coherent); reference = its
+  `B=1000` constrained-permutation **stress reference** (conditional-null §3–4); threshold the
+  **constrained-reference tail** `q_ref = (1+#{null ≥ obs})/(B+1) < 0.05` (extremeness under the
+  algorithmic reference — **not** exact-conditional inference). Denominator: none (a difference).
+  Set: **`M_perm,7`** (feasible cells only; infeasible cells never pass this gate).
 - **G3 Exceeds capacity:** stat `M₉,address`; reference the 200-draw capacity distribution;
   threshold `M₉,address > δ_cap`. Denominator: none. Set: **`M₉`**.
-- **G4 Shuffle-kill:** stat = fractional reduction `(M₉,plain − M₉,shuf)/M₉,plain` (the sealed
-  stratified motif×degree shuffle, aggregated as `M₉`); reference —; threshold `≥ 0.70`.
-  **Denominator handling:** if `M₉,plain ≤ δ_cap` or `≤ 0`, the ratio is **undefined → route to
-  mixed/undetectable** (a kill of an undetected signal is meaningless). Set: **`M₉`**.
+- **G4 Shuffle-kill (paired reduction — NOT difference-of-medians):** compute the reduction
+  **at the fold/config level first**: for each `(config, offset-fold)` form the paired
+  `red_{c,o} = (plain_{c,o} − shuf_{c,o}) / plain_{c,o}`, then **aggregate `red` by the `M₉`
+  construction** (median across configs, then across offsets) → `R_kill`. (Median-of-differences ≠
+  difference-of-medians, so the reduction is built before aggregating, not from separately-computed
+  medians.) Reference —; threshold `R_kill ≥ 0.70`. **Denominator handling:** any fold/config with
+  `plain_{c,o} ≤ δ_cap` or `≤ 0` has `red` **undefined** → that fold/config routes to
+  **mixed/undetectable** (a kill of an undetected signal is meaningless); if that leaves the global
+  statistic undefined, the endpoint is mixed/undetectable. Set: **`M₉`** (paired).
 - **G5 Classical contrast:** stat = classical `M₉,address` (CTMC); threshold
   `classical M₉,address ≤ 0.2 × coherent M₉,address`. **Denominator handling:** if coherent
   `M₉,address ≤ δ_cap` or `≤ 0` → undefined → **mixed/undetectable**. **Classical-diagnostic
@@ -169,8 +187,10 @@ coherent engine unless noted. `δ_cap` = the 200-draw capacity detection floor (
 - **G7 Address vs parity — DESCRIPTIVE ONLY (no gate):** report `Δ_ap = M₉,address − M₉,parity` vs
   `δ_cap`. "**Compatible with representation collapse**" iff `Δ_ap ≤ δ_cap`. Parity is deterministic
   → **no significance threshold**, no pass/fail. Set: **`M₉`** (descriptive).
-- **G8 Config-specific secondary:** Westfall–Young step-down max-T adjusted p per config
-  (conditional-null §4); **secondary/descriptive**, never uncorrected selection. Set: per config.
+- **G8 Config-specific secondary:** Westfall–Young step-down max-T over the **seven feasible cells**
+  (the permutation null exists only there; platinum e16/e18 remain descriptive for this control),
+  giving extremeness values `q̃` (conditional-null §4); **secondary/descriptive**, never uncorrected
+  selection. Set: per config (the seven feasible).
 
 **"Transport" is earned** only if **G0, G1, G2, G3, G4, G5, G6 all pass** (G7 descriptive, G8
 secondary). Any undefined-denominator route → **mixed/undetectable**. **Claim wording (frozen):** at
@@ -181,7 +201,8 @@ most —
 **No inference that perpendicular space is a literal physical degree of freedom.**
 
 **Authorised non-positive outcomes:** shuffle-not-killed → "reads multiscale geometry, not cleanly
-the address"; `t_bound* < 8` → **finite-size-limited** (legitimate, not a failed run); randomisation
+the address"; `t_bound* ≤ 8` (any crossing at or before 8, inclusive) → **finite-size-limited**
+(legitimate, not a failed run); randomisation
 non-significant → the address signal does not surface in spreading at this size/coupling. No family
 ordering; no perp-space ontology.
 
@@ -195,6 +216,15 @@ depth, ~145ℓ depth needed for `t_hi=8`. Retained for transparency; **never** a
 
 ---
 ## Change log
+**v8 — 2026-08-31** (Sol 3rd pre-seal pass): **G1 no longer mutates `M₉`** — the nine-config
+membership is fixed a priori, and a poor-`R²_fit` config becomes descriptive with the global claim
+downgraded rather than recomputing `M₉` over a subset (with the exact coherent/classical
+consequences stated); **G4 shuffle-kill rebuilt as a paired fold/config reduction then aggregated**
+(median-of-differences ≠ difference-of-medians) with fold-level denominator handling; renamed the
+permutation tail **`q_ref`** and described it as extremeness under the algorithmic reference (not
+exact-conditional); **G8 Westfall–Young over the seven feasible cells**; and changed the finite-size
+statement to **`t_bound* ≤ 8`**.
+
 **v7 — 2026-08-31** (Sol 2nd pre-seal pass): **embedded the 48 snapped β-times inline** (self-
 contained); **separated** the coherent `P_strip = Σ|ψ|²` and classical `P_strip,cl = Σ p` boundary
 sums; made the boundary gate **strict `t_bound* > 8`** with an explicit **"no crossing observed"**
@@ -216,5 +246,5 @@ separately-preregistered spectral-filter study (pts 8–9).
 **v5 — 2026-08-29** (closure + actual-grid benchmark). **v4 — 2026-08-29** (audit B1–B7).
 **v3 — 2026-08-29** (crew B1–B8). **v2 — 2026-08-28** (four-blocker repair). **v1** initial.
 
-*End of draft v7. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks +
+*End of draft v8. Committed to `gpt/workbench` only. Nothing sealed; only synthetic benchmarks +
 geometry diagnostics run; no science-branch file altered.*
