@@ -55,10 +55,11 @@ motif)` group:
    perfect assignment** (`scipy.optimize.linear_sum_assignment`), giving a bijection/derangement.
    The distance term makes each replicate favour **near** partners (locality), while `λ·U` supplies
    randomisation. **Do NOT use `distance × U`** (it can make a distant edge artificially near-free).
-   The locality-ladder diagnostic (§9) shows this law at k=32 is **fully diverse (distinct = 1.0)
-   and materially more local than an unrestricted within-motif shuffle** (tail p95 source→dest
-   distance ≈ 0.35–0.42 of unrestricted), whereas a uniform-cost law at k=32 is not. **λ is proposed,
-   not silently selected** — the crew ratifies it from the λ-sweep in §9.
+   The locality-ladder diagnostic (§9, reproducibility-repaired) shows this law at k=32 is **fully
+   diverse (distinct = 1.0) and materially more local than an unrestricted within-motif shuffle**
+   (paired tail p95 source→dest distance ≈ **0.375** of unrestricted at λ=1.0; **0.37–0.41** across
+   the λ-sweep), whereas a uniform-cost law at k=32 is not. **λ is proposed, not silently selected**
+   — the crew ratifies it from the λ-sweep in §9.
 3. **Deterministic, outcome-blind escalation:** if no perfect assignment exists at `k=32`, increase
    to `k=64`, then the full same-motif group; flag the escalation. `k` is never chosen from outcomes.
 4. **Permute the raw two-component address field, then recompute the exact 11-column `_m4_cols`.**
@@ -191,24 +192,33 @@ so **`M_perm,7`** is over these seven cells (§4). The bijection matching is fea
 (`k=32` primary; a handful escalate to 64, and golden e22 once to full). Chosen from geometry alone
 → outcome-blind.
 
-**Locality ladder (`gpt_workbench/locality_ladder.py`; `locality_ladder.csv`, 588 rows; report
-`LOCALITY_LADDER_REPORT.md`).** Two findings:
+**Locality ladder (`gpt_workbench/locality_ladder.py`; `locality_ladder.csv`, 588 rows;
+`locality_final.csv`, 336 rows; report `LOCALITY_LADDER_REPORT.md`). Reproducibility-repaired:**
+stable `blake2b` seed registry (no salted `hash()`); real λ-sweep `{0.25,0.5,1,2}`; replicated
+**paired** unrestricted derangements; frozen infeasibility Policy A (escalation, no dropping) vs B;
+`REPS=40`; absolute + ratio stats; features reconciled to the M3 continuous family; aggregation =
+nested median over `M_perm,7`. Two findings:
 1. **Uniform-cost law:** no single `k` gives both broad bijectivity and locality. Silver's large
-   motif groups need `k=32` (at `k≤16`, movable-feasible drops to ~0.30–0.75 for silver e16/e18),
-   but at `k=32` the uniform law is **not local** (mean source→dest distance ratio to an unrestricted
-   within-motif shuffle: **median 0.89, p95 0.87**). So `k=32` uniform ≈ motif-only shuffle.
-2. **Distance-weighted additive law at `k=32`, `λ=1.0` (`cost = feature_distance + λ·U(0,1)`) —
-   RESOLUTION:** broadly bijective (**movable-feasible 0.986**), **fully diverse** (distinct
-   assignments 1.000; 55% of movable vertices change destination between repetitions), and
-   **materially more local** than unrestricted (distance ratio **median 0.155, p95 0.396**; a
-   λ-sweep 0.25–2.0 gives p95 ratio 0.32–0.42 — robust). Median ratio ≈ 0 for several configs
-   because the median move is to a **feature-identical** partner (duplicate integer-count features);
-   the **p95 ≈ 0.40** is the informative locality measure and is well below the unrestricted 1.0.
+   motif groups need `k=32` (silver e18 movable-feasible: k8=0.30, k16=0.73, k32=0.96), but as `k`
+   grows the uniform law's moves **lengthen** toward the unrestricted shuffle (abs p95 1.63→**3.39**),
+   whereas the distance-weighted law stays flat and local (abs p95 ≈ **1.6** at every `k`). Same
+   candidate graph and feasibility; only the cost law makes it local.
+2. **Distance-weighted additive law at `k=32`, `λ=1.0` — RESOLUTION:** broadly bijective
+   (**movable-feasible 1.000** under Policy-A escalation; 0.986 at k=32 pre-escalation, the shortfall
+   confined to silver e18 3.96% and golden e22 4.88%), **fully diverse** (distinct 1.000;
+   **partner-turnover 0.541** — the fraction of movable vertices assigned a different partner between
+   reps), and **materially more local** than unrestricted: **absolute** p95 move **1.62** vs
+   unrestricted **4.81** (standardised units); **paired** distance ratio **median 0.000, p95 0.375**
+   (λ-sweep p95 **0.37–0.41** — robust). Median ratio 0 because the median move is to a
+   **feature-identical** partner (duplicate integer-count features); the **p95 ≈ 0.375** is the
+   informative locality measure, well below the unrestricted 1.0. Policy B (hold-fixed) gives the
+   same locality (p95 ratio 0.376) — robust to the policy choice.
 
 **Verdict:** the distance-weighted law at `k=32`, `λ=1.0` **genuinely conditions on the continuous
 descriptors** (not motif alone) while remaining broadly bijective and diverse — it meets the ladder's
-aim. It is the **proposed final matching law (§3)**; `λ` is offered for crew ratification, not
-silently frozen. (`distance × U` is explicitly rejected — it can make a distant edge near-free.)
+aim, reproducibly. It is the **proposed final matching law (§3)**; `λ` is offered for crew
+ratification, not silently frozen. (`distance × U` is explicitly rejected — it can make a distant
+edge near-free.)
 
 ## 10. Open choices for crew (ratified items removed)
 - **`λ = 1.0`** for the distance-weighted matching law (§3): proposed from the locality ladder (§9);
@@ -221,6 +231,15 @@ the k=32 locality blocker is resolved by the distance-weighted law §3/§9.)*
 
 ---
 ## Change log
+**v4.1 — 2026-08-31** (Sol locality reproducibility repair): rewrote `locality_ladder.py` with a
+stable `blake2b` seed registry (no salted `hash()`), a real committed λ-sweep `{0.25,0.5,1,2}`,
+replicated **paired** unrestricted derangements, a frozen infeasibility Policy A (deterministic
+k=32→64→full escalation, no silent dropping) vs Policy B, `REPS=40`, absolute + paired-ratio
+statistics with a defined nested-`M_perm,7` aggregation, and features reconciled exactly to the M3
+continuous physical family (`dens=g(2.0)` etc.). Updated §3/§9 to the reproducible figures
+(movable-feasible 1.000 under Policy A; distinct 1.000; partner-turnover 0.541; paired p95 ratio
+0.375; λ-sweep 0.37–0.41). Conclusion and λ-pending-ratification unchanged.
+
 **v4 — 2026-08-31** (Sol 3rd pre-seal pass): froze **`M₉` membership a priori** — never changed by
 observed fit quality (pt 3); kept the **seven-cell `M_perm,7`** explicitly separate from the
 nine-cell `M₉` (pt 3); made the address-vs-parity comparison **fully descriptive, no gate**, and
