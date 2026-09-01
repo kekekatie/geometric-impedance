@@ -68,7 +68,8 @@ def westfall_young(obs_T7, null_T7xB):
     obs_T7: (7,) signed one-sided per-config statistics. null_T7xB: (7, B) raw permutation increments.
     Returns q-tilde per config (extremeness under the algorithmic reference), monotone-enforced."""
     obs = np.asarray(obs_T7, float); null = np.asarray(null_T7xB, float)
-    assert obs.shape[0] == 7 and null.shape[0] == 7
+    assert obs.shape == (7,), f"Westfall-Young obs must be shape (7,), got {obs.shape}"
+    assert null.shape == (7, C.B_PERM), f"Westfall-Young null must be shape (7, {C.B_PERM}), got {null.shape}"
     B = null.shape[1]
     order = np.argsort(-obs)                 # descending observed
     q = np.zeros(7)

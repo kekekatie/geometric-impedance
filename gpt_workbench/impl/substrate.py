@@ -10,6 +10,7 @@ generation, and this module never runs study dynamics, addresses-as-outcomes, LD
 from collections import deque
 import numpy as np
 from scipy.spatial import ConvexHull, cKDTree
+from . import constants as C
 
 
 def build_adj(n, edges):
@@ -88,3 +89,49 @@ def generate_geometry(family_N, extent, offset):
     lifts, par, perp, ustar = generate(family_N, extent, offset=np.array(offset))
     edges = build_edges(lifts, family_N, ustar)
     return lifts, par, perp, ustar, edges, build_adj(len(par), edges)
+
+
+# ---- production geometry wiring: padded super-patch Voronoi (physical v7 §3a; §5 floors) --------
+def assert_pad_params(delta, ring_width_ell):
+    """Frozen: Delta >= 4 and padding ring width >= 3 ell (physical v7 §3a)."""
+    assert delta >= 4, f"padded super-patch Delta must be >= 4 (got {delta})"
+    assert ring_width_ell >= 3, f"padding ring width must be >= 3 ell (got {ring_width_ell})"
+
+
+def restrict_voronoi_to_core(all_points, core_index):
+    """Compute Voronoi on the PADDED super-patch and restrict areas to core vertices via EXPLICIT
+    core-vertex correspondence (core_index into all_points). Asserts every core cell is bounded."""
+    from .features import voronoi_areas
+    core_index = np.asarray(core_index, int)
+    areas_all = voronoi_areas(all_points)
+    core_areas = areas_all[core_index]
+    assert not np.isnan(core_areas).any(), \
+        "a core Voronoi cell is unbounded/censored — increase padding (Delta/ring)"
+    return core_areas
+
+
+def pad_convergence(areas_delta4, areas_delta6, tol=None):
+    """Per-core-cell relative agreement between Delta=4 and Delta=6 areas; pass iff worst-case
+    relative difference <= tol (frozen 1e-6)."""
+    tol = C.VORONOI_CONV_TOL if tol is None else tol
+    a4 = np.asarray(areas_delta4, float); a6 = np.asarray(areas_delta6, float)
+    rel = np.abs(a4 - a6) / np.maximum(np.abs(a6), 1e-30)
+    return bool(rel.max() <= tol), float(rel.max())
+
+
+def assert_floors(r16_count, slab_counts):
+    """Common-set and count-floor assertions (physical v7 §5): r16 >= 400 and every slab >= 100."""
+    assert r16_count >= 400, f"r16 common set {r16_count} < 400 floor"
+    assert min(slab_counts) >= 100, f"a slab has {min(slab_counts)} < 100 floor"
+
+
+def padded_core_voronoi_areas(family_N, extent, offset, delta=4):
+    """PRODUCTION-ONLY: generate at core extent + Delta, restrict Voronoi to the core vertices.
+    Geometry-only; not invoked by the synthetic test-suite and never on prohibited study outcomes."""
+    assert_pad_params(delta, 3)
+    lifts_c, par_c, _, _, _, _ = generate_geometry(family_N, extent, offset)
+    lifts_p, par_p, _, _, _, _ = generate_geometry(family_N, extent + delta, offset)
+    # explicit correspondence: match core par-points into the padded set by exact coordinate
+    idx = {tuple(np.round(p, 9)): k for k, p in enumerate(par_p)}
+    core_index = np.array([idx[tuple(np.round(p, 9))] for p in par_c], int)
+    return restrict_voronoi_to_core(par_p, core_index)

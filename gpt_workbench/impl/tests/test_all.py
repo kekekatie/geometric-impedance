@@ -185,7 +185,7 @@ def t_aggregation():
           A.R_kill(plain2, shuf, 0.05) is None)
     # Westfall-Young monotone non-decreasing along ranked order
     obs = np.array([3., 2.5, 2., 1.5, 1., 0.5, 0.2])
-    null = rng.normal(0, 1, (7, 500))
+    null = rng.normal(0, 1, (7, 1000))          # strict (7, 1000) invariant
     q = A.westfall_young(obs, null)
     ordered = q[np.argsort(-obs)]
     check("Westfall-Young q-tilde monotone non-decreasing", np.all(np.diff(ordered) >= -1e-12))

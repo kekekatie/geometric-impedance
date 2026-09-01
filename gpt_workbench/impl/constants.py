@@ -141,6 +141,22 @@ def q_ref(null_vals, obs):
     return (1 + int(np.sum(null >= obs))) / (null.size + 1)
 
 
+def q_ref_strict(null_vals, obs):
+    """q_ref requiring EXACTLY B_PERM (1000) null repetitions (permutation stress gate invariant)."""
+    null = np.asarray(null_vals, float)
+    assert null.size == B_PERM, f"q_ref requires exactly {B_PERM} null repetitions, got {null.size}"
+    return q_ref(null, obs)
+
+
+def assert_grid_correspondence(times, grid=BOUNDARY_GRID, tol=None):
+    """Assert every fit time snaps EXACTLY to a boundary-grid point (within half a grid step)."""
+    tol = (BOUNDARY_DT / 2 + 1e-9) if tol is None else tol
+    times = np.asarray(times, float)
+    nearest = grid[np.argmin(np.abs(grid[None, :] - times[:, None]), axis=1)]
+    assert np.all(np.abs(times - nearest) <= tol), "a fit time does not correspond to a grid point"
+    return nearest
+
+
 def phys_extra_dim(r):
     """dim(physical_extra(r)) = r + 9*m(r), m(r) = |{s in RADII : s <= r}|."""
     m = sum(1 for s in RADII if s <= r)
@@ -159,6 +175,7 @@ def _self_check():
     assert BOUNDARY_GRID.size == 161
     assert abs((BOUNDARY_GRID[1] - BOUNDARY_GRID[0]) - BOUNDARY_DT) < 1e-12
     assert SNAPPED_BETA_TIMES.size == 48 and np.unique(SNAPPED_BETA_TIMES).size == 48
+    assert_grid_correspondence(SNAPPED_BETA_TIMES)          # 48 snapped times correspond to grid pts
     assert MATCH_K == 32 and MATCH_LAMBDA == 1.0 and MATCH_POLICY == "A"
     assert B_PERM == 1000 and CAPACITY_DRAWS == 200
 

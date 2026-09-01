@@ -6,7 +6,7 @@ and a sealed manifest disagree, the manifest wins. This package runs NO scientif
 the pipeline; the confirmatory run on the nine sealed study configurations is NOT authorized here.
 """
 from . import (constants, seeds, substrate, features, matching, engines,
-               aggregation, regression, gates)
+               aggregation, regression, gates, workflows, msd)
 
 __all__ = ["constants", "seeds", "substrate", "features", "matching", "engines",
-           "aggregation", "regression", "gates"]
+           "aggregation", "regression", "gates", "workflows", "msd"]
