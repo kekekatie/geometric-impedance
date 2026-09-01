@@ -1,0 +1,47 @@
+# Ambiguities and blockers — clean-room Stage 1
+
+No silent choices are authorised. Severity **BLOCKER** prevents scientifically conformant Stage 2
+implementation; **clarification** must still be resolved before production use.
+
+| ID | Severity | Unresolved point | Why consequential / required resolution |
+|---|---|---|---|
+| BLK-001 | BLOCKER | The manifests say the pipeline is “identical `transport_run.py` nested M0→M4” but the sealed baseline’s `held_out_r2` averages six fold scores and has no nested CV, while the manifests require six retained folds and four inner slabs. | Specify which baseline behaviors are inherited and which are superseded; aggregation cannot safely copy the old runner. |
+| BLK-002 | BLOCKER | The production substrate/generator mapping for family names silver/golden/platinum, extents and offsets is not fully defined in the six artifacts. | A clean-room implementation cannot uniquely construct the 54 patches without an authorised generator API contract. Provide exact functions, parameters, coordinate/lift conventions and stable vertex/edge ordering. |
+| BLK-003 | BLOCKER | “Shared motif codebook across offsets” does not state ordering, whether sharing is per config/family or global across all 54 patches, or whether held-out offset motif discovery may enter the codebook. The inspected baseline uses encounter order over all six offsets. | Column identity and leakage differ. Freeze scope, ordering, unknown-category behavior and training/test policy. |
+| BLK-004 | clarification | Dedup does not say whether comparison is per patch, pooled config, outer-training set, all offsets, or global; nor which physical column is dropped when it duplicates multiple M3 columns. | Different folds could have different feature schemas or leak held-out geometry. Freeze scope and deterministic multi-match rule. |
+| BLK-005 | BLOCKER | Physical v7 defines group contents and dimensions but not an unequivocal overall column serialization: all A then all B/D/E, or blocks interleaved by s. | Models can change with column order only indirectly, but schema identity, dedup and traceability require an exact order. |
+| BLK-006 | clarification | PC1 sign rule is incomplete when `PC1[0]==0`; “else PC1[1]>=0” does not state the transformation if both components are zero/tied, and eigensolver/tied-eigenvalue behavior is not fixed. | Slab membership and launches must be reproducible. Freeze PCA solver and complete tie rule. |
+| BLK-007 | BLOCKER | The sealed stratified-shuffle control is invoked by MSD v8.1 but not self-contained in the manifests. Inspected `assemble` uses rank-based degree deciles, one mutable RNG, encounter-order groups and no declared stable per-patch/per-fold seed. | G4 is a primary gate. Freeze exact binning, raw-field permutation, singleton behavior, and stable per-draw/per-patch identity. |
+| BLK-008 | BLOCKER | MSD §8 lists `M3pos/M4pos/M3far/M4far` controls, but no gate, required statistic, radius, reporting rule or failure route is assigned. | They cannot be correctly wired or interpreted from the seal. Clarify whether mandatory and exactly how results affect claims. |
+| BLK-009 | BLOCKER | “Take evenly-spaced indices” for 50 launches per slab has no exact integer-index formula or collision/tie behavior. | Different standard formulas select different vertices and targets. Freeze the formula. |
+| BLK-010 | BLOCKER | `log(MSD)` is undefined for zero/nonpositive MSD at any snapped time, yet every admitted launch must yield beta and no dynamics culling is allowed. | Freeze a loud-failure route or a mathematically specified treatment; no epsilon may be guessed. |
+| BLK-011 | clarification | Standardised mean difference for admission diagnostic has no denominator convention (pooled SD, admitted SD, overall SD), ddof, or zero-variance handling. | Descriptive values will differ. Freeze formula. |
+| BLK-012 | BLOCKER | Stable permutation RNG is allowed as `hash64(...)` “or equivalent”, but hash algorithm, byte encoding, component normalization, SeedSequence spawn-key word widths, edge ordering and consumption order are unspecified. | The task explicitly requires stable per-draw/per-patch/per-offset identities; independent implementations will not reproduce costs. Freeze a canonical derivation. |
+| BLK-013 | BLOCKER | “95th percentile” of 200 values does not specify quantile estimator/interpolation. | `delta_cap` feeds G3, G4, G5, G6 and routing; values near the threshold can change outcomes. Freeze the estimator. |
+| BLK-014 | clarification | Westfall–Young does not fully define observed-statistic tie ordering or the exact monotonisation operation. | Adjusted extremeness values should be reproducible. Freeze stable config tie order and cumulative-max direction. |
+| BLK-015 | BLOCKER | Capacity Gaussian blocks are “same dimensionality as parity” but scale/distribution parameters, row independence, whether generated separately per fold/config/offset/engine, and training/test realization sharing are not specified. | `delta_cap` is a primary detection floor. Freeze standard normal parameters and full identity/reuse graph. |
+| BLK-016 | BLOCKER | Matching-feature scaler says “training-only”, but it is unclear whether one scaler is pooled across five offsets per config, per motif, per patch, or per fold, and how the held-out patch’s candidate distances use it. | Candidate neighborhoods and permutation law change. Freeze fit scope and zero-variance behavior. |
+| BLK-017 | BLOCKER | Minimum-cost “perfect assignment” is called a derangement, but the candidate graph excludes self while escalation to “full same-motif group” does not explicitly preserve self exclusion; cost-tie resolution is unspecified. | Fixed points beyond singletons and platform-dependent assignments can result. Freeze graph at each escalation and tie-breaking. |
+| BLK-018 | BLOCKER | Residualiser GBT hyperparameters appear to inherit the common regressor, but this is not explicit; address scaling and multi-output versus 11 independent fits are partly described but not completely typed. | G6 is primary. Confirm one scalar GBT per address column using the frozen hyperparameters and exact residual feature scaling. |
+| BLK-019 | BLOCKER | `R2` convention for pooled outer training/test scoring is not explicit for constant targets or nonfinite predictions; scikit-learn’s `force_finite` behavior is not frozen. | Increment and gate values can silently become finite constants. Freeze exact scoring and failure rules. |
+| BLK-020 | clarification | The boundary strip uses `d_bound<2*ell` while admission uses `>=16*ell`; treatment of hull-depth numerical tolerance and points exactly on thresholds is not specified beyond mathematical inequalities. | Cross-platform near-boundary membership may differ. Freeze computation precision/tolerance or require exact float behavior plus audit. |
+| BLK-021 | BLOCKER | G1 prose alternates between “a coherent config failure downgrades/fails global claim” and the final conjunction “coherent G1”; it does not name whether `coherent G1` means all nine cells pass. The natural reading is all nine, but guessing is prohibited. | Freeze the Boolean reduction across nine per-config G1 states, and likewise classical G1 for the modifier. |
+| BLK-022 | BLOCKER | Physical routing speaks of “a cell” but compression/survival criteria use global `M9`; exact output granularity (one global route versus per-config routes) is inconsistent. | Freeze routing scope and labels for individual cells versus the global study. |
+| BLK-023 | BLOCKER | The manifests give measured r16 feasibility results but governance forbids accessing study geometry/data in this stage. It is unclear whether Stage 2 must recompute and gate feasibility or treat the sealed membership as fixed facts. | Specify whether geometry-only preflight values are normative inputs, mandatory recomputations, or diagnostics. |
+| BLK-024 | clarification | Moment sigma `<1e-9` rule says “three higher moments” after listing variance, skewness, kurtosis, which could mean set variance too; Group B needs exact behavior. | Freeze outputs explicitly; this spec currently interprets variance as computed and skew/kurtosis as zero. |
+| BLK-025 | BLOCKER | The padded Voronoi construction names extent+Delta and a ring-width constraint but not how core vertices are matched to padded vertices or how unbounded/Qhull degeneracies fail. | Group E and parity area require a stable row mapping and loud-failure contract. |
+
+## Seal-internal observations that are not blockers
+
+- Manifest end markers say “Nothing sealed” although headers and `SEAL_RECORD.md` say SEALED. This
+  is stale change-log boilerplate; the seal record and status headers control.
+- The checked-out files use Windows line-ending conversion. Identity verification was therefore
+  performed against immutable Git blob bytes, not worktree bytes; all five normative hashes match.
+- `SEAL_RECORD.md` is a seal/provenance record; its table identifies five normative protocol files.
+  The user separately authorised it and the snapped-time companion as Stage 1 read inputs.
+
+## Stop condition
+
+Stage 1 documentation is complete despite these blockers. Scientific production implementation,
+launcher creation and study execution must stop until every **BLOCKER** receives an authorised,
+pre-outcome clarification or seal amendment. No proposed answer above is silently adopted.
