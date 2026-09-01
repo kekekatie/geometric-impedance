@@ -62,18 +62,24 @@ def t_substrate():
     par, perp, tree, edges, adj = _toy_geometry()
     mine = S.m4_cols(adj, tree, par, perp, shell_r=(2, 4, 8))
     check("m4_cols is 11 columns", mine.shape[1] == 11)
-    # bit-identity vs sealed baseline transport_run._m4_cols
+    # bit-identity vs the sealed baseline: prefer the real substrates/transport_run.py (in-repo),
+    # fall back to the bundled verbatim extract baseline_m4_reference (self-contained audit ZIP).
+    TR = None; src = ""
     try:
         import os
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "substrates"))
-        import transport_run as TR
+        import transport_run as TR; src = "substrates/transport_run.py"
+    except Exception:
+        try:
+            from . import baseline_m4_reference as TR; src = "bundled verbatim extract"
+        except Exception as e:  # pragma: no cover
+            check("m4_cols BIT-IDENTICAL to sealed baseline", False, f"no baseline available: {e}")
+    if TR is not None:
         f = {"n": len(par), "adj": adj, "tree": tree, "par": par, "shell_r": (2, 4, 8)}
         base = TR._m4_cols(f, perp)
-        check("m4_cols BIT-IDENTICAL to sealed transport_run._m4_cols",
+        check(f"m4_cols BIT-IDENTICAL to sealed baseline ({src})",
               np.max(np.abs(mine - base)) < 1e-12, f"maxdiff={np.max(np.abs(mine-base)):.2e}")
         check("hull_depth matches baseline", np.allclose(S.hull_depth(perp), TR.hull_depth(perp)))
-    except Exception as e:  # pragma: no cover
-        check("m4_cols BIT-IDENTICAL to sealed baseline", False, f"could not import baseline: {e}")
 
 
 # --------------------------------------------------------------------------- features
