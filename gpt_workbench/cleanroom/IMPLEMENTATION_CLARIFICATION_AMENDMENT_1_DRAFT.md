@@ -1,36 +1,36 @@
-# Implementation Clarification Amendment 1 — DRAFT
+# Implementation Clarification Amendment 1
 
-**Status: PROPOSED / NOT RATIFIED / NOT IMPLEMENTED / NOT RUN**
+**Status: RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
-**Date:** 2026-09-01  
+**Ratification date:** 2026-09-01  
 **Parent design seal:** `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`  
 **Parent clean-room specification:** `1a75925677c95d55be3773857b54dbadb8753bdd`  
-**Authority/source:** Work-GPT/Sol design adjudication relayed by Katie  
-**Purpose:** outcome-blind clarification proposal resolving, where the adjudication is complete,
-the 25 items in `AMBIGUITIES_AND_BLOCKERS.md`. This draft has no normative force until explicitly
-ratified under the seal’s post-seal amendment policy.
+**Proposal commit:** `ee4f7719109af9cc771c9a333e0fdcbe1c71834a`  
+**Ratification authority:** Katie, human principal  
+**Scientific review:** Work-GPT/Sol  
+**Purpose:** outcome-blind clarification resolving the 25 items in `AMBIGUITIES_AND_BLOCKERS.md`.
+This amendment has normative force as a companion to the parent seal under its post-seal amendment
+policy, within the implementation boundary stated at the end of this document.
 
 No study address values, targets, LDOS, beta values, scores, outcome curves, propagation results or
 later prototype/audit branches were accessed. No scientific code was implemented and nothing was run.
 
-## Prominent unresolved blockers in this proposal
+## Deterministic-completion resolution record
 
-Textual concordance found no direct contradiction between the adjudications below and explicit sealed
-wording. However, three adjudications remain insufficient for independent bitwise reproduction:
+Textual concordance found no direct contradiction between these adjudications and explicit sealed
+wording. Ratification supplies the previously missing deterministic details for AC-07, AC-12 and
+AC-15: canonical JSON and hash rules, literal BLAKE2b personalisations, exact NumPy generator
+construction and consumption order, and the complete capacity spawn tree. All 25 clarification
+clauses are therefore ratified complete.
 
-1. **AC-07 / BLK-007:** the shuffle root and semantic key are fixed, but the canonical key encoding,
-   hash/SeedSequence derivation and within-group RNG consumption order are not. “Stably keyed” is not
-   itself an executable derivation.
-2. **AC-12 / BLK-012:** the required BLAKE2b personalisation string is described as fixed but its
-   literal byte value is absent. Canonical JSON also needs exact field names/order and numeric/string
-   encodings. No value is invented here.
-3. **AC-15 / BLK-015:** capacity semantics are fixed, but the exact deterministic derivation of each
-   `(draw, configuration, offset)` patch substream is not stated. The draw child versus patch child
-   `spawn_key` layout or equivalent canonical hash must be supplied.
-
-These three blockers prevent a fully reproducible implementation even if this draft is otherwise
-ratified. Ratification should either supply their missing literals/algorithms or expressly leave the
-implementation blocked. They do not prevent completion of this proposal.
+For AC-07 and AC-12, canonical JSON is UTF-8 encoded with `ensure_ascii=True`, `allow_nan=False`,
+separators exactly `(",",":")`, `sort_keys=False`, and fields inserted in each clause's exact stated
+order. Family is exactly `"silver"`, `"golden"` or `"platinum"`; tier is exactly `"small"`,
+`"medium"` or `"large"`; extent and offset index are base-10 JSON integers; offset index is 0..5
+in the frozen offset order; and motif tuples are represented recursively as JSON arrays containing
+JSON integers only. Each keyed RNG uses BLAKE2b with `digest_size=8`; split its digest big-endian as
+`u0=int.from_bytes(digest[0:4],"big")` and `u1=int.from_bytes(digest[4:8],"big")`. Use NumPy
+`Generator(PCG64(seed_sequence))`, never `default_rng`, and pin and record the exact NumPy version.
 
 ## Proposed clarification clauses
 
@@ -134,7 +134,7 @@ lowest-index slabs as sealed.
 
 ### AC-07 — Stratified-shuffle control
 
-**Resolves in part:** BLK-007; deterministic key derivation remains blocked above.  
+**Resolves:** BLK-007.  
 **Affected sealed sections:** MSD v8.1 §8, §12 G4; sealed-parent baseline `assemble`.  
 **Clean-room links:** NR-CV-012; NR-GATE-005; TP-RNG-002; TP-WIRE-005, TP-WIRE-010.
 
@@ -147,12 +147,21 @@ degree_decile = clip(rank * 10 // n, 0, 9)
 group = motif_code * 10 + degree_decile
 ```
 
-Use one patch-level shuffle shared across folds and engines. Singletons remain fixed. Use separate root
-`SeedSequence(20260901)`, stably keyed by configuration and offset, with no mutable global RNG.
+Use one patch-level shuffle shared across folds and engines. The canonical JSON object has fields in
+this exact order: `family`, `tier`, `extent`, `offset_index`. Hash it under the shared canonical rules
+with BLAKE2b personalisation literal `b"GIV-SHUFFLE-v1"`, and construct
+`SeedSequence(20260901,spawn_key=(u0,u1))` and `Generator(PCG64(seed_sequence))`.
+
+Both degree-ranking `argsort` operations use stable sorting. Process groups in ascending
+`(motif_code,degree_decile)` order. Within each group, order members by exact lift identity. For each
+nonsingleton group, call the patch generator's permutation operation exactly once and jointly permute
+the raw two-component perpendicular-address rows. Singletons consume no random draw and remain fixed.
+Store this one patch shuffle and reuse it across all folds and both engines. No mutable global RNG is
+permitted.
 
 **Rationale:** preserves paired G4 input while separating it from address and capacity registries.
 **Concordance:** the degree-decile and joint raw-field behavior are exactly recoverable and compatible;
-the baseline’s mutable RNG is superseded. Exact stable-key derivation still requires ratification.
+the baseline’s mutable RNG is superseded by the ratified deterministic derivation.
 
 ### AC-08 — Position/far controls
 
@@ -211,19 +220,23 @@ with no threshold or gate.
 
 ### AC-12 — Address-permutation RNG
 
-**Resolves in part:** BLK-012; literal encoding/personalisation remains blocked above.  
+**Resolves:** BLK-012.  
 **Affected sealed sections:** Conditional-null v4.1 §3–5.  
 **Clean-room links:** NR-RNG-003..006; TP-RNG-001..005.
 
-Canonical semantic fields are family, tier, extent, offset index, canonical motif tuple and repetition.
-Encode the fields excluding repetition as canonical UTF-8 JSON. Hash with BLAKE2b `digest_size=8` and
-a fixed protocol personalisation string; split the digest big-endian into uint32 `u0,u1`. Repetition
-`b` uses `SeedSequence(20260829,spawn_key=(u0,u1,b))`. Sort source and destination rows by lift identity
-and draw edge costs in row-major order. Synchronise repetition indices across engines and comparisons.
+The canonical JSON object, excluding repetition, has fields in this exact order: `family`, `tier`,
+`extent`, `offset_index`, `motif`. Encode it under the shared canonical rules and hash with BLAKE2b
+personalisation literal `b"GIV-ADDRPERM-v1"`. For repetition `b=0..999`, construct
+`SeedSequence(20260829,spawn_key=(u0,u1,b))` and `Generator(PCG64(seed_sequence))`.
+
+Within each motif group, order sources and destinations by exact lift identity. Candidate destinations
+retain AC-17's deterministic order. Generate stochastic uniform edge-cost terms as one float64
+row-major stream in source-row then candidate-column order. Synchronise the same repetition number
+across engines and comparisons; configuration/motif keys keep their streams distinct.
 
 **Rationale:** removes traversal and scheduling dependence.
-**Concordance:** compatible with the seal’s stable keyed derivation and synchronized repetitions.
-The literal personalisation and canonical JSON schema must be added before ratification can close BLK-012.
+**Concordance:** compatible with the seal’s stable keyed derivation and synchronized repetitions; the
+ratified literal, schema, generator and consumption order make the derivation executable.
 
 ### AC-13 — `delta_cap` quantile
 
@@ -253,18 +266,23 @@ along that descending order.
 
 ### AC-15 — Capacity fields
 
-**Resolves in part:** BLK-015; exact patch-substream derivation remains blocked above.  
+**Resolves:** BLK-015.  
 **Affected sealed sections:** Physical v7 §6; Conditional-null v4.1 §5–6.  
 **Clean-room links:** NR-RNG-007; NR-AGG-003; TP-RNG-002, TP-RNG-005; TP-AGG-002.
 
-Each capacity block has 11 independent standard-normal columns. One draw is a complete field over every
-configuration×offset×vertex row. Derive patch substreams from capacity root `SeedSequence(20260830)`,
-draw index, configuration and offset. Store and reuse that draw across outer folds and both engines;
-never regenerate held-out fields under another identity. Apply no address-derived scaling.
+Construct `draw_children=SeedSequence(20260830).spawn(200)` exactly once. For each draw child `b`,
+construct exactly 54 patch children with the single call `patch_children=draw_children[b].spawn(54)`.
+Patch order is family-major: silver small/medium/large, golden small/medium/large, platinum
+small/medium/large; within every configuration, use the six offsets in frozen order.
+
+Within a patch, order rows by exact lift identity and use `Generator(PCG64(patch_child))` to generate
+one float64 C-order `(n_vertices,11)` array of independent standard normals. Store and reuse that exact
+patch array across all outer folds and both engines for the draw. No other spawning or regeneration is
+permitted and no address-derived scaling is applied.
 
 **Rationale:** fixes distribution, dimensionality, reuse and scientific independence.
-**Concordance:** compatible with 200 indexed children and full-M9 calibration. The exact hierarchical
-spawn/hash layout is still required for bitwise identity.
+**Concordance:** compatible with 200 indexed children and full-M9 calibration; the complete spawn tree,
+patch order, generator, shape, dtype and reuse graph are ratified.
 
 ### AC-16 — Matching scaler
 
@@ -410,10 +428,9 @@ are outcome-blind but would become normative only after explicit ratification.
 
 ### Deterministic serialization and RNG choices
 
-AC-02 and AC-05 fix stable geometry/schema serialization. AC-07, AC-12 and AC-15 propose separate
-shuffle/address/capacity registries, while retaining the prominent missing-literal blockers above.
-AC-14 fixes deterministic multiplicity ordering. These choices are reproducibility machinery, not
-new scientific hypotheses or thresholds.
+AC-02 and AC-05 fix stable geometry/schema serialization. AC-07, AC-12 and AC-15 establish complete,
+separate shuffle/address/capacity registries. AC-14 fixes deterministic multiplicity ordering. These
+choices are reproducibility machinery, not new scientific hypotheses or thresholds.
 
 ### Descriptive controls with no gate role
 
@@ -427,39 +444,39 @@ frozen HGBR hyperparameters, time grids, launch count, B=1000, 200 capacity draw
 claim conjunction, maximum claim language and prohibition on perpendicular-space ontology remain
 unchanged. No outcome has been accessed and no study has been run.
 
-## Old-item to proposed-clause map
+## Old-item to ratified-clause map
 
 | Old item | Clause | Resolution state |
 |---|---|---|
-| BLK-001 pipeline inheritance | AC-01 | proposed complete |
-| BLK-002 generator contract | AC-02 | proposed complete |
-| BLK-003 motif codebook | AC-03 | proposed complete |
-| BLK-004 deduplication | AC-04 | proposed complete |
-| BLK-005 physical serialization | AC-05 | proposed complete |
-| BLK-006 PCA determinism | AC-06 | proposed complete |
-| BLK-007 shuffle control | AC-07 | partial; stable-key derivation missing |
-| BLK-008 position/far controls | AC-08 | proposed complete |
-| BLK-009 launch indices | AC-09 | proposed complete |
-| BLK-010 nonpositive MSD | AC-10 | proposed complete |
-| BLK-011 SMD | AC-11 | proposed complete |
-| BLK-012 address RNG | AC-12 | partial; literals/schema missing |
-| BLK-013 quantile | AC-13 | proposed complete |
-| BLK-014 Westfall–Young | AC-14 | proposed complete |
-| BLK-015 capacity fields | AC-15 | partial; patch-substream derivation missing |
-| BLK-016 matching scaler | AC-16 | proposed complete |
-| BLK-017 matching ties | AC-17 | proposed complete |
-| BLK-018 residualiser | AC-18 | proposed complete |
-| BLK-019 R2 | AC-19 | proposed complete |
-| BLK-020 numeric thresholds | AC-20 | proposed complete |
-| BLK-021 G1 scope | AC-21 | proposed complete |
-| BLK-022 routing scope | AC-22 | proposed complete |
-| BLK-023 geometry preflight | AC-23 | proposed complete |
-| BLK-024 sigma moments | AC-24 | proposed complete |
-| BLK-025 padded/core matching | AC-25 | proposed complete |
+| BLK-001 pipeline inheritance | AC-01 | ratified complete |
+| BLK-002 generator contract | AC-02 | ratified complete |
+| BLK-003 motif codebook | AC-03 | ratified complete |
+| BLK-004 deduplication | AC-04 | ratified complete |
+| BLK-005 physical serialization | AC-05 | ratified complete |
+| BLK-006 PCA determinism | AC-06 | ratified complete |
+| BLK-007 shuffle control | AC-07 | ratified complete |
+| BLK-008 position/far controls | AC-08 | ratified complete |
+| BLK-009 launch indices | AC-09 | ratified complete |
+| BLK-010 nonpositive MSD | AC-10 | ratified complete |
+| BLK-011 SMD | AC-11 | ratified complete |
+| BLK-012 address RNG | AC-12 | ratified complete |
+| BLK-013 quantile | AC-13 | ratified complete |
+| BLK-014 Westfall–Young | AC-14 | ratified complete |
+| BLK-015 capacity fields | AC-15 | ratified complete |
+| BLK-016 matching scaler | AC-16 | ratified complete |
+| BLK-017 matching ties | AC-17 | ratified complete |
+| BLK-018 residualiser | AC-18 | ratified complete |
+| BLK-019 R2 | AC-19 | ratified complete |
+| BLK-020 numeric thresholds | AC-20 | ratified complete |
+| BLK-021 G1 scope | AC-21 | ratified complete |
+| BLK-022 routing scope | AC-22 | ratified complete |
+| BLK-023 geometry preflight | AC-23 | ratified complete |
+| BLK-024 sigma moments | AC-24 | ratified complete |
+| BLK-025 padded/core matching | AC-25 | ratified complete |
 
-## Ratification boundary
+## Implementation boundary
 
-This document is a proposal only. It does not amend the seal by existing, and it must not be treated
-as permission to implement or run the protocol. Ratification requires an explicit authority action
-that also resolves the three remaining deterministic RNG blockers or knowingly keeps implementation
-stopped. Until then: **NOT RATIFIED / NOT IMPLEMENTED / NOT RUN**.
+This ratified amendment has normative force as a companion to the parent seal. It authorizes
+specification reconciliation and synthetic implementation only. It does not authorize confirmatory
+execution or access to address values, targets, LDOS, beta values, outcome curves or study propagation.
+Status remains **RATIFIED / NOT IMPLEMENTED / NOT RUN** until separately authorized stages occur.
