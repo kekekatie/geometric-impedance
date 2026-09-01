@@ -1,0 +1,269 @@
+{
+  "seal_commit": "4ec0536",
+  "reviewed_parent": "e3d7af3",
+  "note": "Machine-readable mirror of sealed constants. The sealed manifests remain authoritative.",
+  "offsets": [
+    [
+      0.13,
+      0.37
+    ],
+    [
+      0.29,
+      0.11
+    ],
+    [
+      0.41,
+      0.23
+    ],
+    [
+      0.05,
+      0.47
+    ],
+    [
+      0.19,
+      0.31
+    ],
+    [
+      0.37,
+      0.09
+    ]
+  ],
+  "configs_9": [
+    [
+      "silver",
+      8,
+      14
+    ],
+    [
+      "silver",
+      8,
+      16
+    ],
+    [
+      "silver",
+      8,
+      18
+    ],
+    [
+      "golden",
+      10,
+      18
+    ],
+    [
+      "golden",
+      10,
+      20
+    ],
+    [
+      "golden",
+      10,
+      22
+    ],
+    [
+      "platinum",
+      12,
+      16
+    ],
+    [
+      "platinum",
+      12,
+      18
+    ],
+    [
+      "platinum",
+      12,
+      20
+    ]
+  ],
+  "feasible_7": [
+    [
+      "silver",
+      14
+    ],
+    [
+      "silver",
+      16
+    ],
+    [
+      "silver",
+      18
+    ],
+    [
+      "golden",
+      18
+    ],
+    [
+      "golden",
+      20
+    ],
+    [
+      "golden",
+      22
+    ],
+    [
+      "platinum",
+      20
+    ]
+  ],
+  "platinum_infeasible": [
+    [
+      "platinum",
+      16
+    ],
+    [
+      "platinum",
+      18
+    ]
+  ],
+  "tiers": {
+    "small": [
+      [
+        "silver",
+        8,
+        14
+      ],
+      [
+        "golden",
+        10,
+        18
+      ],
+      [
+        "platinum",
+        12,
+        16
+      ]
+    ],
+    "medium": [
+      [
+        "silver",
+        8,
+        16
+      ],
+      [
+        "golden",
+        10,
+        20
+      ],
+      [
+        "platinum",
+        12,
+        18
+      ]
+    ],
+    "large": [
+      [
+        "silver",
+        8,
+        18
+      ],
+      [
+        "golden",
+        10,
+        22
+      ],
+      [
+        "platinum",
+        12,
+        20
+      ]
+    ]
+  },
+  "radii": [
+    2,
+    4,
+    8,
+    12,
+    16
+  ],
+  "ref_radius": 16,
+  "phys_extra_dim": {
+    "2": 11,
+    "4": 22,
+    "8": 35,
+    "12": 48,
+    "16": 61
+  },
+  "admission_depth_ell": 16,
+  "singleton_max": 0.05,
+  "regressor": {
+    "max_depth": 3,
+    "max_iter": 250,
+    "learning_rate": 0.06,
+    "l2_regularization": 1.0,
+    "random_state": 0
+  },
+  "dens_radius": 2.0,
+  "g_small": [
+    1.6,
+    2.6
+  ],
+  "g_med": [
+    4.0,
+    6.0
+  ],
+  "shell_r_m4": [
+    2,
+    4,
+    8
+  ],
+  "moment_sigma_floor": 1e-09,
+  "dedup_tol": 1e-12,
+  "voronoi_pad_delta_min": 4,
+  "voronoi_pad_ring_min_ell": 3,
+  "n_slabs": 4,
+  "floor_r16": 400,
+  "floor_slab": 100,
+  "match_k": 32,
+  "match_escalation": [
+    32,
+    64,
+    "full"
+  ],
+  "match_lambda": 1.0,
+  "match_policy": "A",
+  "match_cost": "feature_distance + lambda * U(0,1)",
+  "B_perm": 1000,
+  "capacity_draws": 200,
+  "seed_address_perm_root": 20260829,
+  "seed_capacity_root": 20260830,
+  "seed_locality_root": 20260829,
+  "boundary_grid": {
+    "start": 0.0,
+    "stop": 8.0,
+    "num": 161,
+    "dt": 0.05
+  },
+  "strip_w": 2,
+  "cross_threshold": 0.01,
+  "t_bound_strict": 8,
+  "beta_fit_interval": [
+    2.0,
+    8.0
+  ],
+  "n_snapped_beta_times": 48,
+  "launch_L": 200,
+  "launch_batch": 50,
+  "krylov_state_tol": 1e-10,
+  "norm_cons_tol": 1e-08,
+  "gates": {
+    "G1_r2_min": 0.9,
+    "G2_qref_max": 0.05,
+    "G4_rkill_min": 0.7,
+    "G5_classical_frac": 0.2,
+    "rho_star": 0.25,
+    "sign_stable_min": 5
+  },
+  "primary_coherent_gates": [
+    "G0",
+    "G1_coherent",
+    "G2",
+    "G3",
+    "G4",
+    "G6"
+  ],
+  "cross_engine_modifier_gates": [
+    "G1_classical",
+    "G5"
+  ],
+  "frozen_top_line_claim": "the address representation predicts heterogeneity in full-spectrum wavepacket spreading beyond the frozen physical descriptions and controls"
+}
