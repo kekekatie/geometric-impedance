@@ -75,6 +75,13 @@ synthetic/conformance test. Existing IDs remain stable.
 | AC-20 | All sealed threshold clauses | NR-AMD-020; NR-GATE-000..009 | `thresholds.py`, `gates.py` | TP-AMD-024 literal inequalities/margins/nonfinite routes |
 | AC-21 | MSD §7,§12; Concordance G1 | NR-AMD-021; NR-GATE-002 | `gates.py` | TP-AMD-025 all-nine coherent/classical reductions |
 | AC-22 | Physical §7; Conditional §7; MSD §12 | NR-AMD-022; NR-ROUTE-001..005 | `routing.py` | TP-AMD-026 suite route and no cell dropping |
-| AC-23 | Physical §3a,§5,§8; Conditional §9 | NR-AMD-023; NR-GEO-011..014 | `preflight.py` | TP-AMD-027 provenance mismatch stop/fixed membership |
+| AC-23 | Physical §3a,§5,§8; Conditional §9; `PREFLIGHT_GEOMETRY_REPORT_V2.md` §1–§6 blob `1c2995cc16bb5b8c0b8777550a461d4593966b48`; `SIX_OFFSET_AUDIT_REPORT.md` per-patch/Appendix blob `2470997bf70c16c1ee6af6f13784b4212d56a291` | NR-AMD-023; NR-GEO-011..014; `GeometryReferenceRegistry` | `preflight.py` | TP-AMD-027 typed hard/exact/rounded roles, mismatch stop and fixed membership |
 | AC-24 | Physical §1,§3 Group B | NR-AMD-024; NR-FEA-010..011 | `physical_features.py` | TP-AMD-028 sigma-floor three-zero result |
 | AC-25 | Physical §3 Group E,§3a | NR-AMD-025; NR-GEO-013..014 | `voronoi.py`, `preflight.py` | TP-AMD-029 exact join/ring/convergence/loud failures |
+
+## Authorized geometry-provenance source ledger
+
+| Seal-commit source | Git blob | Permitted use | Comparison roles |
+|---|---|---|---|
+| `gpt_workbench/PREFLIGHT_GEOMETRY_REPORT_V2.md` | `1c2995cc16bb5b8c0b8777550a461d4593966b48` | Materialize AC-23 outcome-free geometry provenance only | hard thresholds remain sealed; rounded size/morphology and aggregate padding figures are provenance-only expectations |
+| `gpt_workbench/SIX_OFFSET_AUDIT_REPORT.md` | `2470997bf70c16c1ee6af6f13784b4212d56a291` | Materialize exact 54-patch r16/singleton registry and frozen local-null membership | exact discrete identity check; singleton >5% disables only local null; M9 unchanged |

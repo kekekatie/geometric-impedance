@@ -34,9 +34,12 @@ BLK-001..025 annotations are resolved by ratified NR-AMD-001..025; the ledger pr
 - **NR-GEO-009** Define `d_bound(i)=hull_depth(par)[i]`, the signed distance to the convex hull of
   parallel-space points; positive values are interior depths.
 - **NR-GEO-010** Use the common evaluated population `{i:d_bound(i)>=16*ell}` at every radius rung.
-- **NR-GEO-011** A cell is infeasible if its r16 common set has fewer than 400 rows, any inner slab
-  has fewer than 100 rows, a required physical-size match is unmet, or a patch has more than 5%
-  singleton rows for the local null.
+- **NR-GEO-011** An r16 common set with fewer than 400 rows, an inner slab with fewer than 100 rows,
+  or failure of a required geometry conformance check is a geometry preflight failure. A singleton
+  fraction greater than 5% makes only that patch/configuration's local-permutation control unavailable;
+  it does not remove the configuration from M9 or invalidate plain, residual, parity or capacity
+  results. Platinum-e16/e18 remain expected M9 members and expected M_perm,7 absences. Required
+  physical-size matching is a frozen tier-selection fact, never permission to re-tier.
 - **NR-GEO-012** Retain golden aspect-ratio morphology as a mandatory descriptive diagnostic; add
   no regression feature or extra control for it.
 - **NR-GEO-013** For Voronoi descriptors generate a super-patch at core extent plus `Delta>=4`,
@@ -63,10 +66,11 @@ BLK-001..025 annotations are resolved by ratified NR-AMD-001..025; the ledger pr
 - **NR-FEA-008** Group A bin index is `ceil(d/ell-1e-9)`, centre excluded, bins 1..r,
   corresponding to left-open/right-closed annuli; emit r columns.
 - **NR-FEA-009** For each permitted s, define `Nb(i,s)={j!=i:||par[j]-par[i]||<=s*ell}`.
-- **NR-FEA-010** Group B emits population mean, variance (`ddof=0`), skewness and excess kurtosis
-  of neighbour degrees; if empty use `{deg[i]}`.
-- **NR-FEA-011** For any moment sample with sigma `<1e-9`, set variance-normalised skewness and
-  excess kurtosis to zero; population variance remains zero.
+- **NR-FEA-010** Group B emits the mean and, when sigma `>=1e-9`, ordinary population variance
+  (`ddof=0`), skewness and excess kurtosis of neighbour degrees; if empty use `{deg[i]}`.
+- **NR-FEA-011** For any moment sample with sigma `<1e-9`, emit the mean normally and set variance,
+  skewness and excess kurtosis exactly to zero. At sigma `>=1e-9`, compute ordinary population
+  variance, skewness and excess kurtosis. This boundary is identical to NR-AMD-024.
 - **NR-FEA-012** Group D emits means over `{i} union Nb(i,s)` for `psi_(N/2),psi_N,psi_(2N)`.
 - **NR-FEA-013** Group E emits mean and population variance of bounded padded-Voronoi cell areas in
   `Nb(i,s)`; if none are bounded, use `(area[i],0)`.
@@ -325,8 +329,11 @@ of AC-01 through AC-25. Each `NR-AMD-nnn` maps one-to-one to `AC-nn`.
   single global suite-level classifications. Per-cell values are descriptive except sealed G8.
   Never drop or reclassify cells.
 - **NR-AMD-023 (AC-23 — geometry preflight).** Before dynamics, recompute all geometry-only
-  feasibility checks and compare with sealed provenance ranges. Any mismatch stops. M9 and M_perm,7
-  memberships remain fixed and cannot be outcome- or preflight-selected.
+  feasibility checks and compare them under the typed roles in `GeometryReferenceRegistry` below.
+  Failure of an explicit hard threshold or mismatch of an exact discrete generator/provenance record
+  stops. Rounded descriptive expectations are reported side-by-side and never converted into equality
+  tests or thresholds. M9 and M_perm,7 memberships remain fixed and cannot be outcome- or
+  preflight-selected; the frozen physical-size match cannot authorize re-tiering.
 - **NR-AMD-024 (AC-24 — sigma floor).** When sigma `<1e-9`, emit mean normally and set variance,
   skewness and excess kurtosis exactly to zero.
 - **NR-AMD-025 (AC-25 — padded/core).** Match core to padded vertices one-to-one by exact lift tuple;
@@ -334,3 +341,81 @@ of AC-01 through AC-25. Each `NR-AMD-nnn` maps one-to-one to `AC-nn`.
   divided by ell and require >=3. Compare each matched Delta=4/6 core-cell area and perimeter using
   denominator `max(abs(value_Delta6),1e-15)` and require maximum relative difference <=1e-6.
   Qhull failure, unbounded cell, nonfinite geometry or failed correspondence stops.
+
+## GeometryReferenceRegistry
+
+This registry materializes AC-23's comparison inputs without creating new scientific thresholds.
+Sources are exact seal-commit blobs:
+
+- `PREFLIGHT_GEOMETRY_REPORT_V2.md`, blob `1c2995cc16bb5b8c0b8777550a461d4593966b48`
+  (sections §1–§6; nine family/extent cells at extents 18/20/22, six frozen offsets where stated).
+- `SIX_OFFSET_AUDIT_REPORT.md`, blob `2470997bf70c16c1ee6af6f13784b4212d56a291`
+  (per-patch table and Appendix exact 54-row audit; all nine selected configurations×six offsets).
+
+### Typed comparison roles
+
+| Registry quantity | Units/scope | Value status | Source section/blob | Comparison role |
+|---|---|---|---|---|
+| common-set count floor | vertices; every selected patch | exact threshold `>=400` | Physical v7 §5, `e3c32a2df760627fd9b009929c24423a51522e9f` | hard geometry preflight threshold |
+| PCA slab count floor | vertices; every slab | exact threshold `>=100` | Physical v7 §5, `e3c32a2df760627fd9b009929c24423a51522e9f` | hard geometry preflight threshold |
+| singleton ceiling | fraction; each selected patch | exact threshold `>0.05` | Conditional v4.1 §3, `d88b91e519288a68f7bb5740d3b82cdbdef26964`; audit Appendix `2470997bf70c16c1ee6af6f13784b4212d56a291` | local-null availability only; never removes M9/plain/residual/parity/capacity |
+| padded ring width | multiples of ell; each padded patch | exact threshold `>=3` | Physical v7 §3a, `e3c32a2df760627fd9b009929c24423a51522e9f` | hard geometry preflight threshold |
+| Delta4/Delta6 cell convergence | relative per-cell area/perimeter | exact threshold max `<=1e-6` | Physical v7 §3a, `e3c32a2df760627fd9b009929c24423a51522e9f` | hard geometry preflight threshold |
+| r16 and singleton-count records below | vertices; exact configuration×offset | exact discrete integers | audit Appendix, `2470997bf70c16c1ee6af6f13784b4212d56a291` | exact generator/provenance identity check; mismatch stops |
+| singleton-fraction display below | fraction; exact configuration×offset | rounded to four decimals | audit Appendix, `2470997bf70c16c1ee6af6f13784b4212d56a291` | provenance display only; recompute threshold decision from exact counts/r16 |
+| seven/two local-null membership | configuration identity | frozen exact fact | audit Conclusions, `2470997bf70c16c1ee6af6f13784b4212d56a291` | M_perm,7 availability only; M9 unchanged |
+| n/area/diameter/usable-area table below | vertices or ell²/ell; family×extent means | rounded reported means | preflight v2 §2, `1c2995cc16bb5b8c0b8777550a461d4593966b48` | provenance-only side-by-side report; no equality tolerance/gate |
+| monotone growth at extents 18→20→22 | family aggregate | reported integer/rounded aggregate | preflight v2 §1, `1c2995cc16bb5b8c0b8777550a461d4593966b48` | provenance-only expectation; cannot select tiers |
+| padding recovery table below | cells; family×extent aggregate | exact integers as reported, not per-offset registry | preflight v2 §5, `1c2995cc16bb5b8c0b8777550a461d4593966b48` | provenance-only expectation plus sealed bounded-cell hard check on recomputation |
+| matching escalation summary below | patch counts/ranges by configuration | reported range/qualitative frequency | audit per-patch table, `2470997bf70c16c1ee6af6f13784b4212d56a291` | provenance-only expectation; runtime follows deterministic escalation and records actual tier |
+
+### Exact selected-patch registry
+
+Arrays are in frozen offset order `(0.13,0.37)`, `(0.29,0.11)`, `(0.41,0.23)`, `(0.05,0.47)`,
+`(0.19,0.31)`, `(0.37,0.09)`. `r16` and singleton counts are exact integers; singleton fractions
+are the audit's rounded four-decimal display values and never replace `singleton_count/r16` for the
+5% comparison. `local` is the frozen availability role.
+
+| configuration | r16[6] | singleton_count[6] | singleton_fraction[6] | local |
+|---|---|---|---|---|
+| silver e14 | 668,655,653,653,671,658 | 8,8,7,5,2,2 | .0120,.0122,.0107,.0077,.0030,.0030 | feasible |
+| silver e16 | 1120,1120,1120,1102,1120,1120 | 4,4,4,4,4,4 | .0036,.0036,.0036,.0036,.0036,.0036 | feasible |
+| silver e18 | 1698,1718,1698,1723,1723,1723 | 3,0,2,3,2,1 | .0018,.0000,.0012,.0017,.0012,.0006 | feasible |
+| golden e18 | 581,597,600,590,585,596 | 18,24,14,15,18,25 | .0310,.0402,.0233,.0254,.0308,.0420 | feasible |
+| golden e20 | 1025,1013,1012,1020,1024,1027 | 19,16,11,13,10,18 | .0185,.0158,.0109,.0127,.0098,.0175 | feasible |
+| golden e22 | 1535,1545,1559,1537,1547,1539 | 18,9,14,12,15,9 | .0117,.0058,.0090,.0078,.0097,.0059 | feasible |
+| platinum e16 | 726,727,730,728,725,735 | 65,67,66,66,70,72 | .0895,.0922,.0904,.0907,.0965,.0980 | local-null unavailable; remains M9 |
+| platinum e18 | 1170,1168,1171,1165,1167,1170 | 60,61,68,61,65,73 | .0513,.0522,.0581,.0524,.0557,.0624 | local-null unavailable; remains M9 |
+| platinum e20 | 1719,1719,1704,1716,1704,1718 | 51,58,61,58,71,65 | .0297,.0337,.0358,.0338,.0417,.0378 | feasible |
+
+The exact local-null membership is silver e14/e16/e18, golden e18/e20/e22 and platinum e20;
+platinum e16/e18 are the two expected exclusions from M_perm,7 only.
+
+The audit's matching provenance is: silver e14/e16 all k32; silver e18 mostly k32 with at most four
+patches escalating to k64; golden e18/e20 mostly k32 with one k64 escalation each; golden e22 mostly
+k32 with rare k64/full escalation; platinum e16/e18/e20 all k32. Because the report does not enumerate
+an exact escalation tier for every offset, this is a reported-range expectation, not an equality gate.
+
+### Rounded physical-size/morphology expectations
+
+These values are rounded means from `PREFLIGHT_GEOMETRY_REPORT_V2.md` §2 and are not exact
+comparison targets. Units are vertices for n, ell² for hull/usable area, and ell for diameter.
+
+| family/extent | n | hull area | diameter | usable r16 area |
+|---|---:|---:|---:|---:|
+| silver e18/e20/e22 | 5463/6719/8100 | 4478/5522/6667 | 78.8/87.4/96.1 | 1370/1976/2690 |
+| golden e18/e20/e22 | 3999/4913/5920 | 3272/4032/4840 | 95.9/106.5/116.7 | 452/794/1210 |
+| platinum e18/e20/e22 | 4604/5660/6806 | 3726/4554/5489 | 88.6/99.9/108.3 | 921/1345/1879 |
+
+The report does not enumerate these rounded physical-size means for silver e14/e16 or platinum e16;
+their pre-seal tier selection remains frozen and no equality comparison or inferred value is allowed.
+
+### Padded-cell recovery provenance
+
+`PREFLIGHT_GEOMETRY_REPORT_V2.md` §5 reports core-only invalid/recovered/remain-invalid counts by
+family for extents 18/20/22: silver `150/148/162`, golden `79/74/92`, platinum `57/66/62`, with
+the same counts recovered and `0/0/0` remaining for each family. These are provenance-only aggregate
+expectations because the report does not type them as per-offset values. The clean preflight instead
+applies AC-25's exact per-patch correspondence, bounded-cell and convergence requirements. The report's
+platinum core-e22 padding used Delta=4 (not 6) due slowness, with reported ring width 10.1 ell; this
+is provenance, not permission to weaken Delta/convergence requirements or reselect a tier.

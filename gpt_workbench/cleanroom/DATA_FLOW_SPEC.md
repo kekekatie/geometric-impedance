@@ -16,8 +16,10 @@ Engine := Literal["coherent","classical"]
 Radius := Literal[2,4,8,12,16]
 OffsetId := Int[0..5]
 ConfigId := Int[0..8]
-VertexId := stable patch-local integer
 PatchKey := (ConfigId, OffsetId)
+LiftId := exact integer lift-coordinate tuple
+VertexId := LiftId within a patch
+RowId := (PatchKey, LiftId) globally
 
 Offsets[6,2] := ordered float64 constants
 Configs[9] := ordered (Tier,Family,Extent)
@@ -30,7 +32,9 @@ PatchGeometry := {
 }
 ```
 
-All arrays carry explicit row `VertexId`; positional coincidence is never sufficient for a join.
+All cross-patch arrays, populations, launches, paired rows, joins and fitted-object provenance carry
+explicit `RowId`. A patch-local array may use `VertexId=LiftId`. Integer row positions are derived
+array indices only and never scientific identities; positional coincidence is never a valid join.
 
 ## Geometry to populations
 
@@ -38,13 +42,25 @@ All arrays carry explicit row `VertexId`; positional coincidence is never suffic
 generate(Config, Offset) -> CorePatch + PaddedSuperPatch
 validate_edges_and_units(CorePatch) -> PatchGeometry
 common_mask(PatchGeometry) -> bool[n] where d_bound>=16*ell
-slab_registry(common rows) -> slab_id[n_common] in {0,1,2,3}
-launch_registry(common rows, slabs) -> ordered VertexId[200]
+common_population(PatchGeometry) -> ordered RowId[n_common]
+slab_registry(common RowIds) -> Map[RowId,slab_id in {0,1,2,3}]
+launch_registry(common RowIds, slabs) -> ordered RowId[200]
 ```
 
 Generation must not read targets. Padded geometry may contribute Voronoi cells only; rows are
 restricted back to core stable IDs. The common mask is computed once and reused at all rungs,
 controls, engines, and paired fits.
+
+```text
+GeometryPreflightState := Pass | FailCommonCount | FailSlabCount | FailGeometryConformance
+LocalNullState[PatchKey] := Available | UnavailableSingletonFraction
+```
+
+Common count `<400`, slab count `<100`, or a required geometry-conformance failure stops geometry
+preflight. Singleton fraction `>0.05` changes only `LocalNullState` for that patch/configuration: it
+does not remove the configuration from M9 or invalidate plain, residual, parity or capacity results.
+Platinum-e16/e18 are expected M9 members and expected M_perm,7 absences on all offsets; their frozen
+local-null unavailability is not an accidental whole-suite preflight failure.
 
 ## Feature construction
 
@@ -53,7 +69,9 @@ baseline_features(PatchGeometry, shared_codebook) -> M3[n,p3]
 physical_features(PatchGeometry, padded_cells, Radius) -> Phys[n,p_r]
 address_operator(PatchGeometry, raw_field[n,2]) -> Address11[n,11]
 parity_raw(PatchGeometry,padded_cells) -> float64[n,2]  # degree, area
-dedup(M3_common, Phys_common) -> (X_r[n_common,p], DedupRecord)
+MotifRegistry[ConfigId] := pooled six-offset geometry-only registry frozen before outcomes
+DedupSchema[ConfigId,Radius] := pooled six-common-set geometry-only schema frozen before outcomes
+apply_dedup(DedupSchema, M3, Phys) -> X_r[n_common,p]
 ```
 
 `p_r=(11,22,35,48,61)`. Feature schemas contain ordered names, source units, fitted-state provenance,
@@ -66,21 +84,24 @@ For outer fold `o`, training patches have the other five offsets and test patche
 Within every training patch, slab j is held out simultaneously for inner fold j.
 
 ```text
-OuterFoldInput := rows for all 9 configs x 6 offsets with immutable PatchKey/VertexId
-FitArtifact[T] := {value:T, fitted_patch_keys:set[PatchKey], fitted_vertex_ids:set[VertexId],
+OuterFoldInput := rows for all 9 configs x 6 offsets with immutable RowId
+FitArtifact[T] := {value:T, fitted_patch_keys:set[PatchKey], fitted_row_ids:set[RowId],
                    outer_fold:OffsetId, inner_fold:optional Int, schema_hash:bytes}
 
 Training-only fitted objects:
-  shared motif codebook (scope must be clarified by BLK-003),
   parity scaler per outer fold,
   matching-feature scaler per outer fold/config,
   four address residualisers per address column and inner fold,
   outer address residualiser per address column,
-  every outcome regressor,
-  PCA/slab objects where applied outside an independently defined patch-local transform.
+  every outcome regressor.
+
+Authorized geometry-only precomputed objects (not training-only fitted objects):
+  MotifRegistry[ConfigId], pooled over all six offsets before outcome/address access,
+  DedupSchema[ConfigId,Radius], pooled over all six common sets before outcome/address access,
+  patch-local deterministic PCA/slab/launch registries computed without outcome/address access.
 ```
 
-Every `transform`/`predict` checks that held-out PatchKeys and row identities are absent from the
+Every fitted `transform`/`predict` checks that held-out PatchKeys and RowIds are absent from the
 artifact’s fit provenance.
 
 ## Dynamics and endpoint
@@ -119,13 +140,26 @@ feature schema hashes, population hash and fit-provenance hashes.
 ## Randomisation identities
 
 ```text
-PermutationDrawKey := (root=20260829, b[0..999], Family, Tier, OffsetId, MotifKey)
-CapacityDrawKey := (root=20260830, child_index[0..199])
-PatchRandomisation := (DrawKey, PatchKey, population_hash, feature_schema_hash)
+AddressIdentity := {
+  family: Family, tier: Tier, extent: Int, offset_index: OffsetId,
+  motif: recursive integer-array canonical motif, repetition: Int[0..999]
+}
+AddressStream := PCG64(SeedSequence(20260829,spawn_key=(u0,u1,repetition)))
+  where (u0,u1) derives from the exact AC-12 canonical object and b"GIV-ADDRPERM-v1"
+
+CapacityIdentity := {
+  draw_index: Int[0..199], patch_child_index: Int[0..53],
+  patch_key: (family,tier,extent,offset_index) at that family-major child position
+}
+CapacityStream := PCG64(SeedSequence child at DrawChildren[draw_index].spawn(54)[patch_child_index])
+
+PatchRandomisation := (AddressIdentity|CapacityIdentity, population_hash, feature_schema_hash)
 ```
 
-No array traversal index may substitute for a key. A draw is complete only after all required
-offset/config/engine cells are present. Partial draws cannot enter aggregation.
+No array traversal index may substitute for an identity. The same address repetition label across
+configurations is a synchronized comparison index, not an identical stream: configuration and motif
+fields keep streams distinct. A draw is complete only after all required offset/config/engine cells
+are present. Partial draws cannot enter aggregation.
 
 ## Aggregation
 
@@ -176,7 +210,7 @@ ledger, but none is operative after reconciliation.
 ### Identities, axes and schemas
 
 ```text
-LiftId := Tuple[int64, ...]                       # exact generator lift tuple
+LiftId := exact integer lift-coordinate tuple    # identical to Core types
 VertexTable := rows sorted lexicographically by LiftId, unique and complete
 EdgeId := (min(LiftId_a,LiftId_b), max(...))      # endpoint-identity order
 EdgeTable := unique EdgeId rows sorted lexicographically
@@ -332,5 +366,20 @@ relative_delta := abs(value_D4-value_D6) / max(abs(value_D6),1e-15)
 
 Require every core ID exactly once, `ring_width>=3`, finite bounded cells and maximum per-cell area
 and perimeter relative delta `<=1e-6`. Missing/duplicate join, Qhull error, unbounded/nonfinite cell
-or convergence failure returns `GeometryPreflightFailure` and stops before dynamics. Geometry
-feasibility must match sealed provenance without changing fixed M9/M_perm membership.
+or convergence failure returns `GeometryPreflightFailure` and stops before dynamics.
+
+```text
+GeometryReferenceSource := {
+  path, git_blob, section, scope, quantity, units,
+  value_status: ExactDiscrete|ExactThreshold|ReportedRange|RoundedExpectation,
+  role: HardFeasibility|FrozenMembership|ExactIdentityCheck|ProvenanceOnly
+}
+```
+
+The self-contained values and roles are in `NORMATIVE_REQUIREMENTS.md::GeometryReferenceRegistry`.
+Exact-threshold failure and exact-discrete identity mismatch stop; frozen membership fixes M9/M_perm,7;
+rounded/aggregate expectations are reported side-by-side with no invented equality tolerance or gate.
+Sources are seal blobs `PREFLIGHT_GEOMETRY_REPORT_V2.md`
+`1c2995cc16bb5b8c0b8777550a461d4593966b48` and `SIX_OFFSET_AUDIT_REPORT.md`
+`2470997bf70c16c1ee6af6f13784b4212d56a291`. Required physical-size matching remains a frozen
+pre-seal tier-selection fact and cannot change fixed M9/M_perm membership.

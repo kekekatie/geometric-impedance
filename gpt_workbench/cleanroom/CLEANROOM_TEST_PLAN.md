@@ -28,10 +28,11 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
    the exact inequality and unchanged IDs at all five rungs.
 7. **TP-FEA-001 Annuli.** Place neighbors below/at/above integer radii and tau boundaries; verify
    centre exclusion, right-closed bins and no point beyond r.
-8. **TP-FEA-002 Moments.** Compare mean, ddof=0 variance, skew and excess kurtosis to hand arithmetic;
-   exercise empty neighborhood and sigma below/equal/above `1e-9`.
+8. **TP-FEA-002 Moments.** Compare mean, population variance, skew and excess kurtosis to hand
+   arithmetic. Below sigma `1e-9`, require the normal mean and exact zeros for variance, skewness and
+   excess kurtosis; at and above `1e-9`, require the ordinary population formulas.
 9. **TP-FEA-003 Physical dimensions/nesting.** Assert 11/22/35/48/61 and exact prefix equality from
-   one rung to the next after BLK-005 is resolved.
+   one rung to the next under the ratified scale serialization.
 10. **TP-FEA-004 M4 exact reference.** On a tiny connected graph, calculate shell membership, shell
     means/variances, local least-squares gradient and field-hull depth independently; compare all 11
     ordered columns. Exercise fewer-than-four gradient neighbors.
@@ -40,11 +41,12 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 12. **TP-FEA-006 Parity operator identity.** Spy on the shared address operator and prove observed,
     parity and permuted branches invoke the same implementation with different raw fields.
 13. **TP-FEA-007 Dedup.** Test exact duplicate, `0.5e-12`, `1e-12`, `1.5e-12`, duplicate of two M3
-    columns and duplicates visible only in held-out data; expected behavior awaits BLK-004.
+    columns and duplicates present in only one offset. Require one geometry-only schema pooled across
+    six common sets, complete match records and identical reuse in every outer fold.
 14. **TP-VOR-001 Padding.** Synthetic lattice with known cell areas: compare Delta=4/6, core mapping,
     empty bounded-neighbor fallback and failure below the ring-width requirement.
 
-## Fold and leakage tests for every fitted object
+## Fold, leakage and outcome-independence tests
 
 15. **TP-LEAK-001 Outer outcome regressor.** Encode offset ID into held-out targets; instrument fit
     row IDs and prove the held-out offset never enters any fit.
@@ -58,23 +60,29 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
     distances use only the resolved training-fit scaler.
 20. **TP-LEAK-006 PCA/slabs.** Record fit provenance and verify the resolved patch-local/outer policy;
     no target/address value may influence PC1, ties, slabs or launches.
-21. **TP-LEAK-007 Motif codebook.** Introduce a motif only in the held-out offset; require the exact
-    unknown-category behavior resolved under BLK-003 and prove no silent column-set drift.
-22. **TP-LEAK-008 Dedup schema.** Change only held-out geometry; verify training schema cannot be
-    selected using it after BLK-004 resolution.
+21. **TP-LEAK-007 Motif registry.** Introduce a motif only in the nominally held-out offset and
+    require its inclusion in the authorized precomputed six-offset geometry-only registry without
+    target/address access. A motif appearing after registry freeze must fail as unseen.
+22. **TP-LEAK-008 Dedup schema.** Confirm held-out geometry is intentionally included in the
+    authorized pooled six-common-set schema. Target/address perturbations cannot change it, all outer
+    folds use the identical schema, and any post-freeze geometry drift is rejected.
 23. **TP-LEAK-009 Capacity and null draws.** Fit-provenance audit must show no target used to construct
     Gaussian blocks, match candidates, costs, escalations or singleton feasibility.
 
 ## Randomisation identity and law tests
 
-24. **TP-RNG-001 Stable identity.** Golden vectors for every `(draw,patch,offset,motif)` key after
-    BLK-012 resolution; rerun under reversed dictionaries, thread counts and process scheduling.
+24. **TP-RNG-001 Stable identity.** Golden address vectors use exact
+    `(family,tier,extent,offset_index,motif,b)` identities; capacity vectors use
+    `(draw_index,family-major patch_child_index)`. Replay under reversed dictionaries, thread counts
+    and process scheduling.
 25. **TP-RNG-002 Separation/pairing.** Assert capacity and address roots never collide; parity consumes
-    no RNG; same b is synchronized across engines/configs while distinct patch/motif keys differ.
+    no RNG; the same b is a synchronized comparison label across engines/configurations but distinct
+    configuration/motif keys produce distinct address streams.
 26. **TP-RNG-003 Assignment law.** Hand-built cost matrix proves additive `distance+U`, self exclusion,
     bijection and deterministic 32->64->full escalation; a deliberate `distance*U` mutant must fail.
-27. **TP-RNG-004 Singleton threshold.** Test exactly 5%, just above 5%, fixed singleton populations,
-    and unchanged observed/null row identities.
+27. **TP-RNG-004 Singleton threshold.** Test exactly 5% and just above 5%, fixed singleton populations
+    and unchanged observed/null RowIds. Above 5% disables only that local-permutation result; M9 and
+    plain/residual/parity/capacity outputs remain present, including platinum-e16/e18 fixtures.
 28. **TP-RNG-005 Complete draws.** Delete one offset/config result from a draw; q_ref and max-T must
     reject the entire incomplete draw rather than shrink a denominator.
 
@@ -124,8 +132,8 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 
 47. **TP-AGG-001 q_ref.** Hand-count null ties (`>=`), zero exceedances and all exceedances with
     denominator 1001.
-48. **TP-AGG-002 Capacity.** After BLK-013/015 resolution, compare delta_cap to a hand-sorted 200-draw
-    reference and verify one complete M9 per draw.
+48. **TP-AGG-002 Capacity.** Under ratified NR-AMD-013/015, compare delta_cap to a hand-sorted
+    200-draw reference and verify one complete M9 per draw.
 49. **TP-AGG-003 Westfall-Young.** Seven-cell, synchronized small reference matrix; hand-calculate
     signed raw max-T steps, ties and monotonic adjustment.
 50. **TP-GATE-001 G0–G8 tables.** Exhaustively test equality boundaries: 8, 0.90, 0.05, delta_cap,
@@ -153,17 +161,19 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 
 ## Complete synthetic end-to-end execution
 
-60. **TP-E2E-001 Nine-by-six miniature.** Invent 54 small labelled graphs with synthetic positive
-    power-law dynamics, invented perpendicular fields and targets. Run geometry -> common population ->
+60. **TP-E2E-001 Nine-by-six compliant synthetic suite.** Invent 54 labelled graphs, each with at
+    least 400 common rows, at least 100 rows in every slab and exactly 200 launches, using synthetic
+    positive power-law dynamics, invented perpendicular fields and targets. Run geometry -> common population ->
     physical/address/parity -> folds -> both propagation engines -> beta -> all regression/control
     branches -> 1000 lightweight deterministic null fixtures and 200 capacity fixtures -> M9/Mperm7 ->
     G0–G8 -> final routing/report. No study generator or data is used.
 61. **TP-E2E-002 Route variants.** Parameterise the synthetic fixture to earn the coherent claim,
     withhold only the modifier, fail G0, make G4 undefined, produce compression, produce survives,
     and fall through to mixed. Assert exact membership and claim language each time.
-62. **TP-E2E-003 Exact small reference.** Independently calculate a reduced 9x6 fixture using direct
-    matrix exponentials, fully materialised tensors, explicit OLS, exhaustive keyed joins and hand
-    median/gate code. Compare every intermediate artifact to the batch/reduced production path.
+62. **TP-E2E-003 Exact component reference.** Tiny independent component fixtures may use direct
+    matrix exponentials, fully materialised tensors, explicit OLS, exhaustive RowId joins and hand
+    median/gate code. They may validate components but cannot claim a pass through the full production
+    orchestrator unless every frozen common-set, slab and 200-launch floor is satisfied.
 
 ## Test acceptance
 
@@ -258,16 +268,21 @@ tool; no production or test code is written in Stage 2A.
 88. **TP-AMD-026 AC-22 routing.** Feed nine labelled cells through global compression/survives/mixed
     truth tables. Missing, undefined or unfavorable cells must not be dropped/reclassified; per-cell
     values remain descriptive except G8.
-89. **TP-AMD-027 AC-23 preflight.** Compare synthetic geometry metrics inside and outside each sealed
-    provenance range. Any mismatch stops before a propagation spy can run; feasible-set recomputation
-    cannot alter the fixed nine/seven memberships.
+89. **TP-AMD-027 AC-23 preflight.** Load the two typed provenance sources by exact blob. Assert hard
+    thresholds stop on failure, exact 54-patch r16/singleton records stop on generator identity
+    mismatch, frozen membership keeps platinum-e16/e18 in M9 but out of M_perm,7, and rounded
+    morphology/aggregate expectations are reported without equality tolerance or gate. No comparison
+    may re-tier or alter fixed nine/seven memberships; a propagation spy must remain uncalled on a
+    genuine hard/exact mismatch.
 90. **TP-AMD-028 AC-24 sigma floor.** At sigma below/equal/above `1e-9`, verify mean remains normal
     and variance, skewness and excess kurtosis are all exactly zero only below the threshold; a mutant
     leaving variance nonzero must fail.
 91. **TP-AMD-029 AC-25 correspondence.** Exercise exact lift one-to-one mapping, missing/duplicate
     identities, ring width below/equal/above 3, Qhull failure, unbounded/nonfinite cells and per-cell
     area/perimeter ratios around `1e-6` with denominator `max(abs(D6),1e-15)`.
-92. **TP-AMD-030 Amendment-wide composition.** Run a labelled synthetic 9×6 miniature through both
+92. **TP-AMD-030 Amendment-wide composition.** Run a labelled synthetic 9×6 suite with at least 400
+    common rows per patch, at least 100 rows per slab and exactly 200 launches per patch through both
     general tier-major and capacity family-major axes, all keyed RNG provenance, fitted objects,
     endpoint validity, global G1/routing and descriptive controls. Compare to a separate exact
-    reference and require every AC-01..AC-25 trace marker before Stage 2B conformance can pass.
+    reference and require every AC-01..AC-25 trace marker before Stage 2B conformance can pass; no
+    reduced-size orchestration mode may weaken the production constants.
