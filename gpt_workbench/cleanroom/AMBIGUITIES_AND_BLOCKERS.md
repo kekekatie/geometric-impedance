@@ -1,7 +1,13 @@
 # Ambiguities and blockers — clean-room Stage 1
 
-No silent choices are authorised. Severity **BLOCKER** prevents scientifically conformant Stage 2
-implementation; **clarification** must still be resolved before production use.
+**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+
+Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+
+The table immediately below is preserved historical Stage-1 text. Its former severity and proposed
+resolution language is not operative after ratification; the reconciled resolution ledger following
+it supplies the controlling clause, requirement and status for each item.
 
 | ID | Severity | Unresolved point | Why consequential / required resolution |
 |---|---|---|---|
@@ -31,6 +37,40 @@ implementation; **clarification** must still be resolved before production use.
 | BLK-024 | clarification | Moment sigma `<1e-9` rule says “three higher moments” after listing variance, skewness, kurtosis, which could mean set variance too; Group B needs exact behavior. | Freeze outputs explicitly; this spec currently interprets variance as computed and skew/kurtosis as zero. |
 | BLK-025 | BLOCKER | The padded Voronoi construction names extent+Delta and a ring-width constraint but not how core vertices are matched to padded vertices or how unbounded/Qhull degeneracies fail. | Group E and parity area require a stable row mapping and loud-failure contract. |
 
+## Ratified resolution ledger
+
+Each item is marked resolved only after structural verification that `NORMATIVE_REQUIREMENTS.md`,
+`DATA_FLOW_SPEC.md`, `TRACEABILITY_MATRIX.md` and `CLEANROOM_TEST_PLAN.md` carry its executable rule,
+typed transformation, trace and falsifying test.
+
+| Historical item | Ratified resolution clause | Reconciled requirement IDs | Status |
+|---|---|---|---|
+| BLK-001 | AC-01 | NR-AMD-001; NR-CV-001..011 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-002 | AC-02 | NR-AMD-002; NR-GEO-004..010 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-003 | AC-03 | NR-AMD-003; NR-FEA-005 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-004 | AC-04 | NR-AMD-004; NR-FEA-006 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-005 | AC-05 | NR-AMD-005; NR-FEA-007..014 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-006 | AC-06 | NR-AMD-006; NR-CV-003..006 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-007 | AC-07 | NR-AMD-007; NR-CV-012 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-008 | AC-08 | NR-AMD-008; NR-CV-013 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-009 | AC-09 | NR-AMD-009; NR-DYN-003 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-010 | AC-10 | NR-AMD-010; NR-DYN-011..012 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-011 | AC-11 | NR-AMD-011; NR-DYN-013 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-012 | AC-12 | NR-AMD-012; NR-RNG-003..006 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-013 | AC-13 | NR-AMD-013; NR-AGG-003 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-014 | AC-14 | NR-AMD-014; NR-AGG-005 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-015 | AC-15 | NR-AMD-015; NR-RNG-007 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-016 | AC-16 | NR-AMD-016; NR-RNG-002 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-017 | AC-17 | NR-AMD-017; NR-RNG-003..005 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-018 | AC-18 | NR-AMD-018; NR-CV-007,009..011 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-019 | AC-19 | NR-AMD-019; NR-CV-008 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-020 | AC-20 | NR-AMD-020; NR-GATE-000..009 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-021 | AC-21 | NR-AMD-021; NR-GATE-002 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-022 | AC-22 | NR-AMD-022; NR-ROUTE-001..005 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-023 | AC-23 | NR-AMD-023; NR-GEO-011..014 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-024 | AC-24 | NR-AMD-024; NR-FEA-010..011 | RESOLVED BY RATIFIED AMENDMENT 1 |
+| BLK-025 | AC-25 | NR-AMD-025; NR-GEO-013..014 | RESOLVED BY RATIFIED AMENDMENT 1 |
+
 ## Seal-internal observations that are not blockers
 
 - Manifest end markers say “Nothing sealed” although headers and `SEAL_RECORD.md` say SEALED. This
@@ -40,8 +80,9 @@ implementation; **clarification** must still be resolved before production use.
 - `SEAL_RECORD.md` is a seal/provenance record; its table identifies five normative protocol files.
   The user separately authorised it and the snapped-time companion as Stage 1 read inputs.
 
-## Stop condition
+## Stage 2B implementation entry conditions
 
-Stage 1 documentation is complete despite these blockers. Scientific production implementation,
-launcher creation and study execution must stop until every **BLOCKER** receives an authorised,
-pre-outcome clarification or seal amendment. No proposed answer above is silently adopted.
+Implementation may begin only if all 25 historical blockers are resolved and traced; no contradiction
+remains; all five reconciled documents agree on axes, populations, RNG identities, failure routes and
+gates; and no study data or outcomes have been accessed. This reconciled ledger meets the documentary
+conditions only. Stage 2B still requires separate authorization from Work-GPT/Sol and Katie.

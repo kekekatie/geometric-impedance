@@ -1,5 +1,10 @@
 # Clean-room test plan — independently derived
 
+**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+
+Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+
 No test in this plan uses study addresses, targets, beta values, scores or outcomes. Synthetic fixtures
 must use invented coordinates, graphs, fields and targets. Tests assert both numbers and wiring.
 
@@ -165,3 +170,104 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 Stage 2 conformance requires all applicable tests passing on at least two iteration orders and two
 parallelism settings, no expected-failure waiver for a primary gate, and explicit resolution tests
 for every blocker. Synthetic test outputs must never be described as scientific outcomes.
+
+## Ratified Amendment 1 falsification tests
+
+These extend, rather than replace, TP-REG/TP-GEO/TP-FEA/TP-LEAK/TP-RNG/TP-WIRE/TP-DYN/TP-AGG/
+TP-GATE/TP-ROUTE/TP-NEG/TP-E2E. Golden values are generated in Stage 2B only by a tiny isolated
+fixture helper and independently checked by a second direct implementation or external standard
+tool; no production or test code is written in Stage 2A.
+
+63. **TP-AMD-001 AC-01 orchestration.** Instrument six synthetic outer folds and four slab folds;
+    assert every fold value survives to keyed aggregation. Deliberate old-runner mean/std output,
+    non-nested fitting or averaging before M9 must fail schema validation.
+64. **TP-AMD-002 AC-02 identities.** Assert exact N/family/extent/offset calls; feed unsorted,
+    duplicated and missing lift tuples and reversed/duplicate edges. Require canonical vertex/edge
+    tables or loud failure, never positional joining.
+65. **TP-AMD-003 AC-03 registry.** Pool invented motifs over six offsets, verify lexicographic fixed
+    one-hot order across every outer fold, and require an unseen seventh-offset motif to fail.
+66. **TP-AMD-004 AC-04 dedup.** Use pooled six-offset fixtures containing zero, one and multiple M3
+    matches at distances below/equal/above `1e-12`; verify one fixed per-config/radius schema, complete
+    match records and invariant retention of M3.
+67. **TP-AMD-005 AC-05 strict prefix.** Build hand-labelled A/B/D/E columns at all scales; assert
+    widths 11/22/35/48/61 and exact schema/value prefix equality. An interleaved-by-group mutant and
+    a correct-width wrong-order mutant must fail.
+68. **TP-AMD-006 AC-06 PCA.** Compare float64 population covariance/eigenvectors to an analytic
+    fixture; test sign orientation by first component above `1e-15`, exact projection/lift ties,
+    eigenvalue gaps just below/equal/above the relative tie tolerance and no-orientable-component stop.
+69. **TP-AMD-007 AC-07 canonical JSON/hash.** Freeze canonical-JSON byte fixtures for ASCII and
+    escapable family/tier validation cases in exact field order. Independently compute golden
+    BLAKE2b digest/u0/u1 vectors for `b"GIV-SHUFFLE-v1"`; reject sorted keys, spaces, NaN, wrong
+    integer/string types, alternate personalisation and `default_rng`.
+70. **TP-AMD-008 AC-07 replay/consumption.** Pin a NumPy version and independently verify PCG64
+    replay. Reverse input dictionaries and parallel schedule; stable double-argsort, ascending group
+    order and lift-member order must reproduce exactly. Count one permutation call per nonsingleton
+    and zero for singleton; assert the stored patch permutation is identical across folds/engines.
+71. **TP-AMD-009 AC-08 descriptive controls.** Assert r16 position/far controls execute and report
+    for both engines. Perturb their values from extreme low to high and prove no G0–G8 input, route or
+    earned claim changes; omitting a report is nevertheless a conformance failure.
+72. **TP-AMD-010 AC-09 launches.** For n=100,101 and larger slabs, hand-calculate all 50
+    `floor(j*(n-1)/49)` indices; assert endpoints, uniqueness, count and lift-tie ordering. Mutants
+    using linspace-round, ceil or denominator 50 must fail.
+73. **TP-AMD-011 AC-10 MSD validity.** Put zero, negative, NaN and infinity independently at every
+    fit-time position. Require whole config-engine invalidation, no epsilon/culling/window shortening,
+    coherent global downgrade versus classical modifier inconclusive, and unchanged launch registry.
+74. **TP-AMD-012 AC-11 SMD.** Hand-check pooled population-SD formula, ordinary signed SMD, denominator
+    just below/equal/above `1e-12`, equal means -> 0 and unequal means -> signed infinity. Prove no gate
+    consumes the result.
+75. **TP-AMD-013 AC-12 canonical JSON/hash.** Freeze exact bytes for nested integer motif arrays in
+    field order `family,tier,extent,offset_index,motif`; independently calculate BLAKE2b digest/u0/u1
+    golden vectors for `b"GIV-ADDRPERM-v1"`. Reject tuple strings, floats, reordered keys, NaN,
+    alternate escaping/personalisation and unpinned NumPy.
+76. **TP-AMD-014 AC-12 PCG64 stream.** For selected b=0,1,999, independently replay
+    `SeedSequence(20260829,spawn_key=(u0,u1,b))`. Assert exact float64 row-major source/candidate cost
+    stream under reversed group iteration and concurrency; column-major, per-row generator and extra
+    draw mutants must fail. Verify synchronization and key separation across engines/configs/motifs.
+77. **TP-AMD-015 AC-13 quantile.** Use 200 hand-sorted values for which NumPy linear differs from
+    nearest/lower/higher/midpoint; require float64 `quantile(...,0.95,method="linear")` exactly.
+78. **TP-AMD-016 AC-14 step-down.** Create tied observed statistics in all seven fixed cells; verify
+    stable descending order, family order tie break, raw signed nulls, each suffix maximum and
+    cumulative-maximum adjusted values against a hand table.
+79. **TP-AMD-017 AC-15 spawn tree.** Independently generate identity metadata for exactly 200 draw
+    children and 54 children from one spawn call per draw. Assert no duplicate state and fail extra,
+    repeated, nested-per-fold or differently batched spawning.
+80. **TP-AMD-018 AC-15 axis distinction.** Label patch children and prove capacity uses family-major
+    configuration order with offset-fast sixes while ordinary study arrays remain sealed tier-major.
+    A test that accidentally shares one ordering for both must fail even when shapes match.
+81. **TP-AMD-019 AC-15 fields/reuse.** For small synthetic lift-sorted patches, independently replay
+    PCG64 float64 C-contiguous `(n,11)` standard normals. Require the exact stored object/hash across
+    all six outer folds and both engines; reject address scaling, row reorder or regeneration.
+82. **TP-AMD-020 AC-16 scaler.** Inject extreme held-out values and zero/nearly-zero training SDs;
+    verify pooled-five population statistics, unchanged fit state, both train/held-out zero mapping
+    below `1e-12`, and no held-out leakage.
+83. **TP-AMD-021 AC-17 candidates/ties.** Assert self exclusion at every escalation, exact
+    `(distance,lift)` order, and loud failure for equal total stochastic assignment costs. Candidate
+    reorder and library-default tie mutants must fail.
+84. **TP-AMD-022 AC-18 residual topology.** Spy fixture requires exactly 11 scalar frozen HGBRs per
+    required fold/application, no scaler/multi-output model, inner out-of-slab predictions and one
+    outer held-out application. Duplicate application must fail provenance.
+85. **TP-AMD-023 AC-19 R2.** Compare direct float64 SSE/SST to hand arithmetic. Exercise SST
+    positive, zero and negative plus nonfinite inputs/predictions; require `Undefined(reason)` rather
+    than forced finite, and exact mixed/inconclusive propagation.
+86. **TP-AMD-024 AC-20 thresholds.** Parameterize every sealed threshold with predecessor/equality/
+    successor float64 values. Assert literal operator, signed margin and nonfinite failure/undefined
+    route; forbid hidden epsilons, including d_bound membership.
+87. **TP-AMD-025 AC-21 G1.** Exhaustively toggle each of nine coherent and nine classical cells.
+    `coherentG1`/`classicalG1` pass only for all-nine true; classical failure with coherent pass keeps
+    the coherent result and withholds only the modifier; M9 always retains nine cells.
+88. **TP-AMD-026 AC-22 routing.** Feed nine labelled cells through global compression/survives/mixed
+    truth tables. Missing, undefined or unfavorable cells must not be dropped/reclassified; per-cell
+    values remain descriptive except G8.
+89. **TP-AMD-027 AC-23 preflight.** Compare synthetic geometry metrics inside and outside each sealed
+    provenance range. Any mismatch stops before a propagation spy can run; feasible-set recomputation
+    cannot alter the fixed nine/seven memberships.
+90. **TP-AMD-028 AC-24 sigma floor.** At sigma below/equal/above `1e-9`, verify mean remains normal
+    and variance, skewness and excess kurtosis are all exactly zero only below the threshold; a mutant
+    leaving variance nonzero must fail.
+91. **TP-AMD-029 AC-25 correspondence.** Exercise exact lift one-to-one mapping, missing/duplicate
+    identities, ring width below/equal/above 3, Qhull failure, unbounded/nonfinite cells and per-cell
+    area/perimeter ratios around `1e-6` with denominator `max(abs(D6),1e-15)`.
+92. **TP-AMD-030 Amendment-wide composition.** Run a labelled synthetic 9×6 miniature through both
+    general tier-major and capacity family-major axes, all keyed RNG provenance, fitted objects,
+    endpoint validity, global G1/routing and descriptive controls. Compare to a separate exact
+    reference and require every AC-01..AC-25 trace marker before Stage 2B conformance can pass.

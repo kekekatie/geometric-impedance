@@ -1,5 +1,10 @@
 # Data-flow specification — clean-room Stage 1
 
+**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+
+Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, then the reconciled Stage-1 specifications.
+
 This is a typed, side-effect-free contract. “Ordered” means order is data, not presentation.
 
 ## Core types
@@ -162,3 +167,170 @@ report <- gates + routes + diagnostics + fixed claim-boundary vocabulary
 No route may mutate configuration membership or discard an undefined cell. Final output includes
 all six offset effects, all nine configuration identities, seven permutation identities, all gate
 states (pass/fail/undefined/inconclusive/descriptive as applicable), and a machine-readable audit log.
+
+## Ratified Amendment 1 executable contracts
+
+This section resolves the earlier `BLK-*` annotations. The historical notes remain in the blocker
+ledger, but none is operative after reconciliation.
+
+### Identities, axes and schemas
+
+```text
+LiftId := Tuple[int64, ...]                       # exact generator lift tuple
+VertexTable := rows sorted lexicographically by LiftId, unique and complete
+EdgeId := (min(LiftId_a,LiftId_b), max(...))      # endpoint-identity order
+EdgeTable := unique EdgeId rows sorted lexicographically
+
+GeneralConfigAxis[9] := tier-major [
+  silver-small, golden-small, platinum-small,
+  silver-medium, golden-medium, platinum-medium,
+  silver-large, golden-large, platinum-large]
+
+CapacityConfigAxis[9] := family-major [
+  silver-small, silver-medium, silver-large,
+  golden-small, golden-medium, golden-large,
+  platinum-small, platinum-medium, platinum-large]
+
+OffsetAxis[6] := exact frozen offset order; OffsetIndex := 0..5
+CapacityPatchAxis[54] := product(CapacityConfigAxis, OffsetAxis), offset-fast
+```
+
+Every generator output array is rekeyed by `LiftId`. Missing, duplicate or reordered identities and
+noncanonical/duplicate edges fail before feature construction. Generator call contract is
+`generate(N,extent,offset=sealed_offset,disorder=0.0,seed=0,extra_offset=None,
+disorder_extra=False)->(lifts,par,perp,ustar)`, followed by `build_edges(lifts,N,ustar)`.
+
+```text
+MotifRegistry[ConfigId] := sort_lex(unique(motif tuples over all six geometry-only patches))
+MotifSchema := immutable one-hot order; unseen motif -> LoudFailure
+
+DedupSchema[ConfigId,Radius] := {
+  pooled_population_hash, retained_phys_columns, dropped_phys_columns,
+  matches: Map[PhysColumn,List[M3Column]]
+}
+```
+
+Motif registries and dedup schemas are computed before outcome access. Dedup pools all six common
+sets per configuration/radius, uses `<1e-12`, retains M3, and is reused unchanged across folds.
+
+`physical_extra` serialization is a scale stream:
+
+```text
+for s newly admitted in (2,4,8,12,16):
+  append newly admitted A annuli
+  append B_s(mean,var,skew,excess_kurtosis)
+  append D_s(psi_N/2,psi_N,psi_2N)
+  append E_s(voronoi_mean,voronoi_var)
+```
+
+Each emitted r2/r4/r8/r12 vector is an exact column prefix of r16 with widths 11/22/35/48/61.
+
+### PCA, slabs and launches
+
+```text
+PCAInput := float64 par[n_common,2] centred by population mean
+Cov := (X.T @ X) / n_common
+(eigenvalues,eigenvectors) := symmetric_eigensolve(Cov)
+tie_tol := 1e-12 * max(1,abs(lambda_max))
+```
+
+If the largest two eigenvalues differ by no more than `tie_tol`, return `SlabInfeasible`. Otherwise
+orient PC1 by the first component with magnitude `>1e-15`; no such component also returns
+`SlabInfeasible`. Sort projections with lift identity as the tie key, create four equal-count slabs
+with remainder to lowest indices, and in each slab select indices `floor(j*(n-1)/49)`, j=0..49.
+Duplicate/out-of-range indices or counts other than 50 per slab/200 per patch are loud failures.
+
+### Canonical keyed RNG objects
+
+```text
+CanonicalJSON := UTF8(JSON(ensure_ascii=True,allow_nan=False,
+                           separators=(",",":"),sort_keys=False))
+Digest8(person,key_bytes) := blake2b(key_bytes,digest_size=8,person=person)
+u0 := int.from_bytes(digest[0:4],"big")
+u1 := int.from_bytes(digest[4:8],"big")
+RNG(seed_sequence) := Generator(PCG64(seed_sequence))
+```
+
+Pin and record NumPy version. Family/tier strings and integer/motif representations are exactly
+NR-AMD-007/012; NaN and non-integer motif content cannot serialize.
+
+```text
+ShuffleKey := ordered JSON object {
+  family, tier, extent, offset_index
+}
+ShuffleSeed := SeedSequence(20260901,spawn_key=(u0,u1))
+ShuffleDigestPerson := b"GIV-SHUFFLE-v1"
+
+AddressKey := ordered JSON object {
+  family, tier, extent, offset_index, motif
+}
+AddressSeed[b] := SeedSequence(20260829,spawn_key=(u0,u1,b)), b=0..999
+AddressDigestPerson := b"GIV-ADDRPERM-v1"
+```
+
+Shuffle degree ranks use two stable argsorts. Groups are ascending `(motif_code,degree_decile)`;
+members are lift-sorted. Each nonsingleton makes exactly one `permutation` call and jointly permutes
+raw address rows; a singleton makes none. The stored patch permutation is shared across folds/engines.
+
+Address sources/destinations are lift-sorted, candidates ordered by
+`(distance,destination_lift_tuple)`, and uniform float64 costs are consumed source-row then
+candidate-column. A repetition is synchronized across engines/comparisons. Assignment-total equality
+after stochastic terms is `ReproducibilityFailure`.
+
+### Capacity spawn tree
+
+```text
+CapacityRoot := SeedSequence(20260830)
+DrawChildren[200] := CapacityRoot.spawn(200)             # exactly one call
+PatchChildren[b,54] := DrawChildren[b].spawn(54)         # exactly one call per b
+CapacityField[b,patch] := C-contiguous float64 result of
+  RNG(PatchChildren[b,patch]).standard_normal(size=(n_vertices,11),dtype=float64)
+```
+
+The patch axis is `CapacityPatchAxis`, not `GeneralConfigAxis`. Rows are lift-sorted. Each field is
+stored once and reused across all outer folds and engines; regeneration, extra spawning and
+address-derived scaling fail provenance validation.
+
+### Fitted objects, endpoint and statistics
+
+```text
+MatchingScaler[ConfigId,OuterFold] := population mean/SD fitted on five training offsets
+if train_SD < 1e-12: transformed train and held-out column := 0
+
+Residualiser[OuterFold,InnerFold,AddressColumn=0..10] := scalar frozen HGBR
+OuterResidualiser[OuterFold,AddressColumn=0..10] := scalar frozen HGBR
+```
+
+Residualisers are unscaled and independent; inner cross-fitted training residuals and one outer-held
+application occur exactly once. Provenance rejects reuse or joint/multi-output transformation.
+
+```text
+R2Result := Defined(float64) | Undefined(reason)
+R2 := 1 - SSE/SST on exact pooled held-out rows
+Undefined iff SST<=0 or inputs/predictions are nonfinite
+
+EndpointState := Valid(Beta,R2Fit) | InvalidNonpositiveMSD | InvalidNonfiniteMSD
+```
+
+Any nonpositive/nonfinite MSD at one of 48 fit times invalidates the entire configuration-engine
+endpoint. No epsilon, launch culling or window shortening exists. Coherent invalidity makes global
+`coherentG1=false` and the coherent result unavailable/downgraded; classical invalidity makes the
+modifier inconclusive.
+
+`coherentG1=all(G1[coherent,config] for config in GeneralConfigAxis)` and likewise classical G1.
+The global suite route consumes all fixed M9/M_perm cells; no per-cell drop/reclassification exists.
+Position/far controls are mandatory r16 reports for both engines but are absent from every gate input.
+All threshold functions operate literal float64 inequalities and return threshold margins.
+
+### Padded/core correspondence
+
+```text
+CoreToPadded := exact one-to-one join on LiftId
+ring_width := min(padded_hull_depth[core_ids]) / ell
+relative_delta := abs(value_D4-value_D6) / max(abs(value_D6),1e-15)
+```
+
+Require every core ID exactly once, `ring_width>=3`, finite bounded cells and maximum per-cell area
+and perimeter relative delta `<=1e-6`. Missing/duplicate join, Qhull error, unbounded/nonfinite cell
+or convergence failure returns `GeometryPreflightFailure` and stops before dynamics. Geometry
+feasibility must match sealed provenance without changing fixed M9/M_perm membership.

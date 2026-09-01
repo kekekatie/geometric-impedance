@@ -1,5 +1,10 @@
 # Traceability matrix — clean-room Stage 1
 
+**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+
+Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+
 Proposed modules are names only, not implementations. `test_*` entries are future test targets.
 
 | Requirement IDs | Exact sealed source | Proposed future module | Proposed future tests |
@@ -40,3 +45,36 @@ explicitly named their behavior. No later commit and no `gpt_workbench/impl/` pa
 | `substrates/transport_run.py` | `held_out_r2` | referenced held-out regression contract; superseded where manifests specify nested folds |
 
 The inspected baseline is a dependency definition only. Manifest text takes precedence on conflicts.
+
+## Ratified Amendment 1 clause traceability
+
+Every clause has a sealed anchor, one-to-one appended requirement, module boundary and falsifying
+synthetic/conformance test. Existing IDs remain stable.
+
+| Amendment | Sealed source anchor | Reconciled requirements | Proposed module boundary | Synthetic/conformance tests |
+|---|---|---|---|---|
+| AC-01 | Physical §5; Conditional §2,§4; MSD §8 | NR-AMD-001; NR-CV-001..011 | `folds.py`, `regression.py` | TP-AMD-001 retained-fold/non-nested rejection |
+| AC-02 | Physical §1,§5,§8; MSD §1–2 | NR-AMD-002; NR-GEO-004..010 | `geometry.py`, `config_registry.py` | TP-AMD-002 lift/edge canonicalization and generator signature |
+| AC-03 | Physical §2; Conditional §0,§3 | NR-AMD-003; NR-FEA-005 | `motif_registry.py` | TP-AMD-003 pooled registry/order/unseen failure |
+| AC-04 | Physical §2; Conditional §1 | NR-AMD-004; NR-FEA-006 | `dedup.py` | TP-AMD-004 pooled fixed-schema multi-match |
+| AC-05 | Physical §3 | NR-AMD-005; NR-FEA-007..014 | `physical_features.py` | TP-AMD-005 strict-prefix serialization |
+| AC-06 | Physical §5; MSD §2 | NR-AMD-006; NR-CV-003..006 | `folds.py` | TP-AMD-006 covariance/sign/eigen-tie failure |
+| AC-07 | MSD §8,§12 G4; baseline `assemble` | NR-AMD-007; NR-CV-012 | `shuffle_control.py`, `seed_registry.py` | TP-AMD-007 canonical JSON/hash; TP-AMD-008 replay/consumption |
+| AC-08 | MSD §8 | NR-AMD-008; NR-CV-013 | `controls.py`, `reporting.py` | TP-AMD-009 mandatory descriptive/no-gate mutation |
+| AC-09 | MSD §2 | NR-AMD-009; NR-DYN-003 | `launches.py` | TP-AMD-010 exact 50-index formula |
+| AC-10 | MSD §6–7,§9,§12 | NR-AMD-010; NR-DYN-011..012 | `endpoint.py`, `routing.py` | TP-AMD-011 nonpositive/nonfinite invalidation, no epsilon/cull |
+| AC-11 | MSD §7 | NR-AMD-011; NR-DYN-013 | `diagnostics.py` | TP-AMD-012 pooled-SD zero/infinity cases |
+| AC-12 | Conditional §3–5 | NR-AMD-012; NR-RNG-003..006 | `local_permutation.py`, `seed_registry.py` | TP-AMD-013 canonical JSON/hash; TP-AMD-014 row-major replay |
+| AC-13 | Physical §6; Conditional §6 | NR-AMD-013; NR-AGG-003 | `capacity.py` | TP-AMD-015 NumPy linear quantile golden fixture |
+| AC-14 | Conditional §4; MSD §12 G8 | NR-AMD-014; NR-AGG-005 | `multiplicity.py` | TP-AMD-016 stable ties and cumulative-max step-down |
+| AC-15 | Physical §6; Conditional §5–6 | NR-AMD-015; NR-RNG-007 | `capacity.py`, `seed_registry.py` | TP-AMD-017 spawn tree; TP-AMD-018 axes; TP-AMD-019 fields/reuse |
+| AC-16 | Conditional §3 | NR-AMD-016; NR-RNG-002 | `local_permutation.py` | TP-AMD-020 training-only population-SD scaler |
+| AC-17 | Conditional §3 | NR-AMD-017; NR-RNG-003..005 | `local_permutation.py` | TP-AMD-021 escalation self-exclusion/order/tie failure |
+| AC-18 | Conditional §2; Physical §1 | NR-AMD-018; NR-CV-007,009..011 | `residual_null.py` | TP-AMD-022 eleven scalar topology and once-only provenance |
+| AC-19 | Physical §2,§5; Conditional §1–2 | NR-AMD-019; NR-CV-008 | `regression.py` | TP-AMD-023 direct R2 undefined/finite reference |
+| AC-20 | All sealed threshold clauses | NR-AMD-020; NR-GATE-000..009 | `thresholds.py`, `gates.py` | TP-AMD-024 literal inequalities/margins/nonfinite routes |
+| AC-21 | MSD §7,§12; Concordance G1 | NR-AMD-021; NR-GATE-002 | `gates.py` | TP-AMD-025 all-nine coherent/classical reductions |
+| AC-22 | Physical §7; Conditional §7; MSD §12 | NR-AMD-022; NR-ROUTE-001..005 | `routing.py` | TP-AMD-026 suite route and no cell dropping |
+| AC-23 | Physical §3a,§5,§8; Conditional §9 | NR-AMD-023; NR-GEO-011..014 | `preflight.py` | TP-AMD-027 provenance mismatch stop/fixed membership |
+| AC-24 | Physical §1,§3 Group B | NR-AMD-024; NR-FEA-010..011 | `physical_features.py` | TP-AMD-028 sigma-floor three-zero result |
+| AC-25 | Physical §3 Group E,§3a | NR-AMD-025; NR-GEO-013..014 | `voronoi.py`, `preflight.py` | TP-AMD-029 exact join/ring/convergence/loud failures |
