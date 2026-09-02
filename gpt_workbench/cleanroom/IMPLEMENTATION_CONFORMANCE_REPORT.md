@@ -1,18 +1,29 @@
 # Stage 2B implementation conformance report
 
-**Status:** SYNTHETIC CONFORMANCE PASS / STUDY EXECUTION NOT AUTHORISED / NOT RUN  
-**Implementation commit:** `58c018820e40d09bd957dd63a33157dff4e06607`  
-**Implementation parent:** `8a604988f371e155c82b7c280b1d14bb3a575c3d`  
+**Status:** STAGE 2B.1 SYNTHETIC WORKFLOW CONFORMANCE PASS / PENDING INDEPENDENT RATIFICATION / STUDY NOT RUN  
+**Original implementation commit:** `58c018820e40d09bd957dd63a33157dff4e06607`  
+**Original conformance commit:** `e755de99e48b2f5418afcc0629e9b57437ab2fd3`  
+**Stage 2B.1 workflow-wiring repair:** `83ed8e199454a2eb2c4614bd2706b3d3274f22b4`  
+**Repair parent:** `e755de99e48b2f5418afcc0629e9b57437ab2fd3`  
 **Authority:** seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`; ratified Amendment 1
 at `d574fde530b9d033a898e03e532bfb30e9835caf`; reconciled specifications at the
 implementation parent.
 
 ## Verdict
 
-The clean-room implementation passes the authorised synthetic conformance scope. All 72 collected
-tests pass. The test suite exercises both input iteration orders, supported parallelism settings 1
-and 2, and fresh-process RNG replay. There is no expected-failure waiver. No normative requirement
-within the Stage 2B boundary is knowingly unimplemented, and no operative blocker remains.
+Work-GPT/Sol's independent audit did not ratify the original Stage 2B conformance claim because
+`synthetic_workflow.py` fabricated floor counts and already-aggregated arrays instead of traversing
+the production workflow. It also identified a non-executable G0 barrier, superficial traversal-mode
+claims, label validation based only on lengths, ranged rather than exact test traceability, missing
+adversarial wiring tests, and a non-installable `python==...` requirements entry.
+
+Repair `83ed8e199454a2eb2c4614bd2706b3d3274f22b4` resolves those findings. The new
+`orchestrator.run_protocol` executes phased geometry/features/PCA/launch/dual-engine propagation,
+then a hard global G0 barrier, then beta/regression/mandatory controls/randomisation/aggregation/
+G0–G8/routing. All 73 collected tests pass. Forward/reverse traversals and one/two-worker scheduling
+are materially different executions with identical keyed outputs. The exact 92-obligation ledger is
+machine validated. There is no expected-failure waiver. This revised verdict is submitted for new
+independent ratification; it does not retroactively describe the original audit as a pass.
 
 This verdict is not a scientific result. No study-data entry point exists. No nine-configuration
 study geometry, study address, target, LDOS, beta, score, outcome curve, confirmatory propagation,
@@ -20,7 +31,8 @@ ablation or exploratory run was loaded or executed.
 
 ## Reproducible environment
 
-The exact environment is recorded in `gpt_workbench/cleanroom_impl/requirements-lock.txt`:
+Installable packages are recorded in `gpt_workbench/cleanroom_impl/requirements-lock.txt`; the
+interpreter is recorded separately in `interpreter-version.txt`:
 
 | Dependency | Version |
 |---|---:|
@@ -30,7 +42,8 @@ The exact environment is recorded in `gpt_workbench/cleanroom_impl/requirements-
 | scikit-learn | 1.9.0 |
 | pytest | 9.1.1 |
 
-Lock SHA-256: `1407003a5671eedeb42f5e35c1a4be5dbbd6c92676b0a9ac7d0ddb831bc4b809`.
+Requirements lock SHA-256: `a7504136bbd3d0b93f2c1efc44bb3ba9279158a988d1839a025529f55b3ae5d8`.
+Interpreter record SHA-256: `11d6e3677cf7336044ee34c4bb599fa03b3988dfa31210d42f3ca7a2f7a6d3f3`.
 
 ## Exact commands and results
 
@@ -41,8 +54,8 @@ C:\Users\Karen\Documents\Codex\2026-09-01\o\work\stage2b-venv\Scripts\python.exe
   -m pytest gpt_workbench\cleanroom_impl\tests -q
 ```
 
-Result: `72 passed in 10.53s` on the recorded final report-verification run. The parameterised full-axis test
-runs `(forward,1)`, `(reverse,1)`, `(forward,2)` and `(reverse,2)`. `TP-RNG-001` additionally launches
+Result: `73 passed in 29.35s` on the recorded final implementation-verification run. The module-scoped
+full-axis fixture runs `(forward,1)`, `(forward,2)`, `(reverse,1)` and `(reverse,2)`. `TP-RNG-001` additionally launches
 two clean child Python processes and requires byte-identical PCG64 replay.
 
 Independent dynamics-reference command used the irregular synthetic adjacency
@@ -81,26 +94,31 @@ Representative capacity hashes are respectively
 
 ## Synthetic full-workflow results
 
-Every full workflow fixture preserves 9 configurations × 6 offsets, 400 common rows per patch,
-four 100-row slabs, 200 launches per patch, the fixed seven-cell permutation membership, 1000
-address-repetition identities, 200 capacity identities, both general tier-major and capacity
-family-major axes, all 25 amendment trace markers, and mandatory descriptive controls. Numerical
-repetition is lightweight, but production validators and labelled counts are not weakened.
+The production orchestrator receives only an injected, invented backend and contains no study-data
+loader. Each successful mode executes 54 geometry calls, 54 feature calls, 54 coherent and 54
+classical propagation calls, 108 beta fits, 108 leakage-safe regression/control calls, 42,000 keyed
+local-null calls and 10,800 capacity calls. Every patch has 400 common rows, four 100-row PCA slabs
+and 200 actual launch identities. Exact-label validators cover the frozen general, permutation, G8,
+capacity-draw and family-major capacity-child axes.
 
-| Fixture | Physical route | Coherent claim | Modifier | Audit SHA-256 |
-|---|---|---:|---:|---|
-| earned | compression | yes | yes | `3532b8cf70d1d7ef43f422b71471a049af977d963a983293535e52433a0df0a5` |
-| modifier withheld | compression | yes | no | `ed35a0704ac3b870bedf1f6c1382d8c19ccd09e24e22ea179400bfad876109cf` |
-| G0 failure | compression; transport finite-size-limited | no | no | `99b2948d8f2e8aa7db980672110415752091586d7ca91e73963ac6eb6f538186` |
-| G4 undefined | compression; coherent claim withheld | no | no | `e521bea646b431770837f7f430591034438e7bbb9759de2fb473770cc21e68bd` |
-| survives | survives frozen stress controls | yes | yes | `79b0ee03c9c704c558ccc697875adf2189db3a398e523826e8e6d828b521572d` |
-| mixed | mixed/undetectable | no | no | `285c51a88bc07ce3a858516bde73107671e92e6d6127f2f2a070f1f8164f73e5` |
+| Traversal | Workers used | First/last keyed patch | Keyed result SHA-256 |
+|---|---:|---|---|
+| forward | 1 | `(0,0)` / `(8,5)` | `45a5fd38e3ed3c9f321fd3043c4363affefd4e3c6cae3aa07b6da2eb64f02648` |
+| forward | 2 | `(0,0)` / `(8,5)` | `45a5fd38e3ed3c9f321fd3043c4363affefd4e3c6cae3aa07b6da2eb64f02648` |
+| reverse | 1 | `(8,5)` / `(0,0)` | `45a5fd38e3ed3c9f321fd3043c4363affefd4e3c6cae3aa07b6da2eb64f02648` |
+| reverse | 2 | `(8,5)` / `(0,0)` | `45a5fd38e3ed3c9f321fd3043c4363affefd4e3c6cae3aa07b6da2eb64f02648` |
 
-These invented results test routing semantics only and are not estimates, findings or outcomes.
+The exact-at-8 G0 adversary executes all 54 geometry/feature and 108 propagation calls, observes
+`t_bound=8.0`, then records beta `0`, regression/control `0`, local-null `0` and capacity `0` calls.
+Only G0 and the `finite-size-limited` route are emitted. These invented results test workflow and
+routing semantics only; they are not estimates, findings or scientific outcomes.
 
 ## Normative traceability
 
-The machine-readable coverage grouping is `cleanroom_impl/test_inventory.json`. The following table
+The machine-readable exact 92-obligation ledger is `cleanroom_impl/test_inventory.json` (SHA-256
+`0cd3784be8c6bc2c94cd871f66a00b960be9e2c40754cc0cec8055b505254f8f`). Each original TP identifier
+and TP-AMD-001…030 has an exact pytest file/function node, asserted behavior and pass result; a test
+checks all 92 IDs, their order, uniqueness, nonempty behavior and node existence. The following table
 provides the required authority-to-result path. “Seal” abbreviates the exact parent source sections
 already recorded in `TRACEABILITY_MATRIX.md`; Amendment clauses are ratified AC identifiers.
 
