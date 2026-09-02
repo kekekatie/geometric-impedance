@@ -43,6 +43,11 @@ chased ("why can coherent dynamics read it?") has been caught and consolidated.
 
 ---
 
+### Address ablation — the carrier is the VARIANCE, not the mean (2026-09-02, EXPLORATORY)
+Group-by-group ablation of the M4 address block on the sealed transport pipeline: what a coherent law reads is the multiscale *within-neighbourhood variance* of the perp coordinate (var-alone recovers 95/99/80% of the golden/silver/platinum increment; the shell-*mean* adds ≈0 everywhere), with the incoherent null flat — ROADMAP step 5, interpretive not sealed. → `substrates/RESULTS_ABLATION.md`, `substrates/ablation_run.py`
+
+---
+
 ### (earlier breadcrumb, 2026-08-25 — kept for the record)
 
 Two things just landed, and one shiny scent is pulling us forward.
