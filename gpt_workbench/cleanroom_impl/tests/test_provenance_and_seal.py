@@ -1,4 +1,4 @@
-import hashlib, json, subprocess
+import ast, hashlib, json, subprocess
 from pathlib import Path
 
 import numpy as np
@@ -38,3 +38,23 @@ def test_tp_leak_004_parity_floor_and_training_only(grid_patch):
     result=parity_block(grid_patch,raw[:,0],raw[:,1],scaler)
     assert result.available and result.address11.shape==(n,11)
     with pytest.raises(ConformanceError): fit_parity_scaler(raw,np.array([[1,0.5e-9]]),prov)
+
+
+def test_exact_92_obligation_ledger_nodes_exist_and_pass():
+    package=Path(__file__).parents[1]
+    ledger=json.loads((package/"test_inventory.json").read_text())
+    obligations=ledger["obligations"]
+    expected=(
+        [f"TP-REG-{i:03d}" for i in range(1,5)]+[f"TP-GEO-{i:03d}" for i in range(1,3)]+
+        [f"TP-FEA-{i:03d}" for i in range(1,8)]+["TP-VOR-001"]+
+        [f"TP-LEAK-{i:03d}" for i in range(1,10)]+[f"TP-RNG-{i:03d}" for i in range(1,6)]+
+        [f"TP-WIRE-{i:03d}" for i in range(1,13)]+[f"TP-DYN-{i:03d}" for i in range(1,7)]+
+        [f"TP-AGG-{i:03d}" for i in range(1,4)]+["TP-GATE-001"]+
+        [f"TP-ROUTE-{i:03d}" for i in range(1,3)]+[f"TP-NEG-{i:03d}" for i in range(1,8)]+
+        [f"TP-E2E-{i:03d}" for i in range(1,4)]+[f"TP-AMD-{i:03d}" for i in range(1,31)])
+    assert ledger["obligation_count"]==len(obligations)==len(expected)==92
+    assert [x["id"] for x in obligations]==expected and all(x["result"]=="pass" and x["behavior"] for x in obligations)
+    for item in obligations:
+        filename,function=item["node"].split("::")
+        tree=ast.parse((package/"tests"/filename).read_text())
+        assert function in {n.name for n in tree.body if isinstance(n,(ast.FunctionDef,ast.AsyncFunctionDef))},item["id"]

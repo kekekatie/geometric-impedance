@@ -55,14 +55,14 @@ def local_assignment(features: np.ndarray, lifts: Sequence[LiftId], family: str,
     source_order = sorted(range(n), key=lambda i:lifts[i])
     distances = np.linalg.norm(x[:,None,:]-x[None,:,:], axis=2)
     rng = address_rng(family,tier,extent,offset_index,motif,repetition)
-    # One fixed row-major full random matrix makes escalation independent of attempts.
-    uniforms = rng.random((n,n), dtype=np.float64)
     for size in candidate_sizes:
         k = n-1 if size == "full" else min(int(size), n-1)
         cost = np.full((n,n), np.inf)
-        for i in source_order:
+        # Exactly one C-order stream: lift-sorted source row, then ordered candidate column.
+        uniforms = rng.random((n,k), dtype=np.float64)
+        for source_rank,i in enumerate(source_order):
             candidates = sorted((j for j in range(n) if j != i), key=lambda j:(distances[i,j],lifts[j]))[:k]
-            cost[i,candidates] = distances[i,candidates] + uniforms[i,candidates]
+            cost[i,candidates] = distances[i,candidates] + uniforms[source_rank]
         try:
             rows, cols = linear_sum_assignment(cost)
         except ValueError:

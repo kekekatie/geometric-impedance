@@ -1,5 +1,6 @@
 import hashlib, json
 from collections import OrderedDict
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -92,3 +93,27 @@ def test_tp_rng_003_assignment_distance_plus_u_and_derangement():
     result=local_assignment(x,lifts,"silver","small",14,0,((0,1),),0,candidate_sizes=("full",))
     assert sorted(result.destination_by_source)==list(range(n))
     assert all(i!=j for i,j in enumerate(result.destination_by_source))
+
+
+def test_tp_amd_014_source_candidate_consumption_reversed_and_concurrent():
+    n=6; x=np.array([[0.],[3.],[1.],[5.],[2.],[4.]])
+    lifts=((30,),(10,),(60,),(20,),(50,),(40,)); motif=((0,1),)
+    def run(values,ids): return local_assignment(values,ids,"silver","small",14,0,motif,7,candidate_sizes=("full",))
+    normal=run(x,lifts)
+    order=np.arange(n)[::-1]; reversed_result=run(x[order],tuple(lifts[i] for i in order))
+    by_lift={lifts[i]:lifts[j] for i,j in enumerate(normal.destination_by_source)}
+    reversed_by_lift={lifts[order[i]]:lifts[order[j]] for i,j in enumerate(reversed_result.destination_by_source)}
+    assert by_lift==reversed_by_lift
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        results=list(pool.map(lambda _:run(x,lifts),range(2)))
+    assert results[0]==results[1]==normal
+    # Independent row-major stream reconstruction for the one full-candidate attempt.
+    source_order=sorted(range(n),key=lambda i:lifts[i]); distances=np.abs(x-x.T)
+    U=address_rng("silver","small",14,0,motif,7).random((n,n-1),dtype=np.float64)
+    cost=np.full((n,n),np.inf)
+    for rank,i in enumerate(source_order):
+        candidates=sorted((j for j in range(n) if j!=i),key=lambda j:(distances[i,j],lifts[j]))
+        cost[i,candidates]=distances[i,candidates]+U[rank]
+    rows,cols=__import__('scipy').optimize.linear_sum_assignment(cost)
+    mapping=np.empty(n,dtype=int); mapping[rows]=cols
+    assert tuple(mapping)==normal.destination_by_source

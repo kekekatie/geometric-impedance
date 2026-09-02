@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 
 from gpt_workbench.cleanroom_impl.aggregation import *
-from gpt_workbench.cleanroom_impl.constants import CONFIGS, PERMUTATION_CONFIGS
+from gpt_workbench.cleanroom_impl.constants import CAPACITY_CONFIGS, CONFIGS, PERMUTATION_CONFIGS
 from gpt_workbench.cleanroom_impl.errors import ConformanceError, LeakageError
 from gpt_workbench.cleanroom_impl.gates import *
 from gpt_workbench.cleanroom_impl.identity import *
@@ -10,13 +10,13 @@ from gpt_workbench.cleanroom_impl.regression import *
 from gpt_workbench.cleanroom_impl.routing import *
 
 
-def labels(nc): return (tuple(range(nc)),tuple(range(6)))
+def labels(nc): return ((GENERAL_LABELS if nc==9 else PERMUTATION_LABELS),OFFSET_LABELS)
 
 
 def test_tp_reg_002_wire_006_m9_axis_and_order_refusal():
     x=np.arange(54,dtype=float).reshape(9,6); d=LabelledArray(x,("config","offset"),labels(9))
     expected=float(np.median([np.median(x[:,o]) for o in range(6)])); assert m9(d)==expected
-    with pytest.raises(ConformanceError): m9(LabelledArray(x.T,("offset","config"),(tuple(range(6)),tuple(range(9)))))
+    with pytest.raises(ConformanceError): m9(LabelledArray(x.T,("offset","config"),(OFFSET_LABELS,GENERAL_LABELS)))
 
 
 def test_tp_agg_001_qref_ties():
@@ -41,8 +41,32 @@ def independent_wy(obs,null):
 
 def test_tp_agg_003_amd_016_westfall_young_independent():
     obs=np.array([3,3,2,1,1,0,-1.]); null=np.linspace(-2,4,7000).reshape(1000,7)
-    got=westfall_young(obs,null); order,adjusted=independent_wy(obs,null)
+    got=westfall_young(LabelledArray(obs,("config",),(G8_LABELS,)),LabelledArray(null,("draw","config"),(NULL_DRAW_LABELS,G8_LABELS))); order,adjusted=independent_wy(obs,null)
     assert np.array_equal(got["order"],order) and np.allclose(got["adjusted"],adjusted)
+
+
+@pytest.mark.parametrize("bad_labels",[
+    GENERAL_LABELS[::-1],
+    GENERAL_LABELS[:-1]+(GENERAL_LABELS[-2],),
+    tuple(c.label for c in CAPACITY_CONFIGS),
+])
+def test_tp_exact_label_m9_rejects_reorder_duplicate_family_major(bad_labels):
+    with pytest.raises(ConformanceError):
+        m9(LabelledArray(np.zeros((9,6)),("config","offset"),(bad_labels,OFFSET_LABELS)))
+
+
+def test_tp_exact_label_null_capacity_and_g8_reject_wrong_membership():
+    with pytest.raises(ConformanceError):
+        mperm7(LabelledArray(np.zeros((1000,7,6)),("draw","config","offset"),(NULL_DRAW_LABELS,PERMUTATION_LABELS[::-1],OFFSET_LABELS)))
+    with pytest.raises(ConformanceError):
+        capacity_m9(LabelledArray(np.zeros((200,9,6)),("draw","config","offset"),(CAPACITY_DRAW_LABELS,tuple(c.label for c in CAPACITY_CONFIGS),OFFSET_LABELS)))
+    with pytest.raises(ConformanceError):
+        westfall_young(LabelledArray(np.zeros(7),("config",),(PERMUTATION_LABELS,)),LabelledArray(np.zeros((1000,7)),("draw","config"),(NULL_DRAW_LABELS,PERMUTATION_LABELS)))
+
+
+def test_tp_capacity_patch_axis_requires_family_major_offset_fast():
+    validate_capacity_patch_axis(CAPACITY_PATCH_LABELS)
+    with pytest.raises(ConformanceError): validate_capacity_patch_axis(CAPACITY_PATCH_LABELS[::-1])
 
 
 def test_tp_amd_023_direct_r2_and_undefined():
