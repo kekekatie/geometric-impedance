@@ -34,6 +34,14 @@ Three papers examining geometric and structural properties of AI cognition.
 | [What the Persona Selection Model Cannot See](ai_minds/Persona_Selection_Model_Critique.pdf) | Critique of Anthropic's PSM paper; proposes crystallisation vs selection |
 | [The Breakstep Principle](ai_minds/Epilepsy_Breakstep_How_Minds_Form.pdf) | How minds must form - constraints from epilepsy research and the breakstep principle |
 
+## Horizon Notes
+
+Speculative musings for future builders - leads walked around and written down so they stop getting lost. *Not results, not sealed: the register markers inside each note say what is already true, what is design principle, and what is play.*
+
+| Note | Description |
+|------|-------------|
+| [What a machine that remembers like the universe might look like](HORIZON_NOTE_machines_that_remember.md) | Where transport-vs-storage shows up in the transformers you already ship, the accretion law (the past carves the space of legal futures), and what a self-addressing, locally-remembering machine would need |
+
 ---
 
 *These papers explore a common thread: that geometry isn't just where things happen - it's how they persist, channel, and remember.*
