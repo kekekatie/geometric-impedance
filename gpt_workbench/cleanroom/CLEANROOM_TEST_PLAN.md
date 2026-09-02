@@ -1,9 +1,10 @@
 # Clean-room test plan — independently derived
 
-**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+**Status: RECONCILED SPECIFICATION / AMENDMENT 2 RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
 Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
-at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, ratified Amendment 2 at
+`0d365bd26683feaa833739af15091cc1955d6935`, then these reconciled specifications.
 
 No test in this plan uses study addresses, targets, beta values, scores or outcomes. Synthetic fixtures
 must use invented coordinates, graphs, fields and targets. Tests assert both numbers and wiring.
@@ -161,12 +162,19 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 
 ## Complete synthetic end-to-end execution
 
+**Amendment-2 supersession record.** The historical TP-E2E-001 text below is retained verbatim for
+auditability. Ratified Amendment 2 supersedes only the requirement that all 54 numerical patches,
+all 1000 null fixtures and all 200 capacity fixtures execute in one synthetic run. Layers A–G and
+TP-SCP-* below now govern conformance evidence. All scientific constants, complete identity axes,
+production computations and eventual confirmatory-run requirements remain unchanged.
+
 60. **TP-E2E-001 Nine-by-six compliant synthetic suite.** Invent 54 labelled graphs, each with at
     least 400 common rows, at least 100 rows in every slab and exactly 200 launches, using synthetic
     positive power-law dynamics, invented perpendicular fields and targets. Run geometry -> common population ->
     physical/address/parity -> folds -> both propagation engines -> beta -> all regression/control
     branches -> 1000 lightweight deterministic null fixtures and 200 capacity fixtures -> M9/Mperm7 ->
     G0–G8 -> final routing/report. No study generator or data is used.
+    **Superseded only as recorded above; retained historical text.**
 61. **TP-E2E-002 Route variants.** Parameterise the synthetic fixture to earn the coherent claim,
     withhold only the modifier, fail G0, make G4 undefined, produce compression, produce survives,
     and fall through to mixed. Assert exact membership and claim language each time.
@@ -180,6 +188,12 @@ must use invented coordinates, graphs, fields and targets. Tests assert both num
 Stage 2 conformance requires all applicable tests passing on at least two iteration orders and two
 parallelism settings, no expected-failure waiver for a primary gate, and explicit resolution tests
 for every blocker. Synthetic test outputs must never be described as scientific outcomes.
+
+**Amendment-2 reconciliation.** The two genuine iteration orders and two genuine parallelism
+settings apply to the layered workflow evidence and do not require four repetitions of the complete
+confirmatory-scale fit workload. Identical keyed outputs across all four modes, the primary-gate and
+blocker rules, and the prohibition on describing synthetic outputs as scientific outcomes remain
+unchanged. Layer G must distinguish enumerated, actually executed and unexecuted computations.
 
 ## Ratified Amendment 1 falsification tests
 
@@ -286,3 +300,86 @@ tool; no production or test code is written in Stage 2A.
     endpoint validity, global G1/routing and descriptive controls. Compare to a separate exact
     reference and require every AC-01..AC-25 trace marker before Stage 2B conformance can pass; no
     reduced-size orchestration mode may weaken the production constants.
+    **Superseded only as follows:** Amendment 2 replaces the single full-scale numerical-evidence
+    requirement with Layers A–G. Every AC-01..AC-25 marker, exact axis, keyed provenance, fitted-
+    object contract and production constant remains mandatory; layered conformance is not a reduced
+    scientific or production mode.
+
+## Ratified Amendment 2 falsification tests
+
+These tests append to the existing TP-REG through TP-AMD-030 families without renumbering or
+weakening any prior obligation.
+They preserve TP-E2E-003: exact component references, production-wired workflow evidence, identity
+enumeration and controlled routing evidence are distinct and must be reported separately.
+
+93. **TP-SCP-A-001 Exact production components.** For every production geometry, feature,
+    regression, residualiser, matching, capacity, aggregation, dynamics and routing component,
+    compare its production interface against an independent reference and exercise its invariant,
+    negative boundary and applicable mutation. A precomputed stage result or callback-only fixture
+    must fail the evidence-kind validator. Covers NR-SCP-001.
+94. **TP-SCP-A-002 Dynamics evidence distinction.** Compare each real coherent/classical engine to
+    its independent exact reference. Run an explicitly labelled synthetic dynamics adapter through
+    a workflow fixture and assert that it cannot emit either production-propagation evidence flag.
+    Covers NR-SCP-001 and NR-SCP-010.
+95. **TP-SCP-B-001 Six-offset production-wired slice.** Run one frozen permutation-feasible
+    configuration over all six offsets with at least 400 common rows per offset, four slabs of at
+    least 100, exactly 200 launches per patch, both engine-labelled branches, five radii, all six
+    outer/frozen inner folds and observed, parity, shuffle, residual, position, far, local-null and
+    capacity branches. Assert exact raw-input-to-route production ownership and exact output labels.
+    Covers NR-SCP-002.
+96. **TP-SCP-B-002 Representative randomisations.** Assert that Layer B numerically executes address
+    repetitions exactly `b={0,1,999}` and capacity draws exactly `{0,199}`, neither more nor fewer;
+    reject duplicated, reordered, missing or substituted identities. Cross-check their keys/seeds
+    against independent golden derivations. Covers NR-SCP-002.
+97. **TP-SCP-B-003 Orchestrator ownership.** Reject a backend returning precomputed features,
+    regressions, local-null/capacity statistics or gate ingredients. Spy on every production
+    transformation named by NR-SCP-002 and require its output provenance to reach aggregation and
+    routing. Callback counts without dependent output fail. Covers NR-SCP-002 and NR-SCP-008.
+98. **TP-SCP-C-001 Complete identity graph.** Enumerate exactly 54 patch, 42,000 local-null and
+    10,800 capacity identities plus all engine, outer-fold and inner-fold axes. Assert exact frozen
+    membership/order, uniqueness and completeness; deliberately remove, duplicate, reorder and
+    tier-major/family-major substitute identities. No numerical-fit counter may increment. Covers
+    NR-SCP-003.
+99. **TP-SCP-C-002 RNG synchronization and reuse graph.** Independently golden-verify every identity
+    seed, address source-row/candidate-column consumption rule, capacity family-major spawn mapping,
+    engine/fold synchronization and allowed reuse edge. Reverse enumeration and concurrent
+    enumeration must produce the same keyed graph. Covers NR-SCP-003.
+100. **TP-SCP-D-001 Seven-case routing truth table.** Explicitly exercise coherent claim earned,
+    modifier withheld, G0 failure, G4 undefined, compression, survives frozen stress controls and
+    mixed/undetectable. Assert exact gate state, route, membership and allowed claim text, and assert
+    the controlled ingredients do not claim upstream execution. Covers NR-SCP-004.
+101. **TP-SCP-E-001 Exact-t=8 hard barrier.** Create the first crossing exactly at `t=8`; assert the
+    finite-size route and zero beta, regression, residualisation, shuffle/other-control, local-null,
+    matching and capacity calls. Mutants that continue, shorten the window or recover must fail.
+    Covers NR-SCP-005.
+102. **TP-SCP-F-001 Four-mode layered scheduling.** Exercise real forward/reverse traversal and
+    real one/two-worker paths. Require identical complete keyed outputs across all four modes while
+    separately reporting which representative numerical functions executed. A mode value used only
+    in metadata fails. Covers NR-SCP-006.
+103. **TP-SCP-G-001 Three-category scale declaration.** Reconcile the execution ledger against spies
+    and the identity graph. Require three disjoint exact reports: enumerated identities, named
+    production-function executions including fits/controls, and confirmatory-scale computations not
+    executed. Misclassifying one enumerated identity as a fit must fail. Covers NR-SCP-007.
+104. **TP-SCP-MUT-001 Production-bypass mutation matrix.** Individually bypass or replace every
+    production feature, residualiser, shuffle, matching, capacity, aggregation and Westfall–Young
+    boundary using applicable fixed-result, wrong-width, wrong-membership, wrong-order and omitted-
+    call mutants. Every mutant must fail, proving workflow dependence rather than callback counting.
+    Covers NR-SCP-008.
+105. **TP-SCP-CACHE-001 Exact cache identity.** Build a valid cache key from byte-identical training
+    matrix, target, fold, schema and provenance identities, then mutate each field independently.
+    Only the exact five-field identity may hit; missing fields, equal shapes and equal summaries must
+    not permit reuse. Covers NR-SCP-009.
+106. **TP-SCP-CACHE-002 Cached/uncached equivalence.** In a declared software environment and
+    comparison domain, compare cached and uncached predictions under the predeclared frozen
+    tolerance. Require bit identity or compliance with that single tolerance; an undeclared,
+    post-result or exceeded tolerance fails before scientific execution. Covers NR-SCP-009.
+107. **TP-SCP-CLAIM-001 Prohibited conformance claims.** Feed each Layer A–F evidence kind to the
+    report boundary and reject claims of full-scale runtime feasibility, complete 9×6/1000/200
+    numerical execution, execution of enumerated fits, production propagation by an adapter, or a
+    scientific outcome. Covers NR-SCP-010.
+108. **TP-SCP-CONC-001 Evidence-kind concordance.** Compose Layers A–G and assert every artifact is
+    labelled as component, workflow, enumeration, routing, barrier, scheduling or scale evidence.
+    Swapping any evidence kind—including using Layer A as workflow proof or Layer C as numerical
+    fitting—must fail. Require TP-E2E-003 and the TP-E2E-001/Test Acceptance/TP-AMD-030 supersession
+    record in the final conformance ledger. Covers NR-SCP-001, NR-SCP-003, NR-SCP-004, NR-SCP-006,
+    NR-SCP-007 and NR-SCP-010.

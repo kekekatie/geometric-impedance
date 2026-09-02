@@ -1,9 +1,10 @@
 # Ambiguities and blockers — clean-room Stage 1
 
-**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+**Status: RECONCILED SPECIFICATION / AMENDMENT 2 RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
 Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
-at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, ratified Amendment 2 at
+`0d365bd26683feaa833739af15091cc1955d6935`, then these reconciled specifications.
 
 The table immediately below is preserved historical Stage-1 text. Its former severity and proposed
 resolution language is not operative after ratification; the reconciled resolution ledger following
@@ -71,6 +72,30 @@ typed transformation, trace and falsifying test.
 | BLK-024 | AC-24 | NR-AMD-024; NR-FEA-010..011 | RESOLVED BY RATIFIED AMENDMENT 1 |
 | BLK-025 | AC-25 | NR-AMD-025; NR-GEO-013..014 | RESOLVED BY RATIFIED AMENDMENT 1 |
 
+## Ratified Amendment 2 reconciliation ledger
+
+This separate ledger does not rewrite the historical blocker table or Amendment-1 resolution
+ledger. Amendment 2 resolves an evidentiary feasibility problem, not a scientific ambiguity.
+
+| Reconciliation item | Ratified resolution | Requirement IDs | Status |
+|---|---|---|---|
+| Exact component evidence and TP-E2E-003 distinction | Layer A and §6 | NR-SCP-001, NR-SCP-010 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Six-offset production-wired compliant slice with exact floors, axes, controls and representative `b={0,1,999}`, capacity `{0,199}` | Layer B | NR-SCP-002 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Complete 54/42,000/10,800 identity graph, seeds, synchronization and reuse without fit claims | Layer C | NR-SCP-003 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Seven-case routing coverage | Layer D | NR-SCP-004 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Exact-`t=8` hard G0 stop with zero downstream calls | Layer E | NR-SCP-005 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Forward/reverse × one/two-worker layered determinism | Layer F | NR-SCP-006 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Enumerated/executed/not-executed scale categories | Layer G | NR-SCP-007 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Production-bypass mutations | §4 | NR-SCP-008 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Byte-identical five-part fit-cache key and cached/uncached equivalence | §5 | NR-SCP-009 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| Prohibited conformance claims | §6 | NR-SCP-010 | RECONCILED; NOT IMPLEMENTED / NOT RUN |
+| TP-E2E-001, Test Acceptance and TP-AMD-030 | §2 and §7 concordance | NR-SCP-001..010 | SUPERSEDED ONLY TO RATIFIED EVIDENTIARY EXTENT; SCIENTIFIC CONSTANTS UNCHANGED |
+| Accidental empty commit `77e2552bba0383fbd3784e92b827fea4f66fa440` | Superseded by controlling ratification commit `0d365bd26683feaa833739af15091cc1955d6935` | none | ADMINISTRATIVE PUBLICATION EVENT; NO NORMATIVE EFFECT |
+
+No new scientifically consequential ambiguity or blocker is introduced by this reconciliation.
+Implementation conformance under NR-SCP-001..010 remains unimplemented and unrun, so no conformance
+pass or scientific claim is recorded.
+
 ## Seal-internal observations that are not blockers
 
 - Manifest end markers say “Nothing sealed” although headers and `SEAL_RECORD.md` say SEALED. This
@@ -83,6 +108,8 @@ typed transformation, trace and falsifying test.
 ## Stage 2B implementation entry conditions
 
 Implementation may begin only if all 25 historical blockers are resolved and traced; no contradiction
-remains; all five reconciled documents agree on axes, populations, RNG identities, failure routes and
-gates; and no study data or outcomes have been accessed. This reconciled ledger meets the documentary
-conditions only. Stage 2B still requires separate authorization from Work-GPT/Sol and Katie.
+remains; all five reconciled documents agree on axes, populations, RNG identities, failure routes,
+gates and NR-SCP-001..010 evidence boundaries; and no study data or outcomes have been accessed. This
+reconciled ledger meets the documentary conditions only. Ratification/reconciliation authorizes
+neither resumption of preserved Stage 2B.2 work nor scientific execution; either still requires
+separate authorization from Work-GPT/Sol and Katie.

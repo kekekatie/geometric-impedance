@@ -1,9 +1,10 @@
 # Traceability matrix — clean-room Stage 1
 
-**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+**Status: RECONCILED SPECIFICATION / AMENDMENT 2 RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
 Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
-at `d574fde530b9d033a898e03e532bfb30e9835caf`, then these reconciled specifications.
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, ratified Amendment 2 at
+`0d365bd26683feaa833739af15091cc1955d6935`, then these reconciled specifications.
 
 Proposed modules are names only, not implementations. `test_*` entries are future test targets.
 
@@ -30,6 +31,36 @@ Proposed modules are names only, not implementations. `test_*` entries are futur
 | NR-ROUTE-001..005 | Physical v7 §7; Conditional v4.1 §7; MSD v8.1 §12; Concordance closing paragraph | `routing.py` | `test_route_truth_table.py`, `test_no_subset_recompute.py` |
 | NR-CLAIM-001..003 | Seal §3; MSD v8.1 §12; Conditional v4.1 §7 | `reporting.py` | `test_claim_boundaries.py` |
 | NR-FAIL-001..003 | All manifests’ explicit flag/stop/no-silent-use rules | every boundary validator | `test_malformed_inputs.py`, `test_fail_loudly.py` |
+
+## Ratified Amendment 2 traceability
+
+The retained amendment filename is historical. Exact source anchors below refer to ratified
+`SYNTHETIC_CONFORMANCE_PROTOCOL_AMENDMENT_2_DRAFT.md` blob
+`cba719b07f9d3365a39d708a7438ccb74024a4bd`. Module boundaries name production ownership or
+conformance instrumentation; they do not claim implementation.
+
+| Requirement | Exact Amendment-2 source | Exact module boundaries | Falsifying test identifiers |
+|---|---|---|---|
+| NR-SCP-001 | §3 Layer A; §6 TP-E2E-003 boundary | `geometry.py`, `features.py`, `regression.py`, `residual_null.py`, `controls.py`, `local_permutation.py`, `capacity.py`, `aggregation.py`, `multiplicity.py`, `propagation.py`, `endpoint.py`, `gates.py`, `routing.py`; independent `reference_*` fixtures | TP-SCP-A-001, TP-SCP-A-002, TP-SCP-CONC-001 |
+| NR-SCP-002 | §3 Layer B | `production_workflow.py` raw-input boundary; `preflight.py`, `motif_registry.py`, `dedup.py`, `features.py`, `folds.py`, `launches.py`, `regression.py`, `residual_null.py`, `controls.py`, `local_permutation.py`, `capacity.py`, `aggregation.py`, `multiplicity.py`, `gates.py`, `routing.py` | TP-SCP-B-001, TP-SCP-B-002, TP-SCP-B-003 |
+| NR-SCP-003 | §3 Layer C | `config_registry.py`, `seed_registry.py`, `local_permutation.py`, `capacity.py`, `provenance.py` identity-graph enumerator/validator | TP-SCP-C-001, TP-SCP-C-002, TP-SCP-CONC-001 |
+| NR-SCP-004 | §3 Layer D | `gates.py`, `routing.py`, controlled routing-fixture boundary | TP-SCP-D-001, TP-SCP-CONC-001 |
+| NR-SCP-005 | §3 Layer E | `production_workflow.py`, `boundary.py`; downstream beta/regression/control/null/capacity spies | TP-SCP-E-001 |
+| NR-SCP-006 | §3 Layer F | `production_workflow.py`, `scheduler.py`, keyed result registry | TP-SCP-F-001, TP-SCP-CONC-001 |
+| NR-SCP-007 | §3 Layer G | `conformance_report.py`, production invocation ledger, identity ledger | TP-SCP-G-001, TP-SCP-CONC-001 |
+| NR-SCP-008 | §4 | production boundaries in `features.py`, `residual_null.py`, `controls.py`, `local_permutation.py`, `capacity.py`, `aggregation.py`, `multiplicity.py`; `production_workflow.py` | TP-SCP-MUT-001, TP-SCP-B-003 |
+| NR-SCP-009 | §5 | `regression.py` fit-cache key/validator, `provenance.py`, `numerics.py` | TP-SCP-CACHE-001, TP-SCP-CACHE-002 |
+| NR-SCP-010 | §6; §3 Layers A–G | `conformance_report.py`, `reporting.py`, evidence-kind validator | TP-SCP-CLAIM-001, TP-SCP-CONC-001 |
+
+### Amendment 2 supersession and publication ledger
+
+| Event or affected clause | Reconciliation status | Normative effect |
+|---|---|---|
+| TP-E2E-001 | Superseded only insofar as it required all 54 numerical patches, all 1000 null fixtures and all 200 capacity fixtures in one synthetic run; Layers A–G now govern evidence. | Every frozen axis, identity, production constant and eventual confirmatory computation remains unchanged. |
+| Test Acceptance | Two real iteration orders and two real parallelism settings apply to layered evidence, not four complete confirmatory-scale workloads. | Genuine four-mode paths, keyed equality, no primary-gate waiver and no scientific-outcome description remain required. |
+| TP-AMD-030 | Superseded only insofar as all composition evidence had to arise from one full-scale numerical run. | Every AC-01..AC-25 marker, exact axis/order/provenance and production constant remains mandatory. |
+| `77e2552bba0383fbd3784e92b827fea4f66fa440` | Accidental empty administrative publication event, immediately superseded by `0d365bd26683feaa833739af15091cc1955d6935`. | None; it did not alter the ratified proposal text or any scientific requirement. |
+| `0d365bd26683feaa833739af15091cc1955d6935` | Controlling ratification commit; blob `cba719b07f9d3365a39d708a7438ccb74024a4bd`. | Ratifies synthetic-conformance evidence changes only; authorizes neither implementation nor scientific execution. |
 
 ## Permitted dependency ledger
 

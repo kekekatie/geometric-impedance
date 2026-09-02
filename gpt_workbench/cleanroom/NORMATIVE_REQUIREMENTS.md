@@ -1,11 +1,13 @@
 # Normative requirements — clean-room Stage 1
 
-**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+**Status: RECONCILED SPECIFICATION / AMENDMENT 2 RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
 Normative authority, in precedence order: parent seal commit
 `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`; ratified companion
 `IMPLEMENTATION_CLARIFICATION_AMENDMENT_1_DRAFT.md` at
-`d574fde530b9d033a898e03e532bfb30e9835caf`; then these reconciled clean-room specifications.
+`d574fde530b9d033a898e03e532bfb30e9835caf`; ratified
+`SYNTHETIC_CONFORMANCE_PROTOCOL_AMENDMENT_2_DRAFT.md` at
+`0d365bd26683feaa833739af15091cc1955d6935`; then these reconciled clean-room specifications.
 No study dynamics or outcomes have been run or accessed.
 
 ## Sources and precedence
@@ -14,6 +16,8 @@ The normative sources are the five artifacts named by `SEAL_RECORD.md`, read at 
 `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, plus the frozen 48-time companion list. Requirement
 IDs are stable: clarification appends IDs rather than renumbering existing ones. All historical
 BLK-001..025 annotations are resolved by ratified NR-AMD-001..025; the ledger preserves their history.
+Ratified Amendment 2 appends NR-SCP-001..010 and changes synthetic-conformance evidence only. It
+does not change any scientific constant, production requirement or confirmatory-run computation.
 
 ## Geometry, configurations and populations
 
@@ -341,6 +345,69 @@ of AC-01 through AC-25. Each `NR-AMD-nnn` maps one-to-one to `AC-nn`.
   divided by ell and require >=3. Compare each matched Delta=4/6 core-cell area and perimeter using
   denominator `max(abs(value_Delta6),1e-15)` and require maximum relative difference <=1e-6.
   Qhull failure, unbounded cell, nonfinite geometry or failed correspondence stops.
+
+## Ratified Amendment 2 synthetic-conformance requirements
+
+These requirements append stable IDs without renumbering or redefining any prior requirement.
+TP-E2E-001, Test Acceptance and TP-AMD-030 are superseded only to the precise evidentiary extent
+recorded in `CLEANROOM_TEST_PLAN.md`; their scientific constants and production requirements remain
+in force. The retained `_DRAFT.md` filename is historical.
+
+- **NR-SCP-001 (Layer A — exact component evidence).** Establish every production geometry,
+  feature, regression, residualiser, matching, capacity, aggregation, dynamics and routing component
+  with an independent reference, invariant, negative test and applicable mutation. A precomputed
+  stage result or callback count is not evidence that a production component executed. Test both
+  production dynamics engines independently against their exact references. A clearly identified
+  synthetic dynamics adapter may control workflow runtime but is never evidence of coherent or
+  classical scientific propagation.
+- **NR-SCP-002 (Layer B — production-wired compliant slice).** Execute one frozen
+  permutation-feasible configuration across all six offsets, with at least 400 common rows per
+  offset, four slabs of at least 100 rows, exactly 200 launches per patch, both engine-labelled
+  branches, all five radii, all six leakage-safe outer folds and the frozen inner-fold structure,
+  plus observed, parity, shuffle, residual, position, far, local-null and capacity branches. The
+  production orchestrator—not a high-level backend stub—owns and calls common-population validation,
+  motif registry, deduplication, feature construction, slabs, launches, regressions, controls,
+  matching, recomputed address features, capacity, aggregation, Westfall–Young, gates and routing.
+  Execute address repetitions exactly `b={0,1,999}` and capacity draws exactly `{0,199}` as the
+  representative numerical identities; every remaining frozen identity is covered by NR-SCP-003.
+- **NR-SCP-003 (Layer C — full identity graph).** Enumerate and validate, without claiming numerical
+  fitting, all 54 patch identities, 42,000 local-null identities, 10,800 capacity identities, every
+  engine/fold axis, exact frozen labels/membership/order, seeds, keyed provenance, RNG consumption,
+  synchronization and permitted reuse. Independently golden-verify identity and seed values.
+- **NR-SCP-004 (Layer D — routing truth table).** Exercise and assert exactly seven final cases:
+  coherent claim earned, modifier withheld, G0 failure, G4 undefined, compression, survives frozen
+  stress controls and mixed/undetectable. Controlled gate ingredients establish routing only and
+  never establish upstream numerical execution.
+- **NR-SCP-005 (Layer E — hard G0 barrier).** For an exact first crossing at `t=8`, require zero
+  calls to beta, regression, residualisation, shuffle and other controls, local-null, matching and
+  capacity computations. No shortened window or recovery path is permitted.
+- **NR-SCP-006 (Layer F — four-mode layered scheduling).** Run the layered workflow under genuinely
+  distinct forward/reverse traversal and one/two-worker scheduling paths and require identical keyed
+  results in all four modes. This proves scheduling determinism without requiring four repetitions
+  of the complete confirmatory-scale fit workload or treating enumeration as execution.
+- **NR-SCP-007 (Layer G — three-category scale reporting).** Report separately and exactly:
+  enumerated identities; executed production-function invocation counts by function/layer, including
+  actual fits and controls; and confirmatory-scale computations not executed. No category may be
+  inferred from another and no enumerated identity may be described as an executed computation.
+- **NR-SCP-008 (production-bypass mutations).** Require workflow failures when any production
+  feature, residualiser, shuffle, matching, capacity, aggregation or Westfall–Young function is
+  bypassed or replaced. Applicable mutants include fixed result, wrong width, wrong membership,
+  wrong label order and omitted call. A spy proves invocation; a mutation proves that the workflow
+  depends on the production output rather than merely counting a callback.
+- **NR-SCP-009 (fit-cache identity and equivalence).** Permit fit caching only for byte-identical
+  training matrix, target, fold identity, schema identity and provenance identity; bind all five in
+  the cache key and reject each single-field difference. Before scientific use, cached and uncached
+  predictions must be bit-identical or equal within one predeclared frozen numerical tolerance,
+  comparison domain and software environment. No reuse may cross a non-identical identity.
+- **NR-SCP-010 (prohibited conformance claims).** Layers A–F cannot establish full-scale runtime
+  feasibility, complete 9×6/`B=1000`/capacity-200 synthetic numerical execution, execution of a fit
+  represented only by enumeration, scientific propagation by a synthetic adapter, or any scientific
+  outcome. TP-E2E-003 remains controlling: component references, production-wired workflow evidence,
+  identity enumeration and controlled routing evidence must remain separately labelled.
+
+All production constants remain unchanged: nine configurations by six offsets, five radii, six
+outer folds, four slabs, exactly 200 launches per patch, `B=1000` and 200 capacity draws. The eventual
+confirmatory run remains responsible for every frozen production computation.
 
 ## GeometryReferenceRegistry
 

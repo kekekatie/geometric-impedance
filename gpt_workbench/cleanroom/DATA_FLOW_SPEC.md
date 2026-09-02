@@ -1,9 +1,10 @@
 # Data-flow specification — clean-room Stage 1
 
-**Status: RECONCILED SPECIFICATION / NOT IMPLEMENTED / NOT RUN**
+**Status: RECONCILED SPECIFICATION / AMENDMENT 2 RATIFIED / NOT IMPLEMENTED / NOT RUN**
 
 Authority precedence: seal `4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55`, ratified Amendment 1
-at `d574fde530b9d033a898e03e532bfb30e9835caf`, then the reconciled Stage-1 specifications.
+at `d574fde530b9d033a898e03e532bfb30e9835caf`, ratified Amendment 2 at
+`0d365bd26683feaa833739af15091cc1955d6935`, then the reconciled Stage-1 specifications.
 
 This is a typed, side-effect-free contract. “Ordered” means order is data, not presentation.
 
@@ -383,3 +384,85 @@ Sources are seal blobs `PREFLIGHT_GEOMETRY_REPORT_V2.md`
 `1c2995cc16bb5b8c0b8777550a461d4593966b48` and `SIX_OFFSET_AUDIT_REPORT.md`
 `2470997bf70c16c1ee6af6f13784b4212d56a291`. Required physical-size matching remains a frozen
 pre-seal tier-selection fact and cannot change fixed M9/M_perm membership.
+
+## Ratified Amendment 2 layered evidence flow
+
+This is a conformance-evidence graph, not a reduced scientific pipeline. Production constants remain
+`Configs[9] × OffsetAxis[6]`, five radii, six outer folds, four slabs, 200 launches per patch,
+`B=1000` and 200 capacity draws. All computations remain required in the eventual confirmatory run.
+
+```text
+EvidenceKind := ExactComponent | ProductionWiredSlice | IdentityEnumeration |
+                RoutingFixture | BarrierProof | SchedulingProof | ScaleDeclaration
+
+LayerA := Map[ProductionComponent, IndependentReference + Invariant + Negative + MutationEvidence]
+
+LayerBPatchAxis[6] := one frozen permutation-feasible Config × OffsetAxis
+LayerBAddressRepetitions := ordered set {0,1,999}
+LayerBCapacityDraws := ordered set {0,199}
+LayerBInput := RawSyntheticGeometryFieldsTargets[LayerBPatchAxis]
+LayerBOutput := production_orchestrator(
+  common population -> motif/dedup -> physical/address/parity -> slabs/launches ->
+  engine-labelled dynamics -> leakage-safe folds/regression -> shuffle/residual/position/far ->
+  matching/recomputed local-null address -> capacity/paired increments ->
+  M9/Mperm7/WY -> G0..G8 -> routing)
+
+LayerCIdentityGraph := {
+  patches: PatchIdentity[54], local_null: AddressIdentity[42000],
+  capacity: CapacityIdentity[10800], engines, outer_folds, inner_folds,
+  labels, order, seeds, consumption, synchronization, reuse
+}
+
+LayerDRoutes[7] := [EarnedClaim, ModifierWithheld, G0Failure, G4Undefined,
+                    Compression, SurvivesControls, MixedUndetectable]
+
+LayerEBarrier := Crossing(t=8) -> DownstreamCallCounts(all)=0
+
+ScheduleMode := (Traversal in {Forward,Reverse}, Workers in {1,2})
+LayerF := Map[ScheduleMode, KeyedLayeredOutput]  # four genuinely distinct paths, equal values
+
+LayerG := {
+  enumerated_identity_counts,
+  executed_production_function_counts_by_name_and_layer,
+  confirmatory_scale_computations_not_executed
+}
+```
+
+The typed layers map exactly to NR-SCP-001 through NR-SCP-007 in letter order. Production-bypass
+mutations map to NR-SCP-008, fit-cache identity/equivalence maps to NR-SCP-009, and every emitted
+evidence artifact carries the NR-SCP-010 prohibited-claims boundary.
+
+Layer B requires at least 400 common rows in each of its six offsets, four slabs of at least 100,
+exactly 200 launches per patch, both engine-labelled branches, all five radii, all frozen outer/inner
+folds, and observed, parity, shuffle, residual, position, far, local-null and capacity branches. The
+injectable boundary is raw labelled synthetic geometry/fields/targets and, only where necessary, an
+explicit synthetic dynamics source. No backend may return `FeatureStage`, `RegressionStage`, null or
+capacity statistics, or fixed gate ingredients as production-wiring evidence.
+
+```text
+ComponentEvidence != WorkflowEvidence
+IdentityEnumeration != NumericalFitExecution
+RoutingFixture != UpstreamExecution
+SyntheticDynamicsAdapter != ProductionPropagationEvidence
+```
+
+Production-bypass mutation flow instruments named calls to feature, residualiser, shuffle, matching,
+capacity, aggregation and Westfall–Young boundaries, then replaces each with fixed-result,
+wrong-width, wrong-membership, wrong-order or omitted-call mutants where applicable. A valid workflow
+must fail each mutation; callback counting alone is insufficient.
+
+```text
+FitCacheKey := hash(bytes(training_matrix), bytes(target), fold_identity,
+                    schema_identity, provenance_identity)
+cache_hit allowed iff all five identities are byte-identical
+cache_validation := compare(cached_predictions, uncached_predictions,
+                            frozen_tolerance, declared_domain, declared_environment)
+```
+
+Any single cache-key-field mutation must miss or fail. Cached scientific use is forbidden until
+predictions are bit-identical or within the frozen predeclared numerical tolerance. Layer G reports
+cache hits as executed/reused computations without inflating the number of numerical fits.
+
+Layers A–F emit implementation-conformance evidence only. They carry an explicit claim-boundary
+record forbidding full-scale feasibility, full synthetic numerical execution, unexecuted-fit,
+synthetic-propagation and scientific-outcome claims.
