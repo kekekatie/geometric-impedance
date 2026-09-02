@@ -1,0 +1,171 @@
+{
+  "note": "Stage 1 descriptive exploration. NO grip quantity selected; all candidate ratios shown transparently. T1 test deferred until grip is named by the pre-registration author.",
+  "T1_target": 0.158,
+  "T1_sigma": 0.027,
+  "live_powers": {
+    "(sqrt2-1)^2": 0.172,
+    "1/phi^4": 0.146
+  },
+  "substrates": {
+    "ammann_beenker": {
+      "n_bands": 6,
+      "depth_max": 1.1716,
+      "shells": [
+        {
+          "coordination": 3,
+          "count": 795,
+          "depth_mean": 0.15357279863784618,
+          "depth_std": 0.11786652497140011
+        },
+        {
+          "coordination": 4,
+          "count": 659,
+          "depth_mean": 0.38834190368825555,
+          "depth_std": 0.14860263396395715
+        },
+        {
+          "coordination": 5,
+          "count": 276,
+          "depth_mean": 0.6925140313448854,
+          "depth_std": 0.08438939844655619
+        },
+        {
+          "coordination": 6,
+          "count": 112,
+          "depth_mean": 0.8609423244425966,
+          "depth_std": 0.062156421539536245
+        },
+        {
+          "coordination": 7,
+          "count": 24,
+          "depth_mean": 0.9556697861358536,
+          "depth_std": 0.019028812882526655
+        },
+        {
+          "coordination": 8,
+          "count": 56,
+          "depth_mean": 1.053518596690419,
+          "depth_std": 0.04737653007088842
+        }
+      ],
+      "candidate_ratios": [
+        {
+          "step": "3->4",
+          "depth_ratio": 2.5287,
+          "depthcomplement_ratio": 0.7694,
+          "population_ratio": 0.8289
+        },
+        {
+          "step": "4->5",
+          "depth_ratio": 1.7833,
+          "depthcomplement_ratio": 0.6116,
+          "population_ratio": 0.4188
+        },
+        {
+          "step": "5->6",
+          "depth_ratio": 1.2432,
+          "depthcomplement_ratio": 0.6484,
+          "population_ratio": 0.4058
+        },
+        {
+          "step": "6->7",
+          "depth_ratio": 1.11,
+          "depthcomplement_ratio": 0.695,
+          "population_ratio": 0.2143
+        },
+        {
+          "step": "7->8",
+          "depth_ratio": 1.1024,
+          "depthcomplement_ratio": 0.5468,
+          "population_ratio": 2.3333
+        }
+      ]
+    },
+    "penrose": {
+      "n_bands": 7,
+      "depth_max": 1.382,
+      "shells": [
+        {
+          "coordination": 3,
+          "count": 719,
+          "depth_mean": 0.13827325153322156,
+          "depth_std": 0.1372945671077314
+        },
+        {
+          "coordination": 4,
+          "count": 723,
+          "depth_mean": 0.36652436469989597,
+          "depth_std": 0.1868054075639121
+        },
+        {
+          "coordination": 5,
+          "count": 413,
+          "depth_mean": 0.7039595050873164,
+          "depth_std": 0.19588511568313277
+        },
+        {
+          "coordination": 6,
+          "count": 34,
+          "depth_mean": 0.9987935394761526,
+          "depth_std": 0.045506905831470414
+        },
+        {
+          "coordination": 7,
+          "count": 20,
+          "depth_mean": 1.0923762080735477,
+          "depth_std": 0.03721760150697366
+        },
+        {
+          "coordination": 8,
+          "count": 13,
+          "depth_mean": 1.166393766341176,
+          "depth_std": 0.032560466710659236
+        },
+        {
+          "coordination": 10,
+          "count": 19,
+          "depth_mean": 1.2867545905626334,
+          "depth_std": 0.04980005840278293
+        }
+      ],
+      "candidate_ratios": [
+        {
+          "step": "3->4",
+          "depth_ratio": 2.6507,
+          "depthcomplement_ratio": 0.8165,
+          "population_ratio": 1.0056
+        },
+        {
+          "step": "4->5",
+          "depth_ratio": 1.9206,
+          "depthcomplement_ratio": 0.6677,
+          "population_ratio": 0.5712
+        },
+        {
+          "step": "5->6",
+          "depth_ratio": 1.4188,
+          "depthcomplement_ratio": 0.5651,
+          "population_ratio": 0.0823
+        },
+        {
+          "step": "6->7",
+          "depth_ratio": 1.0937,
+          "depthcomplement_ratio": 0.7558,
+          "population_ratio": 0.5882
+        },
+        {
+          "step": "7->8",
+          "depth_ratio": 1.0678,
+          "depthcomplement_ratio": 0.7444,
+          "population_ratio": 0.65
+        },
+        {
+          "step": "8->10",
+          "depth_ratio": 1.1032,
+          "depthcomplement_ratio": 0.4417,
+          "population_ratio": 1.4615
+        }
+      ]
+    }
+  }
+}
