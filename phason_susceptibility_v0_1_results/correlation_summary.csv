@@ -1,0 +1,7 @@
+metric,value,p_value
+"Spearman(boundary_dist, balance)",-0.7601222863298425,0.0
+"Spearman(hull_depth, balance)",-0.7215104129201668,0.0
+"Spearman(boundary_dist, depth)",0.8988975793374149,0.0
+"Spearman(type_rank, balance)",0.9510397371947178,0.0
+"Partial_corr(bdry_dist, balance | depth)",-0.3677148092813009,
+"Mean cos(drift, boundary_normal)",0.0012025649985637507,

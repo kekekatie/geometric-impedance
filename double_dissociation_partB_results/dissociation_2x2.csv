@@ -1,0 +1,7 @@
+substrate,perturbation,address_auc,weave_auc,hybrid_auc
+AB_N30,native,0.9788,0.9985,0.9989
+AB_N30,rewire,0.9791,0.9913,0.9904
+AB_N30,shuffle,0.4968,0.9986,0.9985
+Penrose_N24,native,0.5527,0.9084,0.9116
+Penrose_N24,rewire,0.5687,0.8313,0.8536
+Penrose_N24,shuffle,0.4858,0.9089,0.9083
