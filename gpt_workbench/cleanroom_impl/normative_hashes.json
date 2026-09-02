@@ -1,0 +1,21 @@
+{
+  "authority": {
+    "parent_seal_commit": "4ec0536319b531e8ad04dbfbbd0cd0e19ac57f55",
+    "ratified_amendment_commit": "d574fde530b9d033a898e03e532bfb30e9835caf",
+    "reconciled_specification_commit": "8a604988f371e155c82b7c280b1d14bb3a575c3d"
+  },
+  "git_blobs": {
+    "gpt_workbench/SEAL_RECORD.md": "3d840769f298a161c736557c288d71e4fa77532b",
+    "gpt_workbench/PHYSICAL_RADIUS_MANIFEST_DRAFT.md": "e3c32a2df760627fd9b009929c24423a51522e9f",
+    "gpt_workbench/MSD_ENDPOINT_MANIFEST_DRAFT.md": "95814aac8ef1c9b570a757d2a92cd313a10b497e",
+    "gpt_workbench/CONDITIONAL_NULL_MANIFEST_DRAFT.md": "d88b91e519288a68f7bb5740d3b82cdbdef26964",
+    "gpt_workbench/DECISION_GATE_CONCORDANCE.md": "a6cff0dd34b97ac088a340eac0938ddda27d1dbd",
+    "gpt_workbench/snapped_beta_times.txt": "57be292518a34bd2f6ecc96c4db9ebc83722916c",
+    "gpt_workbench/cleanroom/IMPLEMENTATION_CLARIFICATION_AMENDMENT_1_DRAFT.md": "a480bf7ab0e2b01d0005215f76fb0a4002c7ba65",
+    "gpt_workbench/cleanroom/NORMATIVE_REQUIREMENTS.md": "381850daee44c32668840fff3d3ac46b62303c51",
+    "gpt_workbench/cleanroom/DATA_FLOW_SPEC.md": "59efcd4c1e70b65fda642e42a5bd457ebdcfdf4a",
+    "gpt_workbench/cleanroom/CLEANROOM_TEST_PLAN.md": "d31256c53b96288e10cfbf48d61dc071e9f2e4f5",
+    "gpt_workbench/cleanroom/TRACEABILITY_MATRIX.md": "2a6e878fe94ac28e052606c5209c9a34da480f26",
+    "gpt_workbench/cleanroom/AMBIGUITIES_AND_BLOCKERS.md": "572dae2178194c69cbdd780f1de1806455fa7e8b"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "synthetic-conformance-only",
+  "test_plan_ids": {
+    "TP-REG-001..004": ["test_registry_geometry_features.py", "test_provenance_and_seal.py"],
+    "TP-GEO-001..002": ["test_registry_geometry_features.py"],
+    "TP-FEA-001..007": ["test_registry_geometry_features.py", "test_rng_and_controls.py"],
+    "TP-VOR-001": ["test_registry_geometry_features.py", "test_voronoi_and_negative.py"],
+    "TP-LEAK-001..009": ["test_provenance_and_seal.py", "test_regression_aggregation_routing.py", "test_rng_and_controls.py"],
+    "TP-RNG-001..005": ["test_rng_and_controls.py", "test_synthetic_e2e.py"],
+    "TP-WIRE-001..012": ["test_registry_geometry_features.py", "test_regression_aggregation_routing.py", "test_dynamics_endpoint.py", "test_synthetic_e2e.py"],
+    "TP-DYN-001..006": ["test_dynamics_endpoint.py"],
+    "TP-AGG-001..003": ["test_regression_aggregation_routing.py"],
+    "TP-GATE-001": ["test_regression_aggregation_routing.py"],
+    "TP-ROUTE-001..002": ["test_regression_aggregation_routing.py", "test_synthetic_e2e.py"],
+    "TP-NEG-001..007": ["test_voronoi_and_negative.py", "test_dynamics_endpoint.py", "test_registry_geometry_features.py"],
+    "TP-E2E-001..003": ["test_synthetic_e2e.py", "test_dynamics_endpoint.py"],
+    "TP-AMD-001..030": ["test_registry_geometry_features.py", "test_rng_and_controls.py", "test_dynamics_endpoint.py", "test_regression_aggregation_routing.py", "test_provenance_and_seal.py", "test_synthetic_e2e.py", "test_voronoi_and_negative.py"]
+  }
+}
