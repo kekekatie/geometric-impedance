@@ -43,6 +43,11 @@ chased ("why can coherent dynamics read it?") has been caught and consolidated.
 
 ---
 
+### Address ablation — perp-variance is largely a physical-spread PROXY (2026-09-03, EXPLORATORY, audited)
+Group ablation found perp variance the strongest-performing M4 subgroup, but GPT/Sol's outcome-blind physical-spread control (variance of degree/density/g(r) over the *same* graph-radius 2/4/8 balls) absorbs most of it — even degree-variance alone. Family-qualified after control: **silver fully absorbed**; **golden** a small perpendicular-specific remainder (+0.0056 perp-var / +0.0081 full-M4); **platinum** a moderate one (+0.0171 / +0.0218); all five folds positive, and null-negative incoherently. Cross-engine replication of Sol's residuals (within ~0.0004). Golden's remainder is ~7× the version drift, so adjudicating it belongs to the sealed ladder, not this run. The earlier "variance is the carrier" headline is withdrawn. → `substrates/RESULTS_ABLATION.md`, `substrates/ablation_run.py`
+
+---
+
 ### (earlier breadcrumb, 2026-08-25 — kept for the record)
 
 Two things just landed, and one shiny scent is pulling us forward.
