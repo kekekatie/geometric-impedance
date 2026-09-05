@@ -1,0 +1,47 @@
+{
+  "grid_n": 9,
+  "w0": 1.0,
+  "alpha": 0.5,
+  "w_max": 6.0,
+  "theta_grow": 4.0,
+  "w_init": 1.0,
+  "grow_budget": 128,
+  "n_history_passes": 3,
+  "probe": [
+    4,
+    4
+  ],
+  "hop_budget": 4,
+  "path_len": 4,
+  "t_sub": 400,
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400
+  ],
+  "base_seed": 20260905,
+  "n_seeds": 200,
+  "models": [
+    "Fixed",
+    "Reinforced",
+    "Growing",
+    "Growing-MatchedControl"
+  ],
+  "pairing": "common random numbers: A and B of a model share RNG seed BASE_SEED+k",
+  "reference_initial": {
+    "M": 0.0,
+    "struct_access": 40,
+    "eff_alt": 255.99999999999994,
+    "edge_count": 144,
+    "total_weight": 144.0,
+    "n_active": 0
+  },
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.1",
+    "scipy": "1.17.1",
+    "networkx": "3.6.1"
+  }
+}

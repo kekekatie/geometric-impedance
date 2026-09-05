@@ -1,0 +1,61 @@
+[PASS] Fixed M~=0 at t=0 (max|M|=0.00e+00)
+[PASS] Fixed edge_count constant at t=0
+[PASS] Fixed total_weight constant at t=0
+[PASS] Fixed struct_access constant at t=0
+[PASS] Fixed eff_alt constant at t=0
+[PASS] Fixed M~=0 at t=100 (max|M|=0.00e+00)
+[PASS] Fixed edge_count constant at t=100
+[PASS] Fixed total_weight constant at t=100
+[PASS] Fixed struct_access constant at t=100
+[PASS] Fixed eff_alt constant at t=100
+[PASS] Fixed M~=0 at t=200 (max|M|=0.00e+00)
+[PASS] Fixed edge_count constant at t=200
+[PASS] Fixed total_weight constant at t=200
+[PASS] Fixed struct_access constant at t=200
+[PASS] Fixed eff_alt constant at t=200
+[PASS] Fixed M~=0 at t=400 (max|M|=0.00e+00)
+[PASS] Fixed edge_count constant at t=400
+[PASS] Fixed total_weight constant at t=400
+[PASS] Fixed struct_access constant at t=400
+[PASS] Fixed eff_alt constant at t=400
+[PASS] Fixed total_weight>=initial at t=0
+[PASS] Fixed n_active<=budget at t=0
+[PASS] Fixed total_weight>=initial at t=100
+[PASS] Fixed n_active<=budget at t=100
+[PASS] Fixed total_weight>=initial at t=200
+[PASS] Fixed n_active<=budget at t=200
+[PASS] Fixed total_weight>=initial at t=400
+[PASS] Fixed n_active<=budget at t=400
+[PASS] Reinforced total_weight>=initial at t=0
+[PASS] Reinforced n_active<=budget at t=0
+[PASS] Reinforced total_weight>=initial at t=100
+[PASS] Reinforced n_active<=budget at t=100
+[PASS] Reinforced total_weight>=initial at t=200
+[PASS] Reinforced n_active<=budget at t=200
+[PASS] Reinforced total_weight>=initial at t=400
+[PASS] Reinforced n_active<=budget at t=400
+[PASS] Growing total_weight>=initial at t=0
+[PASS] Growing n_active<=budget at t=0
+[PASS] Growing total_weight>=initial at t=100
+[PASS] Growing n_active<=budget at t=100
+[PASS] Growing total_weight>=initial at t=200
+[PASS] Growing n_active<=budget at t=200
+[PASS] Growing total_weight>=initial at t=400
+[PASS] Growing n_active<=budget at t=400
+[PASS] Growing-MatchedControl total_weight>=initial at t=0
+[PASS] Growing-MatchedControl n_active<=budget at t=0
+[PASS] Growing-MatchedControl total_weight>=initial at t=100
+[PASS] Growing-MatchedControl n_active<=budget at t=100
+[PASS] Growing-MatchedControl total_weight>=initial at t=200
+[PASS] Growing-MatchedControl n_active<=budget at t=200
+[PASS] Growing-MatchedControl total_weight>=initial at t=400
+[PASS] Growing-MatchedControl n_active<=budget at t=400
+[PASS] Fixed adds no edges at t=0
+[PASS] Fixed adds no edges at t=100
+[PASS] Fixed adds no edges at t=200
+[PASS] Fixed adds no edges at t=400
+[PASS] Reinforced adds no edges at t=0
+[PASS] Reinforced adds no edges at t=100
+[PASS] Reinforced adds no edges at t=200
+[PASS] Reinforced adds no edges at t=400
+[PASS] Growing M_A>M_B for all seeds at t=0 (history built in)
