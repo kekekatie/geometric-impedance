@@ -92,3 +92,32 @@ pattern at t=100–400 to the initial `T_A`/`T_B` masks (how much of the early s
 is literally "the pre-placed diagonals crossed threshold first"). That quantifies how
 long an initial placement advantage survives a neutral background, using the
 snapshots already retained here — before any alignment-axis intervention.
+
+---
+
+## Interpretation correction — 2026-09-07 (numbers above unchanged)
+
+*Added while writing the v9 substrate-comparison design. The estimates above are
+preserved; this tightens four claims.*
+
+1. **"At chance" overstates the primary endpoint.** At t=2000 the reader shows **no
+   clear discrimination** (AUC 0.484 [0.429, 0.537]); the interval is *consistent
+   with chance* but does **not prove exact chance or equivalence**. Read it as
+   "this reader does not distinguish the two worlds at the primary endpoint," not as
+   proof of zero information.
+2. **v8 does not establish that weights alone carry or dominate the causal
+   influence.** v6 found effects of **both** initial weights **and** placement. v8
+   shows only that placement *alone, against this symmetric `W_0` background*, gives
+   no sustained discrimination — it does **not** isolate weights-alone, nor show
+   weights dominate. The phrases above about the footprint "travelling with the
+   weight cue" should be read as *consistent with* v6+v8 together, not as a
+   demonstration that weights are the dominant carrier.
+3. **The early activation-head-start is a hypothesis.** Checkpoint snapshots record
+   states, not **threshold-crossing times**; "pre-placed diagonals crossed threshold
+   first" is a plausible mechanism the snapshots do not directly verify.
+4. **Do not fit a "time when memory disappears."** The suggested next step above of
+   finding "where [the AUC] crosses chance" is **withdrawn**: a noisy AUC curve
+   crossing 0.5 must not be turned into an estimated disappearance time. A sounder
+   next step is to compare the early (t=100–400) per-diagonal high-bit pattern to the
+   initial `T_A`/`T_B` masks (overlap fraction), reported with uncertainty and
+   **without** fitting a crossing time.
