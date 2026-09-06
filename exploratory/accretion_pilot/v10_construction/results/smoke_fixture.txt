@@ -1,0 +1,7 @@
+# TINY SMOKE FIXTURE (not a production run): regular patch #0,
+# impose history A vs B (3 passes), reset walker to S, 60 steps, 2 seeds.
+seed,history,S_high_after_history,S_high_after_60,n_active_after_60
+0,A,0.0,1.0,32
+0,B,0.0,-1.0,24
+1,A,0.0,0.0,38
+1,B,0.0,0.0,38

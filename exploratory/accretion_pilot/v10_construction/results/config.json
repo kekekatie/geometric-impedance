@@ -1,0 +1,44 @@
+{
+  "radius": 6.0,
+  "regular_offsets": [
+    [
+      0.3,
+      0.1,
+      -0.25,
+      -0.25,
+      0.1
+    ],
+    [
+      0.12,
+      0.31,
+      -0.08,
+      -0.2,
+      -0.15
+    ],
+    [
+      -0.05,
+      0.22,
+      0.17,
+      -0.29,
+      -0.05
+    ]
+  ],
+  "perturbed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "perturbed_amp": 0.3,
+  "params": {
+    "w0": 1.0,
+    "alpha": 0.5,
+    "w_max": 6.0,
+    "theta": 4.0,
+    "w_init": 1.0,
+    "reader_thresh": 5.5
+  },
+  "note": "construction & feasibility only; no production dynamics run",
+  "env": {
+    "numpy": "2.4.6"
+  }
+}
