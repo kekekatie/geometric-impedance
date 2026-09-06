@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+results/experiment_log.txt
+results/EXPERIMENT_DONE

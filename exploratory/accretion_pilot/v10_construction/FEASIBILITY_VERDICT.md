@@ -79,3 +79,24 @@ session.**
 
 **Stopped before any production memory trajectory, as instructed.** Awaiting Astra's
 review of this concrete construction + reader before running v11.
+
+---
+
+## Validation correction — 2026-09-07 (v11 review)
+
+*The v10 "no overlaps/gaps verified" claim was **unearned** and is withdrawn.* On
+review, v10's `validate()` labelled its `area_sum` row `True` **unconditionally** —
+it computed the summed face area but never compared it to the boundary-enclosed area,
+and it ran **no** overlap or edge-crossing test. So the geometry checks that v10
+*did* pass (unit sides, rhombus shapes, face areas, incidence, connectedness,
+boundary loops, Euler) stand, but "overlaps/gaps verified" was not among them.
+
+v11 (`../v11_substrate_pilot/substrate_lib.py`) implements the genuine checks:
+boundary-loop tracing with signed-area (net enclosed) compared to the summed face
+area under an explicit tolerance; non-incident **original-edge crossing** test; and a
+**face-centroid-in-exactly-one-face** test — plus **two deliberately invalid fixtures**
+(an overlapping pair and a connected corrupted patch) that these checks **reject**
+(overlap caught by `centroid_in_one_face` and `no_edge_crossings`). All six R=10
+production patches **re-validate** under the repaired checks with **0 degeneracies**
+(the robust searchsorted strip-index construction replaced v10's `eps=1e-4` sampling).
+See `../v11_substrate_pilot/results/gate_report.txt`.
