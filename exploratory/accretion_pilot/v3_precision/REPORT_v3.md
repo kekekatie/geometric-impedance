@@ -133,3 +133,38 @@ topology to lose) was already gone, that would confirm the memory is carried by
 *which connections exist*, and measure how much topological redundancy the trace
 has. That is a genuinely different reader from this run's weight quantiser, and a
 natural single next step.
+
+---
+
+## Interpretation correction — 2026-09-06 (numbers unchanged)
+
+*Added after v4. The numerical record above is preserved exactly; this note
+withdraws three interpretive claims that v4's reader decomposition and a direct
+count of the worlds show to be unsupported. The measurements stand; the mechanism
+story I attached to them does not.*
+
+- **Withdrawn: "the surviving memory is topological" / "carried by which heavy
+  edges exist."** At t=10000, 399 of 400 Growing worlds have **all 128** candidate
+  diagonals active; exactly one world has 126, for **2 missing candidate edges in
+  total** across 400 worlds (verified directly). Topology is therefore essentially
+  *identical* across worlds and across histories A and B at that checkpoint, so it
+  cannot supply the full-reader AUC of ~0.613. The Δ=1 (whole-number) reader is
+  robust because integer-scale **weight** differences persist (an edge read as 5 vs
+  6 still differs), **not** because presence carries the signal. v4 confirms this: a
+  presence-only reader is at chance late, and the discrimination survives when the
+  analysis is restricted to complete-topology worlds (identical topology), so it is
+  carried by **weights**, predominantly the weight *departures from saturation*.
+- **Withdrawn: "sub-quantum."** This wrongly borrowed physics language for what is
+  just a quantiser bin width. Reinforced's late residual is *below the Δ grid
+  resolution*, i.e. sub-bin / sub-precision — there is nothing quantum about it.
+- **Withdrawn: the proposed next step's claim that edge *dropout* "would confirm
+  the memory is carried by which connections exist."** Since topology is essentially
+  complete and identical late, dropout would not test that; v4 (reader
+  decomposition) is the correct next step and supersedes it. Dropout may still be
+  worth running later, but not as a test of a topological carrier.
+
+What survives unchanged: Growing's discrimination is robust to the v3 weight
+quantiser while Reinforced's late residual is not; imperfect measurement sharpens
+the Growing−Reinforced comparison; Growing beats the matched control at every
+resolution. Only the *why* is corrected — the carrier is weights, not topology.
+See [`../v4_decomposition/REPORT_v4.md`](../v4_decomposition/REPORT_v4.md).

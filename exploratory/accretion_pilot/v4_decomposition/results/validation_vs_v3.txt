@@ -1,0 +1,5 @@
+# v4 reproduction of v3 full reader (M at Delta=0 and Delta=1)
+# coverage: 12800 (model,hist,seed,checkpoint) values
+# max|dM| Delta=0 = 5.000e-08 (tol 1e-6); Delta=1 = 0.000e+00 (tol 1e-9, exact integer); status = PASS
+# measurement reads copies of weights; dynamics/movement/growth/RNG are v2's, unchanged.
+# overall: PASS

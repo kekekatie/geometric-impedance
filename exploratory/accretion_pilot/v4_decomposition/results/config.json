@@ -1,0 +1,31 @@
+{
+  "deltas": [
+    0,
+    1
+  ],
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "n_steps": 10000,
+  "models": [
+    "Fixed",
+    "Reinforced",
+    "Growing",
+    "Growing-MatchedControl"
+  ],
+  "readers": "P, B_D (original), D_D (added), M_D=B_D+D_D (full), R_D=sum s(qw-6); identities M=B+D and M=6P+R asserted",
+  "identity_check": "PASS",
+  "v2_commit_dynamics": "cab9254b9d7713a65c314ca81f45c2d378ab60ba",
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}
