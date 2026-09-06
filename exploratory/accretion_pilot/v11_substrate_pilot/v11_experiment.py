@@ -74,7 +74,7 @@ def evolve_null(sub, S, coeffs, seed):
     rec = {}
 
     def snap_null():
-        base = [w.n_active, w.frac_active(), w.headroom(), w.total_weight(),
+        base = [w.n_activations, w.frac_active(), w.headroom(), w.total_weight(),
                 w.structural_access(S), w.effective_alternatives(S),
                 (w.boundary_visits / w.total_steps if w.total_steps else 0.0)]
         highs = [w.s_high(c) for c in coeffs]
