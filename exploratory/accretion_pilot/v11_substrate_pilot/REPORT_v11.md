@@ -90,3 +90,48 @@ across *those* order classes — rather than Penrose vs a mild perturbation of P
 — is the test that would actually answer whether the *class* of spatial order
 matters. Pair it, eventually, with a **local (walker-accessible) reader** to address
 whether any such memory is usable rather than merely present.
+
+---
+
+## Clarifications — 2026-09-07 (v12 review; numbers above unchanged)
+
+1. **The similar arm performance is a *descriptive* result, not a test.** Comparing
+   the between-arm mean difference against the across-patch SD, or noting overlapping
+   bands, is **not** a formal hypothesis test and **not** an equivalence
+   demonstration. The honest statement is: on these six patches, the observed regular
+   and perturbed memory curves are close and we did not find a difference; we make no
+   claim that they are equal.
+2. **This is regular vs *perturbed* pentagrid — not established distinct order
+   classes.** The perturbed arm is not shown to be periodic or disordered, so the
+   comparison does not span order classes.
+3. **The random-label no-history null is a sanity check, not a proof.** It sitting at
+   chance is consistent with the reader not manufacturing signal from static
+   structure, but it does **not** prove all reader/substrate artefacts are absent.
+4. **Actual null protocol (as implemented).** One no-history Growing trajectory per
+   (seed, patch), **reused across all three of that patch's pair-readers**, with A/B
+   labels assigned **in analysis** by a random coin (independent of dynamics). This
+   differs from the originally proposed **two-run** protocol (two independent
+   no-history runs per seed, forming a within-seed A/B pair): the implemented version
+   is an *unpaired random-label* null and its three per-patch pair-nulls are
+   correlated (shared trajectory). Both are expected to sit at chance; the implemented
+   one is cheaper and is what the numbers above use.
+
+### Conditional matched-offset contrasts at t=2000 (existing data; `../v12_local_reader_design/`)
+
+Per matched offset i (regular#i vs perturbed#i share a base offset); patch memory =
+AUC averaged over 3 pairs; contrast = perturbed − regular. Interval = bootstrap over
+the 200 seed indices applied **identically to every cell** (preserving common-random-
+number dependence across cells and arms), with the **six patches held fixed** — so it
+is *simulation uncertainty conditional on these patches*, not generalisation beyond
+three patch pairs.
+
+| offset | regular AUC | perturbed AUC | contrast (pert−reg) [95% seed-bootstrap] |
+|---|---|---|---|
+| 0 | 0.616 | 0.593 | **−0.022 [−0.069, +0.025]** |
+| 1 | 0.595 | 0.631 | **+0.036 [−0.010, +0.080]** |
+| 2 | 0.638 | 0.647 | **+0.008 [−0.035, +0.053]** |
+| **mean** | — | — | **+0.007 [−0.018, +0.032]** |
+
+Every interval includes 0 and the sign is inconsistent across offsets; conditional on
+these six patches there is no matched-offset difference. This does not generalise to
+other patches (only three pairs) and is not an equivalence claim.
