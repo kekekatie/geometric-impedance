@@ -1,0 +1,26 @@
+{
+  "conditions": {
+    "W0_TA": "W_0 + TA",
+    "W0_TB": "W_0 + TB"
+  },
+  "neutral_background": "W_0(e) = (W_A(e)+W_B(e))/2 (transpose-invariant)",
+  "reader": "S_high = sum s(e) 1[w>=5.5] over added diagonals (frozen v5)",
+  "primary_endpoint": 2000,
+  "orientation": "T_A positive; fixed in advance",
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "construction_checks": "PASS",
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}

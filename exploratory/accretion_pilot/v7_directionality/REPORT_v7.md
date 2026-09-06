@@ -92,3 +92,27 @@ signed *per-diagonal* high-bit pattern between the paired A- and B-worlds within
 each alignment class). That would measure "how reproducibly does the footprint point
 the same way" as its own quantity, separate from magnitude, on the snapshots already
 retained — before any alignment-axis intervention on new worlds.
+
+---
+
+## Wording clarification — 2026-09-07 (numbers above unchanged)
+
+*Added while running v8. The tables and estimates above are preserved; this
+tightens two categorical phrasings into estimates-with-uncertainty.*
+
+1. **"Scrambles direction, not magnitude" / "does not meaningfully shrink per-world
+   magnitude" is too categorical.** The aligned−crossed unsigned `|S|` difference is
+   **positive and its CI excludes 0 early** (t=400: +0.59 [0.12, 1.07]); at the
+   t=2000 peak it is +0.85 **[−0.32, 1.96]** — an interval that includes both 0 and
+   sizeable positive values, so it **does not establish equivalence** of aligned and
+   crossed magnitudes. The accurate statement: the magnitude difference is **small
+   relative to the direction-consistency difference**, positive and resolved early,
+   and **unresolved (consistent with anything from ~0 to ~2) at the peak** — whereas
+   the sign-consistency gap is large and clear (aligned ~66–69% vs crossed ~52–56%).
+2. **The symmetry checks are consistent with, not proof of, the analytical
+   symmetry.** The residuals `μ_AA+μ_BB` and `μ_AB+μ_BA` have bootstrap CIs that
+   **include 0**, which is *consistent with* the exact identities `μ_AA=−μ_BB`,
+   `μ_AB=−μ_BA` (which hold analytically because the marginal transition law is
+   order-independent and transpose-symmetric). A CI containing zero does **not**
+   prove equality; the analytical argument is what establishes it, and the data are
+   consistent with it.

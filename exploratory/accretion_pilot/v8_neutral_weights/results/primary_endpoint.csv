@@ -1,0 +1,7 @@
+quantity,checkpoint,point,ci_lo,ci_hi,note
+auc_TA_vs_TB,400,0.5706,0.5169,0.6213,descriptive(TA positive)
+mean_signed_sep_TA_minus_TB,400,1.3300,0.2600,2.3951,descriptive
+auc_TA_vs_TB,2000,0.4838,0.4291,0.5375,PRIMARY(TA positive)
+mean_signed_sep_TA_minus_TB,2000,-0.5550,-2.9551,1.8850,PRIMARY
+auc_TA_vs_TB,10000,0.5236,0.4716,0.5739,descriptive(TA positive)
+mean_signed_sep_TA_minus_TB,10000,0.1000,-0.0900,0.2900,descriptive

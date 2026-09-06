@@ -1,0 +1,11 @@
+# v8 construction invariant checks
+[PASS] W_0 invariant under transpose (no A/B directional bias)
+[PASS] T_B == sigma(T_A) (transpose partners)
+[PASS] |T_A| == |T_B|
+[PASS] matching initial edge count
+[PASS] matching initial total weight
+[PASS] zero initial high bits (both worlds)
+[PASS] W_0+T_B == sigma(W_0+T_A) full state
+[PASS] total original weight preserved vs v6 (sum W_0 == sum W_A)
+# NOTE: multiset(W_0) != multiset(W_A): True (averaging changes the weight multiset and local growth triggers)
+# edge_count=174, total_weight=244.0000, |T_A|=|T_B|=30, sumW_0=214.0000
