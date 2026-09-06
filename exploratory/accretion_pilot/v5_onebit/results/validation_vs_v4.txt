@@ -1,0 +1,3 @@
+# v5 reproduction of v4 added-edge readers (D0, D1) AUC from snapshots
+# compared 64 AUC values; max|dAUC| = 5.00e-05; tol 5e-4 (v4 stored 4 dp); status = PASS
+# overall: PASS

@@ -140,3 +140,34 @@ reader on the added edges alone reproduces the late AUC, the late memory is
 literally "which shortcuts finished saturating first", a maximally simple and
 testable statement. That is a reader-only follow-up on the snapshots already
 retained here — no new worlds, no dynamics change.
+
+---
+
+## Documentation corrections — 2026-09-06 (numbers above unchanged)
+
+*Added while running v5. The tables and AUC values above are preserved exactly;
+these fix wording/arithmetic slips flagged in review.*
+
+1. **Diagonal count at t=400.** The text says "only ~50 of 128 diagonals are
+   active" at t=400. The correct figure is **74.73 active on average** (v2
+   `summary_opportunity_capacity.csv`, Growing, cp=400, `n_active_mean`). The
+   qualitative point (topology still differs between A and B at t=400, so presence
+   carries signal) stands; the number was wrong.
+2. **`D` is not generally equal to `R`.** A couple of phrasings above read as if the
+   added-edge reader `D` equals the departure reader `R`. They are different
+   objects (`D` sums over added diagonals only; `R = Σ s(e)(q(w)−6)` over *all*
+   present edges). The exact identities are **`M = B + D`** and **`M = 6P + R`**.
+   Their AUCs happen to be numerically close late (D1 0.616, R1 0.613) and `M` and
+   `R` share a ranking on complete topology (because `M = 6P + R` with `P`
+   constant, so `M`-AUC = `R`-AUC there — that specific equality is correct), but
+   `D ≠ R` in general.
+3. **"Exact Δ=0 is within ~0.01 of Δ=1" is not uniform.** Use the actual table
+   values rather than that blanket statement; the two readers differ by more than
+   0.01 at several checkpoints.
+4. **The proposed "exact-cap" next step is superseded.** "Which shortcuts finished
+   saturating first" / "exactly at 6" wrongly treats float equality with 6 as a
+   completion event. Under the rule `6 − wₙ = 5/2ⁿ`, an added edge only *rounds* to
+   6 (reaches `w ≥ 5.5`) after **four or more traversals**; it never exactly equals
+   6 in finite time except by float rounding. v5 uses the corrected one-bit reader
+   `b(e) = 1 if w ≥ 5.5` ("four-or-more traversals" / "rounds to 6"), not exact
+   `w == 6`. See [`../v5_onebit/REPORT_v5.md`](../v5_onebit/REPORT_v5.md).
