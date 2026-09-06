@@ -1,0 +1,4 @@
+# v3 exact-reader (Delta=0) reproduction of v2 M, per seed
+# compared 12800 exact-M values; max_abs_diff = 5.000e-07; tolerance 1e-4 (v2 CSV rounding); status = PASS
+# measurement reads copies of weights only; dynamics, movement, growth and RNG streams are v2's, unchanged.
+# overall: PASS
