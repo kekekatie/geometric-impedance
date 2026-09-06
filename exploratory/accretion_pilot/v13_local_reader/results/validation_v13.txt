@@ -1,0 +1,6 @@
+# v13 replay validation vs v11 t=2000 scalars
+# replay scalar max|d| = 4.998e-06 over 12600 values (tol 1e-4) -> PASS
+# fixture full-obs==global: PASS
+# round-trip frozen==world S_high: PASS
+# runtime_min = 5.0
+# ALL GATES: PASS
