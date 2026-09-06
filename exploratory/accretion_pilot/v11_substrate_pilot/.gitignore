@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 results/experiment_log.txt
 results/EXPERIMENT_DONE
+results/raw_main.csv
+results/raw_null.csv
+results/subsample_snapshots.npz
