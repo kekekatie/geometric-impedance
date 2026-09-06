@@ -1,0 +1,28 @@
+{
+  "worlds": {
+    "AA": "W_A+T_A (intact A)",
+    "AB": "W_A+T_B (crossed)",
+    "BA": "W_B+T_A (crossed)",
+    "BB": "W_B+T_B (intact B)"
+  },
+  "primary_reader": "S_high = sum s(e) 1[w>=5.5] over added diagonals (v5, A-positive, frozen)",
+  "intervention": "initial conditions only; movement/reinforcement/growth rules unchanged from v2",
+  "construction_order": "intact = history-activation order; crossed = base then diagonals in sorted edge-key order",
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "construction_checks": "PASS",
+  "reproduction_vs_v4": "PASS",
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}

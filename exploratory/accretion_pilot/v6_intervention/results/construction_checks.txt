@@ -1,0 +1,10 @@
+# v6 construction invariant checks
+[PASS] history A: all activated diagonals weight 1
+[PASS] history B: all activated diagonals weight 1
+[PASS] |T_A| == |T_B|
+[PASS] multiset(W_A) == multiset(W_B)
+[PASS] all four identical initial edge count
+[PASS] all four identical initial total weight
+[PASS] all four identical original-edge weight multiset
+[PASS] all four initial S_high (four-traversal bits) == 0
+# edge_count=174, total_weight=244.0000, |T_A|=30, |T_B|=30
