@@ -1,0 +1,5 @@
+# Per-seed exact reproduction of v1 (Fixed/Reinforced/Growing)
+# compared 28800 per-seed values across shared checkpoints [0, 100, 200, 400]
+# max_abs_diff = 5.000e-07   tolerance = 1e-6   status = PASS
+# NOTE: Growing-MatchedControl intentionally differs from v1 (timing fix); v1 control retained in ../results/.
+# overall_reproduction: PASS

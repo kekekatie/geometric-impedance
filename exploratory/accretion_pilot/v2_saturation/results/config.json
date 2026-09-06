@@ -1,0 +1,51 @@
+{
+  "grid_n": 9,
+  "alpha": 0.5,
+  "w_max": 6.0,
+  "theta_grow": 4.0,
+  "w_init": 1.0,
+  "n_history_passes": 3,
+  "probe": [
+    4,
+    4
+  ],
+  "hop_budget": 4,
+  "path_len": 4,
+  "t_sub": 10000,
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "base_seed": 20260905,
+  "n_seeds": 200,
+  "models": [
+    "Fixed",
+    "Reinforced",
+    "Growing",
+    "Growing-MatchedControl"
+  ],
+  "control": "activation-time-and-count matched (event-by-event incl. history)",
+  "pairing": "common random numbers; bootstrap resamples whole A/B seed pairs",
+  "reference_initial": {
+    "M": 0.0,
+    "M_norm": 0.0,
+    "struct_access": 40,
+    "eff_alt": 255.99999999999994,
+    "edge_count": 144,
+    "total_weight": 144.0,
+    "n_active": 0,
+    "frac_inactive": 1.0,
+    "headroom": 5.0,
+    "frac_saturated": 0.0
+  },
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}
