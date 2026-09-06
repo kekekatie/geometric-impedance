@@ -54,7 +54,7 @@ def boot_auc(a, b, n=2000, seed=7):
 def load_main():
     # S[(arm,i,pair,cp,hist)][seed] = S_high ; also opportunity accum
     S = defaultdict(dict)
-    opp = defaultdict(lambda: defaultdict(list))     # (arm,cp,metric)->list
+    opp = defaultdict(list)     # (arm,cp,metric)->list
     with open(os.path.join(RES, "raw_main.csv")) as f:
         for r in csv.DictReader(f):
             key = (r["arm"], int(r["patch"]), int(r["pair"]), int(r["checkpoint"]),
