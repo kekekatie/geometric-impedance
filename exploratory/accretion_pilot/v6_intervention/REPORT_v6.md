@@ -99,3 +99,42 @@ how the mid-run footprint magnitude falls with misalignment. That would test whe
 "aligned reinforcement-and-placement" is the operative ingredient, using the same
 unchanged dynamics and one constructed family (an alignment axis, not a parameter
 sweep of the rules).
+
+---
+
+## Interpretation correction — 2026-09-07 (numbers above unchanged)
+
+*Added after v7's snapshot-only reanalysis of these same worlds. The tables above
+are preserved exactly; these fix interpretive/statistical claims. v7 verifies each
+point from the retained snapshots — see
+[`../v7_directionality/REPORT_v7.md`](../v7_directionality/REPORT_v7.md).*
+
+1. **Withdrawn: "neither alone suffices."** The crossed worlds `W_A+T_B` and
+   `W_B+T_A` contain **both** ingredients, in opposition — they are not "either
+   ingredient alone." This 2×2 never isolated an ingredient by itself, so it cannot
+   speak to sufficiency in isolation.
+2. **Near-zero mean `S_high` does not mean small per-world footprints.** The crossed
+   worlds' per-world `|S_high|` is large (mean ≈11, sd ≈13–14 at t=2000) — comparable
+   to the intact worlds. v7 shows crossing mainly reduces the **consistency of the
+   footprint's direction across seeds** (aligned ~66–69% sign-consistent; crossed
+   ~52–56%, near a coin-flip), **not** the per-world magnitude, and not the number of
+   high-bit diagonals (~70–72 for all four). So "both crossed worlds stay near zero"
+   describes the *mean*, and misleads if read as "no footprint".
+3. **Withdrawn: the sub-additive interaction reading.** Under transpose symmetry with
+   the signed reader, `μ_AA = −μ_BB` and `μ_AB = −μ_BA`, so the signed-mean
+   interaction `μ_AA − μ_BA − μ_AB + μ_BB` is **zero by construction**. v6's
+   finite-sample −2.26 is noise (v7: the residuals `μ_AA+μ_BB` and `μ_AB+μ_BA` have
+   bootstrap CIs including 0 at every checkpoint). It does not establish
+   sub-additivity. The *marginal* transition law is order-independent and symmetric;
+   neighbour ordering affects only common-random-number coupling, not the marginal
+   means.
+4. **"Saturation artifact" softened.** The late collapse `S_high → P_D → 0` is a
+   **consequence of the model and this measurement** (near-complete symmetric
+   saturation), not necessarily an implementation artifact.
+
+The robust v6 observation that survives: the *directional* footprint is
+reproducible (consistent A-vs-B across seeds) only when the inherited original-edge
+weights and diagonal placement are **aligned**; crossing them preserves the
+per-world imbalance but randomises its direction. Whether this reflects a genuine
+alignment mechanism is exactly what a future alignment-axis intervention (not yet
+run) would test.
