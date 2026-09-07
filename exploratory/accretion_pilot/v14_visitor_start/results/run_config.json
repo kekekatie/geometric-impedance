@@ -1,0 +1,13 @@
+{
+  "nseed": 50,
+  "replicates": 5,
+  "budgets": [
+    100,
+    300,
+    1000
+  ],
+  "primary": 300,
+  "min_boundary": 2,
+  "ineligible": [],
+  "runtime_min": 13.5
+}

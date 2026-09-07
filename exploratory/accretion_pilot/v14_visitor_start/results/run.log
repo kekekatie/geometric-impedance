@@ -1,0 +1,15 @@
+frozen distant starts: 18 cells, 0 ineligible; geo_ok=True dev=0.00e+00
+  done regular#0  elapsed 2.4 min
+  done regular#1  elapsed 4.6 min
+  done regular#2  elapsed 6.8 min
+  done perturbed#0  elapsed 9.0 min
+  done perturbed#1  elapsed 11.3 min
+  done perturbed#2  elapsed 13.5 min
+# v14 validation
+# geometry reconstruction == snapshot: PASS (max coord dev 0.00e+00; coeff alignment checked)
+# original-S visitor reproduces v13 scores: PASS (max|d|=0.00e+00 over 27000 values)
+# frozen-state immutability (round-trip global): PASS
+# ineligible cells (no distant start): 0 []
+# runtime_min = 13.5
+# ALL GATES: PASS
+V14 RUN DONE in 13.5 min
