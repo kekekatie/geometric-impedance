@@ -136,3 +136,28 @@ cd exploratory/accretion_pilot/v13_local_reader
 python3 v13_run.py       # ~5 min: replay + snapshots + gates + visitor (background if timing out)
 python3 v13_analyze.py   # ~seconds: reads results/*.csv, writes tables + figure
 ```
+
+---
+
+## Dated clarification — 2026-09-07 (added during v14; all v13 results preserved)
+
+Four interpretation guards, at Astra's request, to keep the v13 headline from being
+over-read. None of them change any number above; they narrow the claims:
+
+- **Near-global AUC is not recovery of the entire information content, nor formal
+  equivalence.** `local − global @ B=300 ≈ 0` says the bounded tagged reader recovers as
+  much *of this one scalar score's* discriminative power as the global reader — not that
+  it recovers all history-distinguishing information the world holds, and not that local
+  and global readers are formally equivalent.
+- **Early success from S does not establish spatial redundancy or localisation near S.**
+  That AUC is already ~0.63 at B=100 shows the signal is *reachable* under a short
+  budget from S; it does not show the information is stored redundantly, nor that it is
+  concentrated near S. The v14 visitor-start intervention is the actual test of
+  spatial/location dependence.
+- **Overlapping arm intervals are not a between-arm test.** Regular and perturbed CIs
+  overlap, but overlapping marginal intervals are not a direct paired contrast; v11's
+  matched-offset contrast (mean +0.007 [−0.018, +0.032]) is the closest we have, and it
+  too is descriptive of these six patches, not a generalisation.
+- **"100 steps" is an encounter budget, not a physical or energetic cost.** Budgets
+  index how many read-only rounded-weight moves the visitor is allowed; they are not a
+  demonstrated travel time, energy, or thermodynamic cost of access.
