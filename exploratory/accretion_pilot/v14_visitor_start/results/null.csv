@@ -1,0 +1,13 @@
+arm,start,budget,null_auc_mean
+regular,orig,100,0.4943
+regular,orig,300,0.5065
+regular,orig,1000,0.5069
+regular,distant,100,0.5122
+regular,distant,300,0.5170
+regular,distant,1000,0.5116
+perturbed,orig,100,0.4500
+perturbed,orig,300,0.4796
+perturbed,orig,1000,0.4910
+perturbed,distant,100,0.5365
+perturbed,distant,300,0.5162
+perturbed,distant,1000,0.4979
