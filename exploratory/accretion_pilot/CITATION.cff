@@ -1,0 +1,38 @@
+# Citation metadata for the accretion pilot (Citation File Format 1.2.0).
+# https://citation-file-format.github.io/
+# --- EDIT THE <FILL IN> FIELDS BEFORE DEPOSITING ---
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The accretion pilot: memory, growth, and latent relevance in small evolving graphs"
+abstract: >-
+  A self-contained, bounded computational exploration of whether local structural change
+  in small graphs can carry the memory of an imposed history while also opening new
+  possibilities, whether such memory is locally accessible, and whether a later local
+  change can make a dormant trace causally relevant again. Speculative exploratory
+  register; every result is gated, with limitations and dated corrections kept in place.
+  Two threads: (A) a use-reinforced, growth-capable substrate with a walker (v1-v14);
+  (B) a walker-free self-rewriting graph grammar (endogenous growth).
+type: dataset            # a mixed code + data + write-up snapshot; adjust to "software" if preferred
+version: "2026.09.08"    # date-based snapshot version; bump on each deposit
+date-released: "2026-09-08"
+license: "<FILL IN>"     # e.g. CC-BY-4.0 for the docs/data, or a dual license; author's choice
+repository-code: "https://github.com/kekekatie/geometric-impedance"
+url: "https://github.com/kekekatie/geometric-impedance/tree/main/exploratory/accretion_pilot"
+keywords:
+  - evolving graphs
+  - graph rewriting
+  - memory and history dependence
+  - confluence
+  - Penrose / pentagrid substrates
+  - exploratory computational modelling
+authors:
+  - given-names: "<FILL IN given name>"
+    family-names: "<FILL IN family name>"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # optional; uncomment + fill if you have one
+    # affiliation: "<optional>"
+# --- Collaboration note (represent as you see fit; this is the author's decision) ---
+# This work was human-led (the author above), co-designed with a GPT collaborator
+# referred to as "Astra", and implemented with Claude (Anthropic). If you wish to
+# credit the AI collaborators, the CFF convention is to keep the human author(s) in
+# `authors` and describe AI assistance in prose (this note, the README, or the paper's
+# acknowledgements) rather than as citable authors.
