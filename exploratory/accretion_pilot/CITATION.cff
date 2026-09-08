@@ -26,13 +26,17 @@ keywords:
   - Penrose / pentagrid substrates
   - exploratory computational modelling
 authors:
-  - given-names: "<FILL IN given name>"
-    family-names: "<FILL IN family name>"
+  # Author's chosen credit line: "K. T. Niedzwiecki, GPT-6 Astra, Claude Opus 4.8".
+  # CFF lists people; the human author is the citable author. The AI collaborators are
+  # named in prose below and in OVERVIEW.md — move them into `authors` only if you
+  # deliberately want them cited as authors (uncommon for venues; entirely your call).
+  - given-names: "K. T."
+    family-names: "Niedzwiecki"
     # orcid: "https://orcid.org/0000-0000-0000-0000"   # optional; uncomment + fill if you have one
     # affiliation: "<optional>"
-# --- Collaboration note (represent as you see fit; this is the author's decision) ---
-# This work was human-led (the author above), co-designed with a GPT collaborator
-# referred to as "Astra", and implemented with Claude (Anthropic). If you wish to
-# credit the AI collaborators, the CFF convention is to keep the human author(s) in
-# `authors` and describe AI assistance in prose (this note, the README, or the paper's
-# acknowledgements) rather than as citable authors.
+# --- Collaboration note ---
+# Human-led by K. T. Niedzwiecki, co-designed with a GPT-6 collaborator ("Astra"),
+# and implemented with Claude Opus 4.8 (Anthropic). The author's preferred credit line
+# is: "K. T. Niedzwiecki, GPT-6 Astra, Claude Opus 4.8". If you want the AI
+# collaborators to appear as citable authors rather than in this acknowledgement, add
+# them as entries under `authors` above.

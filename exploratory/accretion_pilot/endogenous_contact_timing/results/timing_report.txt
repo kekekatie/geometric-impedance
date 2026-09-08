@@ -1,0 +1,32 @@
+============================================================================
+[A] MONOTONICITY  C_q(G') ⊆ C_q(G)  on all enumerated transitions (<=3 events)
+  [PASS] C_q(G')⊆C_q(G) for every (transition, pre-existing quiet q): 2458 checks over 924 transitions
+============================================================================
+[B] EXACT TIMING (next 3 events; uniform BUD∪CONTACT; initial archive tracked)
+  state 0: initial quiet vertices [1, 4]; initial menus {1: [(0, 2)], 4: []} (1 opportunity/ies)
+  state 1: initial quiet vertices [1, 3]; initial menus {1: [(0, 2), (2, 4)], 3: []} (2 opportunity/ies)
+  state  horizon   P(consulted)      P(waiting)        P(gone)          sum
+      0     1       1/5              2/5              2/5             1
+      0     2       7/25             4/25             14/25           1
+      0     3       39/125           8/125            78/125          1
+  
+      1     1       1/3              1/2              1/6             1
+      1     2       41/90            13/60            59/180          1
+      1     3       1357/2700        161/1800         2203/5400       1
+  
+  [PASS] the three categories partition probability 1 at every horizon
+  [PASS] P(consulted) is non-decreasing in the horizon
+============================================================================
+[C] REMOVAL MODES of an initial opportunity (endpoint-quieting vs edge-added)
+  (structural: BUD never adds an edge between two pre-existing actives, so an
+   opportunity's a-b edge can be added only by a CONTACT; endpoint quieting is
+   only by BUD. A CONTACT via a DIFFERENT mediator removes it without selecting
+   the original mediator.)
+  mode 'quiet': state 0, opportunity (0, 2) removed -- endpoint quieted; path [('B', (0, 5), ''), ('B', (0, 6), ''), ('B', (7, 0), '')]
+  mode 'edge_other': not observed within 3 events (reported as-is)
+  [PASS] at least one removal-without-consultation mode is exhibited (or reported absent)
+============================================================================
+[D] relabelling invariance of the timing partition
+  [PASS] timing partition unchanged under nontrivial vertex relabelling (identities used only for tracking, not selection)
+============================================================================
+ALL EXACT CHECKS PASSED.
