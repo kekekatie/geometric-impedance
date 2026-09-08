@@ -1,0 +1,40 @@
+==============================================================================
+[C1] rational distributions, not raw multiplicity dicts
+  multiplicities {0: 2, 1: 2} (tot 4) vs {0: 3, 1: 3} (tot 6);  probs {0:1/2, 1:1/2} vs {0:1/2, 1:1/2}
+  [PASS] proportional multiplicities give EQUAL distributions (compare probabilities, not multiplicity dicts)
+==============================================================================
+[events] CONTACT semantics
+  [PASS] distinct quiet mediators are DISTINCT CONTACT events for the same edge (mult 2)
+  [PASS] the two events differ only by mediator q (pair unordered, not duplicated by swap)
+  [PASS] once a-b present, CONTACT on {a,b} is ineligible (C2)
+==============================================================================
+[pair] reachable matched pair: iso active projection, different archive
+  [PASS] pair (classes 0,1): iso active proj, archives (3, 3) vs (2, 3)
+==============================================================================
+[C3] CONTACT preserves Q labels and Q-incident edges EXACTLY (identity map)
+  [PASS] Q labels + Q-incident edge SET identical before/after each CONTACT (exact, identity correspondence -- not merely isomorphic)
+  [PASS] each CONTACT adds exactly ONE actual new A-A edge, no vertices, no label change (C2/C5: archive unchanged; its relations re-expressed as active edges)
+==============================================================================
+[invariants] legal events + graph invariants over reachable-in-2 (extended)
+  [PASS] every reachable state (<=2 extended events) is a simple, connected, A/Q-labelled graph
+==============================================================================
+[experiment] projected active successor distributions: BUD-only vs extended
+  rule       state  step  distribution over projected active successor classes
+    BUD-only    0   1    {0:1}
+    BUD-only    0   2    {0:1}
+    BUD-only    1   1    {0:1}
+    BUD-only    1   2    {0:1}
+  
+    extended    0   1    {0:4/5, 1:1/5}
+    extended    0   2    {0:59/75, 1:11/75, 2:1/15}
+    extended    1   1    {0:2/3, 1:1/3}
+    extended    1   2    {0:403/630, 1:137/630, 2:2/21, 3:1/21}
+  
+  [PASS] BUD-only (coupling off): identical distributions at 1 and 2 events (archive inert -- the genuine matched control)
+  extended rule set: distributions differ at 1 event = True; at 2 events = True
+  [PASS] EXTENDED rule set: archive-dependent active evolution (the two archives now yield different projected successor distributions)
+==============================================================================
+[relabel] invariance under nontrivial vertex relabelling
+  [PASS] extended distributions unchanged under nontrivial relabelling
+==============================================================================
+ALL EXACT CHECKS PASSED.

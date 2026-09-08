@@ -133,3 +133,37 @@ demonstration for review.
 python3 active_latent_checks.py   # exact; exit 0 iff all checks pass
 python3 make_figure.py            # writes the diagram
 ```
+
+---
+
+## Dated clarification — 2026-09-09 (corrections; original results above preserved)
+
+*Astra reviewed this folder's checks. The numbers above stand, but several checks and
+phrasings are corrected, and the mechanism is re-cast as a local autonomous event. Full
+corrected checks live in [`../endogenous_local_contact/`](../endogenous_local_contact/LOCAL_CONTACT.md)
+(exact, exit 0).*
+
+1. **Compare distributions, not multiplicity dicts.** This folder's `dists_equal` compared
+   raw multiplicity dictionaries. That is correct **only** when the event totals match (as
+   they did for this pair). The right object is the exact **rational probability
+   distribution**; proportional multiplicities (e.g. `{0:2,1:2}` and `{0:3,1:3}`) are the
+   same distribution. Corrected in the new folder.
+2. **CONTACT's "promoted" edges included already-present bonds.** e.g. state 0's report
+   listed `(0,5)` although `0–5` was already an active bond. The **actual new edge** was
+   `0–2` only. Additions now exclude already-present A–A edges.
+3. **Archive preservation is asserted exactly.** The new checks assert the `Q` labels and
+   the **set of Q-incident edges** are identical before/after CONTACT under the **identity
+   vertex correspondence** (not merely isomorphic).
+4. **The leaf-adding "coupling disabled" control was mislabelled.** It is an **archive-blind
+   alternative intervention**, not a matched coupling-off ablation. The genuine coupling-off
+   is simply **BUD-only M1**.
+5. **Wording.** The archive is **unchanged**; what changes is that *information about its
+   relationships* is **re-expressed as new active edges**. The trace is consulted, not
+   rewritten.
+6. **Local vs global.** This folder's CONTACT was an **externally-timed global sweep**. The
+   new folder replaces it with a **local CONTACT event that competes in the scheduler**
+   (uniform over `{BUD} ∪ {CONTACT}`) — no sweep, no external clock — and still finds the
+   archive-dependent difference (exact rationals, at 1 and 2 events).
+7. **Scope honesty.** The trace is latent under the *original BUD dynamics* but, in the
+   extended model, **already eligible** wherever CONTACT's motif exists — this is **not** yet
+   a trace that stays ineligible for a long time and reactivates later.
