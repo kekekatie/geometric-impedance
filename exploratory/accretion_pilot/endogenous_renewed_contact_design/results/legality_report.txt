@@ -1,0 +1,19 @@
+==========================================================================
+[fixture] GRAFT legality: empty CONTACT menu -> nonempty, archive append-only
+  state: nodes {'x': 'A', 'q': 'Q', 'z': 'A', 'w': 'A'}
+  edges [('q', 'x'), ('q', 'z'), ('w', 'x'), ('z', 'x')]
+  C_q(before) = []  (active nbrs of q: ['x', 'z']; x-z present so pair edged)
+  [PASS] q has an EMPTY CONTACT menu before GRAFT
+  GRAFT-eligible events: [('G', 'q', 'x', 'w')]
+  [PASS] GRAFT(q,x,w) is eligible via the bounded wedge w-x-q (radius 2, local)
+  [PASS] every eligible GRAFT targets a real absent q-w with an active bridge
+  C_q(after)  = [('w', 'z')]  (q now also neighbours w; z-w absent)
+  [PASS] after GRAFT, C_q is NONEMPTY: {z,w} is a NEW opportunity (menu monotonicity broken)
+  [PASS] the new menu strictly contains the old: an opportunity was ADDED, not consulted
+  [PASS] record preserved (labels): q still Q; no label overwritten
+  [PASS] record preserved (edges): every prior edge still present; none deleted
+  [PASS] no vertex created (GRAFT only adds one edge incident to the quiet trace)
+  [PASS] exactly one edge added, and it is incident to the quiet vertex q (archive AUGMENTED, not 'unchanged' -- claim relaxed honestly)
+  [PASS] the new opportunity was NOT already present -> this is newly-enabled relevance, not delayed consultation of an already-eligible trace
+==========================================================================
+LEGALITY OK: GRAFT is local, append-only, and turns an empty menu nonempty.
