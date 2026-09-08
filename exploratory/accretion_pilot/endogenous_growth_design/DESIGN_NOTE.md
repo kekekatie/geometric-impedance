@@ -297,3 +297,44 @@ while also delivering possibility-change (2) and extension (3) — and its invar
 the "record vs log" distinction airtight, because every additive tally is fixed by the
 event count and cannot smuggle in memory. We **stop here** for Astra to review whether this
 model tests the intended question before any production run.
+
+---
+
+## Dated correction — 2026-09-08 (audit; original text above preserved)
+
+*Astra reviewed this proposal and the feasibility code. M1 is retained as a candidate, but
+several claims above are corrected or withdrawn. Full proofs, counterexamples, and exact
+enumeration (with assertions and a nonzero failure exit) are in
+[`../endogenous_growth_audit/`](../endogenous_growth_audit/AUDIT.md). The numbers/tables
+above are left in place as the original record; read them through these corrections:*
+
+1. **Frontier arithmetic.** The correct law is `ΔB = k − d_A(y)` (active bonds; `d_A(y)` =
+   depositor's active degree before the event). For k≥1 every successor has `B ≥ k`, so
+   **sequential rewriting never deadlocks**. At **k=1**, `B` is nonincreasing but **never
+   reaches 0**, and `|V|` grows every event — so **"stalls via stranding" and the extinction
+   question are WITHDRAWN.** For **k≥2**, a star schedule keeps `B = k` while size, active
+   vertices, and active components grow: **"more active vertices" ≠ "more active bonds."**
+2. **k=0 invariants.** `ΔE = 0` at k=0 (not `k+1`); invariants are stated separately for
+   k=0 and k≥1 in the audit.
+3. **Confluence.** One-step non-joinability does **not** establish non-confluence or
+   permanent distinguishability. The honest statement is **finite-depth** (competing-pair
+   descendants stay disjoint to depth D=3) plus a **Q-immutability** invariant; **global
+   non-confluence is left open.** The five notions (commuting independent events / different
+   event choices / reordering a fixed collection / confluence / distinguishability at equal
+   event count) are separated in the audit. The **P/R histories are different event
+   choices, not two orders of one collection** — corrected. The universal claim that
+   **structural history requires destructive competition and broken seed symmetry is
+   WITHDRAWN.**
+4. **M2 is not a "forgetful null."** Three `SPROUT`s from one vertex reach a star **or** a
+   path (equal size, non-isomorphic), so M2 distinguishes equal-length histories. Its
+   confluence status is a separate open question.
+5. **"Record ≠ log" overclaim.** Fixed `V/E/#A/#Q` totals only remove those four tallies
+   from contention; they do **not** exclude other informative counts (bonds, components,
+   degrees — which *do* differ) and do **not** prove the record is "not a log."
+6. **Exactness.** Class counts are now resolved by exact state-preserving isomorphism (WL
+   used only to bucket), with `assert`s and a nonzero exit — not hash-only dedup or printed
+   "verified" lines.
+
+The retained positive result: depth-2 states from the 4-vertex path (k=1) form **exactly 11
+isomorphism classes**; matched-length histories (incl. P vs R) reach **different** classes
+with **different available continuations** (successor table in the audit).

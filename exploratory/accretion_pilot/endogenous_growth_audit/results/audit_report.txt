@@ -1,0 +1,71 @@
+========================================================================
+[1] FRONTIER ARITHMETIC:  Delta B = k - d_A(y)   (exhaustive on small states)
+  [PASS] Delta B == k - d_A(y) for all legal BUDs on {path3,path4,star4,path5}, k in 0..3
+  [PASS] for k>=1 every successor has B >= k  => a next event always exists (no deadlock)
+  [PASS] k=1: B nonincreasing, B>=1 (never 0), |V| grows by 1 each event (=> 'stalls/extinction' WITHDRAWN)
+  invariants (per event), verified deltas:
+    k=0: dV=0 dE=0 dQ=1 dA=-1   (expect dE=0)
+  [PASS] k=0 invariants dV,dE,dQ,dA correct (dE=0; k=0 => dE=0 not k+1)
+    k=1: dV=1 dE=2 dQ=1 dA=0   (expect dE=2)
+  [PASS] k=1 invariants dV,dE,dQ,dA correct (dE=2; k=0 => dE=0 not k+1)
+    k=2: dV=2 dE=3 dQ=1 dA=1   (expect dE=3)
+  [PASS] k=2 invariants dV,dE,dQ,dA correct (dE=3; k=0 => dE=0 not k+1)
+========================================================================
+[2] k>=2: growing active VERTICES need NOT grow active BONDS
+    schedule: repeatedly quiet the star centre using a leaf as keeper (k=2)
+    start star(4): {'V': 5, 'E': 4, 'A': 5, 'Q': 0, 'B': 4, 'Acomp': 1}
+      event     V         A         B         Acomp     
+      seed      5         5         4         1         
+      quiet#1   7         6         2         4         
+      quiet#2   9         7         2         5         
+      quiet#3   11        8         2         6         
+      quiet#4   13        9         2         7         
+  [PASS] active bonds stay == k (2) every event while V, A, Acomp all grow
+  [PASS] graph size, active vertices, and active COMPONENTS all strictly grow
+    => distinguish: |V| (grows), active vertices (grow), active bonds (constant=k),
+       active components (grow, via stranded singletons). 'more vertices != more bonds'
+========================================================================
+[3] CONFLUENCE: what is and is NOT established
+  [PASS] (a) INDEPENDENT (disjoint) events commute: BUD(0,1);BUD(3,4) ~= reverse (exact iso)
+    P = directed events [(1, 0), (2, 1)]  (quiets vertices [0, 1])
+    R = directed events [(1, 2), (0, 1)]  (quiets vertices [1, 2])
+  [PASS] (b) P and R are DIFFERENT directed events (quiet different vertices), NOT a reordering of one fixed collection -- undirected edges coincide but depositors differ
+  [PASS] (e) distinguishability at equal event count: P vs R non-isomorphic (exact)
+    critical pair on path 0-1-2: e1=BUD(0,1) (quiets 1), e2=BUD(1,2) (needs 1 active)
+  [PASS] (c) firing e1 DELETES e2's match (shared vertex 1 quieted): the two do NOT commute
+  [PASS] depth-1 descendants A,B of the critical pair are non-isomorphic
+    exact bounded joinability: A-descendants vs B-descendants share NO iso state
+    up to added depth D=3 (|A@D|=4 classes, |B@D|=18 classes, joined=False)
+  [PASS] critical-pair descendants remain disjoint to depth D=3 (FINITE-DEPTH result; global non-confluence NOT claimed)
+  [PASS] Q-immutability: once Q, a vertex's label and incident edges are frozen (only x, depositor y, and fresh z_i are touched by any event)
+========================================================================
+[4] M2 is NOT a same-length forgetful null (withdraw that characterisation)
+    3x SPROUT from one vertex -> star {'V': 4, 'E': 3, 'A': 4, 'Q': 0, 'B': 3, 'Acomp': 1} vs path {'V': 4, 'E': 3, 'A': 4, 'Q': 0, 'B': 3, 'Acomp': 1}
+  [PASS] both reachable in 3 events with equal V=4,E=4-1=3
+  [PASS] star K1,3 vs path P4 non-isomorphic: M2 DISTINGUISHES equal-length histories (so 'forgetful null' WITHDRAWN; M2 confluence left as a separate open question)
+========================================================================
+[5] BOUNDED POSITIVE RESULT: depth-2 states from path(4), k=1 (EXACT classes)
+    total directed length-2 derivations: 28
+    EXACT isomorphism classes at depth 2: 11
+  [PASS] depth-2 exact class enumeration succeeded
+    P -> class 4 (B=2) ; R -> class 8 (B=1)
+  [PASS] P and R land in DIFFERENT exact isomorphism classes
+    successor table (per depth-2 class): directed-event multiplicities over successor classes
+    depth2_class  B  n_directed_events  ->  {successor_class: multiplicity}  (prob)
+      class  0   2    4   -> {0: 1, 1: 1, 2: 1, 3: 1}   probs {0: 0.25, 1: 0.25, 2: 0.25, 3: 0.25}
+      class  1   2    4   -> {2: 2, 4: 1, 5: 1}   probs {2: 0.5, 4: 0.25, 5: 0.25}
+      class  2   2    4   -> {3: 4}   probs {3: 1.0}
+      class  3   2    4   -> {6: 1, 7: 1, 8: 1, 9: 1}   probs {6: 0.25, 7: 0.25, 8: 0.25, 9: 0.25}
+      class  4   2    4   -> {10: 1, 11: 1, 12: 1, 13: 1}   probs {10: 0.25, 11: 0.25, 12: 0.25, 13: 0.25}
+      class  5   3    6   -> {4: 1, 6: 1, 14: 1, 15: 1, 16: 1, 17: 1}   probs {4: 0.167, 6: 0.167, 14: 0.167, 15: 0.167, 16: 0.167, 17: 0.167}
+      class  6   2    4   -> {5: 1, 18: 1, 19: 1, 20: 1}   probs {5: 0.25, 18: 0.25, 19: 0.25, 20: 0.25}
+      class  7   3    6   -> {10: 2, 17: 2, 18: 2}   probs {10: 0.333, 17: 0.333, 18: 0.333}
+      class  8   1    2   -> {21: 2}   probs {21: 1.0}
+      class  9   2    4   -> {8: 1, 22: 1, 23: 1, 24: 1}   probs {8: 0.25, 22: 0.25, 23: 0.25, 24: 0.25}
+      class 10   1    2   -> {25: 1, 26: 1}   probs {25: 0.5, 26: 0.5}
+  [PASS] matched-size (depth-2) classes differ in their available continuations (successor-class multiplicity profiles are not all identical)
+  [PASS] P and R differ in available continuations (successor profile and/or B)
+    NOTE: this shows outcomes DIFFER in continuations; it does NOT claim that a
+    larger eligible-event count predicts 'richer' future structure.
+========================================================================
+AUDIT PASSED: all exact checks and assertions hold.
