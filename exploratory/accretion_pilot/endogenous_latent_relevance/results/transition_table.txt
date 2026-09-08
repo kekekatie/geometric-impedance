@@ -1,0 +1,7 @@
+stage            state  #dirEv  ->  {activeSuccClass: mult}   probs
+  before-M1        0     4    -> {0: 4}   {0:1}
+  before-M1        1     4    -> {0: 4}   {0:1}
+
+  after-CONTACT    0     6    -> {0: 2, 1: 2, 2: 2}   {0:1/3, 1:1/3, 2:1/3}
+  after-CONTACT    1     8    -> {0: 2, 1: 1, 2: 2, 3: 1, 4: 2}   {0:1/4, 1:1/8, 2:1/4, 3:1/8, 4:1/4}
+

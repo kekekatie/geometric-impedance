@@ -1,0 +1,43 @@
+============================================================================
+[0] MATCHED PAIR from the reachable depth-2 states (path(4), k=1)
+  [PASS] 11 exact depth-2 full classes (got 11)
+  [PASS] found a reachable pair: iso active projection, non-iso full
+  pair = full classes 0,1
+  active projections isomorphic: True
+  full graphs non-isomorphic:    True
+  quiet archives (Q-degree multiset): 0:(3, 3)  1:(2, 3)
+  basic counts (V,E,#A,#Q): 0:(6, 7, 4, 2)  1:(6, 7, 4, 2)
+  [PASS] pair: iso active proj, different archive, matching basic counts
+============================================================================
+[1] BEFORE the change: identical projected active successor distributions
+  successor multiplicities 0:{0: 4}   1:{0: 4}
+  [PASS] BEFORE contact: distributions identical (archive inert -- original M1)
+============================================================================
+[2] APPLY CONTACT-sweep (the extension); THEN compare active successors
+  promoted latent bonds  0: [(0, 2), (0, 5)]   1: [(0, 2), (0, 4), (2, 4), (2, 5)]
+  post-contact active projections isomorphic? False
+  successor multiplicities 0:{0: 2, 1: 2, 2: 2}   1:{0: 2, 1: 1, 2: 2, 3: 1, 4: 2}
+  [PASS] AFTER contact: projected active successor DISTRIBUTIONS DIFFER (the latent trace became relevant)
+============================================================================
+[3] CONTROL a -- original archive-blind M1 (no contact): no archive effect
+  [PASS] no-contact control: identical distributions (re-assert)
+[4] CONTROL b -- coupling DISABLED (archive-blind intervention): no effect
+  [PASS] coupling-disabled: post-intervention active projections still isomorphic
+  [PASS] coupling-disabled: projected successor distributions stay identical (effect requires reading the archive, not merely intervening)
+[5] CONTROL c -- vertex relabelling invariance
+  [PASS] relabelling: identical outcome (post-contact states iso to unrelabelled)
+[6] CONTROL d -- the dormant trace was NOT rewritten into a new record
+  [PASS] archive (Q vertices + Q-incident edges) UNCHANGED by contact (read-only)
+  [PASS] contact created no new vertices (no fresh record built)
+  [PASS] contact added only A-A edges among pre-existing actives (latent relation made active; trace not transcribed)
+============================================================================
+[7] EXACT TRANSITION TABLE (rational probs; multiplicities retained)
+  stage            state  #dirEv  ->  {activeSuccClass: mult}   probs
+    before-M1        0     4    -> {0: 4}   {0:1}
+    before-M1        1     4    -> {0: 4}   {0:1}
+  
+    after-CONTACT    0     6    -> {0: 2, 1: 2, 2: 2}   {0:1/3, 1:1/3, 2:1/3}
+    after-CONTACT    1     8    -> {0: 2, 1: 1, 2: 2, 3: 1, 4: 2}   {0:1/4, 1:1/8, 2:1/4, 3:1/8, 4:1/4}
+  
+============================================================================
+ALL EXACT CHECKS PASSED: latent trace made conditionally relevant by a local read-only structural change; archive-blind controls show no effect.
