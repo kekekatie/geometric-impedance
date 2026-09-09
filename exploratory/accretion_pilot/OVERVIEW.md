@@ -8,8 +8,10 @@ biology, or minds. This document is the reader's entry point and a complete inde
 intended as a durable, citable snapshot (see [`CITATION.cff`](CITATION.cff) and
 [`RELEASING.md`](RELEASING.md)).*
 
-Snapshot date: **2026-09-08**. Repository: `kekekatie/geometric-impedance`, path
-`exploratory/accretion_pilot/`. Commit chain: `cc514ee` (v1) → … → `fc973a1` (latest).
+Snapshot date: **2026-09-09**. Repository: `kekekatie/geometric-impedance`, branch
+**`claude/world-growth-pilot-cy85ne`** (not `main` — the work lives on this branch), path
+`exploratory/accretion_pilot/`. Commit chain: `cc514ee` (v1) → … → `5cdc2dd` (latest: the
+Fibonacci geometry-and-motion closure).
 
 ---
 
