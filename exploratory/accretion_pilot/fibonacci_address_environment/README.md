@@ -47,9 +47,23 @@ then hits the patch limit → **"unresolved within the available patch," not ide
 forever** (distinct addresses always separate in a larger chain). `agreement_radius.py`
 (exit 0), figure `figures/agreement_radius.png`.
 
+**Proof + one motion consequence ([`MOTION.md`](MOTION.md)):** the "distinct addresses ⇒
+eventual disagreement" claim is tightened analytically (a shared bi-infinite environment
+would force the Fibonacci word to be periodic, contradicting its **aperiodicity**;
+equivalently the return map is rotation-by-`1/τ`, minimal, so the cell boundaries are dense
+and **separate points**). Then, reusing the r\*=3,4,5 pairs, two passive nearest-neighbour
+walks are compared with **exact** `ℚ(τ)` return-to-start probabilities: the **length-blind**
+control (½,½) is identical for all sites, while a **length-sensitive** walk (conductance
+`1/ℓ`, a modelling choice) first distinguishes each pair at step **`2(r*−1)`** = 4, 6, 8 —
+none reflection-degenerate. Geometry can affect motion, and the onset tracks `r*`; but
+return-to-start is reflection-invariant, so geometric disagreement is **not** guaranteed to
+change it (checked per pair).
+
 See [`ADDRESS_ENVIRONMENT.md`](ADDRESS_ENVIRONMENT.md) for the full spec, derivation, the
-exact-vs-finite separation, and the extension;
-[`figures/fibonacci_address_environment.png`](figures/fibonacci_address_environment.png).
+exact-vs-finite separation, and the extension; [`MOTION.md`](MOTION.md) for the proof and
+motion test;
+[`figures/fibonacci_address_environment.png`](figures/fibonacci_address_environment.png),
+[`figures/motion_return.png`](figures/motion_return.png).
 
 ## Scope
 
