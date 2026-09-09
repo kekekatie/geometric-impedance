@@ -123,3 +123,57 @@ resolution — and nothing more.**
 python3 fibonacci_cutproject.py   # exact; exit 0 iff all checks pass
 python3 make_figure.py            # writes the diagram
 ```
+
+---
+
+## Extension — first-disagreement radius ("same here, different farther out")
+
+*Same chain, same exact arithmetic; no dynamics. Checks in `agreement_radius.py`
+(exit 0), figure `figures/agreement_radius.png`.*
+
+For two sites with **identical `E_2`** but **different** internal addresses, at what radius
+`r*` do their ordered neighbourhoods first differ? Two exact facts pin it down:
+
+- **Distinct sites have distinct internal addresses.** `q = m+nτ'` is injective on sites
+  (τ' irrational), so **no two distinct sites are environment-identical at all radii** —
+  "identical forever" is impossible.
+- **The window partitions refine monotonically:** `boundaries(r) ⊆ boundaries(r+1)`
+  (verified). So two same-`E_2` sites stay in a common cell as `r` grows until the refining
+  partition first drops a **new** boundary between their two addresses. That level **is**
+  `r*`.
+
+**Verified equivalence (exit 0):** for every same-`E_2` pair and every radius, *neighbourhood
+agreement ⟺ same window cell* (53 967 (pair, r) checks over 2 192 pairs); and where a pair
+resolves, `r*` is exactly the level whose **new** boundary first lands (half-open, `lo < b ≤
+hi`) between the addresses — a boundary that may even coincide with one site's own address.
+
+**Three examples, progressively longer agreement:**
+
+| agree through | first differ at `r*` | `|Δq|` | `|Δp|` | separating new boundary (exact) |
+|---|---|---|---|---|
+| r=2 | **3** | 0.145898 | 6.854 | `q ≈ 0.236` |
+| r=3 | **4** | 0.236068 | 4.236 | `q ≈ 0.764, 0.854` |
+| r=4 | **5** | 0.180340 | 22.180 | `q ≈ 1.472` |
+
+Note `r*` is set by **where the boundaries fall**, not by `|Δq|` alone (the r*=5 pair has a
+*smaller* `|Δq|` than the r*=4 pair) — closer addresses *tend* to agree longer, but the
+exact predictor is the first separating boundary, not raw distance.
+
+**Truncation, reported honestly:** the closest-address pairs may not separate within the
+finite patch. The deepest such case here **agrees through r = 37** (the patch limit) with
+`|Δq| = 0.021` — reported as **"unresolved within the available patch,"** *not* identical
+forever: the addresses are distinct, so a longer chain **would** separate them at some finite
+`r`.
+
+**What this adds (still geometry only).** It makes "the same up close, different farther out"
+explicit and exact: agreement radius = the resolution at which the perpendicular-address code
+first distinguishes the two sites. It names precisely which structural distinction a later
+*motion* question would test — the neighbourhood beyond radius `r*` — without asserting that
+this distinction affects motion at all.
+
+## Files (extension)
+
+- [`agreement_radius.py`](agreement_radius.py) — injectivity + monotone refinement, the
+  agreement ⟺ cell equivalence, `r*` vs the separating boundary, three examples, the
+  unresolved case; asserts + nonzero exit.
+- `results/agreement_report.txt`; `figures/agreement_radius.png`.

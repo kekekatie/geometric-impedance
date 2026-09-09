@@ -85,7 +85,7 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 
 | folder | one-line result |
 |---|---|
-| [`fibonacci_address_environment/`](fibonacci_address_environment/) | exact 1-D Fibonacci cut-and-project: proves the **local environment is a function of the internal (perpendicular) address alone** — same window cell ⇒ identical environment at any physical distance; a cell boundary between ⇒ different environment even for near-equal addresses; resolution = cell width. Geometry only. |
+| [`fibonacci_address_environment/`](fibonacci_address_environment/) | exact 1-D Fibonacci cut-and-project: proves the **local environment is a function of the internal (perpendicular) address alone** — same window cell ⇒ identical environment at any physical distance; a cell boundary between ⇒ different environment even for near-equal addresses; resolution = cell width. **Extension:** the first-disagreement radius `r*` of two same-`E_2` sites = the level at which the monotonically-refining window partition first separates their addresses ("same here, different farther out"; unresolved-within-patch ≠ identical forever). Geometry only. |
 
 *(The root `README.md`, `REPORT.md`, `DESIGN_NOTE.md` are v1's own documents, preserved.)*
 

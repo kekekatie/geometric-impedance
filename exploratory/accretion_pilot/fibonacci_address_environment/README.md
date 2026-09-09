@@ -39,8 +39,17 @@ finer cells.
 | (b) | close internal, **different** env (boundary `2−τ≈0.382` between) | 0.013 | 76.0 |
 | (c) | **same** env `LSLL`, wide internal gap (≤ cell width `≈0.382`) | 0.369 | 78.6 |
 
-See [`ADDRESS_ENVIRONMENT.md`](ADDRESS_ENVIRONMENT.md) for the full spec, derivation, and the
-exact-vs-finite separation; [`figures/fibonacci_address_environment.png`](figures/fibonacci_address_environment.png).
+**Extension — "same here, different farther out":** for two sites with identical `E_2` but
+different addresses, the **first-disagreement radius `r*`** is exactly the level at which the
+**monotonically-refining** window partition first drops a boundary between their (distinct)
+addresses. Three examples with increasing `r*` (3, 4, 5); a deepest case agrees to `r=37`
+then hits the patch limit → **"unresolved within the available patch," not identical
+forever** (distinct addresses always separate in a larger chain). `agreement_radius.py`
+(exit 0), figure `figures/agreement_radius.png`.
+
+See [`ADDRESS_ENVIRONMENT.md`](ADDRESS_ENVIRONMENT.md) for the full spec, derivation, the
+exact-vs-finite separation, and the extension;
+[`figures/fibonacci_address_environment.png`](figures/fibonacci_address_environment.png).
 
 ## Scope
 

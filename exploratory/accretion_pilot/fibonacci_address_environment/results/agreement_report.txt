@@ -1,0 +1,24 @@
+================================================================================
+[0] exact backbone
+  [PASS] distinct sites have DISTINCT internal addresses (q injective) -> no two distinct sites can be environment-identical at ALL radii
+  [PASS] window partitions refine monotonically: boundaries(r) ⊆ boundaries(r+1)
+================================================================================
+[1] for every same-E_2 pair: (env equal at r) <=> (same window cell at r), all r
+  [PASS] neighbourhood agreement <=> window-cell agreement at every radius (53967 (pair,r) checks over 2192 same-E_2 pairs)
+  [PASS] where resolved, r* is exactly the refinement level whose NEW window boundary first falls between the two internal addresses
+================================================================================
+[2] three examples: identical E_2, progressively longer agreement (increasing r*)
+  agree through r=2, first differ at r*=3: E_2(i)=E_2(j); E_3(i)=SLLSLS != E_3(j)=SLLSLL
+       |Δq|=0.145898  |Δp|=6.8541  separating window boundary at q=[0.236068]  (new at partition level r=3)
+  agree through r=3, first differ at r*=4: E_3(i)=E_3(j); E_4(i)=SLSLLSLL != E_4(j)=LLSLLSLS
+       |Δq|=0.236068  |Δp|=4.2361  separating window boundary at q=[0.763932, 0.854102]  (new at partition level r=4)
+  agree through r=4, first differ at r*=5: E_4(i)=E_4(j); E_5(i)=LLSLSLLSLL != E_5(j)=LLSLSLLSLS
+       |Δq|=0.180340  |Δp|=22.1803  separating window boundary at q=[1.472136]  (new at partition level r=5)
+  [PASS] exhibited three pairs with strictly increasing first-disagreement radius r*
+================================================================================
+[3] truncation-limited pairs: 'unresolved within the available patch' (not forever)
+  closest-address unresolved pair: agrees through r=37 (patch limit), |Δq|=0.021286, |Δp|=46.9787
+  -> UNRESOLVED WITHIN THE AVAILABLE PATCH; addresses are distinct (Δq>0), so a longer chain WOULD separate them at some finite r. Not 'identical forever'.
+  [PASS] unresolved pair still has distinct internal addresses (would separate in a larger patch)
+================================================================================
+ALL EXACT CHECKS PASSED.
