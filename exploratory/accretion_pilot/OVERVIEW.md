@@ -81,6 +81,12 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 | [`endogenous_contact_timing/`](endogenous_contact_timing/) | **proves a quiet vertex's CONTACT menu only shrinks** — the model supports *delayed consultation* of an already-eligible trace, not *newly enabled relevance* of an old one; exact 3-event timing. |
 | [`endogenous_renewed_contact_design/`](endogenous_renewed_contact_design/) | design comparison of the three ways to break menu monotonicity; recommends **GRAFT** (new active structure grafts onto an old quiet trace via a bounded wedge, append-only) to enable genuinely *new* relevance; legality fixture + proposed test (not run). |
 
+### Standalone geometric note
+
+| folder | one-line result |
+|---|---|
+| [`fibonacci_address_environment/`](fibonacci_address_environment/) | exact 1-D Fibonacci cut-and-project: proves the **local environment is a function of the internal (perpendicular) address alone** — same window cell ⇒ identical environment at any physical distance; a cell boundary between ⇒ different environment even for near-equal addresses; resolution = cell width. Geometry only. |
+
 *(The root `README.md`, `REPORT.md`, `DESIGN_NOTE.md` are v1's own documents, preserved.)*
 
 ---
