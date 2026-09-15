@@ -46,7 +46,9 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 > **history leaves a structural record → the "active front" evolves as a closed system, so
 > the quiet archive is causally inert → but one added local rule (GRAFT) can make that dormant
 > archive matter again — and, in exact reachable dynamics, that renewal both occurs and is
-> consulted, which is provably impossible without the rule.**
+> consulted, which is provably impossible without the rule → and once the archive has acted,
+> its influence is durably printed into the active "slice of now" (it survives deletion of the
+> archive), yet the archive is still not redundant.**
 
 ---
 
@@ -84,6 +86,7 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 | [`endogenous_contact_timing/`](endogenous_contact_timing/) | **proves a quiet vertex's CONTACT menu only shrinks** — the model supports *delayed consultation* of an already-eligible trace, not *newly enabled relevance* of an old one; exact 3-event timing. |
 | [`endogenous_renewed_contact_design/`](endogenous_renewed_contact_design/) | design comparison of the three ways to break menu monotonicity; recommends **GRAFT** (new active structure grafts onto an old quiet trace via a bounded wedge, append-only) to enable genuinely *new* relevance; legality fixture + proposed test. |
 | [`endogenous_graft_experiment/`](endogenous_graft_experiment/) | **the GRAFT test, run exactly.** On a frozen seed with a designated quiet trace whose menu starts empty: with GRAFT, the trace acquires a never-before CONTACT pair (**27.2%** by 4 events) that is then **consulted** (**7.5%**); the **control (BUD+CONTACT) is exactly 0** at every horizon (menu monotonicity). Renewal both **occurs and is consulted** — impossible without the rule. Mechanism test, one seed, not a sample. |
+| [`endogenous_erase_test/`](endogenous_erase_test/) | **the ERASE test (Fable's).** Evolve the matched pair under BUD+CONTACT, **delete the whole archive**, run the future archive-free. **Q1:** the two lineages **still differ** with no archive present — the past is **durably printed** into the active slice (survives erasure); **Q2:** yet deleting the archive **changes** the future (`ERASE≠KEEP`), so the archive is **not redundant**. NULL (BUD-only) control is exactly identical. Both true at once; exact, one pair. |
 
 ### Standalone geometric note
 
