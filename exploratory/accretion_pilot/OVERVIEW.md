@@ -48,7 +48,10 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 > archive matter again — and, in exact reachable dynamics, that renewal both occurs and is
 > consulted, which is provably impossible without the rule → and once the archive has acted,
 > its influence is durably printed into the active "slice of now" (it survives deletion of the
-> archive), yet the archive is still not redundant.**
+> archive), yet the archive is still not redundant → and that imprint is a bounded, partly-
+> permanent "momentum": the present inherits only a fraction of its past, and once the past is
+> deleted the present can only fade-or-hold that momentum (never regrow it — regrowth needs the
+> past re-read).**
 
 ---
 
@@ -87,6 +90,7 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 | [`endogenous_renewed_contact_design/`](endogenous_renewed_contact_design/) | design comparison of the three ways to break menu monotonicity; recommends **GRAFT** (new active structure grafts onto an old quiet trace via a bounded wedge, append-only) to enable genuinely *new* relevance; legality fixture + proposed test. |
 | [`endogenous_graft_experiment/`](endogenous_graft_experiment/) | **the GRAFT test, run exactly.** On a frozen seed with a designated quiet trace whose menu starts empty: with GRAFT, the trace acquires a never-before CONTACT pair (**27.2%** by 4 events) that is then **consulted** (**7.5%**); the **control (BUD+CONTACT) is exactly 0** at every horizon (menu monotonicity). Renewal both **occurs and is consulted** — impossible without the rule. Mechanism test, one seed, not a sample. |
 | [`endogenous_erase_test/`](endogenous_erase_test/) | **the ERASE test (Fable's).** Evolve the matched pair under BUD+CONTACT, **delete the whole archive**, run the future archive-free. **Q1:** the two lineages **still differ** with no archive present — the past is **durably printed** into the active slice (survives erasure); **Q2:** yet deleting the archive **changes** the future (`ERASE≠KEEP`), so the archive is **not redundant**. NULL (BUD-only) control is exactly identical. Both true at once; exact, one pair. |
+| [`endogenous_present_width/`](endogenous_present_width/) | **the width of "now".** Quantifies the ERASE mark. **How much:** the surviving fraction `ρ=present/full` distinguishability rises from **0** (history starts entirely in the archive) to **~0.22** by 3 events, staying **< 1** (present inherits a bounded share). **How long:** delete the past and the present coasts — distinguishability is **provably non-increasing** (data-processing) and **relaxes to a positive floor** (fade-then-hold); with the archive **kept** it instead grows. Inherited "momentum" can only be spent by the present; regrowth needs the past re-read. Exact, one pair. |
 
 ### Standalone geometric note
 

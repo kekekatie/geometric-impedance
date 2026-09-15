@@ -1,0 +1,13 @@
+h  D_full(TV)  D_slice(TV)  rho=slice/full   I_full(bits)  I_slice(bits)  bit-frac
+0  1.0000      0.0000      0.0000          1.0000        0.0000        0.0000
+1  0.8000      0.1333      0.1667          0.7455        0.0165        0.0222
+2  0.7133      0.1470      0.2061          0.6236        0.0361        0.0579
+3  0.6784      0.1514      0.2232          0.5642        0.0287        0.0509
+
+step  archive-free D_slice (coasting)   archive-kept D_slice (KEEP)
+0     0.0000                          0.0000
+1     0.1333                          0.1333
+2     0.1470                          0.1470   <- archive deleted here
+3     0.1174                          0.1514
+4     0.1049                          0.1506
+5     0.1003                          0.1467
