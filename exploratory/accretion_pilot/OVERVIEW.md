@@ -1,5 +1,9 @@
 # The accretion pilot — overview & index
 
+> 👋 **Picking this back up?** See [`RESUME_HERE.md`](RESUME_HERE.md) — the next thing waiting
+> is consolidating the **transmission paper** (no new experiment needed; built around the exact
+> result `L = 4321/44100`).
+
 *A self-contained, isolated exploratory research program on **memory and growth in small
 evolving graphs**. Register: **speculative computational exploration** — every result is
 bounded, gated, and stated with its limitations; nulls and corrections are kept in place.
