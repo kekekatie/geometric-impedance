@@ -22,10 +22,11 @@ bias:
     (../endogenous_active_projection/) -- applied to BOTH lineages, so the DATA-PROCESSING
     INEQUALITY forces the lineage distinguishability to be NON-INCREASING in the archive-free
     future: the ensemble bias can only FADE or HOLD, never grow. It converges to the EXACT
-    positive limit of Proposition 3 (coast_asymptote.py). With KEEP (archive retained)
-    distinguishability instead stays >= the coast at every step -- sustaining the bias needs
-    the past kept and re-read. The archive-free decay-to-a-limit is the temporal "width of
-    now".
+    positive limit of Proposition 3 (coast_asymptote.py) -- so a positive bias PERSISTS with no
+    past at all. With KEEP (archive retained) distinguishability instead stays >= the coast at
+    every TESTED step -- keeping the past holds the distinction ABOVE the floor over the tested
+    interval (not "sustains" it; the floor is self-sustaining). The archive-free
+    decay-to-a-limit is the temporal "width of now".
 
 Register: speculative exploration; exact rational distributions on ONE matched pair (the same
 as ../endogenous_local_contact/ and ../endogenous_erase_test/), a mechanism test not a sample.
@@ -326,10 +327,11 @@ def main():
     # (c) sustaining the bias REQUIRES the past: KEEP stays at or above the archive-free coast
     keep_ge = all(kept[s] >= coast[s] for s in range(H + K + 1))
     require(keep_ge,
-            "archive-retained future stays >= the archive-free coast at every step "
-            "(KEEP >= ERASE; KEEP is non-monotone here -- 0.147->0.151->0.151->0.147, one "
-            "uptick then decline). Sustaining the historical bias needs the past kept and "
-            "re-read; the archive-free coast can only fall (data-processing)")
+            "archive-retained future stays >= the archive-free coast at every TESTED step "
+            "(steps 0..H+K) (KEEP >= ERASE; KEEP is non-monotone here -- "
+            "0.147->0.151->0.151->0.147, one uptick then decline; >= is NOT established for all "
+            "future times). The archive-free coast persists at its positive floor with NO past; "
+            "keeping the past holds the distinction ABOVE that floor over the tested interval")
 
     # (d) NULL: without CONTACT nothing to measure
     nf_i = run_process(Gi, events_bud, H, events_bud, K, True)[1]
@@ -355,9 +357,11 @@ def main():
         "as CONTACT transcribes the archive into active structure but stays < 1 (the present is "
         "only partly separable; the rest of the distinction is still in the past). (2) Once the "
         "past is deleted the archive-free bias can only fade or hold (data-processing on the "
-        "projection kernel, Prop 1), converging to the exact positive limit of Proposition 3; "
-        "with the archive kept, distinguishability stays >= the coast (sustaining the bias "
-        "needs the past re-read). One matched pair, small horizon, a designed CONTACT coupling "
+        "projection kernel, Prop 1), converging to the exact positive limit of Proposition 3 "
+        "-- so a positive bias PERSISTS with no past at all; with the archive kept, "
+        "distinguishability stays >= the coast at every tested step (keeping the past holds the "
+        "distinction ABOVE the floor over the tested interval). One matched pair, small "
+        "horizon, a designed CONTACT coupling "
         "-- a mechanism test, not a claim about generic worlds.")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")

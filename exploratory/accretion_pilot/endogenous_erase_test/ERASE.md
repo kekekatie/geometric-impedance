@@ -11,6 +11,13 @@ then **delete the entire archive** (every quiet vertex), and test whether the tw
 **still differ in their archive-free future active law**. If they do, the past's influence has
 been *baked into the active "slice of now"* rather than living only in the quiet record.
 
+> **Read this first — population, not record.** "The two lineages still differ" is a statement
+> about the **distribution over presents**, never a single world: after any horizon a given
+> active graph is a class **both** lineages produce; only the probability distribution differs.
+> The "durable mark" here is a **bias in the ensemble** (the status of AUC in Study A), never a
+> per-world memory. *The present does not remember; the present is biased.* (Quantified exactly
+> in the sibling study [`../endogenous_present_width/`](../endogenous_present_width/).)
+
 ## Where this sits relative to what we already proved (stated honestly)
 
 - [`../endogenous_active_projection/`](../endogenous_active_projection/): under **BUD only**,
@@ -70,7 +77,8 @@ total-variation distance (0 = identical distributions):
 - **After the archive is deleted**, the two lineages **still differ at the final step 4**
   under archive-free (BUD-only) evolution
   (`i`: `{0:23/27, 1:11/675, 2:31/540, 3:67/900}` vs `j`: `{0:27107/36288, …}`). **The past
-  left a durable mark on the active slice; future active law differs with no archive present.**
+  left a durable mark on the *distribution over* active slices; the two lineages' archive-free
+  future active law differs — an ensemble bias, not a per-world memory.**
 
 **Q2 — redundancy (ERASE vs KEEP, per lineage):**
 
@@ -89,12 +97,14 @@ for event selection).
 
 Both things are true at once, and that is the interesting part:
 
-1. **Yes, the past is (partly) baked into the "slice of now."** Because CONTACT writes a new
-   *active–active* edge whenever it reads a quiet mediator, the archive's influence is
-   **transcribed into active structure that survives the archive's deletion**. Two lineages
-   with identical active layers but different archives become **distinguishable in the active
-   slice alone**, and therefore in **all** archive-free future active law. The active present
-   is *not* a clean screen that forgets the history the moment the record is removed.
+1. **Yes, the past is (partly) baked into the "slice of now" — as an ensemble bias.** Because
+   CONTACT writes a new *active–active* edge whenever it reads a quiet mediator, the archive's
+   influence is **transcribed into active structure that survives the archive's deletion**. Two
+   lineages with identical active layers but different archives become **distinguishable from
+   the active slice alone** (their present-*ensembles* differ), and therefore in **all**
+   archive-free future active law. The active present is *not* a clean screen that forgets the
+   history the moment the record is removed — though no single present records its lineage; the
+   distinction lives in the distribution.
 
 2. **No, the archive is not therefore redundant.** Deleting it still changes the active future
    (ERASE ≠ KEEP): a retained archive keeps being *re-read* by future CONTACT events, feeding
@@ -103,8 +113,9 @@ Both things are true at once, and that is the interesting part:
    some remains latent in the archive, available to be expressed later.
 
 The precise, defensible statement is therefore **not** "the archive is redundant," but: *under
-this designed CONTACT coupling, the archive's influence is durably recorded in the active layer
-(it survives erasure) while also remaining a live resource (deleting it changes the future).*
+this designed CONTACT coupling, the archive's influence is durably recorded as a bias in the
+distribution over active layers (it survives erasure) while also remaining a live resource
+(deleting it changes the future).*
 
 ## Scope & honest limits
 

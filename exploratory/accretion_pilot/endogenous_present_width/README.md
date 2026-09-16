@@ -36,12 +36,15 @@ archives `(3,3)` vs `(2,3)`.
   (**Proposition 3**: the coast is a finite absorbing Markov chain because `ΔA = 0` at `k=1`; the
   limit is the TV between the lineages' absorption distributions over the two absorbing
   projections). With the archive **kept**, distinguishability instead stays **≥ the coast at
-  every step** (non-monotone: `0.147 → 0.151 → 0.151 → 0.147`) — sustaining the bias needs **the
-  past kept and re-read**. NULL (BUD-only) is exactly 0 throughout.
+  every tested step** (non-monotone: `0.147 → 0.151 → 0.151 → 0.147`) — keeping the past holds
+  the distinction **above the floor over the tested interval** (the floor itself persists with
+  no past). NULL (BUD-only) is exactly 0 throughout.
 
 So the distribution over presents carries a genuine, permanently-biased imprint of history; the
-amount is bounded, and once the past is deleted it can only fade toward an exact positive floor —
-only the present can spend the bias, and only the past can sustain it.
+amount is bounded, and once the past is deleted the bias **fades to — and then holds forever
+at — an exact positive floor** (a distinction that survives with *no past at all*). Keeping and
+re-reading the past maintains a **larger** distinction than the coast over the tested interval;
+it does not "sustain" the bias (the floor is self-sustaining), it *raises* it.
 
 ## Scope
 

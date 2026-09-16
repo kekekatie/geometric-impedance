@@ -88,11 +88,15 @@ inert). Compare against **KEEP** (archive retained, extended throughout):
   ensemble bias cannot amplify itself once the past is gone.
 - **It converges to an exact positive limit (Proposition 3, below), not to zero.** The earlier
   "positive floor" is now pinned: **`L = 4321/44100 ≈ 0.0980`**.
-- **Sustaining the bias needs the past.** With the archive **kept**, distinguishability stays
-  **at or above the coast at every step** (`KEEP ≥ coast`, asserted). It is **non-monotone** —
-  `0.147 → 0.151 → 0.151 → 0.147`, a single uptick then decline — so we make no "grows" or
-  "amplifies" claim; the honest statement is simply that keeping the archive holds
-  distinguishability above the archive-free coast, because CONTACT keeps re-reading the past.
+- **Keeping the past *raises* the distinction; it does not "sustain" it.** The archive-free
+  floor `L` persists forever with **no past at all**, so the past is not what keeps the bias
+  alive. What the archive does is hold the distinction **above** that floor: with the archive
+  **kept**, distinguishability stays **at or above the coast at every tested step**
+  (`KEEP ≥ coast`, asserted — the `≥` is *not* established for all future times). It is
+  **non-monotone** — `0.147 → 0.151 → 0.151 → 0.147`, a single uptick then decline — so we make
+  no "grows" or "amplifies" claim; the honest statement is simply that, over the tested
+  interval, keeping and re-reading the archive holds distinguishability above the archive-free
+  coast.
 - **NULL control:** BUD-only throughout gives distinguishability `0` at every step — no CONTACT,
   no bias to inherit, and erasure has nothing to reveal.
 
@@ -140,16 +144,19 @@ Katie's picture comes out sharp, with the ensemble caveat kept front and centre:
    automatically legible in the "now" — at `h = 0` the two lineages' presents are identically
    distributed; only the CONTACT rule ferries a fraction of the archive's difference into a bias
    over present structure. And it is bounded: most of the distinction (ρ < 1) stays in the past.
-2. **Once the past is gone, the present can only spend its bias, never mint more.** The
-   archive-free coast decays under one fixed law and **converges to an exact positive floor**
-   `L = 4321/44100`; it can be held *above* that only while the past is kept and re-read. The
-   "width of now" is this decay-to-a-limit — a short forgetting onto a permanent, quantified
-   residual bias — never a memory carried by any single world.
+2. **Once the past is gone, the present can only spend its bias down to a floor, never mint
+   more.** The archive-free coast decays under one fixed law and **converges to an exact
+   positive floor** `L = 4321/44100` — a distinction that **survives with no past at all**. The
+   past is therefore not what *sustains* the bias; keeping and re-reading it holds the
+   distinction **above** that floor (a *larger* distinction than the coast) over the tested
+   interval. The "width of now" is this decay-to-a-limit — a short forgetting onto a permanent,
+   quantified residual bias — never a memory carried by any single world.
 
 Honest one-liner: *in this model the distribution over presents carries a genuine, permanently
-biased imprint of history; the amount is bounded (ρ < 1) and, once the past is deleted, can only
-fade toward an exact positive limit — sustaining or sharpening it requires the past to still
-exist. No individual present records its lineage.*
+biased imprint of history; the amount is bounded (ρ < 1) and, once the past is deleted, it fades
+to and then holds at an exact positive limit that survives with no past — raising the
+distinction above that limit is what requires the past to still exist and be re-read. No
+individual present records its lineage.*
 
 ## Scope & limits
 
