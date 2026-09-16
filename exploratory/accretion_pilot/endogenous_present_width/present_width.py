@@ -4,8 +4,12 @@ present_width.py -- "how much of the past survives in the present, and for how l
 
 Katie's reframing: only the PRESENT moment actually exists; it rides a moving expansion front
 and carries an inherited MOMENTUM from its history -- the past itself need not still exist.
-The ERASE test (../endogenous_erase_test/) already showed the present keeps a durable mark
-after the archive is deleted. This study QUANTIFIES it:
+The ERASE test (../endogenous_erase_test/) showed the ENSEMBLE of presents stays biased by
+lineage after the archive is deleted. IMPORTANT -- this is an ENSEMBLE (distribution)
+statement, never a per-world record: a single active graph is a class BOTH lineages produce;
+what differs is the probability DISTRIBUTION over presents (a bias, the same status as AUC in
+Study A). "The present does not remember; the present is biased." This study QUANTIFIES that
+bias:
 
   Part 1 -- HOW MUCH survives.  At each horizon, how much of the historically-distinguishing
     information is readable from the PRESENT ALONE (active slice) versus from the FULL state
@@ -13,13 +17,15 @@ after the archive is deleted. This study QUANTIFIES it:
     (Also in bits, via Jensen-Shannon / mutual information of the lineage label.)
 
   Part 2 -- FADE or SET, and the WIDTH of "now".  Imprint history to horizon H (archive
-    present), then DELETE the archive and let the present coast (BUD-only future). Because the
-    coasting law is a single fixed Markov kernel applied to BOTH lineages, the DATA-PROCESSING
+    present), then DELETE the archive and let the present coast (BUD-only future). The coasting
+    law is a single fixed Markov kernel on PROJECTIONS -- well-defined only by Proposition 1
+    (../endogenous_active_projection/) -- applied to BOTH lineages, so the DATA-PROCESSING
     INEQUALITY forces the lineage distinguishability to be NON-INCREASING in the archive-free
-    future: inherited momentum can only FADE or HOLD, never regrow. Regrowth requires the past
-    to still exist and be re-read -- shown by the contrast with KEEP (archive retained), whose
-    distinguishability CAN increase. The archive-free decay profile is the temporal "width of
-    now": how long the present carries its momentum after the past is gone.
+    future: the ensemble bias can only FADE or HOLD, never grow. It converges to the EXACT
+    positive limit of Proposition 3 (coast_asymptote.py). With KEEP (archive retained)
+    distinguishability instead stays >= the coast at every step -- sustaining the bias needs
+    the past kept and re-read. The archive-free decay-to-a-limit is the temporal "width of
+    now".
 
 Register: speculative exploration; exact rational distributions on ONE matched pair (the same
 as ../endogenous_local_contact/ and ../endogenous_erase_test/), a mechanism test not a sample.
@@ -268,12 +274,13 @@ def main():
             "at h=0 the present carries NONE of the distinction (identical slices) while the "
             "full state carries ALL of it (rho=0): the memory starts entirely in the archive")
     require(part1[H1][1] > 0 and part1[H1][2] > 0,
-            f"by h={H1} the present alone carries a POSITIVE share of the memory "
+            f"by h={H1} the present alone carries a POSITIVE share of the distinguishing bias "
             f"(rho={float(part1[H1][2]):.3f}): CONTACT progressively transcribes the past into "
             f"the present")
     require(part1[H1][2] < 1,
-            "rho < 1: some distinguishing memory still lives ONLY in the archive (consistent "
-            "with the ERASE test's 'archive not redundant')")
+            "rho < 1: the lineages stay only PARTLY separable from the present alone -- some of "
+            "the distinction is legible only WITH the archive (consistent with 'archive not "
+            "redundant')")
 
     # ================= PART 2: fade or set / width of now =================
     log("=" * 92)
@@ -302,24 +309,27 @@ def main():
     nonincreasing = all(coast[s + 1] <= coast[s] for s in range(H, H + K))
     require(nonincreasing,
             "archive-free future: lineage distinguishability is NON-INCREASING after deletion "
-            "(a single fixed BUD-only kernel applied to both lineages -> data-processing "
-            "inequality; inherited momentum can only FADE or HOLD, never regrow)")
+            "(a single fixed BUD-only kernel on PROJECTIONS -- well-defined only by Proposition "
+            "1 -- applied to both lineages -> data-processing inequality; the archive-free "
+            "ensemble bias can only FADE or HOLD, never grow)")
 
     # (b) width of now within the horizon: does the coast fade, or set (hold)?
     drop = coast[H] - coast[H + K]
     verdict = ("HOLDS (no measurable fade within horizon)" if drop == 0
                else f"fades by {float(drop):.4f} over {K} archive-free steps")
     log(f"  width-of-now (archive-free): D_slice at deletion = {float(coast[H]):.4f}; "
-        f"after {K} coasting steps = {float(coast[H+K]):.4f} -> {verdict}")
-    require(coast[H] > 0, "at deletion the present already carries a positive inherited "
-                          "momentum (nonzero distinguishability with the past gone)")
+        f"after {K} coasting steps = {float(coast[H+K]):.4f} -> {verdict} "
+        f"(exact positive limit L = 4321/44100 ~= 0.0980 by Proposition 3, coast_asymptote.py)")
+    require(coast[H] > 0, "at deletion the ensemble of presents is already biased by lineage "
+                          "(nonzero distinguishability with the past gone)")
 
-    # (c) regrowth REQUIRES the past: KEEP can exceed the frozen archive-free coast
-    regrow = any(kept[s] > coast[s] for s in range(H, H + K + 1))
-    require(regrow,
-            "archive-retained future EXCEEDS the archive-free coast at some step "
-            "(KEEP > ERASE): distinguishability can GROW only while the past still exists to be "
-            "re-read -- amplification is a property of the past, coasting only of the present")
+    # (c) sustaining the bias REQUIRES the past: KEEP stays at or above the archive-free coast
+    keep_ge = all(kept[s] >= coast[s] for s in range(H + K + 1))
+    require(keep_ge,
+            "archive-retained future stays >= the archive-free coast at every step "
+            "(KEEP >= ERASE; KEEP is non-monotone here -- 0.147->0.151->0.151->0.147, one "
+            "uptick then decline). Sustaining the historical bias needs the past kept and "
+            "re-read; the archive-free coast can only fall (data-processing)")
 
     # (d) NULL: without CONTACT nothing to measure
     nf_i = run_process(Gi, events_bud, H, events_bud, K, True)[1]
@@ -338,13 +348,17 @@ def main():
         log(f"FAILED: {len(FAILS)} check(s): " + "; ".join(FAILS))
     else:
         log("ALL EXACT CHECKS PASSED.")
-    log("Reading: (1) the present starts carrying NONE of the history (rho=0) and progressively "
-        "inherits it as CONTACT transcribes the archive into active structure (rho rises but "
-        "stays < 1 -- some memory remains only in the past). (2) Once the past is deleted the "
-        "present coasts: its inherited momentum can only fade or hold (data-processing), never "
-        "regrow; regrowth needs the past kept and re-read (KEEP > coast). The archive-free "
-        "decay profile is the temporal width of 'now'. One matched pair, small horizon, a "
-        "designed CONTACT coupling -- a mechanism test, not a claim about generic worlds.")
+    log("Reading: this is an ENSEMBLE statement -- a single active graph is a class BOTH "
+        "lineages produce; only the DISTRIBUTION over presents differs (a bias, like AUC in "
+        "Study A, never a per-world record; the present does not remember, the present is "
+        "biased). (1) At h=0 the ensemble of presents is UNbiased by lineage (rho=0); rho rises "
+        "as CONTACT transcribes the archive into active structure but stays < 1 (the present is "
+        "only partly separable; the rest of the distinction is still in the past). (2) Once the "
+        "past is deleted the archive-free bias can only fade or hold (data-processing on the "
+        "projection kernel, Prop 1), converging to the exact positive limit of Proposition 3; "
+        "with the archive kept, distinguishability stays >= the coast (sustaining the bias "
+        "needs the past re-read). One matched pair, small horizon, a designed CONTACT coupling "
+        "-- a mechanism test, not a claim about generic worlds.")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")
     sys.exit(1 if FAILS else 0)

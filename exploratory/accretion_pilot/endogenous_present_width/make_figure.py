@@ -54,21 +54,23 @@ def main():
              label="archive DELETED (coast, BUD-only): fade-or-hold")
     axR.axvline(H, color="#c0392b", ls=":", lw=1.6)
     axR.annotate("past deleted", (H, 0.02), color="#c0392b", fontsize=8, ha="center")
-    if coast[-1] > 0:
-        axR.axhline(coast[-1], color="#8e44ad", ls="--", lw=1, alpha=0.5)
-        axR.annotate("relaxes toward a positive floor\n(permanent residue of the past)",
-                     (H + K, coast[-1]), fontsize=7.5, color="#8e44ad",
-                     xytext=(H + 0.3, coast[-1] + 0.03), textcoords="data")
+    L_LIMIT = 4321 / 44100          # exact coast limit L = 4321/44100 (Proposition 3, coast_asymptote.py)
+    axR.axhline(L_LIMIT, color="#8e44ad", ls="--", lw=1, alpha=0.6)
+    axR.annotate("coast → exact limit L = 4321/44100 ≈ 0.098\n(Prop 3: permanent ensemble "
+                 "bias, not a per-world memory)",
+                 (H + K, L_LIMIT), fontsize=7.5, color="#8e44ad",
+                 xytext=(H + 0.3, L_LIMIT + 0.03), textcoords="data")
     axR.set_xlabel("events elapsed"); axR.set_ylabel("distinguishability (TV)  i vs j")
     axR.set_xticks(ss); axR.set_ylim(-0.01, 0.2); axR.grid(alpha=0.25)
     axR.set_title("Part 2 — coasting momentum vs a re-read past (the width of 'now')",
                   fontsize=9.5)
     axR.legend(fontsize=8, loc="lower right")
 
-    fig.suptitle("How much of the past survives in the present, and for how long.\n"
-                 "The present starts empty of history and inherits it (Part 1); once the past "
-                 "is deleted the present can only fade-or-hold, never regrow — regrowth needs "
-                 "the past kept (Part 2).", fontsize=10.5)
+    fig.suptitle("How much of the past biases the present, and for how long "
+                 "(an ensemble bias, not a per-world memory).\n"
+                 "The distribution over presents starts unbiased and becomes biased (Part 1); "
+                 "once the past is deleted the bias can only fade to an exact limit, held above "
+                 "it only while the past is kept (Part 2).", fontsize=10.5)
     fig.tight_layout(rect=[0, 0, 1, 0.9])
     out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "figures",
                        "present_width.png")

@@ -11,8 +11,8 @@ PRESENT WIDTH -- how much of the past survives in the present, and for how long
   3  0.6784      0.1514      0.2232          0.5642        0.0287        0.0509
   [PASS] present-only distinguishability <= full-state distinguishability at every horizon (the present can never carry MORE memory than active+archive together)
   [PASS] at h=0 the present carries NONE of the distinction (identical slices) while the full state carries ALL of it (rho=0): the memory starts entirely in the archive
-  [PASS] by h=3 the present alone carries a POSITIVE share of the memory (rho=0.223): CONTACT progressively transcribes the past into the present
-  [PASS] rho < 1: some distinguishing memory still lives ONLY in the archive (consistent with the ERASE test's 'archive not redundant')
+  [PASS] by h=3 the present alone carries a POSITIVE share of the distinguishing bias (rho=0.223): CONTACT progressively transcribes the past into the present
+  [PASS] rho < 1: the lineages stay only PARTLY separable from the present alone -- some of the distinction is legible only WITH the archive (consistent with 'archive not redundant')
 ============================================================================================
 [Part 2] imprint to H, then DELETE the past and coast (BUD-only) vs KEEP (extended)
   step  archive-free D_slice (coasting)   archive-kept D_slice (KEEP)
@@ -22,12 +22,12 @@ PRESENT WIDTH -- how much of the past survives in the present, and for how long
   3     0.1174                          0.1514
   4     0.1049                          0.1506
   5     0.1003                          0.1467
-  [PASS] archive-free future: lineage distinguishability is NON-INCREASING after deletion (a single fixed BUD-only kernel applied to both lineages -> data-processing inequality; inherited momentum can only FADE or HOLD, never regrow)
-  width-of-now (archive-free): D_slice at deletion = 0.1470; after 3 coasting steps = 0.1003 -> fades by 0.0467 over 3 archive-free steps
-  [PASS] at deletion the present already carries a positive inherited momentum (nonzero distinguishability with the past gone)
-  [PASS] archive-retained future EXCEEDS the archive-free coast at some step (KEEP > ERASE): distinguishability can GROW only while the past still exists to be re-read -- amplification is a property of the past, coasting only of the present
+  [PASS] archive-free future: lineage distinguishability is NON-INCREASING after deletion (a single fixed BUD-only kernel on PROJECTIONS -- well-defined only by Proposition 1 -- applied to both lineages -> data-processing inequality; the archive-free ensemble bias can only FADE or HOLD, never grow)
+  width-of-now (archive-free): D_slice at deletion = 0.1470; after 3 coasting steps = 0.1003 -> fades by 0.0467 over 3 archive-free steps (exact positive limit L = 4321/44100 ~= 0.0980 by Proposition 3, coast_asymptote.py)
+  [PASS] at deletion the ensemble of presents is already biased by lineage (nonzero distinguishability with the past gone)
+  [PASS] archive-retained future stays >= the archive-free coast at every step (KEEP >= ERASE; KEEP is non-monotone here -- 0.147->0.151->0.151->0.147, one uptick then decline). Sustaining the historical bias needs the past kept and re-read; the archive-free coast can only fall (data-processing)
   [PASS] NULL (BUD-only throughout): distinguishability is 0 at every step -- no CONTACT, no momentum to inherit (matched null)
   [PASS] coasting distinguishability unchanged under nontrivial relabelling
 ============================================================================================
 ALL EXACT CHECKS PASSED.
-Reading: (1) the present starts carrying NONE of the history (rho=0) and progressively inherits it as CONTACT transcribes the archive into active structure (rho rises but stays < 1 -- some memory remains only in the past). (2) Once the past is deleted the present coasts: its inherited momentum can only fade or hold (data-processing), never regrow; regrowth needs the past kept and re-read (KEEP > coast). The archive-free decay profile is the temporal width of 'now'. One matched pair, small horizon, a designed CONTACT coupling -- a mechanism test, not a claim about generic worlds.
+Reading: this is an ENSEMBLE statement -- a single active graph is a class BOTH lineages produce; only the DISTRIBUTION over presents differs (a bias, like AUC in Study A, never a per-world record; the present does not remember, the present is biased). (1) At h=0 the ensemble of presents is UNbiased by lineage (rho=0); rho rises as CONTACT transcribes the archive into active structure but stays < 1 (the present is only partly separable; the rest of the distinction is still in the past). (2) Once the past is deleted the archive-free bias can only fade or hold (data-processing on the projection kernel, Prop 1), converging to the exact positive limit of Proposition 3; with the archive kept, distinguishability stays >= the coast (sustaining the bias needs the past re-read). One matched pair, small horizon, a designed CONTACT coupling -- a mechanism test, not a claim about generic worlds.
