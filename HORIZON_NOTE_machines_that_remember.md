@@ -1,6 +1,21 @@
 # Horizon note: what a machine that remembers like the universe might look like
 
-*Register: speculative.* A musing for future builders, kept here so it stops getting lost. *Status: nothing in this note is a result.* The banked results it leans on live in `SYNTHESIS.md` and `substrates/RESULTS_*.md`; the parts that are already true in the world are marked; the parts that are design principle are marked; the parts that are play are marked. *Why it exists:* the older framework it rests on ("impedance matching with the universe", 2024) has now been reconstructed from half-memory four separate times. Conversations don't remember. Structures do. So: into the structure.
+*Register: speculative.* A musing for future builders, kept here so it stops getting lost. *Status: nothing in this note is a result.* The banked results it leans on live in this repository — see **Trace the maths** immediately below; the parts that are already true in the world are marked, the parts that are design principle are marked, the parts that are play are marked. *Why it exists:* the older framework it rests on ("impedance matching with the universe", 2024) has now been reconstructed from half-memory four separate times. Conversations don't remember. Structures do. So: into the structure.
+
+---
+
+### Trace the maths (for engineers arriving cold)
+
+The rigorous work behind this note's one **positive result** — *a coherent probe reads a quasicrystal's intrinsic geometric address; an incoherent walker reads nothing* (the note's "Part II") — is here, with data, code and figures:
+
+- **The reader result / the exo–endo split** (address AUC **0.986** for Ammann–Beenker vs **0.661** for Penrose, identity surviving graph destruction): paper [`silent_corruption/relational_corruption_v3_matched_scale.md`](silent_corruption/relational_corruption_v3_matched_scale.md); reproducibility data + scripts in [`silent_corruption/`](silent_corruption/). **Formal, citable publication:** [Zenodo record 15560880](https://zenodo.org/records/15560880).
+- **Geometry-as-memory / pattern persistence** (the "the geometry IS the memory" toy models behind §§4–5): [`toy_model/`](toy_model/).
+- **The transformer / LLM-geometry hooks in §1** (positional encodings as addresses, attention as a coherent reader): [`ai_minds/`](ai_minds/).
+- **Described here but *not* committed to this repository** (provenance and design principle, not banked results): the 2024 "impedance matching" framework (§3) and the accretion-law / Hamburger-moment-problem material (§4, including the Frucht-graph divergence). These are leads, not repository results — treat them as such.
+
+*Everything above the "Trace the maths" line and below it carries honesty markers in brackets — `(True.)`, `(Ours, speculative.)`, `(Play.)` — please keep them when editing.*
+
+---
 
 ## 1. The hook, for anyone who builds language models
 
@@ -48,7 +63,7 @@ Read as a law of becoming: each new moment is constrained by, and rests on, all 
 
 Two corollaries with teeth:
 
-**Divergence is banked.** Two vertices that have ever produced different moments can stage local reconciliations but can never permanently agree again. Verified on the Frucht graph: identical through walk length 5, split at 6, silent again at 7, 9, 11, then diverging forever with reversed sign from 13. Nonlocality has a texture, not just a threshold. (True; see `docs/`.)
+**Divergence is banked.** Two vertices that have ever produced different moments can stage local reconciliations but can never permanently agree again. Verified on the Frucht graph: identical through walk length 5, split at 6, silent again at 7, 9, 11, then diverging forever with reversed sign from 13. Nonlocality has a texture, not just a threshold. (Mathematics true; the computation is *not committed to this repository* — provenance, not a banked result here.)
 
 **Freezing is a geometric event.** When a Hankel determinant touches zero, the measure collapses to finitely many atoms and every future moment is thereafter determined by recursion — playback, no further choice. A structure that keeps accreting while staying strictly interior to its admissibility cone keeps slack: multiple legal futures. Distance-to-the-wall is a novelty budget. (Mathematics true; the reading is play.)
 
