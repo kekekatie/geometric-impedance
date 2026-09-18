@@ -42,7 +42,7 @@ Speculative musings for future builders - leads walked around and written down s
 |------|-------------|
 | [What a machine that remembers like the universe might look like](HORIZON_NOTE_machines_that_remember.md) | Where transport-vs-storage shows up in the transformers you already ship, the accretion law (the past carves the space of legal futures), and what a self-addressing, locally-remembering machine would need |
 
-*Tracing the maths behind the note:* its one positive result — a coherent probe reads a quasicrystal's geometric address, an incoherent walker cannot — is the [Silent Corruption](silent_corruption/) work above ([Zenodo 15560880](https://zenodo.org/records/15560880)); the note's "Trace the maths" box links each claim to the files that back it (and flags the parts that are provenance, not repository results).
+*Tracing the maths behind the note:* its one positive result — a coherent probe reads a quasicrystal's geometric address, an incoherent walker cannot — is the [Silent Corruption](silent_corruption/) work above ([Zenodo — DOI 10.5281/zenodo.20405271](https://doi.org/10.5281/zenodo.20405271)); the note's "Trace the maths" box links each claim to the files that back it (and flags the parts that are provenance, not repository results).
 
 ---
 
