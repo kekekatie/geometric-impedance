@@ -8,7 +8,7 @@
 
 The rigorous work behind this note's one **positive result** — *a coherent probe reads a quasicrystal's intrinsic geometric address; an incoherent walker reads nothing* (the note's "Part II") — is here, with data, code and figures:
 
-- **The reader result / the exo–endo split** (address AUC **0.986** for Ammann–Beenker vs **0.661** for Penrose, identity surviving graph destruction): paper [`silent_corruption/relational_corruption_v3_matched_scale.md`](silent_corruption/relational_corruption_v3_matched_scale.md); reproducibility data + scripts in [`silent_corruption/`](silent_corruption/). **Formal, citable publication:** [Zenodo record 15560880](https://zenodo.org/records/15560880).
+- **The reader result / the exo–endo split** (address AUC **0.986** for Ammann–Beenker vs **0.661** for Penrose, identity surviving graph destruction): paper [`silent_corruption/relational_corruption_v3_matched_scale.md`](silent_corruption/relational_corruption_v3_matched_scale.md); reproducibility data + scripts in [`silent_corruption/`](silent_corruption/). **Formal, citable publication:** [Zenodo — DOI 10.5281/zenodo.20405271](https://doi.org/10.5281/zenodo.20405271).
 - **Geometry-as-memory / pattern persistence** (the "the geometry IS the memory" toy models behind §§4–5): [`toy_model/`](toy_model/).
 - **The transformer / LLM-geometry hooks in §1** (positional encodings as addresses, attention as a coherent reader): [`ai_minds/`](ai_minds/).
 - **Described here but *not* committed to this repository** (provenance and design principle, not banked results): the 2024 "impedance matching" framework (§3) and the accretion-law / Hamburger-moment-problem material (§4, including the Frucht-graph divergence). These are leads, not repository results — treat them as such.
