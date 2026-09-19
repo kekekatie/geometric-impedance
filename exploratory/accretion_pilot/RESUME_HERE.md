@@ -30,17 +30,19 @@ reconstructed the key numbers):
    **holds forever** at an exact positive floor **`L = 4321/44100 ≈ 0.098`** (a finite
    absorbing Markov chain, because budding conserves the active-vertex count at `k=1`).
 5. [`endogenous_pair_robustness/`](endogenous_pair_robustness/) — **`L` is the pair's, not one
-   example's.** Exact `L` for all 11 matched pairs: the finite-absorbing-chain *structure* is
-   universal, but the *value* splits into a **dichotomy** — 8/11 **durable** (`L>0`) and 3/11
-   **washout** (`L=0`, difference purely archival, archive redundant to the active layer).
+   example's; three fates, washout empty.** Exact `L` for all 11 matched pairs: the
+   finite-absorbing-chain *structure* is universal; fate is **8 durable** (`L>0`), **3 inert**
+   (`L=0`, never expressed), **0 washout** — **Proposition 4: expression ⇒ durability**. Fate is
+   decided at step 1: `L=0` ⇔ archives **menu-equivalent**.
 6. [`endogenous_graft_prevalence/`](endogenous_graft_prevalence/) — **renewal generalises.**
    Over every depth-2 seed/trace (22 cases): control ≡ 0 (renewal impossible without GRAFT,
    universally); with GRAFT, renewal in **20/22** and consultation in 20/22. Class 2 is the
    exact structural exception.
 
 **The story in one breath:** *the past writes a bias into the present that survives deleting
-the past entirely (it settles at an exact floor) for most matched pairs but fully washes out
-for some; keeping the past raises the distinction above that floor; and one local rule (GRAFT),
+the past entirely (it settles at an exact floor) whenever it touches the present at all — and
+for some matched pairs it never touches the present (inert); keeping the past raises the
+distinction above that floor; and one local rule (GRAFT),
 provably powerless in the control everywhere, lets a dead trace be renewed in most seeds —
 all an ensemble bias, never a per-world memory. "The present does not remember; the present is
 biased."*

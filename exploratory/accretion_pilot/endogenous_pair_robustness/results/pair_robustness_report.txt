@@ -15,10 +15,13 @@ PAIR ROBUSTNESS -- is the coast limit L one example's property, or the construct
   ( 4, 9)  a3bec69c  (2, 4) vs (3, 3)          2333/17640  0.132256   yes
   ( 5, 7)  04fabdef  (2, 3) vs (2, 2)                   0  0.000000   NO
   ( 8,10)  176ca6f6  (3, 4) vs (3, 4)                4/15  0.266667   yes
-  [PASS] every matched pair converges to an exact rational limit L >= 0 (finite absorbing chain) -- the STRUCTURE (coast is a convergent finite chain) is universal
-  [PASS] BOTH outcomes occur: 8/11 pairs have L > 0 (the archive difference leaves a DURABLE ensemble bias) and 3/11 have L = 0 (the coast fully SPENDS the difference -- archive-free-indistinguishable in the limit). So durability is a property OF THE PAIR, not universal -- the key transmission finding: whether the past's mark survives depends on the pair
-  [PASS] L takes 6 distinct exact values across the pairs (incl. 0) -- L is genuinely a property OF THE PAIR, not a universal constant
+  [PASS] every matched pair converges to an exact rational limit L >= 0 (finite absorbing chain) -- the STRUCTURE (a convergent finite chain) is universal
+  [PASS] the WASHOUT category is EMPTY (0/11). Three logical fates -- inert (never expressed in the active layer, 3), washout (expressed then decays to L=0, 0), durable (expressed, L>0, 8). HEADLINE: on the depth-2 set every EXPRESSED archive difference leaves a permanent residue -- expression => durability; nothing that touches the present ever fully fades
+  [PASS] MENU-EQUIVALENCE CRITERION: L = 0  IFF  the two archives are menu-equivalent (identical one-step projected successor distribution, D_slice(1)=0). A pair's fate is decided at the FIRST step and is predictable WITHOUT running the chain: menu-equivalent => inert => L=0; menu-distinct => durable => L>0
+  [PASS] Proposition 4 (expression => durability), verified on this set: coast[H]>0 <=> L>0 -- the absorption map is injective on the reachable H=2 lineage differences (no nonzero expressed difference is annihilated by absorption; whether this holds beyond the depth-2 set is open)
+  [PASS] L takes 6 distinct exact values (incl. 0) -- the VALUE is a property OF THE PAIR (the structure is universal)
   [PASS] the original pair (0,1) reproduces its published limit L = 4321/44100
+  [PASS] pair (8,10) has the SAME quiet-degree signature on both sides ((3, 4)) yet the LARGEST L (4/15) -- the crude degree signature is NOT the carrier of the difference; menu-inequivalence is
   [PASS] found a featured second pair in a DIFFERENT projection family
 ============================================================================================
 [2] featured SECOND pair = classes (3, 9); projection family a3bec69c (original was 91016ad6); archives (2, 3) vs (3, 3); exact coast limit L2 = 2333/17640 = 0.132256
@@ -34,15 +37,17 @@ PAIR ROBUSTNESS -- is the coast limit L one example's property, or the construct
   [PASS] featured pair Q1: archive-free coast is non-increasing (data-processing) and ...
   [PASS] featured pair Q1: after deleting the archive the lineages still differ (coast[4]=0.1662 > 0), converging toward L2=0.1323 -- a DURABLE ensemble bias, not a per-world memory
   [PASS] featured pair Q2: KEEP >= coast at every tested step and differs after H (deleting the archive changes the active future) -- the archive is NOT redundant
-  [PASS] found a washout pair with L = 0 to feature as contrast
+  [PASS] found an inert pair (L = 0) to feature
 ============================================================================================
-[3] featured WASHOUT pair = classes (1, 6); family 91016ad6; archives (2, 3) vs (2, 4); L = 0
+[3] featured INERT pair = classes (1, 6); family 91016ad6; archives (2, 3) vs (2, 4); L = 0
     full-state distinguishability at H=2: 0.8333 (they DO differ, in the archive)
+    D_slice(1) = 0.0000, D_slice(2) = 0.0000 (EXACTLY 0 from the first step -- never expressed)
     archive-free coast: t0=0.0000, t1=0.0000, t2=0.0000, t3=0.0000, t4=0.0000
-    archive-kept  KEEP: t0=0.0000, t1=0.0000, t2=0.0000, t3=0.0000, t4=0.0000
-  [PASS] washout pair is a genuine matched pair: non-isomorphic full graphs and positive full-state distinguishability -- the archives really do differ
-  [PASS] washout pair: the archive-free coast is EXACTLY 0 at every step -- the archive difference is NEVER expressed in the active layer (not 'spent': never present there). Delete the archive and the active future is identical from the first step
-  [PASS] washout pair: KEEP == ERASE (both 0) -- so for THIS pair the archive is REDUNDANT to the active future (its difference is purely archival). The exact complement of the durable pairs, where the archive is not redundant and leaves a lasting bias
+  [PASS] inert pair is a genuine matched pair: non-isomorphic full graphs and positive full-state distinguishability -- the archives really do differ
+  [PASS] inert pair: D_slice is EXACTLY 0 from step 1 onward -- the archive difference is NEVER expressed in the active layer (nothing 'washes out'; it was never present there). Delete the archive and the active future is identical from the first step
+    mechanism: equal total eligible events? 6==6; identical projected CONTACT menu? True
+  [PASS] MECHANISM confirmed: the two archives are MENU-EQUIVALENT -- same total eligible event count and the same multiset of projected CONTACT successors -- so the scheduler cannot tell the lineages apart at the active level. That is WHY this pair is inert (L=0), exactly as the criterion predicts, WITHOUT running the chain
+  [PASS] SCOPE: for an inert pair the archive is redundant FOR THIS PAIR'S DIFFERENCE only -- both archives still SUPPLY CONTACT opportunities to the active layer; they just supply the SAME ones. The archive is not globally inert (cf. active_projection).
 ============================================================================================
 ALL EXACT CHECKS PASSED.
-Summary: across 11 matched pairs the archive-free coast is ALWAYS a finite absorbing chain with an exact rational limit L (the STRUCTURE is universal), but L takes 6 distinct values -- 8/11 POSITIVE (the archive leaves a durable ensemble bias; archive not redundant) and 3/11 EXACTLY ZERO (the archive difference is purely archival, never expressed in the active layer; archive redundant to the active future). So whether the past's mark is durable is a property OF THE PAIR (original 4321/44100; featured second 2333/17640; washout 0), not a universal fact. Mechanism study on the depth-2 class set; not a claim about generic worlds.
+Summary: across 11 matched pairs the archive-free coast is ALWAYS a finite absorbing chain with an exact rational limit L (the STRUCTURE is universal). Three logical fates -- inert (3), washout (0), durable (8) -- but the WASHOUT middle is EMPTY: on the depth-2 set every archive difference that is EXPRESSED in the active layer leaves a permanent residue (Proposition 4: expression => durability). Fate is decided at the first step and predictable without the chain: a pair is inert (L=0) IFF its archives are MENU-EQUIVALENT, else durable (L>0). The value of L (e.g. original 4321/44100; featured second 2333/17640; (8,10) the largest at 4/15 despite equal degree signatures) is the pair's. Mechanism study on the depth-2 class set; not a claim about generic worlds.

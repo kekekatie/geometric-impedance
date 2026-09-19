@@ -30,11 +30,11 @@ def main():
     bars = axA.bar(xs, Ls, color=[FAM_COLORS.get(f, "#888") for f in fams], edgecolor="#333")
     for i, L in enumerate(Ls):
         if L == 0:
-            axA.annotate("washout\nL=0", (i, 0.004), ha="center", va="bottom",
+            axA.annotate("inert\nL=0", (i, 0.004), ha="center", va="bottom",
                          fontsize=7, color="#c0392b")
     axA.set_xticks(list(xs)); axA.set_xticklabels(labels, fontsize=8, rotation=45)
     axA.set_xlabel("matched pair (classes)"); axA.set_ylabel("exact coast limit  L")
-    axA.set_title("L for every matched pair — durable (bar) vs washout (L=0)", fontsize=9.5)
+    axA.set_title("L for every matched pair — durable (bar) vs inert (L=0)", fontsize=9.5)
     axA.grid(alpha=0.2, axis="y")
     handles = [plt.Rectangle((0, 0), 1, 1, color=c) for c in FAM_COLORS.values()]
     axA.legend(handles, [f"proj family {k[:6]}" for k in FAM_COLORS], fontsize=7.5,
@@ -44,9 +44,9 @@ def main():
     dur = next((a, b) for (a, b) in pairs
                if PW.wl(PW.erase(fulls[a]))[:8] != PW.wl(PW.erase(fulls[0]))[:8]
                and PR.coast_limit(fulls[a], fulls[b])[0] > 0)
-    wsh = next((a, b) for (a, b) in pairs if PR.coast_limit(fulls[a], fulls[b])[0] == 0)
+    ine = next((a, b) for (a, b) in pairs if PR.coast_limit(fulls[a], fulls[b])[0] == 0)
     for (pair, col, lab, ls) in [(dur, "#1a7f37", f"durable pair {dur}", "-o"),
-                                 (wsh, "#c0392b", f"washout pair {wsh}", "--s")]:
+                                 (ine, "#c0392b", f"inert pair {ine} (never expressed)", "--s")]:
         a, b = pair
         ef_i = PW.run_process(fulls[a], PW.events_ext, 2, PW.events_bud, 4, True)[1]
         ef_j = PW.run_process(fulls[b], PW.events_ext, 2, PW.events_bud, 4, True)[1]
@@ -58,13 +58,14 @@ def main():
                  xytext=(3.1, Ld + 0.015), textcoords="data")
     axB.set_xlabel("archive-free coast step (after deletion at H=2)")
     axB.set_ylabel("distinguishability  i vs j (TV)")
-    axB.set_title("Two fates of a deleted archive: durable bias vs washout", fontsize=9.5)
+    axB.set_title("Two fates of a deleted archive: durable residue vs inert (never expressed)",
+                  fontsize=9.5)
     axB.set_xticks(range(5)); axB.grid(alpha=0.25); axB.legend(fontsize=8)
 
-    fig.suptitle("Is the coast limit L one example's property? No — it is the pair's. "
-                 "The finite-absorbing-chain STRUCTURE is universal;\nthe VALUE ranges over "
-                 "many exact rationals, positive for 8/11 pairs (durable ensemble bias) and "
-                 "exactly 0 for 3/11 (purely archival).", fontsize=10)
+    fig.suptitle("Is the coast limit L one example's property? No — it is the pair's. The "
+                 "finite-absorbing-chain STRUCTURE is universal.\nThree fates: durable (8/11, "
+                 "L>0), inert (3/11, L=0, never expressed), washout (EMPTY) — every expressed "
+                 "difference leaves a permanent residue.", fontsize=10)
     fig.tight_layout(rect=[0, 0, 1, 0.9])
     out = os.path.join(HERE, "figures", "pair_robustness.png")
     fig.savefig(out, dpi=140); print("wrote", out)

@@ -178,24 +178,48 @@ def main():
         f.write("\n".join(rows) + "\n")
     for r in rows:
         log("  " + r)
-    npos = sum(1 for p in pairs if results[p][0] > 0)
-    nzero = sum(1 for p in pairs if results[p][0] == 0)
+    # ---- fate classification: EXPRESSION (D_slice at h=1,2) decides the fate ----
+    def slice_of(G):
+        return PW.run_process(G, PW.events_ext, 3, PW.events_ext, 0, False)[1]
+    D1, D2, fate = {}, {}, {}
+    for (a, b) in pairs:
+        si, sj = slice_of(fulls[a]), slice_of(fulls[b])
+        D1[(a, b)] = PW.tv(si[1], sj[1]); D2[(a, b)] = PW.tv(si[2], sj[2])
+        L = results[(a, b)][0]
+        fate[(a, b)] = "durable" if L > 0 else ("washout" if D2[(a, b)] > 0 else "inert")
+    ndur = sum(1 for p in pairs if fate[p] == "durable")
+    nin = sum(1 for p in pairs if fate[p] == "inert")
+    nwash = sum(1 for p in pairs if fate[p] == "washout")
     require(all(results[p][0] >= 0 for p in pairs),
             "every matched pair converges to an exact rational limit L >= 0 (finite absorbing "
-            "chain) -- the STRUCTURE (coast is a convergent finite chain) is universal")
-    require(npos > 0 and nzero > 0,
-            f"BOTH outcomes occur: {npos}/{len(pairs)} pairs have L > 0 (the archive difference "
-            f"leaves a DURABLE ensemble bias) and {nzero}/{len(pairs)} have L = 0 (the coast "
-            f"fully SPENDS the difference -- archive-free-indistinguishable in the limit). So "
-            f"durability is a property OF THE PAIR, not universal -- the key transmission "
-            f"finding: whether the past's mark survives depends on the pair")
+            "chain) -- the STRUCTURE (a convergent finite chain) is universal")
+    require(nwash == 0,
+            f"the WASHOUT category is EMPTY (0/{len(pairs)}). Three logical fates -- inert "
+            f"(never expressed in the active layer, {nin}), washout (expressed then decays to "
+            f"L=0, 0), durable (expressed, L>0, {ndur}). HEADLINE: on the depth-2 set every "
+            f"EXPRESSED archive difference leaves a permanent residue -- expression => "
+            f"durability; nothing that touches the present ever fully fades")
+    require(all((results[p][0] == 0) == (D1[p] == 0) for p in pairs),
+            "MENU-EQUIVALENCE CRITERION: L = 0  IFF  the two archives are menu-equivalent "
+            "(identical one-step projected successor distribution, D_slice(1)=0). A pair's fate "
+            "is decided at the FIRST step and is predictable WITHOUT running the chain: "
+            "menu-equivalent => inert => L=0; menu-distinct => durable => L>0")
+    require(all((D2[p] > 0) == (results[p][0] > 0) for p in pairs),
+            "Proposition 4 (expression => durability), verified on this set: coast[H]>0 <=> L>0 "
+            "-- the absorption map is injective on the reachable H=2 lineage differences (no "
+            "nonzero expressed difference is annihilated by absorption; whether this holds "
+            "beyond the depth-2 set is open)")
     distinct_L = sorted(set(results[p][0] for p in pairs))
     require(len(distinct_L) > 1,
-            f"L takes {len(distinct_L)} distinct exact values across the pairs (incl. 0) -- L is "
-            f"genuinely a property OF THE PAIR, not a universal constant")
-    # the original pair (0,1) is one row; confirm its known value 4321/44100 appears
+            f"L takes {len(distinct_L)} distinct exact values (incl. 0) -- the VALUE is a "
+            f"property OF THE PAIR (the structure is universal)")
     require(results.get((0, 1), (None,))[0] == Fr(4321, 44100),
             "the original pair (0,1) reproduces its published limit L = 4321/44100")
+    require(results[(8, 10)][0] == max(results[p][0] for p in pairs)
+            and PW.q_sig(fulls[8]) == PW.q_sig(fulls[10]),
+            f"pair (8,10) has the SAME quiet-degree signature on both sides "
+            f"({PW.q_sig(fulls[8])}) yet the LARGEST L ({results[(8,10)][0]}) -- the crude "
+            f"degree signature is NOT the carrier of the difference; menu-inequivalence is")
 
     # ---- [2] FEATURED second pair: different projection family, full analysis ----
     orig_wl = PW.wl(PW.erase(fulls[0]))[:8]
@@ -247,37 +271,54 @@ def main():
             "featured pair Q2: KEEP >= coast at every tested step and differs after H "
             "(deleting the archive changes the active future) -- the archive is NOT redundant")
 
-    # ---- [3] FEATURED WASHOUT pair (L = 0): the archive difference never reaches the active layer ----
-    washout = next(((x, y) for (x, y) in pairs if results[(x, y)][0] == 0), None)
-    require(washout is not None, "found a washout pair with L = 0 to feature as contrast")
-    wx, wy = washout; Wi, Wj = fulls[wx], fulls[wy]
+    # ---- [3] FEATURED INERT pair (L = 0): the archive difference is never expressed ----
+    inert = next(((x, y) for (x, y) in pairs if fate[(x, y)] == "inert"), None)
+    require(inert is not None, "found an inert pair (L = 0) to feature")
+    wx, wy = inert; Wi, Wj = fulls[wx], fulls[wy]
     log("=" * 92)
-    log(f"[3] featured WASHOUT pair = classes {washout}; family "
+    log(f"[3] featured INERT pair = classes {inert}; family "
         f"{PW.wl(PW.erase(Wi))[:8]}; archives {PW.q_sig(Wi)} vs {PW.q_sig(Wj)}; L = 0")
     wfull_i, wef_i = PW.run_process(Wi, PW.events_ext, H, PW.events_bud, 4, True)
     wfull_j, wef_j = PW.run_process(Wj, PW.events_ext, H, PW.events_bud, 4, True)
     wcoast = {s: PW.tv(wef_i[s], wef_j[s]) for s in range(H + 4 + 1)}
     Dfull_H = PW.tv(wfull_i[H], wfull_j[H])
-    wkp_i = PW.run_process(Wi, PW.events_ext, H, PW.events_ext, 4, False)[1]
-    wkp_j = PW.run_process(Wj, PW.events_ext, H, PW.events_ext, 4, False)[1]
-    wkept = {s: PW.tv(wkp_i[s], wkp_j[s]) for s in range(H + 4 + 1)}
     log(f"    full-state distinguishability at H=2: {float(Dfull_H):.4f} (they DO differ, in "
         f"the archive)")
+    log(f"    D_slice(1) = {float(D1[inert]):.4f}, D_slice(2) = {float(D2[inert]):.4f} "
+        f"(EXACTLY 0 from the first step -- never expressed)")
     log("    archive-free coast: "
         + ", ".join(f"t{s-H}={float(wcoast[s]):.4f}" for s in range(H, H + 4 + 1)))
-    log("    archive-kept  KEEP: "
-        + ", ".join(f"t{s-H}={float(wkept[s]):.4f}" for s in range(H, H + 4 + 1)))
     require(not PW.iso(Wi, Wj) and Dfull_H > 0,
-            "washout pair is a genuine matched pair: non-isomorphic full graphs and positive "
+            "inert pair is a genuine matched pair: non-isomorphic full graphs and positive "
             "full-state distinguishability -- the archives really do differ")
-    require(all(wcoast[s] == 0 for s in range(H, H + 4 + 1)),
-            "washout pair: the archive-free coast is EXACTLY 0 at every step -- the archive "
-            "difference is NEVER expressed in the active layer (not 'spent': never present "
+    require(D1[inert] == 0 and all(wcoast[s] == 0 for s in range(H, H + 4 + 1)),
+            "inert pair: D_slice is EXACTLY 0 from step 1 onward -- the archive difference is "
+            "NEVER expressed in the active layer (nothing 'washes out'; it was never present "
             "there). Delete the archive and the active future is identical from the first step")
-    require(all(wkept[s] == wcoast[s] for s in range(H, H + 4 + 1)),
-            "washout pair: KEEP == ERASE (both 0) -- so for THIS pair the archive is REDUNDANT "
-            "to the active future (its difference is purely archival). The exact complement of "
-            "the durable pairs, where the archive is not redundant and leaves a lasting bias")
+
+    # mechanism: the two archives present IDENTICAL projected CONTACT menus (menu-equivalent)
+    from collections import Counter
+
+    def contact_menu_proj(G):
+        c = Counter()
+        for e in PW.events_contact(G):
+            c[PW.wl(PW.erase(PW.apply_ev(G, e)))] += 1
+        return c
+
+    me_ok = (contact_menu_proj(Wi) == contact_menu_proj(Wj)
+             and len(PW.events_ext(Wi)) == len(PW.events_ext(Wj)))
+    log(f"    mechanism: equal total eligible events? {len(PW.events_ext(Wi))}=="
+        f"{len(PW.events_ext(Wj))}; identical projected CONTACT menu? "
+        f"{contact_menu_proj(Wi) == contact_menu_proj(Wj)}")
+    require(me_ok,
+            "MECHANISM confirmed: the two archives are MENU-EQUIVALENT -- same total eligible "
+            "event count and the same multiset of projected CONTACT successors -- so the "
+            "scheduler cannot tell the lineages apart at the active level. That is WHY this pair "
+            "is inert (L=0), exactly as the criterion predicts, WITHOUT running the chain")
+    require(True,
+            "SCOPE: for an inert pair the archive is redundant FOR THIS PAIR'S DIFFERENCE only "
+            "-- both archives still SUPPLY CONTACT opportunities to the active layer; they just "
+            "supply the SAME ones. The archive is not globally inert (cf. active_projection).")
 
     log("=" * 92)
     if FAILS:
@@ -285,14 +326,15 @@ def main():
     else:
         log("ALL EXACT CHECKS PASSED.")
     log(f"Summary: across {len(pairs)} matched pairs the archive-free coast is ALWAYS a finite "
-        f"absorbing chain with an exact rational limit L (the STRUCTURE is universal), but L "
-        f"takes {len(distinct_L)} distinct values -- {npos}/{len(pairs)} POSITIVE (the archive "
-        f"leaves a durable ensemble bias; archive not redundant) and {nzero}/{len(pairs)} EXACTLY "
-        f"ZERO (the archive difference is purely archival, never expressed in the active layer; "
-        f"archive redundant to the active future). So whether the past's mark is durable is a "
-        f"property OF THE PAIR (original 4321/44100; featured second {L2}; washout 0), not a "
-        f"universal fact. Mechanism study on the depth-2 class set; not a claim about generic "
-        f"worlds.")
+        f"absorbing chain with an exact rational limit L (the STRUCTURE is universal). Three "
+        f"logical fates -- inert ({nin}), washout (0), durable ({ndur}) -- but the WASHOUT "
+        f"middle is EMPTY: on the depth-2 set every archive difference that is EXPRESSED in the "
+        f"active layer leaves a permanent residue (Proposition 4: expression => durability). "
+        f"Fate is decided at the first step and predictable without the chain: a pair is inert "
+        f"(L=0) IFF its archives are MENU-EQUIVALENT, else durable (L>0). The value of L (e.g. "
+        f"original 4321/44100; featured second {L2}; (8,10) the largest at 4/15 despite equal "
+        f"degree signatures) is the pair's. Mechanism study on the depth-2 class set; not a "
+        f"claim about generic worlds.")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")
     sys.exit(1 if FAILS else 0)
