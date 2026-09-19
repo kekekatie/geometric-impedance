@@ -55,7 +55,10 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 > the archive — a tendency over the distribution, not a per-world memory), yet the archive is
 > still not redundant → and that bias is bounded (the present inherits only a fraction ρ<1 of
 > its past) and, once the past is deleted, can only fade to an **exact positive limit**
-> (L = 4321/44100, Proposition 3), held above it only while the past is re-read.**
+> (L = 4321/44100, Proposition 3), held above it only while the past is re-read → and across the
+> whole class set this splits into a **dichotomy** — the archive difference is either durably
+> transcribed (L>0) or purely archival (L=0) — while GRAFT-enabled renewal, impossible without
+> the rule everywhere, occurs in **20/22** traces with it.**
 
 ---
 
@@ -94,6 +97,8 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 | [`endogenous_renewed_contact_design/`](endogenous_renewed_contact_design/) | design comparison of the three ways to break menu monotonicity; recommends **GRAFT** (new active structure grafts onto an old quiet trace via a bounded wedge, append-only) to enable genuinely *new* relevance; legality fixture + proposed test. |
 | [`endogenous_graft_experiment/`](endogenous_graft_experiment/) | **the GRAFT test, run exactly.** On a frozen seed with a designated quiet trace whose menu starts empty: with GRAFT, the trace acquires a never-before CONTACT pair (**27.2%** by 4 events) that is then **consulted** (**7.5%**); the **control (BUD+CONTACT) is exactly 0** at every horizon (menu monotonicity). Renewal both **occurs and is consulted** — impossible without the rule. Mechanism test, one seed, not a sample. |
 | [`endogenous_erase_test/`](endogenous_erase_test/) | **the ERASE test (Fable's).** Evolve the matched pair under BUD+CONTACT, **delete the whole archive**, run the future archive-free. **Q1:** the two lineages' present-**ensembles still differ** with no archive present — the past **durably biases the distribution over active slices** (survives erasure; not a per-world memory); **Q2:** yet deleting the archive **changes** the future (`ERASE≠KEEP`), so the archive is **not redundant**. NULL (BUD-only) control is exactly identical. Both true at once; exact, one pair. |
+| [`endogenous_pair_robustness/`](endogenous_pair_robustness/) | **is L one example's property?** Exact coast limit `L` for **all 11 matched pairs** of the depth-2 set. The finite-absorbing-chain **structure is universal**; the **value is the pair's** — 6 distinct exact values, **8/11 durable** (`L>0`, archive transcribed, not redundant) and **3/11 washout** (`L=0`, difference purely archival, archive redundant to the active layer). Featured second pair (3,9): `L₂=2333/17640`, replicates ρ/Q1/Q2 in a different projection family. |
+| [`endogenous_graft_prevalence/`](endogenous_graft_prevalence/) | **does renewal generalise?** The GRAFT test over **every** depth-2 seed and quiet trace (22 cases). **Control ≡ 0 for all** (renewal impossible without GRAFT, universally); **with GRAFT, renewal in 20/22 (91%)** and consultation in 20/22 (mean renewal ≈0.222 by 4 events). Class 2 is the exact structural exception (no wedge reachable). |
 | [`endogenous_present_width/`](endogenous_present_width/) | **the width of "now"** (an **ensemble** bias, never a per-world memory). Quantifies the ERASE mark. **How much:** the surviving fraction `ρ=present/full` distinguishability rises from **0** (history starts entirely in the archive) to **~0.22** by 3 events, staying **< 1** (present inherits a bounded share). **How long:** delete the past and the present coasts — distinguishability is **provably non-increasing** (data-processing on the projection kernel, Prop 1) and **converges to an exact positive limit `L=4321/44100`** (**Prop 3**: a finite absorbing chain, since `ΔA=0` at `k=1`) — so a positive bias persists with **no past at all**; with the archive **kept** it stays **≥ the coast at every tested step** (the past *raises* the distinction above the floor, it does not sustain it). Exact, one pair. |
 
 ### Standalone geometric note

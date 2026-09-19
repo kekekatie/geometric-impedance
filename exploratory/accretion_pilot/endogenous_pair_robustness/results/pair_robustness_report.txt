@@ -1,0 +1,48 @@
+============================================================================================
+PAIR ROBUSTNESS -- is the coast limit L one example's property, or the construction's?
+============================================================================================
+  [PASS] depth-2 classes contain 11 matched pairs (>1) to compare
+[1] exact coast limit L for all 11 matched pairs (iso active projection, different archive)
+  pair    projWL     q_sigs            L (exact)            L (float)   L>0
+  ( 0, 1)  91016ad6  (3, 3) vs (2, 3)          4321/44100  0.097982   yes
+  ( 0, 2)  91016ad6  (3, 3) vs (3, 3)                7/50  0.140000   yes
+  ( 0, 6)  91016ad6  (3, 3) vs (2, 4)          4321/44100  0.097982   yes
+  ( 1, 2)  91016ad6  (2, 3) vs (3, 3)           2099/8820  0.237982   yes
+  ( 1, 6)  91016ad6  (2, 3) vs (2, 4)                   0  0.000000   NO
+  ( 2, 6)  91016ad6  (3, 3) vs (2, 4)           2099/8820  0.237982   yes
+  ( 3, 4)  a3bec69c  (2, 3) vs (2, 4)                   0  0.000000   NO
+  ( 3, 9)  a3bec69c  (2, 3) vs (3, 3)          2333/17640  0.132256   yes
+  ( 4, 9)  a3bec69c  (2, 4) vs (3, 3)          2333/17640  0.132256   yes
+  ( 5, 7)  04fabdef  (2, 3) vs (2, 2)                   0  0.000000   NO
+  ( 8,10)  176ca6f6  (3, 4) vs (3, 4)                4/15  0.266667   yes
+  [PASS] every matched pair converges to an exact rational limit L >= 0 (finite absorbing chain) -- the STRUCTURE (coast is a convergent finite chain) is universal
+  [PASS] BOTH outcomes occur: 8/11 pairs have L > 0 (the archive difference leaves a DURABLE ensemble bias) and 3/11 have L = 0 (the coast fully SPENDS the difference -- archive-free-indistinguishable in the limit). So durability is a property OF THE PAIR, not universal -- the key transmission finding: whether the past's mark survives depends on the pair
+  [PASS] L takes 6 distinct exact values across the pairs (incl. 0) -- L is genuinely a property OF THE PAIR, not a universal constant
+  [PASS] the original pair (0,1) reproduces its published limit L = 4321/44100
+  [PASS] found a featured second pair in a DIFFERENT projection family
+============================================================================================
+[2] featured SECOND pair = classes (3, 9); projection family a3bec69c (original was 91016ad6); archives (2, 3) vs (3, 3); exact coast limit L2 = 2333/17640 = 0.132256
+  [PASS] featured pair: isomorphic active projection, non-isomorphic archive (a true matched pair, independent of the original)
+  rho(h) = present-only / full-state distinguishability (same measure as present_width)
+    h   D_full     D_slice    rho
+    0   1.0000     0.0000     0.0000
+    1   0.8333     0.1667     0.2000
+    2   0.7867     0.2040     0.2593
+    3   0.7799     0.2189     0.2807
+  [PASS] featured pair: at h=0 the present carries none of the distinction (rho=0) -- the difference starts entirely in the archive
+  [PASS] featured pair: by h=3 the present alone is biased by lineage (present-only distinguishability > 0) -- CONTACT transcribes it
+  [PASS] featured pair Q1: archive-free coast is non-increasing (data-processing) and ...
+  [PASS] featured pair Q1: after deleting the archive the lineages still differ (coast[4]=0.1662 > 0), converging toward L2=0.1323 -- a DURABLE ensemble bias, not a per-world memory
+  [PASS] featured pair Q2: KEEP >= coast at every tested step and differs after H (deleting the archive changes the active future) -- the archive is NOT redundant
+  [PASS] found a washout pair with L = 0 to feature as contrast
+============================================================================================
+[3] featured WASHOUT pair = classes (1, 6); family 91016ad6; archives (2, 3) vs (2, 4); L = 0
+    full-state distinguishability at H=2: 0.8333 (they DO differ, in the archive)
+    archive-free coast: t0=0.0000, t1=0.0000, t2=0.0000, t3=0.0000, t4=0.0000
+    archive-kept  KEEP: t0=0.0000, t1=0.0000, t2=0.0000, t3=0.0000, t4=0.0000
+  [PASS] washout pair is a genuine matched pair: non-isomorphic full graphs and positive full-state distinguishability -- the archives really do differ
+  [PASS] washout pair: the archive-free coast is EXACTLY 0 at every step -- the archive difference is NEVER expressed in the active layer (not 'spent': never present there). Delete the archive and the active future is identical from the first step
+  [PASS] washout pair: KEEP == ERASE (both 0) -- so for THIS pair the archive is REDUNDANT to the active future (its difference is purely archival). The exact complement of the durable pairs, where the archive is not redundant and leaves a lasting bias
+============================================================================================
+ALL EXACT CHECKS PASSED.
+Summary: across 11 matched pairs the archive-free coast is ALWAYS a finite absorbing chain with an exact rational limit L (the STRUCTURE is universal), but L takes 6 distinct values -- 8/11 POSITIVE (the archive leaves a durable ensemble bias; archive not redundant) and 3/11 EXACTLY ZERO (the archive difference is purely archival, never expressed in the active layer; archive redundant to the active future). So whether the past's mark is durable is a property OF THE PAIR (original 4321/44100; featured second 2333/17640; washout 0), not a universal fact. Mechanism study on the depth-2 class set; not a claim about generic worlds.
