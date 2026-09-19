@@ -1,0 +1,97 @@
+{
+  "note": "E4 torus quantisation + E2 price-list scaling vs Phase-0 registered quanta. All numbers predicted before construction.",
+  "substrates": {
+    "ammann_beenker": {
+      "registered_shrink_ratio": 0.41421,
+      "all_orders_hit_registered": true,
+      "price_list": [
+        {
+          "order": 1,
+          "convergent": "1/1",
+          "cell_vertices": 7,
+          "seam_edges": 10,
+          "registered_quantum": 0.414214,
+          "measured_quantum": 0.414214,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": null
+        },
+        {
+          "order": 2,
+          "convergent": "3/2",
+          "cell_vertices": 41,
+          "seam_edges": 32,
+          "registered_quantum": 0.171573,
+          "measured_quantum": 0.171573,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.41421
+        },
+        {
+          "order": 3,
+          "convergent": "7/5",
+          "cell_vertices": 239,
+          "seam_edges": 83,
+          "registered_quantum": 0.071068,
+          "measured_quantum": 0.071068,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.41421
+        },
+        {
+          "order": 4,
+          "convergent": "17/12",
+          "cell_vertices": 1393,
+          "seam_edges": 208,
+          "registered_quantum": 0.029437,
+          "measured_quantum": 0.029437,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.41421
+        }
+      ]
+    },
+    "penrose": {
+      "registered_shrink_ratio": 0.61803,
+      "all_orders_hit_registered": true,
+      "price_list": [
+        {
+          "order": 1,
+          "convergent": "1/1",
+          "cell_vertices": 20,
+          "seam_edges": 9,
+          "registered_quantum": 0.236068,
+          "measured_quantum": 0.236068,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": null
+        },
+        {
+          "order": 2,
+          "convergent": "2/1",
+          "cell_vertices": 54,
+          "seam_edges": 25,
+          "registered_quantum": 0.145898,
+          "measured_quantum": 0.145898,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.61803
+        },
+        {
+          "order": 3,
+          "convergent": "3/2",
+          "cell_vertices": 143,
+          "seam_edges": 31,
+          "registered_quantum": 0.09017,
+          "measured_quantum": 0.09017,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.61803
+        },
+        {
+          "order": 4,
+          "convergent": "5/3",
+          "cell_vertices": 376,
+          "seam_edges": 78,
+          "registered_quantum": 0.055728,
+          "measured_quantum": 0.055728,
+          "hits_registered": true,
+          "measured_ratio_vs_prev": 0.61803
+        }
+      ]
+    }
+  }
+}
