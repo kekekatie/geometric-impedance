@@ -1,0 +1,530 @@
+<title>Where the Future Forks</title>
+<meta name="description" content="An interactive walkthrough of when a historical difference persists or washes out in the BUD/CONTACT toy model.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --surface2:#efece4; --ink:#1b1f24; --muted:#5f6772;
+  --line:#dcd8ce; --active:#1f8a4c; --active-soft:#e2f1e7; --quiet:#b8532f; --quiet-soft:#f6e4dc;
+  --accent:#3f51c4; --accent-soft:#e5e8fb; --sink:#c48a1f; --sink-soft:#f6ecd4;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 6px 20px rgba(20,23,28,.06);
+  --serif:'Spectral',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --bg:#14171b; --surface:#1c2026; --surface2:#242a32; --ink:#e9ecf0; --muted:#9aa4b0;
+  --line:#2f3742; --active:#43ba70; --active-soft:#173226; --quiet:#dc7a52; --quiet-soft:#33211a;
+  --accent:#8090f2; --accent-soft:#1e2440; --sink:#e2ab3d; --sink-soft:#332a16;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#14171b; --surface:#1c2026; --surface2:#242a32; --ink:#e9ecf0; --muted:#9aa4b0;
+  --line:#2f3742; --active:#43ba70; --active-soft:#173226; --quiet:#dc7a52; --quiet-soft:#33211a;
+  --accent:#8090f2; --accent-soft:#1e2440; --sink:#e2ab3d; --sink-soft:#332a16;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding-block:28px;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(28px,5vw,44px);letter-spacing:-.01em}
+h2{font-size:clamp(20px,3.4vw,27px);margin-bottom:6px}
+h3{font-size:16px;font-weight:600;font-family:var(--sans)}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted)}
+.lede{font-size:clamp(15px,2vw,17px);color:var(--muted);max-width:64ch}
+.mono{font-family:var(--mono)}
+.frac{font-family:var(--mono);font-weight:500}
+section{margin-top:44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.pad{padding:20px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tiny{font-size:12px}
+
+/* chips / toggles */
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{font:inherit;font-size:13px;font-weight:500;border:0;background:transparent;color:var(--muted);
+  padding:7px 15px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg.wd button[aria-pressed="true"][data-v="washout"]{color:var(--quiet)}
+.seg.wd button[aria-pressed="true"][data-v="durable"]{color:var(--active)}
+.btn{font:inherit;font-size:13px;font-weight:500;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink);padding:8px 14px;border-radius:9px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;
+  padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:var(--surface2)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.dot.a{background:var(--active)} .dot.q{background:var(--quiet)} .dot.s{background:var(--sink)}
+kbd{font-family:var(--mono);font-size:12px;background:var(--surface2);border:1px solid var(--line);
+  border-radius:5px;padding:1px 6px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;
+  padding:12px 14px;font-size:13.5px}
+.callout.warn{border-color:var(--sink);background:var(--sink-soft)}
+
+svg{display:block;max-width:100%}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);align-items:center}
+
+.evbtn{display:block;width:100%;text-align:left;font:inherit;font-size:13px;border:1px solid var(--line);
+  background:var(--surface);border-radius:10px;padding:10px 12px;cursor:pointer;margin-bottom:8px}
+.evbtn:hover{border-color:var(--accent);background:var(--accent-soft)}
+.evbtn .k{font-weight:600;font-family:var(--mono);font-size:12px;padding:1px 7px;border-radius:5px;margin-right:8px}
+.evbtn .k.BUD{background:var(--active-soft);color:var(--active)}
+.evbtn .k.CONTACT{background:var(--quiet-soft);color:var(--quiet)}
+
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.qgrid{grid-template-columns:1fr}}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.q h3{margin-bottom:6px}
+.q .num{font-family:var(--mono);color:var(--accent);font-size:12px}
+
+table.dist{border-collapse:collapse;width:100%;font-size:13px}
+table.dist td,table.dist th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+table.dist th{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.bar{height:10px;border-radius:5px;background:var(--accent)}
+.foot{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}
+.selectable{cursor:pointer}
+.pill-sink{font-size:11px;color:var(--sink);font-weight:600}
+.tabnum{font-variant-numeric:tabular-nums}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">accretion pilot · thread B · mechanism, not a new result</div>
+    <h1>Where the future forks</h1>
+    <p class="lede">A hands-on look at <em>things doing thing things</em>: which local events are
+      possible, how they reshape the active layer, and why a difference between two histories
+      sometimes lasts forever and sometimes vanishes without a trace. Every number here is exact
+      and comes straight from the verified model.</p>
+    <div class="row" style="margin-top:14px">
+      <span class="tag"><span class="dot a"></span>active vertex</span>
+      <span class="tag"><span class="dot q"></span>quiet vertex (archive)</span>
+      <span class="tag"><span class="dot s"></span>sink (a resting shape)</span>
+      <button class="btn" id="themeBtn" style="margin-left:auto">◐ theme</button>
+    </div>
+  </header>
+
+  <div class="callout" style="margin-top:20px">
+    <strong>Two example worlds.</strong> Each is a <em>matched pair</em>: two histories that end
+    with the <em>same active shape</em> but a <em>different archive</em> of quiet vertices. One pair
+    is a <strong style="color:var(--quiet)">washout</strong> (the difference disappears once the
+    archive is deleted); the other is <strong style="color:var(--active)">durable</strong> (it
+    lasts forever). Switch between them anywhere on the page.
+    <div class="row" style="margin-top:12px">
+      <span class="small muted">Showing:</span>
+      <span class="seg wd" id="exampleSeg" role="group" aria-label="example">
+        <button data-v="washout" aria-pressed="true">washout&nbsp;(22,25)</button>
+        <button data-v="durable" aria-pressed="false">durable&nbsp;(0,1)</button>
+      </span>
+      <span class="tag" id="fateTag"></span>
+    </div>
+  </div>
+
+  <!-- 1. starting states -->
+  <section id="s-start">
+    <div class="eyebrow">step 1</div>
+    <h2>The two starting states</h2>
+    <p class="small muted" style="max-width:70ch">Same active shape (the green part is identical up to
+      relabelling), different archive (the clay quiet vertices differ). The question: after we later
+      delete the archive, can you still tell these two worlds apart from the active layer alone?</p>
+    <div class="grid2" id="startPair"></div>
+  </section>
+
+  <!-- 2. event stepper -->
+  <section id="s-step">
+    <div class="eyebrow">step 2 · things doing thing things</div>
+    <h2>Step through the legal events</h2>
+    <p class="small muted" style="max-width:74ch">Pick a world (i or j) and click any legal event to
+      apply it. <span class="mono" style="color:var(--active)">BUD</span> needs two active vertices
+      joined by a bond; <span class="mono" style="color:var(--quiet)">CONTACT</span> is a quiet vertex
+      introducing two of its active neighbours. Watch what each event changes. Go to the erasure
+      horizon <span class="frac">H = 2</span> events, then delete the archive.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between">
+        <span class="seg" id="lineageSeg" role="group" aria-label="lineage">
+          <button data-l="i" aria-pressed="true">world i</button>
+          <button data-l="j" aria-pressed="false">world j</button>
+        </span>
+        <span class="row">
+          <span class="tag tabnum" id="stepCounter">event 0 of 2</span>
+          <button class="btn" id="resetStep">reset</button>
+        </span>
+      </div>
+      <div class="grid2" style="margin-top:14px;align-items:start">
+        <div>
+          <div id="stepGraph"></div>
+        </div>
+        <div>
+          <div id="stepPanel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. the coast graph -->
+  <section id="s-coast">
+    <div class="eyebrow">step 3 · delete the archive, then let it coast</div>
+    <h2>Where the active shape can go</h2>
+    <p class="small muted" style="max-width:74ch">Now delete every quiet vertex. With no archive left,
+      <span class="mono" style="color:var(--quiet)">CONTACT</span> can never fire again (it needs a
+      quiet vertex), so only <span class="mono" style="color:var(--active)">BUD</span> remains. This is
+      the <strong>coast</strong>: a fixed set of moves on the 4-vertex active shape. The map below is
+      every shape the coast can reach and every move between them, with exact probabilities. A
+      <strong class="pill-sink">sink</strong> is a shape every move returns to itself.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px">
+        <span class="legend">
+          <span><span class="dot a"></span> a reachable active shape</span>
+          <span><span class="dot s"></span> sink (resting shape)</span>
+          <span>arrow = a BUD move · number = its probability</span>
+        </span>
+      </div>
+      <div id="coastGraph"></div>
+      <div id="coastDetail" class="callout" style="margin-top:12px">Click any arrow to see which
+        bud produces it, or click a sink to see why it rests.</div>
+    </div>
+    <div class="callout warn" style="margin-top:12px"><strong>Not a choice.</strong> "Two possible
+      destinations" does not mean the world plans or picks its future. Each step just follows the
+      fixed local rules and their probabilities; the branching is in the ensemble of possible runs,
+      not in any single world deciding anything.</div>
+  </section>
+
+  <!-- 4. distributions -->
+  <section id="s-dist">
+    <div class="eyebrow">step 4 · one run vs the whole ensemble</div>
+    <h2>How the difference lives or dies</h2>
+    <p class="small muted" style="max-width:74ch">A single run lands in one shape; the honest claim is
+      about the <em>distribution</em> over all runs. At the moment of erasure the two worlds already
+      sit on slightly different distributions over shapes. As the coast runs, all the probability
+      drains into the sinks. The gap between the two worlds is measured by
+      <span class="mono">TV</span> (total-variation distance); its final value is the exact number
+      <span class="frac" id="Lname"></span>.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between">
+        <label class="small muted" for="tSlider">Coast step after erasure:
+          <span class="frac tabnum" id="tLabel">0</span></label>
+        <span class="tag tabnum" id="tvLabel"></span>
+      </div>
+      <input id="tSlider" type="range" min="0" max="12" value="0" step="1" style="width:100%;margin:10px 0">
+      <div id="distView"></div>
+    </div>
+    <div id="distReading" class="callout" style="margin-top:12px"></div>
+  </section>
+
+  <!-- 5. five questions -->
+  <section id="s-q">
+    <div class="eyebrow">step 5 · what to take away</div>
+    <h2>Five questions, answered by what you just did</h2>
+    <div class="qgrid">
+      <div class="q"><div class="num">Q1</div><h3>What makes a shape a sink?</h3>
+        <p class="small">Every legal BUD from it lands back on the same shape (up to relabelling).
+          "Two separate bonds" is one: bud either bond and you get two separate bonds again. Once
+          there, the active shape never changes class again.</p></div>
+      <div class="q"><div class="num">Q2</div><h3>Where can a move close off a destination?</h3>
+        <p class="small">On the coast map, a shape whose every arrow leads to a single sink can never
+          reach any other. The washout world only ever reaches one sink — there is nowhere else to go.</p></div>
+      <div class="q"><div class="num">Q3</div><h3>How can a visible difference wash out?</h3>
+        <p class="small">If the coast can only reach <em>one</em> sink, both worlds end there with
+          certainty. Any head-start difference is spent on the way in, and the final gap is exactly
+          zero — even though the difference was plainly visible earlier.</p></div>
+      <div class="q"><div class="num">Q4</div><h3>How does a lasting difference survive?</h3>
+        <p class="small">If the coast can fork to <em>two</em> sinks, the two worlds arrive with
+          different odds of each. Those final odds never change again, so the gap is frozen in as a
+          permanent, exact number.</p></div>
+      <div class="q"><div class="num">Q5</div><h3>Which parts are rules, which are consequences?</h3>
+        <p class="small"><em>Rules we chose:</em> BUD, CONTACT, and picking uniformly among the legal
+          events. <em>Consequences we derived:</em> the sinks, the probabilities, and whether the gap
+          survives. The fork law is a consequence — observed exactly here, not yet proven in general.</p></div>
+      <div class="q"><div class="num">★</div><h3>The one-line reading</h3>
+        <p class="small"><strong>Durability is a property of the future, not the past.</strong> The
+          past can only leave a lasting mark where the coast forks. A strong mark with no fork to hold
+          it drains to nothing.</p></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <p><strong>What this establishes.</strong> On the enumerated depth-2 and depth-3 sets, the fate of
+      a matched pair is set by the coast's absorption geometry: <span class="frac">L = TV(absorption
+      distributions)</span>; among <em>expressed</em> pairs, the gap survives (L&gt;0) exactly when the
+      coast can reach two or more sinks, and washes out (L=0) when it can reach only one. The
+      "only-if" direction is a definition; the "if" direction is verified on every enumerated pair
+      but <em>not proven in general</em>.</p>
+    <p><strong>What remains unresolved.</strong> When does the coast have one versus several reachable
+      sinks? Can two reachable sinks ever be split identically by two worlds (an expressed pair with
+      ≥2 sinks yet L=0)? Never seen here; unproven.</p>
+    <p><strong>Register.</strong> A toy model. Everything shown is exact and computed from the verified
+      BUD/CONTACT implementation (data validated against <span class="mono">pair_robustness.coast_limit</span>).
+      No perpendicular-space coupling and no physical-world mechanism is claimed. This page is a visual
+      aid for deciding what the paper should say — it does not revise or publish the paper.</p>
+    <p id="metaLine" class="tiny"></p>
+  </div>
+</div>
+
+<script id="DATA" type="application/json">{"meta":{"commit_context":"a43ff0c","horizon_H":2,"what_it_shows":"How local BUD/CONTACT events move the ACTIVE shape, and why a historical difference between two archives can persist (durable) or vanish (washout) after the archive is deleted.","caveats":["Everything here is EXACT (rational) and computed from the verified implementation; floats are shown only for drawing.","'Two possible destinations' does NOT mean the system anticipates or chooses its future; outcomes follow the fixed local rules and event probabilities.","Single-run stepping is an illustration; the distribution view is the exact ensemble claim. Keep them distinct.","The fork rule (durable iff the coast can fork) is verified on the enumerated depth-2 and depth-3 sets, not proven in general.","This is a toy model. No perpendicular-space coupling, no physical-world mechanism is claimed."]},"washout":{"name":"washout","classification":"washout","classes":[22,25],"L":"0","L_float":0.0,"n_sinks":1,"lineages":{"i":{"class":22,"full":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"]]},"proj":{"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"5","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","6"]],"shape":"one bond + two loose","n_edges":1}},"j":{"class":25,"full":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["5","6"]]},"proj":{"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"4","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["4","6"]],"shape":"one bond + two loose","n_edges":1}}},"proj_classes":[{"id":0,"is_sink":true,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"5","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","6"]],"shape":"one bond + two loose","n_edges":1},{"id":1,"is_sink":false,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"5","x":0.75,"y":0.75},{"id":"7","x":0.25,"y":0.75}],"edges":[["0","7"],["0","5"]],"shape":"a chain of three + one loose","n_edges":2},{"id":2,"is_sink":false,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"5","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","6"],["0","5"],["5","6"]],"shape":"a triangle + one loose","n_edges":3},{"id":3,"is_sink":false,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"4","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","4"],["3","4"],["4","6"]],"shape":"a star (one hub, three spokes)","n_edges":3}],"transitions":[{"from":0,"to":0,"prob":"1","prob_f":1.0,"events":["bud 0\u21926","bud 6\u21920"]},{"from":1,"to":0,"prob":"1/2","prob_f":0.5,"events":["bud 7\u21920","bud 5\u21920"]},{"from":1,"to":1,"prob":"1/2","prob_f":0.5,"events":["bud 0\u21927","bud 0\u21925"]},{"from":2,"to":1,"prob":"1","prob_f":1.0,"events":["bud 0\u21926","bud 6\u21920","bud 0\u21925","bud 5\u21920","bud 5\u21926","bud 6\u21925"]},{"from":3,"to":0,"prob":"1/2","prob_f":0.5,"events":["bud 0\u21924","bud 3\u21924","bud 6\u21924"]},{"from":3,"to":3,"prob":"1/2","prob_f":0.5,"events":["bud 4\u21920","bud 4\u21923","bud 4\u21926"]}],"sinks":[0],"mu_exact":{"i":{"0":"8/15","1":"11/30","2":"1/10"},"j":{"0":"23/40","1":"13/40","3":"1/10"}},"absorption_exact":{"i":{"0":"1"},"j":{"0":"1"}},"dist_steps":[{"t":0,"i":{"0":0.5333333333333333,"1":0.36666666666666664,"2":0.1,"3":0.0},"j":{"0":0.575,"1":0.325,"2":0.0,"3":0.1}},{"t":1,"i":{"0":0.7166666666666667,"1":0.2833333333333333,"2":0.0,"3":0.0},"j":{"0":0.7875,"1":0.1625,"2":0.0,"3":0.05}},{"t":2,"i":{"0":0.8583333333333333,"1":0.14166666666666666,"2":0.0,"3":0.0},"j":{"0":0.89375,"1":0.08125,"2":0.0,"3":0.025}},{"t":3,"i":{"0":0.9291666666666667,"1":0.07083333333333333,"2":0.0,"3":0.0},"j":{"0":0.946875,"1":0.040625,"2":0.0,"3":0.0125}},{"t":4,"i":{"0":0.9645833333333333,"1":0.035416666666666666,"2":0.0,"3":0.0},"j":{"0":0.9734375,"1":0.0203125,"2":0.0,"3":0.00625}},{"t":5,"i":{"0":0.9822916666666667,"1":0.017708333333333333,"2":0.0,"3":0.0},"j":{"0":0.98671875,"1":0.01015625,"2":0.0,"3":0.003125}},{"t":6,"i":{"0":0.9911458333333333,"1":0.008854166666666666,"2":0.0,"3":0.0},"j":{"0":0.993359375,"1":0.005078125,"2":0.0,"3":0.0015625}},{"t":7,"i":{"0":0.9955729166666667,"1":0.004427083333333333,"2":0.0,"3":0.0},"j":{"0":0.9966796875,"1":0.0025390625,"2":0.0,"3":0.00078125}},{"t":8,"i":{"0":0.9977864583333333,"1":0.0022135416666666666,"2":0.0,"3":0.0},"j":{"0":0.99833984375,"1":0.00126953125,"2":0.0,"3":0.000390625}},{"t":9,"i":{"0":0.9988932291666667,"1":0.0011067708333333333,"2":0.0,"3":0.0},"j":{"0":0.999169921875,"1":0.000634765625,"2":0.0,"3":0.0001953125}},{"t":10,"i":{"0":0.9994466145833333,"1":0.0005533854166666667,"2":0.0,"3":0.0},"j":{"0":0.9995849609375,"1":0.0003173828125,"2":0.0,"3":9.765625e-05}},{"t":11,"i":{"0":0.9997233072916667,"1":0.0002766927083333333,"2":0.0,"3":0.0},"j":{"0":0.99979248046875,"1":0.00015869140625,"2":0.0,"3":4.8828125e-05}},{"t":12,"i":{"0":0.9998616536458333,"1":0.00013834635416666666,"2":0.0,"3":0.0},"j":{"0":0.999896240234375,"1":7.9345703125e-05,"2":0.0,"3":2.44140625e-05}}],"tv_series":[0.14166666666666666,0.12083333333333333,0.06041666666666667,0.030208333333333334,0.015104166666666667,0.007552083333333333,0.0037760416666666667,0.0018880208333333333,0.0009440104166666667,0.00047200520833333334,0.00023600260416666667,0.00011800130208333333,5.900065104166667e-05],"step_tree":{"i":{"root":"n0","nodes":{"n0":{"id":"n0","depth":0,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n1"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n5"},{"kind":"CONTACT","participants":["0","5","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,5 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-5 appears in the active layer (the archive vertex 1 is unchanged)","to":"n9"},{"kind":"CONTACT","participants":["5","6","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 5,6 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 5-6 appears in the active layer (the archive vertex 1 is unchanged)","to":"n15"}]},"n1":{"id":"n1","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","7"],"why":"vertices 0 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 7","to":"n2"},{"kind":"BUD","participants":["7","0"],"why":"vertices 7 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 0","to":"n3"},{"kind":"CONTACT","participants":["0","5","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,5 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-5 appears in the active layer (the archive vertex 1 is unchanged)","to":"n4"}]},"n2":{"id":"n2","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["0","8"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n3":{"id":"n3","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["0","8"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n4":{"id":"n4","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["0","5"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"]]},"menu_size":0,"events":[]},"n5":{"id":"n5","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["6","7"],"why":"vertices 6 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 7","to":"n6"},{"kind":"BUD","participants":["7","6"],"why":"vertices 7 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 6","to":"n7"},{"kind":"CONTACT","participants":["5","6","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 5,6 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 5-6 appears in the active layer (the archive vertex 1 is unchanged)","to":"n8"}]},"n6":{"id":"n6","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n7":{"id":"n7","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n8":{"id":"n8","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n9":{"id":"n9","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n10"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n11"},{"kind":"BUD","participants":["0","5"],"why":"vertices 0 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 5","to":"n12"},{"kind":"BUD","participants":["5","0"],"why":"vertices 5 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 0","to":"n13"},{"kind":"CONTACT","participants":["5","6","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 5,6 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 5-6 appears in the active layer (the archive vertex 1 is unchanged)","to":"n14"}]},"n10":{"id":"n10","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"]]},"menu_size":0,"events":[]},"n11":{"id":"n11","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["6","7"]]},"menu_size":0,"events":[]},"n12":{"id":"n12","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","7"]]},"menu_size":0,"events":[]},"n13":{"id":"n13","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","7"]]},"menu_size":0,"events":[]},"n14":{"id":"n14","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"]]},"menu_size":0,"events":[]},"n15":{"id":"n15","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n16"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n17"},{"kind":"BUD","participants":["5","6"],"why":"vertices 5 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 6","to":"n18"},{"kind":"BUD","participants":["6","5"],"why":"vertices 6 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 5","to":"n19"},{"kind":"CONTACT","participants":["0","5","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,5 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-5 appears in the active layer (the archive vertex 1 is unchanged)","to":"n20"}]},"n16":{"id":"n16","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n17":{"id":"n17","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["0","7"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n18":{"id":"n18","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n19":{"id":"n19","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","6"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n20":{"id":"n20","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","6"],["0","5"],["1","2"],["1","4"],["1","5"],["1","6"],["2","3"],["2","4"],["4","5"],["5","6"]]},"menu_size":0,"events":[]}}},"j":{"root":"n0","nodes":{"n0":{"id":"n0","depth":0,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["4","6"],"why":"vertices 4 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 6","to":"n1"},{"kind":"BUD","participants":["6","4"],"why":"vertices 6 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 4","to":"n6"},{"kind":"CONTACT","participants":["0","4","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-4 appears in the active layer (the archive vertex 1 is unchanged)","to":"n9"},{"kind":"CONTACT","participants":["3","4","2"],"why":"quiet vertex 2 has two ACTIVE neighbours 3,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 3-4 appears in the active layer (the archive vertex 2 is unchanged)","to":"n15"}]},"n1":{"id":"n1","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["4","7"],"why":"vertices 4 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 7","to":"n2"},{"kind":"BUD","participants":["7","4"],"why":"vertices 7 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 4","to":"n3"},{"kind":"CONTACT","participants":["0","4","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-4 appears in the active layer (the archive vertex 1 is unchanged)","to":"n4"},{"kind":"CONTACT","participants":["3","4","2"],"why":"quiet vertex 2 has two ACTIVE neighbours 3,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 3-4 appears in the active layer (the archive vertex 2 is unchanged)","to":"n5"}]},"n2":{"id":"n2","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["4","8"],["5","6"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n3":{"id":"n3","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["4","8"],["5","6"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n4":{"id":"n4","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n5":{"id":"n5","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n6":{"id":"n6","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["6","7"],"why":"vertices 6 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 7","to":"n7"},{"kind":"BUD","participants":["7","6"],"why":"vertices 7 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 6","to":"n8"}]},"n7":{"id":"n7","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n8":{"id":"n8","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n9":{"id":"n9","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","4"],"why":"vertices 0 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 4","to":"n10"},{"kind":"BUD","participants":["4","0"],"why":"vertices 4 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 0","to":"n11"},{"kind":"BUD","participants":["4","6"],"why":"vertices 4 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 6","to":"n12"},{"kind":"BUD","participants":["6","4"],"why":"vertices 6 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 4","to":"n13"},{"kind":"CONTACT","participants":["3","4","2"],"why":"quiet vertex 2 has two ACTIVE neighbours 3,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 3-4 appears in the active layer (the archive vertex 2 is unchanged)","to":"n14"}]},"n10":{"id":"n10","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","7"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"]]},"menu_size":0,"events":[]},"n11":{"id":"n11","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","7"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"]]},"menu_size":0,"events":[]},"n12":{"id":"n12","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n13":{"id":"n13","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n14":{"id":"n14","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["5","6"]]},"menu_size":0,"events":[]},"n15":{"id":"n15","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["3","4"],"why":"vertices 3 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 4","to":"n16"},{"kind":"BUD","participants":["4","3"],"why":"vertices 4 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 3","to":"n17"},{"kind":"BUD","participants":["4","6"],"why":"vertices 4 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 4 and 6","to":"n18"},{"kind":"BUD","participants":["6","4"],"why":"vertices 6 and 4 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"4 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 4","to":"n19"},{"kind":"CONTACT","participants":["0","4","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,4 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-4 appears in the active layer (the archive vertex 1 is unchanged)","to":"n20"}]},"n16":{"id":"n16","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["3","7"],["4","5"],["4","6"],["4","7"],["5","6"]]},"menu_size":0,"events":[]},"n17":{"id":"n17","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"Q"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["3","7"],["4","5"],["4","6"],["4","7"],["5","6"]]},"menu_size":0,"events":[]},"n18":{"id":"n18","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n19":{"id":"n19","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["4","7"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n20":{"id":"n20","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"A"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["1","2"],["1","4"],["1","5"],["2","3"],["2","4"],["3","4"],["4","5"],["4","6"],["5","6"]]},"menu_size":0,"events":[]}}}}},"durable":{"name":"durable","classification":"durable","classes":[0,1],"L":"7/50","L_float":0.14,"n_sinks":2,"lineages":{"i":{"class":0,"full":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"]]},"proj":{"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"2","x":0.75,"y":0.25},{"id":"3","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","6"],["2","3"]],"shape":"two separate bonds","n_edges":2}},"j":{"class":1,"full":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"]]},"proj":{"nodes":[{"id":"2","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"5","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["2","3"],["5","6"]],"shape":"two separate bonds","n_edges":2}}},"proj_classes":[{"id":0,"is_sink":true,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"2","x":0.75,"y":0.25},{"id":"3","x":0.75,"y":0.75},{"id":"6","x":0.25,"y":0.75}],"edges":[["0","6"],["2","3"]],"shape":"two separate bonds","n_edges":2},{"id":1,"is_sink":false,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"2","x":0.75,"y":0.25},{"id":"3","x":0.75,"y":0.75},{"id":"7","x":0.25,"y":0.75}],"edges":[["0","7"],["0","2"],["2","3"]],"shape":"a chain of four","n_edges":3},{"id":2,"is_sink":false,"nodes":[{"id":"0","x":0.25,"y":0.25},{"id":"3","x":0.75,"y":0.25},{"id":"6","x":0.75,"y":0.75},{"id":"7","x":0.25,"y":0.75}],"edges":[["0","6"],["0","7"]],"shape":"a chain of three + one loose","n_edges":2},{"id":3,"is_sink":true,"nodes":[{"id":"3","x":0.25,"y":0.25},{"id":"6","x":0.75,"y":0.25},{"id":"7","x":0.75,"y":0.75},{"id":"8","x":0.25,"y":0.75}],"edges":[["6","8"]],"shape":"one bond + two loose","n_edges":1}],"transitions":[{"from":0,"to":0,"prob":"1","prob_f":1.0,"events":["bud 0\u21926","bud 6\u21920","bud 2\u21923","bud 3\u21922"]},{"from":1,"to":0,"prob":"1/3","prob_f":0.3333333333333333,"events":["bud 7\u21920","bud 3\u21922"]},{"from":1,"to":1,"prob":"1/3","prob_f":0.3333333333333333,"events":["bud 0\u21927","bud 2\u21923"]},{"from":1,"to":2,"prob":"1/3","prob_f":0.3333333333333333,"events":["bud 0\u21922","bud 2\u21920"]},{"from":2,"to":2,"prob":"1/2","prob_f":0.5,"events":["bud 0\u21926","bud 0\u21927"]},{"from":2,"to":3,"prob":"1/2","prob_f":0.5,"events":["bud 6\u21920","bud 7\u21920"]},{"from":3,"to":3,"prob":"1","prob_f":1.0,"events":["bud 6\u21928","bud 8\u21926"]}],"sinks":[0,3],"mu_exact":{"i":{"0":"59/75","1":"11/75","2":"1/15"},"j":{"0":"1"}},"absorption_exact":{"i":{"0":"43/50","3":"7/50"},"j":{"0":"1","3":"0"}},"dist_steps":[{"t":0,"i":{"0":0.7866666666666666,"1":0.14666666666666667,"2":0.06666666666666667,"3":0.0},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":1,"i":{"0":0.8355555555555556,"1":0.04888888888888889,"2":0.08222222222222222,"3":0.03333333333333333},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":2,"i":{"0":0.8518518518518519,"1":0.016296296296296295,"2":0.05740740740740741,"3":0.07444444444444444},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":3,"i":{"0":0.8572839506172839,"1":0.005432098765432099,"2":0.0341358024691358,"3":0.10314814814814814},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":4,"i":{"0":0.8590946502057614,"1":0.0018106995884773663,"2":0.018878600823045266,"3":0.12021604938271604},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":5,"i":{"0":0.8596982167352538,"1":0.0006035665294924555,"2":0.01004286694101509,"3":0.12965534979423868},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":6,"i":{"0":0.8598994055784179,"1":0.00020118884316415182,"2":0.005222622313671697,"3":0.13467678326474622},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":7,"i":{"0":0.8599664685261393,"1":6.706294772138393e-05,"2":0.002678374104557232,"3":0.13728809442158207},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":8,"i":{"0":0.8599888228420465,"1":2.2354315907127978e-05,"2":0.001361541368185744,"3":0.1386272814738607},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":9,"i":{"0":0.8599962742806821,"1":7.4514386357093266e-06,"2":0.0006882221227285814,"3":0.13930805215795355},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":10,"i":{"0":0.8599987580935607,"1":2.4838128785697755e-06,"2":0.00034659487424286043,"3":0.13965216321931787},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":11,"i":{"0":0.8599995860311869,"1":8.279376261899252e-07,"2":0.00017412537474762016,"3":0.13982546065643928},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}},{"t":12,"i":{"0":0.8599998620103957,"1":2.7597920872997506e-07,"2":8.733866658254004e-05,"3":0.1399125233438131},"j":{"0":1.0,"1":0.0,"2":0.0,"3":0.0}}],"tv_series":[0.21333333333333335,0.16444444444444445,0.14814814814814814,0.14271604938271604,0.1409053497942387,0.14030178326474624,0.14010059442158207,0.1400335314738607,0.14001117715795355,0.14000372571931785,0.14000124190643928,0.1400004139688131,0.14000013798960437],"step_tree":{"i":{"root":"n0","nodes":{"n0":{"id":"n0","depth":0,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n1"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n7"},{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n12"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n18"},{"kind":"CONTACT","participants":["0","2","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,2 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-2 appears in the active layer (the archive vertex 1 is unchanged)","to":"n23"}]},"n1":{"id":"n1","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","7"],"why":"vertices 0 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 7","to":"n2"},{"kind":"BUD","participants":["7","0"],"why":"vertices 7 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 0","to":"n3"},{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n4"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n5"},{"kind":"CONTACT","participants":["0","2","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,2 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-2 appears in the active layer (the archive vertex 1 is unchanged)","to":"n6"}]},"n2":{"id":"n2","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["0","8"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n3":{"id":"n3","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["0","8"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n4":{"id":"n4","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n5":{"id":"n5","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n6":{"id":"n6","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["0","2"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n7":{"id":"n7","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n8"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n9"},{"kind":"BUD","participants":["6","7"],"why":"vertices 6 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 7","to":"n10"},{"kind":"BUD","participants":["7","6"],"why":"vertices 7 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 6","to":"n11"}]},"n8":{"id":"n8","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n9":{"id":"n9","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n10":{"id":"n10","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n11":{"id":"n11","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n12":{"id":"n12","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n13"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n14"},{"kind":"BUD","participants":["2","7"],"why":"vertices 2 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 7","to":"n15"},{"kind":"BUD","participants":["7","2"],"why":"vertices 7 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 2","to":"n16"},{"kind":"CONTACT","participants":["0","2","1"],"why":"quiet vertex 1 has two ACTIVE neighbours 0,2 that are NOT yet bonded \u2014 so it can introduce them","effect":"a new bond 0-2 appears in the active layer (the archive vertex 1 is unchanged)","to":"n17"}]},"n13":{"id":"n13","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","8"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["6","8"]]},"menu_size":0,"events":[]},"n14":{"id":"n14","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","8"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["6","8"]]},"menu_size":0,"events":[]},"n15":{"id":"n15","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["2","8"],["3","7"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n16":{"id":"n16","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["2","8"],["3","7"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n17":{"id":"n17","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[]},"n18":{"id":"n18","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n19"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n20"},{"kind":"BUD","participants":["3","7"],"why":"vertices 3 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 7","to":"n21"},{"kind":"BUD","participants":["7","3"],"why":"vertices 7 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 3","to":"n22"}]},"n19":{"id":"n19","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","8"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["6","8"]]},"menu_size":0,"events":[]},"n20":{"id":"n20","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","8"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["6","8"]]},"menu_size":0,"events":[]},"n21":{"id":"n21","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["3","8"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n22":{"id":"n22","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["3","8"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n23":{"id":"n23","depth":1,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["0","6"],"why":"vertices 0 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 6","to":"n24"},{"kind":"BUD","participants":["6","0"],"why":"vertices 6 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 0","to":"n25"},{"kind":"BUD","participants":["0","2"],"why":"vertices 0 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 0 and 2","to":"n26"},{"kind":"BUD","participants":["2","0"],"why":"vertices 2 and 0 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"0 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 0","to":"n27"},{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n28"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n29"}]},"n24":{"id":"n24","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n25":{"id":"n25","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["0","7"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["6","7"]]},"menu_size":0,"events":[]},"n26":{"id":"n26","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["0","7"],["1","2"],["1","4"],["2","3"],["2","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[]},"n27":{"id":"n27","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["0","7"],["1","2"],["1","4"],["2","3"],["2","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[]},"n28":{"id":"n28","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[]},"n29":{"id":"n29","depth":2,"graph":{"nodes":[{"id":"0","label":"A"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["0","2"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[]}}},"j":{"root":"n0","nodes":{"n0":{"id":"n0","depth":0,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n1"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n6"},{"kind":"BUD","participants":["5","6"],"why":"vertices 5 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 6","to":"n11"},{"kind":"BUD","participants":["6","5"],"why":"vertices 6 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 5","to":"n16"}]},"n1":{"id":"n1","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["2","7"],"why":"vertices 2 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 7","to":"n2"},{"kind":"BUD","participants":["7","2"],"why":"vertices 7 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 2","to":"n3"},{"kind":"BUD","participants":["5","6"],"why":"vertices 5 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 6","to":"n4"},{"kind":"BUD","participants":["6","5"],"why":"vertices 6 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 5","to":"n5"}]},"n2":{"id":"n2","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["2","8"],["3","7"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n3":{"id":"n3","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["2","8"],["3","7"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n4":{"id":"n4","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["5","8"],["6","8"]]},"menu_size":0,"events":[]},"n5":{"id":"n5","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["5","8"],["6","8"]]},"menu_size":0,"events":[]},"n6":{"id":"n6","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["3","7"],"why":"vertices 3 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 7","to":"n7"},{"kind":"BUD","participants":["7","3"],"why":"vertices 7 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 3","to":"n8"},{"kind":"BUD","participants":["5","6"],"why":"vertices 5 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 6","to":"n9"},{"kind":"BUD","participants":["6","5"],"why":"vertices 6 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 5","to":"n10"}]},"n7":{"id":"n7","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["3","8"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n8":{"id":"n8","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["3","8"],["4","5"],["5","6"],["7","8"]]},"menu_size":0,"events":[]},"n9":{"id":"n9","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["5","8"],["6","8"]]},"menu_size":0,"events":[]},"n10":{"id":"n10","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","7"],["3","7"],["4","5"],["5","6"],["5","8"],["6","8"]]},"menu_size":0,"events":[]},"n11":{"id":"n11","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n12"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n13"},{"kind":"BUD","participants":["5","7"],"why":"vertices 5 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 5 and 7","to":"n14"},{"kind":"BUD","participants":["7","5"],"why":"vertices 7 and 5 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"5 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 5","to":"n15"}]},"n12":{"id":"n12","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n13":{"id":"n13","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n14":{"id":"n14","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"A"},{"id":"6","label":"Q"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["5","8"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n15":{"id":"n15","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["5","8"],["6","7"],["7","8"]]},"menu_size":0,"events":[]},"n16":{"id":"n16","depth":1,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[{"kind":"BUD","participants":["2","3"],"why":"vertices 2 and 3 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"3 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 2 and 3","to":"n17"},{"kind":"BUD","participants":["3","2"],"why":"vertices 3 and 2 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"2 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 3 and 2","to":"n18"},{"kind":"BUD","participants":["6","7"],"why":"vertices 6 and 7 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"7 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 6 and 7","to":"n19"},{"kind":"BUD","participants":["7","6"],"why":"vertices 7 and 6 are both ACTIVE and joined by a bond, so a bud is legal here","effect":"6 becomes QUIET; a fresh ACTIVE vertex appears, bonded to 7 and 6","to":"n20"}]},"n17":{"id":"n17","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"Q"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n18":{"id":"n18","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"Q"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["2","8"],["3","8"],["4","5"],["5","6"],["5","7"],["6","7"]]},"menu_size":0,"events":[]},"n19":{"id":"n19","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"A"},{"id":"7","label":"Q"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]},"n20":{"id":"n20","depth":2,"graph":{"nodes":[{"id":"0","label":"Q"},{"id":"1","label":"Q"},{"id":"2","label":"A"},{"id":"3","label":"A"},{"id":"4","label":"Q"},{"id":"5","label":"Q"},{"id":"6","label":"Q"},{"id":"7","label":"A"},{"id":"8","label":"A"}],"edges":[["0","1"],["0","4"],["0","5"],["0","6"],["1","2"],["1","4"],["2","3"],["4","5"],["5","6"],["5","7"],["6","7"],["6","8"],["7","8"]]},"menu_size":0,"events":[]}}}}}}</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("DATA").textContent);
+const $ = (s,r=document)=>r.querySelector(s);
+const NS="http://www.w3.org/2000/svg";
+function el(t,a={},kids=[]){const e=document.createElementNS(NS,t);
+  for(const k in a)e.setAttribute(k,a[k]); for(const c of [].concat(kids)) if(c!=null) e.append(c); return e;}
+function h(t,a={},kids=[]){const e=document.createElement(t);
+  for(const k in a){ if(k==="class")e.className=a[k]; else if(k==="html")e.innerHTML=a[k]; else e.setAttribute(k,a[k]); }
+  for(const c of [].concat(kids)) if(c!=null) e.append(c); return e;}
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+const state={example:"washout",lineage:"i",erased:false,t:0,step:null};
+function ex(){return DATA[state.example];}
+
+/* ---------- small full-graph drawing (circular layout) ---------- */
+function drawFull(graph,{w=250,h=210,highlight=[]}={}){
+  const n=graph.nodes.length, cx=w/2, cy=h/2, R=Math.min(w,h)/2-30;
+  const pos={}; graph.nodes.forEach((nd,i)=>{
+    const ang=-Math.PI/2 + 2*Math.PI*i/n;
+    pos[nd.id]=[cx+R*Math.cos(ang), cy+R*Math.sin(ang)];
+  });
+  const svg=el("svg",{viewBox:`0 0 ${w} ${h}`,width:w,height:h,role:"img"});
+  graph.edges.forEach(([u,v])=>{
+    svg.append(el("line",{x1:pos[u][0],y1:pos[u][1],x2:pos[v][0],y2:pos[v][1],
+      stroke:cssv("--line"),"stroke-width":2}));
+  });
+  graph.nodes.forEach(nd=>{
+    const [x,y]=pos[nd.id]; const active=nd.label==="A";
+    const hl=highlight.includes(nd.id);
+    svg.append(el("circle",{cx:x,cy:y,r:hl?16:13,
+      fill:active?cssv("--active-soft"):cssv("--quiet-soft"),
+      stroke:active?cssv("--active"):cssv("--quiet"),"stroke-width":hl?3.5:2}));
+    const t=el("text",{x:x,y:y+4,"text-anchor":"middle","font-size":12,
+      "font-family":"var(--mono)",fill:active?cssv("--active"):cssv("--quiet")}); t.textContent=nd.id;
+    svg.append(t);
+  });
+  return svg;
+}
+/* ---------- 4-vertex shape glyph (fixed coords) ---------- */
+function drawShape(proj,{s=120,ring=false,label=true}={}){
+  const svg=el("svg",{viewBox:`0 0 ${s} ${s+ (label?22:6)}`,width:s,height:s+(label?22:6),role:"img"});
+  const pos={}; proj.nodes.forEach(nd=>pos[nd.id]=[12+nd.x*(s-24),10+nd.y*(s-24)]);
+  proj.edges.forEach(([u,v])=>svg.append(el("line",{x1:pos[u][0],y1:pos[u][1],x2:pos[v][0],y2:pos[v][1],
+    stroke:cssv("--active"),"stroke-width":2.4})));
+  proj.nodes.forEach(nd=>{const [x,y]=pos[nd.id];
+    svg.append(el("circle",{cx:x,cy:y,r:6.5,fill:cssv("--active-soft"),stroke:cssv("--active"),"stroke-width":2}));});
+  if(ring) svg.append(el("rect",{x:2,y:2,width:s-4,height:s-4,rx:12,fill:"none",
+    stroke:cssv("--sink"),"stroke-width":2.5,"stroke-dasharray":"3 3"}));
+  if(label){const t=el("text",{x:s/2,y:s+15,"text-anchor":"middle","font-size":10.5,
+    fill:cssv("--muted"),"font-family":"var(--sans)"}); t.textContent=proj.shape; svg.append(t);}
+  return svg;
+}
+
+/* ---------- render: starting states ---------- */
+function renderStart(){
+  const box=$("#startPair"); box.innerHTML="";
+  ["i","j"].forEach(l=>{
+    const lin=ex().lineages[l];
+    const c=h("div",{class:"card pad"});
+    c.append(h("div",{class:"row",html:`<span class="eyebrow">world ${l}</span>
+      <span class="tag tiny mono" style="margin-left:auto">class ${lin.class}</span>`}));
+    const g=drawFull(lin.full,{}); g.style.margin="6px auto"; c.append(g);
+    c.append(h("div",{class:"tiny muted",style:"text-align:center",
+      html:`active shape: <span class="mono">${lin.proj.shape}</span>`}));
+    box.append(c);
+  });
+}
+
+/* ---------- render: event stepper ---------- */
+function renderStep(){
+  const tree=ex().step_tree[state.lineage];
+  if(state.step===null) state.step=tree.root;
+  const node=tree.nodes[state.step];
+  $("#stepGraph").innerHTML="";
+  const hl=[]; // highlight nothing by default
+  $("#stepGraph").append(drawFull(node.graph,{w:280,h:240,highlight:hl}));
+  $("#stepCounter").textContent=`event ${node.depth} of ${DATA.meta.horizon_H}`;
+  const panel=$("#stepPanel"); panel.innerHTML="";
+  if(node.depth>=DATA.meta.horizon_H){
+    panel.append(h("div",{class:"callout",html:`Reached the erasure horizon
+      <span class="frac">H = ${DATA.meta.horizon_H}</span>. This is where we delete the archive and
+      let the active shape coast — see the map below.`}));
+    panel.append(h("button",{class:"btn primary",style:"margin-top:10px",id:"toCoast"},"delete the archive ↓"));
+    $("#toCoast").onclick=()=>document.getElementById("s-coast").scrollIntoView({behavior:"smooth"});
+    return;
+  }
+  panel.append(h("p",{class:"small muted",style:"margin-top:0"},
+    `Legal events now (${node.events.length}). Click one to apply it:`));
+  node.events.forEach((evd)=>{
+    const b=h("button",{class:"evbtn"});
+    b.append(h("span",{class:"k "+evd.kind},evd.kind));
+    b.append(h("span",{},`vertices ${evd.participants.join(", ")}`));
+    b.append(h("div",{class:"tiny muted",style:"margin-top:5px"},"why: "+evd.why));
+    b.append(h("div",{class:"tiny",style:"margin-top:3px;color:var(--accent)"},"→ "+evd.effect));
+    b.onmouseenter=()=>{ $("#stepGraph").innerHTML="";
+      $("#stepGraph").append(drawFull(node.graph,{w:280,h:240,highlight:evd.participants})); };
+    b.onmouseleave=()=>{ $("#stepGraph").innerHTML="";
+      $("#stepGraph").append(drawFull(node.graph,{w:280,h:240})); };
+    b.onclick=()=>{ state.step=evd.to; renderStep(); };
+    panel.append(b);
+  });
+}
+
+/* ---------- render: coast transition graph ---------- */
+function renderCoast(){
+  const e=ex(); const classes=e.proj_classes; const byId={}; classes.forEach(c=>byId[c.id]=c);
+  const sinks=classes.filter(c=>c.is_sink), trans=classes.filter(c=>!c.is_sink);
+  // layered layout: transient row on top, sinks on bottom
+  const W=Math.min(920, Math.max(520, classes.length*180)), rowY=[120, 320], H=430;
+  const place={};
+  const lay=(arr,y)=>arr.forEach((c,i)=>{ place[c.id]=[ (W*(i+1))/(arr.length+1), y ]; });
+  lay(trans,rowY[0]); lay(sinks,rowY[1]);
+  const host=$("#coastGraph"); host.innerHTML="";
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,width:"100%",height:H,role:"img"});
+  // defs arrowhead
+  const defs=el("defs"); const mk=el("marker",{id:"ah",markerWidth:9,markerHeight:9,refX:8,refY:3,orient:"auto"});
+  mk.append(el("path",{d:"M0,0 L8,3 L0,6 Z",fill:cssv("--muted")})); defs.append(mk); svg.append(defs);
+  const R=42;
+  // edges
+  e.transitions.forEach(tr=>{
+    const A=place[tr.from], B=place[tr.to];
+    if(!A||!B) return;
+    if(tr.from===tr.to){
+      // self loop
+      const [x,y]=A;
+      svg.append(el("path",{d:`M ${x-10} ${y-R} C ${x-46} ${y-R-46}, ${x+46} ${y-R-46}, ${x+10} ${y-R}`,
+        fill:"none",stroke:cssv("--sink"),"stroke-width":2,"marker-end":"url(#ah)",class:"selectable","data-tr":`${tr.from}-${tr.to}`}));
+      const lt=el("text",{x:x,y:y-R-40,"text-anchor":"middle","font-size":11,fill:cssv("--sink"),"font-family":"var(--mono)"});
+      lt.textContent=tr.prob; svg.append(lt);
+    }else{
+      const dx=B[0]-A[0], dy=B[1]-A[1], L=Math.hypot(dx,dy), ux=dx/L, uy=dy/L;
+      const x1=A[0]+ux*R, y1=A[1]+uy*R, x2=B[0]-ux*(R+8), y2=B[1]-uy*(R+8);
+      const mx=(x1+x2)/2+uy*22, my=(y1+y2)/2-ux*22;
+      const path=el("path",{d:`M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,fill:"none",
+        stroke:cssv("--muted"),"stroke-width":2,"marker-end":"url(#ah)",class:"selectable","data-tr":`${tr.from}-${tr.to}`});
+      svg.append(path);
+      const lt=el("text",{x:mx,y:my-4,"text-anchor":"middle","font-size":11,fill:cssv("--muted"),"font-family":"var(--mono)"});
+      lt.textContent=tr.prob; svg.append(lt);
+    }
+  });
+  // nodes
+  classes.forEach(c=>{
+    const [x,y]=place[c.id];
+    const g=el("g",{transform:`translate(${x-R},${y-R})`,class:"selectable","data-node":c.id});
+    g.append(el("rect",{x:0,y:0,width:2*R,height:2*R,rx:12,fill:cssv("--surface"),
+      stroke:c.is_sink?cssv("--sink"):cssv("--line"),"stroke-width":c.is_sink?3:1.5}));
+    // mini shape
+    const mini=drawShape(c,{s:2*R-14,label:false}); mini.setAttribute("x",7); mini.setAttribute("y",6);
+    g.append(mini);
+    if(c.is_sink){const st=el("text",{x:R,y:2*R-6,"text-anchor":"middle","font-size":9.5,
+      fill:cssv("--sink"),"font-family":"var(--sans)","font-weight":600}); st.textContent="SINK"; g.append(st);}
+    svg.append(g);
+  });
+  host.append(svg);
+  // shape legend under graph
+  const leg=h("div",{class:"row tiny muted",style:"margin-top:8px;gap:14px"});
+  classes.forEach(c=>leg.append(h("span",{html:`<span class="mono">#${c.id}</span> ${c.shape}${c.is_sink?' <span class="pill-sink">·sink</span>':''}`})));
+  host.append(leg);
+
+  // interactions
+  host.querySelectorAll("[data-tr]").forEach(p=>p.addEventListener("click",()=>{
+    const [f,t]=p.getAttribute("data-tr").split("-").map(Number);
+    const tr=e.transitions.find(x=>x.from===f&&x.to===t);
+    const detail=$("#coastDetail");
+    if(f===t){ detail.innerHTML=`<strong>Sink #${f} — ${byId[f].shape}.</strong> Every legal bud here
+      returns the same shape class (probability <span class="frac">${tr.prob}</span>). Individual
+      vertices keep changing and the full graph keeps growing, but the <em>active shape class</em>
+      never changes again. That is what "resting" means.`; }
+    else { detail.innerHTML=`<strong>Move #${f} → #${t}</strong> with probability
+      <span class="frac">${tr.prob}</span>. Produced by: ${tr.events.map(x=>`<span class="mono">${x}</span>`).join(", ")}.
+      <span class="muted">(${byId[f].shape} → ${byId[t].shape})</span>`; }
+  }));
+  host.querySelectorAll("[data-node]").forEach(g=>g.addEventListener("click",()=>{
+    const id=Number(g.getAttribute("data-node")); const c=byId[id];
+    const detail=$("#coastDetail");
+    const outs=e.transitions.filter(t=>t.from===id);
+    detail.innerHTML=`<strong>Shape #${id} — ${c.shape}${c.is_sink?" (a sink)":""}.</strong> `+
+      (c.is_sink? `All ${outs.length? outs.map(o=>`<span class="frac">${o.prob}</span>`).join("+") : ""}
+        of its probability returns to itself — it rests here.`
+        : `From here the coast can move to `+outs.filter(o=>o.to!==id).map(o=>`#${o.to} (<span class="frac">${o.prob}</span>)`).join(", ")+`.`);
+  }));
+}
+
+/* ---------- render: distributions ---------- */
+function renderDist(){
+  const e=ex(); const step=e.dist_steps[state.t];
+  const classes=e.proj_classes; const byId={}; classes.forEach(c=>byId[c.id]=c);
+  $("#tLabel").textContent=state.t;
+  $("#tvLabel").textContent="gap TV(i,j) = "+e.tv_series[state.t].toFixed(4);
+  $("#Lname").textContent=e.L;
+  const host=$("#distView"); host.innerHTML="";
+  const tbl=h("table",{class:"dist"});
+  tbl.append(h("tr",{},[h("th",{},"active shape"),h("th",{},"world i"),h("th",{},"world j")]));
+  classes.forEach(c=>{
+    const pi=step.i[c.id]||0, pj=step.j[c.id]||0;
+    const cell=(p)=>{const d=h("td",{});
+      const wrap=h("div",{class:"row",style:"gap:8px"});
+      const bar=h("div",{class:"bar",style:`width:${Math.max(2,p*120)}px;background:${c.is_sink?cssv("--sink"):cssv("--accent")}`});
+      wrap.append(bar); wrap.append(h("span",{class:"frac tabnum tiny"},p.toFixed(3)));
+      d.append(wrap); return d;};
+    tbl.append(h("tr",{},[
+      h("td",{html:`<span class="mono">#${c.id}</span> ${c.shape}${c.is_sink?' <span class="pill-sink">sink</span>':''}`}),
+      cell(pi),cell(pj)]));
+  });
+  host.append(tbl);
+  // reading
+  const rd=$("#distReading");
+  const atEnd=state.t>=e.dist_steps.length-1;
+  if(e.classification==="washout"){
+    rd.className="callout warn";
+    rd.innerHTML=`<strong>Washout.</strong> There is only one sink, so all the probability funnels
+      into it. Watch the gap <span class="mono">TV(i,j)</span> fall to <span class="frac">0</span>:
+      the two worlds become identical in the active layer. The difference was real and visible early
+      (drag the slider back to <span class="frac">t=0</span>) — but with no fork to hold it, it is
+      spent entirely on the way to the single sink.`;
+  }else{
+    rd.className="callout";
+    rd.innerHTML=`<strong>Durable.</strong> There are two sinks. The two worlds arrive with
+      <em>different</em> shares of each, so the gap <span class="mono">TV(i,j)</span> settles at the
+      exact non-zero value <span class="frac">${e.L}</span> and never moves again. Compare the two
+      sink rows at the last step: worlds i and j split them differently. That frozen split
+      <em>is</em> the surviving mark of history.`;
+  }
+}
+
+/* ---------- wiring ---------- */
+function setExample(v){ state.example=v; state.step=null; state.t=0; $("#tSlider").value=0;
+  $$("#exampleSeg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===v)));
+  const e=ex();
+  $("#fateTag").innerHTML = e.classification==="washout"
+    ? `<span class="dot q"></span> washout · L = <span class="frac">0</span> · 1 sink`
+    : `<span class="dot a"></span> durable · L = <span class="frac">${e.L}</span> · ${e.n_sinks} sinks`;
+  renderStart(); renderStep(); renderCoast(); renderDist();
+}
+function setLineage(l){ state.lineage=l; state.step=null;
+  $$("#lineageSeg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.l===l)));
+  renderStep(); }
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+
+$$("#exampleSeg button").forEach(b=>b.onclick=()=>setExample(b.dataset.v));
+$$("#lineageSeg button").forEach(b=>b.onclick=()=>setLineage(b.dataset.l));
+$("#resetStep").onclick=()=>{state.step=null;renderStep();};
+$("#tSlider").oninput=(ev)=>{state.t=+ev.target.value;renderDist();};
+$("#metaLine").textContent=DATA.meta.what_it_shows+"  (erasure horizon H="+DATA.meta.horizon_H+", context "+DATA.meta.commit_context+")";
+
+// theme toggle (per-viewer convenience)
+$("#themeBtn").onclick=()=>{
+  const r=document.documentElement;
+  const cur=r.getAttribute("data-theme")|| (matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+  const next=cur==="dark"?"light":"dark"; r.setAttribute("data-theme",next);
+  try{localStorage.setItem("wtf-theme",next);}catch(e){}
+  setExample(state.example); // re-render svgs with new token colors
+};
+try{const t=localStorage.getItem("wtf-theme"); if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}
+
+setExample("washout");
+</script>
