@@ -33,8 +33,10 @@ reconstructed the key numbers):
    example's; fate = absorption geometry.** Exact `L` for all 11 depth-2 pairs (8 durable, 3
    inert, 0 washout — a clean special case, fate decided at step 1) **plus a depth-3 stress test**
    (`depth3_criterion.py`, 97 pairs) that BREAKS both depth-2 headlines: washout is real
-   (expressed yet `L=0`) and step-one no longer decides. **Surviving law:** `L=TV(absorption
-   dists)` — single reachable sink ⇒ `L=0`, ≥2 sinks split ⇒ durable. (Fable's push paid off.)
+   (expressed yet `L=0`) and step-one no longer decides. **Fork law:** `L=TV(absorption dists)`;
+   among *expressed* pairs `L>0` iff the coast has ≥2 reachable sinks (verified, not proven) —
+   *the past leaves a lasting mark only where the future forks; durability is a property of the
+   dynamics, not the history.* (Fable's push paid off.)
 6. [`endogenous_graft_prevalence/`](endogenous_graft_prevalence/) — **renewal generalises.**
    Over every depth-2 seed/trace (22 cases): control ≡ 0 (renewal impossible without GRAFT,
    universally); with GRAFT, renewal in **20/22** and consultation in 20/22. Class 2 is the

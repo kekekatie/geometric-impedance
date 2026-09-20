@@ -115,38 +115,38 @@ Pair (8,10) has the **same** quiet-degree signature on both sides — `(3,4)` vs
 **largest** `L = 4/15`. So the crude degree signature is **not** the carrier of the difference;
 menu-inequivalence is. Fate cannot be read off the archives' degree profile.
 
-## Beyond depth-2 — the criteria break, and the surviving law ([`depth3_criterion.py`](depth3_criterion.py))
+## The general law — `L = TV(absorption distributions)`, and the fork law ([`depth3_criterion.py`](depth3_criterion.py))
 
-Fable asked us to push on "fate decided at step one" before writing it down. Extending to the
-**depth-3** class set (27 classes, **97 matched pairs**) settles it: **both** depth-2 headline
-statements are depth-2-specific.
+**(a) What always holds.** `L = TV(absorption distributions of the two lineages)` (Proposition 3,
+generalised). So `L = 0` **iff** the two lineages' `H=2` slice distributions absorb identically —
+fate is a property of the coast's **absorption geometry**, checked here on the depth-2 set (11
+pairs) and the **depth-3** set (27 classes, **97 pairs**).
 
-- **Washout is non-empty at depth-3** (5 pairs): e.g. classes (22,26), `D_slice(1)=1/6`,
-  `D_slice(2)=17/90` (expressed, even growing) yet `L=0`. *Expression does not imply durability.*
-- **"Fate decided at step one" breaks both ways:** (22,25) has `D_slice(1)=0` but
-  `D_slice(2)=17/120>0` (menu-equivalent at step one, then diverges — "same projected menu" does
-  **not** survive relabelling through time, exactly Fable's subtlety); and (22,26) has `L=0` with
-  `D_slice(1)=1/6>0`. The depth-2 equivalence `L=0 ⇔ D_slice(1)=0` fails in both directions.
+**(b) The fork law (the observed rule, stated with care).** Only one direction carries
+information:
 
-**The law that survives (and is the real one).** `L = TV(absorption distributions)` always
-(Proposition 3), so `L=0` **iff** the two lineages' `H=2` slice distributions absorb identically.
-Fate is set by the coast's **absorption geometry**, not by step one:
+> **Among *expressed* pairs (`Δ ≠ 0` at `H=2`), `L > 0` iff the coast has ≥ 2 reachable
+> absorbing classes ("sinks").** The *only-if* is trivial (you need two exits to split them, and
+> a single sink forces both lineages to the same point mass, `L = 0` by definition). The *if* —
+> that an expressed difference with two available exits **always splits them unequally** — is
+> **verified on the enumerated set (0 violations across 75 expressed depth-3 pairs and the
+> depth-2 durable pairs) but not proven.** *Open:* whether two reachable sinks can ever give
+> identical absorption distributions (an expressed pair with ≥2 sinks and `L = 0`).
 
-| fate | expressed? | reachable absorbing classes | `L` |
-|---|---|---|---|
-| **inert** | no (`D_slice ≡ 0`) | any | 0 |
-| **washout** | yes | **exactly 1** (single sink) | 0 |
-| **durable** | yes | **≥ 2**, split differently | > 0 |
+The *expressed* qualifier is essential: **15** unexpressed pairs (`Δ = 0`) have ≥2 sinks yet
+`L = 0` (they absorb identically because their distributions were identical to begin with), so
+"two sinks ⇒ `L>0`" is false without it.
 
-Exact on depth-3: **every** washout pair has a **single** reachable absorbing class (all mass
-funnels to one sink, so absorption is constant and any expressed difference is annihilated), and
-**every** durable pair has **≥ 2**. So the checkable predictor of `L=0` is not "menu-equivalent
-at step one" but "**a single reachable sink** (inert or washout), or an expressed difference that
-happens to split ≥2 sinks equally." The depth-2 set simply contained no single-sink *expressed*
-pair, which is why washout looked empty and step-one looked decisive there.
+> **In plain language: durability is a property of the future, not the past — the past can only
+> leave a lasting mark where the coast forks.** Pair (22,26) is marked at step one, marked *more*
+> at step two, and then drains to zero: a strong mark with no fork to hold it. Which fate a pair
+> meets is a property of the **dynamics**, not of the history.
 
-Open direction: a general characterization of when the BUD-only projection coast has one versus
-several reachable absorbing classes (that is what really decides durability).
+**(c) Remark — the tempting depth-2 shortcut.** At depth-2 the washout category is empty and
+"fate is decided at step one" (`L=0 ⇔` archives menu-equivalent) holds exactly — a clean special
+case. It does **not** generalise: at depth-3 both fail, with (22,25) (`D_slice(1)=0` yet
+`D_slice(2)=17/120` — "same projected menu" does not survive relabelling through time) and (22,26)
+(`L=0` with `D_slice(1)=1/6`) as exact counterexamples.
 
 ## Scope & limits
 

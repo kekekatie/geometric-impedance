@@ -24,15 +24,19 @@ projection families. For each, the archive-free coast is a **finite absorbing Ma
   (expressed pairs with `L=0`, e.g. (22,26)), and "fate decided at step one" fails both ways
   (menu-equivalent-at-step-one pairs that later diverge; `L=0` pairs already expressed at step
   one). Fable was right to make us check before writing it as a theorem.
-- **The surviving law — absorption geometry.** `L = TV(absorption distributions)` always
-  (Proposition 3). Fate is set by the coast's sinks: a **single reachable absorbing class ⇒ L=0**
-  (inert if unexpressed, washout if expressed — all mass funnels to one sink); **≥2 sinks split
-  differently ⇒ durable (L>0)**. Exact on depth-3: every washout is single-sink, every durable
-  has ≥2. This replaces the step-one criterion as the real predictor.
+- **The surviving law — the fork law.** `L = TV(absorption distributions)` always (Proposition 3).
+  The observed rule: **among *expressed* pairs (`Δ≠0`), `L>0` iff the coast has ≥2 reachable sinks**
+  — *only-if* trivial (a single sink ⇒ both absorb to one point mass ⇒ `L=0`); *if* verified on the
+  enumerated set (0 violations) but **not proven** (open: can two sinks ever absorb identically?).
+  The *expressed* qualifier is essential — 15 unexpressed pairs have ≥2 sinks yet `L=0`.
+- **Plain language:** *durability is a property of the future, not the past — the past can only
+  leave a lasting mark where the coast forks.* (22,26) is marked at step one, more at step two,
+  then drains to zero: a strong mark with no fork to hold it. Fate is a property of the **dynamics**,
+  not the history.
 
 So the transmission finding: `L` and the fate are the pair's, governed by the coast's absorption
-geometry; the depth-2 set is a clean special case (washout-free, step-one-decidable), and the
-general picture — all three fates, single-sink washout — appears once the seeds run deeper.
+geometry (the fork law); the depth-2 set is a clean special case (washout-free, step-one-decidable)
+superseded by the general picture once the seeds run deeper.
 
 ## Scope
 

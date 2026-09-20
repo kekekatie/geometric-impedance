@@ -122,22 +122,33 @@ def main():
             f"D1={rec[l0_expr1[0]]['d1']}, L=0. The depth-2 equivalence L=0 <=> D_slice(1)=0 "
             f"breaks in BOTH directions at depth-3")
 
-    # ---- (3) the law that SURVIVES: fate = absorption geometry (single-sink mechanism) ----
+    # ---- (3) the law that SURVIVES: L = TV(absorption dists); the FORK law (stated carefully) ----
     log("=" * 94)
-    log("[surviving law] L = TV(absorption distributions); fate is set by the coast's "
-        "absorption geometry")
-    require(all(rec[p]["nsink"] == 1 for p in washouts),
-            "MECHANISM: every washout pair has exactly ONE reachable absorbing class -- the "
-            "coast funnels all mass into a single sink, so absorption is constant and any "
-            "expressed difference is annihilated (L=0). That is WHY expression can fail to be "
-            "durable")
-    require(all(rec[p]["nsink"] >= 2 for p in pairs if rec[p]["fate"] == "durable"),
-            "every durable pair has >= 2 reachable absorbing classes -- durability requires the "
-            "lineages to split the sinks differently (a nonzero absorption difference)")
-    # single sink => L=0 (either inert or washout); >=2 sinks can be any fate
-    require(all(rec[p]["L"] == 0 for p in pairs if rec[p]["nsink"] == 1),
-            "single reachable sink => L=0 always (inert if unexpressed, washout if expressed) -- "
-            "an exact, checkable predictor of L=0 that REPLACES the step-one criterion")
+    log("[surviving law] L = TV(absorption distributions) always (Prop 3). The content is the "
+        "FORK law -- and only ONE direction of it carries information:")
+    expressed = [p for p in pairs if rec[p]["d2"] > 0]        # Δ != 0 at H=2
+    # trivial directions, stated as trivial:
+    require(all(rec[p]["nsink"] >= 2 for p in pairs if rec[p]["L"] > 0),
+            "TRIVIAL: L>0 => >=2 reachable sinks (you need two exits to split them at all)")
+    require(all(rec[p]["L"] == 0 for p in expressed if rec[p]["nsink"] == 1),
+            "TRIVIAL: expressed + a SINGLE reachable sink => L=0 (both lineages absorb to the "
+            "same point mass; TV of a point mass with itself is 0 by definition)")
+    # the NON-trivial, verified-not-proven direction:
+    viol = [p for p in expressed if rec[p]["nsink"] >= 2 and rec[p]["L"] == 0]
+    require(len(viol) == 0,
+            f"THE FORK LAW (non-trivial, verified on the enumerated set, NOT proven): every "
+            f"EXPRESSED pair (Δ≠0 at H=2) with >=2 reachable sinks has L>0 -- 0 violations across "
+            f"{len(expressed)} expressed depth-3 pairs (and the depth-2 durable pairs). Two "
+            f"lineages with a nonzero transient difference AND two available exits ALWAYS split "
+            f"them unequally here. OPEN: whether two reachable sinks can ever give identical "
+            f"absorption distributions (an expressed pair with >=2 sinks and L=0) is unproven")
+    # why the 'expressed' qualifier is essential (guard against overclaiming):
+    inert_2sink = [p for p in pairs if rec[p]["d2"] == 0 and rec[p]["nsink"] >= 2]
+    require(len(inert_2sink) > 0,
+            f"the 'expressed' qualifier is NOT optional: {len(inert_2sink)} UNexpressed pairs "
+            f"(Δ=0) have >=2 reachable sinks yet L=0 -- so 'two sinks => L>0' is FALSE without "
+            f"conditioning on expression (they absorb identically because their distributions "
+            f"are identical to begin with)")
 
     # ---- (4) contrast: at depth-2 none of these breakers exist (the clean special case) ----
     log("=" * 94)
@@ -160,13 +171,16 @@ def main():
         log(f"FAILED: {len(FAILS)} check(s): " + "; ".join(FAILS))
     else:
         log("ALL EXACT CHECKS PASSED.")
-    log("Verdict for the write-up: do NOT state 'fate decided at step one' or 'expression => "
-        "durability' as theorems -- both are depth-2-specific and break at depth-3 (exact "
-        "counterexamples above). State instead the surviving law: L = TV(absorption "
-        "distributions); a single reachable absorbing class forces L=0 (inert or washout); "
-        ">=2 sinks with a differential split give durable L>0. The three fates all occur once "
-        "the seed set is deep enough. Mechanism study on the depth-3 class set; general proof "
-        "of when the coast has one vs several sinks is the open direction.")
+    log("Verdict for the write-up (fate section order): (a) L = TV(absorption distributions), "
+        "always -- Prop 3 generalised; (b) the FORK LAW as the observed rule on the enumerated "
+        "set -- among expressed pairs, L>0 iff the coast has >=2 reachable sinks ('only if' "
+        "trivial, 'if' verified not proven; open whether two sinks can ever absorb identically); "
+        "(c) ONE remark: the tempting step-one criterion holds at depth 2 and fails at depth 3, "
+        "with (22,25) and (22,26) as counterexamples -- depth 2 is a remark, not a drama.")
+    log("Plain-language line for the section: DURABILITY IS A PROPERTY OF THE FUTURE, NOT THE "
+        "PAST -- the past can only leave a lasting mark where the coast forks. (22,26) is marked "
+        "at step one, marked more at step two, then drains to zero: a strong mark with no fork "
+        "to hold it. That fate is a property of the DYNAMICS, not of the history.")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")
     sys.exit(1 if FAILS else 0)

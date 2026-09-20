@@ -336,8 +336,9 @@ def main():
         f"degree signatures) is the pair's. Mechanism study on the depth-2 class set; not a "
         f"claim about generic worlds. NOTE: the washout-empty finding and the step-one criterion "
         f"are DEPTH-2-SPECIFIC and BREAK at depth-3 -- see depth3_criterion.py for exact "
-        f"counterexamples and the surviving absorption-geometry law (L = TV(absorption dists); "
-        f"single reachable sink => L=0).")
+        f"counterexamples and the surviving FORK law (L = TV(absorption dists); among expressed "
+        f"pairs, L>0 iff the coast has >=2 reachable sinks -- verified on the enumerated set, "
+        f"not proven).")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")
     sys.exit(1 if FAILS else 0)
