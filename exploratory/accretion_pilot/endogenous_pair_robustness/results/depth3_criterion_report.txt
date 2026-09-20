@@ -1,0 +1,22 @@
+==============================================================================================
+DEPTH-3 CRITERION -- does 'fate decided at step one' survive beyond depth-2? (No.)
+==============================================================================================
+depth-3 classes: 27 (each 4 active + 3 quiet, DeltaA=0); matched pairs: 97
+  [PASS] a large depth-3 matched-pair set to stress-test the depth-2 claims
+fates at depth-3: durable 70, inert 22, washout 5
+==============================================================================================
+  [PASS] WASHOUT is NON-EMPTY at depth-3 (5 pairs): there ARE pairs expressed in the active layer (D_slice>0) that decay to L=0. 'Expression => durability' (depth-2 Proposition 4) is FALSE beyond depth-2 -- exactly the case Fable asked to find
+  exact washout exemplar (22, 25): D_slice(1)=0, D_slice(2)=17/120, D_slice(3)=1423/7200, L=0 (expressed, yet washes out)
+==============================================================================================
+  [PASS] STEP-ONE BREAKER (2 pairs): D_slice(1)=0 yet D_slice(2)>0 -- menu-equivalent at step one, then DIVERGES. 'Same projected menu' does NOT survive through time (the relabelling subtlety Fable named). e.g. (22, 25): D1=0, D2=17/120
+  [PASS] FORWARD BREAKER (3 pairs): L=0 yet D_slice(1)>0 -- so 'L=0 => menu-equivalent' also fails. e.g. (22, 26): D1=1/6, L=0. The depth-2 equivalence L=0 <=> D_slice(1)=0 breaks in BOTH directions at depth-3
+==============================================================================================
+[surviving law] L = TV(absorption distributions); fate is set by the coast's absorption geometry
+  [PASS] MECHANISM: every washout pair has exactly ONE reachable absorbing class -- the coast funnels all mass into a single sink, so absorption is constant and any expressed difference is annihilated (L=0). That is WHY expression can fail to be durable
+  [PASS] every durable pair has >= 2 reachable absorbing classes -- durability requires the lineages to split the sinks differently (a nonzero absorption difference)
+  [PASS] single reachable sink => L=0 always (inert if unexpressed, washout if expressed) -- an exact, checkable predictor of L=0 that REPLACES the step-one criterion
+==============================================================================================
+  [PASS] at DEPTH-2 the washout category is empty and the step-one criterion holds -- so the depth-2 findings were a genuine (clean) SPECIAL CASE, not a general law; depth-3 is where the general absorption-geometry picture becomes visible
+==============================================================================================
+ALL EXACT CHECKS PASSED.
+Verdict for the write-up: do NOT state 'fate decided at step one' or 'expression => durability' as theorems -- both are depth-2-specific and break at depth-3 (exact counterexamples above). State instead the surviving law: L = TV(absorption distributions); a single reachable absorbing class forces L=0 (inert or washout); >=2 sinks with a differential split give durable L>0. The three fates all occur once the seed set is deep enough. Mechanism study on the depth-3 class set; general proof of when the coast has one vs several sinks is the open direction.

@@ -56,11 +56,12 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 > still not redundant → and that bias is bounded (the present inherits only a fraction ρ<1 of
 > its past) and, once the past is deleted, can only fade to an **exact positive limit**
 > (L = 4321/44100, Proposition 3), held above it only while the past is re-read → and across the
-> whole class set the fate is one of **two** (the third is empty): an archive difference is
-> either **never expressed** in the active layer (inert, L=0, exactly the menu-equivalent pairs)
-> or, once expressed, leaves a **permanent residue** (durable, L>0) — *expression ⇒ durability*,
-> Proposition 4 → while GRAFT-enabled renewal, impossible without the rule everywhere, occurs in
-> **20/22** traces with it.**
+> whole class set the fate is governed by the coast's **absorption geometry**: `L = TV(absorption
+> distributions)`, so a single reachable sink ⇒ L=0 (inert if never expressed, washout if
+> expressed) and ≥2 sinks split differently ⇒ durable, L>0. (At depth-2 this looks like a clean
+> "fate decided at step one" with washout empty; depth-3 shows that was a special case — washout
+> is real and step-one no longer decides.) → while GRAFT-enabled renewal, impossible without the
+> rule everywhere, occurs in **20/22** traces with it.**
 
 ---
 
@@ -99,7 +100,7 @@ removed and the graph rewrites itself by purely local events. A minimal non-conf
 | [`endogenous_renewed_contact_design/`](endogenous_renewed_contact_design/) | design comparison of the three ways to break menu monotonicity; recommends **GRAFT** (new active structure grafts onto an old quiet trace via a bounded wedge, append-only) to enable genuinely *new* relevance; legality fixture + proposed test. |
 | [`endogenous_graft_experiment/`](endogenous_graft_experiment/) | **the GRAFT test, run exactly.** On a frozen seed with a designated quiet trace whose menu starts empty: with GRAFT, the trace acquires a never-before CONTACT pair (**27.2%** by 4 events) that is then **consulted** (**7.5%**); the **control (BUD+CONTACT) is exactly 0** at every horizon (menu monotonicity). Renewal both **occurs and is consulted** — impossible without the rule. Mechanism test, one seed, not a sample. |
 | [`endogenous_erase_test/`](endogenous_erase_test/) | **the ERASE test (Fable's).** Evolve the matched pair under BUD+CONTACT, **delete the whole archive**, run the future archive-free. **Q1:** the two lineages' present-**ensembles still differ** with no archive present — the past **durably biases the distribution over active slices** (survives erasure; not a per-world memory); **Q2:** yet deleting the archive **changes** the future (`ERASE≠KEEP`), so the archive is **not redundant**. NULL (BUD-only) control is exactly identical. Both true at once; exact, one pair. |
-| [`endogenous_pair_robustness/`](endogenous_pair_robustness/) | **is L one example's property?** Exact `L` for **all 11 matched pairs**. The finite-absorbing-chain **structure is universal**; the **value/fate is the pair's** — **8 durable** (`L>0`), **3 inert** (`L=0`, never expressed), **0 washout** (the "expressed then faded" fate is EMPTY): **Proposition 4, expression ⇒ durability**. Fate decided at step 1 — `L=0` ⇔ archives **menu-equivalent**. Featured second pair (3,9): `L₂=2333/17640` (different family). (8,10): same degree signature, largest L — signature isn't the carrier. |
+| [`endogenous_pair_robustness/`](endogenous_pair_robustness/) | **is L one example's property?** Exact `L` for **all 11 depth-2 matched pairs** + a **depth-3** stress test (97 pairs). Structure universal; value/fate is the pair's. At depth-2: 8 durable, 3 inert, **0 washout**, fate decided at step 1 (`L=0` ⇔ **menu-equivalent**) — a clean special case. At **depth-3 both break** (`depth3_criterion.py`): washout is real (expressed yet `L=0`), step-one no longer decides. **Surviving law:** `L=TV(absorption dists)` — single reachable sink ⇒ `L=0`, ≥2 sinks split ⇒ durable. Featured (3,9) `L₂=2333/17640`; (8,10) same degree sig, largest L. |
 | [`endogenous_graft_prevalence/`](endogenous_graft_prevalence/) | **does renewal generalise?** The GRAFT test over **every** depth-2 seed and quiet trace (22 cases). **Control ≡ 0 for all** (renewal impossible without GRAFT, universally); **with GRAFT, renewal in 20/22 (91%)** and consultation in 20/22 (mean renewal ≈0.222 by 4 events). Class 2 is the exact structural exception (no wedge reachable). |
 | [`endogenous_present_width/`](endogenous_present_width/) | **the width of "now"** (an **ensemble** bias, never a per-world memory). Quantifies the ERASE mark. **How much:** the surviving fraction `ρ=present/full` distinguishability rises from **0** (history starts entirely in the archive) to **~0.22** by 3 events, staying **< 1** (present inherits a bounded share). **How long:** delete the past and the present coasts — distinguishability is **provably non-increasing** (data-processing on the projection kernel, Prop 1) and **converges to an exact positive limit `L=4321/44100`** (**Prop 3**: a finite absorbing chain, since `ΔA=0` at `k=1`) — so a positive bias persists with **no past at all**; with the archive **kept** it stays **≥ the coast at every tested step** (the past *raises* the distinction above the floor, it does not sustain it). Exact, one pair. |
 

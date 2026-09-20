@@ -64,20 +64,26 @@ this is the headline. **Every archive difference that is expressed in the active
 leaves a permanent residue.** Nothing that touches the present ever fully fades. (`L = 4321/44100`
 was one durable pair's value; the original study happened to pick a durable pair.)
 
-**Proposition 4 (expression ⇒ durability), verified on the depth-2 set.** For every pair,
-`coast[H] > 0 ⇔ L > 0`: no expressed difference decays to zero. Mechanism: the absorption map
-`μ ↦ μA` (slice distribution → absorption distribution) is **injective on the reachable `H=2`
-lineage differences** — no nonzero expressed difference is annihilated by absorption. *(Whether
-this holds beyond the depth-2 set is open; here it is checked exactly, not assumed.)*
+**"Expression ⇒ durability" — true at depth-2, but NOT a general theorem.** On the depth-2 set,
+`coast[H] > 0 ⇔ L > 0` (no expressed difference decays to zero). *This is **depth-2-specific**:
+at depth-3 it is **false** — there are pairs expressed in the active layer that decay to `L = 0`
+(exact counterexamples in [`depth3_criterion.py`](depth3_criterion.py)). It was tempting to call
+this "Proposition 4"; the honest status is a clean special case, superseded by the
+absorption-geometry law below.*
 
 **3 — The value (and the fate) is the pair's, and predictable at step 1.** `L` takes **6
 distinct exact values**. And the fate is decided at the **first step**, without running the
 chain:
 
-> **Menu-equivalence criterion (exact on this set): `L = 0` ⇔ the two archives are
+> **Menu-equivalence criterion (exact on the depth-2 set): `L = 0` ⇔ the two archives are
 > *menu-equivalent*** — they present the *same* one-step projected successor distribution
-> (`D_slice(1) = 0`: same number of eligible events and the same multiset of projected CONTACT
-> effects). Menu-equivalent ⇒ inert ⇒ `L = 0`; menu-distinct ⇒ durable ⇒ `L > 0`.
+> (`D_slice(1) = 0`). Menu-equivalent ⇒ inert ⇒ `L = 0`; menu-distinct ⇒ durable ⇒ `L > 0`.
+
+*This step-one criterion is also **depth-2-specific**. At depth-3 it breaks in **both**
+directions (see [`depth3_criterion.py`](depth3_criterion.py)): a pair can be menu-equivalent at
+step one and then **diverge** at step two (`D_slice(1)=0` but `D_slice(2)>0` — "same projected
+menu" does not survive through time), and an `L=0` pair can already be **expressed** at step one
+(`D_slice(1)>0`). So "fate decided at step one" is a clean depth-2 phenomenon, not a law.*
 
 ## Featured durable pair — classes (3,9), a different projection family
 
@@ -109,26 +115,65 @@ Pair (8,10) has the **same** quiet-degree signature on both sides — `(3,4)` vs
 **largest** `L = 4/15`. So the crude degree signature is **not** the carrier of the difference;
 menu-inequivalence is. Fate cannot be read off the archives' degree profile.
 
+## Beyond depth-2 — the criteria break, and the surviving law ([`depth3_criterion.py`](depth3_criterion.py))
+
+Fable asked us to push on "fate decided at step one" before writing it down. Extending to the
+**depth-3** class set (27 classes, **97 matched pairs**) settles it: **both** depth-2 headline
+statements are depth-2-specific.
+
+- **Washout is non-empty at depth-3** (5 pairs): e.g. classes (22,26), `D_slice(1)=1/6`,
+  `D_slice(2)=17/90` (expressed, even growing) yet `L=0`. *Expression does not imply durability.*
+- **"Fate decided at step one" breaks both ways:** (22,25) has `D_slice(1)=0` but
+  `D_slice(2)=17/120>0` (menu-equivalent at step one, then diverges — "same projected menu" does
+  **not** survive relabelling through time, exactly Fable's subtlety); and (22,26) has `L=0` with
+  `D_slice(1)=1/6>0`. The depth-2 equivalence `L=0 ⇔ D_slice(1)=0` fails in both directions.
+
+**The law that survives (and is the real one).** `L = TV(absorption distributions)` always
+(Proposition 3), so `L=0` **iff** the two lineages' `H=2` slice distributions absorb identically.
+Fate is set by the coast's **absorption geometry**, not by step one:
+
+| fate | expressed? | reachable absorbing classes | `L` |
+|---|---|---|---|
+| **inert** | no (`D_slice ≡ 0`) | any | 0 |
+| **washout** | yes | **exactly 1** (single sink) | 0 |
+| **durable** | yes | **≥ 2**, split differently | > 0 |
+
+Exact on depth-3: **every** washout pair has a **single** reachable absorbing class (all mass
+funnels to one sink, so absorption is constant and any expressed difference is annihilated), and
+**every** durable pair has **≥ 2**. So the checkable predictor of `L=0` is not "menu-equivalent
+at step one" but "**a single reachable sink** (inert or washout), or an expressed difference that
+happens to split ≥2 sinks equally." The depth-2 set simply contained no single-sink *expressed*
+pair, which is why washout looked empty and step-one looked decisive there.
+
+Open direction: a general characterization of when the BUD-only projection coast has one versus
+several reachable absorbing classes (that is what really decides durability).
+
 ## Scope & limits
 
-The depth-2 class set with one scheduler (uniform over individual events) and the CONTACT/BUD
-coupling; a mechanism study. It establishes that the coast-limit *structure* is universal, that
+The depth-2 **and depth-3** class sets with one scheduler (uniform over individual events) and
+the CONTACT/BUD coupling; a mechanism study. It establishes that the coast-limit *structure* is universal, that
 the *value* and the *fate* are pair-specific, that on this set the washout fate is empty
 (expression ⇒ durability), and that fate = menu-(in)equivalence. **Not** a claim about generic or
 larger worlds, nor a frequency estimate over "natural" pairs; Proposition 4's generality is open.
 
 ## Files
 
-- [`pair_robustness.py`](pair_robustness.py) — exact `L` for all matched pairs; three-fate
-  classification with washout-empty (Proposition 4) and the menu-equivalence criterion; featured
+- [`pair_robustness.py`](pair_robustness.py) — exact `L` for all depth-2 matched pairs; the
+  three-fate classification, the (depth-2) washout-empty finding and step-one criterion; featured
   durable pair (ρ(h), Q1, Q2); featured inert pair with the menu-equivalence mechanism; the
   (8,10) note; asserts + nonzero exit.
+- [`depth3_criterion.py`](depth3_criterion.py) — the depth-3 stress test: exact counterexamples
+  showing washout is non-empty and "fate decided at step one" breaks both ways beyond depth-2,
+  and the surviving absorption-geometry law (single sink ⇒ `L=0`); asserts + nonzero exit.
 - [`results/pair_robustness_report.txt`](results/pair_robustness_report.txt),
-  [`results/L_table.txt`](results/L_table.txt); [`figures/pair_robustness.png`](figures/pair_robustness.png).
+  [`results/L_table.txt`](results/L_table.txt),
+  [`results/depth3_criterion_report.txt`](results/depth3_criterion_report.txt);
+  [`figures/pair_robustness.png`](figures/pair_robustness.png).
 
 ## Reproduce
 
 ```bash
-python3 pair_robustness.py   # exact; exit 0 iff all checks pass
-python3 make_figure.py       # writes the figure
+python3 pair_robustness.py    # depth-2: exact L, three fates, step-one criterion
+python3 depth3_criterion.py   # depth-3: the criterion breaks; the absorption-geometry law
+python3 make_figure.py        # writes the figure
 ```

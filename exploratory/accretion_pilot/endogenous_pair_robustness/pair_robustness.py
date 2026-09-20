@@ -334,7 +334,10 @@ def main():
         f"(L=0) IFF its archives are MENU-EQUIVALENT, else durable (L>0). The value of L (e.g. "
         f"original 4321/44100; featured second {L2}; (8,10) the largest at 4/15 despite equal "
         f"degree signatures) is the pair's. Mechanism study on the depth-2 class set; not a "
-        f"claim about generic worlds.")
+        f"claim about generic worlds. NOTE: the washout-empty finding and the step-one criterion "
+        f"are DEPTH-2-SPECIFIC and BREAK at depth-3 -- see depth3_criterion.py for exact "
+        f"counterexamples and the surviving absorption-geometry law (L = TV(absorption dists); "
+        f"single reachable sink => L=0).")
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     open(REPORT, "w").write("\n".join(LINES) + "\n")
     sys.exit(1 if FAILS else 0)
