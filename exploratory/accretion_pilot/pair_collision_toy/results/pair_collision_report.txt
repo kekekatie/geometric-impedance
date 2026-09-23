@@ -1,0 +1,106 @@
+==========================================================================================
+TASK 1 -- P(CONTACT ever fires) = 1/3 exactly
+==========================================================================================
+  [PASS] start state has exactly 5 eligible events: [('B', 0, 1), ('B', 1, 0), ('B', 2, 3), ('B', 3, 2), ('C', (0, 2), 4)]
+  [PASS] exactly 1 CONTACT event: CONTACT(a,q,c)
+  [PASS] 2 NEUTRAL events BUD(a,b), BUD(c,d): keeper a/c stays active; the depositor's own menu {keeper, tip} is an adjacent pair -> empty; reduced state returns to START
+  [PASS] 2 KILL events BUD(b,a), BUD(d,c): a or c goes quiet, q keeps <=1 active nbr -> menu empty forever; result is FROZEN (two disjoint pairs, no CONTACT eligible)
+  [PASS] after a kill, no CONTACT is eligible in any state reachable in <=4 further events (and structurally never: BUD on a matching edge deposits a vertex whose menu is {keeper,tip}, adjacent)
+  reduced-chain first step: P(CONTACT)=1/5, P(neutral)=2/5, P(kill)=2/5
+  [PASS] P(CONTACT ever fires) = (1/5)/(1 - 2/5) = 1/3  (exact)
+    full graph, t=1: P(CONTACT fired by t) = 1/5  (formula 1/5)
+    full graph, t=2: P(CONTACT fired by t) = 7/25  (formula 7/25)
+    full graph, t=3: P(CONTACT fired by t) = 39/125  (formula 39/125)
+    full graph, t=4: P(CONTACT fired by t) = 203/625  (formula 203/625)
+    full graph, t=5: P(CONTACT fired by t) = 1031/3125  (formula 1031/3125)
+    full graph, t=6: P(CONTACT fired by t) = 5187/15625  (formula 5187/15625)
+  [PASS] brute-force full-graph enumeration matches (1/3)(1-(2/5)^t) exactly for t=1..6
+==========================================================================================
+REDUCTION CHECK -- reduced chain == brute-force full-graph dynamics (t <= 5)
+==========================================================================================
+  [PASS] reference implementation ../endogenous_local_contact importable
+  [PASS] full-graph model == ../endogenous_local_contact rule set (same event counts, same successor multisets up to labelled isomorphism) on all states reachable in <=2 events (3 levels of states)
+  [PASS] t=0: reduced-state distribution identical (full: 1 labelled states -> 1 reduced)
+  [PASS] t=1: reduced-state distribution identical (full: 5 labelled states -> 3 reduced)
+  [PASS] t=2: reduced-state distribution identical (full: 16 labelled states -> 5 reduced)
+  [PASS] t=3: reduced-state distribution identical (full: 56 labelled states -> 10 reduced)
+  [PASS] t=4: reduced-state distribution identical (full: 208 labelled states -> 22 reduced)
+  [PASS] t=5: reduced-state distribution identical (full: 798 labelled states -> 44 reduced)
+  [PASS] every full state's eligible-event count == 2B + sum |menu| of kept quiets (pruning menu-empty quiets loses no event)
+  [PASS] MENU MONOTONICITY on every enumerated transition: a quiet's neighbourhood never changes and its menu only shrinks
+==========================================================================================
+TASK 2 -- P(frozen end state = one pair + two loners)
+==========================================================================================
+  end states: every BUD leaves the active edge keeper-tip, so B >= 1 after any event;
+  4 actives => a frozen matching is ONE pair + two loners (B=1) or TWO pairs (B=2).
+  [PASS] K=1: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 1  states=    52  certified [0.015445567273249, 0.225049225727327]  width=2.10e-01  E[events]~3.719  (0.2s)
+  [PASS] K=2: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 2  states=   153  certified [0.093828480076761, 0.149735514917513]  width=5.59e-02  E[events]~6.399  (0.1s)
+  [PASS] K=2: interval nested in K=1's (up to certificate slack)
+  [PASS] K=3: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 3  states=   334  certified [0.121251005223203, 0.126558919435987]  width=5.31e-03  E[events]~7.358  (0.2s)
+  [PASS] K=3: interval nested in K=2's (up to certificate slack)
+  [PASS] K=4: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 4  states=   612  certified [0.123765583964173, 0.124044173867500]  width=2.79e-04  E[events]~7.457  (0.4s)
+  [PASS] K=4: interval nested in K=3's (up to certificate slack)
+  [PASS] K=5: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 5  states=   998  certified [0.123891405157142, 0.123902654945164]  width=1.12e-05  E[events]~7.462  (0.9s)
+  [PASS] K=5: interval nested in K=4's (up to certificate slack)
+  [PASS] K=6: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 6  states=  1506  certified [0.123896214743146, 0.123896611647418]  width=3.97e-07  E[events]~7.463  (1.5s)
+  [PASS] K=6: interval nested in K=5's (up to certificate slack)
+  [PASS] K=7: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 7  states=  2149  certified [0.123896374369680, 0.123896387369130]  width=1.30e-08  E[events]~7.463  (2.7s)
+  [PASS] K=7: interval nested in K=6's (up to certificate slack)
+  [PASS] K=8: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 8  states=  2941  certified [0.123896379311271, 0.123896379714816]  width=4.04e-10  E[events]~7.463  (4.0s)
+  [PASS] K=8: interval nested in K=7's (up to certificate slack)
+  [PASS] K=9: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K= 9  states=  3895  certified [0.123896379458629, 0.123896379470419]  width=1.18e-11  E[events]~7.463  (6.1s)
+  [PASS] K=9: interval nested in K=8's (up to certificate slack)
+  [PASS] K=10: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K=10  states=  5025  certified [0.123896379462837, 0.123896379463169]  width=3.32e-13  E[events]~7.463  (8.9s)
+  [PASS] K=10: interval nested in K=9's (up to certificate slack)
+  [PASS] K=11: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K=11  states=  6344  certified [0.123896379462949, 0.123896379462972]  width=2.28e-14  E[events]~7.463  (13.0s)
+  [PASS] K=11: interval nested in K=10's (up to certificate slack)
+  [PASS] K=12: every reachable frozen state is one-pair or two-pairs
+  [PASS] every transient state can reach a frozen/boundary state -> I-P is a nonsingular M-matrix -> sub/super-solutions bound the true value
+  [PASS] exact rational sub-solution and super-solution found and verified row by row
+  K=12  states=  7866  certified [0.123896379462952, 0.123896379462967]  width=1.51e-14  E[events]~7.463  (18.2s)
+  [PASS] K=12: interval nested in K=11's (up to certificate slack)
+  [PASS] final certified width 1.51e-14 < 1e-12
+  [PASS] 1/8 is EXCLUDED: the certified upper bound is below 1/8
+  certified:  139494922095475785461194073181/1125899906842624000000000000000
+          <= P(one pair + two loners) <=
+              139494922095492808288805926819/1125899906842624000000000000000
+  decimal:    0.123896379462952 <= P <= 0.123896379462967
+  conditional on the collision: P(one pair | CONTACT fired) in [0.371689138388855, 0.371689138388901]
+  smallest-denominator rational in the interval: 2415491/19496058 (so if P is rational its denominator is >= 19496058)
+==========================================================================================
+SUMMARY  P(CONTACT ever fires) = 1/3
+         P(one pair + two loners) in [0.123896379462952, 0.123896379462967]  (certified; != 1/8)
+ALL EXACT CHECKS PASSED.

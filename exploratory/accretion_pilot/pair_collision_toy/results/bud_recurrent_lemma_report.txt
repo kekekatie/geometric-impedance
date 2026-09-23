@@ -1,0 +1,41 @@
+==========================================================================================
+LEMMA -- BUD-only at k=1: every recurrent class of the coast chain is a singleton matching (+ isolated vertices)
+==========================================================================================
+  [PASS] n=1: T is a stochastic kernel closed on all 1 n-vertex classes
+  [PASS] n=1: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=1: all 1 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=1: conversely every matching-plus-isolated graph is absorbing (1 = floor(n/2)+1 of them: matching sizes 0..0)
+  [PASS] n=2: T is a stochastic kernel closed on all 2 n-vertex classes
+  [PASS] n=2: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=2: all 2 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=2: conversely every matching-plus-isolated graph is absorbing (2 = floor(n/2)+1 of them: matching sizes 0..1)
+  [PASS] n=3: T is a stochastic kernel closed on all 4 n-vertex classes
+  [PASS] n=3: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=3: all 2 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=3: conversely every matching-plus-isolated graph is absorbing (2 = floor(n/2)+1 of them: matching sizes 0..1)
+  [PASS] n=3: from every one of the 2 transient classes, absorption has total probability 1 (exact) -- no other recurrent class traps mass, for any seed
+  [PASS] n=4: T is a stochastic kernel closed on all 11 n-vertex classes
+  [PASS] n=4: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=4: all 3 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=4: conversely every matching-plus-isolated graph is absorbing (3 = floor(n/2)+1 of them: matching sizes 0..2)
+  [PASS] n=4: from every one of the 8 transient classes, absorption has total probability 1 (exact) -- no other recurrent class traps mass, for any seed
+  [PASS] n=5: T is a stochastic kernel closed on all 34 n-vertex classes
+  [PASS] n=5: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=5: all 3 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=5: conversely every matching-plus-isolated graph is absorbing (3 = floor(n/2)+1 of them: matching sizes 0..2)
+  [PASS] n=5: from every one of the 31 transient classes, absorption has total probability 1 (exact) -- no other recurrent class traps mass, for any seed
+  [PASS] n=6: T is a stochastic kernel closed on all 156 n-vertex classes
+  [PASS] n=6: Delta B = 1 - d_A(y) on every event; B non-increasing on every transition
+  [PASS] n=6: all 4 recurrent classes are absorbing singletons, each a matching plus isolated vertices
+  [PASS] n=6: conversely every matching-plus-isolated graph is absorbing (4 = floor(n/2)+1 of them: matching sizes 0..3)
+  [PASS] n=6: from every one of the 152 transient classes, absorption has total probability 1 (exact) -- no other recurrent class traps mass, for any seed
+  [PASS] exhaustive: 208 isomorphism classes checked (all graphs, n=1..6)
+  n  classes  recurrent(=absorbing matchings)
+  1        1    1
+  2        2    2
+  3        4    2
+  4       11    3
+  5       34    3
+  6      156    4
+==========================================================================================
+ALL EXACT CHECKS PASSED.
