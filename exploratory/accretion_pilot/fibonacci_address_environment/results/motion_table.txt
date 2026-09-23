@@ -1,0 +1,4 @@
+r*  first-return-diff step (sensitive)   reflection-degenerate?   note
+3        4                                 no                    returns first differ
+4        6                                 no                    returns first differ
+5        8                                 no                    returns first differ

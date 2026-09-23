@@ -1,0 +1,34 @@
+# Complete-topology subset at t=10000 (DESCRIPTIVE; selected after evolution). A world is complete iff all 128 diagonals present.
+# Fixed: complete pairs = 0/200; excluded seed ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]
+# Reinforced: complete pairs = 0/200; excluded seed ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]
+# Growing: complete pairs = 199/200; excluded seed ids = [125]
+# Growing-MatchedControl: complete pairs = 199/200; excluded seed ids = [125]
+# Growing vs Control complete-subset identical seed set? True  (|G|=199, |C|=199, symmetric_diff=[])
+# NOTE: subsets are per-model; different subsets are NOT a matched comparison.
+
+# Fixed: no complete pairs; S_high=-S_low identity n/a
+# Reinforced: no complete pairs; S_high=-S_low identity n/a
+# Growing: on complete subset S_high == -S_low (P_D=0)? True
+# Growing-MatchedControl: on complete subset S_high == -S_low (P_D=0)? True
+
+model,reader,n_pairs,auc,bal_acc,paired_frac,tie_frac,signed_sep
+Fixed,onebit_Shigh,0,nan,nan,nan,nan,nan
+Fixed,complement_negSlow,0,nan,nan,nan,nan,nan
+Fixed,added_exact_D0,0,nan,nan,nan,nan,nan
+Fixed,added_whole_D1,0,nan,nan,nan,nan,nan
+Fixed,added_presence_PD,0,nan,nan,nan,nan,nan
+Reinforced,onebit_Shigh,0,nan,nan,nan,nan,nan
+Reinforced,complement_negSlow,0,nan,nan,nan,nan,nan
+Reinforced,added_exact_D0,0,nan,nan,nan,nan,nan
+Reinforced,added_whole_D1,0,nan,nan,nan,nan,nan
+Reinforced,added_presence_PD,0,nan,nan,nan,nan,nan
+Growing,onebit_Shigh,199,0.6209,0.5779,0.6080,0.3518,0.391960
+Growing,complement_negSlow,199,0.6209,0.5779,0.6080,0.3518,0.391960
+Growing,added_exact_D0,199,0.6424,0.6106,0.6432,0.0000,1.162320
+Growing,added_whole_D1,199,0.6177,0.5791,0.6106,0.3065,1.100503
+Growing,added_presence_PD,199,0.5000,0.5000,0.5000,1.0000,0.000000
+Growing-MatchedControl,onebit_Shigh,199,0.5022,0.4987,0.5050,0.3668,-0.005025
+Growing-MatchedControl,complement_negSlow,199,0.5022,0.4987,0.5050,0.3668,-0.005025
+Growing-MatchedControl,added_exact_D0,199,0.4928,0.4648,0.4472,0.0000,-0.033760
+Growing-MatchedControl,added_whole_D1,199,0.4939,0.4912,0.4849,0.2663,-0.025126
+Growing-MatchedControl,added_presence_PD,199,0.5000,0.5000,0.5000,1.0000,0.000000

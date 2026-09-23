@@ -1,0 +1,33 @@
+==========================================================================================
+PROPOSITION 3 -- exact asymptote of the archive-free coast (absorbing projection chain)
+==========================================================================================
+  [PASS] both lineages have 4 active vertices
+  [PASS] start distributions normalise
+  [PASS] every projection in the H=2 support is a 4-active-vertex graph (ΔA=0)
+[1] build the finite BUD-only projection kernel T (Prop 1: depends only on projection)
+  [PASS] T is a stochastic kernel on 6 reachable 4-vertex projections
+  reachable projections: 6; absorbing: 2; transient: 4
+    absorbing class 0: 2 edges, degree-seq [1, 1, 1, 1]
+    absorbing class 5: 1 edges, degree-seq [0, 0, 1, 1]
+  [PASS] every transient state absorbs with total probability 1 -> the ONLY recurrent classes are the absorbing singletons (no other recurrent class traps mass)
+  [PASS] absorption distributions normalise
+==========================================================================================
+[2] cross-check: T^t on mu  ==  present_width full-graph coast  (validates Prop 1)
+  t=0: coast(Markov)=463/3150  coast(tree)=463/3150  (0.146984)
+  t=1: coast(Markov)=4439/37800  coast(tree)=4439/37800  (0.117434)
+  t=2: coast(Markov)=3805/36288  coast(tree)=3805/36288  (0.104856)
+  t=3: coast(Markov)=312041/3110400  coast(tree)=312041/3110400  (0.100322)
+  [PASS] the finite projection chain reproduces the full-graph coast EXACTLY for t=0..3 (the archive-free coast really is the Markov chain T)
+==========================================================================================
+[3] Proposition 3: convergence to the exact limit L = TV(absorption distributions)
+  [PASS] coast TV is non-increasing in t (single fixed kernel T shared by both lineages -> data-processing inequality; T well-defined only by Prop 1)
+  [PASS] coast starts at 463/3150 (0.146984) and exceeds the limit
+  [PASS] coast TV stays >= L at every step (L is a lower bound, approached from above)
+  [PASS] coast converges to the exact limit L: residual at t=64 is 1.86e-32 (transient mass decays geometrically; the limit is L exactly, computed from absorption, not from finite iteration)
+  [PASS] L > 0: the two lineages' absorption distributions DIFFER, so the coast converges to a POSITIVE limit -- a permanent ENSEMBLE bias, not a per-world memory
+  limiting coast  L = 4321/44100  = 0.097982
+  absorption distribution (lineage i): {0: '43/50', 5: '7/50'}
+  absorption distribution (lineage j): {0: '6721/8820', 5: '2099/8820'}
+==========================================================================================
+ALL EXACT CHECKS PASSED.
+Proposition 3 (exact): the archive-free coast converges monotonically to L = 4321/44100 (0.0980); the earlier 'positive floor' is this limit. It is the TV between the two lineages' absorption distributions over the recurrent (absorbing) projections -- a permanent bias in the ENSEMBLE of presents, positive iff those distributions differ. One matched pair; a single fixed BUD-only projection kernel.

@@ -1,0 +1,34 @@
+{
+  "deltas": [
+    0.0,
+    0.001,
+    0.01,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "n_steps": 10000,
+  "models": [
+    "Fixed",
+    "Reinforced",
+    "Growing",
+    "Growing-MatchedControl"
+  ],
+  "reader": "w_read = delta*floor(w/delta+0.5); delta=0 exact; sign via exact integer bin sums",
+  "v2_commit_dynamics": "cab9254b9d7713a65c314ca81f45c2d378ab60ba",
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}

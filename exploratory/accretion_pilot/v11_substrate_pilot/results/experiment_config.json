@@ -1,0 +1,48 @@
+{
+  "radius": 10.0,
+  "jitter": 0.3,
+  "hist_len": 6,
+  "n_pairs": 3,
+  "n_seeds": 200,
+  "n_steps": 10000,
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "base_seed": 20260905,
+  "offsets": [
+    [
+      0.3,
+      0.1,
+      -0.25,
+      -0.25,
+      0.1
+    ],
+    [
+      0.12,
+      0.31,
+      -0.08,
+      -0.2,
+      -0.15
+    ],
+    [
+      -0.05,
+      0.22,
+      0.17,
+      -0.29,
+      -0.05
+    ]
+  ],
+  "primary_checkpoint": 2000,
+  "reader": "S_high one-bit added-diagonal proximity sign (frozen)",
+  "runtime_min": 48.8,
+  "env": {
+    "numpy": "2.4.6"
+  }
+}

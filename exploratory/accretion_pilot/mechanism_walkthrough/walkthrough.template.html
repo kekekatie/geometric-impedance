@@ -1,0 +1,530 @@
+<title>Where the Future Forks</title>
+<meta name="description" content="An interactive walkthrough of when a historical difference persists or washes out in the BUD/CONTACT toy model.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --surface2:#efece4; --ink:#1b1f24; --muted:#5f6772;
+  --line:#dcd8ce; --active:#1f8a4c; --active-soft:#e2f1e7; --quiet:#b8532f; --quiet-soft:#f6e4dc;
+  --accent:#3f51c4; --accent-soft:#e5e8fb; --sink:#c48a1f; --sink-soft:#f6ecd4;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 6px 20px rgba(20,23,28,.06);
+  --serif:'Spectral',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme:dark){
+  --bg:#14171b; --surface:#1c2026; --surface2:#242a32; --ink:#e9ecf0; --muted:#9aa4b0;
+  --line:#2f3742; --active:#43ba70; --active-soft:#173226; --quiet:#dc7a52; --quiet-soft:#33211a;
+  --accent:#8090f2; --accent-soft:#1e2440; --sink:#e2ab3d; --sink-soft:#332a16;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#14171b; --surface:#1c2026; --surface2:#242a32; --ink:#e9ecf0; --muted:#9aa4b0;
+  --line:#2f3742; --active:#43ba70; --active-soft:#173226; --quiet:#dc7a52; --quiet-soft:#33211a;
+  --accent:#8090f2; --accent-soft:#1e2440; --sink:#e2ab3d; --sink-soft:#332a16;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding-block:28px;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(28px,5vw,44px);letter-spacing:-.01em}
+h2{font-size:clamp(20px,3.4vw,27px);margin-bottom:6px}
+h3{font-size:16px;font-weight:600;font-family:var(--sans)}
+p{margin:.5em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted)}
+.lede{font-size:clamp(15px,2vw,17px);color:var(--muted);max-width:64ch}
+.mono{font-family:var(--mono)}
+.frac{font-family:var(--mono);font-weight:500}
+section{margin-top:44px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.pad{padding:20px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tiny{font-size:12px}
+
+/* chips / toggles */
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{font:inherit;font-size:13px;font-weight:500;border:0;background:transparent;color:var(--muted);
+  padding:7px 15px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg.wd button[aria-pressed="true"][data-v="washout"]{color:var(--quiet)}
+.seg.wd button[aria-pressed="true"][data-v="durable"]{color:var(--active)}
+.btn{font:inherit;font-size:13px;font-weight:500;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink);padding:8px 14px;border-radius:9px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;
+  padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:var(--surface2)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.dot.a{background:var(--active)} .dot.q{background:var(--quiet)} .dot.s{background:var(--sink)}
+kbd{font-family:var(--mono);font-size:12px;background:var(--surface2);border:1px solid var(--line);
+  border-radius:5px;padding:1px 6px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;
+  padding:12px 14px;font-size:13.5px}
+.callout.warn{border-color:var(--sink);background:var(--sink-soft)}
+
+svg{display:block;max-width:100%}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);align-items:center}
+
+.evbtn{display:block;width:100%;text-align:left;font:inherit;font-size:13px;border:1px solid var(--line);
+  background:var(--surface);border-radius:10px;padding:10px 12px;cursor:pointer;margin-bottom:8px}
+.evbtn:hover{border-color:var(--accent);background:var(--accent-soft)}
+.evbtn .k{font-weight:600;font-family:var(--mono);font-size:12px;padding:1px 7px;border-radius:5px;margin-right:8px}
+.evbtn .k.BUD{background:var(--active-soft);color:var(--active)}
+.evbtn .k.CONTACT{background:var(--quiet-soft);color:var(--quiet)}
+
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.qgrid{grid-template-columns:1fr}}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.q h3{margin-bottom:6px}
+.q .num{font-family:var(--mono);color:var(--accent);font-size:12px}
+
+table.dist{border-collapse:collapse;width:100%;font-size:13px}
+table.dist td,table.dist th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+table.dist th{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.bar{height:10px;border-radius:5px;background:var(--accent)}
+.foot{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}
+.selectable{cursor:pointer}
+.pill-sink{font-size:11px;color:var(--sink);font-weight:600}
+.tabnum{font-variant-numeric:tabular-nums}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">accretion pilot · thread B · mechanism, not a new result</div>
+    <h1>Where the future forks</h1>
+    <p class="lede">A hands-on look at <em>things doing thing things</em>: which local events are
+      possible, how they reshape the active layer, and why a difference between two histories
+      sometimes lasts forever and sometimes vanishes without a trace. Every number here is exact
+      and comes straight from the verified model.</p>
+    <div class="row" style="margin-top:14px">
+      <span class="tag"><span class="dot a"></span>active vertex</span>
+      <span class="tag"><span class="dot q"></span>quiet vertex (archive)</span>
+      <span class="tag"><span class="dot s"></span>sink (a resting shape)</span>
+      <button class="btn" id="themeBtn" style="margin-left:auto">◐ theme</button>
+    </div>
+  </header>
+
+  <div class="callout" style="margin-top:20px">
+    <strong>Two example worlds.</strong> Each is a <em>matched pair</em>: two histories that end
+    with the <em>same active shape</em> but a <em>different archive</em> of quiet vertices. One pair
+    is a <strong style="color:var(--quiet)">washout</strong> (the difference disappears once the
+    archive is deleted); the other is <strong style="color:var(--active)">durable</strong> (it
+    lasts forever). Switch between them anywhere on the page.
+    <div class="row" style="margin-top:12px">
+      <span class="small muted">Showing:</span>
+      <span class="seg wd" id="exampleSeg" role="group" aria-label="example">
+        <button data-v="washout" aria-pressed="true">washout&nbsp;(22,25)</button>
+        <button data-v="durable" aria-pressed="false">durable&nbsp;(0,1)</button>
+      </span>
+      <span class="tag" id="fateTag"></span>
+    </div>
+  </div>
+
+  <!-- 1. starting states -->
+  <section id="s-start">
+    <div class="eyebrow">step 1</div>
+    <h2>The two starting states</h2>
+    <p class="small muted" style="max-width:70ch">Same active shape (the green part is identical up to
+      relabelling), different archive (the clay quiet vertices differ). The question: after we later
+      delete the archive, can you still tell these two worlds apart from the active layer alone?</p>
+    <div class="grid2" id="startPair"></div>
+  </section>
+
+  <!-- 2. event stepper -->
+  <section id="s-step">
+    <div class="eyebrow">step 2 · things doing thing things</div>
+    <h2>Step through the legal events</h2>
+    <p class="small muted" style="max-width:74ch">Pick a world (i or j) and click any legal event to
+      apply it. <span class="mono" style="color:var(--active)">BUD</span> needs two active vertices
+      joined by a bond; <span class="mono" style="color:var(--quiet)">CONTACT</span> is a quiet vertex
+      introducing two of its active neighbours. Watch what each event changes. Go to the erasure
+      horizon <span class="frac">H = 2</span> events, then delete the archive.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between">
+        <span class="seg" id="lineageSeg" role="group" aria-label="lineage">
+          <button data-l="i" aria-pressed="true">world i</button>
+          <button data-l="j" aria-pressed="false">world j</button>
+        </span>
+        <span class="row">
+          <span class="tag tabnum" id="stepCounter">event 0 of 2</span>
+          <button class="btn" id="resetStep">reset</button>
+        </span>
+      </div>
+      <div class="grid2" style="margin-top:14px;align-items:start">
+        <div>
+          <div id="stepGraph"></div>
+        </div>
+        <div>
+          <div id="stepPanel"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. the coast graph -->
+  <section id="s-coast">
+    <div class="eyebrow">step 3 · delete the archive, then let it coast</div>
+    <h2>Where the active shape can go</h2>
+    <p class="small muted" style="max-width:74ch">Now delete every quiet vertex. With no archive left,
+      <span class="mono" style="color:var(--quiet)">CONTACT</span> can never fire again (it needs a
+      quiet vertex), so only <span class="mono" style="color:var(--active)">BUD</span> remains. This is
+      the <strong>coast</strong>: a fixed set of moves on the 4-vertex active shape. The map below is
+      every shape the coast can reach and every move between them, with exact probabilities. A
+      <strong class="pill-sink">sink</strong> is a shape every move returns to itself.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between;margin-bottom:6px">
+        <span class="legend">
+          <span><span class="dot a"></span> a reachable active shape</span>
+          <span><span class="dot s"></span> sink (resting shape)</span>
+          <span>arrow = a BUD move · number = its probability</span>
+        </span>
+      </div>
+      <div id="coastGraph"></div>
+      <div id="coastDetail" class="callout" style="margin-top:12px">Click any arrow to see which
+        bud produces it, or click a sink to see why it rests.</div>
+    </div>
+    <div class="callout warn" style="margin-top:12px"><strong>Not a choice.</strong> "Two possible
+      destinations" does not mean the world plans or picks its future. Each step just follows the
+      fixed local rules and their probabilities; the branching is in the ensemble of possible runs,
+      not in any single world deciding anything.</div>
+  </section>
+
+  <!-- 4. distributions -->
+  <section id="s-dist">
+    <div class="eyebrow">step 4 · one run vs the whole ensemble</div>
+    <h2>How the difference lives or dies</h2>
+    <p class="small muted" style="max-width:74ch">A single run lands in one shape; the honest claim is
+      about the <em>distribution</em> over all runs. At the moment of erasure the two worlds already
+      sit on slightly different distributions over shapes. As the coast runs, all the probability
+      drains into the sinks. The gap between the two worlds is measured by
+      <span class="mono">TV</span> (total-variation distance); its final value is the exact number
+      <span class="frac" id="Lname"></span>.</p>
+    <div class="card pad" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between">
+        <label class="small muted" for="tSlider">Coast step after erasure:
+          <span class="frac tabnum" id="tLabel">0</span></label>
+        <span class="tag tabnum" id="tvLabel"></span>
+      </div>
+      <input id="tSlider" type="range" min="0" max="12" value="0" step="1" style="width:100%;margin:10px 0">
+      <div id="distView"></div>
+    </div>
+    <div id="distReading" class="callout" style="margin-top:12px"></div>
+  </section>
+
+  <!-- 5. five questions -->
+  <section id="s-q">
+    <div class="eyebrow">step 5 · what to take away</div>
+    <h2>Five questions, answered by what you just did</h2>
+    <div class="qgrid">
+      <div class="q"><div class="num">Q1</div><h3>What makes a shape a sink?</h3>
+        <p class="small">Every legal BUD from it lands back on the same shape (up to relabelling).
+          "Two separate bonds" is one: bud either bond and you get two separate bonds again. Once
+          there, the active shape never changes class again.</p></div>
+      <div class="q"><div class="num">Q2</div><h3>Where can a move close off a destination?</h3>
+        <p class="small">On the coast map, a shape whose every arrow leads to a single sink can never
+          reach any other. The washout world only ever reaches one sink — there is nowhere else to go.</p></div>
+      <div class="q"><div class="num">Q3</div><h3>How can a visible difference wash out?</h3>
+        <p class="small">If the coast can only reach <em>one</em> sink, both worlds end there with
+          certainty. Any head-start difference is spent on the way in, and the final gap is exactly
+          zero — even though the difference was plainly visible earlier.</p></div>
+      <div class="q"><div class="num">Q4</div><h3>How does a lasting difference survive?</h3>
+        <p class="small">If the coast can fork to <em>two</em> sinks, the two worlds arrive with
+          different odds of each. Those final odds never change again, so the gap is frozen in as a
+          permanent, exact number.</p></div>
+      <div class="q"><div class="num">Q5</div><h3>Which parts are rules, which are consequences?</h3>
+        <p class="small"><em>Rules we chose:</em> BUD, CONTACT, and picking uniformly among the legal
+          events. <em>Consequences we derived:</em> the sinks, the probabilities, and whether the gap
+          survives. The fork law is a consequence — observed exactly here, not yet proven in general.</p></div>
+      <div class="q"><div class="num">★</div><h3>The one-line reading</h3>
+        <p class="small"><strong>Durability is a property of the future, not the past.</strong> The
+          past can only leave a lasting mark where the coast forks. A strong mark with no fork to hold
+          it drains to nothing.</p></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <p><strong>What this establishes.</strong> On the enumerated depth-2 and depth-3 sets, the fate of
+      a matched pair is set by the coast's absorption geometry: <span class="frac">L = TV(absorption
+      distributions)</span>; among <em>expressed</em> pairs, the gap survives (L&gt;0) exactly when the
+      coast can reach two or more sinks, and washes out (L=0) when it can reach only one. The
+      "only-if" direction is a definition; the "if" direction is verified on every enumerated pair
+      but <em>not proven in general</em>.</p>
+    <p><strong>What remains unresolved.</strong> When does the coast have one versus several reachable
+      sinks? Can two reachable sinks ever be split identically by two worlds (an expressed pair with
+      ≥2 sinks yet L=0)? Never seen here; unproven.</p>
+    <p><strong>Register.</strong> A toy model. Everything shown is exact and computed from the verified
+      BUD/CONTACT implementation (data validated against <span class="mono">pair_robustness.coast_limit</span>).
+      No perpendicular-space coupling and no physical-world mechanism is claimed. This page is a visual
+      aid for deciding what the paper should say — it does not revise or publish the paper.</p>
+    <p id="metaLine" class="tiny"></p>
+  </div>
+</div>
+
+<script id="DATA" type="application/json">__DATA__</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("DATA").textContent);
+const $ = (s,r=document)=>r.querySelector(s);
+const NS="http://www.w3.org/2000/svg";
+function el(t,a={},kids=[]){const e=document.createElementNS(NS,t);
+  for(const k in a)e.setAttribute(k,a[k]); for(const c of [].concat(kids)) if(c!=null) e.append(c); return e;}
+function h(t,a={},kids=[]){const e=document.createElement(t);
+  for(const k in a){ if(k==="class")e.className=a[k]; else if(k==="html")e.innerHTML=a[k]; else e.setAttribute(k,a[k]); }
+  for(const c of [].concat(kids)) if(c!=null) e.append(c); return e;}
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+const state={example:"washout",lineage:"i",erased:false,t:0,step:null};
+function ex(){return DATA[state.example];}
+
+/* ---------- small full-graph drawing (circular layout) ---------- */
+function drawFull(graph,{w=250,h=210,highlight=[]}={}){
+  const n=graph.nodes.length, cx=w/2, cy=h/2, R=Math.min(w,h)/2-30;
+  const pos={}; graph.nodes.forEach((nd,i)=>{
+    const ang=-Math.PI/2 + 2*Math.PI*i/n;
+    pos[nd.id]=[cx+R*Math.cos(ang), cy+R*Math.sin(ang)];
+  });
+  const svg=el("svg",{viewBox:`0 0 ${w} ${h}`,width:w,height:h,role:"img"});
+  graph.edges.forEach(([u,v])=>{
+    svg.append(el("line",{x1:pos[u][0],y1:pos[u][1],x2:pos[v][0],y2:pos[v][1],
+      stroke:cssv("--line"),"stroke-width":2}));
+  });
+  graph.nodes.forEach(nd=>{
+    const [x,y]=pos[nd.id]; const active=nd.label==="A";
+    const hl=highlight.includes(nd.id);
+    svg.append(el("circle",{cx:x,cy:y,r:hl?16:13,
+      fill:active?cssv("--active-soft"):cssv("--quiet-soft"),
+      stroke:active?cssv("--active"):cssv("--quiet"),"stroke-width":hl?3.5:2}));
+    const t=el("text",{x:x,y:y+4,"text-anchor":"middle","font-size":12,
+      "font-family":"var(--mono)",fill:active?cssv("--active"):cssv("--quiet")}); t.textContent=nd.id;
+    svg.append(t);
+  });
+  return svg;
+}
+/* ---------- 4-vertex shape glyph (fixed coords) ---------- */
+function drawShape(proj,{s=120,ring=false,label=true}={}){
+  const svg=el("svg",{viewBox:`0 0 ${s} ${s+ (label?22:6)}`,width:s,height:s+(label?22:6),role:"img"});
+  const pos={}; proj.nodes.forEach(nd=>pos[nd.id]=[12+nd.x*(s-24),10+nd.y*(s-24)]);
+  proj.edges.forEach(([u,v])=>svg.append(el("line",{x1:pos[u][0],y1:pos[u][1],x2:pos[v][0],y2:pos[v][1],
+    stroke:cssv("--active"),"stroke-width":2.4})));
+  proj.nodes.forEach(nd=>{const [x,y]=pos[nd.id];
+    svg.append(el("circle",{cx:x,cy:y,r:6.5,fill:cssv("--active-soft"),stroke:cssv("--active"),"stroke-width":2}));});
+  if(ring) svg.append(el("rect",{x:2,y:2,width:s-4,height:s-4,rx:12,fill:"none",
+    stroke:cssv("--sink"),"stroke-width":2.5,"stroke-dasharray":"3 3"}));
+  if(label){const t=el("text",{x:s/2,y:s+15,"text-anchor":"middle","font-size":10.5,
+    fill:cssv("--muted"),"font-family":"var(--sans)"}); t.textContent=proj.shape; svg.append(t);}
+  return svg;
+}
+
+/* ---------- render: starting states ---------- */
+function renderStart(){
+  const box=$("#startPair"); box.innerHTML="";
+  ["i","j"].forEach(l=>{
+    const lin=ex().lineages[l];
+    const c=h("div",{class:"card pad"});
+    c.append(h("div",{class:"row",html:`<span class="eyebrow">world ${l}</span>
+      <span class="tag tiny mono" style="margin-left:auto">class ${lin.class}</span>`}));
+    const g=drawFull(lin.full,{}); g.style.margin="6px auto"; c.append(g);
+    c.append(h("div",{class:"tiny muted",style:"text-align:center",
+      html:`active shape: <span class="mono">${lin.proj.shape}</span>`}));
+    box.append(c);
+  });
+}
+
+/* ---------- render: event stepper ---------- */
+function renderStep(){
+  const tree=ex().step_tree[state.lineage];
+  if(state.step===null) state.step=tree.root;
+  const node=tree.nodes[state.step];
+  $("#stepGraph").innerHTML="";
+  const hl=[]; // highlight nothing by default
+  $("#stepGraph").append(drawFull(node.graph,{w:280,h:240,highlight:hl}));
+  $("#stepCounter").textContent=`event ${node.depth} of ${DATA.meta.horizon_H}`;
+  const panel=$("#stepPanel"); panel.innerHTML="";
+  if(node.depth>=DATA.meta.horizon_H){
+    panel.append(h("div",{class:"callout",html:`Reached the erasure horizon
+      <span class="frac">H = ${DATA.meta.horizon_H}</span>. This is where we delete the archive and
+      let the active shape coast — see the map below.`}));
+    panel.append(h("button",{class:"btn primary",style:"margin-top:10px",id:"toCoast"},"delete the archive ↓"));
+    $("#toCoast").onclick=()=>document.getElementById("s-coast").scrollIntoView({behavior:"smooth"});
+    return;
+  }
+  panel.append(h("p",{class:"small muted",style:"margin-top:0"},
+    `Legal events now (${node.events.length}). Click one to apply it:`));
+  node.events.forEach((evd)=>{
+    const b=h("button",{class:"evbtn"});
+    b.append(h("span",{class:"k "+evd.kind},evd.kind));
+    b.append(h("span",{},`vertices ${evd.participants.join(", ")}`));
+    b.append(h("div",{class:"tiny muted",style:"margin-top:5px"},"why: "+evd.why));
+    b.append(h("div",{class:"tiny",style:"margin-top:3px;color:var(--accent)"},"→ "+evd.effect));
+    b.onmouseenter=()=>{ $("#stepGraph").innerHTML="";
+      $("#stepGraph").append(drawFull(node.graph,{w:280,h:240,highlight:evd.participants})); };
+    b.onmouseleave=()=>{ $("#stepGraph").innerHTML="";
+      $("#stepGraph").append(drawFull(node.graph,{w:280,h:240})); };
+    b.onclick=()=>{ state.step=evd.to; renderStep(); };
+    panel.append(b);
+  });
+}
+
+/* ---------- render: coast transition graph ---------- */
+function renderCoast(){
+  const e=ex(); const classes=e.proj_classes; const byId={}; classes.forEach(c=>byId[c.id]=c);
+  const sinks=classes.filter(c=>c.is_sink), trans=classes.filter(c=>!c.is_sink);
+  // layered layout: transient row on top, sinks on bottom
+  const W=Math.min(920, Math.max(520, classes.length*180)), rowY=[120, 320], H=430;
+  const place={};
+  const lay=(arr,y)=>arr.forEach((c,i)=>{ place[c.id]=[ (W*(i+1))/(arr.length+1), y ]; });
+  lay(trans,rowY[0]); lay(sinks,rowY[1]);
+  const host=$("#coastGraph"); host.innerHTML="";
+  const svg=el("svg",{viewBox:`0 0 ${W} ${H}`,width:"100%",height:H,role:"img"});
+  // defs arrowhead
+  const defs=el("defs"); const mk=el("marker",{id:"ah",markerWidth:9,markerHeight:9,refX:8,refY:3,orient:"auto"});
+  mk.append(el("path",{d:"M0,0 L8,3 L0,6 Z",fill:cssv("--muted")})); defs.append(mk); svg.append(defs);
+  const R=42;
+  // edges
+  e.transitions.forEach(tr=>{
+    const A=place[tr.from], B=place[tr.to];
+    if(!A||!B) return;
+    if(tr.from===tr.to){
+      // self loop
+      const [x,y]=A;
+      svg.append(el("path",{d:`M ${x-10} ${y-R} C ${x-46} ${y-R-46}, ${x+46} ${y-R-46}, ${x+10} ${y-R}`,
+        fill:"none",stroke:cssv("--sink"),"stroke-width":2,"marker-end":"url(#ah)",class:"selectable","data-tr":`${tr.from}-${tr.to}`}));
+      const lt=el("text",{x:x,y:y-R-40,"text-anchor":"middle","font-size":11,fill:cssv("--sink"),"font-family":"var(--mono)"});
+      lt.textContent=tr.prob; svg.append(lt);
+    }else{
+      const dx=B[0]-A[0], dy=B[1]-A[1], L=Math.hypot(dx,dy), ux=dx/L, uy=dy/L;
+      const x1=A[0]+ux*R, y1=A[1]+uy*R, x2=B[0]-ux*(R+8), y2=B[1]-uy*(R+8);
+      const mx=(x1+x2)/2+uy*22, my=(y1+y2)/2-ux*22;
+      const path=el("path",{d:`M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`,fill:"none",
+        stroke:cssv("--muted"),"stroke-width":2,"marker-end":"url(#ah)",class:"selectable","data-tr":`${tr.from}-${tr.to}`});
+      svg.append(path);
+      const lt=el("text",{x:mx,y:my-4,"text-anchor":"middle","font-size":11,fill:cssv("--muted"),"font-family":"var(--mono)"});
+      lt.textContent=tr.prob; svg.append(lt);
+    }
+  });
+  // nodes
+  classes.forEach(c=>{
+    const [x,y]=place[c.id];
+    const g=el("g",{transform:`translate(${x-R},${y-R})`,class:"selectable","data-node":c.id});
+    g.append(el("rect",{x:0,y:0,width:2*R,height:2*R,rx:12,fill:cssv("--surface"),
+      stroke:c.is_sink?cssv("--sink"):cssv("--line"),"stroke-width":c.is_sink?3:1.5}));
+    // mini shape
+    const mini=drawShape(c,{s:2*R-14,label:false}); mini.setAttribute("x",7); mini.setAttribute("y",6);
+    g.append(mini);
+    if(c.is_sink){const st=el("text",{x:R,y:2*R-6,"text-anchor":"middle","font-size":9.5,
+      fill:cssv("--sink"),"font-family":"var(--sans)","font-weight":600}); st.textContent="SINK"; g.append(st);}
+    svg.append(g);
+  });
+  host.append(svg);
+  // shape legend under graph
+  const leg=h("div",{class:"row tiny muted",style:"margin-top:8px;gap:14px"});
+  classes.forEach(c=>leg.append(h("span",{html:`<span class="mono">#${c.id}</span> ${c.shape}${c.is_sink?' <span class="pill-sink">·sink</span>':''}`})));
+  host.append(leg);
+
+  // interactions
+  host.querySelectorAll("[data-tr]").forEach(p=>p.addEventListener("click",()=>{
+    const [f,t]=p.getAttribute("data-tr").split("-").map(Number);
+    const tr=e.transitions.find(x=>x.from===f&&x.to===t);
+    const detail=$("#coastDetail");
+    if(f===t){ detail.innerHTML=`<strong>Sink #${f} — ${byId[f].shape}.</strong> Every legal bud here
+      returns the same shape class (probability <span class="frac">${tr.prob}</span>). Individual
+      vertices keep changing and the full graph keeps growing, but the <em>active shape class</em>
+      never changes again. That is what "resting" means.`; }
+    else { detail.innerHTML=`<strong>Move #${f} → #${t}</strong> with probability
+      <span class="frac">${tr.prob}</span>. Produced by: ${tr.events.map(x=>`<span class="mono">${x}</span>`).join(", ")}.
+      <span class="muted">(${byId[f].shape} → ${byId[t].shape})</span>`; }
+  }));
+  host.querySelectorAll("[data-node]").forEach(g=>g.addEventListener("click",()=>{
+    const id=Number(g.getAttribute("data-node")); const c=byId[id];
+    const detail=$("#coastDetail");
+    const outs=e.transitions.filter(t=>t.from===id);
+    detail.innerHTML=`<strong>Shape #${id} — ${c.shape}${c.is_sink?" (a sink)":""}.</strong> `+
+      (c.is_sink? `All ${outs.length? outs.map(o=>`<span class="frac">${o.prob}</span>`).join("+") : ""}
+        of its probability returns to itself — it rests here.`
+        : `From here the coast can move to `+outs.filter(o=>o.to!==id).map(o=>`#${o.to} (<span class="frac">${o.prob}</span>)`).join(", ")+`.`);
+  }));
+}
+
+/* ---------- render: distributions ---------- */
+function renderDist(){
+  const e=ex(); const step=e.dist_steps[state.t];
+  const classes=e.proj_classes; const byId={}; classes.forEach(c=>byId[c.id]=c);
+  $("#tLabel").textContent=state.t;
+  $("#tvLabel").textContent="gap TV(i,j) = "+e.tv_series[state.t].toFixed(4);
+  $("#Lname").textContent=e.L;
+  const host=$("#distView"); host.innerHTML="";
+  const tbl=h("table",{class:"dist"});
+  tbl.append(h("tr",{},[h("th",{},"active shape"),h("th",{},"world i"),h("th",{},"world j")]));
+  classes.forEach(c=>{
+    const pi=step.i[c.id]||0, pj=step.j[c.id]||0;
+    const cell=(p)=>{const d=h("td",{});
+      const wrap=h("div",{class:"row",style:"gap:8px"});
+      const bar=h("div",{class:"bar",style:`width:${Math.max(2,p*120)}px;background:${c.is_sink?cssv("--sink"):cssv("--accent")}`});
+      wrap.append(bar); wrap.append(h("span",{class:"frac tabnum tiny"},p.toFixed(3)));
+      d.append(wrap); return d;};
+    tbl.append(h("tr",{},[
+      h("td",{html:`<span class="mono">#${c.id}</span> ${c.shape}${c.is_sink?' <span class="pill-sink">sink</span>':''}`}),
+      cell(pi),cell(pj)]));
+  });
+  host.append(tbl);
+  // reading
+  const rd=$("#distReading");
+  const atEnd=state.t>=e.dist_steps.length-1;
+  if(e.classification==="washout"){
+    rd.className="callout warn";
+    rd.innerHTML=`<strong>Washout.</strong> There is only one sink, so all the probability funnels
+      into it. Watch the gap <span class="mono">TV(i,j)</span> fall to <span class="frac">0</span>:
+      the two worlds become identical in the active layer. The difference was real and visible early
+      (drag the slider back to <span class="frac">t=0</span>) — but with no fork to hold it, it is
+      spent entirely on the way to the single sink.`;
+  }else{
+    rd.className="callout";
+    rd.innerHTML=`<strong>Durable.</strong> There are two sinks. The two worlds arrive with
+      <em>different</em> shares of each, so the gap <span class="mono">TV(i,j)</span> settles at the
+      exact non-zero value <span class="frac">${e.L}</span> and never moves again. Compare the two
+      sink rows at the last step: worlds i and j split them differently. That frozen split
+      <em>is</em> the surviving mark of history.`;
+  }
+}
+
+/* ---------- wiring ---------- */
+function setExample(v){ state.example=v; state.step=null; state.t=0; $("#tSlider").value=0;
+  $$("#exampleSeg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===v)));
+  const e=ex();
+  $("#fateTag").innerHTML = e.classification==="washout"
+    ? `<span class="dot q"></span> washout · L = <span class="frac">0</span> · 1 sink`
+    : `<span class="dot a"></span> durable · L = <span class="frac">${e.L}</span> · ${e.n_sinks} sinks`;
+  renderStart(); renderStep(); renderCoast(); renderDist();
+}
+function setLineage(l){ state.lineage=l; state.step=null;
+  $$("#lineageSeg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.l===l)));
+  renderStep(); }
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+
+$$("#exampleSeg button").forEach(b=>b.onclick=()=>setExample(b.dataset.v));
+$$("#lineageSeg button").forEach(b=>b.onclick=()=>setLineage(b.dataset.l));
+$("#resetStep").onclick=()=>{state.step=null;renderStep();};
+$("#tSlider").oninput=(ev)=>{state.t=+ev.target.value;renderDist();};
+$("#metaLine").textContent=DATA.meta.what_it_shows+"  (erasure horizon H="+DATA.meta.horizon_H+", context "+DATA.meta.commit_context+")";
+
+// theme toggle (per-viewer convenience)
+$("#themeBtn").onclick=()=>{
+  const r=document.documentElement;
+  const cur=r.getAttribute("data-theme")|| (matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+  const next=cur==="dark"?"light":"dark"; r.setAttribute("data-theme",next);
+  try{localStorage.setItem("wtf-theme",next);}catch(e){}
+  setExample(state.example); // re-render svgs with new token colors
+};
+try{const t=localStorage.getItem("wtf-theme"); if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}
+
+setExample("washout");
+</script>
