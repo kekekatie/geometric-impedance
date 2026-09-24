@@ -99,3 +99,5 @@ the geometry itself. Two candidates:
 
 Then ask two things. Does the universe still keep writing forever without importing anything?
 And does the amount of "now" grow, the embiggening, in a way that behaves like expansion?
+
+**First results (same day).** [`exploratory/accretion_pilot/geometric_clock/`](exploratory/accretion_pilot/geometric_clock/): a clock read off the window (the next postcode around, always falling forward) imports nothing and keeps the whole universe writing ordered, never-repeating history. When buds sprout two tips (the next and the previous house), nothing ever leaves the now, and under that geometric clock every scrap of "more now" becomes exactly one new house of space. With dice, the now crowds instead and spreads only like √t. The embiggening is the spacetime, in this toy, one for one. A caution learned on the way: a clock that is itself one of the walkers phase-locks onto a single lineage and freezes the rest.
