@@ -14,8 +14,8 @@ VIEW = 60
 
 panels = [("RAY_QUEUE", "RAY · queue clock", "momentum alone: a line that runs off the world"),
           ("RAY_DICE", "RAY · dice", "the same line"),
-          ("FORK_QUEUE", "FORK · queue clock (imports nothing)", "momentum + branching: round, 11 holes"),
-          ("FORK_DICE", "FORK · dice", "rougher: roundness 0.74, 34 holes")]
+          ("FORK_QUEUE", "FORK · queue clock (imports nothing)", "momentum + branching: round, 11 gaps pending"),
+          ("FORK_DICE", "FORK · dice", "rougher: roundness 0.74, 34 gaps pending")]
 fig, axes = plt.subplots(2, 2, figsize=(9, 9.6), dpi=150)
 fig.patch.set_facecolor(SURF)
 for ax, (key, title, sub) in zip(axes.flat, panels):

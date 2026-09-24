@@ -32,8 +32,12 @@ nothing unbecomes, "the embiggening is the spacetime".
    **trapped** (300/300); **roads** (straight in the hidden grid) always cross, with a **menu** of 1–3
    ways forward on 58% of steps — momentum picks among them.
 7. [`penrose_growth/`](penrose_growth/) — first 2-D growth: **momentum alone = a line; momentum +
-   branching fills space in every direction** (near-decagon under the geometric clock); a few
-   houses the roads skip (**holes**).
+   branching fills space in every direction** (near-decagon under the geometric clock); momentary
+   **gaps** in the now are lag, filled later by the roads (first write-up wrongly said "skipped").
+8. [`seed_crystal/`](seed_crystal/) — first gentle resonance census: for every gap, a **twin seed
+   already waits** in the now at shallow likeness depth (a shortcut vs ~100+ events of road lag);
+   deeper likeness -> rarer, farther in the world, closer in the hidden window; seeds run out at
+   depth 3-4 (the nothing-happens case); wrong-shaped dust fits only 9%.
 
 **The idea that ties it together (from Katie's cheese-wheel chat with Opus):** *every process is
 local in some space.* Cheese = local in ordinary space (adjacency); tuning fork = local in pitch-space
@@ -41,8 +45,9 @@ local in some space.* Cheese = local in ordinary space (adjacency); tuning fork 
 reorganisation). "Far away" is just "near in a different space".
 
 **Waiting, in Katie's order of appetite:**
-- **Resonance — slowly, deliberately.** Smallest honest first test: *can twins fill the holes the
-  roads skip?* (the seed crystal), with random-seed and fake-twin controls; watch for lock-in.
+- **Resonance — slowly, deliberately.** The seed-crystal *census* is done (`seed_crystal/`); next
+  would be running a seed rule as dynamics (twins fill gaps early) against random-seed and
+  fake-twin controls, and watching for lock-in.
 - **E8's actual rung:** the Elser–Sloane quasicrystal (E8 → 4-D) with the same machinery — and
   LEADS' question: does the framework *need* E8?
 - Unproven-but-observed: SWEEP claims a new house every event; ribbons always have a way forward.

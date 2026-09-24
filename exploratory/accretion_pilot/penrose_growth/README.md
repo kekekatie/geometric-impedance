@@ -26,7 +26,7 @@ under **dice**. As everywhere in the pilot, the clock only chooses among *eligib
 | shape | a **line** along one road | the same line | **round blob, ten-sided** | lumpier blob |
 | extent | runs off the world, then freezes at 149 houses | the same | radius grows like `t^0.46` | `t^0.40–0.44` |
 | roundness (min/max extent over 20 directions) | 0.01 | 0.01 | **0.91** | 0.67–0.81 |
-| holes (houses the now encloses but never takes) | 0 | 0 | **11** | 34–42 |
+| gaps (houses the now encloses but has not reached *yet*) | 0 | 0 | **11** | 34–42 |
 | does anything ever leave the now? | never | never | never | never |
 
 - **More now is more space, one for one, in 2-D too.** Every event adds exactly one new house,
@@ -40,10 +40,13 @@ under **dice**. As everywhere in the pilot, the clock only chooses among *eligib
 - **The geometric clock grows a rounder, more complete now than dice**, beating every one of 5
   dice seeds on both roundness and holes. It shows the tiling's ten-fold symmetry: the blob is
   close to a decagon.
-- **A new 2-D wrinkle: holes.** A few houses (11 of 4,000 under the queue clock) are enclosed by
-  the now but never taken, because no road leads into them from their held neighbours. In 1-D
-  the now was always one unbroken stretch. In 2-D the roads occasionally skip a house. Whether
-  a later rule, perhaps resonance, should reach them is an open design question.
+- **A 2-D wrinkle: gaps that are *lag*, not skips.** At any moment a few houses (11 of 4,000
+  under the queue clock) are enclosed by the now but not yet held. **Correction (found by
+  [`../seed_crystal/`](../seed_crystal/)):** the first version of this README said no road leads
+  into them. That was wrong. Every gap, at every snapshot and under both clocks, has a road
+  leading in, and the roads fill every one later (after a median of about 110–150 events).
+  Momentum plus branching eventually reaches every house. In 1-D the now was one unbroken
+  stretch at every moment; in 2-D it is unbroken *eventually*.
 
 ## Honest scope
 
