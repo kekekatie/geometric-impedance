@@ -1,0 +1,38 @@
+==========================================================================================
+PENROSE ADDRESS -> ENVIRONMENT -- the Fibonacci foundation, one step closer to E8
+==========================================================================================
+  patch radius 90.0: 31306 vertices, 62235 edges, 30930 rhombi
+  [PASS] every edge joins K-vectors differing by exactly one unit vector (unit length, direction e_j)
+  [PASS] thick:thin rhombus ratio 1.6108 ~ tau = 1.6180 (Penrose frequency)
+  [PASS] every interior vertex has degree >= 3 (no dangling vertices)
+  [PASS] the layer index sum(K) takes exactly 4 consecutive values [1, 2, 3, 4] (the four window pentagons of de Bruijn)
+  hidden-window radii by layer: 1: 1.0000, 2: 1.6182, 3: 1.6180, 4: 1.0003
+  [PASS] windows: layers 1,4 fill SMALL pentagons (circumradius 1) and layers 2,3 LARGE ones (circumradius tau); every hidden address is bounded by tau + |gamma_perp| = 1.6343 (windows are centred at the offsets' hidden image, not the origin; v1 wrongly capped all radii at 1.3, v2 at tau)
+  r=1: 29298 vertices with a complete radius-1 view ->   62 distinct environments (0 seen only once)
+  r=2: 28642 vertices with a complete radius-2 view ->  184 distinct environments (0 seen only once)
+  r=3: 27946 vertices with a complete radius-3 view ->  364 distinct environments (0 seen only once)
+  r=4: 27296 vertices with a complete radius-4 view ->  574 distinct environments (0 seen only once)
+  r=5: 26686 vertices with a complete radius-5 view ->  754 distinct environments (0 seen only once)
+  r=6: 26036 vertices with a complete radius-6 view -> 1104 distinct environments (0 seen only once)
+  r=7: 25386 vertices with a complete radius-7 view -> 1454 distinct environments (0 seen only once)
+  [PASS] counts are COMPLETE: every environment up to r=7 is seen more than once (v1 used a radius-34 patch; 465 singletons at r=7 showed it was undersampled)
+  1-D Fibonacci, distinct radius-r environments: [3, 5, 7, 9, 11, 13, 15]
+  2-D Penrose,   distinct radius-r environments: [62, 184, 364, 574, 754, 1104, 1454]
+  growth exponent (log-log fit, r=3..7): 1-D 0.90   2-D 1.62
+  [PASS] 1-D pattern information grows exactly linearly: 2r+1 environments of radius r
+  [PASS] 2-D carries MORE pattern information and it grows FASTER than 1-D: superlinear (fitted r^1.62 over r=3..7; v1 predicted r^2 -- not confirmed at these radii), and the 2-D/1-D ratio rises every step (21x -> 97x)
+  agreement radius r* (first radius at which two same-layer vertices' environments differ) vs hidden distance:
+    r*=1           pairs 2749293   max hidden distance 3.0249   median 1.2529   max physical distance   67.6
+    r*=2           pairs  179823   max hidden distance 1.7961   median 0.4824   max physical distance   66.4
+    r*=3           pairs   30258   max hidden distance 0.6861   median 0.2647   max physical distance   64.0
+    r*=4           pairs   11162   max hidden distance 0.6205   median 0.2016   max physical distance   63.3
+    r*=5           pairs    4910   max hidden distance 0.3835   median 0.1636   max physical distance   63.3
+    r*=6           pairs    5428   max hidden distance 0.3835   median 0.1636   max physical distance   63.3
+    r*=7           pairs    2644   max hidden distance 0.3835   median 0.1246   max physical distance   63.3
+    agree to r>=7  pairs    7622   max hidden distance 0.2278   median 0.0655   max physical distance   60.5
+  twin-cell size delta(r) = max hidden distance among pairs agreeing through radius r: 1.7961, 0.6861, 0.6205, 0.3835, 0.3835, 0.3835, 0.2278
+  [PASS] the deeper two vertices agree, the closer their hidden addresses MUST be: the twin-cell size shrinks monotonically (1.796 -> 0.228)
+  [PASS] twins exist FAR apart: 7622 same-layer pairs agree through radius 7 at physical distances up to 60.5 (pair region radius 34.0)
+  [PASS] up to the 20 symmetries, exactly 7 vertex-star types with degrees [3, 3, 4, 5, 5, 6, 7]: the classic Penrose vertex types (S and S5 share one edge-star; they differ only in their rhombi, so a radius-1 star cannot tell them apart)
+==========================================================================================
+ALL CHECKS PASSED.
