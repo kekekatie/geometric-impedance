@@ -38,6 +38,9 @@ nothing unbecomes, "the embiggening is the spacetime".
    already waits** in the now at shallow likeness depth (a shortcut vs ~100+ events of road lag);
    deeper likeness -> rarer, farther in the world, closer in the hidden window; seeds run out at
    depth 3-4 (the nothing-happens case); wrong-shaped dust fits only 9%.
+9. [`seed_dynamics/`](seed_dynamics/) — the seed rule **running** (2026-09-25): any seeding halves the
+   gaps, but **real likeness adds nothing** over dust or fake twins; no lock-in. Why: in a fixed
+   tiling the shape is already decided, so a seed has nothing to teach.
 
 **The idea that ties it together (from Katie's cheese-wheel chat with Opus):** *every process is
 local in some space.* Cheese = local in ordinary space (adjacency); tuning fork = local in pitch-space
@@ -45,9 +48,10 @@ local in some space.* Cheese = local in ordinary space (adjacency); tuning fork 
 reorganisation). "Far away" is just "near in a different space".
 
 **Waiting, in Katie's order of appetite:**
-- **Resonance — slowly, deliberately.** The seed-crystal *census* is done (`seed_crystal/`); next
-  would be running a seed rule as dynamics (twins fill gaps early) against random-seed and
-  fake-twin controls, and watching for lock-in.
+- **Resonance — the fair test.** Census and first dynamics done (`seed_crystal/`, `seed_dynamics/`):
+  in a *fixed* tiling likeness cannot matter. Next: **grow the tiling itself, tile by tile**, where
+  local growth can make mistakes (Onoda–Steinhardt–DiVincenzo–Socolar 1988) -- there a far twin
+  could carry information the local rules lack. Keep the dust / fake-twin controls.
 - **E8's actual rung:** the Elser–Sloane quasicrystal (E8 → 4-D) with the same machinery — and
   LEADS' question: does the framework *need* E8?
 - Unproven-but-observed: SWEEP claims a new house every event; ribbons always have a way forward.
