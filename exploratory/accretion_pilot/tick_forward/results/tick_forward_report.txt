@@ -20,13 +20,13 @@ TICK-FORWARD -- the newborn's postcode: TICK (topple) vs CLONE (copy) vs RANDOM
    share of windows that are legal Fibonacci words (n=2,4,8,12)  0.955, nan, nan, nan
    MEETINGS: lineage pairs (same world) sharing an exact address  0 of 10097
 ------------------------------------------------------------------------------------------
-[RANDOM]  100 runs x 40-site chain; collapse to lone pairs after 68.7 events on average; 1490 surviving pairs, each then writes 400 events
+[RANDOM]  100 runs x 40-site chain; collapse to lone pairs after 69.0 events on average; 1459 surviving pairs, each then writes 400 events
    new content per event        1.000
    exact repeats of a pair      0
-   illegal (non-tile) bonds     before collapse 6868, after 595999
-   distinct content words p(n)  [2, 4, 8, 16, 32, 64, 128, 256, 512, 1022, 2028, 3919]
-   share of windows that are legal Fibonacci words (n=2,4,8,12)  0.736, 0.091, 0.002, 0.000
-   MEETINGS: lineage pairs (same world) sharing an exact address  957 of 10440
+   illegal (non-tile) bonds     before collapse 6898, after 583600
+   distinct content words p(n)  [2, 4, 8, 16, 32, 64, 128, 256, 512, 1023, 2027, 3913]
+   share of windows that are legal Fibonacci words (n=2,4,8,12)  0.735, 0.090, 0.002, 0.000
+   MEETINGS: lineage pairs (same world) sharing an exact address  0 of 9985
 ==========================================================================================
 [checks]
   [PASS] TICK: every bond ever created is a legal Fibonacci tile -- the growth never leaves the quasicrystal (before AND after collapse)
@@ -39,7 +39,7 @@ TICK-FORWARD -- the newborn's postcode: TICK (topple) vs CLONE (copy) vs RANDOM
   [PASS] TICK: content has EXACTLY n+1 distinct words of length n (n=1..12) -- the minimal complexity any never-repeating sequence can have (Morse-Hedlund)
   [PASS] TICK: every window of content is a legal Fibonacci word
   [PASS] RANDOM: complexity explodes (p(8)=256 of 256 possible) and almost no long window is legal (n=12: 0.0000)
-  [FAIL] TICK: separate lineages MEET -- independently reach the identical hidden address (10178 of 10178 lineage pairs); RANDOM: never (957) -- the natural trigger for Phase-2 resonance exists only under the topple rule
+  [PASS] TICK: separate lineages MEET -- reach the identical hidden address (10178 of 10178 lineage pairs: all walk ONE shared orbit, so meetings are structural, not luck); RANDOM: never (0) -- perfect twins arise only under the topple
   randomness cost per content symbol:  TICK 0 bits (determined),  CLONE 0 bits (but no content),  RANDOM ~0.959 bits (P(S)=1/tau)
 ==========================================================================================
-FAILED: 1 check(s): TICK: separate lineages MEET -- independently reach the identical hidden address (10178 of 10178 lineage pairs); RANDOM: never (957) -- the natural trigger for Phase-2 resonance exists only under the topple rule
+ALL CHECKS PASSED.

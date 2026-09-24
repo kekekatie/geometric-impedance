@@ -53,6 +53,9 @@ biased."*
 
 ## Orientation
 
+- 🧭 The compass: [`../../THREE_COMMANDMENTS.md`](../../THREE_COMMANDMENTS.md) (+ the "more now" timing addendum, 2026-09-24).
+- Newest (2026-09-23/24): [`pair_collision_toy/`](pair_collision_toy/), [`twins_mirror/`](twins_mirror/), [`tick_forward/`](tick_forward/) — the perp-space bridge has begun.
+
 - Front door / full index: [`OVERVIEW.md`](OVERVIEW.md).
 - Branch: `claude/world-growth-pilot-cy85ne`. Latest commit at time of writing: `e0917d6`.
 - Register unchanged: speculative exploration; mechanism tests on one matched pair; earlier
