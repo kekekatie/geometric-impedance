@@ -1,0 +1,58 @@
+==========================================================================================
+TWINS AS MIRRORS -- feasibility: does hidden-address depth set the shared future?
+==========================================================================================
+  chain: 196 sites, exact gaps; rates BUD(x,y) = 1/l (L: tau-1, S: 1); control w == 1
+  [PASS] found far-apart site pairs with first-disagreement radius r* = 1..6
+------------------------------------------------------------------------------------------
+[light cone] c_n on patch radius R=n equals c_n on patch radius R=n+1 (n <= 4)
+  [PASS] c_n depends only on tiles within distance n of v (enlarging the patch never changes it) -> twins agreeing on E_{r*-1} MUST agree on c_0..c_{r*-1}
+------------------------------------------------------------------------------------------
+[test] exact Taylor coefficients c_n of P(v active at time s), twins i vs j
+  r*=1: sites 20,40  |dp|=  27.4  |dq|=0.5836  E_0 equal, E_1 differ -> first differing order n = 1
+      c_0:                             1   vs   1                           
+      c_1:                          2-2t   vs   -1t                            <-- differ
+      c_2:                          6-2t   vs   2+1t                           <-- differ
+  [PASS] r*=1: twins agree EXACTLY at every order n < r* (shared future)
+  r*=2: sites 21,44  |dp|=  31.7  |dq|=0.3475  E_1 equal, E_2 differ -> first differing order n = 2
+      c_0:                             1   vs   1                           
+      c_1:                           -1t   vs   -1t                         
+      c_2:                          2+1t   vs   -1+3t                          <-- differ
+      c_3:                         -1-6t   vs   -12                            <-- differ
+  [PASS] r*=2: twins agree EXACTLY at every order n < r* (shared future)
+  r*=3: sites 21,52  |dp|=  42.7  |dq|=0.2574  E_2 equal, E_3 differ -> first differing order n = 3
+      c_0:                             1   vs   1                           
+      c_1:                           -1t   vs   -1t                         
+      c_2:                          2+1t   vs   2+1t                        
+      c_3:                         -1-6t   vs   -4-4t                          <-- differ
+      c_4:                           25t   vs   -22+37t                        <-- differ
+  [PASS] r*=3: twins agree EXACTLY at every order n < r* (shared future)
+  r*=4: sites 20,46  |dp|=  35.9  |dq|=0.1115  E_3 equal, E_4 differ -> first differing order n = 4
+      c_0:                             1   vs   1                           
+      c_1:                          2-2t   vs   2-2t                        
+      c_2:                          6-2t   vs   6-2t                        
+      c_3:                         -2-4t   vs   -2-4t                       
+      c_4:                       -73+65t   vs   -68+62t                        <-- differ
+      c_5:                     -636+304t   vs   -538+242t                      <-- differ
+  [PASS] r*=4: twins agree EXACTLY at every order n < r* (shared future)
+  r*=5: sites 21,47  |dp|=  35.9  |dq|=0.1115  E_4 equal, E_5 differ -> first differing order n = 5
+      c_0:                             1   vs   1                           
+      c_1:                           -1t   vs   -1t                         
+      c_2:                          2+1t   vs   2+1t                        
+      c_3:                         -1-6t   vs   -1-6t                       
+      c_4:                           25t   vs   25t                         
+      c_5:                      -163-13t   vs   -155-18t                       <-- differ
+      c_6:                     -378+828t   vs   -214+728t                      <-- differ
+  [PASS] r*=5: twins agree EXACTLY at every order n < r* (shared future)
+  r*=6: sites 22,48  |dp|=  35.9  |dq|=0.1115  E_5 equal, E_6 differ -> first differing order n = 6
+      c_0:                             1   vs   1                           
+      c_1:                           -1t   vs   -1t                         
+      c_2:                         -1+3t   vs   -1+3t                       
+      c_3:                           -12   vs   -12                         
+      c_4:                        -9+34t   vs   -9+34t                      
+      c_5:                       -60-91t   vs   -60-91t                     
+      c_6:                      814+155t   vs   806+160t                       <-- differ
+  [PASS] r*=6: twins agree EXACTLY at every order n < r* (shared future)
+  [PASS] the difference APPEARS exactly at order n = r* for every pair (no cancellation): hidden-address depth = length of the exactly-shared future
+  [PASS] BLIND control (lengths ignored): every pair identical at every computed order -- without a rule that reads geometry, the address is invisible
+==========================================================================================
+ALL EXACT CHECKS PASSED.
