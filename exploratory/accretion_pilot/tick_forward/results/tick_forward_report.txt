@@ -1,0 +1,45 @@
+==========================================================================================
+TICK-FORWARD -- the newborn's postcode: TICK (topple) vs CLONE (copy) vs RANDOM
+==========================================================================================
+  [PASS] geometry re-checked: f_step(q) = (tile to the right, next site's address) at every site
+  [PASS] the chain's own language is Sturmian: exactly n+1 distinct words of length n (n=1..12)
+------------------------------------------------------------------------------------------
+[TICK]  100 runs x 40-site chain; collapse to lone pairs after 69.6 events on average; 1473 surviving pairs, each then writes 400 events
+   new content per event        0.499
+   exact repeats of a pair      0
+   illegal (non-tile) bonds     before collapse 0, after 0
+   distinct content words p(n)  [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   share of windows that are legal Fibonacci words (n=2,4,8,12)  1.000, 1.000, 1.000, 1.000
+   MEETINGS: lineage pairs (same world) sharing an exact address  10178 of 10178
+------------------------------------------------------------------------------------------
+[CLONE]  100 runs x 40-site chain; collapse to lone pairs after 67.5 events on average; 1468 surviving pairs, each then writes 400 events
+   new content per event        0.000
+   exact repeats of a pair      0
+   illegal (non-tile) bonds     before collapse 6750, after 587200
+   distinct content words p(n)  [2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   share of windows that are legal Fibonacci words (n=2,4,8,12)  0.955, nan, nan, nan
+   MEETINGS: lineage pairs (same world) sharing an exact address  0 of 10097
+------------------------------------------------------------------------------------------
+[RANDOM]  100 runs x 40-site chain; collapse to lone pairs after 68.7 events on average; 1490 surviving pairs, each then writes 400 events
+   new content per event        1.000
+   exact repeats of a pair      0
+   illegal (non-tile) bonds     before collapse 6868, after 595999
+   distinct content words p(n)  [2, 4, 8, 16, 32, 64, 128, 256, 512, 1022, 2028, 3919]
+   share of windows that are legal Fibonacci words (n=2,4,8,12)  0.736, 0.091, 0.002, 0.000
+   MEETINGS: lineage pairs (same world) sharing an exact address  957 of 10440
+==========================================================================================
+[checks]
+  [PASS] TICK: every bond ever created is a legal Fibonacci tile -- the growth never leaves the quasicrystal (before AND after collapse)
+  [PASS] CLONE and RANDOM both create illegal (non-tile) bonds
+  [PASS] TICK: no pair ever repeats an earlier address pair (the window's step never returns: irrational rotation)
+  [PASS] TICK: content is DETERMINED by the starting address (each new pair is the next step of the window orbit) -- zero random bits spent on WHAT is written
+  [PASS] TICK: new content keeps coming at ~1/2 per event forever (0.499); the other ~1/2 are stutters -- the scheduler's coin decides WHEN, not WHAT
+  [PASS] CLONE: after its first event a pair writes nothing new (0.0000 per event): the record freezes
+  [PASS] RANDOM: every event writes new content (1.000)
+  [PASS] TICK: content has EXACTLY n+1 distinct words of length n (n=1..12) -- the minimal complexity any never-repeating sequence can have (Morse-Hedlund)
+  [PASS] TICK: every window of content is a legal Fibonacci word
+  [PASS] RANDOM: complexity explodes (p(8)=256 of 256 possible) and almost no long window is legal (n=12: 0.0000)
+  [FAIL] TICK: separate lineages MEET -- independently reach the identical hidden address (10178 of 10178 lineage pairs); RANDOM: never (957) -- the natural trigger for Phase-2 resonance exists only under the topple rule
+  randomness cost per content symbol:  TICK 0 bits (determined),  CLONE 0 bits (but no content),  RANDOM ~0.959 bits (P(S)=1/tau)
+==========================================================================================
+FAILED: 1 check(s): TICK: separate lineages MEET -- independently reach the identical hidden address (10178 of 10178 lineage pairs); RANDOM: never (957) -- the natural trigger for Phase-2 resonance exists only under the topple rule
