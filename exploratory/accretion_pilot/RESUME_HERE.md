@@ -4,6 +4,52 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🆕 The latest trail (2026-09-23 → 24) — read this first
+
+*One long session with Katie (and Gemini in the wings). Everything below is on branch
+**`claude/bold-darwin-lqsdd7`** (it contains all of `claude/world-growth-pilot-cy85ne` plus this).*
+
+**The compass came home.** [`../../THREE_COMMANDMENTS.md`](../../THREE_COMMANDMENTS.md) — relationality;
+least resistance (nothing shipped in); things doing thing things — restored verbatim, with Katie's
+**"more now"** addendum in her own words: the timing *is* the geometry, the track laid as it is ridden,
+nothing unbecomes, "the embiggening is the spacetime".
+
+**The studies, in order (each exact or certified, each with its failures recorded):**
+1. [`pair_collision_toy/`](pair_collision_toy/) — P(collision) = **1/3** exact; P(one pair + two loners)
+   certified in **[0.123896379462952, 0.123896379462967]** — **NOT 1/8** (older chats hoped it was);
+   lemma: BUD-only recurrent classes are singleton matchings (all 208 graphs, n ≤ 6).
+2. [`twins_mirror/`](twins_mirror/) — twins in the hidden window share their future to order `r*`
+   (hidden-address depth = length of the shared future); design note parks resonance with controls.
+3. [`tick_forward/`](tick_forward/) — Katie's **topple**: a newborn's postcode is its parent's stepped
+   forward. Never repeats, only legal tiles, 0 random bits on *what* is written, exactly n+1 patterns.
+4. [`geometric_clock/`](geometric_clock/) — the *when* can come from the geometry (0 bits, fair);
+   with two tips per bud **nothing leaves the now** and under the geometric clock **more now = more
+   space, 1:1** (dice: the now crowds, √t). A clock that is itself a walker **phase-locks** (warning).
+5. [`penrose_address_environment/`](penrose_address_environment/) — **one step closer to E8** (5-D → 2-D,
+   same τ): address → environment holds in 2-D; 7 vertex types each own window regions; ~97× more
+   pattern information than 1-D at radius 7 (r² predicted, **not** confirmed: ~r^1.6).
+6. [`least_resistance_paths/`](least_resistance_paths/) — greedy "easiest next step" walkers are
+   **trapped** (300/300); **roads** (straight in the hidden grid) always cross, with a **menu** of 1–3
+   ways forward on 58% of steps — momentum picks among them.
+7. [`penrose_growth/`](penrose_growth/) — first 2-D growth: **momentum alone = a line; momentum +
+   branching fills space in every direction** (near-decagon under the geometric clock); a few
+   houses the roads skip (**holes**).
+
+**The idea that ties it together (from Katie's cheese-wheel chat with Opus):** *every process is
+local in some space.* Cheese = local in ordinary space (adjacency); tuning fork = local in pitch-space
+(the hidden window: twins); seed crystal = local in shape-space (a shape dropped, a lasting
+reorganisation). "Far away" is just "near in a different space".
+
+**Waiting, in Katie's order of appetite:**
+- **Resonance — slowly, deliberately.** Smallest honest first test: *can twins fill the holes the
+  roads skip?* (the seed crystal), with random-seed and fake-twin controls; watch for lock-in.
+- **E8's actual rung:** the Elser–Sloane quasicrystal (E8 → 4-D) with the same machinery — and
+  LEADS' question: does the framework *need* E8?
+- Unproven-but-observed: SWEEP claims a new house every event; ribbons always have a way forward.
+- Where the older conversations live: the E8 "recognition" is recorded in `LEADS.md` (branch
+  `exploratory/trunk`); its aperiodicity gist in `HORIZON_NOTE_machines_that_remember.md` (master).
+  The original chats themselves are not in the repo.
+
 ## The one thing waiting
 
 **Consolidate the "transmission" paper** — the *next* paper, the successor to the deposited
@@ -54,10 +100,11 @@ biased."*
 ## Orientation
 
 - 🧭 The compass: [`../../THREE_COMMANDMENTS.md`](../../THREE_COMMANDMENTS.md) (+ the "more now" timing addendum, 2026-09-24).
-- Newest (2026-09-23/24): [`pair_collision_toy/`](pair_collision_toy/), [`twins_mirror/`](twins_mirror/), [`tick_forward/`](tick_forward/) — the perp-space bridge has begun.
+- Newest work: see **The latest trail** at the top of this file.
 
 - Front door / full index: [`OVERVIEW.md`](OVERVIEW.md).
-- Branch: `claude/world-growth-pilot-cy85ne`. Latest commit at time of writing: `e0917d6`.
+- Branches: newest work on **`claude/bold-darwin-lqsdd7`** (2026-09-24; includes everything below); the
+  earlier pilot history on `claude/world-growth-pilot-cy85ne` (latest there: `911d57c`).
 - Register unchanged: speculative exploration; mechanism tests on one matched pair; earlier
   work preserved; nothing merged or published beyond the deposited paper.
 
