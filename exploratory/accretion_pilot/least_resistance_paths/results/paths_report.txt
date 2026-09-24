@@ -1,0 +1,26 @@
+==========================================================================================
+LEAST-RESISTANCE PATHS on the Penrose tiling
+==========================================================================================
+  patch radius 70.0: 18906 vertices; 16376 interior vertices used
+------------------------------------------------------------------------------------------
+[A] step directions open at a vertex (of 10): {3: 8620, 4: 1475, 5: 4781, 6: 585, 7: 915}
+  [PASS] the projection opens only 3-7 of the 10 possible step directions at any vertex
+  [PASS] a world step along e_j is a hidden step along e_2j (the twist) and changes the layer by +-1 -- every step is also a step inside the bounded window
+------------------------------------------------------------------------------------------
+[B] straight runs (same step repeated), over all 65580 directed steps: {1: 60810, 2: 4770}
+  [PASS] the same step can be repeated at most TWICE, never three times; a repeat is possible after only 7.3% of steps -- straight lines in the world are forbidden
+------------------------------------------------------------------------------------------
+[C] STRAIGHT from 300 starts: fates {'loop': 300}; loop periods {12: 43, 14: 174, 16: 38, 26: 45}; steps before looping: median 24
+  [PASS] STRAIGHT: EVERY greedy walker gets trapped in a loop (300/300); the furthest any gets from its start is 18.0
+[C] CENTRAL  from 300 starts: fates {'loop': 300}; loop periods {2: 300}; steps before looping: median 3
+  [PASS] CENTRAL: EVERY greedy walker gets trapped in a loop (300/300); the furthest any gets from its start is 2.0
+------------------------------------------------------------------------------------------
+[D] RIBBON walkers: 4500 walks (300 starts x 5 families x 3 choice rules): fates {'crossed': 4500}
+    forward MENU size at each step: {1: 150787, 2: 147397, 3: 57475}  (57.6% of steps offer 2 or 3 ways forward)
+    progress along the line per step (max-forward rule): min 0.802, mean 0.813
+  [PASS] EVERY ribbon walker crosses to the edge of the world (4500/4500), never stuck: a forward step is ALWAYS available
+  [PASS] ribbon walkers keep their grid coordinate K_j exactly fixed and never revisit a vertex (every step moves forward along a straight hidden line: no loop is possible)
+  [PASS] the geometry offers a MENU: 1-3 forward options per step, 2 or 3 on 58% of steps -- more than one path, usually
+  [PASS] momentum's choice MATTERS for the route: 'most forward' and 'least forward' take different routes in 1500/1500 walks, yet all of them cross -- the road guarantees the progress, the bias chooses the way
+==========================================================================================
+ALL CHECKS PASSED.
