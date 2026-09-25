@@ -222,7 +222,7 @@ def zoom(tris, steps, mirror):
 
 
 def lay(rule, seed, rng, center=0j):
-    P = Patch(seed); n0 = len(P.tris)
+    P = Patch(seed); n0 = len(P.tris); P.guesses = 0
     S_index = None
     while len(P.tris) - n0 < MAX_TILES:
         fr = P.frontier()
@@ -244,6 +244,8 @@ def lay(rule, seed, rng, center=0j):
                     chosen = cs[0]; break
                 if first is None:
                     first = cs
+            if chosen is None:
+                P.guesses += 1
             P.add(chosen if chosen else rng.choice(first))
         elif rule in ("SCALE", "WRONGSCALE"):
             steps, mir = (2, True) if rule == "SCALE" else (1, False)
@@ -316,13 +318,23 @@ def main():
     for rule in ("LOCAL-DICE", "LOCAL-FORCED"):
         rs = [lay(rule, seed, random.Random(SEED + k)) for k in range(RUNS)]
         jams = [n for n, st, _ in rs if st == "JAM"]
-        out[rule] = dict(jams=len(jams), sizes=[n for n, _, _ in rs], status=[st for _, st, _ in rs])
+        refset = {canon(t) for t in REF}
+        agree = [sum(1 for t in P.tris if canon(t) in refset) / len(P.tris) for _, _, P in rs]
+        guesses = [P.guesses for _, _, P in rs]
+        out[rule] = dict(jams=len(jams), sizes=[n for n, _, _ in rs], status=[st for _, st, _ in rs],
+                         agree=agree, guesses=guesses)
+        log(f"  {rule:<13} agreement with the true tiling: min {min(agree):.1%}, all-exact "
+            f"{sum(1 for x in agree if x == 1.0)}/{RUNS}; guesses per run (no forced edge within "
+            f"40): median {sorted(guesses)[RUNS // 2]}, max {max(guesses)}")
         log(f"  {rule:<13} {RUNS} runs: jammed {len(jams)}/{RUNS}; tiles before the jam: "
             f"median {sorted(jams)[len(jams) // 2] if jams else '-'} (range "
             f"{min(jams) if jams else '-'}-{max(jams) if jams else '-'}); reached {MAX_TILES}: "
             f"{sum(1 for _, st, _ in rs if st == 'ok')}")
     require(out["LOCAL-DICE"]["jams"] > 0,
             "LOCAL-DICE jams: growing by local fitting alone reaches edges where nothing fits")
+    lf = out["LOCAL-FORCED"]
+    log(f"  NOTE (not predicted): LOCAL-FORCED never jammed ({lf['jams']}/{RUNS}); in 2-D a smarter LOCAL "
+        f"strategy can avoid jams (cf. Onoda-Steinhardt-DiVincenzo-Socolar 1988 on forced growth)")
 
     # ---- COPY, SCALE, WRONGSCALE from the centre ----
     log("-" * 90)
