@@ -1,0 +1,99 @@
+============================================================================================
+PART A -- self-location from content: which track tells you where you are?
+============================================================================================
+  [PASS] Fibonacci track is Sturmian: exactly w+1 distinct windows of each length w <= 60
+   periodic: shortest window making EVERY position unique  w* = 2036   (= N - 12: only when the window is almost the whole track)
+  Fibonacci: shortest window making EVERY position unique  w* = 1062
+     random: shortest window making EVERY position unique  w* = 22
+  A1: HELD    w*: periodic 2036 (pre-reg said 'never': it is N-12, i.e. only trivially), Fibonacci 1062 (pred > 500), random 22 (pred 15-40)
+  w =   8, 5% flipped:  periodic 0.006   Fibonacci 0.004   random 0.082
+  w =  16, 5% flipped:  periodic 0.006   Fibonacci 0.007   random 0.686
+  w =  24, 5% flipped:  periodic 0.006   Fibonacci 0.011   random 0.944
+  w =  32, 5% flipped:  periodic 0.006   Fibonacci 0.015   random 0.994
+  w =  48, 5% flipped:  periodic 0.006   Fibonacci 0.022   random 1.000
+  w =  64, 5% flipped:  periodic 0.007   Fibonacci 0.029   random 1.000
+  w =  96, 5% flipped:  periodic 0.007   Fibonacci 0.045   random 1.000
+  w = 128, 5% flipped:  periodic 0.007   Fibonacci 0.060   random 1.000
+  at w = 64, 5% flipped, 20 seeds: accuracy periodic 0.007, Fibonacci 0.029, random 1.000
+  mean distance of a wrong guess from the truth: periodic 825, Fibonacci 843, random 0
+  A2: HELD    random 1.000 (pred > 0.90), Fibonacci 0.029 (pred < 0.05)
+============================================================================================
+PART B -- positional codes in a hard-attention associative memory
+============================================================================================
+  [PASS] periodic (aliased): keys are unit-norm
+  [PASS] harmonic: keys are unit-norm
+  [PASS] RoPE-style: keys are unit-norm
+  [PASS] golden: keys are unit-norm
+  [PASS] random frequencies: keys are unit-norm
+  [PASS] random keys: keys are unit-norm
+  [PASS] golden R_d (post hoc): keys are unit-norm
+-- corruption (q): noisy QUERY
+   code                s=0.0  s=0.25 s=0.5  s=0.75 s=1.0  s=1.25 s=1.5     [exact / within +-2 / mean miss distance]
+   periodic (aliased)   0.25  0.25  0.25  0.25  0.25  0.25  0.25 
+                        0.25  0.25  0.25  0.25  0.25  0.25  0.25 
+                         128   128   128   128   128   128   128 
+   harmonic             1.00  1.00  1.00  0.98  0.93  0.86  0.78 
+                        1.00  1.00  1.00  1.00  1.00  1.00  0.99 
+                           0     0     0     1     3     2     4 
+   RoPE-style           1.00  1.00  0.96  0.83  0.69  0.56  0.45 
+                        1.00  1.00  1.00  1.00  0.99  0.94  0.85 
+                           0     0     1     1     1     5    11 
+   golden               1.00  1.00  0.99  0.96  0.90  0.82  0.75 
+                        1.00  1.00  0.99  0.96  0.90  0.82  0.75 
+                           0     0   182   181   165   153   144 
+   random frequencies   1.00  1.00  1.00  1.00  1.00  1.00  0.99 
+                        1.00  1.00  1.00  1.00  1.00  1.00  0.99 
+                           0     0     0     0     0     7    72 
+   random keys          1.00  1.00  1.00  1.00  1.00  1.00  0.98 
+                        1.00  1.00  1.00  1.00  1.00  1.00  0.98 
+                           0     0     0     0     0    19    92 
+   golden R_d (post hoc) 1.00  1.00  1.00  1.00  1.00  1.00  0.99 
+                        1.00  1.00  1.00  1.00  1.00  1.00  0.99 
+                           0     0     0     0     0    11    88 
+-- corruption (m): noisy STORED keys (silent)
+   code                s=0.0  s=0.25 s=0.5  s=0.75 s=1.0  s=1.25 s=1.5     [exact / within +-2 / mean miss distance]
+   periodic (aliased)   0.25  0.25  0.25  0.25  0.25  0.25  0.25 
+                        0.25  0.25  0.25  0.25  0.25  0.25  0.25 
+                         128   107   107   107   107   107   107 
+   harmonic             1.00  0.99  0.81  0.67  0.58  0.53  0.49 
+                        1.00  1.00  1.00  1.00  1.00  1.00  1.00 
+                           0     1     2     2     2     2     2 
+   RoPE-style           1.00  0.66  0.47  0.38  0.31  0.26  0.20 
+                        1.00  1.00  1.00  0.96  0.88  0.77  0.65 
+                           0     1     1     1     2     5     9 
+   golden               1.00  0.90  0.76  0.65  0.57  0.53  0.48 
+                        1.00  0.90  0.76  0.65  0.57  0.53  0.48 
+                           0   190   162   148   140   134   130 
+   random frequencies   1.00  1.00  1.00  1.00  1.00  0.99  0.96 
+                        1.00  1.00  1.00  1.00  1.00  0.99  0.97 
+                           0     0     0     0     5    64    86 
+   random keys          1.00  1.00  1.00  1.00  1.00  0.99  0.96 
+                        1.00  1.00  1.00  1.00  1.00  0.99  0.96 
+                           0     0     0     0     7    64    85 
+   golden R_d (post hoc) 1.00  1.00  1.00  1.00  1.00  1.00  0.97 
+                        1.00  1.00  1.00  1.00  1.00  1.00  0.97 
+                           0     0     0     0     0    58   110 
+  [PASS] B0 sanity: at sigma=0 every code is exact except periodic (aliased) = 0.25 (four identical keys)
+  B1: FAILED  random keys have the highest exact accuracy at every sigma > 0 -- beaten at [('q', 1.25, 'random frequencies'), ('q', 1.5, 'random frequencies'), ('m', 1.25, 'random frequencies'), ('m', 1.5, 'random frequencies')]
+  B2: FAILED  golden and random-frequency codes have a higher +-2 near-hit rate than random keys at sigma >= 0.75
+  B3: HELD    RoPE-style has the lowest exact accuracy of the non-aliased sinusoidal codes (query noise)
+  B4: FAILED  golden vs random frequencies within 2 points everywhere (predicted NULL): largest gap -0.481 (positive = golden better)
+  B5: FAILED  stored-key corruption ranks the codes as query corruption does (3/6 noise levels identical)
+-- why golden fails: its 32 frequencies are all multiples of ONE irrational (1/phi), so each
+   key encodes a single number, the perpendicular-space coordinate frac(i/phi). Positions a
+   Fibonacci number apart are neighbours in that hidden space, far apart on the line.
+   golden miss distances at sigma = 0.75 (query noise), all seeds: [(144, 125), (233, 86), (89, 3)]
+  [PASS] every golden miss lands a Fibonacci number away (a perp-space neighbour)
+-- POST HOC (not pre-registered): golden R_d vs random frequencies, exact accuracy, query noise:
+   R_d   1.000 1.000 1.000 1.000 1.000 1.000 0.988
+   random1.000 1.000 1.000 1.000 1.000 0.999 0.985
+   stored-key noise:  R_d 1.000 1.000 1.000 1.000 1.000 0.997 0.972   random 1.000 1.000 1.000 1.000 0.999 0.993 0.963
+============================================================================================
+POST HOC (not pre-registered) -- high noise, 60 seeds, mean +- s.e.: order without repetition?
+  (q) sigma 2.0:  golden R_d 0.843+-0.003 | stratified random 0.839+-0.003 | random frequencies 0.835+-0.003 | random keys 0.831+-0.003 | evenly spaced (crystal) 0.450+-0.002
+  (q) sigma 2.5:  golden R_d 0.612+-0.004 | stratified random 0.602+-0.004 | random frequencies 0.606+-0.004 | random keys 0.603+-0.004 | evenly spaced (crystal) 0.355+-0.003
+  (m) sigma 2.0:  golden R_d 0.807+-0.003 | stratified random 0.794+-0.004 | random frequencies 0.787+-0.004 | random keys 0.782+-0.003 | evenly spaced (crystal) 0.486+-0.001
+  (m) sigma 2.5:  golden R_d 0.584+-0.004 | stratified random 0.571+-0.005 | random frequencies 0.567+-0.005 | random keys 0.563+-0.003 | evenly spaced (crystal) 0.425+-0.002
+============================================================================================
+PRE-REGISTERED PREDICTIONS: A1 held, A2 held, B0 held, B1 FAILED, B2 FAILED, B3 held, B4 FAILED, B5 FAILED
+STRUCTURAL CHECKS: ALL PASSED
