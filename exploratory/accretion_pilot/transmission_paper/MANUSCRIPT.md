@@ -278,6 +278,13 @@ For the original pair, `L = 4321/44100 ≈ 0.098`, with `a_0 = (43/50, 7/50)` an
 reproduces the full-graph coast exactly at `t = H, …, H+3` and is within `10⁻³⁰` of `L` by
 `t = 64`.
 
+![Figure 1](figures/fig1_coast.png)
+
+**Figure 1 [draft for review].** The archive-free coast of the original pair. After the archive is
+deleted at `H = 2`, the distinguishability `D_slice` of the two lineages falls monotonically, from
+`463/3150` at `t = 0`, and levels off at the exact limit `L = 4321/44100` (dashed), not at zero.
+Every point is an exact rational.
+
 ### 3.3 Three fates
 
 Proposition 3 makes the long-run residue of a history a single number, `L`. Combining it with
@@ -344,6 +351,20 @@ step one yet has `L = 0`, and (22,25) is menu-equivalent at step one yet express
 > bisimulation of the two lineages; the invariant that would be needed is a per-mediator
 > structural equivalence of menus, which is not a one-step check.
 
+![Figure 2](figures/fig2_fates.png)
+
+**Figure 2 [draft for review].** The fork law on the 97 depth-3 matched pairs. Horizontal: the
+number of sinks the coast can reach (points jittered). Vertical: the expression `D_slice(2)`.
+Every expressed pair with two reachable sinks is durable (blue); every washout (red) has one.
+Inert pairs (grey) sit at zero expression, 15 of them with two sinks: they have nothing to split.
+
+![Figure 3](figures/fig3_22_26.png)
+
+**Figure 3 [draft for review].** A strong mark with no fork to hold it. Left: `D_slice` at
+`h = 1, 2, 3` and the coast limit `L`, for washout pair (22,26) (red) against the 70 durable pairs
+(blue, jittered). At `h = 2`, (22,26) is more distinguishable than 20 of them, yet its limit is
+`L = 0`. Right: its coast after deletion at `H = 2`, draining to zero.
+
 ### 3.5 Reading
 
 The fork law relocates the question. Durability is not a matter of how much the past changes the
@@ -402,6 +423,7 @@ its claims and exits non-zero on failure:
 | depth-3 fates, fork law, washout exemplars (97 pairs) | `endogenous_pair_robustness/depth3_criterion.py` |
 | Lemma (recurrent classes), exhaustive `n ≤ 6` | `pair_collision_toy/bud_recurrent_lemma.py` |
 | §3.5 ranking of (22,26) against durable pairs | `transmission_paper/checks/soft_claim_22_26.py` |
+| Figures 1–3 (and their numbers, re-asserted) | `transmission_paper/make_figures.py` |
 
 ## References
 
@@ -429,3 +451,5 @@ its claims and exits non-zero on failure:
    seed".
 4. **New, for review:** the Abstract, §4, the Reproducibility table and two classic references.
    No other text was changed.
+5. **New, for review:** Figures 1–3 with captions (after §3.2 and at the end of §3.4), drawn by
+   `make_figures.py`, which re-asserts every number the figures show before drawing them.

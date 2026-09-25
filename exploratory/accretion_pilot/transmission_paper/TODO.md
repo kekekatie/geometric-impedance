@@ -9,10 +9,7 @@
   complete without it.
 - ✋ **Acknowledgements.** How to credit the AI collaborators (Fable, Astra, Gemini, Claude) and
   in what words.
-- **Figures** (suggested three):
-  1. the coast `D_slice(t)` for the original pair falling to `L = 4321/44100`;
-  2. the fate map of the 97 depth-3 pairs (expressed vs. number of reachable sinks → inert,
-     washout, durable);
-  3. (22,26) against the durable pairs: `D_slice` at `h = 1, 2, 3` against `L`.
+- ✋ **Figures: look at them.** Three are drawn and placed, with captions marked [draft for review]
+  (`figures/`, made by `make_figures.py`, all numbers asserted). Keep, cut or ask for changes.
 - **Final check** that every number in the text matches the scripts at one pinned commit, then
   export to PDF for Zenodo.
