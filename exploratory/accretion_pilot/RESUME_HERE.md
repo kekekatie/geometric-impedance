@@ -41,6 +41,10 @@ nothing unbecomes, "the embiggening is the spacetime".
 9. [`seed_dynamics/`](seed_dynamics/) — the seed rule **running** (2026-09-25): any seeding halves the
    gaps, but **real likeness adds nothing** over dust or fake twins; no lock-in. Why: in a fixed
    tiling the shape is already decided, so a seed has nothing to teach.
+10. [`laying_the_street/`](laying_the_street/) — **the track laid as it is ridden** (no map): local rules
+   always defect; **same-scale twin copying locks into repetition**; **the street consulting its own
+   zoomed-out self lays a never-repeating Fibonacci street** — mistakes kept as scars or inflating
+   defects, never healed, never lost. *Likeness across scales builds the quasicrystal.*
 
 **The idea that ties it together (from Katie's cheese-wheel chat with Opus):** *every process is
 local in some space.* Cheese = local in ordinary space (adjacency); tuning fork = local in pitch-space
@@ -48,10 +52,10 @@ local in some space.* Cheese = local in ordinary space (adjacency); tuning fork 
 reorganisation). "Far away" is just "near in a different space".
 
 **Waiting, in Katie's order of appetite:**
-- **Resonance — the fair test.** Census and first dynamics done (`seed_crystal/`, `seed_dynamics/`):
-  in a *fixed* tiling likeness cannot matter. Next: **grow the tiling itself, tile by tile**, where
-  local growth can make mistakes (Onoda–Steinhardt–DiVincenzo–Socolar 1988) -- there a far twin
-  could carry information the local rules lack. Keep the dust / fake-twin controls.
+- **Resonance — the fair test, begun.** In 1-D (`laying_the_street/`): same-scale likeness locks in;
+  likeness ACROSS SCALES builds the quasicrystal. Next: the same in **2-D Penrose, laid tile by
+  tile** (local matching rules jam: Onoda–Steinhardt–DiVincenzo–Socolar 1988) -- does consulting
+  the tiling's own zoomed-out self (inflation) keep it right? Keep dust / fake / wrong-zoom controls.
 - **E8's actual rung:** the Elser–Sloane quasicrystal (E8 → 4-D) with the same machinery — and
   LEADS' question: does the framework *need* E8?
 - Unproven-but-observed: SWEEP claims a new house every event; ribbons always have a way forward.

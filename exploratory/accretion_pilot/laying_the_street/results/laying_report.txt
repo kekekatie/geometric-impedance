@@ -1,0 +1,30 @@
+==========================================================================================
+LAYING THE STREET -- a quasicrystal built letter by letter, from its own past only
+==========================================================================================
+  reference street 4855 letters; legality checked on all patterns up to length 40; 3000 letters laid per run; seeds = all 32 five-letter words
+------------------------------------------------------------------------------------------
+  LOCAL k= 3: 20/20 runs hit a defect; first defect median 10 (range 9-20)
+  LOCAL k= 5: 20/20 runs hit a defect; first defect median 17 (range 10-31)
+  LOCAL k= 8: 20/20 runs hit a defect; first defect median 23 (range 17-46)
+  LOCAL k=13: 20/20 runs hit a defect; first defect median 49 (range 23-93)
+  LOCAL k=21: 20/20 runs hit a defect; first defect median 104 (range 38-350)
+  [PASS] LOCAL: every run with every window (k up to 21) eventually lays a defect -- as 1-D theory requires, local rules cannot lay the quasicrystal
+  [PASS] LOCAL: a wider window only delays the defect (median first defect [10, 17, 23, 49, 104])
+------------------------------------------------------------------------------------------
+  COPY       over 32 seeds: stuck 0; never a defect  0; defects only near the start (40-letter window)  0; ends in repetition 32; p(10) median 3; last defect max 3000
+  ANTI       over 32 seeds: stuck 0; never a defect  0; defects only near the start (40-letter window)  0; ends in repetition  0; p(10) median 1024; last defect max 3000
+  DICE       over 32 seeds: stuck 0; never a defect  0; defects only near the start (40-letter window)  0; ends in repetition  0; p(10) median 958; last defect max 3000
+  SCALE      over 32 seeds: stuck 1; never a defect  2; defects only near the start (40-letter window) 31; ends in repetition  0; p(10) median 15; last defect max 148
+  WRONGSCALE over 32 seeds: stuck 1; never a defect  0; defects only near the start (40-letter window)  0; ends in repetition  3; p(10) median 25; last defect max 3000
+  DUSTSCALE  over 32 seeds: stuck 0; never a defect  0; defects only near the start (40-letter window)  0; ends in repetition  0; p(10) median 847; last defect max 3000
+------------------------------------------------------------------------------------------
+  [PASS] SCALE is stuck only for the all-short seed ['SSSSS']: zooming out S -> L never reaches past the present, so an all-S street has no self-similarity to consult
+  [PASS] SCALE: from ALL 31 other seeds, seen through a 40-letter window, every mistake looks confined to the start and the street never falls into repetition (what that 'confined' really is -- scar or inflation -- is classified next)
+  SCALE mistakes, classified with a 160-letter checking window (patterns starting after letter 40): {'INFLATE': 15, 'SCAR': 14, 'CLEAN': 2}
+  [PASS] SCALE never HEALS a mistake -- it either leaves a SCAR at the start (14 seeds; far from it the street is legal at every scale checked) or INFLATES it to ever larger scales (15 seeds): nothing is lost, and nothing repeats
+  [PASS] SCALE: 2 seeds give a street with NO defect at all and the Sturmian minimum of patterns (p(20) = 21)
+  [PASS] COPY (same-scale likeness) falls into REPETITION from 32/32 seeds: resonant lock-in
+  [PASS] ANTI and DICE lay defects almost at once (noise)
+  [PASS] WRONGSCALE (not the street's own zoom) and DUSTSCALE (zoom read at a random place) never settle: it must be the street's OWN self-similarity, read at the RIGHT place
+==========================================================================================
+ALL CHECKS PASSED.
