@@ -74,6 +74,10 @@ reorganisation). "Far away" is just "near in a different space".
 
 ## The one thing waiting
 
+> **2026-09-25:** the assembled draft now lives in [`transmission_paper/MANUSCRIPT.md`](transmission_paper/MANUSCRIPT.md)
+> (faithful transcription of Katie's 21 September PDF + marked revisions: §3.2 Lemma for any seed,
+> §3.5 soft claim checked -- 20 of 70). What's left: [`transmission_paper/TODO.md`](transmission_paper/TODO.md).
+
 **Consolidate the "transmission" paper** — the *next* paper, the successor to the deposited
 one ("When the past matters", Zenodo, continuing preprint `10.5281/zenodo.21200994`).
 

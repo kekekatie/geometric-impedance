@@ -1,0 +1,7 @@
+pair (22,26): fate washout, D_slice(1,2,3) = 1/6, 17/90, 539/2700, L = 0
+durable pairs: 70
+  h=1: (22,26) D_slice = 1/6; durable pairs with a SMALLER D_slice: 20/70; larger: 41
+  h=2: (22,26) D_slice = 17/90; durable pairs with a SMALLER D_slice: 20/70; larger: 50
+  h=3: (22,26) D_slice = 539/2700; durable pairs with a SMALLER D_slice: 18/70; larger: 52
+  peak over h<=3: (22,26) 539/2700; durable pairs whose own peak is smaller: 18/70
+VERDICT: the soft claim HOLDS
