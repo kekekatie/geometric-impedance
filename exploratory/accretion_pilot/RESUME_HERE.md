@@ -4,6 +4,14 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🗺️ Katie's plan, in her words (2026-09-25 evening)
+
+1. Read the transmission paper tonight, after yoga.
+2. Get it out tomorrow (her own estimate: a 60–70% chance, and that's fine).
+3. Tomorrow or the day after: come back and make the **LLM memory paper**, as a Reddit version
+   and a proper Zenodo one. Start by writing and committing the pre-registration.
+4. Then discuss the direction of the next paper, and follow the trail by following the fun.
+
 ## 🧠 Newest (2026-09-25): the transmission paper, and an AI-memory lead
 
 - **Transmission paper:** [`transmission_paper/`](transmission_paper/). The draft is in the repo
