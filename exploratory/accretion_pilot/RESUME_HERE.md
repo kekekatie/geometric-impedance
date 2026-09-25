@@ -4,7 +4,26 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
-## 🆕 The latest trail (2026-09-23 → 24) — read this first
+## 🧠 Newest (2026-09-25): the transmission paper, and an AI-memory lead
+
+- **Transmission paper:** [`transmission_paper/`](transmission_paper/). The draft is in the repo
+  with three figures; Katie is reading it. Her decisions are listed in `TODO.md`.
+- **Address codes** ([`../address_codes/`](../address_codes/), pre-registered; 4 predictions
+  held, 4 failed):
+  - a quasicrystal can't locate itself from local content;
+  - a one-phase golden code misses by Fibonacci numbers, landing on its perp-space neighbours;
+  - post hoc: an evenly spread code with no repetition (R_d) edges random codes by 1–2 points.
+- **The next AI-memory paper, if Katie says go: "surprise versus consequence".**
+  - Titans (Google, 2025) keeps what is *surprising*. The fork law suggests keeping what still
+    *changes future choices*: pair (22,26) was strongly marked yet washed out.
+  - Build a tiny memory that learns during use. Compare three keep-rules (surprise,
+    consequence/fork, random), plus a "sleep" replay phase in the spirit of Complementary
+    Learning Systems (McClelland et al., 1995). Fable asked for sleep; this is why.
+  - Pre-register first.
+  - Katie's wish, to keep in view: a frozen core, a per-user living layer, and **no hard edge**
+    (graceful forgetting instead of a context cliff).
+
+## 🆕 The latest trail (2026-09-23 → 24)
 
 *One long session with Katie (and Gemini in the wings). Everything below is on branch
 **`claude/bold-darwin-lqsdd7`** (it contains all of `claude/world-growth-pilot-cy85ne` plus this).*
