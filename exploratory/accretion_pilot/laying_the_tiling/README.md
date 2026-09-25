@@ -33,10 +33,35 @@ overlap anything and every corner it touches is part of an atlas star. Checked: 
 - **Consulting its own zoomed-out self builds the tiling exactly, with no guesses.** It imports
   nothing: commandment 2. The same lesson as 1-D: likeness **across scales** lays the
   quasicrystal, while same-scale copying fails.
-- **Where two universes differ, they differ along bands** (orange in the picture). The bands have
-  the shape of the ribbons of [`../least_resistance_paths/`](../least_resistance_paths/). This
-  matches known theory (Penrose tilings differ by flips along Conway worms), but here it is
-  **seen, not tested**.
+- **Where two universes differ, they differ along thin bands that run exactly along ribbon
+  directions**, the roads of [`../least_resistance_paths/`](../least_resistance_paths/). This is
+  now tested ([`worm_test.py`](worm_test.py); see below). The choice of universe is written along
+  the roads.
+
+## The worm test (`worm_test.py`, exit 0)
+
+Do the differing tiles of forced growth really lie along ribbons? The half-tiles are paired back
+into rhombi, and the rhombi that differ from the self-similar tiling are compared with random
+sets and random *connected* clusters of the same size from the same patch.
+
+| | differing rhombi | random connected blobs |
+|---|---|---|
+| **elongation** (length / width) of each connected piece | **11.2–12.4** | median 1.5, 95th percentile ≤ 2.6 |
+| **long axis vs the nearest ribbon direction** | **0.0°** for every band | — |
+| rhombi held by a single ribbon chain | 36% (median) | 18% |
+| rhombi sharing one edge direction | 50% (median) | 44% |
+
+- **The universes differ along thin, straight bands that run exactly along ribbon directions.**
+- **The pre-registered prediction failed.** I predicted that ≥ 90% of differing rhombi would share
+  one edge direction; it was 50%. Theory says it should fail: worm flips rearrange hexagons made
+  of rhombi in *three* directions. I tested the wrong signature.
+- **v1 of the test also had a bug.** Edge directions in this tiling point at 18° + 36k, exactly
+  between the rounding bins I first used, so families were merged. Fixed; the numbers above are
+  from the fixed version.
+- **The band-shape test was added after seeing the bands**, so it is exploratory, although its
+  margins are large.
+- **Only 3 distinct outcomes.** The 30 forced runs produced just three different patches (27, 29
+  or 56 differing rhombi), so this is three bands' worth of evidence, not thirty.
 
 ## Honest scope
 
@@ -56,4 +81,5 @@ overlap anything and every corner it touches is part of an atlas star. Checked: 
 ```bash
 python3 laying_the_tiling.py   # ~4.5 min; exit 0 iff all checks pass
 python3 make_figure.py         # figures/patches.png
+python3 worm_test.py           # ~4.5 min: do the universes differ along ribbons?
 ```

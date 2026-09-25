@@ -1,0 +1,94 @@
+==========================================================================================
+WORM TEST -- do two Penrose universes differ along ribbons?
+==========================================================================================
+  run  0:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.1); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run  1:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.6); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.5); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run  2:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 25%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.4, 95th pct 2.2); axis 72 deg, 0.0 deg from the nearest ribbon direction
+  run  3:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run  4:  27 of 264 rhombi differ | one direction shared by 67% (random 52%, connected blob 47%) | one chain holds 67% (random 8%, blob 25%)
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run  5:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 24%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run  6:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run  7:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 24%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run  8:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 24%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+  run  9:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 6%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 10:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.4, 95th pct 2.3); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.4, 95th pct 2.2); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 11:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 12:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 13:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 24%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.1); axis 0 deg, 0.0 deg from the nearest ribbon direction
+  run 14:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 6%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 15:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 25%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 16:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 17:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.6, 95th pct 2.4); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 18:  56 of 262 rhombi differ | one direction shared by 50% (random 47%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.5); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 19:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 20:  56 of 266 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 36 deg, 0.0 deg from the nearest ribbon direction
+  run 21:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.1); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.4); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 22:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 24%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 72 deg, 0.0 deg from the nearest ribbon direction
+  run 23:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 25%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+  run 24:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 25%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 25:  56 of 262 rhombi differ | one direction shared by 50% (random 47%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 0 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 26:  56 of 262 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 18%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.6, 95th pct 2.3); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 108 deg, 0.0 deg from the nearest ribbon direction
+  run 27:  29 of 266 rhombi differ | one direction shared by 69% (random 51%, connected blob 47%) | one chain holds 69% (random 7%, blob 25%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.4, 95th pct 2.2); axis 72 deg, 0.0 deg from the nearest ribbon direction
+  run 28:  27 of 264 rhombi differ | one direction shared by 67% (random 52%, connected blob 47%) | one chain holds 67% (random 7%, blob 25%)
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.3); axis 144 deg, 0.0 deg from the nearest ribbon direction
+  run 29:  56 of 266 rhombi differ | one direction shared by 50% (random 48%, connected blob 44%) | one chain holds 36% (random 5%, blob 17%)
+          band of 29 rhombi: 12.4x longer than wide (blobs: median 1.5, 95th pct 2.2); axis 72 deg, 0.0 deg from the nearest ribbon direction
+          band of 27 rhombi: 11.2x longer than wide (blobs: median 1.5, 95th pct 2.1); axis 36 deg, 0.0 deg from the nearest ribbon direction
+==========================================================================================
+  medians over 30 runs: worm share 50% vs random 48% vs connected blob 44%; single chain 36% vs random 5% vs blob 18%
+  [PASS] 30 of 30 forced-growth runs built a different universe (tested)
+  distinct outcomes among the 30 runs (by number of differing rhombi): [27, 29, 56] -- the runs are NOT 30 independent examples
+  [pre-registered test, v1 had a direction-family bug; rerun with fixed families:]
+  PREDICTION FAILED (recorded, not a gate): the differing rhombi share one edge direction in only 50% (median), not >= 90%. In hindsight theory says so: worm flips rearrange hexagons of three rhombi in three directions, so 'one shared direction' was the wrong signature of a worm.
+  [PASS] in >= 80% of runs the worm share beats the 95th percentile of random CONNECTED clusters of the same size: not just any blob
+  [PASS] the differing rhombi form a single ribbon chain more often than connected blobs do
+  [added AFTER seeing the bands (exploratory): band shape and orientation]
+  [PASS] every differing piece (>=10 rhombi) is far more elongated than the 95th percentile of same-size connected blobs (elongation 11.2-12.4 vs blob 95th pct <= 2.6): the universes differ along thin bands
+  [PASS] every band runs along a ribbon direction (max deviation 0.0 deg)
+==========================================================================================
+ALL CHECKS PASSED.
