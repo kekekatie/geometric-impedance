@@ -1,0 +1,19 @@
+==========================================================================================
+CROSSROADS TEST -- does a guess's change travel down one road, or both?
+==========================================================================================
+  run  0: 3 guesses, 2 divergent (at steps [34, 244]); bands (size, axis deg): [(29, 0), (27, 144)]
+          divergent guess #0 (step 34, 2 options) -> 1 band(s): 29 rhombi along 0 deg (inner end 1.7 tile-edges away)
+          divergent guess #1 (step 244, 2 options) -> 1 band(s): 27 rhombi along 144 deg (inner end 2.5 tile-edges away)
+  run  2: 3 guesses, 1 divergent (at steps [10]); bands (size, axis deg): [(29, 72)]
+          divergent guess #0 (step 10, 2 options) -> 1 band(s): 29 rhombi along 72 deg (inner end 1.7 tile-edges away)
+  run  4: 4 guesses, 1 divergent (at steps [248]); bands (size, axis deg): [(27, 144)]
+          divergent guess #0 (step 248, 2 options) -> 1 band(s): 27 rhombi along 144 deg (inner end 2.5 tile-edges away)
+------------------------------------------------------------------------------------------
+  distinct outcomes: 3; divergent guesses with bands: 48; bands per divergent guess: Counter({1: 48})
+  inner end of each band to its guess: max 2.5 tile-edges
+  [PASS] forced growth never jammed (as before)
+  [PASS] at every guess, one of the options WAS the self-similar tile: the guess is a genuine fork between sibling universes, not a forced error
+  [PASS] every band starts right at a divergent guess (within 3 tile-edges): each seam grows FROM the moment of choice
+  RESULT: each divergent guess seeds exactly ONE band -- the change travels down ONE road (pre-registered expectation held)
+==========================================================================================
+ALL CHECKS PASSED.

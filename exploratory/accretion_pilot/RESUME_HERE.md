@@ -62,7 +62,8 @@ reorganisation). "Far away" is just "near in a different space".
 - **Resonance — the fair test, done in 1-D and 2-D** (`laying_the_street/`, `laying_the_tiling/`):
   same-scale likeness locks in or fails; likeness ACROSS SCALES lays the quasicrystal with nothing
   imported. Tested: universes built by forced growth differ along thin bands running exactly along
-  RIBBON directions (the roads) -- the choice of universe is written along the roads. Open: a sharper
+  RIBBON directions (the roads) -- the choice of universe is written along the roads. Crossroads test (Gemini):
+  each divergent guess sends its change down ONE road, never both (4 distinct events). Open: a sharper
   wrong-zoom control; SCALE from off-centre starts in 2-D (currently gives nothing); then E8's rung.
 - **E8's actual rung:** the Elser–Sloane quasicrystal (E8 → 4-D) with the same machinery — and
   LEADS' question: does the framework *need* E8?

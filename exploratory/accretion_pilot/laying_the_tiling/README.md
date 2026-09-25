@@ -63,6 +63,24 @@ sets and random *connected* clusters of the same size from the same patch.
 - **Only 3 distinct outcomes.** The 30 forced runs produced just three different patches (27, 29
   or 56 differing rhombi), so this is three bands' worth of evidence, not thirty.
 
+## The crossroads test (`crossroads_test.py`, exit 0): Gemini's "intersection crash"
+
+When forced growth has to guess, does the change travel down one road, or down both roads that
+cross there? Every guess is recorded, with its position and whether the chosen tile differs from
+the self-similar tiling (a *divergent* guess). Each band is matched to the divergent guess
+nearest its inner end.
+
+- **Each divergent guess sends its change down exactly ONE road**, never both. This was
+  pre-registered and it held. The two-band outcome (0° and 144°) came from two separate guesses,
+  at steps 34 and 244.
+- **Every band starts right at its guess** (within 2.5 tile-edges): the seam grows *from* the
+  moment of choice, outward along one road.
+- **Every guess is a genuine fork.** One of its options was always the self-similar tile, so a
+  divergent guess chooses a sibling universe; it is not an error.
+- **Small numbers.** The 30 runs contain only 4 distinct guess→band events (steps 10, 34, 244,
+  248). And since every tile sits where two roads cross, "crossroads" is everywhere; the finding
+  is that the change follows *one* of the two roads crossing at the guessed tile.
+
 ## Honest scope
 
 - **SCALE is strict in 2-D.** It works only from a patch that is genuinely self-similar about the
@@ -82,4 +100,5 @@ sets and random *connected* clusters of the same size from the same patch.
 python3 laying_the_tiling.py   # ~4.5 min; exit 0 iff all checks pass
 python3 make_figure.py         # figures/patches.png
 python3 worm_test.py           # ~4.5 min: do the universes differ along ribbons?
+python3 crossroads_test.py     # ~5 min: does a guess's change travel down one road or both?
 ```
