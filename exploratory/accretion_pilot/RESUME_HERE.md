@@ -50,6 +50,9 @@ nothing unbecomes, "the embiggening is the spacetime".
    same-scale copying fails; **the patch's own zoomed-out self lays the tiling exactly with zero
    guesses** (imports nothing) -- but only from a self-similar centre.
 
+**Lost? Start with the pictures:** [`explainers/`](explainers/) — light through a window (two universes,
+slightly offset), roads and cracks, building with no map, and "local in some space".
+
 **The idea that ties it together (from Katie's cheese-wheel chat with Opus):** *every process is
 local in some space.* Cheese = local in ordinary space (adjacency); tuning fork = local in pitch-space
 (the hidden window: twins); seed crystal = local in shape-space (a shape dropped, a lasting
