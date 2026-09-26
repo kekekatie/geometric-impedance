@@ -1,0 +1,45 @@
+================================================================================================
+THE WRITING WALKER -- does a walker that nudges its own grid line rewrite the tiling in its wake?
+================================================================================================
+unperturbed patch: 6010 rhombi; vertex-star atlas (interior): 7 star types
+  [PASS] W1a: delta = 0 reproduces the unperturbed tiling exactly
+  delta 0.05 walker at t0 -20.0: flips  16  faces removed/added   0/  0  illegal vertices   0  on road True  in wake True
+  delta 0.05 walker at t0 -10.0: flips  31  faces removed/added  23/ 23  illegal vertices   6  on road True  in wake False
+  delta 0.05 walker at t0   0.0: flips  47  faces removed/added  71/ 71  illegal vertices   6  on road True  in wake False
+  delta 0.05 walker at t0  10.0: flips  66  faces removed/added 120/120  illegal vertices  18  on road True  in wake False
+  delta 0.05 walker at t0  20.0: flips  83  faces removed/added 152/152  illegal vertices  20  on road True  in wake False
+  delta 0.05 walker at t0  30.0: flips 100  faces removed/added 152/152  illegal vertices  20  on road True  in wake False
+  delta 0.1  walker at t0 -20.0: flips  18  faces removed/added   0/  0  illegal vertices   0  on road True  in wake True
+  delta 0.1  walker at t0 -10.0: flips  36  faces removed/added  30/ 30  illegal vertices   9  on road True  in wake False
+  delta 0.1  walker at t0   0.0: flips  52  faces removed/added  74/ 74  illegal vertices  16  on road True  in wake False
+  delta 0.1  walker at t0  10.0: flips  73  faces removed/added 127/127  illegal vertices  32  on road True  in wake False
+  delta 0.1  walker at t0  20.0: flips  91  faces removed/added 158/158  illegal vertices  40  on road True  in wake False
+  delta 0.1  walker at t0  30.0: flips 110  faces removed/added 158/158  illegal vertices  40  on road True  in wake False
+  delta 0.2  walker at t0 -20.0: flips  20  faces removed/added   0/  0  illegal vertices   0  on road True  in wake True
+  delta 0.2  walker at t0 -10.0: flips  41  faces removed/added  30/ 30  illegal vertices   9  on road True  in wake False
+  delta 0.2  walker at t0   0.0: flips  61  faces removed/added  78/ 78  illegal vertices  31  on road True  in wake False
+  delta 0.2  walker at t0  10.0: flips  86  faces removed/added 135/135  illegal vertices  61  on road True  in wake False
+  delta 0.2  walker at t0  20.0: flips 106  faces removed/added 166/166  illegal vertices  70  on road True  in wake False
+  delta 0.2  walker at t0  30.0: flips 128  faces removed/added 166/166  illegal vertices  70  on road True  in wake False
+  delta 0.4  walker at t0 -20.0: flips  23  faces removed/added   0/  0  illegal vertices   0  on road True  in wake True
+  delta 0.4  walker at t0 -10.0: flips  50  faces removed/added  33/ 33  illegal vertices  14  on road True  in wake False
+  delta 0.4  walker at t0   0.0: flips  77  faces removed/added  88/ 88  illegal vertices  53  on road True  in wake False
+  delta 0.4  walker at t0  10.0: flips 109  faces removed/added 152/152  illegal vertices 103  on road True  in wake False
+  delta 0.4  walker at t0  20.0: flips 135  faces removed/added 188/188  illegal vertices 120  on road True  in wake False
+  delta 0.4  walker at t0  30.0: flips 162  faces removed/added 188/188  illegal vertices 120  on road True  in wake False
+  [PASS] W1b: every perturbed patch is a valid rhombus tiling (every interior edge in exactly 2 rhombi)
+  [FAIL] W1c: the changed rhombi are exactly the predicted hexagon flips (3 out, 3 in per crossed triple point)
+------------------------------------------------------------------------------------------------
+  W2: HELD    every changed rhombus shares a vertex with the walker's own ribbon (the writing stays on the road)
+  W3: FAILED  no rhombus changes ahead of the walker or behind its birthplace (only in the wake)
+  W4: FAILED  flips grow linearly with the journey (R^2 by delta: 0.05: 0.999, 0.1: 0.999, 0.2: 0.999, 0.4: 0.999) and double with the push (ratios 1.10, 1.16, 1.27)
+  W5: FAILED  illegal vertices only near the two ends (walker or birthplace): 858 illegal in total, 771 in the middle of the wake e.g. [(0.05, -10.0, -34.7), (0.05, -10.0, -33.2), (0.05, -10.0, -34.1), (0.05, -10.0, -33.8), (0.05, 0.0, -34.7), (0.05, 0.0, -33.2)]
+------------------------------------------------------------------------------------------------
+Reported without prediction:
+  delta 0.05: rewritten region elongation 54.6, axis 90.0 deg (the ribbon runs at 90 deg); illegal vertices per unit of wake 0.333
+  delta 0.1: rewritten region elongation 51.0, axis 90.0 deg (the ribbon runs at 90 deg); illegal vertices per unit of wake 0.667
+  delta 0.2: rewritten region elongation 46.4, axis 90.0 deg (the ribbon runs at 90 deg); illegal vertices per unit of wake 1.167
+  delta 0.4: rewritten region elongation 41.3, axis 90.0 deg (the ribbon runs at 90 deg); illegal vertices per unit of wake 2.000
+================================================================================================
+PREDICTIONS: W2 held, W3 FAILED, W4 FAILED, W5 FAILED
+STRUCTURAL CHECKS: FAILED: W1c: the changed rhombi are exactly the predicted hexagon flips (3 out, 3 in per crossed triple point)

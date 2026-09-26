@@ -4,6 +4,15 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ✍️ 2026-09-27: the writing walker, Gemini's "writing memory" test ([`writing_walker/`](writing_walker/))
+
+- A walker nudging its own grid line rewrites the tiling **only on its road and only in its
+  wake**, growing with the journey, in lumpy rows.
+- But it always leaves **defects**: no push size gives a legal sibling universe. Forced growth
+  *does* make legal sibling bands.
+- Open: what coordination turns a scar into a sibling universe?
+- Gemini's "intersection crash" was done earlier (`laying_the_tiling/crossroads_test.py`).
+
 ## 🧭 NEXT (Katie, 2026-09-26 evening): the perp-space paper
 
 - **Done today:**
