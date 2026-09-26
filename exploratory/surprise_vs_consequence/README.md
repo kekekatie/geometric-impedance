@@ -93,3 +93,49 @@ The next honest step is to compare our margin heuristic with a principled Mattar
 ```bash
 python3 svc.py   # ~2.5 min on 4 cores; results/svc_report.txt, results/svc_raw.json, figures/svc.png
 ```
+
+---
+
+# Round 2: the principled rival, inferred forks, and the cliff
+
+Pre-registered in [`PREREGISTRATION_ROUND2.md`](PREREGISTRATION_ROUND2.md), frozen at `f45fa98`
+before any round-2 code existed. Katie approved going ahead in advance, and the design was
+self-reviewed against Astra's round-1 checklist. Fresh seeds throughout. Code: `svc2.py`.
+
+![round 2](figures/svc2.png)
+
+| | prediction | result | |
+|---|---|---|---|
+| R1a | replication: margin beats surprise by ≥ 20% | **+41.0%** | held |
+| R1b | replication: margin beats fork-only surprise by ≥ 10% | **+15.5%** (CI +11.3% to +19.4%) | held |
+| R2 | margin and the Mattar–Daw-style **gain** (softmax, β = 5) within ±10% | gain's regret is 7.3% higher | held |
+| R3a | margin with **inferred** forks within 5% of margin (T = 2000) | 7.9% worse | **failed** |
+| R3b | inferred-fork margin beats surprise by ≥ 10% on a short stream (T = 600) | +4.9% | **failed** |
+| R4a | the **cliff**: recency worst, and ≥ 30% worse than random | worst, but only 1.8% worse | **failed** |
+| R4b | margin beats surprise by ≥ 20% (early-only stream) | +41.4% | held |
+| R5a | changing world: recency beats random | +3.6% (CI excludes 0) | held |
+| R5b | changing world: margin beats surprise by ≥ 10% | +36.4% | held |
+| R6 | surprise knows the most facts; margin decides better | yes | held |
+
+**7 of 10 held.**
+
+## What round 2 adds
+
+- **The round-1 result replicates** on fresh seeds: 41% against surprise and 15.5% beyond the
+  relevance filter.
+- **The quick heuristic matches, and here slightly beats, the principled rival.** A
+  Mattar–Daw-style gain score (β = 5, untuned) lands within the pre-registered ±10%. *Reported
+  without prediction:* margin was better in every stream (+2% to +16%, all CIs above zero). The
+  greedy version of gain does badly: it only values an item if it flips a choice outright, so
+  almost everything ties. One untuned temperature, so this is no verdict on gain in general.
+- **Having to discover the forks costs real performance** (R3 failed both ways). A likely
+  mechanism, *not tested*: until a situation is recognised as a fork, its observations score
+  lowest and are evicted, so the evidence is gone by the time it would have mattered. It hurts
+  most on short streams. *You throw things away before you know they matter.* This is the
+  realistic weakness of the approach, and the obvious next thing to fix.
+- **The context-window cliff is real but small here** (R4a failed). *Exploratory, after seeing the
+  result* (`early-only`, 40 seeds): recency is 0%, 4% and 10% worse than random at memory sizes
+  of 5%, 20% and 40% of the stream. When memory is tiny, every rule has already forgotten most of
+  the early material, so there is little cliff to fall off. My 30% prediction misjudged this.
+- **In a changing world**, keeping the latest helps a little (+3.6%), but margin still wins by a
+  wide margin (+36%), even with no mechanism for forgetting stale beliefs.
