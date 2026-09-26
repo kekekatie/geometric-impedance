@@ -111,7 +111,7 @@ self-reviewed against Astra's round-1 checklist. Fresh seeds throughout. Code: `
 | R2 | margin and the Mattar–Daw-style **gain** (softmax, β = 5) within ±10% | gain's regret is 7.3% higher | held |
 | R3a | margin with **inferred** forks within 5% of margin (T = 2000) | 7.9% worse | **failed** |
 | R3b | inferred-fork margin beats surprise by ≥ 10% on a short stream (T = 600) | +4.9% | **failed** |
-| R4a | the **cliff**: recency worst, and ≥ 30% worse than random | worst, but only 1.8% worse | **failed** |
+| R4a | the **cliff**: recency worst, and ≥ 30% worse than random | worst, but only 1.9% worse (and the paired CI includes zero) | **failed** |
 | R4b | margin beats surprise by ≥ 20% (early-only stream) | +41.4% | held |
 | R5a | changing world: recency beats random | +3.6% (CI excludes 0) | held |
 | R5b | changing world: margin beats surprise by ≥ 10% | +36.4% | held |
@@ -123,19 +123,27 @@ self-reviewed against Astra's round-1 checklist. Fresh seeds throughout. Code: `
 
 - **The round-1 result replicates** on fresh seeds: 41% against surprise and 15.5% beyond the
   relevance filter.
-- **The quick heuristic matches, and here slightly beats, the principled rival.** A
-  Mattar–Daw-style gain score (β = 5, untuned) lands within the pre-registered ±10%. *Reported
+- **The quick heuristic holds its own against the principled rival.** A Mattar–Daw-style gain
+  score (β = 5, untuned) met the pre-registered ±10% test on its point estimate: gain's regret is
+  7.3% higher (CI 2.7% to 12.0% higher). That is not a formal proof of equivalence. *Reported
   without prediction:* margin was better in every stream (+2% to +16%, all CIs above zero). The
   greedy version of gain does badly: it only values an item if it flips a choice outright, so
   almost everything ties. One untuned temperature, so this is no verdict on gain in general.
-- **Having to discover the forks costs real performance** (R3 failed both ways). A likely
-  mechanism, *not tested*: until a situation is recognised as a fork, its observations score
+- **Having to discover the forks costs real performance** (R3 failed both ways). Part of it is
+  plain **discovery failure**, which Astra measured and I confirmed: 1.45% of true forks are
+  never recognised at `T = 2000`, but **39%** at `T = 600`. A second, proposed mechanism, not yet
+  separated from the first (see round 2b): until a situation is recognised as a fork, its observations score
   lowest and are evicted, so the evidence is gone by the time it would have mattered. It hurts
   most on short streams. *You throw things away before you know they matter.* This is the
   realistic weakness of the approach, and the obvious next thing to fix.
-- **The context-window cliff is real but small here** (R4a failed). *Exploratory, after seeing the
+- **We predicted a big context-window cliff. It didn't show up** (R4a failed): recency is 1.9%
+  worse than random, and the paired CI includes zero. Recency *does* lose every early-only
+  observation, but that did not turn into a measurable regret penalty at this memory size. *Exploratory, after seeing the
   result* (`early-only`, 40 seeds): recency is 0%, 4% and 10% worse than random at memory sizes
   of 5%, 20% and 40% of the stream. When memory is tiny, every rule has already forgotten most of
   the early material, so there is little cliff to fall off. My 30% prediction misjudged this.
+- **Memory accounting:** the inferred rules use 100 reward-observation slots **plus** a
+  persistent table of which actions have ever been seen. The discovery history is never
+  forgotten.
 - **In a changing world**, keeping the latest helps a little (+3.6%), but margin still wins by a
   wide margin (+36%), even with no mechanism for forgetting stale beliefs.

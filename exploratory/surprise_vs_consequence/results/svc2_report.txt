@@ -1,4 +1,4 @@
-ran 400 worlds x 10 rules in 91 s (fresh seeds 10000-10099)
+ran 400 worlds x 10 rules in 92 s (fresh seeds 10000-10099)
 ====================================================================================================
 -- stream: stationary (T = 2000)
    recency                  regret 0.1851   fact error 2.9661
@@ -51,7 +51,7 @@ PRE-REGISTERED PREDICTIONS (round 2)
   R2: HELD    [stationary] gain (softmax) vs margin: gain's regret is +7.3% relative to margin (need within +-10%)
   R3a: FAILED  [stationary] margin (inferred) vs margin: +7.9% relative regret (need within +-5%)
   R3b: FAILED  [stationary short] margin (inferred forks) vs surprise: +4.9% (CI +2.0% to +7.8%); need >= 10%, paired-difference CI [+0.0034, +0.0134] excludes 0
-  R4a: FAILED  [early-only] highest-regret rule: recency; recency worse than random by +1.8% (recency regret 0.1885 vs random 0.1850; CI of improvement -0.8% to +4.4%); need recency worst and >= 30%
+  R4a: FAILED  [early-only] highest-regret rule: recency; recency worse than random by +1.9% (recency/random - 1; regret 0.1885 vs 0.1850; paired-difference CI [-0.0015, +0.0083]); need recency worst and >= 30%
   R4b: HELD    [early-only] margin vs surprise: +41.4% (CI +38.5% to +44.3%); need >= 20%, paired-difference CI [+0.0651, +0.0757] excludes 0
   R5a: HELD    [drift] recency vs random: +3.6% (paired-difference CI [+0.0014, +0.0117]); need positive, CI excluding 0
   R5b: HELD    [drift] margin vs surprise: +36.4% (CI +33.6% to +39.2%); need >= 10%, paired-difference CI [+0.0586, +0.0691] excludes 0

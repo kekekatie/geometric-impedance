@@ -191,11 +191,14 @@ def main():
     claim("R3b", "stationary short", "margin (inferred forks)", "surprise", 0.10)
     eo = Rg["early-only"]
     worst = max(RULES, key=lambda k: eo[k].mean())
-    p, rci, dci = rel("early-only", "random", "recency")
-    V.append(("R4a", worst == "recency" and p >= 0.30 and dci[0] > 0,
-              f"[early-only] highest-regret rule: {worst}; recency worse than random by {p:+.1%} "
-              f"(recency regret {eo['recency'].mean():.4f} vs random {eo['random'].mean():.4f}; "
-              f"CI of improvement {rci[0]:+.1%} to {rci[1]:+.1%}); need recency worst and >= 30%"))
+    # "recency worse than random by X" = recency/random - 1 (corrected after Astra's review: the
+    # first version used 1 - random/recency, i.e. random's improvement relative to recency)
+    _, _, dci = rel("early-only", "random", "recency")
+    worse = eo["recency"].mean() / eo["random"].mean() - 1
+    V.append(("R4a", worst == "recency" and worse >= 0.30 and dci[0] > 0,
+              f"[early-only] highest-regret rule: {worst}; recency worse than random by {worse:+.1%} "
+              f"(recency/random - 1; regret {eo['recency'].mean():.4f} vs {eo['random'].mean():.4f}; "
+              f"paired-difference CI [{dci[0]:+.4f}, {dci[1]:+.4f}]); need recency worst and >= 30%"))
     claim("R4b", "early-only", "margin", "surprise", 0.20)
     p, rci, dci = rel("drift", "recency", "random")
     V.append(("R5a", p > 0 and dci[0] > 0, f"[drift] recency vs random: {p:+.1%} (paired-difference CI "
