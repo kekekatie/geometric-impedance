@@ -147,3 +147,45 @@ self-reviewed against Astra's round-1 checklist. Fresh seeds throughout. Code: `
   forgotten.
 - **In a changing world**, keeping the latest helps a little (+3.6%), but margin still wins by a
   wide margin (+36%), even with no mechanism for forgetting stale beliefs.
+
+---
+
+# Round 2b: *not finding* a fork versus *throwing away the evidence* too soon
+
+Pre-registered in [`PREREGISTRATION_ROUND2B.md`](PREREGISTRATION_ROUND2B.md), frozen at `5fe1b74`
+before any code. It follows Astra's review of round 2. The worlds are the same as round 2, and
+the re-run round-2 rules reproduce the saved results exactly, so every comparison is paired.
+Code: `svc2b.py`.
+
+| | prediction | result | |
+|---|---|---|---|
+| B1a | with the **same** discovery problem, margin beats surprise by ≥ 10% (T = 2000) | **+10.5%** (CI +6.4% to +14.6%) | held |
+| B1b | the same on the short stream (T = 600): margin better | −0.5% (CI −1.8% to +0.8%) | **failed**: no difference |
+| B2a | at T = 2000, premature eviction costs more than discovery failure | **0.0077 vs 0.0001** | held |
+| B2b | at T = 600, discovery failure costs more than premature eviction | 0.0107 vs **0.0132** | **failed** |
+| B3 | an allowance for unresolved situations helps at T = 600 | −1.0% (CI includes 0) | **failed** |
+
+**2 of 5 held.**
+
+## What round 2b shows
+
+- **The margin weighting survives having to discover the forks**, on the long stream: +10.5%
+  over surprise facing the identical discovery problem. On the short stream, where 39% of forks
+  are never found, the advantage disappears.
+- **The main cost of learning what matters is throwing evidence away before you know it
+  matters.** Regret added on top of the fully informed margin rule:
+
+  | stream | (D) forks never discovered | (E) evidence evicted before discovery |
+  |---|---|---|
+  | T = 2000 | +0.0001 | **+0.0077**: essentially the whole loss |
+  | T = 600 | +0.0107 | **+0.0132**: still the larger part |
+
+  My guessed mechanism is now measured, and it is the bigger effect in both streams. I predicted
+  discovery failure would dominate on the short stream; it didn't.
+- **Simply refusing to throw away "unknown" things doesn't fix it.** Treating every unresolved
+  situation as a possible fork does nothing on the short stream and is **50% worse** on the long
+  one: forced situations are also "unknown" for ever, and they flood the memory.
+- **So the problem is timing.** Evidence needs somewhere to wait until its relevance can be
+  judged. That points straight at a **short-term holding buffer**, keeping things briefly before
+  deciding: the fast store of Complementary Learning Systems. It is the natural design for the
+  next paper, together with sleep and replay.
