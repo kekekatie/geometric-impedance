@@ -4,6 +4,31 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 💬 Open conversation with Katie (2026-09-27): walking around the *whys*
+
+- **Quantisation from fit, not from pixels.**
+  - The walker's record grows in steps because the crossings sit in rows at fixed distances from
+    the road. The push is smooth; what the structure lets change is lumpy. That is closer to atomic
+    energy levels than to Planck-length graininess.
+  - The steps are irregular (quasiperiodic), like a devil's staircase.
+- **A pattern across three results:**
+  - a lone judge builds an echo chamber (the memory paper);
+  - a lone writer leaves scars (the walker);
+  - change made in agreement with the whole gives a legal sibling universe (forced growth).
+  - Candidate sentence, **corrected with Katie**: *"the present can only change coherently as a
+    whole; a part changing alone leaves scars."* Unsure whether that is deep or coincidence.
+  - **Katie's correction (important; keep this language):** the past is **never** altered in this
+    theory. A slice of now can have a span. The walker's wake is a record, written into the now,
+    of the span of its journey. Sibling universes are alternative *presents*. Never say "rewrite
+    the past".
+- **Earlier devil's-staircase work exists**, on branch `claude/handoff-github-context-3rnoqr`,
+  folder `winding_staircase/` (not on master):
+  - Stage B: circle-map calibration (D ≈ 0.87, exponent 3);
+  - Stage C: golden resists lock-step more than silver;
+  - Stage D: pre-registered null, the metronome sync follows local wiring.
+  - A cheap future test: does the walker's staircase show golden self-similar scaling?
+  - Consider bringing that work onto master after checking it.
+
 ## ✍️ 2026-09-27: the writing walker, Gemini's "writing memory" test ([`writing_walker/`](writing_walker/))
 
 - A walker nudging its own grid line rewrites the tiling **only on its road and only in its
