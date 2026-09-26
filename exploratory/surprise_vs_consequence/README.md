@@ -51,6 +51,30 @@ score adds real value **beyond** the relevance filter.
 - **Recency ≈ random**, as expected for a stationary stream. The context-window cliff needs its
   own experiment (parked).
 
+## Prior art: found after the run, and important
+
+The core idea, prioritising memories by how much they would improve **decisions** rather than by
+surprise, is **not new**:
+
+- **Mattar & Daw (2018)**, *Prioritized memory access explains planning and hippocampal replay*
+  (Nature Neuroscience). A normative theory in which the brain replays memories by
+  **gain × need**. *Gain* is how much better the resulting choices would be, which is close kin to
+  our margin score. That work is about which memory to *replay*, not which to *keep* under a
+  capacity limit, but it is the paper this work must cite first.
+- **Value of experience / expected value of backup.** The RL literature on prioritized replay
+  defines the ideal priority as the increase in reward from an update, with TD error (surprise)
+  as a proxy for it.
+- **Selective experience replay**, which chooses what a limited buffer keeps (by surprise,
+  reward, coverage and so on), is an active line of work. Surprise-driven retention is current
+  in LLM continual learning (for example SuRe, 2025), and in Titans-style memory.
+
+**What is (modestly) ours:** a pre-registered, controlled comparison **for retention under a
+capacity limit**. It includes controls that separate relevance filtering from decision-margin
+weighting (P1), and it shows the fact-versus-decision dissociation (P4). The result supports the
+Mattar–Daw view in a setting (what to *keep*) where surprise-based rules are currently popular.
+The next honest step is to compare our margin heuristic with a principled Mattar–Daw-style
+**gain** score.
+
 ## Honest limits
 
 - A **designed toy world**, in which surprise and consequence were built to be able to come
