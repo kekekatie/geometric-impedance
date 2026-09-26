@@ -4,6 +4,30 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧭 NEXT (Katie, 2026-09-26 evening): the perp-space paper
+
+- **Done today:**
+  - the transmission paper is published;
+  - the AI memory paper is written ([`../surprise_vs_consequence/paper/`](../surprise_vs_consequence/paper/)).
+    Katie is uploading it to Zenodo tonight; she has the PDF that credits the model by name.
+- **Next, when Katie comes back: the perpendicular-space paper.**
+- **The material:**
+  - [`laying_the_tiling/`](laying_the_tiling/): forced growth builds sibling universes; SCALE
+    lays the tiling exactly;
+  - the worm and crossroads tests (differences run along ribbon roads, one road per guess);
+  - [`twins_mirror/`](twins_mirror/);
+  - [`penrose_address_environment/`](penrose_address_environment/);
+  - [`../address_codes/`](../address_codes/): the golden code's misses land exactly on
+    Fibonacci-number perp-space neighbours; a quasicrystal can't locate itself from local
+    content.
+- **Not ripe yet; do these first, pre-registered:**
+  - more forced-growth runs and larger patches (so far only 3 distinct outcomes and 4
+    guess→band events);
+  - SCALE from off-centre seeds;
+  - a sharper wrong-zoom control.
+- **First job next session:** read those READMEs, propose the paper's spine to Katie, then write
+  the pre-registration for the ripening runs.
+
 ## ✅ 2026-09-26: the transmission paper is published on Zenodo (Katie, after two reads)
 
 The next step, as planned: the AI memory paper. A draft pre-registration is waiting for Katie's
