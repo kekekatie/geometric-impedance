@@ -51,6 +51,45 @@ Wherever the nudged line slips past a crossing of two other lines, three tiles r
   scar into a sibling universe? Several lines moving together (a genuine phason shift)? The
   matching rules acting as they grow?
 
+---
+
+## Follow-up: can the walker's knots be healed locally? (Katie's question)
+
+Pre-registered in [`PREREGISTRATION_HEALING.md`](PREREGISTRATION_HEALING.md). The question: are the
+walker's defects *blemishes*, which small local changes can remove, or *knots* that only the whole
+can undo (the particle-like, topological kind)? The local move is a hexagon flip.
+
+| | prediction | result |
+|---|---|---|
+| H0 | sanity: a single flip in a pristine tiling heals in one flip | **pass**, 40/40 |
+| H1 | < 25% of mid-wake knots heal within 4 flips (push 0.2) | **failed**: 6 of 7 heal, in 1–2 flips |
+| H2 | the same at push 0.05 | held, but with only one knot, so it is weak |
+
+*Exploratory follow-ups* (`healing_deep.py`, `healing_undo.py`):
+
+- **The one stubborn knot sits at the tiling's centre** (`t = 0`, 12 bad vertices), its point of
+  symmetry. It does not heal within 4 flips at either push. A blind search to 5–6 flips ran out
+  of time, so whether it heals deeper is **open**.
+- **The knots sit in a mirror-symmetric pattern**: at ±8.2, ±13.4 and ±20.7 along the road,
+  spacings growing by *roughly* the golden ratio (not checked precisely).
+- **The record can't be *undone* locally, only *covered over*.** When the search may use
+  only *undo* flips (flips that return tiles to the original tiling), **no knot heals**: every
+  undo path, up to depth 14 and radius 6, is exhausted without success. The six heals found in
+  H1 therefore reach a **third** local arrangement, which is legal-shaped but neither the original
+  tiling nor the walker's. The only way back to the original is to undo the **whole** push, which
+  restores it exactly.
+
+**In plain words:** most of what the walker wrote can be tidied into something that *looks* legal
+with a flip or two, but it can't be *erased* piece by piece. The record of the journey can be
+disguised locally, and only removed by the whole. The one place where even disguise fails (so
+far) is the centre of symmetry.
+
+**Limits:**
+- "Legal-shaped" means star shapes only, without matching arrows, so a disguise might still
+  break the full matching rules.
+- One patch, one road.
+- The centre knot's deeper status is untested.
+
 ## Honest notes
 
 - **Bug in the first run, fixed.** The walker's path was set in *grid* units, while tiles sit
@@ -72,4 +111,6 @@ Wherever the nudged line slips past a crossing of two other lines, three tiles r
 python3 writing_walker.py   # ~20 s, exit 0 iff the structural checks pass; results/writing_walker_report.txt
 python3 push_scan.py        # exploratory scan of push sizes; results/push_scan.txt
 python3 make_figure.py      # figures/writing_walker.png
+python3 healing.py          # pre-registered healing test (~10 min); results/healing_report.txt
+python3 healing_undo.py     # exploratory: undo-only healing; results/healing_undo.txt
 ```
