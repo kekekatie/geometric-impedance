@@ -309,12 +309,13 @@ a laptop.
 | round 3 | `svc3.py` | `PREREGISTRATION_ROUND3.md` |
 | echo-chamber twin | `diag_echo.py` | exploratory |
 
-## Acknowledgements **[draft for Katie to confirm or rewrite]**
+## Acknowledgements
 
-The study was designed, coded, analysed and drafted by Claude (Anthropic) in conversation with the
-author. The wisdom-of-crowds hypothesis (§4.4–4.5) was the author's. Astra reviewed the round-1
-pre-registration and the round-2 results; that review led to the relevance-filter controls, the
-common leave-one-out scoring, the discovery decomposition (§4.3), and several corrections.
+This study was designed, coded, analysed and drafted by Claude (Anthropic), working in
+conversation with the author. The wisdom-of-crowds hypothesis (§4.4–4.5), which led to the
+echo-chamber finding, was the author's. Astra reviewed the round-1 pre-registration and the round-2
+results. That review led to the relevance-filter controls, the common leave-one-out scoring, the
+discovery decomposition (§4.3), and several corrections.
 
 ## References
 
