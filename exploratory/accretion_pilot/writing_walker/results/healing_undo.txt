@@ -1,0 +1,8 @@
+push 0.2 knot at t=-20.7 (7 vertices): r=3: no (8 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=-13.4 (7 vertices): r=3: no (8 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=-8.2 (4 vertices): r=3: no (4 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=+0.0 (12 vertices): r=3: no (16 states, all undo paths exhausted or depth 14); r=4: no (16 states, all undo paths exhausted or depth 14); r=6: no (64 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=+8.2 (4 vertices): r=3: no (4 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=+13.4 (7 vertices): r=3: no (8 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.2 knot at t=+20.7 (7 vertices): r=3: no (8 states, all undo paths exhausted or depth 14); r=4: no (8 states, all undo paths exhausted or depth 14); r=6: no (16 states, all undo paths exhausted or depth 14)
+push 0.05 knot at t=+0.0 (12 vertices): r=3: no (16 states, all undo paths exhausted or depth 14); r=4: no (16 states, all undo paths exhausted or depth 14); r=6: no (256 states, all undo paths exhausted or depth 14)
