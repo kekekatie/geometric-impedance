@@ -1,0 +1,473 @@
+<!doctype html><html><head><meta charset='utf-8'><title>What should a memory keep?</title><style>
+@page { size: A4; margin: 20mm 18mm; }
+body { font-family: 'DejaVu Serif', Georgia, serif; font-size: 10.5pt; line-height: 1.45; color: #111; }
+h1 { font-size: 17pt; line-height: 1.25; margin-bottom: 4pt; }
+h2 { font-size: 13pt; margin-top: 16pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+h3 { font-size: 11.5pt; margin-top: 12pt; }
+table { border-collapse: collapse; margin: 8pt 0; font-size: 9pt; width: 100%; }
+th, td { border: 1px solid #bbb; padding: 3pt 5pt; vertical-align: top; }
+th { background: #f0f0f0; }
+code { font-family: 'DejaVu Sans Mono', monospace; font-size: 8.8pt; background: #f5f5f5; padding: 0 2px; }
+img { max-width: 100%; display: block; margin: 8pt auto 2pt; page-break-inside: avoid; }
+hr { border: none; border-top: 1px solid #ccc; }
+p, li { text-align: justify; }
+</style></head><body><h1>What should a memory keep? Consequence beats surprise, and a crowd needs an independent judge</h1>
+<p><strong>K. T. Niedzwiecki</strong><br>
+Independent Researcher, South Australia<br>
+26 September 2026</p>
+<hr />
+<h2>Abstract</h2>
+<p>A memory that cannot keep everything must choose what to keep. Several recent designs for
+learning memories keep what is <strong>surprising</strong>: observations with a large prediction error. We
+test an alternative: keep what can still <strong>change a decision</strong>. We use a controlled toy world with
+a capacity-limited memory (5% of the stream). Every prediction was pre-registered and frozen
+before the code that tested it existed, across four rounds, two of them revised after external
+review.</p>
+<ul>
+<li><strong>Consequence beats surprise.</strong> A decision-margin rule has <strong>44% lower decision regret</strong> than a
+  surprise rule. It beats a surprise rule <em>told the same relevance information</em> by <strong>14%</strong>
+  (95% CI 10–18%), so the gain is not merely a relevance filter. Both results replicate on fresh
+  worlds (41%, 15.5%).</li>
+<li><strong>Facts and decisions come apart.</strong> The surprise rule remembers the most facts and makes worse
+  decisions.</li>
+<li><strong>A principled rival.</strong> The quick rule met a pre-registered ±10% test against a principled gain
+  score in the style of Mattar &amp; Daw (2018).</li>
+<li><strong>Learning what matters.</strong> When the memory must discover for itself which situations offer a
+  choice, the dominant cost is <strong>premature eviction</strong>: evidence discarded before its relevance is
+  knowable.</li>
+<li><strong>The ideal memory's secret.</strong> A clairvoyant comparator keeps a <strong>representative crowd</strong> of
+  memories, with typical rather than extreme noise.</li>
+<li><strong>The echo chamber.</strong> A pre-registered attempt to imitate that failed: the crowd-aware rule was
+  <strong>42% worse</strong>. Judged against the truth, the same rule nearly matches the clairvoyant.
+  Judged against the agent's own beliefs, it becomes an <strong>echo chamber</strong>: where it chooses wrongly,
+  87% of its kept memories support the wrong choice.</li>
+</ul>
+<p>The result is a practical lesson and an open question. What a memory should keep is set by what
+can still change its decisions, and a crowd of memories is wise only if its judge is independent.</p>
+<hr />
+<h2>1. Introduction</h2>
+<p>Every learning system with finite memory faces the same question: <em>what should stay?</em> Brains face
+it continually. Machine-learning systems face it in replay buffers, in continual learning, and
+increasingly in the long-term memory of language models. One recent design, Titans (Behrouz et
+al., 2025), updates a neural memory in proportion to <strong>surprise</strong>. Surprise-driven retention has
+also been proposed for continual learning of language models (SuRe, 2025). Surprise is attractive:
+it is cheap, local, and resembles the way surprising events are remembered well.</p>
+<p>Surprise measures how <em>unexpected</em> an observation is, not how much it <em>matters</em>. A startling fact
+about a situation in which there is nothing to decide changes nothing downstream. A quiet fact
+about a close call can change everything. This distinction has a long history in decision theory
+as the value of information (Howard, 1966). In neuroscience, Mattar &amp; Daw (2018) proposed that the
+hippocampus prioritises which memories to <strong>replay</strong> by their <em>gain</em>: how much they would improve
+future choices. In reinforcement learning, the ideal priority of a stored experience is its value
+for improving the policy, and the TD error (surprise) is a proxy for it.</p>
+<p>This study asks the retention version of that question in the most controlled setting we could
+build. When space is tight, should a memory <strong>keep</strong> what is surprising or what can change a
+decision? By how much does it matter, and why? The work began from an intuition in earlier work by
+the author on how differences survive in growing structures: a difference lasts only where the
+future can still split (the "fork law"). This is inspiration, not derivation. The forks here are
+simply situations with more than one available action.</p>
+<p>A note on method. Every prediction was written down and committed to a public repository <em>before</em>
+the code that tests it existed. Two rounds of design review by an independent AI reviewer led to
+revisions before freezing. Failed predictions are reported with the same prominence as successful
+ones: 17 of 28 held.</p>
+<h2>2. The setting</h2>
+<p><strong>World.</strong> There are <code>S = 200</code> situations. Each is <strong>forced</strong> (one action) with probability <code>1 − f</code>,
+or a <strong>fork</strong> (two actions) with probability <code>f</code>, with <code>f = 0.3</code> unless stated.
+- Forced values are heavy-tailed: <code>μ ~ 2·t₅</code>. They are often startling, and truly irrelevant to any
+  decision.
+- Fork values are close calls: <code>μ₁ ~ N(0, 1)</code>, <code>μ₂ = μ₁ + δ</code>, <code>δ ~ N(0, 0.5²)</code>.</p>
+<p><strong>Stream.</strong> <code>T = 2000</code> observations. Each is a uniformly drawn situation, a uniformly drawn available
+action, and a reward <code>r = μ + ε</code>, <code>ε ~ N(0, 1)</code>.</p>
+<p><strong>Agent.</strong> Beliefs come only from memory: <code>Q = Σr / (n + 1)</code> for each situation and action (a
+normal–normal posterior mean, prior <code>N(0, 1)</code>).</p>
+<p><strong>Memory.</strong> Capacity <code>K = 100</code> observations (5% of the stream). Once full, the <code>K</code> stored items and
+the newcomer form a pool. Each item is scored <strong>leave-one-out</strong>, using beliefs from the pool without
+it. The lowest score is evicted, and ties are broken at random.</p>
+<p><strong>Measures.</strong>
+- <strong>Decision regret:</strong> the mean over forks of the value lost by choosing with the agent's beliefs.
+- <strong>Fact error:</strong> the mean squared error of all beliefs.
+- All comparisons are <strong>paired</strong>: every rule sees the same worlds and streams. Uncertainty comes
+  from a paired bootstrap over worlds (100 per condition, 10,000 resamples). "Improves by ≥ X%"
+  means the point estimate is at least X% <em>and</em> the paired-difference 95% CI excludes zero.</p>
+<p><strong>Rules.</strong> Every rule gets the same budget. The scores use the leave-one-out residual
+<code>z = |r − Q_a|</code> and the fork margin <code>m = |Q₁ − Q₂|</code>.</p>
+<table>
+<thead>
+<tr>
+<th>rule</th>
+<th>keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recency</td>
+<td>the latest <code>K</code> (a context window)</td>
+</tr>
+<tr>
+<td>random</td>
+<td>a uniform reservoir sample</td>
+</tr>
+<tr>
+<td><strong>surprise</strong></td>
+<td>the largest <code>z</code> <em>(inspired by Titans and prioritized replay; an implementation of neither)</em></td>
+</tr>
+<tr>
+<td>fork-only random / fork-only <strong>surprise</strong></td>
+<td>as random / surprise, but forced situations are never kept. These are <em>relevance-filter controls</em>.</td>
+</tr>
+<tr>
+<td><strong>margin</strong></td>
+<td>forks only, scored <code>(z / (n_a + 2)) / (m + 0.1)</code>: how far the memory moves its action's estimate, relative to how close the call is. It is "decision-sensitive surprise".</td>
+</tr>
+<tr>
+<td>gain (softmax, β = 5)</td>
+<td>a Mattar–Daw-style gain: the improvement in the agent's own softmax policy value from keeping the memory</td>
+</tr>
+<tr>
+<td>clairvoyant greedy</td>
+<td>evicts the memory whose removal least increases the <em>true</em> regret. It is a comparator that sees the truth, not a proven bound.</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Procedure</h2>
+<table>
+<thead>
+<tr>
+<th>round</th>
+<th>question</th>
+<th>pre-registration frozen at</th>
+<th>review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>consequence vs surprise, with relevance-filter controls</td>
+<td><code>e110a11</code></td>
+<td>revised after Astra's design review</td>
+</tr>
+<tr>
+<td>2</td>
+<td>replication; the principled gain rival; inferred forks; the cliff; drift</td>
+<td><code>f45fa98</code></td>
+<td>self-review against the round-1 checklist</td>
+</tr>
+<tr>
+<td>2b</td>
+<td>discovery failure vs premature eviction</td>
+<td><code>5fe1b74</code></td>
+<td>follows Astra's review of the round-2 results</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a crowd-aware memory</td>
+<td><code>5d83910</code></td>
+<td>follows an exploratory diagnostic (§4.4)</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Results</h2>
+<h3>4.1 Consequence beats surprise, beyond relevance filtering (round 1)</h3>
+<p><img alt="Figure 1" src="../figures/svc.png" /></p>
+<p><strong>Figure 1.</strong> Round 1, primary condition (<code>t5</code>, <code>f = 0.3</code>). <em>Left:</em> decision regret. <em>Middle:</em>
+fact error. <em>Right:</em> regret against the fraction of situations that are forks, for heavy-tailed
+(<code>t5</code>) and matched-normal forced values.</p>
+<ul>
+<li><strong>Margin has 44% lower regret than surprise</strong> (0.096 vs 0.170; 95% CI 41–47%).</li>
+<li><strong>Margin has 14% lower regret than fork-only surprise</strong> (95% CI 10–18%). This control is told the
+  same relevance information, so the decision-margin score adds value <strong>beyond</strong> discarding
+  irrelevant situations.</li>
+<li><strong>Relevance filtering alone</strong> (fork-only random) improves on surprise by only 8% (CI 4–12%), below
+  the pre-registered 20%. The gain comes in layers: the relevance filter (smallest), surprise
+  within forks, then margin weighting.</li>
+<li><strong>Facts and decisions come apart.</strong> Surprise has by far the lowest fact error (0.82, against 4.19
+  for margin and 3.27 for random), yet it makes worse decisions. It knows more and chooses worse.</li>
+<li><strong>Where the advantage lives.</strong> Margin's advantage over surprise shrinks as forks become common
+  (<code>t5</code>: 50% → 44% → 35% → 12% for <code>f</code> = 0.1 → 0.9), and is smaller when forced values are not
+  heavy-tailed. Where every situation is a fork, the relevance filter is worthless, yet margin still
+  beats fork-only surprise by about 9%.</li>
+</ul>
+<p>Round 1: 7 of 8 predictions held.</p>
+<h3>4.2 Replication, a principled rival, and harder conditions (round 2)</h3>
+<p><img alt="Figure 2" src="../figures/svc2.png" /></p>
+<p><strong>Figure 2.</strong> Round 2 on fresh worlds. Regret for every rule in four streams.</p>
+<ul>
+<li><strong>Replication.</strong> Margin beats surprise by 41.0% and fork-only surprise by 15.5%
+  (CI 11.3–19.4%).</li>
+<li><strong>The principled rival.</strong> The Mattar–Daw-style gain score met the pre-registered ±10% test on its
+  point estimate: its regret is 7.3% higher than margin's (CI 2.7–12.0% higher). This is not a
+  demonstration of equivalence. Margin was lower in all four streams. A greedy version of gain,
+  which values a memory only if it flips a choice, performs poorly.</li>
+<li><strong>Inferred forks.</strong> A margin rule that must discover for itself which situations are forks is
+  7.9% worse than the informed rule at <code>T = 2000</code> (the pre-registered tolerance was 5%). On a short
+  stream (<code>T = 600</code>) it beats surprise by only 4.9% (the prediction was ≥ 10%).</li>
+<li><strong>The context-window cliff.</strong> In a stream where half the situations appear only early, recency
+  was the worst rule but only 1.9% worse than random, and the paired CI includes zero. The
+  pre-registered large penalty (≥ 30%) was not detected. An exploratory check shows the recency
+  penalty growing with memory size (0%, 4% and 10% at memory sizes of 5%, 20% and 40% of the
+  stream). A tiny memory has forgotten most early material under every rule.</li>
+<li><strong>A changing world.</strong> When the better action changes halfway through, recency beats random
+  slightly (+3.6%, CI excludes zero), and margin still beats surprise by 36%.</li>
+</ul>
+<p>Round 2: 7 of 10 predictions held.</p>
+<h3>4.3 The cost of learning what matters is premature eviction (round 2b)</h3>
+<p>A fork can be recognised only once both of its actions have been seen. The inferred rule's
+shortfall mixes two problems:
+- <strong>(D)</strong> forks never discovered: 1.45% of forks at <code>T = 2000</code>, <strong>39%</strong> at <code>T = 600</code>;
+- <strong>(E)</strong> evidence evicted before discovery.</p>
+<p>An "eventual-discovery oracle", which knows from the start which forks <em>will</em> be discovered,
+separates them. The added regret, on paired worlds:</p>
+<table>
+<thead>
+<tr>
+<th>stream</th>
+<th>(D) never discovered</th>
+<th>(E) evicted before discovery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>T = 2000</code></td>
+<td>+0.0001</td>
+<td><strong>+0.0077</strong></td>
+</tr>
+<tr>
+<td><code>T = 600</code></td>
+<td>+0.0107</td>
+<td><strong>+0.0132</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Premature eviction is the larger cost in both streams.</strong> The main price of learning relevance
+  is discarding evidence before its relevance can be known.</li>
+<li><strong>The margin weighting survives the discovery problem</strong> on the long stream: it beats surprise
+  facing identical discovery by 10.5% (CI 6.4–14.6%). It does not on the short stream (−0.5%).</li>
+<li><strong>Keeping all unresolved situations does not fix it.</strong> Treating every unresolved situation as a
+  possible fork does not help on the short stream and is 50% worse on the long one: forced
+  situations stay unresolved for ever and flood the memory.</li>
+</ul>
+<p>Round 2b: 2 of 5 predictions held.</p>
+<h3>4.4 The ideal memory keeps a representative crowd (exploratory)</h3>
+<p>What does the clairvoyant comparator, with half of margin's regret, know? Following a question
+from the author, whether its secret resembles the <em>wisdom of crowds</em>, we measured the noise
+<code>|r − μ|</code> in each rule's kept fork memories (round-2 worlds, 40 seeds):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>noise in kept memories</th>
+<th>forks decided right</th>
+<th>estimated margin when wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fork-only surprise</td>
+<td>1.59</td>
+<td>53%</td>
+<td>0.36</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>1.43</td>
+<td>65%</td>
+<td>0.91</td>
+</tr>
+<tr>
+<td>clairvoyant</td>
+<td><strong>0.78</strong></td>
+<td>76%</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The clairvoyant keeps memories with <strong>typical</strong> noise: 0.78, against 0.80 for one unit of
+  Gaussian noise. It keeps a representative crowd.</li>
+<li>Margin and surprise keep memories with nearly twice the typical noise. Rules that reward
+  "moves my estimate a lot" select for unreliable evidence.</li>
+<li>Margin's wrong decisions are <em>confident</em> (estimated margin 0.91). Extreme evidence makes the
+  wrong answer look settled, so the situation stops attracting correction.</li>
+</ul>
+<h3>4.5 A crowd judged by its own beliefs becomes an echo chamber (round 3)</h3>
+<p><img alt="Figure 3" src="../figures/svc3.png" /></p>
+<p><strong>Figure 3.</strong> Round 3 on fresh worlds. <em>Left:</em> regret. <em>Middle:</em> noise in kept memories; the dashed
+line is typical noise. <em>Right:</em> forks decided right.</p>
+<p>The pre-registered <strong>crowd-aware margin</strong> rule keeps margin's relevance, but replaces the residual
+<code>z</code> with <code>z·exp(−z²/2v)</code>. That term peaks at <em>typical</em> size under the agent's own predictive
+variance <code>v</code>.</p>
+<ul>
+<li>It kept less noisy memories, as predicted (1.08 vs 1.41).</li>
+<li>It made decisions <strong>42% worse</strong> (4 of the 5 predictions failed).</li>
+</ul>
+<p>An exploratory twin identifies the cause. The same rule, judging typicality against the <strong>truth</strong>,
+nearly matches the clairvoyant:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>regret</th>
+<th>in wrongly decided forks, share of kept memories supporting the wrong choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>crowd vs own belief</td>
+<td>0.137</td>
+<td><strong>87%</strong></td>
+</tr>
+<tr>
+<td>crowd vs truth <em>(cheating)</em></td>
+<td><strong>0.058</strong></td>
+<td>71%</td>
+</tr>
+<tr>
+<td>clairvoyant</td>
+<td>0.051</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>The representative crowd is nearly the whole secret of the ideal memory.</strong></li>
+<li><strong>Judged against the agent's own beliefs, it becomes an echo chamber.</strong> When a belief is wrong,
+  the memories that look typical are the ones that agree with it, and the dissenting memories that
+  would correct it are discarded.</li>
+</ul>
+<p>Round 3: 1 of 5 predictions held.</p>
+<h2>5. Discussion</h2>
+<p><strong>What is established here, and what is not.</strong>
+- The central idea, prioritising memory by consequence for decisions, is <strong>not new</strong>. It is the
+  value of information, and in the brain it is Mattar &amp; Daw's gain.
+- What this study adds is a pre-registered, controlled demonstration <strong>for retention under a
+  capacity limit</strong>, a setting where surprise-based rules are currently popular. It includes:
+  - controls that separate relevance filtering from decision-margin weighting;
+  - a measured split between factual accuracy and decision quality;
+  - a decomposition showing that the cost of <em>learning</em> relevance is mostly premature eviction;
+  - the finding that the ideal memory's advantage is largely representativeness, which cannot be
+    obtained naively from the agent's own beliefs.</p>
+<p><strong>Implications for learning memories.</strong>
+1. A memory built to keep what is surprising can be well informed and still choose badly.
+2. Evidence needs somewhere to <strong>wait</strong> until its relevance can be judged. That points to a
+   short-term holding buffer ahead of a selective long-term store, in the spirit of Complementary
+   Learning Systems (McClelland, McNaughton &amp; O'Reilly, 1995).
+3. A memory that judges what is "typical" against its own beliefs will entrench its errors.</p>
+<p>The last point is not special to machines. Confirmation bias and group echo chambers have the same
+structure: a crowd whose only judge of "normal" is itself.</p>
+<p><strong>The open question: where can a memory find an independent judge?</strong> Candidates include:
+- a separate sample of memories never used for the decision itself (in the spirit of
+  cross-validation);
+- a slower, older estimate;
+- two memory systems that check each other, as the fast hippocampal and slow cortical systems
+  might.</p>
+<p>We think this is the most important question the study raises.</p>
+<p><strong>Limitations.</strong>
+- This is a designed toy world, in which surprise and consequence were built to be able to come
+  apart. The results show <em>how large</em> the difference can be and how the mechanisms behave, not how
+  often real data looks like this.
+- Most rules were told which situations offer a choice. Section 4.3 measures the cost of removing
+  that knowledge.
+- The gain rival used one untuned temperature.
+- The surprise comparator implements neither Titans nor prioritized replay.
+- The clairvoyant comparator is not a proven bound.
+- Sections 4.4 and the echo-chamber twin are exploratory, and are labelled as such.</p>
+<h2>6. All pre-registered predictions</h2>
+<table>
+<thead>
+<tr>
+<th>round</th>
+<th>held</th>
+<th>failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>P1 (margin &gt; fork-only surprise ≥ 10%), P2b, P3, P4, P5, P6, P7</td>
+<td>P2a (relevance filter alone ≥ 20%)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>R1a, R1b, R2 (gain within ±10%, point estimate), R4b, R5a, R5b, R6</td>
+<td>R3a, R3b (inferred forks), R4a (cliff ≥ 30%)</td>
+</tr>
+<tr>
+<td>2b</td>
+<td>B1a, B2a</td>
+<td>B1b, B2b, B3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C2 (less noisy memories)</td>
+<td>C1, C3, C4, C5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>17 of 28 held.</strong> The full pre-registrations, with the commits at which each was frozen and the
+logged pre-run changes, are in the repository.</p>
+<h2>Reproducibility</h2>
+<p>Everything is in <code>github.com/kekekatie/geometric-impedance</code>, under
+<code>exploratory/surprise_vs_consequence/</code>. The scripts are self-contained NumPy and run in minutes on
+a laptop.</p>
+<table>
+<thead>
+<tr>
+<th>result</th>
+<th>script</th>
+<th>pre-registration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>round 1</td>
+<td><code>svc.py</code></td>
+<td><code>PREREGISTRATION.md</code></td>
+</tr>
+<tr>
+<td>round 2</td>
+<td><code>svc2.py</code></td>
+<td><code>PREREGISTRATION_ROUND2.md</code></td>
+</tr>
+<tr>
+<td>round 2b</td>
+<td><code>svc2b.py</code></td>
+<td><code>PREREGISTRATION_ROUND2B.md</code></td>
+</tr>
+<tr>
+<td>§4.4 diagnostics</td>
+<td><code>diag_puzzles.py</code></td>
+<td>exploratory</td>
+</tr>
+<tr>
+<td>round 3</td>
+<td><code>svc3.py</code></td>
+<td><code>PREREGISTRATION_ROUND3.md</code></td>
+</tr>
+<tr>
+<td>echo-chamber twin</td>
+<td><code>diag_echo.py</code></td>
+<td>exploratory</td>
+</tr>
+</tbody>
+</table>
+<h2>Acknowledgements <strong>[draft for Katie to confirm or rewrite]</strong></h2>
+<p>The study was designed, coded, analysed and drafted by Claude (Anthropic) in conversation with the
+author. The wisdom-of-crowds hypothesis (§4.4–4.5) was the author's. Astra reviewed the round-1
+pre-registration and the round-2 results; that review led to the relevance-filter controls, the
+common leave-one-out scoring, the discovery decomposition (§4.3), and several corrections.</p>
+<h2>References</h2>
+<ul>
+<li>Behrouz, A., Zhong, P., &amp; Mirrokni, V. (2025). <em>Titans: Learning to memorize at test time.</em>
+  arXiv:2501.00663.</li>
+<li>Howard, R. A. (1966). Information value theory. <em>IEEE Transactions on Systems Science and
+  Cybernetics</em>, 2(1), 22–26.</li>
+<li>Mattar, M. G., &amp; Daw, N. D. (2018). Prioritized memory access explains planning and hippocampal
+  replay. <em>Nature Neuroscience</em>, 21, 1609–1617.</li>
+<li>McClelland, J. L., McNaughton, B. L., &amp; O'Reilly, R. C. (1995). Why there are complementary
+  learning systems in the hippocampus and neocortex. <em>Psychological Review</em>, 102(3), 419–457.</li>
+<li>Schaul, T., Quan, J., Antonoglou, I., &amp; Silver, D. (2016). Prioritized experience replay.
+  <em>ICLR 2016.</em></li>
+<li>SuRe: Surprise-driven prioritised replay for continual LLM learning (2025). arXiv:2511.22367.</li>
+<li>Niedzwiecki, K. T. (2026). <em>When the past matters, II: The fate of an expressed difference.</em>
+  Zenodo.</li>
+</ul></body></html>
