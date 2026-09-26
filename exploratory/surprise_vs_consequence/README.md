@@ -216,3 +216,46 @@ stream be a self-reinforcing bias?"). Code: `diag_puzzles.py`; output:
 - **A testable consequence for a future pre-registered round:** a *crowd-aware* margin rule, one
   that prefers decision-relevant memories of *typical* size to extreme ones, should close part of
   the gap to the clairvoyant.
+
+---
+
+# Round 3: the crowd-aware memory (Katie's hypothesis)
+
+Pre-registered in [`PREREGISTRATION_ROUND3.md`](PREREGISTRATION_ROUND3.md), frozen at `5d83910`
+before any code. Fresh seeds 20000–20099. Code: `svc3.py`.
+
+![round 3](figures/svc3.png)
+
+| | prediction | result | |
+|---|---|---|---|
+| C1 | crowd-aware margin beats margin by ≥ 10% | **42% worse** | **failed** |
+| C2 | its memories are less noisy | 1.08 vs 1.41 | held |
+| C3 | it decides more forks right | 61% vs 68% | **failed** |
+| C4 | it beats close-calls-only | 33% worse | **failed** |
+| C5 | it beats margin on the short stream | 6.5% worse | **failed** |
+
+**1 of 5 held.** It got the crowd right (less noisy memories) and the decisions wrong.
+
+## Why: an echo chamber *(exploratory, post hoc: `diag_echo.py`, 40 seeds)*
+
+The crowd rule judges "typical" **against its own current beliefs**. The cheating twin judges it
+**against the truth**:
+
+| | regret | in wrongly decided forks, share of kept memories that *support the wrong choice* |
+|---|---|---|
+| crowd vs **own belief** | 0.137 | **87%** |
+| crowd vs **truth** (cheating) | **0.058** | 71% |
+| clairvoyant (for reference) | 0.051 | — |
+
+- **Katie's wisdom-of-crowds idea explains nearly all of the clairvoyant's advantage.** Keep the
+  representative memories, measured against the truth, and you almost match it.
+- **Measured against your own beliefs, the same idea becomes an echo chamber.** When the belief is
+  wrong, the memories that look "typical" are the ones that agree with it, and the dissenting
+  memories, the ones that would correct it, get thrown away.
+- **A crowd is only wise if its judge is independent.** The open question, and a natural next
+  pre-registration: is there an *honest* independent reference? For example, a separate sample of
+  memories that is never used for the decision itself, or a slower, older estimate. It is
+  suggestive that brains have two memory systems (fast hippocampus, slow cortex) that can check
+  each other.
+- Note on the "forks right" measure: ties (no evidence) count as wrong. That is why plain surprise
+  scores so low on it: it keeps very little fork evidence.
