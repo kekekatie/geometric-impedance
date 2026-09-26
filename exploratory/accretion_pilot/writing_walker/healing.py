@@ -108,13 +108,16 @@ def heal_search(T, knot, atlas, illegal_before):
     near = lambda K: min(dist(K, q) for q in centre_pts) <= RADIUS
     knot_set = set(knot)
     others_illegal = illegal_before - knot_set
-    start = T.copy()
+    # only the knot's neighbourhood matters: flips happen within RADIUS, stars are read within RADIUS+1,
+    # so faces touching RADIUS+3 are ample (memory fix after the first run; logic unchanged)
+    local = [cs for cs in T.faces.values() if any(min(dist(K, q) for q in centre_pts) <= RADIUS + 3 for K in cs)]
+    start = Tiling(local)
     seen = {frozenset(start.faces)}
     frontier = [(start, set())]                     # (tiling, vertices whose star changed so far)
     for depth in range(1, DEPTH + 1):
         nxt = []
         for tl, changed in frontier:
-            cands = [K for K in list(tl.vf) if near(K)]
+            cands = [K for K in list(tl.vf) if near(K)]      # all within RADIUS: stars complete in the local patch
             for v in cands:
                 plan = tl.flip_plan(v)
                 if plan is None:

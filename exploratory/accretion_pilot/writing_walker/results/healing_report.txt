@@ -1,0 +1,18 @@
+============================================================================================
+HEALING TEST -- can the writing walker's knots be removed by local hexagon flips?
+============================================================================================
+  pristine tiling: 820 flippable vertices within radius 20; tested 40 single flips that create shape-illegal vertices
+  [PASS] H0: every single-flip defect heals at depth 1 (40/40)
+    push 0.2: knot of 7 illegal vertices at t = +13.4 -> HEALED at depth 2
+    push 0.2: knot of 7 illegal vertices at t = +20.7 -> HEALED at depth 2
+    push 0.2: knot of 12 illegal vertices at t = +0.0 -> not healed within depth 4
+    push 0.2: knot of 7 illegal vertices at t = -13.4 -> HEALED at depth 2
+    push 0.2: knot of 4 illegal vertices at t = -8.2 -> HEALED at depth 1
+    push 0.2: knot of 7 illegal vertices at t = -20.7 -> HEALED at depth 2
+    push 0.2: knot of 4 illegal vertices at t = +8.2 -> HEALED at depth 1
+    push 0.05: knot of 12 illegal vertices at t = +0.0 -> not healed within depth 4
+  [PASS] reference: the walker's wake differs from the pristine tiling, and undoing the push restores it exactly
+--------------------------------------------------------------------------------------------
+  H1: FAILED  push 0.2: 6/7 mid-wake knots heal within depth 4 (86%; need < 25%)
+  H2: HELD    push 0.05: 0/1 mid-wake knots heal within depth 4 (0%; need < 25%)
+STRUCTURAL CHECKS: ALL PASSED
