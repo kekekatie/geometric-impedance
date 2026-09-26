@@ -4,6 +4,12 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ✅ 2026-09-26: the transmission paper is published on Zenodo (Katie, after two reads)
+
+The next step, as planned: the AI memory paper. A draft pre-registration is waiting for Katie's
+review at [`../surprise_vs_consequence/PREREGISTRATION.md`](../surprise_vs_consequence/PREREGISTRATION.md).
+No code until she's looked at it. (Record the new paper's DOI here when Katie shares it.)
+
 ## 🗺️ Katie's plan, in her words (2026-09-25 evening)
 
 1. Read the transmission paper tonight, after yoga.
