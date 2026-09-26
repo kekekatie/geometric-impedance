@@ -63,8 +63,13 @@ def h(t, t0):
     return 1.0
 
 
+SCALE = 2.5   # tiles sit at (5/2) x the grid position: sum_j (e_j . x) e_j = (5/2) x for five unit vectors
+
+
 def bent_offset(x, delta, t0):
-    return delta * h(dot(EJP, x), t0)
+    """x is a GRID-space point; the walker's path (t_start, t0, w) is measured along the TILING,
+    i.e. in tile units = SCALE x grid units. (v1 mixed the two: see README.)"""
+    return delta * h(SCALE * dot(EJP, x), t0)
 
 
 def build(delta, t0):
@@ -121,7 +126,7 @@ def crossed_triples(delta, t0):
             for ns in nrange:
                 br, bs = nr + GAMMA[r], ns + GAMMA[s]
                 x = ((br * EV[s][1] - bs * EV[r][1]) / det, (bs * EV[r][0] - br * EV[s][0]) / det)
-                if math.hypot(*x) > R - 4:
+                if SCALE * math.hypot(*x) > R - 4:          # its tiles lie inside the analysed patch
                     continue
                 sj = dot(EJ, x) - GAMMA[J]
                 if C < sj < C + bent_offset(x, delta, t0):
@@ -188,7 +193,10 @@ def main():
             ts = [dot(EJP, centroid(cs)) for cs in changed]
             in_wake = all(T_START - 1 <= t <= t0 + 1 for t in ts)
             ill_t = [dot(EJP, par(K)) for K in illegal]
+            is_rib = lambda v: v[1][0] == J and v[2] == C
+            off_rem = sum(1 for k in removed if not is_rib(base[k])); off_add = sum(1 for k in added if not is_rib(F[k]))
             results[(delta, t0)] = dict(faces=len(F), edges_ok=ok_edges, removed=len(removed), added=len(added),
+                                        off_ribbon_removed=off_rem, off_ribbon_added=off_add,
                                         flips=len(tri), on_road=on_road, in_wake=in_wake,
                                         illegal=len(illegal), ill_t=ill_t,
                                         changed_centroids=[centroid(cs) for cs in changed],
@@ -199,8 +207,12 @@ def main():
             f"in wake {m['in_wake']}")
     require(all(m["edges_ok"] for m in results.values()),
             "W1b: every perturbed patch is a valid rhombus tiling (every interior edge in exactly 2 rhombi)")
-    require(all(m["removed"] == m["added"] == 3 * m["flips"] for m in results.values()),
-            "W1c: the changed rhombi are exactly the predicted hexagon flips (3 out, 3 in per crossed triple point)")
+    # W1c as first written ("3 out, 3 in per crossed triple point") was too naive: neighbouring flips
+    # share their ribbon rhombi. The exact relation (corrected after the first run; see README) is:
+    # removed == added, and exactly ONE off-ribbon rhombus changes per crossed triple point.
+    require(all(m["removed"] == m["added"] and m["off_ribbon_removed"] == m["off_ribbon_added"] == m["flips"]
+                for m in results.values()),
+            "W1c (corrected): removed == added, and exactly one off-ribbon rhombus changes per crossed triple point")
     log("-" * 96)
     verdict("W2", all(m["on_road"] for m in results.values()),
             "every changed rhombus shares a vertex with the walker's own ribbon (the writing stays on the road)")
