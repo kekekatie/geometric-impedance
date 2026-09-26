@@ -159,4 +159,9 @@ regret reduction.
 
 ## Changes before the first run
 
-*(none yet)*
+1. *(2026-09-26, while writing the code, before any run.)* The clairvoyant greedy comparator
+   evicts the item whose removal "changes the true regret the least". This is read as the
+   **signed** change: removing an item scores `regret(without it) − regret(with it)`, and the
+   lowest score is evicted. So an item whose removal would *reduce* true regret is evicted first,
+   and forced items (score 0) come next, ties at random. No prediction depends on this
+   comparator.
