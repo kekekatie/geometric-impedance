@@ -1,0 +1,91 @@
+ran 900 worlds x 7 rules in 153 s
+no world without forks (none excluded)
+====================================================================================================
+Mean decision regret (lower = better) and fact error, per condition (100 paired worlds each)
+-- t5, f = 0.1
+   recency              regret 0.1790   fact error (mean) 4.1133
+   random               regret 0.1844   fact error (mean) 4.0408
+   surprise             regret 0.1717   fact error (mean) 0.9688
+   fork-only random     regret 0.1193   fact error (mean) 5.5467
+   fork-only surprise   regret 0.0891   fact error (mean) 5.5141
+   margin               regret 0.0864   fact error (mean) 5.5191
+   clairvoyant greedy   regret 0.0475   fact error (mean) 4.2294
+-- t5, f = 0.3
+   recency              regret 0.1820   fact error (mean) 3.3202
+   random               regret 0.1865   fact error (mean) 3.2671
+   surprise             regret 0.1701   fact error (mean) 0.8220
+   fork-only random     regret 0.1564   fact error (mean) 4.2839
+   fork-only surprise   regret 0.1111   fact error (mean) 4.1092
+   margin               regret 0.0955   fact error (mean) 4.1912
+   clairvoyant greedy   regret 0.0484   fact error (mean) 3.4913
+-- t5, f = 0.5
+   recency              regret 0.1824   fact error (mean) 2.2150
+   random               regret 0.1831   fact error (mean) 2.2571
+   surprise             regret 0.1639   fact error (mean) 0.7175
+   fork-only random     regret 0.1723   fact error (mean) 2.8226
+   fork-only surprise   regret 0.1298   fact error (mean) 2.5414
+   margin               regret 0.1072   fact error (mean) 2.7095
+   clairvoyant greedy   regret 0.0525   fact error (mean) 2.5133
+-- t5, f = 0.9
+   recency              regret 0.1848   fact error (mean) 1.2034
+   random               regret 0.1862   fact error (mean) 1.1946
+   surprise             regret 0.1582   fact error (mean) 0.6218
+   fork-only random     regret 0.1851   fact error (mean) 1.2938
+   fork-only surprise   regret 0.1531   fact error (mean) 0.9216
+   margin               regret 0.1392   fact error (mean) 1.0546
+   clairvoyant greedy   regret 0.0650   fact error (mean) 1.2202
+-- norm, f = 0.1
+   recency              regret 0.1825   fact error (mean) 0.8127
+   random               regret 0.1822   fact error (mean) 0.8012
+   surprise             regret 0.1488   fact error (mean) 0.4345
+   fork-only random     regret 0.1147   fact error (mean) 0.8789
+   fork-only surprise   regret 0.0838   fact error (mean) 0.8476
+   margin               regret 0.0807   fact error (mean) 0.8529
+   clairvoyant greedy   regret 0.0458   fact error (mean) 0.7886
+-- norm, f = 0.3
+   recency              regret 0.1844   fact error (mean) 0.8735
+   random               regret 0.1842   fact error (mean) 0.8781
+   surprise             regret 0.1521   fact error (mean) 0.4860
+   fork-only random     regret 0.1571   fact error (mean) 0.8696
+   fork-only surprise   regret 0.1135   fact error (mean) 0.6965
+   margin               regret 0.0936   fact error (mean) 0.7777
+   clairvoyant greedy   regret 0.0448   fact error (mean) 0.8277
+-- norm, f = 0.5
+   recency              regret 0.1838   fact error (mean) 0.9044
+   random               regret 0.1835   fact error (mean) 0.8995
+   surprise             regret 0.1527   fact error (mean) 0.5240
+   fork-only random     regret 0.1715   fact error (mean) 0.8934
+   fork-only surprise   regret 0.1339   fact error (mean) 0.6372
+   margin               regret 0.1075   fact error (mean) 0.7957
+   clairvoyant greedy   regret 0.0524   fact error (mean) 0.8496
+-- norm, f = 0.9
+   recency              regret 0.1821   fact error (mean) 0.9644
+   random               regret 0.1850   fact error (mean) 0.9609
+   surprise             regret 0.1545   fact error (mean) 0.5861
+   fork-only random     regret 0.1826   fact error (mean) 0.9662
+   fork-only surprise   regret 0.1522   fact error (mean) 0.5986
+   margin               regret 0.1388   fact error (mean) 0.7302
+   clairvoyant greedy   regret 0.0646   fact error (mean) 0.8906
+-- t2, f = 0.3
+   recency              regret 0.1866   fact error (median) 8.1399
+   random               regret 0.1824   fact error (median) 8.9748
+   surprise             regret 0.1799   fact error (median) 1.2060
+   fork-only random     regret 0.1581   fact error (median) 11.9651
+   fork-only surprise   regret 0.1112   fact error (median) 11.8354
+   margin               regret 0.0924   fact error (median) 11.9227
+   clairvoyant greedy   regret 0.0488   fact error (median) 9.0995
+====================================================================================================
+PRE-REGISTERED PREDICTIONS (primary condition t5, f = 0.3 unless stated)
+  outcome (iii) check, no prediction: fact error surprise 0.8220 vs random 3.2671 (surprise - random CI [-2.8307, -2.1666])
+  no prediction: surprise vs random regret improvement +8.8%
+  clairvoyant greedy comparator (no bound claim): regret 0.0484; rules below it: []
+  P1: HELD    margin vs fork-only surprise [t5, f=0.3]: regret improvement +14.1% (95% CI +10.4% to +17.7%); need >= 10% with the paired difference CI [+0.0115, +0.0199] excluding zero (CI lower end also >= threshold)
+  P2a: FAILED  fork-only random vs surprise [t5, f=0.3]: regret improvement +8.1% (95% CI +4.4% to +11.5%); need >= 20% with the paired difference CI [+0.0073, +0.0199] excluding zero
+  P2b: HELD    fork-only surprise vs surprise [t5, f=0.3]: regret improvement +34.7% (95% CI +31.8% to +37.5%); need >= 20% with the paired difference CI [+0.0537, +0.0644] excluding zero (CI lower end also >= threshold)
+  P3: HELD    margin vs surprise [t5, f=0.3]: regret improvement +43.9% (95% CI +40.9% to +46.8%); need >= 20% with the paired difference CI [+0.0689, +0.0803] excluding zero (CI lower end also >= threshold)
+  P4: HELD    fact error: surprise 0.8220 vs margin 4.1912 (margin - surprise CI [+3.0635, +3.7855])
+  P5: HELD    margin's advantage over surprise: t5 f=0.1: +49.7%, t5 f=0.3: +43.9%, t5 f=0.5: +34.6%, t5 f=0.9: +12.0%, norm f=0.1: +45.7%, norm f=0.3: +38.5%, norm f=0.5: +29.6%, norm f=0.9: +10.2%, t2 f=0.3: +48.6%
+  P6: HELD    margin vs random [t5, f=0.3]: regret improvement +48.8% (95% CI +45.7% to +51.8%); need >= 10% with the paired difference CI [+0.0842, +0.0979] excluding zero (CI lower end also >= threshold)
+  P7: HELD    recency vs random regret: relative difference +2.4% (need within 5%)
+====================================================================================================
+SUMMARY: P1 held, P2a FAILED, P2b held, P3 held, P4 held, P5 held, P6 held, P7 held
