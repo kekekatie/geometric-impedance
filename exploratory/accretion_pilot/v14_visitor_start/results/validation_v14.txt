@@ -1,0 +1,7 @@
+# v14 validation
+# geometry reconstruction == snapshot: PASS (max coord dev 0.00e+00; coeff alignment checked)
+# original-S visitor reproduces v13 scores: PASS (max|d|=0.00e+00 over 27000 values)
+# frozen-state immutability (round-trip global): PASS
+# ineligible cells (no distant start): 0 []
+# runtime_min = 13.5
+# ALL GATES: PASS

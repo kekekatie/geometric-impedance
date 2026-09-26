@@ -1,0 +1,35 @@
+==========================================================================================
+PENROSE GROWTH -- does the growing now fill space in every direction?
+==========================================================================================
+  tiling patch radius 60.0: 13866 vertices; up to 4000 events per run
+------------------------------------------------------------------------------------------
+[RAY / QUEUE] events 148; houses held 149; FROZEN (no eligible move left), furthest house at radius 59.8 of the 60 patch
+    radius growth: R ~ t^0.98;  roundness (min/max extent over 20 directions) 0.01;  holes 0 (0 vertices);  boundary share 1.00
+------------------------------------------------------------------------------------------
+[RAY / DICE] events 148; houses held 149; FROZEN (no eligible move left), furthest house at radius 59.8 of the 60 patch
+    radius growth: R ~ t^0.85;  roundness (min/max extent over 20 directions) 0.01;  holes 0 (0 vertices);  boundary share 1.00
+------------------------------------------------------------------------------------------
+[FORK / QUEUE] events 4000; houses held 4001
+    radius growth: R ~ t^0.46;  roundness (min/max extent over 20 directions) 0.91;  holes 11 (11 vertices);  boundary share 0.06
+------------------------------------------------------------------------------------------
+[FORK / DICE] events 4000; houses held 4001
+    radius growth: R ~ t^0.40;  roundness (min/max extent over 20 directions) 0.74;  holes 34 (37 vertices);  boundary share 0.08
+==========================================================================================
+[checks]
+  [PASS] RAY/QUEUE: every new vertex is a tiling neighbour of the walker that grew it (legal bond); nothing ever leaves the now (held set only grows)
+  [PASS] RAY/DICE: every new vertex is a tiling neighbour of the walker that grew it (legal bond); nothing ever leaves the now (held set only grows)
+  [PASS] FORK/QUEUE: every new vertex is a tiling neighbour of the walker that grew it (legal bond); nothing ever leaves the now (held set only grows)
+  [PASS] FORK/DICE: every new vertex is a tiling neighbour of the walker that grew it (legal bond); nothing ever leaves the now (held set only grows)
+  [PASS] RAY/QUEUE: every event adds exactly one new house (held = events + 1 = 149): more now = more space, 1:1
+  [PASS] RAY/DICE: every event adds exactly one new house (held = events + 1 = 149): more now = more space, 1:1
+  [PASS] FORK/QUEUE: every event adds exactly one new house (held = events + 1 = 4001): more now = more space, 1:1
+  [PASS] FORK/DICE: every event adds exactly one new house (held = events + 1 = 4001): more now = more space, 1:1
+  [PASS] RAY/QUEUE: momentum alone grows the now as a LINE -- both ends run along the road until it leaves the patch (furthest house at 59.8 of 60), then it freezes with 149 houses (roundness 0.01)
+  [PASS] FORK/QUEUE: momentum + branching fills space in EVERY direction -- a blob (roundness 0.91) whose radius grows like t^0.46 (area ~ t)
+  [PASS] RAY/DICE: momentum alone grows the now as a LINE -- both ends run along the road until it leaves the patch (furthest house at 59.8 of 60), then it freezes with 149 houses (roundness 0.01)
+  [PASS] FORK/DICE: momentum + branching fills space in EVERY direction -- a blob (roundness 0.74) whose radius grows like t^0.40 (area ~ t)
+  FORK/DICE over 5 seeds: roundness 0.74, 0.67, 0.75, 0.67, 0.81; holes 34, 40, 42, 35, 42; radius exponent 0.40, 0.40, 0.43, 0.42, 0.44
+  [PASS] the deterministic QUEUE clock grows a ROUNDER now with FEWER holes than dice, against every one of 5 dice seeds (roundness 0.91 vs 0.67-0.81; holes 11 vs 34-42)
+  FORK: QUEUE vs DICE -- roundness 0.91 vs 0.74; holes 11 vs 34; boundary share 0.063 vs 0.082
+==========================================================================================
+ALL CHECKS PASSED.

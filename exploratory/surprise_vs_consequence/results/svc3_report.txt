@@ -1,0 +1,23 @@
+ran 200 worlds in 30 s (fresh seeds 20000-20099)
+-- stationary (T = 2000)
+   surprise             regret 0.1682  fact 0.823  kept noise 1.974  forks right 17.0%
+   fork-only surprise   regret 0.1133  fact 3.692  kept noise 1.573  forks right 55.8%
+   margin               regret 0.0969  fact 3.771  kept noise 1.410  forks right 67.7%
+   close calls only     regret 0.1035  fact 3.867  kept noise 1.252  forks right 66.1%
+   crowd-aware margin   regret 0.1377  fact 3.890  kept noise 1.081  forks right 60.7%
+   clairvoyant greedy   regret 0.0506  fact 3.158  kept noise 0.820  forks right 75.3%
+-- stationary short (T = 600)
+   surprise             regret 0.1737  fact 1.214  kept noise 1.505  forks right 17.4%
+   fork-only surprise   regret 0.1422  fact 3.781  kept noise 1.020  forks right 51.5%
+   margin               regret 0.1406  fact 3.794  kept noise 0.978  forks right 57.2%
+   close calls only     regret 0.1392  fact 3.860  kept noise 0.881  forks right 57.9%
+   crowd-aware margin   regret 0.1497  fact 3.859  kept noise 0.855  forks right 56.3%
+   clairvoyant greedy   regret 0.0490  fact 3.152  kept noise 0.776  forks right 75.2%
+  C1: FAILED  [stationary] crowd-aware margin vs margin: regret -42.1% (CI -49.9% to -34.1%); need >= 10%, paired-difference CI [-0.0473, -0.0339] excluding 0
+  C2: HELD    [stationary] kept noise: crowd-aware 1.081 vs margin 1.410 (improvement CI [+0.3147, +0.3423])
+  C3: FAILED  [stationary] forks decided right: crowd-aware 0.607 vs margin 0.677 (improvement CI [-0.0829, -0.0557])
+  C4: FAILED  [stationary] crowd-aware margin vs close calls only: regret -33.0% (CI -39.3% to -26.8%); need > 0, paired-difference CI [-0.0398, -0.0284] excluding 0
+  C5: FAILED  [stationary short] crowd-aware margin vs margin: regret -6.5% (CI -8.8% to -4.1%); need > 0, paired-difference CI [-0.0123, -0.0058] excluding 0
+  no prediction [stationary]: close-calls-only vs margin -6.8% (CI -12.1% to -1.8%); crowd-aware closes -88% of the margin-to-clairvoyant gap
+  no prediction [stationary short]: close-calls-only vs margin +1.0% (CI -0.5% to +2.5%); crowd-aware closes -10% of the margin-to-clairvoyant gap
+SUMMARY: C1 FAILED, C2 held, C3 FAILED, C4 FAILED, C5 FAILED

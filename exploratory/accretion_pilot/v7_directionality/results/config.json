@@ -1,0 +1,28 @@
+{
+  "reader": "S_high = sum s(e) 1[w>=5.5] over added diagonals (frozen v5/v6)",
+  "source": "../v6_intervention/results/edge_snapshots_v6.npz",
+  "aligned": [
+    "WA_TA",
+    "WB_TB"
+  ],
+  "crossed": [
+    "WA_TB",
+    "WB_TA"
+  ],
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "reproduction_vs_v6": "PASS",
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}

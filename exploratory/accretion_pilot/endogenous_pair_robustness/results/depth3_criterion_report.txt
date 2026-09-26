@@ -1,0 +1,24 @@
+==============================================================================================
+DEPTH-3 CRITERION -- does 'fate decided at step one' survive beyond depth-2? (No.)
+==============================================================================================
+depth-3 classes: 27 (each 4 active + 3 quiet, DeltaA=0); matched pairs: 97
+  [PASS] a large depth-3 matched-pair set to stress-test the depth-2 claims
+fates at depth-3: durable 70, inert 22, washout 5
+==============================================================================================
+  [PASS] WASHOUT is NON-EMPTY at depth-3 (5 pairs): there ARE pairs expressed in the active layer (D_slice>0) that decay to L=0. 'Expression => durability' (depth-2 Proposition 4) is FALSE beyond depth-2 -- exactly the case Fable asked to find
+  exact washout exemplar (22, 25): D_slice(1)=0, D_slice(2)=17/120, D_slice(3)=1423/7200, L=0 (expressed, yet washes out)
+==============================================================================================
+  [PASS] STEP-ONE BREAKER (2 pairs): D_slice(1)=0 yet D_slice(2)>0 -- menu-equivalent at step one, then DIVERGES. 'Same projected menu' does NOT survive through time (the relabelling subtlety Fable named). e.g. (22, 25): D1=0, D2=17/120
+  [PASS] FORWARD BREAKER (3 pairs): L=0 yet D_slice(1)>0 -- so 'L=0 => menu-equivalent' also fails. e.g. (22, 26): D1=1/6, L=0. The depth-2 equivalence L=0 <=> D_slice(1)=0 breaks in BOTH directions at depth-3
+==============================================================================================
+[surviving law] L = TV(absorption distributions) always (Prop 3). The content is the FORK law -- and only ONE direction of it carries information:
+  [PASS] TRIVIAL: L>0 => >=2 reachable sinks (you need two exits to split them at all)
+  [PASS] TRIVIAL: expressed + a SINGLE reachable sink => L=0 (both lineages absorb to the same point mass; TV of a point mass with itself is 0 by definition)
+  [PASS] THE FORK LAW (non-trivial, verified on the enumerated set, NOT proven): every EXPRESSED pair (Δ≠0 at H=2) with >=2 reachable sinks has L>0 -- 0 violations across 75 expressed depth-3 pairs (and the depth-2 durable pairs). Two lineages with a nonzero transient difference AND two available exits ALWAYS split them unequally here. OPEN: whether two reachable sinks can ever give identical absorption distributions (an expressed pair with >=2 sinks and L=0) is unproven
+  [PASS] the 'expressed' qualifier is NOT optional: 15 UNexpressed pairs (Δ=0) have >=2 reachable sinks yet L=0 -- so 'two sinks => L>0' is FALSE without conditioning on expression (they absorb identically because their distributions are identical to begin with)
+==============================================================================================
+  [PASS] at DEPTH-2 the washout category is empty and the step-one criterion holds -- so the depth-2 findings were a genuine (clean) SPECIAL CASE, not a general law; depth-3 is where the general absorption-geometry picture becomes visible
+==============================================================================================
+ALL EXACT CHECKS PASSED.
+Verdict for the write-up (fate section order): (a) L = TV(absorption distributions), always -- Prop 3 generalised; (b) the FORK LAW as the observed rule on the enumerated set -- among expressed pairs, L>0 iff the coast has >=2 reachable sinks ('only if' trivial, 'if' verified not proven; open whether two sinks can ever absorb identically); (c) ONE remark: the tempting step-one criterion holds at depth 2 and fails at depth 3, with (22,25) and (22,26) as counterexamples -- depth 2 is a remark, not a drama.
+Plain-language line for the section: DURABILITY IS A PROPERTY OF THE FUTURE, NOT THE PAST -- the past can only leave a lasting mark where the coast forks. (22,26) is marked at step one, marked more at step two, then drains to zero: a strong mark with no fork to hold it. That fate is a property of the DYNAMICS, not of the history.

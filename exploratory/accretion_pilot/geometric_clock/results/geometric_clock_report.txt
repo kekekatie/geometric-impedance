@@ -1,0 +1,97 @@
+==========================================================================================
+GEOMETRIC CLOCK -- can the WHEN come from the geometry? can the NOW grow?
+==========================================================================================
+  [PASS] street coordinates exact: f is j -> j+1 and b is j -> j-1 on the TICK orbit
+  [PASS] the hidden street's own tile word is Sturmian (n+1 patterns of length n)
+------------------------------------------------------------------------------------------
+PART A (k=1): the collapsed universe, 20 lone pairs, 4000 events per clock
+  [DICE] random bits imported per event: 5.286
+      per-pair content complexity p(n): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      GLOBAL record complexity p(n):    [2, 4, 8, 16, 32, 64, 128, 256, 499, 917, 1499, 2160]
+      advances per pair: min 90, max 115; simultaneous same-house coincidences: 7575
+  [SWEEP] random bits imported per event: 0.000
+      per-pair content complexity p(n): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      GLOBAL record complexity p(n):    [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24]
+      advances per pair: min 199, max 201; simultaneous same-house coincidences: 0
+  [HAND] random bits imported per event: 0.000
+      per-pair content complexity p(n): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      GLOBAL record complexity p(n):    [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+      advances per pair: min 0, max 3999; simultaneous same-house coincidences: 19
+  [PASS] SWEEP: imports 0 random bits (deterministic in the geometry)
+  [PASS] SWEEP: every pair still writes the Sturmian record (n+1)
+  [PASS] HAND: imports 0 random bits (deterministic in the geometry)
+  [PASS] HAND: every pair still writes the Sturmian record (n+1)
+  [PASS] SWEEP is FAIR: every pair keeps falling forward (199-201 advances each) and no two pairs ever share a house (0 coincidences)
+  [PASS] HAND PHASE-LOCKS (finding, not a bug; v1 of this gate predicted fairness and failed): the hand steps by f exactly as the pair just ahead of it does, so after the first event they co-rotate forever -- one pair takes 3999 of 4000 events, every other pair freezes
+  [PASS] SWEEP's GLOBAL record (the whole universe's history) NEVER repeats (no period <= half its length), and its variety grows only LINEARLY: p(n) = 2n for n <= 12, p(40) = 145 (DICE: exponential) -- zero-entropy order, not noise
+  [PASS] DICE imports 5.29 bits per event (which pair ~log2(20) + which direction 1)
+  => GLOBAL record at n=12: DICE 2160, SWEEP 24, HAND 13  (Sturmian would be 13)
+------------------------------------------------------------------------------------------
+PART B (k=2): TICK sprouts the keeper's next AND previous house; 4000 events per clock
+  first, k=1 for contrast: DeltaA = 0 exactly -- the now keeps a fixed size and slides
+  [SWEEP]  t: active vertices A(t), houses held D(t), one unbroken stretch?
+      t=   10   A=   12   D=   12   contiguous=True
+      t=   24   A=   26   D=   26   contiguous=True
+      t=   56   A=   58   D=   58   contiguous=True
+      t=  133   A=  135   D=  135   contiguous=True
+      t=  316   A=  318   D=  318   contiguous=True
+      t=  750   A=  752   D=  752   contiguous=True
+      t= 1778   A= 1780   D= 1780   contiguous=True
+      t= 4000   A= 4002   D= 4002   contiguous=True
+      t= 4000   A= 4002   D= 4002   contiguous=True
+      growth law D(t) ~ t^0.995  (fit over t >= 100)
+  [HAND]  t: active vertices A(t), houses held D(t), one unbroken stretch?
+      t=   10   A=   12   D=   11   contiguous=True
+      t=   24   A=   26   D=   25   contiguous=True
+      t=   56   A=   58   D=   57   contiguous=True
+      t=  133   A=  135   D=  134   contiguous=True
+      t=  316   A=  318   D=  317   contiguous=True
+      t=  750   A=  752   D=  751   contiguous=True
+      t= 1778   A= 1780   D= 1779   contiguous=True
+      t= 4000   A= 4002   D= 4001   contiguous=True
+      t= 4000   A= 4002   D= 4001   contiguous=True
+      growth law D(t) ~ t^0.998  (fit over t >= 100)
+  [DICE seed 1]  t: active vertices A(t), houses held D(t), one unbroken stretch?
+      t=   10   A=   12   D=    6   contiguous=True
+      t=   24   A=   26   D=    9   contiguous=True
+      t=   56   A=   58   D=   13   contiguous=True
+      t=  133   A=  135   D=   25   contiguous=True
+      t=  316   A=  318   D=   29   contiguous=True
+      t=  750   A=  752   D=   46   contiguous=True
+      t= 1778   A= 1780   D=  102   contiguous=True
+      t= 4000   A= 4002   D=  102   contiguous=True
+      t= 4000   A= 4002   D=  102   contiguous=True
+      growth law D(t) ~ t^0.491  (fit over t >= 100)
+  DICE over 5 seeds: alpha = 0.491, 0.439, 0.493, 0.612, 0.404; mean 0.488;  final extent D(4000) = 102, 47, 74, 82, 80 houses for 4002 vertices
+  [PASS] SWEEP: EVERY event claims a brand-new house -- D(t) = A(t) = t+2: all the 'more now' becomes more space, 1:1 (no crowding)
+  [PASS] DICE: the extent grows only diffusively, D ~ t^alpha with alpha in (0.3, 0.65) for every seed (mean 0.488; ~1/2 expected: new houses appear only at the two ends of a stretch holding ~t/D vertices per house)
+  [PASS] SWEEP: every active bond stays a legal Fibonacci tile at every event
+  [PASS] SWEEP: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] SWEEP: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] SWEEP: the now is always ONE unbroken stretch of the hidden street
+  [PASS] HAND: every active bond stays a legal Fibonacci tile at every event
+  [PASS] HAND: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] HAND: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] HAND: the now is always ONE unbroken stretch of the hidden street
+  [PASS] DICE: every active bond stays a legal Fibonacci tile at every event
+  [PASS] DICE: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] DICE: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] DICE: the now is always ONE unbroken stretch of the hidden street
+  [PASS] DICE seed 2: every active bond stays a legal Fibonacci tile at every event
+  [PASS] DICE seed 2: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] DICE seed 2: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] DICE seed 2: the now is always ONE unbroken stretch of the hidden street
+  [PASS] DICE seed 3: every active bond stays a legal Fibonacci tile at every event
+  [PASS] DICE seed 3: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] DICE seed 3: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] DICE seed 3: the now is always ONE unbroken stretch of the hidden street
+  [PASS] DICE seed 4: every active bond stays a legal Fibonacci tile at every event
+  [PASS] DICE seed 4: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] DICE seed 4: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] DICE seed 4: the now is always ONE unbroken stretch of the hidden street
+  [PASS] DICE seed 5: every active bond stays a legal Fibonacci tile at every event
+  [PASS] DICE seed 5: the depositor's house is re-born in the now at every event; the set of houses held NEVER loses a member ('nothing unbecomes')
+  [PASS] DICE seed 5: active count A(t) = 2 + t exactly (DeltaA = k-1 = 1: 'more now')
+  [PASS] DICE seed 5: the now is always ONE unbroken stretch of the hidden street
+==========================================================================================
+ALL CHECKS PASSED.

@@ -1,0 +1,7 @@
+arm,budget,frac_present_mean,frac_high_seen_mean
+regular,100,0.3623,0.4317
+regular,300,0.6294,0.7053
+regular,1000,0.9157,0.9502
+perturbed,100,0.3611,0.4321
+perturbed,300,0.6319,0.7082
+perturbed,1000,0.9141,0.9499

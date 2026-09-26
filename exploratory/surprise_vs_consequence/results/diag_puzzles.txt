@@ -1,0 +1,8 @@
+-- stationary
+   fork-only surprise   kept-noise |eps| 1.591   non-cancelling bias 1.123   forks decided right 53.2%   |estimated margin| when WRONG 0.360 vs RIGHT 0.817
+   margin               kept-noise |eps| 1.426   non-cancelling bias 1.341   forks decided right 65.5%   |estimated margin| when WRONG 0.907 vs RIGHT 1.134
+   clairvoyant greedy   kept-noise |eps| 0.777   non-cancelling bias 0.753   forks decided right 76.3%   |estimated margin| when WRONG 0.000 vs RIGHT 0.611
+-- stationary short
+   fork-only surprise   kept-noise |eps| 1.008   non-cancelling bias 0.812   forks decided right 53.2%   |estimated margin| when WRONG 0.408 vs RIGHT 0.763
+   margin               kept-noise |eps| 0.975   non-cancelling bias 0.844   forks decided right 58.5%   |estimated margin| when WRONG 0.502 vs RIGHT 0.754
+   clairvoyant greedy   kept-noise |eps| 0.794   non-cancelling bias 0.780   forks decided right 75.2%   |estimated margin| when WRONG 0.002 vs RIGHT 0.650

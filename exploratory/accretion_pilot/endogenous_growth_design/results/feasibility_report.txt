@@ -1,0 +1,64 @@
+======================================================================
+[1] LEGAL REWRITE + INVARIANTS  (branching k=1)
+  seed = active path 0-1-2 ; counts {'V': 3, 'E': 2, 'A': 3, 'Q': 0, 'active_bonds': 2}
+  after BUD(keeper=0, depositor=1): counts {'V': 4, 'E': 4, 'A': 3, 'Q': 1, 'active_bonds': 1}  invariants_ok=True
+  per-event deltas: dV=1 (=k), dE=2 (=k+1), dQ=1 (=+1), dA=0 (=k-1)
+  deltas constant across all legal BUDs on this seed: True
+  => tallies (V,E,#A,#Q) are FIXED functions of the event count; they can
+     never distinguish two equal-length histories. Only graph SHAPE (and the
+     number of active bonds = eligible sites) can. [record != a count/log]
+======================================================================
+[2] CRITICAL PAIR / CONFLUENCE  (k=1)
+  seed = active path 0-1-2 ; eligible BUDs share depositor/keeper vertex 1
+  BUD(0,1): active_bonds now 1, stranded-A (A with no active nbr) present=True
+  BUD(1,0): active_bonds now 2, stranded-A present=False
+  BUD(0,1) ~= BUD(2,1) up to iso (mirror symmetry): True
+  BUD(0,1) ~= BUD(1,0) up to iso: False   <- differ => NON-confluent
+  one-step joinable (H1* iso H3*)? False  (|succ(H1)|=1, |succ(H3)|=4)
+  => a shared vertex makes two local events COMPETE: firing one quiets the
+     shared vertex and disables the other. The divergence is not re-joined,
+     so ORDER leaves a permanent structural trace. (Disjoint events, by
+     contrast, commute -- parallel independence; see model note.)
+======================================================================
+[3] MATCHED-HISTORY COMPARISON up to iso  (k=1)
+  seed=path 0-1-2-3 ; |history|=2 each
+  P=[(1, 0), (2, 1)] -> counts {'V': 6, 'E': 7, 'A': 4, 'Q': 2, 'active_bonds': 2}
+  R=[(1, 2), (0, 1)] -> counts {'V': 6, 'E': 7, 'A': 4, 'Q': 2, 'active_bonds': 1}
+  counts (V,E,#A,#Q) identical by construction: True
+  isomorphic (labels respected, vertex names ignored)? False
+  eligible-event count after P = 4, after R = 2
+  active-bond count after P = 2, after R = 1
+  => history DISTINGUISHED up to relabelling: True; alters future legal events: True
+  -- washout control (symmetry): on symmetric seed, mirror orders --
+    BUD(0,1) vs BUD(2,1) on path 0-1-2 iso? True  (mirror-symmetric events => order NOT recorded up to iso)
+======================================================================
+[4] FRONTIER FATE: stall / disappear / proliferate
+  k=0: eligible-count trajectory [8, 4, 0] -> disappears after 2 events
+  k=1: eligible-count trajectory [8, 6, 4, 4, 4, 4, 4, 4]... -> still-active(capped) after 40 events
+  k=2: eligible-count trajectory [8, 8, 8, 10, 12, 14, 16, 18]... -> still-active(capped) after 40 events
+  => k is the built-in branching number. k=0 quieting can only shrink the
+     frontier (pure infilling, halts); k=1 is marginal and stalls via
+     stranding; k>=2 the rule MANUFACTURES eligible sites faster than
+     competition removes them. Continuation at k>=2 is BUILT INTO the rule,
+     not an emergent discovery -- we say so plainly.
+======================================================================
+[5] DOES AN APPARENT RECORD PREDICT CONTINUATION?  (descriptive)
+  interior-triangle-Q count  ->  (min,max) remaining eligible events:
+     tri_Q=2:  eligible in [2, 6]  over 11 iso-classes
+  => the interior motif count does NOT pin down the number of future events
+     here (overlapping ranges): an apparent 'record' is not yet a predictor.
+     Whether some record predicts continuation is exactly a first-experiment
+     question, not something to assume.
+======================================================================
+[6] ABLATION: persistence (memory) WITHOUT extension (growth)  [k=0]
+  quieting-only (no new vertices). |V| fixed at 4.
+  order A -> Q-set pattern iso order B ? False
+  counts A {'V': 4, 'E': 3, 'A': 2, 'Q': 2, 'active_bonds': 1} ; counts B {'V': 4, 'E': 3, 'A': 2, 'Q': 2, 'active_bonds': 0}
+  => k=0 isolates PERSISTENCE from EXTENSION: if the two orders leave
+     non-isomorphic Q-patterns on the SAME vertex set, history leaves a
+     structural record with NO growth at all. Extension (k>=1, new vertices)
+     is then a separate property, testable independently. This is the
+     proposed ablation separating the two.
+======================================================================
+SUMMARY: invariants_fixed=True  non_confluent=True  history_does_work=True
+All checks are tiny deterministic enumerations (no stochastic sweep).

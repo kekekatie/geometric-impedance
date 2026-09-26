@@ -1,0 +1,44 @@
+==========================================================================================
+SEED CRYSTAL -- would twins fill the now's gaps sooner than the roads do?
+==========================================================================================
+  [PASS] QUEUE: every gap at every snapshot has a road leading in -- none is skipped (19 gaps over snapshots (1000, 2000, 3000, 4000))
+  [PASS] QUEUE: the roads fill every gap eventually (all 19 filled by event 7000): the syrup crystallises by itself
+------------------------------------------------------------------------------------------
+[QUEUE] 19 gaps over snapshots (1000, 2000, 3000, 4000); the roads fill them after median 146 more events (range 12-317)
+    depth r | gaps with a seed already in the now | nearest seed: median world distance | median window distance
+    r=1     |   19 / 19                            |      5.0                        | 0.449
+    r=2     |   19 / 19                            |      8.1                        | 0.278
+    r=3     |   19 / 19                            |     13.0                        | 0.172
+    r=4     |   18 / 19                            |     21.1                        | 0.172
+    r=5     |   18 / 19                            |     21.1                        | 0.106
+    r=6     |   16 / 19                            |     21.1                        | 0.106
+    r=7     |   15 / 19                            |     21.1                        | 0.106
+    r=8     |   14 / 19                            |     21.1                        | 0.106
+    r=9     |   13 / 19                            |     21.1                        | 0.106
+  [PASS] QUEUE: at shallow depth (r=1) every gap already has a seed in the now
+  [PASS] QUEUE: a deeper match never adds seeds (availability falls or holds with depth)
+    seeds first run out (some gap has no twin in the now) at depth: 4
+  [PASS] DICE: every gap at every snapshot has a road leading in -- none is skipped (115 gaps over snapshots (1000, 2000, 3000, 4000))
+  [PASS] DICE: the roads fill every gap eventually (all 115 filled by event 7000): the syrup crystallises by itself
+------------------------------------------------------------------------------------------
+[DICE] 115 gaps over snapshots (1000, 2000, 3000, 4000); the roads fill them after median 113 more events (range 2-990)
+    depth r | gaps with a seed already in the now | nearest seed: median world distance | median window distance
+    r=1     |  115 / 115                           |      5.0                        | 0.449
+    r=2     |  115 / 115                           |      8.1                        | 0.278
+    r=3     |  113 / 115                           |     13.0                        | 0.172
+    r=4     |  111 / 115                           |     13.0                        | 0.172
+    r=5     |  109 / 115                           |     21.1                        | 0.106
+    r=6     |  105 / 115                           |     21.1                        | 0.106
+    r=7     |   97 / 115                           |     21.1                        | 0.106
+    r=8     |   89 / 115                           |     34.1                        | 0.066
+    r=9     |   77 / 115                           |     34.1                        | 0.066
+  [PASS] DICE: at shallow depth (r=1) every gap already has a seed in the now
+  [PASS] DICE: a deeper match never adds seeds (availability falls or holds with depth)
+    seeds first run out (some gap has no twin in the now) at depth: 3
+------------------------------------------------------------------------------------------
+  dust control: a random same-layer house fits a gap's star of edges 8.7% of the time (a true twin: 100%, by definition)
+  [PASS] wrong-shaped dust usually does NOT fit (9%): likeness is what makes a seed work, not merely something arriving
+  QUEUE vs DICE: gaps 19 vs 115; median roads-wait 146 vs 113; longest 317 vs 990  (v1 PREDICTED dice gaps wait longer at the median -- wrong: dice makes many more gaps, with a longer tail, but a similar median)
+  [PASS] dice leaves far MORE gaps (115 vs 19) with a LONGER tail of waiting (990 vs 317 events)
+==========================================================================================
+ALL CHECKS PASSED.

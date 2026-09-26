@@ -1,0 +1,11 @@
+quantity,offset,point,ci_lo,ci_hi
+regular_AUC,0,0.6159,0.5826,0.6491
+perturbed_AUC,0,0.5935,0.5567,0.6311
+contrast_perturbed_minus_regular,0,-0.0224,-0.0688,0.0253
+regular_AUC,1,0.5948,0.5582,0.6300
+perturbed_AUC,1,0.6307,0.5959,0.6639
+contrast_perturbed_minus_regular,1,0.0359,-0.0099,0.0805
+regular_AUC,2,0.6382,0.6046,0.6720
+perturbed_AUC,2,0.6467,0.6153,0.6773
+contrast_perturbed_minus_regular,2,0.0085,-0.0348,0.0528
+mean_contrast,all,0.0073,-0.0184,0.0323

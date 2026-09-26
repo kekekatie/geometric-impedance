@@ -1,0 +1,31 @@
+==============================================================================
+[0] Fibonacci model set: tau=(1+v5)/2, star (m+n tau)->(m+n tau'), W=[0,tau)
+  generated 151 sites in physical order; window |W| = tau = 1.618034
+  [PASS] enough sites for r=5 environments
+  [PASS] every gap is EXACTLY tau (L) or 1 (S) -- two-tile Fibonacci geometry
+  [PASS] no SS (short tiles are isolated) -- Fibonacci signature
+  [PASS] no LLL (long runs are 1 or 2) -- Fibonacci signature
+  gap word length 150; #L=92 #S=58; ratio L/S=1.5862 (tau=1.6180)
+  [PASS] L:S count ratio ~ tau (Fibonacci frequency)
+==============================================================================
+[env r=2]  environment = 4-letter word, 2 tiles each side
+  derived 4 internal-window boundaries (exact); 5 environment cells
+  [PASS] predicted environment (from internal coord) == chain-read environment for every non-truncated site (r=2)
+  [PASS] each derived internal-window cell carries EXACTLY ONE environment (r=2) -- window region <-> local patch
+  [PASS] distinct cells carry distinct environments (r=2)
+==============================================================================
+[env r=5]  environment = 10-letter word, 5 tiles each side
+  derived 10 internal-window boundaries (exact); 11 environment cells
+  [PASS] predicted environment (from internal coord) == chain-read environment for every non-truncated site (r=5)
+  [PASS] each derived internal-window cell carries EXACTLY ONE environment (r=5) -- window region <-> local patch
+  [PASS] distinct cells carry distinct environments (r=5)
+==============================================================================
+[examples] r=2 environments; report exact physical & internal separations
+  (a) SAME env, close internal, far physical: |dp|=199.0050, |dq|=0.005025, env=('S', 'L', 'L', 'S')
+  [PASS] (a) exists: distant sites, close internal address, identical environment
+  (b) DIFFERENT env, close internal: |dq|=0.013156, |dp|=76.0132; boundary between at q=[0.381966]
+  [PASS] (b) exists: near-equal internal addresses split by a window-region boundary -> different environments
+  (c) SAME env, largest internal gap: |dq|=0.368810 (cell width 0.381966), |dp|=78.6312, env=('L', 'S', 'L', 'L')
+  [PASS] (c) same environment => internal addresses within ONE cell: |dq| bounded by the cell width (not arbitrary)
+==============================================================================
+ALL EXACT CHECKS PASSED.

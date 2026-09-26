@@ -1,0 +1,6 @@
+# Late (t=10000) topology completeness per world (reported, not dropped).
+world,n_worlds,n_complete_128,total_missing_diagonals
+AA,200,200,0
+AB,200,200,0
+BA,200,200,0
+BB,200,199,2

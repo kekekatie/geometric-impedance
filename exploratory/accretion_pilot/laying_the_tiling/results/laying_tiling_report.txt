@@ -1,0 +1,25 @@
+==========================================================================================
+LAYING THE TILING -- Penrose laid half-tile by half-tile, with no map
+==========================================================================================
+  reference: 15970 half-tiles (level 8); atlas of complete vertex stars: 8
+  [PASS] the learned atlas is exactly the 8 classic Penrose vertex types
+  [PASS] the legality test never rejects a genuine Penrose tile (4570 tiles re-laid in order, 0 rejected)
+------------------------------------------------------------------------------------------
+  LOCAL-DICE    agreement with the true tiling: min 75.1%, all-exact 0/30; guesses per run (no forced edge within 40): median 0, max 0
+  LOCAL-DICE    30 runs: jammed 30/30; tiles before the jam: median 14 (range 14-249); reached 500: 0
+  LOCAL-FORCED  agreement with the true tiling: min 78.9%, all-exact 0/30; guesses per run (no forced edge within 40): median 3, max 4
+  LOCAL-FORCED  30 runs: jammed 0/30; tiles before the jam: median - (range ---); reached 500: 30
+  [PASS] LOCAL-DICE jams: growing by local fitting alone reaches edges where nothing fits
+  NOTE (not predicted): LOCAL-FORCED never jammed (0/30); in 2-D a smarter LOCAL strategy can avoid jams (cf. Onoda-Steinhardt-DiVincenzo-Socolar 1988 on forced growth)
+------------------------------------------------------------------------------------------
+  COPY       from the centre: laid 14 half-tiles, ended: ILLEGAL
+  SCALE      from the centre: laid 500 half-tiles, ended: ok; agrees with the reference on 100.0% of tiles
+  WRONGSCALE from the centre: laid 0 half-tiles, ended: NOTHING
+  [PASS] SCALE (the patch consults its own zoomed-out self) lays 500 half-tiles with no jam, every one exactly the Penrose tile
+  [PASS] WRONGSCALE (one zoom step: not the tiling's own symmetry) fails (NOTHING after 0)
+  COPY (same-scale twin) from the centre: ILLEGAL after 14
+------------------------------------------------------------------------------------------
+  SCALE from 12 off-centre seeds (a legal Penrose patch around a vertex that is NOT the inflation centre): [(0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING'), (0, 'NOTHING')]
+  [PASS] SCALE from an off-centre seed breaks down: the zoomed-out self only predicts correctly from a patch that is truly self-similar about the growth centre
+==========================================================================================
+ALL CHECKS PASSED.

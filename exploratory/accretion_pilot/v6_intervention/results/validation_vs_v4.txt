@@ -1,0 +1,3 @@
+# v6 intact worlds reproduce v2/v5 (vs v4 edge_snapshots.npz)
+# compared 3200 intact per-seed snapshots; max|dw| = 0.000e+00; tol 1e-9; status = PASS
+# overall: PASS

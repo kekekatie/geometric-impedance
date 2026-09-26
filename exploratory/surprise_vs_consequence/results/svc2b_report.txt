@@ -1,0 +1,27 @@
+ran 200 worlds in 23 s (round-2 seeds 10000-10099)
+  [PASS] re-run round-2 rules reproduce the saved round-2 regrets exactly (paired data)
+-- stationary (T = 2000); true forks never recognised: 1.45%
+   surprise                             regret 0.1664
+   fork-only surprise                   regret 0.1161
+   margin                               regret 0.0981
+   margin (inferred forks)              regret 0.1060
+   fork-only surprise (inferred)        regret 0.1184
+   margin (eventual-discovery oracle)   regret 0.0982
+   margin (inferred + allowance)        regret 0.1592
+-- stationary short (T = 600); true forks never recognised: 39.33%
+   surprise                             regret 0.1705
+   fork-only surprise                   regret 0.1401
+   margin                               regret 0.1383
+   margin (inferred forks)              regret 0.1621
+   fork-only surprise (inferred)        regret 0.1614
+   margin (eventual-discovery oracle)   regret 0.1490
+   margin (inferred + allowance)        regret 0.1637
+  decomposition [stationary]: margin 0.0981 -> (D, never discovered) +0.0001 -> (E, evicted before discovery) +0.0077 -> inferred 0.1060
+  decomposition [stationary short]: margin 0.1383 -> (D, never discovered) +0.0107 -> (E, evicted before discovery) +0.0132 -> inferred 0.1621
+  no prediction [stationary]: allowance vs inferred -50.3% (CI -57.3% to -43.7%)
+  B1a: HELD    [stationary] margin (inferred forks) vs fork-only surprise (inferred): +10.5% (CI +6.4% to +14.6%); paired-difference CI [+0.0075, +0.0175]; need >= 10% with CI excluding 0
+  B1b: FAILED  [stationary short] margin (inferred forks) vs fork-only surprise (inferred): -0.5% (CI -1.8% to +0.8%); paired-difference CI [-0.0029, +0.0013]; need > 0 with CI excluding 0
+  B2a: HELD    [stationary] premature eviction E +0.0077 vs discovery failure D +0.0001; need E > D
+  B2b: FAILED  [stationary short] discovery failure D +0.0107 vs premature eviction E +0.0132; need D > E
+  B3: FAILED  [stationary short] margin (inferred + allowance) vs margin (inferred forks): -1.0% (CI -4.2% to +2.0%); paired-difference CI [-0.0066, +0.0034]; need > 0 with CI excluding 0
+SUMMARY: B1a held, B1b FAILED, B2a held, B2b FAILED, B3 FAILED

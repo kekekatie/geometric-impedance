@@ -1,0 +1,66 @@
+[regular #0] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.477075263384592e-07
+    [ok] faces_CCW_oriented: 110/110
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 136/136
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*75 thin*35): 91.9017
+    [ok] no_duplicate_faces: 110/110
+[regular #1] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.47707527004593e-07
+    [ok] faces_CCW_oriented: 110/110
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 136/136
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*75 thin*35): 91.9017
+    [ok] no_duplicate_faces: 110/110
+[regular #2] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.477075263384592e-07
+    [ok] faces_CCW_oriented: 110/110
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 136/136
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*71 thin*39): 90.4486
+    [ok] no_duplicate_faces: 110/110
+[perturbed #0] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.47707527004593e-07
+    [ok] faces_CCW_oriented: 107/107
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 131/131
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*70 thin*37): 88.322
+    [ok] no_duplicate_faces: 107/107
+[perturbed #1] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.47707527004593e-07
+    [ok] faces_CCW_oriented: 106/106
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 132/132
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*69 thin*37): 87.371
+    [ok] no_duplicate_faces: 106/106
+[perturbed #2] validate = PASS
+    [ok] unit_sides (max|len-1|): 4.892876198647755e-07
+    [ok] rhombus_shapes_ok: 0
+    [ok] face_areas (max err): 7.47707527004593e-07
+    [ok] faces_CCW_oriented: 110/110
+    [ok] edge_incidence (<=2 faces): 0
+    [ok] connected: 134/134
+    [ok] boundary_is_loops: 0
+    [ok] euler V-E+F==1: 1
+    [ok] area_sum (thick*71 thin*39): 90.4486
+    [ok] no_duplicate_faces: 110/110

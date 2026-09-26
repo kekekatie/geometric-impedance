@@ -1,0 +1,28 @@
+# v11 GATE REPORT
+
+[G6] distinct regular offsets chosen: 3/3 -> PASS
+[G1] regular#0: V=366 E=695 F=330 degen=0 discarded=0 -> PASS
+[G1] perturbed#0: V=376 E=712 F=337 degen=0 discarded=0 -> PASS
+[G1] regular#1: V=370 E=703 F=334 degen=0 discarded=0 -> PASS
+[G1] perturbed#1: V=380 E=723 F=344 degen=0 discarded=0 -> PASS
+[G1] regular#2: V=374 E=711 F=338 degen=0 discarded=0 -> PASS
+[G1] perturbed#2: V=375 E=712 F=338 degen=0 discarded=0 -> PASS
+[G2] invalid fixtures rejected: overlap=True, corrupt=True -> PASS
+[G5] engine equivalence vs v2 square: PASS (event-by-event identical over history + 300 steps)
+[G7] regular#0: 3/3 history pairs (shared_edges=[3, 2, 1]) -> PASS
+[G7] perturbed#0: 3/3 history pairs (shared_edges=[2, 2, 0]) -> PASS
+[G7] regular#1: 3/3 history pairs (shared_edges=[3, 3, 0]) -> PASS
+[G7] perturbed#1: 3/3 history pairs (shared_edges=[0, 0, 0]) -> PASS
+[G7] regular#2: 3/3 history pairs (shared_edges=[0, 2, 0]) -> PASS
+[G7] perturbed#2: 3/3 history pairs (shared_edges=[0, 0, 0]) -> PASS
+
+# SUMMARY
+  G6_distinct_regular_patches: PASS
+  G1_geometry_valid: PASS
+  G3_zero_degeneracies: PASS
+  G4_diagonals_unique_distinct: PASS
+  G2_invalid_fixtures_rejected: PASS
+  G5_engine_equivalence: PASS
+  G7_histories_frozen: PASS
+
+ALL GATES: PASS

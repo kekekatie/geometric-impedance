@@ -1,0 +1,229 @@
+{
+  "radius": 10.0,
+  "jitter": 0.3,
+  "hist_len": 6,
+  "offsets": [
+    [
+      0.3,
+      0.1,
+      -0.25,
+      -0.25,
+      0.1
+    ],
+    [
+      0.12,
+      0.31,
+      -0.08,
+      -0.2,
+      -0.15
+    ],
+    [
+      -0.05,
+      0.22,
+      0.17,
+      -0.29,
+      -0.05
+    ]
+  ],
+  "patches": {
+    "regular_0": {
+      "V": 366,
+      "E": 695,
+      "F": 330,
+      "shape_counts": {
+        "thick": 205,
+        "thin": 125
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 294,
+          "E": 27,
+          "len": 6,
+          "shared_edges": 3,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 294,
+          "E": 25,
+          "len": 6,
+          "shared_edges": 2,
+          "shared_internal_vertices": 2
+        },
+        {
+          "S": 294,
+          "E": 48,
+          "len": 6,
+          "shared_edges": 1,
+          "shared_internal_vertices": 1
+        }
+      ]
+    },
+    "perturbed_0": {
+      "V": 376,
+      "E": 712,
+      "F": 337,
+      "shape_counts": {
+        "thick": 205,
+        "thin": 132
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 177,
+          "E": 28,
+          "len": 6,
+          "shared_edges": 2,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 177,
+          "E": 325,
+          "len": 6,
+          "shared_edges": 2,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 177,
+          "E": 287,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        }
+      ]
+    },
+    "regular_1": {
+      "V": 370,
+      "E": 703,
+      "F": 334,
+      "shape_counts": {
+        "thick": 205,
+        "thin": 129
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 77,
+          "E": 27,
+          "len": 6,
+          "shared_edges": 3,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 77,
+          "E": 25,
+          "len": 6,
+          "shared_edges": 3,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 77,
+          "E": 290,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 0
+        }
+      ]
+    },
+    "perturbed_1": {
+      "V": 380,
+      "E": 723,
+      "F": 344,
+      "shape_counts": {
+        "thick": 210,
+        "thin": 134
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 79,
+          "E": 27,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        },
+        {
+          "S": 79,
+          "E": 297,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 2
+        },
+        {
+          "S": 79,
+          "E": 47,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        }
+      ]
+    },
+    "regular_2": {
+      "V": 374,
+      "E": 711,
+      "F": 338,
+      "shape_counts": {
+        "thick": 205,
+        "thin": 133
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 189,
+          "E": 291,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        },
+        {
+          "S": 189,
+          "E": 361,
+          "len": 6,
+          "shared_edges": 2,
+          "shared_internal_vertices": 3
+        },
+        {
+          "S": 189,
+          "E": 48,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        }
+      ]
+    },
+    "perturbed_2": {
+      "V": 375,
+      "E": 712,
+      "F": 338,
+      "shape_counts": {
+        "thick": 206,
+        "thin": 132
+      },
+      "n_history_pairs": 3,
+      "history": [
+        {
+          "S": 187,
+          "E": 290,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        },
+        {
+          "S": 187,
+          "E": 44,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        },
+        {
+          "S": 187,
+          "E": 40,
+          "len": 6,
+          "shared_edges": 0,
+          "shared_internal_vertices": 1
+        }
+      ]
+    }
+  },
+  "all_gates_pass": true
+}

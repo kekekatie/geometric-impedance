@@ -1,0 +1,968 @@
+[
+ {
+  "run": 0,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 1,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 2,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    72
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 3,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 4,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   248
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 5,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   146
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 6,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 7,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   146
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 8,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    72
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 9,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 10,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 11,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 12,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 13,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    0
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   34
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 14,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 15,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   146
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 16,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 17,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 18,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 19,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 20,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    36
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     36,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   344
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 21,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 22,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    72
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 23,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    72
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 24,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   146
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 25,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    0
+   ],
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     0,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   34,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 26,
+  "status": "ok",
+  "n_guess": 2,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    108
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     108,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   244
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 27,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 1,
+  "bands": [
+   [
+    29,
+    72
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 28,
+  "status": "ok",
+  "n_guess": 4,
+  "n_div": 1,
+  "bands": [
+   [
+    27,
+    144
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     27,
+     144,
+     2.5
+    ]
+   ]
+  },
+  "div_steps": [
+   248
+  ],
+  "every_guess_had_ref": true
+ },
+ {
+  "run": 29,
+  "status": "ok",
+  "n_guess": 3,
+  "n_div": 2,
+  "bands": [
+   [
+    29,
+    72
+   ],
+   [
+    27,
+    36
+   ]
+  ],
+  "links": {
+   "0": [
+    [
+     29,
+     72,
+     1.7
+    ]
+   ],
+   "1": [
+    [
+     27,
+     36,
+     1.7
+    ]
+   ]
+  },
+  "div_steps": [
+   10,
+   344
+  ],
+  "every_guess_had_ref": true
+ }
+]

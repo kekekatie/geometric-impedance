@@ -1,0 +1,11 @@
+arm,quantity,point,ci_lo,ci_hi
+regular,local_auc_B100,0.6314,0.6018,0.6594
+regular,local_auc_B300,0.6365,0.6067,0.6675
+regular,local_auc_B1000,0.6358,0.6027,0.6680
+regular,global,0.6308,0.5955,0.6658
+regular,diff300,0.0057,-0.0070,0.0189
+perturbed,local_auc_B100,0.6343,0.6071,0.6589
+perturbed,local_auc_B300,0.6250,0.5930,0.6554
+perturbed,local_auc_B1000,0.6192,0.5818,0.6581
+perturbed,global,0.6180,0.5806,0.6567
+perturbed,diff300,0.0070,-0.0090,0.0221

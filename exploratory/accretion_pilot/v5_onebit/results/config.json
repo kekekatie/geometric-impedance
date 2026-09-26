@@ -1,0 +1,26 @@
+{
+  "threshold": "b(e)=1 if w>=5.5 (>=4 traversals / rounds to 6)",
+  "readers": "P_D, S_high (primary one-bit), S_low, -S_low (complement), D0, D1; identity S_high+S_low=P_D",
+  "source_snapshots": "../v4_decomposition/results/edge_snapshots.npz",
+  "checkpoints": [
+    0,
+    100,
+    200,
+    400,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "n_seeds": 200,
+  "models": [
+    "Fixed",
+    "Reinforced",
+    "Growing",
+    "Growing-MatchedControl"
+  ],
+  "env": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  }
+}

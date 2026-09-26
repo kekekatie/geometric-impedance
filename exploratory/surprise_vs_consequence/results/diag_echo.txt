@@ -1,0 +1,3 @@
+crowd vs own belief      regret 0.1368   in WRONG forks, kept memories that support the wrong choice: 87%
+crowd vs TRUTH (cheat)   regret 0.0575   in WRONG forks, kept memories that support the wrong choice: 71%
+reference (round 3, same worlds 20000-20099): margin 0.0969, crowd-aware 0.1377, clairvoyant 0.0506
