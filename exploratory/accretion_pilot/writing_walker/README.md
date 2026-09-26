@@ -4,6 +4,12 @@ Pre-registered in [`PREREGISTRATION.md`](PREREGISTRATION.md) before any code exi
 *"Let a momentum walker travel down a ribbon and see if it can physically trigger a worm flip in
 its wake: does travelling energy rewrite the universe's memory as it moves?"*
 
+> **What "writing" means here (clarified with Katie).** The tiling is one **slice of now**: the
+> present structure, laid out in space. The walker moves through that present, and its wake is a
+> **record, written into the now, of the span of its journey**. Nothing here alters the past. In
+> this theory the past is fixed, and it is carried forward only in what the present became.
+> "Sibling universes" means alternative **presents**, not rewritten histories.
+
 ![the writing walker](figures/writing_walker.png)
 
 ## How it works
@@ -37,11 +43,11 @@ Wherever the nudged line slips past a crossing of two other lines, three tiles r
 - **But what it writes is a scar, not a sibling universe.** Across all 99 push sizes from 0.01
   to 0.99 *(exploratory scan, `push_scan.py`)*, **no push leaves a clean wake**. There are always
   vertex shapes that never occur in any Penrose tiling, clustered in knots along the road. A lone
-  traveller nudging its own line cannot write a legal alternative history.
+  traveller nudging its own line cannot write a legal alternative present.
 - **The contrast with forced growth is the interesting part.** In
   [`../laying_the_tiling/`](../laying_the_tiling/), guesses during growth produced **legal**
-  sibling universes that differed along bands on the roads. So legal rewriting along a road *is*
-  possible, but not by one line moving alone. *Open question:* what extra coordination turns a
+  sibling universes that differed along bands on the roads. So a legal change to the present along a
+  road *is* possible, but not by one line moving alone. *Open question:* what extra coordination turns a
   scar into a sibling universe? Several lines moving together (a genuine phason shift)? The
   matching rules acting as they grow?
 

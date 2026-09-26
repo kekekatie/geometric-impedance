@@ -15,10 +15,12 @@ rolled away.)*
   - a lone judge builds an echo chamber (the memory paper);
   - a lone writer leaves scars (the walker);
   - change made in agreement with the whole gives a legal sibling universe (forced growth).
-  - Candidate sentence: *"the past can be rewritten, but only by the whole, never by a part
-    alone."* Unsure whether that is deep or coincidence.
-  - Katie: "we can't have the past rewritten willy nilly". Something is nagging at her;
-    she'll come back to it.
+  - Candidate sentence, **corrected with Katie**: *"the present can only change coherently as a
+    whole; a part changing alone leaves scars."* Unsure whether that is deep or coincidence.
+  - **Katie's correction (important; keep this language):** the past is **never** altered in this
+    theory. A slice of now can have a span. The walker's wake is a record, written into the now,
+    of the span of its journey. Sibling universes are alternative *presents*. Never say "rewrite
+    the past".
 - **Earlier devil's-staircase work exists**, on branch `claude/handoff-github-context-3rnoqr`,
   folder `winding_staircase/` (not on master):
   - Stage B: circle-map calibration (D ≈ 0.87, exponent 3);
