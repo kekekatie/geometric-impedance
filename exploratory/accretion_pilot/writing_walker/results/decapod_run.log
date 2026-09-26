@@ -1,0 +1,9 @@
+================================================================================================
+DECAPOD TEST -- is the walker's stubborn centre knot a bad (unfillable) decagon?
+================================================================================================
+  [PASS] the generalised road builder reproduces the original walker exactly on its own road
+  pristine centre decagon: 62 fillings reachable by interior flips; legal: 1
+  [PASS] D1: the pristine centre decagon has at least one legal filling
+  walker push 0.2: 62 fillings of the centre decagon reachable; legal: 0
+  walker push 0.05: 62 fillings of the centre decagon reachable; legal: 0
+  D2: HELD    no filling of the centre decagon is legal once the walker has passed (push 0.2 and 0.05)
