@@ -1,7 +1,7 @@
 # Surprise versus consequence: what should a learning memory keep?
 
-*Pre-registration, **Part A only**. **Status: DRAFT v2, awaiting Katie's final OK.** No code for
-this study exists yet. Once approved, this file is frozen; any change before the first run is
+*Pre-registration, **Part A only**. **Status: FROZEN (v2), approved by Katie on 2026-09-26, before
+any code for this study existed.** From here on this file is frozen; any change before the first run is
 listed at the bottom with its reason. Results will be reported against these predictions,
 whichever way they fall.*
 
