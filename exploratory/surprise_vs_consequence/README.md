@@ -189,3 +189,30 @@ Code: `svc2b.py`.
   judged. That points straight at a **short-term holding buffer**, keeping things briefly before
   deciding: the fast store of Complementary Learning Systems. It is the natural design for the
   next paper, together with sleep and replay.
+
+---
+
+# Exploratory: Katie's puzzle questions (not pre-registered)
+
+*Prompted by Katie ("could the cheater's secret be the wisdom of crowds?", and "could the short
+stream be a self-reinforcing bias?"). Code: `diag_puzzles.py`; output:
+`results/diag_puzzles.txt`. Round-2 worlds, 40 seeds. Descriptive only.*
+
+| stream T = 2000 | noise in kept fork memories, `|r − μ|` | forks decided right | estimated margin when wrong / when right |
+|---|---|---|---|
+| fork-only surprise | 1.59 | 53% | 0.36 / 0.82 |
+| margin | 1.43 | 65% | **0.91** / 1.13 |
+| clairvoyant | **0.78** | 76% | 0.00 / 0.61 |
+
+- **Wisdom of crowds: supported.** The clairvoyant keeps memories whose noise is *typical*
+  (0.78; the average size of one unit of Gaussian noise is 0.80). It keeps a representative crowd.
+  Margin and surprise keep memories with nearly **twice** the typical noise: the loud, extreme
+  ones. Rules that reward "moves my estimate a lot" select for unreliable evidence.
+- **Lock-in: present, but not specific to short streams.** When margin decides a fork wrongly, it
+  is usually *confident* (estimated margin 0.91 on the long stream): extreme evidence made the
+  wrong answer look settled, so the situation stops counting as a close call and stops attracting
+  correction. The clairvoyant is only wrong where it has no evidence at all (margin 0). The same
+  pattern is weaker on the short stream (0.50 against 0.75).
+- **A testable consequence for a future pre-registered round:** a *crowd-aware* margin rule, one
+  that prefers decision-relevant memories of *typical* size to extreme ones, should close part of
+  the gap to the clairvoyant.
