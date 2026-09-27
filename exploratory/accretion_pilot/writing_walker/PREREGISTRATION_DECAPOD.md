@@ -53,4 +53,12 @@ need arrow-level matching rules, which are not implemented.
 
 ## Changes before the first run
 
-*(none yet)*
+1. *(2026-09-27, before D4 had ever completed.)* D4's heal test uses `heal_search_lean`, a
+   memory-safe re-implementation of `healing.heal_search`:
+   - it has the same breadth-first search, move set, success test and 400,000-state cap;
+   - it stores each state as a diff from the start instead of a full copy;
+   - on the original road it reproduces `healing.py`'s results exactly (depths 2, 2, 1, 1, 2, 2,
+     and the centre knot unhealed).
+
+   Two earlier D4 attempts never finished. Their workers were OOM-killed (one used 14 GB) and the
+   pool hung. Both attempts are logged in `results/decapod_run.log`.

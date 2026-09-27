@@ -170,6 +170,64 @@ def wide_search(F, atlas, knot, illegal, radius=3.0, cap=500_000):
     return False, depth, states
 
 
+# ------------------------------------------------------------ memory-safe version of healing.heal_search
+def heal_search_lean(T, knot, atlas, illegal_before, radius=None, depth_max=None, cap=400_000):
+    """Same breadth-first search, same move set, same success test and same 400,000-state cap as
+    healing.heal_search, but each state is stored as a small DIFF from the start instead of a full copy
+    of the neighbourhood (the full copies exhausted memory on large knots: OOM-killed workers)."""
+    radius = H.RADIUS if radius is None else radius
+    depth_max = H.DEPTH if depth_max is None else depth_max
+    pts = list(knot); ks = set(knot); others = illegal_before - ks
+    near = lambda K: min(H.dist(K, q) for q in pts) <= radius
+    local = [cs for cs in T.faces.values() if any(min(H.dist(K, q) for q in pts) <= radius + 3 for K in cs)]
+    start = H.Tiling(local); start_keys = set(start.faces); facemap = dict(start.faces)
+    ids, rev = {}, {}
+
+    def fid(k):
+        if k not in ids:
+            ids[k] = len(ids); rev[ids[k]] = k
+        return ids[k]
+
+    def realise(diff):
+        t = start.copy()
+        rem = [rev[i] for i in diff if rev[i] in start_keys]
+        add = [facemap[rev[i]] for i in diff if rev[i] not in start_keys]
+        if rem:
+            t.apply((rem, [], None))
+        if add:
+            t.apply(([], add, None))
+        return t
+
+    seen = {frozenset()}; frontier = [frozenset()]
+    for depth in range(1, depth_max + 1):
+        nxt = []
+        for diff in frontier:
+            t = realise(diff)
+            for v in [K for K in list(t.vf) if near(K)]:
+                plan = t.flip_plan(v)
+                if plan is None:
+                    continue
+                d2 = set(diff)
+                for k in plan[0]:
+                    d2 ^= {fid(k)}
+                for cs in plan[1]:
+                    k = frozenset(cs); facemap.setdefault(k, cs); d2 ^= {fid(k)}
+                d2 = frozenset(d2)
+                if d2 in seen:
+                    continue
+                seen.add(d2)
+                t2 = t.copy(); t2.apply(plan)
+                check = {K for i in d2 for K in rev[i] if K in t2.vf} | {K for K in ks if K in t2.vf}
+                bad = {K for K in check if t2.star(K) not in atlas}
+                if not (bad - others) and not (bad & ks):
+                    return depth
+                nxt.append(d2)
+        frontier = nxt
+        if len(seen) > cap:
+            return None
+    return None
+
+
 # ------------------------------------------------------------ D4: many roads
 def ring_centre(knot):
     for v in knot:
@@ -202,7 +260,7 @@ def road_task(args):
     T = H.Tiling([cs for cs, *_ in F.values()])
     rows = []
     for g in groups:
-        d = H.heal_search(T, g, atlas, illegal)
+        d = heal_search_lean(T, g, atlas, illegal)
         c = ring_centre(g)
         rows.append(dict(J=J, C=C, size=len(g), healed=d is not None, depth=d, ring=c is not None,
                          centre=c, t=round(sum(W.dot(EJP, par(K)) for K in g) / len(g), 2)))
