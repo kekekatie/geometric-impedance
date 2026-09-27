@@ -1,0 +1,12 @@
+runs 8: statuses ['JAM', 'ok', 'ok', 'JAM', 'JAM', 'ok', 'ok', 'ok'], rounds [13, 58, 69, 15, 17, 91, 94, 77], guesses [6, 5, 5, 3, 4, 6, 5, 8]
+  happening density (tiles per round): slow 1.86, fast 3.22 (ratio 0.58)
+  front radius (edges): slow 6.0, fast 7.3
+  slow half, distance 0-1:  20 holes, freedom 0.40, median age 9.2 rounds
+  slow half, distance 1-2:  20 holes, freedom 0.10, median age 28.8 rounds
+  slow half, distance 2-4:  17 holes, freedom 0.00, median age 38.7 rounds
+  fast half, distance 0-1:  24 holes, freedom 0.46, median age 7.9 rounds
+  fast half, distance 1-2:  21 holes, freedom 0.14, median age 10.3 rounds
+  fast half, distance 2-4:  20 holes, freedom 0.00, median age 39.5 rounds
+  H0 (manipulation): PASS  slow/fast happening density 0.58 (need < 0.6)
+  H1: HELD    spatial width the same in both halves: freedom slow [np.float64(0.4), np.float64(0.1), np.float64(0.0)] vs fast [np.float64(0.46), np.float64(0.14), np.float64(0.0)]
+  H2: FAILED  temporal width wider where quiet: median age of soft holes slow 7.6 vs fast 7.5 rounds (need >= 2x); n soft = 10, 14

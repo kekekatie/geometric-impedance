@@ -1,0 +1,4 @@
+EXPLORATORY (post hoc): where do the throttled runs jam? (same seeds as the pre-registered runs)
+  run 3: jam at round 13, position x = -2.01, y = +1.96 edges (|x| = distance from the slow/fast boundary line)
+  run 6: jam at round 15, position x = -1.24, y = +2.52 edges (|x| = distance from the slow/fast boundary line)
+  run 7: jam at round 17, position x = -0.48, y = +2.77 edges (|x| = distance from the slow/fast boundary line)
