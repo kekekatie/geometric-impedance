@@ -4,6 +4,22 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🪢 2026-09-27 evening: the knots (see [`writing_walker/README.md`](writing_walker/README.md))
+
+- **The centre knot is a bad-decapod-like defect.** 62 fillings; 1 legal in the pristine tiling,
+  0 after the walker.
+- **But 10 of the 12 stuck knots on 18 roads have no decagon ring.**
+- **Window ("shaft of light"):** stuck knots lie further outside the window. Size predicts
+  better. Medium knots are where the window matters most.
+- **A jewel's correction:** these knots are locally trapped, not topologically conserved.
+- **`JEWELS.md` (repo root)** indexes the earlier work on other branches. Read it before chasing
+  anything old.
+- **Open next (Katie picks):**
+  - what decides which big knots get stuck;
+  - why the centre (the mirror line) gathers the biggest trouble;
+  - the devil's-staircase scaling of the walker's steps;
+  - the perp-space paper, later, once the understanding is there.
+
 ## 💬 Open conversation with Katie (2026-09-27): walking around the *whys*
 
 - **Quantisation from fit, not from pixels.**
