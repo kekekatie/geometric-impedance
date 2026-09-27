@@ -44,6 +44,21 @@ again.*
 - `claude/world-growth-pilot-cy85ne`: the accretion pilot's earlier history (now merged into
   `master` under `exploratory/`).
 
+## Jewels outside the repository (known to exist; not in any branch)
+
+- **"Happening density" and "relative nows"**: early conversations (before the slice-of-now and
+  aperiodicity work), including a hunt for where the local ends and the universal starts. Not
+  found in any branch; they live in old chats.
+- **The Temporal Echo hypothesis** (Niedzwiecki 2025a, Zenodo, DOI `10.5281/zenodo.17718939`):
+  apparent dark matter as integrated dynamical history, `M_eff = M_b + ∫ H(t′) K(t − t′) dt′`, with
+  happening density `H` and a memory kernel whose fade time grows in quiet, low-acceleration
+  systems.
+- **"Cloud 9 and the Limits of Modified Gravity"** (January 2026, 8 pages): Temporal Echo applied
+  to Cloud 9. Katie shared the PDF on 2026-09-28. In today's language it already says that the
+  width of the now is **local**: quiet places remember longer.
+- **Fable's later dark matter paper**, written after the slice-of-now and aperiodicity work: not
+  found in the repository. Ask Katie for it.
+
 ## Already on the front page (`master`)
 
 `exploratory/accretion_pilot/` (the accretion and tiling trail; the transmission paper),
