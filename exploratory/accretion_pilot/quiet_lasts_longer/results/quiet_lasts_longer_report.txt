@@ -1,0 +1,17 @@
+seeds used 12: 8 completed, 4 jammed (happening-density study: 3/8 jammed)
+    seed 2: jam at round 10, x = -0.48, y = +2.77 edges
+    seed 3: jam at round 11, x = -1.24, y = +2.52 edges
+    seed 4: jam at round 10, x = -0.48, y = +2.77 edges
+    seed 8: jam at round 64, x = -0.48, y = -2.77 edges
+  happening density (tiles/round): quiet 2.63, busy 3.83 (ratio 0.69)
+  front speed (edges/round): quiet 0.053, busy 0.067 (ratio 0.79)
+  quiet half: 55 probes; soft at birth 0.45; ever soft 1.00; censored 0; mean L_rounds 34.80 (median 27.0, max 95); mean L_local 16.13 (median 16.0)
+      L_rounds distribution: [6, 9, 9, 10, 10, 11, 14, 15, 15, 16, 16, 17, 17, 18, 19, 20, 21, 22, 22, 23, 24, 24, 24, 25, 25, 25, 26, 27, 28, 29, 30, 30, 31, 32, 36, 37, 40, 42, 43, 47, 48, 49, 49, 50, 52, 53, 55, 61, 65, 65, 72, 84, 87, 94, 95]
+      L_rounds x front speed (width in space recovered from time): 1.84 edges
+  busy half: 64 probes; soft at birth 0.34; ever soft 0.89; censored 0; mean L_rounds 17.12 (median 7.0, max 83); mean L_local 12.14 (median 12.0)
+      L_rounds distribution: [0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8, 9, 13, 13, 13, 14, 15, 15, 19, 20, 20, 23, 24, 24, 26, 26, 27, 32, 33, 35, 37, 40, 40, 58, 74, 74, 76, 77, 83]
+      L_rounds x front speed (width in space recovered from time): 1.14 edges
+  Q0 (manipulation): FAIL  ratio 0.69 (need < 0.6)
+  Q1: HELD    lasts longer where quiet (rounds): mean L_rounds ratio 2.03 (need >= 1.5); permutation p = 0.0001 (reported only)
+  Q2: HELD    same on the local clock: mean L_local ratio 1.33 (need 0.67-1.5)
+  Q3: HELD    both together (a fixed-width now moving at the local pace)

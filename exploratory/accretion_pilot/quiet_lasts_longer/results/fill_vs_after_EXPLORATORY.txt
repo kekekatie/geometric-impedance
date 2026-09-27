@@ -1,0 +1,3 @@
+EXPLORATORY (post hoc): how the lifetime splits into 'being laid' and 'after the disc is complete'
+  quiet: mean fill time (first disc tile -> disc complete) 38.5 rounds (median 31); mean soft time after completion 1.5 rounds; fraction still soft after completion 0.20; mean |probe| 6.45 edges
+  busy: mean fill time (first disc tile -> disc complete) 18.5 rounds (median 7); mean soft time after completion 0.7 rounds; fraction still soft after completion 0.09; mean |probe| 7.55 edges
