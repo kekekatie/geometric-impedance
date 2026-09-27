@@ -93,4 +93,22 @@ A one-sided permutation test for Q1 is also reported: probe labels are shuffled 
 
 ## Changes before the first run
 
-*(none yet)*
+1. **Birth redefined** (logged before any pre-registered seed was run).
+   - *What I tried.* I smoke-tested one out-of-range seed (`20261001 + 1000`, which is not among the
+     study's seeds), using the definition above: birth = the disc is complete.
+   - *What it showed.* 14 of 15 probes were already hard at that moment, so almost every lifetime
+     was 0. By the time a spot's disc is fully laid, the front has mostly moved on. The measure would
+     have been blind to the thing it was meant to measure.
+   - *The new definitions.*
+     - **Birth** `b` is the round in which the **first** tile of the disc is laid (the front
+       arrives).
+     - `full` is the round in which the disc is complete.
+     - Softness is tested every round from `b`. The 4-consecutive-hard stopping rule applies only
+       after `full`.
+     - Before `full`, the hole is whatever part of the disc exists in the snapshot. The refill is
+       confined as before, and "different" means different from the tiles that were there, as in
+       the soft-zone study's holes at the front.
+   - *Unchanged.* `L_rounds`, `L_local` (counted from `b`), the probes, the thresholds and the
+     predictions are all as written above.
+   - *What the smoke test's numbers were.* The same practice seed gave non-zero lifetimes under the
+     new definition. Its numbers are not results and are not reported.
