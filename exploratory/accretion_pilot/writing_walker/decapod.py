@@ -171,7 +171,7 @@ def wide_search(F, atlas, knot, illegal, radius=3.0, cap=500_000):
 
 
 # ------------------------------------------------------------ memory-safe version of healing.heal_search
-def heal_search_lean(T, knot, atlas, illegal_before, radius=None, depth_max=None, cap=400_000):
+def heal_search_lean(T, knot, atlas, illegal_before, radius=None, depth_max=None, cap=400_000, strict_cap=False):
     """Same breadth-first search, same move set, same success test and same 400,000-state cap as
     healing.heal_search, but each state is stored as a small DIFF from the start instead of a full copy
     of the neighbourhood (the full copies exhausted memory on large knots: OOM-killed workers)."""
@@ -222,6 +222,8 @@ def heal_search_lean(T, knot, atlas, illegal_before, radius=None, depth_max=None
                 if not (bad - others) and not (bad & ks):
                     return depth
                 nxt.append(d2)
+                if strict_cap and len(seen) > cap:
+                    return None          # strict: stop mid-level (used only for road (0,-2); see README)
         frontier = nxt
         if len(seen) > cap:
             return None
