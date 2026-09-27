@@ -1,39 +1,3 @@
-TWO-LOCAL run 2: ok, 1192 tiles, interface 22, 11 s
-TWO-LOCAL run 3: ok, 1192 tiles, interface 24, 13 s
-TWO-LOCAL run 0: ok, 1192 tiles, interface 24, 14 s
-TWO-LOCAL run 1: ok, 1192 tiles, interface 24, 14 s
-TWO-LOCAL run 4: ok, 1192 tiles, interface 21, 12 s
-TWO-LOCAL run 5: ok, 1192 tiles, interface 22, 11 s
-TWO-LOCAL run 7: ok, 1192 tiles, interface 22, 10 s
-TWO-LOCAL run 6: ok, 1192 tiles, interface 22, 16 s
-TWO-LOCAL run 8: ok, 1192 tiles, interface 22, 15 s
-TWO-LOCAL run 9: ok, 1192 tiles, interface 23, 15 s
-TWO-LOCAL run 10: ok, 1192 tiles, interface 22, 15 s
-TWO-LOCAL run 11: ok, 1192 tiles, interface 24, 13 s
-TWO-ORACLE run 0: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 1: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 2: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 3: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 4: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 5: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 6: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 7: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 8: ok, 1192 tiles, interface 22, 14 s
-TWO-ORACLE run 9: ok, 1192 tiles, interface 22, 14 s
-TWO-ORACLE run 10: ok, 1192 tiles, interface 22, 15 s
-TWO-ORACLE run 11: ok, 1192 tiles, interface 22, 15 s
-ONE-LOCAL run 0: ok, 1146 tiles, interface 0, 6 s
-ONE-LOCAL run 1: ok, 1146 tiles, interface 0, 6 s
-ONE-LOCAL run 2: ok, 1146 tiles, interface 0, 8 s
-ONE-LOCAL run 3: ok, 1146 tiles, interface 0, 6 s
-ONE-LOCAL run 5: ok, 1146 tiles, interface 0, 8 s
-ONE-LOCAL run 6: ok, 1146 tiles, interface 0, 8 s
-ONE-LOCAL run 4: ok, 1146 tiles, interface 0, 12 s
-ONE-LOCAL run 7: ok, 1146 tiles, interface 0, 8 s
-ONE-LOCAL run 8: ok, 1146 tiles, interface 0, 7 s
-ONE-LOCAL run 11: ok, 1146 tiles, interface 0, 6 s
-ONE-LOCAL run 10: ok, 1146 tiles, interface 0, 7 s
-ONE-LOCAL run 9: ok, 1146 tiles, interface 0, 11 s
 TWO-LOCAL: 12 runs; jammed 0; fronts met (>=10 interface edges) 12; merged (met and ok) 12; guesses per run [2, 2, 2, 2, 3, 2, 2, 3, 3, 3, 3, 2]
     run  2: ok   tiles 1192 interface  22 agree {'1': 0.855, '2': 0.842} near-interface {'2': 0.798, '1': 0.814}
     run  3: ok   tiles 1192 interface  24 agree {'1': 0.906, '2': 0.828} near-interface {'2': 0.8}
@@ -78,4 +42,3 @@ ONE-LOCAL: 12 runs; jammed 0; fronts met (>=10 interface edges) 0; merged (met a
   M3: FAILED  TWO-LOCAL jams in >= 6/12 runs (0/12)
   M4: FAILED  TWO-LOCAL jams lie in the meeting zone (|x| < 3 edges): []
   soft repair of TWO-LOCAL seams: 0/0 repaired
-exit=0

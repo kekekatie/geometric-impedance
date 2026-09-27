@@ -4,6 +4,15 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🤝 Relative nows ([`relative_nows/`](relative_nows/))
+
+- Two Gromit crowds that drifted into different sibling universes **always merged cleanly** when
+  they met (12/12). M3, "they clash", failed completely.
+- The meeting happens inside both nows (the soft zone), so the growth rules can reconcile the two
+  sides there.
+- **Differences meeting inside the now reconcile; a difference forced into the settled past scars**
+  (compare the writing walker).
+
 ## 🌱 The soft zone: how wide is the now? ([`soft_zone/`](soft_zone/))
 
 - Grown with a **ring of Gromits** (parallel rounds, full matching rules). Holes are poked
