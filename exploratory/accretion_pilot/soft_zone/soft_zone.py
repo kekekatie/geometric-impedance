@@ -18,6 +18,36 @@ sys.path.insert(0, os.path.join(HERE, "..", "laying_the_tiling"))
 import laying_the_tiling as L
 
 S = L.SCALE_LEN
+
+
+def vertex_ok_fixed(s, k, extra):
+    """Corrected version of laying_the_tiling.Patch.vertex_ok. The original wraps each gap between
+    consecutive corners into (-pi, pi], so a gap WIDER than pi (common around holes) was misread as an
+    overlap and a legal partial star was rejected. Here gaps are measured linearly along the sorted start
+    angles, with one explicit wrap-around gap; arcs and complete stars are then checked exactly as before."""
+    lst = sorted(s.V[k] + extra); n = len(lst)
+    tot = sum(d for _, d, _ in lst)
+    if tot > 2 * math.pi + 1e-6:
+        return False
+    if abs(tot - 2 * math.pi) < 1e-6:
+        return L.star(lst) in L.STARS
+    gaps = [lst[i][0] - (lst[i - 1][0] + lst[i - 1][1]) for i in range(1, n)]
+    gaps = [lst[0][0] + 2 * math.pi - (lst[-1][0] + lst[-1][1])] + gaps      # gaps[i] = gap before lst[i]
+    if any(g < -1e-6 for g in gaps):
+        return False                                     # genuinely overlapping corners
+    start = next((i for i in range(n) if gaps[i] > 1e-6), None)
+    if start is None:
+        return False
+    seq = lst[start:] + lst[:start]; gs = gaps[start:] + gaps[:start]; arcs = [[seq[0]]]
+    for i in range(1, n):
+        if gs[i] > 1e-6:
+            arcs.append([seq[i]])
+        else:
+            arcs[-1].append(seq[i])
+    return all(tuple(l for _, _, l in arc) in L.ARCS for arc in arcs)
+
+
+L.Patch.vertex_ok = vertex_ok_fixed     # used by growth AND refills in this study (see PREREGISTRATION changes)
 N_TILES, RUNS, SEED0 = 400, 6, 20260928
 BINS = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 6)]
 HOLES_PER_BIN, RHO, ATTEMPTS = 6, 1.2, 8

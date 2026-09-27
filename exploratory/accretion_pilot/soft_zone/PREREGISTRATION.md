@@ -88,4 +88,13 @@ locally. High means busy; low means quiet.
 
 ## Changes before the first run
 
-*(none yet)*
+1. *(2026-09-28, after a first attempt aborted on check Z2, before any result was produced.)*
+   Z2 failed: re-adding a hole's own original tiles was judged illegal. The cause is a **bug in
+   `laying_the_tiling.Patch.vertex_ok`**. It wraps each gap between consecutive corners at a vertex
+   into (−π, π], so a gap wider than π, common around a hole, is misread as an overlap. This study
+   uses a corrected check (`vertex_ok_fixed` in `soft_zone.py`): gaps are measured linearly along
+   the sorted corners, and everything else is unchanged. The first attempt also showed one run
+   (seed index 3) jamming under the ring-of-Gromits rule. **With the corrected check it does not
+   jam, so that jam was the bug, not the Gromits.** After the fix, all six runs grow to 450 tiles,
+   and all 360 re-add checks pass. The earlier `laying_the_tiling` results used the buggy check;
+   their re-check is recorded in that study's README.
