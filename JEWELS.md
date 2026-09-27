@@ -56,8 +56,19 @@ again.*
 - **"Cloud 9 and the Limits of Modified Gravity"** (January 2026, 8 pages): Temporal Echo applied
   to Cloud 9. Katie shared the PDF in the walker-knots session. In today's language it already says that the
   width of the now is **local**: quiet places remember longer.
-- **Fable's later dark matter paper**, written after the slice-of-now and aperiodicity work: not
-  found in the repository. Ask Katie for it.
+- **"Where the Universe Remembers: A Geometric-Memory Reading of Dark Matter"** (July 2026;
+  Fable's passion project, written after the slice-of-now and aperiodicity work). **It *is* on
+  `master`**, as `where-the-universe-remembers.html` at the repo root; an earlier search missed it
+  by filename.
+  - Theorem 1 ("perfection cannot remember") and Theorem 2 ("imperfection must remember, at a
+    quantum equal to its misfit").
+  - The address/weave spectrum in the sky: Cloud 9, DGSAT I, DF2/DF4/FCC 224, and the Bullet
+    Cluster.
+  - Three documented negative results, and one pre-registered cluster-offset prediction
+    (`doi:10.5281/zenodo.21211483`).
+  - Programme papers cited there: *Where Memory Can Live: A Taxonomy of Persistence*
+    (`10.5281/zenodo.21200994`), *Address or Weave* (`10.5281/zenodo.20322776`), *Silent
+    Corruption* (`10.5281/zenodo.20405271`).
 
 ## Already on the front page (`master`)
 
