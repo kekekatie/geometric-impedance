@@ -1,4 +1,4 @@
-EXPLORATORY (post hoc, partial: 17/18 D4 roads): does window position add anything beyond knot size?
-  knots of size 1-8:   0 stubborn, 70 healed
-  knots of size 9-13:  5 stubborn, 10 healed; within this size band, 'out' AUC 0.90 (p = 0.006)
-  knots of size 14-30: 6 stubborn, 14 healed; within this size band, 'out' AUC 0.56 (p = 0.313)
+EXPLORATORY (post hoc, all 18 roads): does window position add anything beyond knot size?
+  knots of size 1-8: 0 stubborn, 72 healed
+  knots of size 9-13: 5 stubborn, 10 healed; within band, 'out' AUC 0.90 (p = 0.006)
+  knots of size 14-40: 7 stubborn, 16 healed; within band, 'out' AUC 0.54 (p = 0.362)

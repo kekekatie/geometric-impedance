@@ -90,6 +90,64 @@ far) is the centre of symmetry.
 - One patch, one road.
 - The centre knot's deeper status is untested.
 
+---
+
+## The stubborn centre knot: a bad decapod, and what the window says (2026-09-27)
+
+Pre-registered in [`PREREGISTRATION_DECAPOD.md`](PREREGISTRATION_DECAPOD.md) and
+[`PREREGISTRATION_WINDOW.md`](PREREGISTRATION_WINDOW.md), each before its code existed. Changes
+made before the runs are logged in those files. Code: `decapod.py`, `decapod_d4.py`,
+`run_last_road.py`, `window_test.py`.
+
+**What the stubborn knot is.** Its bad vertices form the ring of a **unit-edge decagon**:
+10 vertices at radius φ, 36° apart, around the tiling's centre. The centre is on the mirror line of
+this tiling's offsets. The mirror symmetry, not a golden law, is why the other knots sit at
+`±t`; yesterday's "golden-ish" remark is withdrawn.
+
+| | prediction | result |
+|---|---|---|
+| D1 | the pristine centre decagon has a legal filling | **pass**: all **62** fillings enumerated (Conway's decapod count, reproduced), exactly **1** legal |
+| D2 | after the walker, no filling of the decagon is legal | **held**: **0 of 62** legal, at push 0.2 and 0.05 |
+| D3 | flips anywhere within radius 3 still can't heal it | **held**: 500,000 arrangements, up to 12 flips deep, no heal |
+| D4 | "stubborn" ⇔ "contains a decagon ring", for ≥ 90% of knots on 18 roads | **held by the letter (100/110 = 91%), failed in spirit**: both ring knots are stubborn, but **10 of the 12 stubborn knots have no ring**. The 91% comes almost entirely from the 98 easy knots that neither heal badly nor have rings. The criterion was too easy to meet. |
+
+A second decapod-like knot was found elsewhere (road family 1, line +3, centred at (12.4, 4.0)),
+also stubborn. The largest knot, **38 bad vertices at the centre of road (0, −2)**, is stubborn
+and has no ring.
+
+**The window (Katie's "shaft of light").** Every knot vertex has a hidden coordinate. `out` measures
+how far the walker's writing pushed a knot's vertices outside the window.
+
+- **Wn1 held:** stubborn knots lie further outside the window (one-sided Mann–Whitney
+  `p < 0.0001`, AUC 0.76).
+- **But size predicts better** (AUC 0.92). *Exploratory, after the fact:*
+  - small knots (≤ 8 bad vertices) **never** get stuck (0 of 72);
+  - among **medium** knots (9–13), window position separates stuck from healed very well
+    (AUC 0.90, `p = 0.006`);
+  - among **large** knots (14+), it does not (AUC 0.54).
+
+  Small scars always heal. Medium scars get stuck when they fall outside the light. Big scars follow
+  a rule not yet known.
+
+**A correction from an earlier jewel.** An older result (branch `exploratory/address-ablation`,
+`SYNTHESIS.md` §9) showed that **no true topological defect**, a conserved dislocation, can exist
+in a tiling made only of rhombi with a single-valued lift. The walker's tilings are exactly that. So
+these knots are **not conserved particles**. They are **locally trapped but globally removable**:
+nothing within 3 tile-widths fixes them, while undoing the whole journey does. They are knots that
+only the whole can untie.
+
+**Honest notes:**
+- **Run problems.** D4's first two attempts were OOM-killed (the heal search stored full copies of
+  the neighbourhood per state; one worker reached 14 GB). The fix stores diffs instead, and gives
+  results identical to `healing.py` on the original road. A third attempt hit a 2.5 h timeout and
+  lost everything, because results were only written at the end; the run is now incremental.
+- **The last road** (0, −2) used a strict per-state cap: its 38-vertex knot made one search level
+  run 6 h and 5 GB before it was stopped. Its knot is labelled "not healed within 400,000
+  states", and nothing stronger is claimed.
+- **The window test.** The original road equals D4's road (0, 0); its knots were first counted
+  twice, and this is now fixed. The window is estimated as the convex hull per layer.
+- **Legality** means star shapes only, without matching arrows.
+
 ## Honest notes
 
 - **Bug in the first run, fixed.** The walker's path was set in *grid* units, while tiles sit
@@ -113,4 +171,7 @@ python3 push_scan.py        # exploratory scan of push sizes; results/push_scan.
 python3 make_figure.py      # figures/writing_walker.png
 python3 healing.py          # pre-registered healing test (~10 min); results/healing_report.txt
 python3 healing_undo.py     # exploratory: undo-only healing; results/healing_undo.txt
+python3 decapod.py          # D1-D3 (D3 takes ~45 min); D4 is run incrementally by decapod_d4.py (hours)
+python3 decapod_d4.py --summary
+python3 window_test.py      # the window test on all D4 knots
 ```

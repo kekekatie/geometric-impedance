@@ -1,2 +1,7 @@
 knot size 4 at t=+23.6: HEALED d=1 ring=False (0s)
 knot size 4 at t=-23.6: HEALED d=1 ring=False (0s)
+knot size 14 at t=-17.1: HEALED d=4 ring=False (653s)
+knot size 14 at t=+17.1: HEALED d=4 ring=False (651s)
+knot size 38 at t=+0.0: stubborn ring=False (2606s)
+appended road (0,-2)
+exit=0
