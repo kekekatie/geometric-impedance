@@ -1,0 +1,13 @@
+================================================================================================
+DECAPOD TEST -- is the walker's stubborn centre knot a bad (unfillable) decagon?
+================================================================================================
+  [PASS] the generalised road builder reproduces the original walker exactly on its own road
+  pristine centre decagon: 62 fillings reachable by interior flips; legal: 1
+  [PASS] D1: the pristine centre decagon has at least one legal filling
+  walker push 0.2: 62 fillings of the centre decagon reachable; legal: 0
+  walker push 0.05: 62 fillings of the centre decagon reachable; legal: 0
+  D2: HELD    no filling of the centre decagon is legal once the walker has passed (push 0.2 and 0.05)
+  wide search (radius 3, cap 500,000): not healed; 500000 states explored, deepest level 12
+  D3: HELD    the centre knot does not heal with flips anywhere within radius 3 (500000 states)
+
+[run stopped by hand at the D4 stage: the worker pool hung (workers restarted repeatedly, idle at 0% CPU), most likely because they were forked from a parent holding ~1.1 GB of D3 search state. D1-D3 above are complete. D4 rerun in a fresh process: decapod_d4.py -> results/decapod_d4.log]

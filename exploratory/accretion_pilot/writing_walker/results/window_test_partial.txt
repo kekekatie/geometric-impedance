@@ -1,0 +1,18 @@
+PARTIAL: 17 D4 roads + the original road; knots: 105 (stubborn 11, healed 94); knot vertices in a layer missing from the window: 0
+   J0 C+3      size 12  STUBBORN  out = 0.2016
+   J0 C+3      size 12  STUBBORN  out = 0.2016
+   J1 C+3      size 12  STUBBORN  out = 0.1631
+   J1 C+3      size 12  STUBBORN  out = 0.1631
+   J1 C+3      size 18  STUBBORN  out = 0.1631
+   J0 C+0      size 12  STUBBORN  out = 0.0623
+   J1 C-2      size 16  STUBBORN  out = 0.0385
+   J0 C-4      size 21  STUBBORN  out = 0.0000
+   J0 C+3      size 15  STUBBORN  out = 0.0000
+   J0 C+3      size 15  STUBBORN  out = 0.0000
+   J1 C+3      size 15  STUBBORN  out = 0.0000
+   J1 C-2      size 12  healed    out = 0.2639
+   J0 C+0      size  7  healed    out = 0.1393
+   J0 C+0      size  7  healed    out = 0.1393
+   mean out: stubborn 0.0903, healed 0.0156
+  Wn1: HELD    stubborn knots lie further outside the window: one-sided Mann-Whitney p = 0.0001 (AUC 0.76; need p < 0.05)
+  Wn2 (reported): AUC of 'out' 0.76; AUC of knot size 0.91 (p = 0.0000)
