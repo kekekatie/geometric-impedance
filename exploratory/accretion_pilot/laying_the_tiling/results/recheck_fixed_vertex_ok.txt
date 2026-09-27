@@ -1,0 +1,5 @@
+LOCAL-DICE: jammed 30/30 (tiles before jam: [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 17, 17, 17, 17, 17, 24, 25, 29, 233, 235, 245, 249]); reached 500: 0; agreement min 75.1%, exact 0/30; guesses [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+LOCAL-FORCED: jammed 0/30 (tiles before jam: []); reached 500: 30; agreement min 78.9%, exact 0/30; guesses [3, 2, 3, 3, 4, 4, 2, 4, 3, 2, 3, 2, 3, 4, 3, 4, 3, 2, 3, 2, 4, 3, 3, 3, 4, 3, 2, 3, 4, 3]
+COPY from the centre: 14 half-tiles, ended ILLEGAL, agreement 93.8%
+SCALE from the centre: 500 half-tiles, ended ok, agreement 100.0%
+WRONGSCALE from the centre: 0 half-tiles, ended NOTHING, agreement 100.0%

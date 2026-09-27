@@ -94,6 +94,23 @@ nearest its inner end.
 - **Numerical tolerance.** Geometry is floating point with a 10⁻⁶ tolerance. Legality is checked
   combinatorially against the learned atlas.
 
+## A bug found later, and a re-check (2026-09-28)
+
+The soft-zone study ([`../soft_zone/`](../soft_zone/)) found a bug in `Patch.vertex_ok`. It wraps
+the gap between consecutive corners at a vertex into (−π, π], so a gap **wider than π** is misread as
+an overlap, and a legal partial star is rejected. Holes create such gaps constantly; outward growth
+almost never does.
+
+**Re-check:** `recheck_fixed_vertex_ok.py` re-runs the main arms with the corrected check, same
+seeds. The output (`results/recheck_fixed_vertex_ok.txt`) is **identical in every number**:
+- LOCAL-DICE jams 30/30, median 14 tiles;
+- LOCAL-FORCED jams 0/30, with 2–4 guesses per run;
+- COPY is illegal after 14 tiles;
+- SCALE gives 500 tiles at 100%;
+- WRONGSCALE produces nothing.
+
+The results above stand.
+
 ## Reproduce
 
 ```bash
