@@ -1,0 +1,103 @@
+roads complete: 16/18
+    road family 0 line -4: knot at t=  +0.0 size 21 stubborn    decagon ring: False
+    road family 0 line -4: knot at t= +17.1 size 15 HEALED d=4  decagon ring: False
+    road family 0 line -4: knot at t= -17.1 size 15 HEALED d=4  decagon ring: False
+    road family 0 line -3: knot at t=  -3.9 size 11 HEALED d=3  decagon ring: False
+    road family 0 line -3: knot at t=  -9.8 size  4 HEALED d=1  decagon ring: False
+    road family 0 line -3: knot at t= -17.1 size  8 HEALED d=2  decagon ring: False
+    road family 0 line -3: knot at t=  +9.8 size  4 HEALED d=1  decagon ring: False
+    road family 0 line -3: knot at t= +17.1 size  8 HEALED d=2  decagon ring: False
+    road family 0 line -3: knot at t=  +3.9 size 11 HEALED d=3  decagon ring: False
+    road family 0 line -3: knot at t= -24.1 size  3 HEALED d=1  decagon ring: False
+    road family 0 line -3: knot at t= +24.1 size  3 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t=  -8.5 size  8 HEALED d=2  decagon ring: False
+    road family 0 line -1: knot at t= +13.8 size  4 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t=  +8.5 size  8 HEALED d=2  decagon ring: False
+    road family 0 line -1: knot at t= +20.3 size  4 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t=  +0.0 size 15 HEALED d=4  decagon ring: False
+    road family 0 line -1: knot at t= +24.1 size  3 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t= -20.3 size  4 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t= -24.1 size  3 HEALED d=1  decagon ring: False
+    road family 0 line -1: knot at t= -13.8 size  4 HEALED d=1  decagon ring: False
+    road family 0 line +0: knot at t= +13.4 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +0: knot at t= +20.7 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +0: knot at t=  +0.0 size 12 stubborn    decagon ring: True
+    road family 0 line +0: knot at t= -13.4 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +0: knot at t=  -8.2 size  4 HEALED d=1  decagon ring: False
+    road family 0 line +0: knot at t= -20.7 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +0: knot at t=  +8.2 size  4 HEALED d=1  decagon ring: False
+    road family 0 line +1: knot at t= -10.6 size  8 HEALED d=2  decagon ring: False
+    road family 0 line +1: knot at t=  -0.0 size 15 HEALED d=4  decagon ring: False
+    road family 0 line +1: knot at t= +10.6 size  8 HEALED d=2  decagon ring: False
+    road family 0 line +1: knot at t= +22.4 size  5 HEALED d=2  decagon ring: False
+    road family 0 line +1: knot at t= +17.1 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +1: knot at t= -17.1 size  7 HEALED d=2  decagon ring: False
+    road family 0 line +1: knot at t= -22.4 size  5 HEALED d=2  decagon ring: False
+    road family 0 line +2: knot at t= -10.6 size 15 HEALED d=4  decagon ring: False
+    road family 0 line +2: knot at t= +10.6 size 15 HEALED d=4  decagon ring: False
+    road family 0 line +2: knot at t=  -0.0 size  8 HEALED d=2  decagon ring: False
+    road family 0 line +2: knot at t= -22.1 size 10 HEALED d=3  decagon ring: False
+    road family 0 line +2: knot at t= +22.1 size 10 HEALED d=3  decagon ring: False
+    road family 0 line +3: knot at t= -21.9 size 12 stubborn    decagon ring: False
+    road family 0 line +3: knot at t=  -0.0 size 14 HEALED d=4  decagon ring: False
+    road family 0 line +3: knot at t= +10.6 size 15 stubborn    decagon ring: False
+    road family 0 line +3: knot at t= -10.6 size 15 stubborn    decagon ring: False
+    road family 0 line +3: knot at t= +21.9 size 12 stubborn    decagon ring: False
+    road family 0 line +4: knot at t= +10.6 size 15 HEALED d=4  decagon ring: False
+    road family 0 line +4: knot at t=  -3.3 size  4 HEALED d=1  decagon ring: False
+    road family 0 line +4: knot at t= -10.6 size 15 HEALED d=4  decagon ring: False
+    road family 0 line +4: knot at t= +23.3 size  6 HEALED d=2  decagon ring: False
+    road family 0 line +4: knot at t=  +3.3 size  4 HEALED d=1  decagon ring: False
+    road family 0 line +4: knot at t= -23.3 size  6 HEALED d=2  decagon ring: False
+    road family 1 line -4: knot at t= +18.2 size 11 HEALED d=3  decagon ring: False
+    road family 1 line -4: knot at t=  +0.0 size  7 HEALED d=2  decagon ring: False
+    road family 1 line -4: knot at t=  -4.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -4: knot at t= -17.1 size 15 HEALED d=4  decagon ring: False
+    road family 1 line -4: knot at t=  +4.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -3: knot at t=  -4.5 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -3: knot at t=  +4.5 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -3: knot at t= -24.1 size  3 HEALED d=1  decagon ring: False
+    road family 1 line -3: knot at t= +17.1 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -3: knot at t= -17.1 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -3: knot at t=  -9.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -3: knot at t= +24.1 size  3 HEALED d=1  decagon ring: False
+    road family 1 line -2: knot at t=  +4.7 size 12 HEALED d=4  decagon ring: False
+    road family 1 line -2: knot at t= +17.1 size 14 HEALED d=4  decagon ring: False
+    road family 1 line -2: knot at t= +10.6 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -2: knot at t= -17.1 size 14 HEALED d=4  decagon ring: False
+    road family 1 line -2: knot at t=  -6.5 size 16 stubborn    decagon ring: False
+    road family 1 line -2: knot at t= +23.6 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -2: knot at t= -23.6 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t=  +8.5 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -1: knot at t= -20.3 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t=  -3.3 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t=  -8.5 size  8 HEALED d=2  decagon ring: False
+    road family 1 line -1: knot at t= +20.3 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t= +13.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t= -13.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t= -24.1 size  3 HEALED d=1  decagon ring: False
+    road family 1 line -1: knot at t= +24.1 size  3 HEALED d=1  decagon ring: False
+    road family 1 line +0: knot at t= +13.4 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +0: knot at t=  +8.2 size  4 HEALED d=1  decagon ring: False
+    road family 1 line +0: knot at t= +20.7 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +0: knot at t= -13.4 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +0: knot at t= -20.7 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +0: knot at t=  +0.8 size  4 HEALED d=1  decagon ring: False
+    road family 1 line +0: knot at t=  -8.2 size  4 HEALED d=1  decagon ring: False
+    road family 1 line +1: knot at t= +17.1 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +1: knot at t= -17.1 size  7 HEALED d=2  decagon ring: False
+    road family 1 line +1: knot at t= +22.4 size  5 HEALED d=2  decagon ring: False
+    road family 1 line +1: knot at t= -10.6 size  8 HEALED d=2  decagon ring: False
+    road family 1 line +1: knot at t= +10.6 size  8 HEALED d=2  decagon ring: False
+    road family 1 line +1: knot at t=  +3.3 size  4 HEALED d=1  decagon ring: False
+    road family 1 line +1: knot at t= -22.4 size  5 HEALED d=2  decagon ring: False
+    road family 1 line +2: knot at t= -22.1 size 10 HEALED d=3  decagon ring: False
+    road family 1 line +2: knot at t= +10.6 size 15 HEALED d=4  decagon ring: False
+    road family 1 line +2: knot at t= -11.7 size 11 HEALED d=3  decagon ring: False
+    road family 1 line +2: knot at t= +22.1 size 10 HEALED d=3  decagon ring: False
+    road family 1 line +4: knot at t=  -9.4 size 11 HEALED d=3  decagon ring: False
+    road family 1 line +4: knot at t= -23.3 size  6 HEALED d=2  decagon ring: False
+    road family 1 line +4: knot at t= +23.3 size  6 HEALED d=2  decagon ring: False
+    road family 1 line +4: knot at t= +10.6 size 15 HEALED d=4  decagon ring: False
+  100 knots; stubborn: 7; with decagon ring: 1; stubborn AND ring: 1
+  (partial) agreement so far: 94/100
