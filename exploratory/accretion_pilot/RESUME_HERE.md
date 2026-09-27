@@ -4,6 +4,18 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🐢 Happening density ([`happening_density/`](happening_density/))
+
+- One half of the front is throttled to a quarter speed. The **spatial** width of the now is
+  unchanged (H1 held).
+- The pre-registered "soft holes are older where quiet" (H2) failed. *Exploratory:* the back of
+  the soft band is about 3× older in the quiet half, so the now may *last longer* where little
+  happens.
+- **Surprise: 3/8 throttled runs jammed**, on the slow side, near the slow/fast line. A fast front
+  racing beside a slow one boxes it in. Equal-paced fronts always reconciled.
+- **Possible next tests:** the temporal-width claim, pre-registered properly; "unequal pace jams" as
+  its own test.
+
 ## 🤝 Relative nows ([`relative_nows/`](relative_nows/))
 
 - Two Gromit crowds that drifted into different sibling universes **always merged cleanly** when
