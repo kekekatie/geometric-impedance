@@ -15,8 +15,12 @@ rolled away.)*
 - Katie's "quiet places stay open longer" was **not seen** (a weak test).
 - A **bug** in the older `laying_the_tiling` vertex check (gaps > π) was found and fixed. Old
   results were re-checked and are identical.
-- **Next ideas:** two Gromit crowds meeting (relative nows); a proper happening-density
-  manipulation (fast versus slow fronts); holes of different sizes.
+- **Next ideas:** two Gromit crowds meeting (relative nows, running now in
+  [`relative_nows/`](relative_nows/)); a proper happening-density manipulation (fast versus slow
+  fronts); holes of different sizes.
+- **Idea (Katie):** the width of the now may set how *complex* a perception can be (the feel of a
+  cat's fur needs a thick now). A future test: do tilings with a richer hidden space (Penrose is 5-D
+  underneath; others are 8-D or 12-D) have wider soft zones?
 
 ## 🪢 2026-09-27 evening: the knots (see [`writing_walker/README.md`](writing_walker/README.md))
 
