@@ -47,4 +47,8 @@ construction and matched to D4's records by road, position and size. The origina
 
 ## Changes before the first run
 
-*(none yet)*
+1. *(2026-09-27, after a partial preview run on 17/18 roads, before the final run.)* The original
+   road *is* D4's road (family 0, line 0). Including "the original road's knots too" counted those
+   7 knots twice, so they are now taken once, from D4. The first partial preview (with the
+   duplicates) gave p = 0.0001, AUC 0.75 for `out`, and AUC 0.91 for size. It is kept in the
+   commit history.

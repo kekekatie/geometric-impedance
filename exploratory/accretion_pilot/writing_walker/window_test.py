@@ -12,6 +12,7 @@ import numpy as np
 import writing_walker as W, healing as H, decapod as D
 
 par, perp = W.par, W.PA.perp
+LAST_RECS = []
 
 
 def hull(pts):
@@ -75,10 +76,12 @@ def main(partial=False):
     T, ill, groups = H.knots_of(W.build(0.2, 30.0), atlas)
     for g, d in zip(groups, heal):
         recs.append(dict(road="orig J0 C0", knot=g, stubborn=d is None))
-    # D4 roads
+    # D4 roads (D4's road (0, 0) IS the original road: its knots are then taken from D4 only, not twice)
     done = {}
     for line in open(os.path.join(W.RES, "decapod_roads.jsonl")):
         r = json.loads(line); done[(r["J"], r["C"])] = r["rows"]
+    if (0, 0) in done:
+        recs = [r for r in recs if r["road"] != "orig J0 C0"]
     for (J, C), rows in sorted(done.items()):
         F, EJP = D.build_road(J, C, 0.2)
         types = W.star_types(F); illegal = {K for K, tp in types.items() if tp not in atlas}
@@ -108,6 +111,8 @@ def main(partial=False):
         finite_out = [max(0.0, -d) for d in ds if d != -float("inf")]
         r["out"] = float("inf") if any(d == -float("inf") for d in ds) else max(finite_out)
         r["size"] = len(r["knot"])
+    global LAST_RECS
+    LAST_RECS = recs
     stub = [r for r in recs if r["stubborn"]]; ok = [r for r in recs if not r["stubborn"]]
     lines = [f"{'PARTIAL: ' if partial else ''}{len(done)} D4 roads + the original road; knots: {len(recs)} "
              f"(stubborn {len(stub)}, healed {len(ok)}); knot vertices in a layer missing from the window: {missing}"]
