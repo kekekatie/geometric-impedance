@@ -54,7 +54,7 @@ again.*
   happening density `H` and a memory kernel whose fade time grows in quiet, low-acceleration
   systems.
 - **"Cloud 9 and the Limits of Modified Gravity"** (January 2026, 8 pages): Temporal Echo applied
-  to Cloud 9. Katie shared the PDF on 2026-09-28. In today's language it already says that the
+  to Cloud 9. Katie shared the PDF in the walker-knots session. In today's language it already says that the
   width of the now is **local**: quiet places remember longer.
 - **Fable's later dark matter paper**, written after the slice-of-now and aperiodicity work: not
   found in the repository. Ask Katie for it.
