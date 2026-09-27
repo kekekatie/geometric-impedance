@@ -1,0 +1,18 @@
+EXPLORATORY (post hoc): the jams recur at the SAME few spots, on the rim of the seed patch.
+The seed is a genuine reference patch of radius 3 edges, the same in every run.
+
+happening-density study (8 seeds, 500 tiles):
+  run 3: round 13, x = -2.01, y = +1.96 edges   |z| = 2.81
+  run 6: round 15, x = -1.24, y = +2.52 edges   |z| = 2.81
+  run 7: round 17, x = -0.48, y = +2.77 edges   |z| = 2.81
+this study (12 seeds, 1,000 tiles):
+  seed 2: round 10, x = -0.48, y = +2.77 edges  (same spot as run 7 above)
+  seed 3: round 11, x = -1.24, y = +2.52 edges  (same spot as run 6 above)
+  seed 4: round 10, x = -0.48, y = +2.77 edges  (same spot again)
+  seed 8: round 64, x = -0.48, y = -2.77 edges  (the mirror-image spot below the axis)
+
+Every jam is on the seed's rim (|z| = 2.81 edges), on the quiet side, within 2 edges of the quiet/busy
+line. So the "unequal pace jams" surprise is better described as: a few particular places on the rim of
+the seed break when the line between quiet and busy runs next to them. That is narrower than
+"unequal pace jams wherever it meets", and a proper test would move the line and the seed apart.
+Uniform growth from the same seed never jammed (soft-zone and relative-nows studies, 0/42).

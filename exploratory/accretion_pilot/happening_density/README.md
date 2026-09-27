@@ -25,6 +25,7 @@ the time.
   10.3**. So the band that makes up the now spans roughly **three times as many rounds** where
   little happens. This was not pre-registered and needs its own test. It does lean towards Katie's
   intuition: *the quiet place's now is not wider in space, but it lasts longer.*
+- *(Later correction, from [`../quiet_lasts_longer/`](../quiet_lasts_longer/): these jams recur at the same few spots on the seed patch's rim, beside the quiet/busy line. They are about particular places, not a general law. See its `results/jam_spots_EXPLORATORY.txt`.)*
 - **A surprise: unequal happening density jams the growth.** 3 of 8 throttled runs jammed early
   (rounds 13–17). Uniform-speed growth never jammed in any earlier study (0 of 42 runs). *Exploratory
   (`results/jam_locations_EXPLORATORY.txt`):* all three jams lie **on the slow side, within about

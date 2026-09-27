@@ -4,6 +4,18 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ⏳ Does the now last longer where quiet? ([`quiet_lasts_longer/`](quiet_lasts_longer/))
+
+- Fixed spots are followed through time, and their lifetimes are counted on two clocks.
+- **Q1 held:** the now lasts about **2×** longer where quiet, counted in universal rounds (p = 0.0001).
+- **Q2 held:** counted in local happenings, the two halves are about the same (a ratio of 1.33).
+- **Q0 (the manipulation check) failed:** the quiet half was only 0.69× as busy, where < 0.6 was
+  needed.
+- *Exploratory:* almost all of a spot's time in the now is the time it takes to be laid. A quiet
+  place takes longer to finish happening.
+- *Correction:* the throttled-run jams recur at the **same few spots on the seed's rim**, beside the
+  quiet/busy line. They are about particular places, not a general "unequal pace jams" law.
+
 ## 🐢 Happening density ([`happening_density/`](happening_density/))
 
 - One half of the front is throttled to a quarter speed. The **spatial** width of the now is
