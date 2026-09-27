@@ -1,0 +1,60 @@
+runs: 6 (ok/51rounds/3guesses, ok/56rounds/3guesses, ok/50rounds/2guesses, ok/76rounds/5guesses, ok/43rounds/2guesses, ok/56rounds/3guesses); holes: 160
+  distance 0-1 edges:  36 holes, freedom F = 0.39, attempts jammed 0%, mean age 15.8 rounds
+  distance 1-2 edges:  36 holes, freedom F = 0.22, attempts jammed 0%, mean age 22.4 rounds
+  distance 2-3 edges:  36 holes, freedom F = 0.00, attempts jammed 0%, mean age 26.4 rounds
+  distance 3-4 edges:  32 holes, freedom F = 0.00, attempts jammed 0%, mean age 34.3 rounds
+  distance 4-6 edges:  20 holes, freedom F = 0.00, attempts jammed 0%, mean age 40.6 rounds
+  S1: FAILED  F at the front 0.39 (need >= 0.5), F deepest 0.00 (need <= 0.1)
+  S2: HELD    freedom narrows with depth: 0.39, 0.22, 0.00, 0.00, 0.00
+  S3: FAILED  quiet places stay open longer: mean (H hardened - H soft) within bins = -0.020, permutation p = 0.5852 (2 usable bins)
+  width of the now (first bin with F < 0.1): 2-3 edges
+    by age   2 rounds:   3 holes, F = 0.33
+    by age   3 rounds:   9 holes, F = 0.33
+    by age   4 rounds:   3 holes, F = 0.00
+    by age   5 rounds:   3 holes, F = 0.33
+    by age   6 rounds:   3 holes, F = 0.00
+    by age   7 rounds:   3 holes, F = 0.33
+    by age   8 rounds:   2 holes, F = 0.00
+    by age   9 rounds:   3 holes, F = 0.00
+    by age  10 rounds:   4 holes, F = 0.00
+    by age  11 rounds:   1 holes, F = 0.00
+    by age  12 rounds:   3 holes, F = 0.67
+    by age  13 rounds:   5 holes, F = 0.20
+    by age  14 rounds:   1 holes, F = 0.00
+    by age  15 rounds:   1 holes, F = 0.00
+    by age  16 rounds:   2 holes, F = 0.50
+    by age  17 rounds:   3 holes, F = 0.33
+    by age  18 rounds:   4 holes, F = 0.25
+    by age  20 rounds:   2 holes, F = 0.00
+    by age  22 rounds:   6 holes, F = 0.33
+    by age  23 rounds:   4 holes, F = 0.00
+    by age  24 rounds:   4 holes, F = 0.25
+    by age  25 rounds:   2 holes, F = 0.00
+    by age  26 rounds:   4 holes, F = 0.25
+    by age  27 rounds:   3 holes, F = 0.00
+    by age  28 rounds:   2 holes, F = 0.00
+    by age  29 rounds:   2 holes, F = 0.50
+    by age  30 rounds:   3 holes, F = 0.33
+    by age  31 rounds:   5 holes, F = 0.00
+    by age  32 rounds:   7 holes, F = 0.00
+    by age  33 rounds:   8 holes, F = 0.00
+    by age  34 rounds:   2 holes, F = 0.50
+    by age  35 rounds:   3 holes, F = 0.00
+    by age  36 rounds:   6 holes, F = 0.17
+    by age  37 rounds:   4 holes, F = 0.00
+    by age  38 rounds:   5 holes, F = 0.00
+    by age  39 rounds:   5 holes, F = 0.20
+    by age  40 rounds:   8 holes, F = 0.00
+    by age  41 rounds:   2 holes, F = 0.00
+    by age  42 rounds:   4 holes, F = 0.00
+    by age  43 rounds:   3 holes, F = 0.00
+    by age  44 rounds:   3 holes, F = 0.00
+    by age  47 rounds:   2 holes, F = 0.50
+    by age  52 rounds:   1 holes, F = 0.00
+    by age  55 rounds:   1 holes, F = 0.00
+    by age  56 rounds:   1 holes, F = 0.00
+    by age  58 rounds:   1 holes, F = 0.00
+    by age  59 rounds:   1 holes, F = 0.00
+    by age  60 rounds:   1 holes, F = 0.00
+    by age  61 rounds:   1 holes, F = 0.00
+    by age  65 rounds:   1 holes, F = 0.00

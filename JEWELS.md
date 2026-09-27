@@ -44,6 +44,32 @@ again.*
 - `claude/world-growth-pilot-cy85ne`: the accretion pilot's earlier history (now merged into
   `master` under `exploratory/`).
 
+## Jewels outside the repository (known to exist; not in any branch)
+
+- **"Happening density" and "relative nows"**: early conversations (before the slice-of-now and
+  aperiodicity work), including a hunt for where the local ends and the universal starts. Not
+  found in any branch; they live in old chats.
+- **The Temporal Echo hypothesis** (Niedzwiecki 2025a, Zenodo, DOI `10.5281/zenodo.17718939`):
+  apparent dark matter as integrated dynamical history, `M_eff = M_b + ∫ H(t′) K(t − t′) dt′`, with
+  happening density `H` and a memory kernel whose fade time grows in quiet, low-acceleration
+  systems.
+- **"Cloud 9 and the Limits of Modified Gravity"** (January 2026, 8 pages): Temporal Echo applied
+  to Cloud 9. Katie shared the PDF in the walker-knots session. In today's language it already says that the
+  width of the now is **local**: quiet places remember longer.
+- **"Where the Universe Remembers: A Geometric-Memory Reading of Dark Matter"** (July 2026;
+  Fable's passion project, written after the slice-of-now and aperiodicity work). **It *is* on
+  `master`**, as `where-the-universe-remembers.html` at the repo root; an earlier search missed it
+  by filename.
+  - Theorem 1 ("perfection cannot remember") and Theorem 2 ("imperfection must remember, at a
+    quantum equal to its misfit").
+  - The address/weave spectrum in the sky: Cloud 9, DGSAT I, DF2/DF4/FCC 224, and the Bullet
+    Cluster.
+  - Three documented negative results, and one pre-registered cluster-offset prediction
+    (`doi:10.5281/zenodo.21211483`).
+  - Programme papers cited there: *Where Memory Can Live: A Taxonomy of Persistence*
+    (`10.5281/zenodo.21200994`), *Address or Weave* (`10.5281/zenodo.20322776`), *Silent
+    Corruption* (`10.5281/zenodo.20405271`).
+
 ## Already on the front page (`master`)
 
 `exploratory/accretion_pilot/` (the accretion and tiling trail; the transmission paper),

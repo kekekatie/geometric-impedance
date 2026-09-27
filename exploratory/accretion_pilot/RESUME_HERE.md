@@ -4,6 +4,36 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🌱 The soft zone: how wide is the now? ([`soft_zone/`](soft_zone/))
+
+- Grown with a **ring of Gromits** (parallel rounds, full matching rules). Holes are poked
+  behind the front and re-laid.
+- **The now is about 2 tile-edges wide:** freedom 0.39 → 0.22 → 0, and 0/88 holes deeper than 2
+  edges are soft.
+- **The now is a place, not a time:** old tiles still at the front stay soft (27%); young
+  surrounded ones are hard (0%).
+- Katie's "quiet places stay open longer" was **not seen** (a weak test).
+- A **bug** in the older `laying_the_tiling` vertex check (gaps > π) was found and fixed. Old
+  results were re-checked and are identical.
+- **Next ideas:** two Gromit crowds meeting (relative nows); a proper happening-density
+  manipulation (fast versus slow fronts); holes of different sizes.
+
+## 🪢 2026-09-27 evening: the knots (see [`writing_walker/README.md`](writing_walker/README.md))
+
+- **The centre knot is a bad-decapod-like defect.** 62 fillings; 1 legal in the pristine tiling,
+  0 after the walker.
+- **But 10 of the 12 stuck knots on 18 roads have no decagon ring.**
+- **Window ("shaft of light"):** stuck knots lie further outside the window. Size predicts
+  better. Medium knots are where the window matters most.
+- **A jewel's correction:** these knots are locally trapped, not topologically conserved.
+- **`JEWELS.md` (repo root)** indexes the earlier work on other branches. Read it before chasing
+  anything old.
+- **Open next (Katie picks):**
+  - what decides which big knots get stuck;
+  - why the centre (the mirror line) gathers the biggest trouble;
+  - the devil's-staircase scaling of the walker's steps;
+  - the perp-space paper, later, once the understanding is there.
+
 ## 💬 Open conversation with Katie (2026-09-27): walking around the *whys*
 
 - **Quantisation from fit, not from pixels.**
