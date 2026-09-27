@@ -1,0 +1,44 @@
+TWO-LOCAL: 12 runs; jammed 0; fronts met (>=10 interface edges) 12; merged (met and ok) 12; guesses per run [2, 2, 2, 2, 3, 2, 2, 3, 3, 3, 3, 2]
+    run  2: ok   tiles 1192 interface  22 agree {'1': 0.855, '2': 0.842} near-interface {'2': 0.798, '1': 0.814}
+    run  3: ok   tiles 1192 interface  24 agree {'1': 0.906, '2': 0.828} near-interface {'2': 0.8}
+    run  0: ok   tiles 1192 interface  24 agree {'1': 0.906, '2': 0.828} near-interface {'2': 0.8}
+    run  1: ok   tiles 1192 interface  24 agree {'1': 0.906, '2': 0.828} near-interface {'2': 0.8}
+    run  4: ok   tiles 1192 interface  21 agree {'1': 0.787, '2': 0.77} near-interface {'2': 0.704, '1': 0.458}
+    run  5: ok   tiles 1192 interface  22 agree {'1': 0.855, '2': 0.842} near-interface {'2': 0.798, '1': 0.814}
+    run  7: ok   tiles 1192 interface  22 agree {'1': 0.855, '2': 0.842} near-interface {'2': 0.798, '1': 0.814}
+    run  6: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  8: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  9: ok   tiles 1192 interface  23 agree {'1': 0.882, '2': 0.978} near-interface {'2': 0.944, '1': 0.778}
+    run 10: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run 11: ok   tiles 1192 interface  24 agree {'1': 0.906, '2': 0.828} near-interface {'2': 0.8}
+TWO-ORACLE: 12 runs; jammed 0; fronts met (>=10 interface edges) 12; merged (met and ok) 12; guesses per run [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    run  0: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  1: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  2: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  3: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  4: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  5: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  6: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  7: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  8: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run  9: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run 10: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+    run 11: ok   tiles 1192 interface  22 agree {'1': 1.0, '2': 1.0} near-interface {'2': 1.0, '1': 1.0}
+ONE-LOCAL: 12 runs; jammed 0; fronts met (>=10 interface edges) 0; merged (met and ok) 0; guesses per run [2, 2, 2, 2, 2, 3, 3, 2, 3, 2, 3, 5]
+    run  0: ok   tiles 1146 interface   0 agree {'1': 0.75} near-interface {'1': 0.684}
+    run  1: ok   tiles 1146 interface   0 agree {'1': 0.75} near-interface {'1': 0.684}
+    run  2: ok   tiles 1146 interface   0 agree {'1': 1.0} near-interface {'1': 1.0}
+    run  3: ok   tiles 1146 interface   0 agree {'1': 0.75} near-interface {'1': 0.684}
+    run  5: ok   tiles 1146 interface   0 agree {'1': 1.0} near-interface {'1': 1.0}
+    run  6: ok   tiles 1146 interface   0 agree {'1': 0.62} near-interface {'1': 0.562}
+    run  4: ok   tiles 1146 interface   0 agree {'1': 0.938} near-interface {'1': 0.964}
+    run  7: ok   tiles 1146 interface   0 agree {'1': 1.0} near-interface {'1': 1.0}
+    run  8: ok   tiles 1146 interface   0 agree {'1': 0.62} near-interface {'1': 0.562}
+    run 11: ok   tiles 1146 interface   0 agree {'1': 0.75} near-interface {'1': 0.684}
+    run 10: ok   tiles 1146 interface   0 agree {'1': 0.62} near-interface {'1': 0.562}
+    run  9: ok   tiles 1146 interface   0 agree {'1': 0.743} near-interface {'1': 0.715}
+  M1: HELD    TWO-ORACLE never jams and agrees with the reference everywhere
+  M2: HELD    ONE-LOCAL never jams (0/12 jammed)
+  M3: FAILED  TWO-LOCAL jams in >= 6/12 runs (0/12)
+  M4: FAILED  TWO-LOCAL jams lie in the meeting zone (|x| < 3 edges): []
+  soft repair of TWO-LOCAL seams: 0/0 repaired
