@@ -1,0 +1,11 @@
+h = 0.5: jams 8/8; statuses ['JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM']; median SS nan (n = 0; []); guesses [10, 10, 10, 10, 10, 11, 10, 10]; max simultaneous guesses [10, 10, 10, 10, 10, 10, 10, 10]; rounds [3, 3, 3, 3, 3, 9, 3, 3]; jam radii [2.8, 2.8, 2.8, 2.8, 2.8, 5.3, 2.8, 2.8]
+h = 1: jams 8/8; statuses ['JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM']; median SS nan (n = 0; []); guesses [10, 10, 10, 10, 10, 10, 10, 10]; max simultaneous guesses [10, 10, 10, 10, 10, 10, 10, 10]; rounds [3, 3, 3, 3, 3, 3, 3, 3]; jam radii [2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8, 2.8]
+h = 2: jams 8/8; statuses ['JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM']; median SS 0.21 (n = 1; [0.21]); guesses [5, 5, 5, 11, 5, 5, 5, 5]; max simultaneous guesses [5, 5, 5, 5, 5, 5, 5, 5]; rounds [4, 4, 4, 21, 4, 4, 4, 4]; jam radii [2.8, 2.8, 2.8, 8.4, 2.8, 2.8, 2.8, 2.8]
+h = 3: jams 8/8; statuses ['JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM']; median SS 0.24 (n = 1; [0.24]); guesses [5, 5, 5, 10, 5, 5, 5, 5]; max simultaneous guesses [5, 5, 5, 5, 5, 5, 5, 5]; rounds [4, 4, 4, 22, 4, 4, 4, 4]; jam radii [2.8, 2.8, 2.8, 9.0, 2.8, 2.8, 2.8, 2.8]
+h = 4: jams 8/8; statuses ['JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM', 'JAM']; median SS 0.36 (n = 4; [0.24, 0.5, 0.48, 0.24]); guesses [3, 9, 3, 7, 3, 7, 3, 9]; max simultaneous guesses [3, 4, 3, 3, 3, 3, 3, 4]; rounds [5, 27, 5, 27, 5, 27, 5, 25]; jam radii [2.8, 8.5, 2.8, 8.5, 2.8, 8.5, 2.8, 8.5]
+h = 6: jams 5/8; statuses ['ok', 'JAM', 'ok', 'JAM', 'JAM', 'JAM', 'ok', 'JAM']; median SS 0.55 (n = 8; [0.55, 0.56, 0.55, 0.41, 0.71, 0.41, 0.71, 0.56]); guesses [7, 6, 7, 8, 8, 6, 8, 6]; max simultaneous guesses [2, 2, 2, 1, 1, 1, 1, 2]; rounds [52, 35, 52, 57, 51, 45, 53, 35]; jam radii [8.5, 12.6, 12.0, 9.0, 8.5]
+h = inf: jams 0/8; statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok']; median SS 1.05 (n = 8; [0.74, 0.79, 0.74, 1.32, 1.5, 1.32, 1.5, 0.79]); guesses [3, 3, 3, 4, 3, 4, 3, 3]; max simultaneous guesses [1, 1, 1, 1, 1, 1, 1, 1]; rounds [115, 125, 115, 119, 121, 119, 121, 125]
+  H0: PASS  h = inf reproduces the patient scheduler exactly and never jams
+  H1: HELD    median SS at h = 2 0.21 vs h = inf 1.05 (need < half)
+  H2: HELD    jams at h = 0.5: 8/8 (need >= half)
+  H3: FAILED  sweet-spot horizons (h <= 4, 0 jams, SS < half of h = inf): []
