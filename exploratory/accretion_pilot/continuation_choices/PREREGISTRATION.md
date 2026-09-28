@@ -145,4 +145,29 @@ resamples, seed 2031), never over probes.
 
 ## Changes before the first run
 
-*(none yet)*
+1. **An exact-replay control (Astra's suggestion, relayed by Katie; made before any code was
+   written).** The SLOW arm throttles everything uniformly, but its order of events can still differ
+   from FAST, so it is a *different growth history*. Astra asked for a control that replays **the
+   same history** with only pauses added. It is added as a real fourth arm:
+   - **IDLE:** the FAST arm's growth, replayed exactly. FAST round `r` becomes round `4r` (all its
+     placements and any guess happen then), and rounds `4r−3 … 4r−1` pass idle.
+   - The factor 4 = 1/0.25 is fixed in advance.
+   - IDLE uses the same probes as FAST (probe selection uses its own random stream, independent of
+     the arm).
+   - Completion sampling is seeded by the probe and by the **snapshot contents** (the number of
+     tiles), not the round, so identical snapshots give identical samples.
+   - **Z3 (new, asserted).** IDLE reproduces FAST exactly: for every probe, choices and apparent
+     choices are identical, and `a`, `d`, `v` (and so T_U and T_D) are exactly 4× FAST's.
+   - **P4 is re-pointed** so that it separates the two kinds of slowing that Astra distinguished:
+     - *uniform pauses*: same history, stretched clock;
+     - *uniform throttling*: possibly a different order of events.
+
+     P4 now reads: SLOW/FAST ratio of mean T_D **≥ 1.5**, **and** the 95% bootstrap interval of the
+     SLOW/IDLE ratio of mean choices (probes with `T_U > 0`, runs resampled independently in each
+     arm) lies within **[0.75, 1.33]**. The 10-probe rule applies. The analytic idle reference under
+     "Reported without prediction" is replaced by this real arm.
+   - An extra P3-style comparison is **reported without prediction**: HALF-quiet choices against
+     IDLE. It asks whether *unequal* pacing changes the menu relative to the same history merely
+     stretched.
+   - **Patient scheduler, confirmed.** A round in which forced moves are waiting but none is placed
+     simply passes. No guess is made. This is as already specified above.
