@@ -1,5 +1,7 @@
 # A worldline body in a decapod world: does a persisting body make a field of time around it?
 
+> **Read with [`../free_fall/`](../free_fall/).** "Slow time" here means the now **arrives late**. By the *local clock* (happenings per round at the now), **both** bodies slow time nearby, the full one most. Under Einstein's maximal-proper-time rule, bodies fell (weakly) toward the **full** worldline. So "the gravity-like property is quietness" below holds only for arrival time.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*
 

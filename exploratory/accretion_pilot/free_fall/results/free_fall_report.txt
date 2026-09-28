@@ -1,0 +1,9 @@
+cases 108, usable (all arms reach r1 + delta) 108
+  CONTROL mean excursion (signed, + = away from the body line): side -3: -1.667, side +3: -0.555 edges
+QUIET: effect > 0 in 31/108, < 0 in 36, = 0 in 41; mean effect -0.534 edges; by delta 8: -0.554, 12: -0.703, 16: -0.343; |mean| vs delta exponent -0.61
+    paths touching the window edge 11; jagged (> 2 turns) 24/108
+FULL: effect > 0 in 66/108, < 0 in 42, = 0 in 0; mean effect +1.004 edges; by delta 8: +0.648, 12: +0.807, 16: +1.555; |mean| vs delta exponent 1.21
+    paths touching the window edge 2; jagged (> 2 turns) 43/108
+  F0: PASS  every free path valid (speed <= 1 edge/round, from A to B)
+  F1: FAILED  QUIET: path bulges away from the slow worldline (falls toward it): 31/108 (need >= 65%), mean -0.534
+  F2: FAILED  FULL: path bulges toward the fast highway: 42/108 (need >= 65%), mean +1.004
