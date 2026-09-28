@@ -83,4 +83,24 @@ boundary never grown).
 
 ## Changes before the first run
 
-*(none yet)*
+1. **A validation check, and a bug fix that it exposed** (before any growth run).
+   - *The check (now asserted as Q0b).* A decagon taken from the genuine reference tiling, with its
+     ring of 10 outside half-tiles, must be (a) found by the enumeration and (b) fillable.
+   - *What failed.* (b) held (1 filling), but (a) failed: the enumeration had found only 89 rings
+     (15 up to rotation), all unfillable.
+   - *The cause.* `laying_the_tiling.Patch.candidates` keys its output by `canon()`, which ignores
+     the A/B/C vertex roles. The two **mirror decorations** of an isosceles half-tile at the same
+     place therefore collapse into one, and a legal option can silently disappear.
+   - *The fix.* This study uses its own `candidates()`, identical except that it keys by tile type
+     plus the ordered vertices (`dkey`), so both decorations are kept. It is used in enumeration,
+     filling and growth. After the fix: 1,046 rings, **111 up to rotation**, and the genuine ring is
+     enumerated and fillable.
+   - *Do earlier studies need re-running?* `dedup_probe.py` (results/dedup_probe.txt) replays ordinary
+     patient growth (600 tiles) and compares both versions at every frontier edge:
+     - in **2,757** edge checks the old version hid a legal option **0 times**;
+     - of 791 "forced" edges, **0** really had two options.
+
+     So in ordinary growth, where tiles have neighbours, the mirror decoration is never legal and
+     earlier studies are unaffected. The bug only matters on nearly empty patches, like a ring
+     around an empty decagon.
+   - Nothing else changes.

@@ -1,0 +1,1 @@
+rounds 54: frontier-edge checks 2757; edges where dedup hid a legal decoration 0; forced edges 791, of which really had 2+ decorated options 0
