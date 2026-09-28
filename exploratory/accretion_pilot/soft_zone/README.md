@@ -1,5 +1,7 @@
 # The soft zone: how wide is the now at a growing front?
 
+> **Correction (2026-09-28, from [`../quiet_lasts_longer/`](../quiet_lasts_longer/), "Astra's checks"):** re-testing with a footprint check found that every "soft" hole was soft only because the refill could place tiles *outside the removed region*, into the open growth edge within reach. No hole was ever re-laid differently over the same region. So the "width of the now" measured here is mainly how far the hole's reach extends toward the open edge, and is tied to the hole size. What stands: enclosed regions have exactly one legal filling, and alternatives exist only at the open edge.
+
 Pre-registered in [`PREREGISTRATION.md`](PREREGISTRATION.md) before any code existed. The design came
 out of a conversation with Katie:
 - the now is laid by a branching crowd of Gromits at an expanding front;
