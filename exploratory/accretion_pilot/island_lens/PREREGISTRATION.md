@@ -18,7 +18,7 @@ scheduler: a guess is made only when nothing is forced anywhere), with two chang
   So in every arm the growth lays **the same tiling** (a subset of `L.REF`). Only **when** tiles are
   laid can differ. This keeps the comparison purely about time, the way gravity changes the geometry
   of time without changing the matter.
-- Growth adds **2,400** half-tiles from the usual seed patch (radius 3 edges) at the origin.
+- Growth adds **4,000** half-tiles (changed from 2,400 before the first run; see the end of this file) from the usual seed patch (radius 3 edges) at the origin.
 
 **The island** is a disc of radius `R_i = 2` edges, centred at distance **6.5 edges** from the origin
 in direction `θ_k = 2πk/8 + 0.2`, for k = 0 … 7 (8 runs per arm).
@@ -34,7 +34,7 @@ in direction `θ_k = 2πk/8 + 0.2`, for k = 0 … 7 (8 runs per arm).
   - Frontier edges of island tiles are not grown until any grown or seed tile shares a vertex with an
     island tile.
   - From then on the island is part of the patch.
-  - Island tiles do not count toward the 2,400.
+  - Island tiles do not count toward the total.
 
 **Arrival time** `T(x)`: the round in which the tile covering point `x` was laid. This is when the
 now reaches `x`. The **delay** is `Δ(x) = T_arm(x) − T_CONTROL(x)`, at the same point in the same
@@ -102,4 +102,12 @@ A tiny fixed offset keeps points off tile edges.
 
 ## Changes before the first run
 
-*(none yet)*
+1. **Growth size 2,400 → 4,000 half-tiles** (before any study run).
+   - *What I tried.* I smoke-tested the CONTROL, QUIET and FULL growth at a **practice island
+     direction**, `π/8 + 1.5` rad. That is not one of the 8 study directions, and no delays were
+     computed.
+   - *What it showed.* The front grows unevenly. At 2,400 tiles its nearest point was only 8.3 edges
+     from the origin, so the 18 "far" sample points (up to 12.0 edges out) were uncovered. At 3,400
+     tiles everything was covered, with the front's nearest point at 12.1 edges.
+   - *The fix.* 4,000 tiles gives a margin. G0 (every sample point covered) is unchanged.
+   - Nothing else changes.
