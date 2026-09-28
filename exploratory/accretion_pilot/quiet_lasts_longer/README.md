@@ -1,5 +1,7 @@
 # Does the now last longer where it is quiet?
 
+> **Read the section "Astra's checks" below first.** Post hoc checks showed that "soft" always meant "the open edge could continue differently", never "this region could be rearranged". They also showed that the throttled-run jams were caused by the scheduler.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md). It includes one logged change, made before the first real
 run.*
@@ -77,6 +79,86 @@ so.
 - So "unequal pace jams" is too broad. It is better stated as: *particular weak spots on the seed's
   rim break when the quiet/busy line runs beside them.* That is still interesting, because
   equal-paced growth never breaks there (0/42). But it is about specific places, not a general law.
+
+## Astra's checks: two big corrections (post hoc, 2026-09-28)
+
+Astra read this study and raised four issues. I checked three of them directly
+([`astra_checks.py`](astra_checks.py), [`results/astra_checks_EXPLORATORY.txt`](results/astra_checks_EXPLORATORY.txt)).
+Two of them change what the soft-zone line of studies means.
+
+**1. What "soft" measured: always the open edge, never a rearrangement.**
+
+- The refill counts a hole as re-laid once enough *area* is placed. It never checks that the new
+  tiles cover the *same region*.
+- I re-ran every softness test and sorted each alternative into two kinds:
+  - **same footprint**: a genuine rearrangement of the same region;
+  - **different footprint**: tiles placed somewhere else within reach, typically outward into the
+    still-open edge.
+- Result, over 3,816 tests: **not a single same-footprint alternative, ever.** This holds during
+  construction and after completion, in both halves.
+- Every "soft" result, in this study and (by the same code) in the soft-zone and happening-density
+  studies, meant **"the growth could have continued differently at the open edge within reach of
+  this hole."** It never meant "this region could have been laid differently."
+- That fits the decapod result: of 62 fillings of the unit decagon, only 1 is legal. **Once a small
+  region is enclosed, the matching rules leave it exactly one filling.**
+- Consequences:
+  - The "~2 tile-edge width of the now" is largely **how close the hole's reach (1.2 + 0.25 edges)
+    comes to the open edge**. It is not an independent property of the now.
+  - "The spatial width is the same in quiet and busy places" (happening-density H1) is therefore
+    close to automatic.
+  - "The now lasts longer where quiet" (Q1) becomes: **the open edge stays near a spot for longer
+    where growth is throttled.** That is real (8/8 runs, see below), but it is mostly a direct
+    consequence of the throttle.
+  - Strict lifetime (same-footprint alternatives only) is **0 for every probe**, in both halves.
+- *Caveat:* for a few alternatives found after a disc was complete, I could not see an open outer
+  edge by my quick check. The most likely reason is disc tiles sitting on the front itself, whose
+  open edges my check filtered out. I have not fully verified this.
+
+**2. The jams were made by the scheduler, not by unequal pace.**
+
+- The growth routine makes a guess whenever nothing was placed in a round. That includes rounds
+  where forced tiles existed but the throttle skipped them.
+- Such "impatient" guesses made up most of the guesses: for example, 13 of 14 in one seed.
+- I regrew every seed from both studies with a **WAIT** scheduler, which lets the round pass instead
+  of guessing while forced moves are pending.
+- Result: **0/20 jams**, against 7/20 with the original scheduler. Every jam was caused by guessing
+  while a forced move was waiting.
+- The "unequal pace jams" surprise, and its narrowed "weak spots on the seed rim" version, are both
+  **withdrawn**. What remains true is narrower: *guessing when you didn't need to, next to a forced
+  move, breaks the tiling.*
+
+**3. Uncertainty by run, not by probe.**
+
+- Probes within a run share one grown patch, so the probe-level p = 0.0001 overstates independence.
+- Per run, the quiet half's mean lifetime is longer in **8/8** completed runs: sign test p = 0.0039,
+  exact sign-flip p = 0.0039.
+- The per-run ratio is 2.28 (bootstrap 95% interval 1.70–2.91).
+- The local-clock ratio per run is **1.38 (95% interval 1.21–1.56)**. Its interval excludes 1, so
+  **the two halves are not equal on the local clock either**. Passing the 0.67–1.5 tolerance did not
+  establish equality, as Astra pointed out.
+- All of this is conditional on growth completing: the 4 jammed seeds contribute no probes.
+
+**4. Construction vs after completion** (already in the exploratory file above, now given its due).
+
+- First tile → disc complete: 38.5 rounds (quiet) against 18.5 (busy).
+- Complete → last alternative: about 1 round, and those alternatives are all outward-edge ones (point 1).
+
+**Where this leaves us.** What survives:
+
+- *enclosed regions are fixed (a unique filling);*
+- *alternatives exist only at the open edge;*
+- *a throttled region keeps its open edge for longer.*
+
+The first two agree with Katie's rule that the past is never altered, and that alternatives are
+alternative *presents*, meaning continuations. The next study should measure that directly. It needs
+three things:
+
+- a target region with an explicit boundary condition;
+- the WAIT scheduler;
+- a **uniform-slowdown control** (the same placements with idle rounds inserted), as Astra proposes.
+
+It can then ask Astra's sharper question: *does quietness only prolong the opportunity, or does it
+change which continuations are possible?*
 
 ## Limits
 

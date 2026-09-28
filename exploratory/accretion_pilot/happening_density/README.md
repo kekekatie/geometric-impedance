@@ -1,5 +1,7 @@
 # Happening density: does a quiet place have a wider now?
 
+> **Correction (2026-09-28, from [`../quiet_lasts_longer/`](../quiet_lasts_longer/), "Astra's checks"):** re-testing with a footprint check found that every "soft" hole was soft only because the refill could place tiles *outside the removed region*, into the open growth edge within reach. No hole was ever re-laid differently over the same region. So H1 (same spatial width) is close to automatic. The jams were also traced to the scheduler guessing while throttled forced moves were pending: a WAIT scheduler gives 0 jams. The "unequal pace jams" surprise is withdrawn.
+
 Pre-registered in [`PREREGISTRATION.md`](PREREGISTRATION.md) before any code existed. Katie asked:
 *"If I am a point in distant space, light years from anything, what is my local width of now?"* In
 the soft-zone study ([`../soft_zone/`](../soft_zone/)) happening density was only observed. Here it

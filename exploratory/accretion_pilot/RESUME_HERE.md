@@ -4,6 +4,20 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🔍 Astra's checks (2026-09-28): two big corrections
+
+- **"Soft" was always the open edge, never a rearrangement.** 0 same-footprint alternatives in 3,816
+  tests. Enclosed small regions have exactly one filling. The "2-edge width of the now" is mostly the
+  probe's reach.
+- **The jams were caused by the scheduler** guessing while throttled forced moves were pending. A
+  WAIT scheduler gives 0/20 jams. The "unequal pace jams" surprise is withdrawn.
+- By run: quiet is longer in 8/8 runs (p = 0.0039). The local clock is *not* equal (a ratio of 1.38,
+  95% interval 1.21–1.56).
+- **Next:**
+  - an explicit target region with a boundary condition, plus the WAIT scheduler, plus a
+    uniform-slowdown control;
+  - then: does quietness change *which* continuations are possible, or only for how long?
+
 ## ⏳ Does the now last longer where quiet? ([`quiet_lasts_longer/`](quiet_lasts_longer/))
 
 - Fixed spots are followed through time, and their lifetimes are counted on two clocks.
