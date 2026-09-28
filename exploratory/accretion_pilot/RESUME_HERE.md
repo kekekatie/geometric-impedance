@@ -4,6 +4,16 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧑‍⚖️ Local deciders ([`local_deciders/`](local_deciders/))
+
+- Letting places decide within a horizon h makes the now smoother but jams the world. Every horizon
+  ≤ 4 edges jammed 8/8, h = 6 jammed 5/8, and h = ∞ never jams.
+- There is no sweet spot (H3 failed). H1 and H2 held; H1 only weakly, on one surviving run.
+- Short-horizon jams sit on the seed rim, where simultaneous local choices pick different siblings.
+- **Lead:** Onoda, Steinhardt, DiVincenzo and Socolar (1988): a **decapod seed** may let a Penrose
+  tiling grow by forced moves alone. That would give a local now with no guessing except along one
+  worm. Check the reference, then try it.
+
 ## 🏝️ Door 2: island lens ([`island_lens/`](island_lens/))
 
 - G1, G2 and G3 all failed. With the patient scheduler, the world grows **sector by sector**: one
