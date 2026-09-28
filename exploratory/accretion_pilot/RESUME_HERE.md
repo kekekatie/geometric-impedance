@@ -4,6 +4,19 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 💭 Katie's parting thought (2026-09-28): bring in perp space
+
+Where might perp space (the de Bruijn "window" coordinate, from `writing_walker/window_test.py`) inform
+today's arc? Candidate moments, noted before they roll away:
+
+- **Choices:** do the 2-option dead surfaces (`gromit_check`) sit where tiles' perp coordinates touch
+  the window's edge?
+- **Decapods and holonomy:** a decapod is where the perp-space lift fails to close (`decapod_seed`).
+- **Two kinds of slow time:** does the local clock rate track position in the window (`free_fall`)?
+
+A natural next study: a **perp-space map** of one grown world, with every guess, jam, fast and slow
+region plotted in the window.
+
 ## 🍎 Free fall ([`free_fall/`](free_fall/))
 
 - Einstein's rule (the path with maximal proper time; the clock is happenings at the now; c = 1)
