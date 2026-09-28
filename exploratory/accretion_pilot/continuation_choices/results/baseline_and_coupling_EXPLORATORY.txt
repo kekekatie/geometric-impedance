@@ -1,0 +1,14 @@
+EXPLORATORY (post hoc): baselines and coupling. Bootstrap over runs, seed 2032.
+1. Left/right asymmetry with NO throttle (FAST): the halves differ even when nothing is quiet
+   T_U left/right 1.66 (95% 1.02-2.96)
+   choices (T_U>0) left/right 1.08 (95% 0.78-1.39)
+   compare HALF quiet/busy: T_U 1.36 (95% 0.87-2.12) ; choices 1.22 (95% 0.98-1.50)
+2. Same half, HALF arm vs FAST arm (unpaired: different tilings)
+   left (quiet in HALF): T_U HALF/FAST 3.47 (95% 2.12-5.58) ; T_D HALF/FAST 3.58 (95% 2.93-4.39) ; choices HALF/FAST 0.96 (95% 0.73-1.30)
+   right (busy in HALF): T_U HALF/FAST 4.24 (95% 3.00-6.32) ; T_D HALF/FAST 1.27 (95% 0.98-1.62) ; choices HALF/FAST 0.85 (95% 0.70-1.05)
+3. Local clock (tiles laid within 2 edges) during the determined phase, every arm and half:
+   FAST: slow 18.7, fast 20.2
+   HALF: slow 18.4, fast 19.6
+   SLOW: slow 18.5, fast 20.5
+   IDLE: slow 18.7, fast 20.2
+   HALF quiet/busy clock_D 0.94 (95% 0.86-1.01)
