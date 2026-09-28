@@ -1,0 +1,9 @@
+EXPLORATORY (post hoc): the 50 perturbations are NOT 50 independent events.
+With the patient scheduler and no throttle, the random stream is used only at the 3-5 guesses per run,
+each a choice between 2 candidates, so different seeds often grow IDENTICAL histories.
+distinct perturbations: 12 (of 50)
+distinct histories A among the 12 seeds: 9 -> groups of seeds [[0, 3], [1, 9], [2], [4], [5], [6, 8], [7], [10], [11]]
+on distinct perturbations only: median alpha 0.97 (L1 needs >= 0.8); news/front ratio of medians 3.2 (L2 needs >= 3); elongation >= 3 in 0.33 (L3 needs >= 0.5)
+  alphas [0.81, 0.9, 0.93, 0.93, 0.93, 0.93, 1.01, 1.02, 1.03, 1.03, 1.05, 1.09]
+  news speeds [0.67, 0.88, 0.93, 0.93, 0.93, 0.93, 0.95, 0.99, 1.0, 1.07, 1.09, 1.13]; front speeds [0.107, 0.222, 0.287, 0.291, 0.295, 0.295, 0.295, 0.296, 0.313, 0.324, 0.324, 0.331]
+  reach speed over the first <= 8 rounds (edges/round): [0.68, 0.76, 0.76, 0.8, 0.8, 0.8, 0.8, 0.81, 0.84, 0.84, 0.84, 0.84]

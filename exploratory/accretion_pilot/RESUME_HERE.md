@@ -4,6 +4,15 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 💡 Speed of light ([`speed_of_light/`](speed_of_light/)): door 1 of relativity and gravity
+
+- A changed choice spreads at a steady **~1 edge per round** (L1 held, α = 0.93), never faster.
+- News runs along the edge of the now about **3.2× faster** than the now moves outward (L2 held,
+  just).
+- Influence fills a whole sibling region, not a thin ray (L3 failed). The past is untouched.
+- Caveat: only 12 distinct perturbations. The seeds collapse onto the same few histories.
+- **Next:** door 2, a quiet blob as a lens: quietness vs **fullness (Katie's accretion density)**.
+
 ## 🧭 Continuation choices ([`continuation_choices/`](continuation_choices/)), built on Astra's repairs
 
 - **The past is fixed:** 508/508 laid spots have exactly one completion.

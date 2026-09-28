@@ -1,0 +1,10 @@
+perturbations: 50 over 12 runs; window end reasons {'next guess': 31, 'B jam': 0, 'cap': 19}
+  B jammed inside the window: 0 []
+  d_max (tile diameter) = 1.618 edges; largest per-round reach step inside windows 1.052 edges (0.65 x d_max)
+  Z1: PASS  influence never jumps more than 2 x d_max per round inside the window
+  Z2: PASS  no tile laid before the perturbation ever differs
+  L1: HELD    light-like spread: median alpha 0.93 (need >= 0.8); n = 50; alphas [0.81, 0.81, 0.81, 0.81, 0.81, 0.81, 0.81, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.93, 0.93, 0.93, 0.93, 0.93, 0.93, 0.93, 0.93, 1.01, 1.01, 1.01, 1.02, 1.02, 1.02, 1.02, 1.03, 1.03, 1.03, 1.03, 1.03, 1.03, 1.03, 1.03, 1.03, 1.05, 1.05, 1.05, 1.09, 1.09, 1.09, 1.09]
+  L2: HELD    sideways news speed median 0.953 vs local front speed median 0.295 edges/round (need >= 3x; ratio 3.2); n = 50
+  L3: FAILED  rays: elongation >= 3 in 0.16 (need >= 0.5); n = 50; elongations [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.3, 2.3, 2.3, 2.4, 2.4, 2.4, 2.4, 2.6, 2.6, 2.6, 2.6, 2.8, 2.8, 2.8, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3, 5.3]
+  window lengths T: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 12, 12, 12, 12, 12, 12, 12, 12, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 38, 38, 38, 38, 40, 40, 40, 40, 40]; |D_T|: [85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 85, 145, 145, 145, 145, 145, 145, 145, 145, 167, 167, 167, 167, 167, 167, 167, 212, 212, 212, 332, 332, 332, 337, 337, 337, 337, 344, 344, 344, 344, 684, 684, 684, 684, 709, 709, 709, 709, 709]
+  (after the window, exploratory) largest per-round reach step 0.63 edges; perturbations with a step > 2 x d_max after the window: 0/50
