@@ -92,4 +92,14 @@ are regrown deterministically, and every placement round is recorded.
 
 ## Changes before the first run
 
-*(none yet)*
+Both changes were made while writing the code, before any run.
+
+1. **Front radius smoothing.**
+   - *Problem.* At radii of 5–8 edges, a 0.5° bin is only 0.04–0.07 edges wide, so most bins
+     contain no tile centroid and `R(φ, r)` would be undefined.
+   - *Fix.* `R(φ, r)` is the largest radius among tiles laid by round `r` with centroid angle
+     within **±2.5°** of `φ`. The bins stay 0.5° for the path.
+2. **FULL's pre-laid stripe is not "the now".** In FULL, the stripe tiles laid at round 0 reach
+   ~22 edges out. They are excluded when computing `R(φ, r)`, so the test body rides the actual
+   growing front, not the pre-laid line. They still count as tiles for the clock rate at round 0,
+   which lies outside every window used.
