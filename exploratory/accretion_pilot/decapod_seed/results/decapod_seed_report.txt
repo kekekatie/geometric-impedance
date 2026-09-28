@@ -1,0 +1,118 @@
+seeds (rings up to rotation): 111; FILLABLE 4, DECAPOD 107 (Conway's decagon fillings/decapods: 62)
+  fillings per FILLABLE seed: [1, 1, 1, 1]
+  FILLABLE: runs 12, jammed 0, other failures 0; guesses per run [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4]
+      seed 0: ok 800 tiles 1 guesses; ok 800 tiles 2 guesses; ok 800 tiles 2 guesses
+      seed 1: ok 800 tiles 1 guesses; ok 800 tiles 1 guesses; ok 800 tiles 1 guesses
+      seed 65: ok 800 tiles 3 guesses; ok 800 tiles 4 guesses; ok 800 tiles 4 guesses
+      seed 109: ok 800 tiles 1 guesses; ok 800 tiles 1 guesses; ok 800 tiles 2 guesses
+  DECAPOD: runs 321, jammed 28, other failures 0; guesses per run [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4]
+      seed 2: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 3: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 4: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 5: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 6: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 7: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 8: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 9: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 10: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 11: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 12: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 13: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 14: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 15: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 16: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 17: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 18: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 19: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 20: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 21: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 22: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 23: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 24: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 25: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 26: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 27: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 28: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 29: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 30: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 31: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 32: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 33: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 34: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 35: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 36: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 37: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 38: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 39: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 40: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 41: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 42: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 43: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 44: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 45: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 46: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 47: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 48: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 49: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 50: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 51: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 52: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 53: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 54: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 55: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 56: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 57: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 58: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 59: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 60: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 61: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 62: ok 800 tiles 2 guesses; ok 800 tiles 2 guesses; ok 800 tiles 2 guesses
+      seed 63: JAM 44 tiles 1 guesses jam at [-0.294, -3.023]; JAM 245 tiles 2 guesses jam at [5.749, 1.059]; JAM 44 tiles 1 guesses jam at [-0.294, -3.023]
+      seed 64: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 66: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 67: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 68: JAM 229 tiles 2 guesses jam at [-4.029, 4.236]; JAM 787 tiles 3 guesses jam at [-1.245, 9.377]; JAM 54 tiles 1 guesses jam at [-0.294, 3.023]
+      seed 69: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 70: ok 800 tiles 3 guesses; JAM 54 tiles 1 guesses jam at [1.539, -2.618]; JAM 54 tiles 1 guesses jam at [1.539, -2.618]
+      seed 71: JAM 46 tiles 1 guesses jam at [-2.965, 0.655]; JAM 246 tiles 2 guesses jam at [-4.029, 4.236]; ok 800 tiles 4 guesses
+      seed 72: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 73: JAM 74 tiles 1 guesses jam at [-0.294, 3.023]; JAM 74 tiles 1 guesses jam at [-0.294, 3.023]; ok 800 tiles 2 guesses
+      seed 74: ok 800 tiles 3 guesses; JAM 732 tiles 3 guesses jam at [8.533, -4.082]; ok 800 tiles 3 guesses
+      seed 75: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 76: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 77: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 78: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 79: JAM 288 tiles 2 guesses jam at [-4.504, 5.391]; JAM 255 tiles 3 guesses jam at [4.029, -1.809]; JAM 213 tiles 3 guesses jam at [4.029, -1.809]
+      seed 80: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 81: JAM 243 tiles 3 guesses jam at [-4.029, -4.236]; JAM 243 tiles 3 guesses jam at [-4.029, -4.236]; JAM 45 tiles 1 guesses jam at [-0.294, -3.023]
+      seed 82: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 83: ok 800 tiles 2 guesses; ok 800 tiles 2 guesses; ok 800 tiles 3 guesses
+      seed 84: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 85: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 86: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 87: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 88: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 89: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 90: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 91: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 92: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 93: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 94: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 95: JAM 688 tiles 3 guesses jam at [8.533, -4.082]; JAM 688 tiles 3 guesses jam at [8.533, -4.082]; JAM 221 tiles 2 guesses jam at [-4.029, -4.236]
+      seed 96: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 97: JAM 46 tiles 1 guesses jam at [-2.014, 2.273]; JAM 46 tiles 1 guesses jam at [-2.014, 2.273]; JAM 46 tiles 1 guesses jam at [-2.014, 2.273]
+      seed 98: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 99: JAM 45 tiles 1 guesses jam at [1.539, -2.618]; JAM 226 tiles 2 guesses jam at [-0.769, -5.795]; JAM 45 tiles 1 guesses jam at [1.539, -2.618]
+      seed 100: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 101: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 102: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 103: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 104: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 105: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 106: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 107: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 108: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+      seed 110: ok 800 tiles 0 guesses; ok 800 tiles 0 guesses; ok 800 tiles 0 guesses
+  Q0: PASS  at least one FILLABLE and one DECAPOD seed
+  Q1: HELD    DECAPOD seeds (none of whose runs jam) needing zero guesses: 94/96 (need >= 80%)
+  Q2: HELD    FILLABLE seeds needing >= 1 guess in every run: 4/4

@@ -1,0 +1,7 @@
+EXPLORATORY (post hoc)
+1. DECAPOD seeds: 107; jam in all 3 runs 7; jam in some runs 4 [70, 71, 73, 74]; no jam but guessed [62, 83]
+   jam distance from centre (edges): [3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 3.04, 4.42, 4.42, 5.85, 5.85, 5.85, 5.85, 5.85, 5.85, 5.85, 7.02, 9.46, 9.46, 9.46, 9.46]; tiles laid before jamming: [44, 44, 45, 45, 45, 46, 46, 46, 46, 54, 54, 54, 74, 74, 213, 221, 226, 229, 243, 243, 245, 246, 255, 288, 688, 688, 732, 787]
+2. sector spread SS in the 5-7 edge band (smaller = smoother, more local now):
+   zero-guess DECAPOD seeds (first 12): median 1.21; [0.0, 0.89, 0.9, 0.95, 1.0, 1.12, 1.21, 1.23, 1.31, 1.33, 1.38, 1.67]
+   FILLABLE seeds: [0.8, 1.47, 1.56]
+   rounds to 800 tiles: DECAPOD [25, 29, 31, 34, 32, 38, 38, 41, 32, 40, 42, 44], FILLABLE [63, 64, 85]

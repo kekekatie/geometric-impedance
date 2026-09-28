@@ -4,6 +4,16 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🕸️ Decapod seed ([`decapod_seed/`](decapod_seed/))
+
+- A ring around an unfillable decagon (a decapod) grows **with zero guesses** in 94/96 cases (Q1
+  held). Ordinary fillable rings always need guesses (Q2 held, 4/4).
+- This is the first **truly local now**: no global decider, and about twice as fast. But it is not
+  round (the sector spread stays ~1.2).
+- "A world seeded by a memory (holonomy) needs no choices; a perfect seed must keep choosing."
+- A candidate-listing bug was found and fixed. It never affected ordinary growth.
+- **Next:** Katie's worldline body in a decapod world; Conway's no-two-1s address and holonomy.
+
 ## 🐶 Gromit check ([`gromit_check/`](gromit_check/))
 
 - Vertex-aware ("cleverer") forcing finds **nothing** our Gromits missed: F1 0/26.

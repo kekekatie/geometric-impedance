@@ -1,0 +1,333 @@
+{"status": "ok", "rounds": 63, "guesses": [{"round": 24, "x": -4.504, "y": 1.155, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 0, "run": 0, "kind": "FILLABLE", "seconds": 7}
+{"status": "ok", "rounds": 79, "guesses": [{"round": 24, "x": -4.504, "y": 1.155, "n_cands": 2}, {"round": 62, "x": -0.294, "y": 4.641, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 0, "run": 1, "kind": "FILLABLE", "seconds": 8}
+{"status": "ok", "rounds": 88, "guesses": [{"round": 24, "x": -4.504, "y": 1.155, "n_cands": 2}, {"round": 62, "x": -0.294, "y": 4.641, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 0, "run": 2, "kind": "FILLABLE", "seconds": 10}
+{"status": "ok", "rounds": 64, "guesses": [{"round": 42, "x": 5.455, "y": -2.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 1, "run": 0, "kind": "FILLABLE", "seconds": 7}
+{"status": "ok", "rounds": 64, "guesses": [{"round": 42, "x": 5.455, "y": -2.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 1, "run": 1, "kind": "FILLABLE", "seconds": 7}
+{"status": "ok", "rounds": 58, "guesses": [{"round": 42, "x": 5.455, "y": -2.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 1, "run": 2, "kind": "FILLABLE", "seconds": 6}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 2, "run": 0, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 2, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 2, "run": 2, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 3, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 3, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 3, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 4, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 4, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 4, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 5, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 5, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 5, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 6, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 6, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 6, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 7, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 7, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 7, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 8, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 8, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 8, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 9, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 9, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 9, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 10, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 10, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 10, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 11, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 11, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 11, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 12, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 12, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 12, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 13, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 13, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 13, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 14, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 14, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 14, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 15, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 15, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 15, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 16, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 16, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 16, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 17, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 17, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 17, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 18, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 18, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 18, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 19, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 19, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 19, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 20, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 20, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 20, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 21, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 21, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 21, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 22, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 22, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 22, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 23, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 23, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 23, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 24, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 24, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 24, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 25, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 25, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 25, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 26, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 26, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 26, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 27, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 27, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 27, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 28, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 28, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 28, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 29, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 29, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 29, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 30, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 30, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 30, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 31, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 31, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 31, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 32, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 32, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 32, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 33, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 33, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 33, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 34, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 34, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 34, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 35, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 35, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 35, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 36, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 36, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 36, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 37, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 37, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 37, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 38, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 38, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 38, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 39, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 39, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 39, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 40, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 40, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 40, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 41, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 41, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 41, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 42, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 42, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 42, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 56, "guesses": [], "tiles": 800, "jam": null, "seed": 43, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 56, "guesses": [], "tiles": 800, "jam": null, "seed": 43, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 56, "guesses": [], "tiles": 800, "jam": null, "seed": 43, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 44, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 44, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 44, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 45, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 45, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 45, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 46, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 46, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 46, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 47, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 47, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 39, "guesses": [], "tiles": 800, "jam": null, "seed": 47, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 48, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 48, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 48, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 49, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 49, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 49, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 60, "guesses": [], "tiles": 800, "jam": null, "seed": 50, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 60, "guesses": [], "tiles": 800, "jam": null, "seed": 50, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 60, "guesses": [], "tiles": 800, "jam": null, "seed": 50, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 51, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 51, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 51, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 52, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 52, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 52, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 53, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 53, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 53, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 54, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 54, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 54, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 55, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 55, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 55, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 56, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 56, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 56, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 57, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 57, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 57, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 58, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 58, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 58, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 59, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 59, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 59, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 60, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 60, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 60, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 61, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 61, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 32, "guesses": [], "tiles": 800, "jam": null, "seed": 61, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 72, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 29, "x": -0.294, "y": 2.023, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 62, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 72, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 29, "x": -0.294, "y": 2.023, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 62, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 72, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 29, "x": -0.294, "y": 2.023, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 62, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "JAM", "rounds": 9, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 44, "jam": [-0.294, -3.023], "seed": 63, "run": 0, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 33, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 23, "x": 2.784, "y": -3.023, "n_cands": 2}], "tiles": 245, "jam": [5.749, 1.059], "seed": 63, "run": 1, "kind": "DECAPOD", "seconds": 1}
+{"status": "JAM", "rounds": 9, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 44, "jam": [-0.294, -3.023], "seed": 63, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 64, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 64, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 64, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 85, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 25, "x": 0.476, "y": -4.082, "n_cands": 2}, {"round": 64, "x": -2.784, "y": 3.023, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 65, "run": 0, "kind": "FILLABLE", "seconds": 8}
+{"status": "ok", "rounds": 91, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 25, "x": 0.476, "y": -4.082, "n_cands": 2}, {"round": 48, "x": -2.784, "y": 3.023, "n_cands": 2}, {"round": 70, "x": 3.735, "y": 1.714, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 65, "run": 1, "kind": "FILLABLE", "seconds": 8}
+{"status": "ok", "rounds": 88, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 12, "x": -0.294, "y": 2.023, "n_cands": 2}, {"round": 32, "x": 1.427, "y": -1.464, "n_cands": 2}, {"round": 71, "x": -3.553, "y": 1.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 65, "run": 2, "kind": "FILLABLE", "seconds": 9}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 66, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 66, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 62, "guesses": [], "tiles": 800, "jam": null, "seed": 66, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 67, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 67, "run": 1, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 43, "guesses": [], "tiles": 800, "jam": null, "seed": 67, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "JAM", "rounds": 48, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 37, "x": -3.735, "y": -1.714, "n_cands": 2}], "tiles": 229, "jam": [-4.029, 4.236], "seed": 68, "run": 0, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 106, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 37, "x": -3.735, "y": -1.714, "n_cands": 2}, {"round": 85, "x": -6.813, "y": 0.905, "n_cands": 2}], "tiles": 787, "jam": [-1.245, 9.377], "seed": 68, "run": 1, "kind": "DECAPOD", "seconds": 9}
+{"status": "JAM", "rounds": 10, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}], "tiles": 54, "jam": [-0.294, 3.023], "seed": 68, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 69, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 69, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 69, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 79, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 32, "x": -3.735, "y": -1.714, "n_cands": 2}, {"round": 57, "x": 3.735, "y": 1.714, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 70, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "JAM", "rounds": 11, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}], "tiles": 54, "jam": [1.539, -2.618], "seed": 70, "run": 1, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 11, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}], "tiles": 54, "jam": [1.539, -2.618], "seed": 70, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 10, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}], "tiles": 46, "jam": [-2.965, 0.655], "seed": 71, "run": 0, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 41, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 30, "x": -3.735, "y": -1.714, "n_cands": 2}], "tiles": 246, "jam": [-4.029, 4.236], "seed": 71, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 116, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 30, "x": -3.735, "y": -1.714, "n_cands": 2}, {"round": 55, "x": 2.784, "y": -3.023, "n_cands": 2}, {"round": 90, "x": -4.98, "y": -4.736, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 71, "run": 2, "kind": "DECAPOD", "seconds": 10}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 72, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 72, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 72, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "JAM", "rounds": 12, "guesses": [{"round": 6, "x": -2.014, "y": 0.345, "n_cands": 2}], "tiles": 74, "jam": [-0.294, 3.023], "seed": 73, "run": 0, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 12, "guesses": [{"round": 6, "x": -2.014, "y": 0.345, "n_cands": 2}], "tiles": 74, "jam": [-0.294, 3.023], "seed": 73, "run": 1, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 59, "guesses": [{"round": 6, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 25, "x": 1.427, "y": -1.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 73, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 98, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 23, "x": 2.784, "y": -3.023, "n_cands": 2}, {"round": 59, "x": 1.245, "y": -6.759, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 74, "run": 0, "kind": "DECAPOD", "seconds": 10}
+{"status": "JAM", "rounds": 77, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 23, "x": 2.784, "y": -3.023, "n_cands": 2}, {"round": 59, "x": 1.245, "y": -6.759, "n_cands": 2}], "tiles": 732, "jam": [8.533, -4.082], "seed": 74, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 98, "guesses": [{"round": 4, "x": -2.014, "y": 0.345, "n_cands": 2}, {"round": 23, "x": 2.784, "y": -3.023, "n_cands": 2}, {"round": 59, "x": 1.245, "y": -6.759, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 74, "run": 2, "kind": "DECAPOD", "seconds": 9}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 75, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 75, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 75, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 76, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 76, "run": 1, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 76, "run": 2, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 77, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 77, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 77, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 78, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 78, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 78, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "JAM", "rounds": 39, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 23, "x": -0.294, "y": 2.023, "n_cands": 2}], "tiles": 288, "jam": [-4.504, 5.391], "seed": 79, "run": 0, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 46, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 23, "x": -0.294, "y": 2.023, "n_cands": 2}, {"round": 37, "x": 2.014, "y": -0.345, "n_cands": 2}], "tiles": 255, "jam": [4.029, -1.809], "seed": 79, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 45, "guesses": [{"round": 6, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 23, "x": -0.294, "y": 2.023, "n_cands": 2}, {"round": 37, "x": 2.014, "y": -0.345, "n_cands": 2}], "tiles": 213, "jam": [4.029, -1.809], "seed": 79, "run": 2, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 80, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 80, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 54, "guesses": [], "tiles": 800, "jam": null, "seed": 80, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "JAM", "rounds": 47, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 23, "x": -0.294, "y": 2.023, "n_cands": 2}, {"round": 37, "x": -4.029, "y": 0.809, "n_cands": 2}], "tiles": 243, "jam": [-4.029, -4.236], "seed": 81, "run": 0, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 47, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 23, "x": -0.294, "y": 2.023, "n_cands": 2}, {"round": 37, "x": -4.029, "y": 0.809, "n_cands": 2}], "tiles": 243, "jam": [-4.029, -4.236], "seed": 81, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 9, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 45, "jam": [-0.294, -3.023], "seed": 81, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 82, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 82, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 66, "guesses": [], "tiles": 800, "jam": null, "seed": 82, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 60, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 24, "x": -0.294, "y": 2.023, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 83, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 74, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 30, "x": 1.427, "y": -1.464, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 83, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 86, "guesses": [{"round": 6, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 30, "x": 1.427, "y": -1.464, "n_cands": 2}, {"round": 69, "x": -2.49, "y": 2.927, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 83, "run": 2, "kind": "DECAPOD", "seconds": 9}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 84, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 84, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 84, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 85, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 85, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 42, "guesses": [], "tiles": 800, "jam": null, "seed": 85, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 86, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 86, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 51, "guesses": [], "tiles": 800, "jam": null, "seed": 86, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 87, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 87, "run": 1, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 68, "guesses": [], "tiles": 800, "jam": null, "seed": 87, "run": 2, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 88, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 88, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 67, "guesses": [], "tiles": 800, "jam": null, "seed": 88, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 89, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 89, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 89, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 90, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 90, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 52, "guesses": [], "tiles": 800, "jam": null, "seed": 90, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 91, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 91, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 91, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 92, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 92, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 47, "guesses": [], "tiles": 800, "jam": null, "seed": 92, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 93, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 93, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 41, "guesses": [], "tiles": 800, "jam": null, "seed": 93, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 94, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 94, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 31, "guesses": [], "tiles": 800, "jam": null, "seed": 94, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "JAM", "rounds": 78, "guesses": [{"round": 2, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 22, "x": -4.029, "y": 0.809, "n_cands": 2}, {"round": 60, "x": 1.245, "y": -6.759, "n_cands": 2}], "tiles": 688, "jam": [8.533, -4.082], "seed": 95, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "JAM", "rounds": 78, "guesses": [{"round": 2, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 22, "x": -4.029, "y": 0.809, "n_cands": 2}, {"round": 60, "x": 1.245, "y": -6.759, "n_cands": 2}], "tiles": 688, "jam": [8.533, -4.082], "seed": 95, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "JAM", "rounds": 32, "guesses": [{"round": 2, "x": -1.833, "y": -0.905, "n_cands": 2}, {"round": 22, "x": -4.029, "y": 0.809, "n_cands": 2}], "tiles": 221, "jam": [-4.029, -4.236], "seed": 95, "run": 2, "kind": "DECAPOD", "seconds": 1}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 96, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 96, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 64, "guesses": [], "tiles": 800, "jam": null, "seed": 96, "run": 2, "kind": "DECAPOD", "seconds": 7}
+{"status": "JAM", "rounds": 10, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 46, "jam": [-2.014, 2.273], "seed": 97, "run": 0, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 10, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 46, "jam": [-2.014, 2.273], "seed": 97, "run": 1, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 10, "guesses": [{"round": 4, "x": -1.833, "y": -0.905, "n_cands": 2}], "tiles": 46, "jam": [-2.014, 2.273], "seed": 97, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 98, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 98, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 44, "guesses": [], "tiles": 800, "jam": null, "seed": 98, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "JAM", "rounds": 9, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}], "tiles": 45, "jam": [1.539, -2.618], "seed": 99, "run": 0, "kind": "DECAPOD", "seconds": 0}
+{"status": "JAM", "rounds": 46, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}, {"round": 36, "x": -3.735, "y": -1.714, "n_cands": 2}], "tiles": 226, "jam": [-0.769, -5.795], "seed": 99, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "JAM", "rounds": 9, "guesses": [{"round": 4, "x": -0.951, "y": -1.809, "n_cands": 2}], "tiles": 45, "jam": [1.539, -2.618], "seed": 99, "run": 2, "kind": "DECAPOD", "seconds": 0}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 100, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 100, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 49, "guesses": [], "tiles": 800, "jam": null, "seed": 100, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 101, "run": 0, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 101, "run": 1, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 53, "guesses": [], "tiles": 800, "jam": null, "seed": 101, "run": 2, "kind": "DECAPOD", "seconds": 6}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 102, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 102, "run": 1, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 50, "guesses": [], "tiles": 800, "jam": null, "seed": 102, "run": 2, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 103, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 103, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 34, "guesses": [], "tiles": 800, "jam": null, "seed": 103, "run": 2, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 104, "run": 0, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 104, "run": 1, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 61, "guesses": [], "tiles": 800, "jam": null, "seed": 104, "run": 2, "kind": "DECAPOD", "seconds": 7}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 105, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 105, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 38, "guesses": [], "tiles": 800, "jam": null, "seed": 105, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 106, "run": 0, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 106, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 106, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 107, "run": 0, "kind": "DECAPOD", "seconds": 5}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 107, "run": 1, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 40, "guesses": [], "tiles": 800, "jam": null, "seed": 107, "run": 2, "kind": "DECAPOD", "seconds": 4}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 108, "run": 0, "kind": "DECAPOD", "seconds": 3}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 108, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 29, "guesses": [], "tiles": 800, "jam": null, "seed": 108, "run": 2, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 54, "guesses": [{"round": 12, "x": -2.49, "y": -3.927, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 109, "run": 0, "kind": "FILLABLE", "seconds": 6}
+{"status": "ok", "rounds": 54, "guesses": [{"round": 12, "x": -2.49, "y": -3.927, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 109, "run": 1, "kind": "FILLABLE", "seconds": 6}
+{"status": "ok", "rounds": 53, "guesses": [{"round": 12, "x": -2.49, "y": -3.927, "n_cands": 2}, {"round": 26, "x": -0.294, "y": 4.641, "n_cands": 2}], "tiles": 800, "jam": null, "seed": 109, "run": 2, "kind": "FILLABLE", "seconds": 5}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 110, "run": 0, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 110, "run": 1, "kind": "DECAPOD", "seconds": 2}
+{"status": "ok", "rounds": 25, "guesses": [], "tiles": 800, "jam": null, "seed": 110, "run": 2, "kind": "DECAPOD", "seconds": 2}
