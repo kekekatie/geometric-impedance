@@ -4,6 +4,18 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧭 Continuation choices ([`continuation_choices/`](continuation_choices/)), built on Astra's repairs
+
+- **The past is fixed:** 508/508 laid spots have exactly one completion.
+- **Quietness stretches the *laying*** (P1 held, 2.9×).
+- **Uniform slowing only stretches the clock:** P4 held, with the same choices as a pure replay.
+- **Unequal pacing:** no detectable change in the choices. But P3's equivalence bound failed (a ratio
+  of 1.22, CI up to 1.49), and P2 failed (too uncertain).
+- *Exploratory:*
+  - **Deciding is shared, laying is local.** The patient scheduler makes guesses wait for everyone,
+    so this is partly by design.
+  - A spot is laid after ~19 local happenings everywhere.
+
 ## 🔍 Astra's checks (2026-09-28): two big corrections
 
 - **"Soft" was always the open edge, never a rearrangement.** 0 same-footprint alternatives in 3,816

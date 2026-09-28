@@ -1,0 +1,23 @@
+FAST: 8 runs, statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [87, 105, 102, 125, 97, 97, 95, 97], guesses [4, 4, 5, 5, 3, 3, 3, 4], idle [0, 0, 0, 0, 0, 0, 0, 0]
+    happening density (tiles/round): left 5.02, right 5.01
+    slow: 64 probes; T_U>0 in 0.45; mean T_U 14.0, T_D 11.2; clock_U 4.1, clock_D 18.7; choices (T_U>0) 2.66; apparent choices in D 2.08; Z2 unique 1.00
+    fast: 64 probes; T_U>0 in 0.34; mean T_U 8.4, T_D 11.0; clock_U 3.0, clock_D 20.2; choices (T_U>0) 2.45; apparent choices in D 1.91; Z2 unique 1.00
+HALF: 8 runs, statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [350, 385, 303, 298, 332, 377, 354, 330], guesses [4, 4, 3, 3, 3, 5, 4, 4], idle [109, 125, 63, 52, 86, 87, 108, 79]
+    happening density (tiles/round): left 1.28, right 1.67
+    slow: 61 probes; T_U>0 in 0.44; mean T_U 48.4, T_D 40.2; clock_U 5.1, clock_D 18.4; choices (T_U>0) 2.56; apparent choices in D 1.98; Z2 unique 1.00
+    fast: 64 probes; T_U>0 in 0.33; mean T_U 35.7, T_D 14.0; clock_U 3.4, clock_D 19.6; choices (T_U>0) 2.10; apparent choices in D 2.09; Z2 unique 1.00
+SLOW: 8 runs, statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [427, 390, 351, 402, 427, 352, 535, 423], guesses [3, 3, 4, 3, 3, 5, 4, 4], idle [91, 79, 73, 68, 72, 50, 121, 85]
+    happening density (tiles/round): left 1.23, right 1.23
+    slow: 63 probes; T_U>0 in 0.44; mean T_U 53.3, T_D 48.1; clock_U 5.0, clock_D 18.5; choices (T_U>0) 2.14; apparent choices in D 2.11; Z2 unique 1.00
+    fast: 64 probes; T_U>0 in 0.28; mean T_U 39.4, T_D 41.7; clock_U 2.5, clock_D 20.5; choices (T_U>0) 3.11; apparent choices in D 2.47; Z2 unique 1.00
+IDLE: 8 runs, statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [348, 420, 408, 500, 388, 388, 380, 388], guesses [4, 4, 5, 5, 3, 3, 3, 4], idle [261, 315, 306, 375, 291, 291, 285, 291]
+    slow: 64 probes; T_U>0 in 0.45; mean T_U 55.8, T_D 44.9; clock_U 4.1, clock_D 18.7; choices (T_U>0) 2.66; apparent choices in D 2.08; Z2 unique 1.00
+    fast: 64 probes; T_U>0 in 0.34; mean T_U 33.7, T_D 44.0; clock_U 3.0, clock_D 20.2; choices (T_U>0) 2.45; apparent choices in D 1.91; Z2 unique 1.00
+  Z1: PASS  no JAM/STUCK/STALL in any arm
+  Z2: PASS  past is fixed: unique completion in 1.000 of 508 probes (need >= 0.99)
+  Z3: PASS  IDLE reproduces FAST exactly (choices identical, a/d/v x4)
+  P1: HELD    HALF quiet/busy T_D ratio 2.88 (95% 2.12-4.03; need >= 1.5), quiet > busy in 8/8 runs (need >= 7)
+  P2: FAILED  HALF quiet/busy T_U ratio 1.36 (95% 0.87-2.10; need within 0.67-1.5)
+  P3: FAILED  HALF quiet/busy choices ratio 1.22 (95% 0.99-1.49; need within 0.75-1.33); n(T_U>0) = 27, 21
+  P4: HELD    SLOW/FAST T_D ratio 4.04 (95% 3.44-4.73; need >= 1.5); SLOW/IDLE choices ratio 0.98 (95% 0.82-1.19; need within 0.75-1.33); n(T_U>0) = 46, 51
+  (reported) HALF-quiet / IDLE choices ratio 0.99 (95% 0.80-1.24)
