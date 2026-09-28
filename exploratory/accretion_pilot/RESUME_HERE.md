@@ -4,6 +4,20 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🌌 Worldline body ([`worldline_body/`](worldline_body/)): Katie's persisting body
+
+- A **quiet** worldline (slow happening) in a decapod world makes a **field of slow time**:
+  - +4 rounds at 1–2 edges, fading to +0.8 at 6 edges;
+  - **exactly 0** on the far side;
+  - growing along the worldline (W1, W2 held).
+- A **full** (pre-laid) worldline does the opposite: a highway, up to −16 rounds (W3 held).
+- W0 failed only by the letter: tiles beyond CONTROL's reach, no conflicts.
+- **The gravity-like property is quietness, not fullness.**
+- Next ideas:
+  - does anything *fall* (a test body that moves in the field)?
+  - the fall-off law;
+  - the two 1s / holonomy.
+
 ## 🕸️ Decapod seed ([`decapod_seed/`](decapod_seed/))
 
 - A ring around an unfillable decagon (a decapod) grows **with zero guesses** in 94/96 cases (Q1
