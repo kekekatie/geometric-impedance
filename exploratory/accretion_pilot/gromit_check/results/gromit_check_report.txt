@@ -1,0 +1,10 @@
+replays reproduce ../local_deciders exactly (status and rounds): True
+  Z1: PASS  every seed-patch vertex is completable
+  Z2: PASS  every complete vertex star in the patient final patches is legal
+  F1: FAILED  guess moments where some edge is strong-forced: 0/26 = 0.00 (need >= 0.5)
+  F2: FAILED  jammed local-decider runs with a non-strong guess before the jam: 0/24 (need >= 20 of 24)
+  (reported) patient growth: guesses that were not strong 0/26; guess moments with a strong-dead edge 0/26; strong candidates at the guessed edge [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+  (reported) guess moments detail: [(2, 0, 0), (31, 0, 0), (82, 0, 0), (2, 0, 0), (31, 0, 0), (82, 0, 0), (2, 0, 0), (31, 0, 0), (82, 0, 0), (2, 0, 0), (10, 0, 0), (30, 0, 0), (72, 0, 0), (2, 0, 0), (31, 0, 0), (72, 0, 0), (2, 0, 0), (10, 0, 0), (30, 0, 0), (72, 0, 0), (2, 0, 0), (31, 0, 0), (72, 0, 0), (2, 0, 0), (31, 0, 0), (82, 0, 0)]
+  (reported) h = 0.5: non-strong guesses per run [0, 0, 0, 0, 0, 0, 0, 0] of [10, 10, 10, 10, 10, 11, 10, 10] guesses
+  (reported) h = 1: non-strong guesses per run [0, 0, 0, 0, 0, 0, 0, 0] of [10, 10, 10, 10, 10, 10, 10, 10] guesses
+  (reported) h = 2: non-strong guesses per run [0, 0, 0, 0, 0, 0, 0, 0] of [5, 5, 5, 11, 5, 5, 5, 5] guesses

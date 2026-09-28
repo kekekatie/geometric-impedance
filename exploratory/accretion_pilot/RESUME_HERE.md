@@ -4,6 +4,14 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🐶 Gromit check ([`gromit_check/`](gromit_check/))
+
+- Vertex-aware ("cleverer") forcing finds **nothing** our Gromits missed: F1 0/26.
+- No jam followed an individually doomed guess: F2 0/24.
+- Jams come from guesses that are each locally fine but belong to different siblings. The conflict
+  is non-local.
+- **Next:** the decapod seed (see `LITERATURE_NOTES_local_growth.md`).
+
 ## 🧑‍⚖️ Local deciders ([`local_deciders/`](local_deciders/))
 
 - Letting places decide within a horizon h makes the now smoother but jams the world. Every horizon
