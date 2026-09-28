@@ -1,0 +1,24 @@
+CONTROL: ok, 366 rounds, 10 guesses, idle 0, all reference True
+QUIET: statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [376, 375, 369, 396, 379, 392, 381, 391], guesses [10, 10, 10, 10, 10, 10, 10, 10], idle [3, 3, 29, 13, 3, 9, 5, 12], all reference True
+    run 0: delay shadow +10.7, side +10.0, far +10.0 rounds -> local +0.7, lens +0.7; excluded island points 0; shadow delay by distance behind [14.0, 10.0, 10.0, 10.0, 10.0, 10.0]; happening inside 0.040 vs ring 0.021 tiles/round/edge^2
+    run 1: delay shadow +8.1, side +9.5, far +8.8 rounds -> local -0.7, lens -1.4; excluded island points 0; shadow delay by distance behind [8.7, 8.0, 8.0, 8.0, 8.0, 8.0]; happening inside 0.109 vs ring 0.043 tiles/round/edge^2
+    run 2: delay shadow +150.0, side +116.8, far -70.0 rounds -> local +220.0, lens +33.2; excluded island points 0; shadow delay by distance behind [150.0, 150.0, 150.0, 150.0, 150.0, 150.0]; happening inside 0.035 vs ring 0.013 tiles/round/edge^2
+    run 3: delay shadow +32.2, side +29.4, far +28.0 rounds -> local +4.2, lens +2.7; excluded island points 0; shadow delay by distance behind [32.3, 31.7, 31.0, 32.0, 33.0, 33.0]; happening inside 0.047 vs ring 0.020 tiles/round/edge^2
+    run 4: delay shadow +10.8, side +11.5, far +10.0 rounds -> local +0.8, lens -0.7; excluded island points 0; shadow delay by distance behind [10.0, 10.7, 10.3, 10.3, 11.0, 12.3]; happening inside 0.086 vs ring 0.034 tiles/round/edge^2
+    run 5: delay shadow +24.9, side +26.0, far +26.0 rounds -> local -1.1, lens -1.1; excluded island points 0; shadow delay by distance behind [19.7, 26.0, 26.0, 26.0, 26.0, 26.0]; happening inside 0.054 vs ring 0.024 tiles/round/edge^2
+    run 6: delay shadow +13.6, side +14.5, far +12.0 rounds -> local +1.6, lens -0.9; excluded island points 0; shadow delay by distance behind [12.3, 12.3, 12.7, 13.7, 13.7, 17.0]; happening inside 0.088 vs ring 0.044 tiles/round/edge^2
+    run 7: delay shadow +270.0, side +140.6, far -48.0 rounds -> local +318.0, lens +129.4; excluded island points 0; shadow delay by distance behind [270.0, 270.0, 270.0, 270.0, 270.0, 270.0]; happening inside 0.063 vs ring 0.029 tiles/round/edge^2
+FULL: statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok'], rounds [306, 304, 316, 364, 366, 356, 362, 361], guesses [9, 9, 10, 9, 9, 9, 10, 10], idle [0, 0, 0, 0, 0, 0, 0, 0], all reference True, wake rounds [31, 13, 11, 3, 6, 52, 73, 74]
+    run 0: delay shadow +108.0, side +134.2, far -134.0 rounds -> local +242.0, lens -26.2; excluded island points 0; shadow delay by distance behind [3.0, 109.0, 109.0, 125.7, 142.3, 159.0]
+    run 1: delay shadow +84.0, side +84.0, far -58.1 rounds -> local +142.1, lens +0.0; excluded island points 0; shadow delay by distance behind [84.0, 84.0, 84.0, 84.0, 84.0, 84.0]
+    run 2: delay shadow +23.0, side +14.7, far -50.0 rounds -> local +73.0, lens +8.3; excluded island points 0; shadow delay by distance behind [23.0, 23.0, 23.0, 23.0, 23.0, 23.0]
+    run 3: delay shadow -2.0, side -2.0, far -2.0 rounds -> local +0.0, lens +0.0; excluded island points 0; shadow delay by distance behind [-2.0, -2.0, -2.0, -2.0, -2.0, -2.0]
+    run 4: delay shadow -0.3, side -1.0, far -1.0 rounds -> local +0.7, lens +0.7; excluded island points 0; shadow delay by distance behind [0.0, -0.3, -0.7, -0.7, 0.0, 0.0]
+    run 5: delay shadow -12.1, side -10.0, far -10.0 rounds -> local -2.1, lens -2.1; excluded island points 0; shadow delay by distance behind [-22.7, -10.0, -10.0, -10.0, -10.0, -10.0]
+    run 6: delay shadow -4.0, side -4.0, far -4.0 rounds -> local +0.0, lens +0.0; excluded island points 0; shadow delay by distance behind [-4.0, -4.0, -4.0, -4.0, -4.0, -4.0]
+    run 7: delay shadow +94.0, side +43.7, far -78.0 rounds -> local +172.0, lens +50.3; excluded island points 0; shadow delay by distance behind [94.0, 94.0, 94.0, 94.0, 94.0, 94.0]
+  G0: PASS  no jams/stalls, all tiles in the reference tiling, all sample points covered
+  G1: FAILED  QUIET delays the now behind it: local delay > 0 in 6/8 (need >= 7), mean +67.9 rounds (need >= 2)
+  G2: FAILED  QUIET focuses (lens > 0) in 4/8 (need >= 7); mean lens +20.3
+  G3: FAILED  FULL: the now arrives EARLIER behind it (local < 0) in 1/8 (need >= 7); mean local +78.5
+  (reported) FULL lens: [-26.2, 0.0, 8.3, 0.0, 0.7, -2.1, 0.0, 50.3] (mean +3.9); global delay far: QUIET mean -2.9, FULL mean -42.1

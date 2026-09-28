@@ -4,6 +4,15 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🏝️ Door 2: island lens ([`island_lens/`](island_lens/))
+
+- G1, G2 and G3 all failed. With the patient scheduler, the world grows **sector by sector**: one
+  global queue of decisions.
+- A quiet or full island reshuffles the queue. It does not dent a front, so there is no local
+  geometry of time to bend.
+- **Next:** local deciders, where each region decides when nothing is forced within a horizon
+  around it. Then retry the lens, including quietness vs fullness.
+
 ## 💡 Speed of light ([`speed_of_light/`](speed_of_light/)): door 1 of relativity and gravity
 
 - A changed choice spreads at a steady **~1 edge per round** (L1 held, α = 0.93), never faster.

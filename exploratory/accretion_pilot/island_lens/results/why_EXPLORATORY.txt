@@ -1,0 +1,13 @@
+EXPLORATORY (post hoc): what the arrival times look like
+CONTROL run 0: 366 rounds; tiles per round: median 9, max 59, rounds with 0 tiles 0; share of all tiles laid in the busiest 10% of rounds 0.28
+    Spearman correlation of arrival round with distance from origin: 0.47
+    median arrival round at radius 10-12 edges, by 45-degree sector: 0deg 122, 45deg 123, 90deg 196, 135deg 201, 180deg 269, 225deg 342, 270deg 343, 315deg 98
+QUIET run 2: 369 rounds; tiles per round: median 8, max 59, rounds with 0 tiles 29; share of all tiles laid in the busiest 10% of rounds 0.32
+    Spearman correlation of arrival round with distance from origin: 0.54
+    median arrival round at radius 10-12 edges, by 45-degree sector: 0deg 173, 45deg 174, 90deg 345, 135deg 344, 180deg 247, 225deg 272, 270deg 273, 315deg 149
+QUIET run 0: 376 rounds; tiles per round: median 8, max 59, rounds with 0 tiles 3; share of all tiles laid in the busiest 10% of rounds 0.28
+    Spearman correlation of arrival round with distance from origin: 0.47
+    median arrival round at radius 10-12 edges, by 45-degree sector: 0deg 132, 45deg 133, 90deg 206, 135deg 211, 180deg 279, 225deg 352, 270deg 353, 315deg 108
+FULL run 0: 306 rounds; tiles per round: median 10, max 59, rounds with 0 tiles 0; share of all tiles laid in the busiest 10% of rounds 0.28
+    Spearman correlation of arrival round with distance from origin: 0.54
+    median arrival round at radius 10-12 edges, by 45-degree sector: 0deg 281, 45deg 282, 90deg 110, 135deg 115, 180deg 135, 225deg 86, 270deg 87, 315deg 208
