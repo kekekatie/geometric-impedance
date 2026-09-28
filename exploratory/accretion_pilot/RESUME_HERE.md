@@ -4,6 +4,17 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🍎 Free fall ([`free_fall/`](free_fall/))
+
+- Einstein's rule (the path with maximal proper time; the clock is happenings at the now; c = 1)
+  beside the worldline bodies.
+- F1 failed: no clear fall toward QUIET.
+- F2 failed the other way: paths bulged away from FULL, meaning bodies **fall toward fullness**
+  (66/108, mean +1.0 edges, growing with duration).
+- The local clock is slowest near FULL (0.44 vs 1.63 happenings per round). **Two kinds of slow
+  time come apart:** arrival lateness (QUIET) vs clock rate (FULL most).
+- Katie's accretion hunch returns, for proper time.
+
 ## 🌌 Worldline body ([`worldline_body/`](worldline_body/)): Katie's persisting body
 
 - A **quiet** worldline (slow happening) in a decapod world makes a **field of slow time**:

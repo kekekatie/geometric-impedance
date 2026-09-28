@@ -1,0 +1,7 @@
+EXPLORATORY: mean clock rate h (happenings per round within 1.5 edges of the now) by lateral distance from
+the body's line, rounds r1..r1+16, averaged over the 18 bodies
+  CONTROL  0-1.5: 1.628, 1.5-3: 1.681, 3-6: 1.659
+  QUIET    0-1.5: 0.787, 1.5-3: 1.118, 3-6: 1.284
+  FULL     0-1.5: 0.439, 1.5-3: 0.663, 3-6: 1.194
+  per body, FULL minus CONTROL at 0-1.5 edges: [-1.1, -1.94, -2.14, -0.74, -2.02, -1.0, -1.98, -0.8, -1.59, -0.94, -1.14, -0.73, -2.44, -0.8, -0.85, 0.31, -1.26, -0.24]
+  per body, QUIET minus CONTROL at 0-1.5 edges: [-1.5, -1.39, -1.43, -0.08, -1.37, -0.73, -1.6, -0.96, -0.69, 0.02, -1.08, -0.13, -1.29, -1.15, -0.24, -0.18, -1.19, -0.14]
