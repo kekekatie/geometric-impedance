@@ -4,6 +4,13 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧠 Decapod memory ([`decapod_memory/`](decapod_memory/))
+
+- **D1 held (8/8):** slices of a decapod world sit in windows shifted ~1.7× more than ordinary
+  worlds. The memory is real and local.
+- **D2 failed:** the shifts are not smoothly organised by angle at 18° resolution.
+- **Next:** trace the worm lines directly.
+
 ## 🗺️ Perp-space map ([`perp_map/`](perp_map/))
 
 - **Choices live deeper in the window** (M1 failed in the opposite direction, 0/12). Open edges
