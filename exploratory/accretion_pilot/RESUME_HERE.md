@@ -4,6 +4,15 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🗺️ Perp-space map ([`perp_map/`](perp_map/))
+
+- **Choices live deeper in the window** (M1 failed in the opposite direction, 0/12). Open edges
+  have depth ~0.45, forced edges ~0.38.
+- This fits Katie's directional balance: shallow vertices have truncated direction sets, so they
+  are forced; deep vertices have balanced sets, so they are free.
+- **A decapod smears the window** (M2 held, 8/8): perp hull area 8–13% larger. Its memory is a
+  widened window.
+
 ## 💭 Katie's parting thought (2026-09-28): bring in perp space
 
 Where might perp space (the de Bruijn "window" coordinate, from `writing_walker/window_test.py`) inform

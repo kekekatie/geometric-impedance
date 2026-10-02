@@ -1,0 +1,4 @@
+EXPLORATORY: each distinct frontier edge counted once
+  run 0: ever-open edges 322, median depth 0.405; always-forced edges 1040, median depth 0.382
+  run 1: ever-open edges 327, median depth 0.399; always-forced edges 1050, median depth 0.371
+  run 2: ever-open edges 300, median depth 0.409; always-forced edges 1069, median depth 0.360
