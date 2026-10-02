@@ -14,6 +14,19 @@ today's arc? Candidate moments, noted before they roll away:
 - **Decapods and holonomy:** a decapod is where the perp-space lift fails to close (`decapod_seed`).
 - **Two kinds of slow time:** does the local clock rate track position in the window (`free_fall`)?
 
+**Katie's holonomy paper is the toolkit for this.** K. T. Niedzwiecki, *Depth-Dependent Directional
+Balance and Discrete Holonomy in Projection Tilings* (June 2026), doi:10.5281/zenodo.20695694. Its
+findings:
+
+- near-closed walks leave a perp-space residue;
+- the residue is **not** an area law (not Berry curvature) and **not** temporal (linger time has no
+  effect);
+- it is **positional**: set by hull depth, through depth-dependent directional balance, with an
+  inward radial drift near the window edge;
+- null-disc controls confirm it is genuine quasicrystal structure.
+
+Its *hull depth* is the natural coordinate for the map.
+
 A natural next study: a **perp-space map** of one grown world, with every guess, jam, fast and slow
 region plotted in the window.
 
