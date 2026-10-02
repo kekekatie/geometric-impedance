@@ -1,0 +1,14 @@
+  DECAPOD  seed   2: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2345, adjacent/90deg ratio 1.19, hull area 16.75
+  DECAPOD  seed   3: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2643, adjacent/90deg ratio 1.06, hull area 16.36
+  DECAPOD  seed   4: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2627, adjacent/90deg ratio 1.12, hull area 16.15
+  DECAPOD  seed   5: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2498, adjacent/90deg ratio 1.12, hull area 15.89
+  DECAPOD  seed   6: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2499, adjacent/90deg ratio 1.13, hull area 15.72
+  DECAPOD  seed   7: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2918, adjacent/90deg ratio 1.23, hull area 15.92
+  DECAPOD  seed   8: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2780, adjacent/90deg ratio 1.02, hull area 15.64
+  DECAPOD  seed   9: ok, guesses 0, conflicts 0, layers [-2, -1, 0, 1], memory score 0.2915, adjacent/90deg ratio 1.18, hull area 15.69
+  FILLABLE seed   0: ok, guesses 2, conflicts 0, layers [-2, -1, 0, 1], memory score 0.1433, adjacent/90deg ratio 1.04, hull area 15.05
+  FILLABLE seed   1: ok, guesses 3, conflicts 0, layers [-2, -1, 0, 1], memory score 0.1484, adjacent/90deg ratio 1.11, hull area 14.77
+  FILLABLE seed  65: ok, guesses 5, conflicts 0, layers [-2, -1, 0, 1], memory score 0.1956, adjacent/90deg ratio 1.07, hull area 14.97
+  FILLABLE seed 109: ok, guesses 2, conflicts 0, layers [-2, -1, 0, 1], memory score 0.1535, adjacent/90deg ratio 1.06, hull area 15.15
+  D1: HELD    DECAPOD memory scores [0.2345, 0.2498, 0.2499, 0.2627, 0.2643, 0.278, 0.2915, 0.2918] vs FILLABLE max 0.1956 ([0.1433, 0.1484, 0.1535, 0.1956]); 8/8 above
+  D2: FAILED  adjacent/90deg ratio: DECAPOD median 1.13 (need < 0.8) vs FILLABLE median 1.07
