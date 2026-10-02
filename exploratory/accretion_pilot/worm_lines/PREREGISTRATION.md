@@ -70,4 +70,18 @@ with the decagon wall, then lifted to perp space (`../perp_map/`).
 
 ## Changes before the first run
 
-*(none yet)*
+*(none)*
+
+## Follow-up run (registered after the first run, before the second)
+
+- **What happened in the first run** (saved in `results/run1_1500/`):
+  - T0 passed: every ribbon was traced.
+  - But in 7 of 8 DECAPOD worlds the **shortest** ribbon stopped at only 7.0–7.9 edges, where the
+    ragged decapod front ended.
+  - With the analysis confined to 2.5–7 edges, almost no (wedge-half, layer) cell reached 5 vertices.
+    The ratio could be computed in only 1 decapod world (1.25).
+  - So **T1 and T2 failed as registered, because they could not be tested**. That result stands.
+- **The follow-up:**
+  - Identical analysis and identical predictions (T0, T1, T2, thresholds unchanged).
+  - Worlds grown to **4,000** half-tiles instead of 1,500, so the shortest ribbon reaches further.
+  - No other change. The follow-up's data have not been looked at.

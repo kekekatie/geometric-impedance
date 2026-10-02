@@ -14,7 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "perp_map"))
 import perp_map as M
 D, L, S = M.D, M.L, M.S
-N_TILES, R_MIN, MIN_LAYER, MIN_CELL = 1500, 2.5, 40, 5
+N_TILES, R_MIN, MIN_LAYER, MIN_CELL = 4000, 2.5, 40, 5
 RES = os.path.join(HERE, "results")
 ek = lambda p, q: frozenset((L.key(p), L.key(q)))
 is_leg = lambda p, q: abs(abs(q - p) - S) < 1e-4 * S
