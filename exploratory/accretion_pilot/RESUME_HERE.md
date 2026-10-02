@@ -4,6 +4,14 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🪱 Worm lines ([`worm_lines/`](worm_lines/))
+
+- The ten half-worm ribbons were traced (figure).
+- The window does **not** jump specifically across them. T1 failed (1/8). T2 failed the opposite
+  way: ordinary worlds' ribbons show bigger across/within ratios.
+- Decapod ribbons are almost perfectly straight spokes (0.1–0.3° per edge); ordinary ones wander.
+  This hints at a rigid radial order.
+
 ## 🧠 Decapod memory ([`decapod_memory/`](decapod_memory/))
 
 - **D1 held (8/8):** slices of a decapod world sit in windows shifted ~1.7× more than ordinary

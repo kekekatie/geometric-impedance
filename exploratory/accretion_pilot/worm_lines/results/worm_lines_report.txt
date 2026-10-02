@@ -1,0 +1,15 @@
+  DECAPOD  seed   2: ok, guesses 0, ribbon reach 22.3-22.3 edges (analysis to 22.3), cells 80, across 0.215, within 0.235, ratio 0.92; ribbon turning [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1] deg/edge
+  DECAPOD  seed   3: ok, guesses 0, ribbon reach 11.8-24.8 edges (analysis to 11.8), cells 57, across 0.452, within 0.396, ratio 1.14; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2] deg/edge
+  DECAPOD  seed   4: ok, guesses 0, ribbon reach 11.8-26.2 edges (analysis to 11.8), cells 58, across 0.432, within 0.400, ratio 1.08; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2, -0.2] deg/edge
+  DECAPOD  seed   5: ok, guesses 0, ribbon reach 11.8-28.1 edges (analysis to 11.8), cells 57, across 0.454, within 0.402, ratio 1.13; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2, 0.2, -0.2] deg/edge
+  DECAPOD  seed   6: ok, guesses 0, ribbon reach 11.8-28.1 edges (analysis to 11.8), cells 58, across 0.454, within 0.396, ratio 1.15; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2, -0.2, -0.2] deg/edge
+  DECAPOD  seed   7: ok, guesses 0, ribbon reach 14.1-30.4 edges (analysis to 14.1), cells 60, across 0.416, within 0.295, ratio 1.41; ribbon turning [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, -0.3, 0.3, 0.3, -0.3] deg/edge
+  DECAPOD  seed   8: ok, guesses 0, ribbon reach 15.1-30.4 edges (analysis to 15.1), cells 69, across 0.365, within 0.327, ratio 1.12; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2, 0.2, -0.2, -0.2] deg/edge
+  DECAPOD  seed   9: ok, guesses 0, ribbon reach 11.8-31.2 edges (analysis to 11.8), cells 58, across 0.430, within 0.401, ratio 1.07; ribbon turning [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, -0.2, -0.2, 0.2, -0.2] deg/edge
+  FILLABLE seed   0: ok, guesses 3, ribbon reach 14.1-30.6 edges (analysis to 14.1), cells 66, across 0.334, within 0.259, ratio 1.29; ribbon turning [1.0, -1.0, -0.5, 0.5, 1.0, -1.0, -0.5, -0.0, 0.0, 0.5] deg/edge
+  FILLABLE seed   1: ok, guesses 5, ribbon reach 12.6-30.4 edges (analysis to 12.6), cells 53, across 0.589, within 0.400, ratio 1.47; ribbon turning [1.1, -1.1, -0.7, 0.3, -0.3, 0.3, -0.3, 0.3, -0.3, 0.7] deg/edge
+  FILLABLE seed  65: ok, guesses 5, ribbon reach 16.8-28.1 edges (analysis to 16.8), cells 74, across 0.361, within 0.250, ratio 1.44; ribbon turning [0.2, 0.1, -0.1, 0.2, 0.1, -0.1, -0.2, 0.2, -0.2, -0.2] deg/edge
+  FILLABLE seed 109: ok, guesses 3, ribbon reach 17.6-27.3 edges (analysis to 17.6), cells 78, across 0.343, within 0.275, ratio 1.25; ribbon turning [-0.2, 0.2, -0.2, 0.2, -0.2, 0.2, -0.2, 0.2, -0.2, 0.2] deg/edge
+  T0: PASS  all ten ribbons traced >= 4 edges out in every world
+  T1: FAILED  DECAPOD across/within ratio > 1.2 in 1/8 (need >= 7); ratios [0.92, 1.07, 1.08, 1.12, 1.13, 1.14, 1.15, 1.41]
+  T2: FAILED  FILLABLE median ratio 1.37 < DECAPOD median 1.12; FILLABLE ratios [1.25, 1.29, 1.44, 1.47]
