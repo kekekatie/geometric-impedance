@@ -4,6 +4,41 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🗺️ Perp-space map ([`perp_map/`](perp_map/))
+
+- **Choices live deeper in the window** (M1 failed in the opposite direction, 0/12). Open edges
+  have depth ~0.45, forced edges ~0.38.
+- This fits Katie's directional balance: shallow vertices have truncated direction sets, so they
+  are forced; deep vertices have balanced sets, so they are free.
+- **A decapod smears the window** (M2 held, 8/8): perp hull area 8–13% larger. Its memory is a
+  widened window.
+
+## 💭 Katie's parting thought (2026-09-28): bring in perp space
+
+Where might perp space (the de Bruijn "window" coordinate, from `writing_walker/window_test.py`) inform
+today's arc? Candidate moments, noted before they roll away:
+
+- **Choices:** do the 2-option dead surfaces (`gromit_check`) sit where tiles' perp coordinates touch
+  the window's edge?
+- **Decapods and holonomy:** a decapod is where the perp-space lift fails to close (`decapod_seed`).
+- **Two kinds of slow time:** does the local clock rate track position in the window (`free_fall`)?
+
+**Katie's holonomy paper is the toolkit for this.** K. T. Niedzwiecki, *Depth-Dependent Directional
+Balance and Discrete Holonomy in Projection Tilings* (June 2026), doi:10.5281/zenodo.20695694. Its
+findings:
+
+- near-closed walks leave a perp-space residue;
+- the residue is **not** an area law (not Berry curvature) and **not** temporal (linger time has no
+  effect);
+- it is **positional**: set by hull depth, through depth-dependent directional balance, with an
+  inward radial drift near the window edge;
+- null-disc controls confirm it is genuine quasicrystal structure.
+
+Its *hull depth* is the natural coordinate for the map.
+
+A natural next study: a **perp-space map** of one grown world, with every guess, jam, fast and slow
+region plotted in the window.
+
 ## 🍎 Free fall ([`free_fall/`](free_fall/))
 
 - Einstein's rule (the path with maximal proper time; the clock is happenings at the now; c = 1)
