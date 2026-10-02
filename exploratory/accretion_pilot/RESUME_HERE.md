@@ -4,6 +4,19 @@
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🔁 Astra's "5D lift around the decapod" check (relayed via Gemini)
+
+Astra's suggested test: if you walk all the way round a decapod world, the 5D address should fail
+to close. **It is already answered by our data, and the answer is that it closes.**
+
+- The lift in `perp_map/` (8 worlds, 800 tiles) and `decapod_memory/` (8 worlds, 1,500 tiles)
+  includes every loop around the decagon. It found **0 conflicts** in every decapod world.
+- This is forced by the maths: any closed loop of edges in a rhombus tiling changes the 5D
+  address by `m·(1,1,1,1,1)`. Here `m = 0`, since every world kept exactly 4 layers.
+- So the decapod's memory is **not** in the address arithmetic of a loop. It is in **which
+  addresses exist**: the window. That shows up as a smeared hull (`perp_map/` M2) and shifted
+  sector windows (`decapod_memory/` D1).
+
 ## 🪱 Worm lines ([`worm_lines/`](worm_lines/))
 
 - The ten half-worm ribbons were traced (figure).
