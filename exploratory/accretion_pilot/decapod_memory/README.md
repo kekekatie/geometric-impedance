@@ -24,6 +24,13 @@ Worlds: the same 8 DECAPOD and 4 FILLABLE seeds, grown to 1,500 half-tiles. Tool
 Every world grew cleanly: no jams, no lift conflicts, 4 layers each. Decapod worlds made 0 guesses;
 ordinary worlds made 2–5.
 
+> **Caution (Astra's review, 2026-10-03):** the measure is a sector's **mean** perp address. A larger
+> mean offset could come from (a) a window that is genuinely **translated**, (b) a window of a different
+> **shape**, or (c) the sector **sampling** different parts of the distribution. A larger overall window
+> (as `../perp_map/` found) could also inflate sector offsets with no organised displacement. The
+> result below establishes a difference between the two seed families, not yet a translated-window
+> mechanism. "Shifted window" is a hypothesis, not a finding.
+
 ## What it means (plainly)
 
 - **The decapod's memory is real and local.** Slices of a decapod world sit in windows shifted

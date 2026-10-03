@@ -1,15 +1,50 @@
 # 👋 Resume here — a note from past-us to future-us
 
+## 🧭 Where we are, at a glance (2026-10-03, after Astra's review)
+
+Three questions hold the whole programme:
+
+| Question | What we have | What's open |
+|---|---|---|
+| **1. Can a world grow locally?** | Decapod seeds grow by forced moves alone: no global decider, no guesses (`decapod_seed/`). | How general and enduring is that? |
+| **2. What mark does the seed leave?** | Decapod worlds' hidden addresses are distributed differently: a larger hull (`perp_map/`), larger sector offsets (`decapod_memory/`). Not a broken lift (it closes), and not translated sector windows (`two_worlds_visual/`). | Is it a change of window *shape*? |
+| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? This is the cliffhanger. |
+
+Katie's rattle principle (2026-10-03): keep the intact growing world as the main experiment. Use
+separated comparisons only as diagnostic controls, then go back to the whole system.
+
+
 *Katie, if you're reading this: you asked me to remind you what was waiting in the wings.
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
+
+## 👀 Two worlds side by side ([`two_worlds_visual/`](two_worlds_visual/))
+
+- Exploratory picture. Within a world, the five slices' hidden addresses are **mixed through one
+  cloud**: no translated sector windows.
+- The decapod's clouds may be a slightly different (rounder) shape.
+
+## 🔁 Astra's "5D lift around the decapod" check (relayed via Gemini)
+
+Astra's suggested test: if you walk all the way round a decapod world, the 5D address should fail
+to close. **It is already answered by our data, and the answer is that it closes.**
+
+- The lift in `perp_map/` (8 worlds, 800 tiles) and `decapod_memory/` (8 worlds, 1,500 tiles)
+  includes every loop around the decagon. It found **0 conflicts** in every decapod world.
+- This is forced by the maths: any closed loop of edges in a rhombus tiling changes the 5D
+  address by `m·(1,1,1,1,1)`. Here `m = 0`, since every world kept exactly 4 layers.
+- So the decapod's memory is **not** in the address arithmetic of a loop. It is in **which
+  addresses exist**: the window. That shows up as a smeared hull (`perp_map/` M2) and shifted
+  sector windows (`decapod_memory/` D1).
 
 ## 🪱 Worm lines ([`worm_lines/`](worm_lines/))
 
 - The ten half-worm ribbons were traced (figure).
 - The window does **not** jump specifically across them. T1 failed (1/8). T2 failed the opposite
   way: ordinary worlds' ribbons show bigger across/within ratios.
-- Decapod ribbons are almost perfectly straight spokes (0.1–0.3° per edge); ordinary ones wander.
+- Decapod ribbons are almost perfectly straight spokes: 0.12 edges RMS deviation from a line, identical
+  in all 80 ribbons. Ordinary ones wander (0.25–0.28). The earlier "°/edge" figure was net turning
+  only (Astra's correction).
   This hints at a rigid radial order.
 
 ## 🧠 Decapod memory ([`decapod_memory/`](decapod_memory/))

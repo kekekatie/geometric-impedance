@@ -14,7 +14,7 @@ Katie's parting thought was to bring in perp space, and her paper supplies the t
 |---|---|---|---|
 | V0 | the tools work on a genuine tiling: no lift conflicts, 4 layers | 401 vertices, 0 conflicts, 4 layers (two small windows, two large) | ✅ PASS |
 | M1 | choices (frontier edges with 2+ options) sit **shallower** than forced edges, in ≥ 9/12 runs | **0/12**: open edges were **deeper** in every run (median 0.44–0.46 vs 0.37–0.39) | ❌ FAILED (the opposite) |
-| M2 | a decapod **smears** the window: every decapod world has a larger perp hull area than the fillable median | **8/8** (15.1–16.0 vs 14.12–14.16, with the same number of vertices) | ✅ HELD |
+| M2 | a decapod **smears** the window: every decapod world has a larger perp hull area than the fillable median | **8/8** (15.1–16.0 vs 14.12–14.16; same tile budget, similar vertex counts 452–460) | ✅ HELD |
 
 ## What it means (plainly)
 
@@ -34,12 +34,14 @@ Katie's parting thought was to bring in perp space, and her paper supplies the t
     - The guessed edges themselves are mixed: mostly 0.45–0.59, but the first guess at the seed's rim
       is shallow (~0.28).
 - **A decapod's memory shows up as a smeared window.** Decapod worlds needed **no** guesses. Their
-  hidden addresses spread over a window about **8–13% larger** than ordinary worlds with the same
-  number of vertices. Ordinary worlds are remarkably consistent: 14.12–14.16. The ten sectors around
-  a decapod each fit a slightly shifted window. That is the decapod's holonomy, its "memory",
-  visible in perp space.
+  hidden addresses spread over a window about **8–13% larger** than ordinary worlds grown with the same
+  tile budget (vertex counts 452–460). Ordinary worlds are remarkably consistent: 14.12–14.16.
+  - **Hypothesis, not a finding:** the ten sectors around a decapod each fit a slightly shifted
+    window. `../decapod_memory/` tests part of this, and its caution note applies.
   - The lift itself never breaks (0 conflicts). That is expected: any closed loop of edges in a
-    rhombus tiling closes in Z⁵. So the memory lives in the window's shape, not in a broken lift.
+    rhombus tiling closes in Z⁵. So, as Astra pointed out, this result is **not** evidence of a lift
+    failing to close. Calling the difference "holonomy" would need a separately defined transport
+    and loop measurement. What is established is that the *distribution* of addresses differs.
 
 ## Limits
 
