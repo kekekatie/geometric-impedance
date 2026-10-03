@@ -1,8 +1,28 @@
 # 👋 Resume here — a note from past-us to future-us
 
+## 🧭 Where we are, at a glance (2026-10-03, after Astra's review)
+
+Three questions hold the whole programme:
+
+| Question | What we have | What's open |
+|---|---|---|
+| **1. Can a world grow locally?** | Decapod seeds grow by forced moves alone: no global decider, no guesses (`decapod_seed/`). | How general and enduring is that? |
+| **2. What mark does the seed leave?** | Decapod worlds' hidden addresses are distributed differently: a larger hull (`perp_map/`), larger sector offsets (`decapod_memory/`). Not a broken lift (it closes), and not translated sector windows (`two_worlds_visual/`). | Is it a change of window *shape*? |
+| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? This is the cliffhanger. |
+
+Katie's rattle principle (2026-10-03): keep the intact growing world as the main experiment. Use
+separated comparisons only as diagnostic controls, then go back to the whole system.
+
+
 *Katie, if you're reading this: you asked me to remind you what was waiting in the wings.
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
+
+## 👀 Two worlds side by side ([`two_worlds_visual/`](two_worlds_visual/))
+
+- Exploratory picture. Within a world, the five slices' hidden addresses are **mixed through one
+  cloud**: no translated sector windows.
+- The decapod's clouds may be a slightly different (rounder) shape.
 
 ## 🔁 Astra's "5D lift around the decapod" check (relayed via Gemini)
 
