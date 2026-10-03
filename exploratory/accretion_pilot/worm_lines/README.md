@@ -33,8 +33,13 @@ jumps more **across** a ribbon than **within** a wedge.
   - the shift is spread more evenly through the wedges;
   - this window-mean measure is the wrong tool for seeing it.
 - **Something we didn't predict, visible in the picture.** A decapod world's ten ribbons are almost
-  perfectly straight spokes: they turn only 0.1–0.3° per edge. An ordinary world's ribbons wander,
-  turning up to ~1° per edge, especially near the centre. One decapod world (seed 2) is grown
+  perfectly straight spokes. *(Correction, prompted by Astra: the first measure quoted here, 0.1–0.3° per
+  edge, was only the net angle change between a ribbon's ends, so bends that cancel were invisible.
+  A fuller measure, the deviation from a best-fit straight line between 2.5 and 12 edges out
+  ([`results/straightness_EXPLORATORY.txt`](results/straightness_EXPLORATORY.txt)), confirms the
+  difference. Decapod ribbons deviate by 0.12 edges RMS (at most 0.16), and **identically for all
+  80 ribbons in all 8 worlds**. Ordinary worlds' ribbons deviate by 0.25–0.28 RMS, up to 0.61.)*
+  An ordinary world's ribbons wander, especially near the centre. One decapod world (seed 2) is grown
   almost perfectly round and ten-fold symmetric. It's only a description, but it hints that the
   decapod imposes a **rigid, radial order** on the world it seeds. Choices (the guesses in ordinary
   worlds) seem to make the lines wander.
@@ -50,7 +55,9 @@ jumps more **across** a ribbon than **within** a wedge.
 
 - `worm_lines.py`
 - `make_figure.py`
+- `straightness_EXPLORATORY.py`
 - `figures/worm_lines.png`
 - `results/worlds.json`
 - `results/worm_lines_report.txt` (follow-up)
+- `results/straightness_EXPLORATORY.txt`
 - `results/run1_1500/` (first run)

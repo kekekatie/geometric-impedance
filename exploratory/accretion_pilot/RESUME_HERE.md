@@ -22,7 +22,9 @@ to close. **It is already answered by our data, and the answer is that it closes
 - The ten half-worm ribbons were traced (figure).
 - The window does **not** jump specifically across them. T1 failed (1/8). T2 failed the opposite
   way: ordinary worlds' ribbons show bigger across/within ratios.
-- Decapod ribbons are almost perfectly straight spokes (0.1–0.3° per edge); ordinary ones wander.
+- Decapod ribbons are almost perfectly straight spokes: 0.12 edges RMS deviation from a line, identical
+  in all 80 ribbons. Ordinary ones wander (0.25–0.28). The earlier "°/edge" figure was net turning
+  only (Astra's correction).
   This hints at a rigid radial order.
 
 ## 🧠 Decapod memory ([`decapod_memory/`](decapod_memory/))
