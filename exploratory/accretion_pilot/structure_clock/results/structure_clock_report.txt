@@ -1,0 +1,26 @@
+  seed 2: ok, guesses 0, probes 700, mean T 5.5 rounds, mean H 14.7; rho_T +0.288 (perm p 0.001), rho_H +0.280 (perm p 0.001)
+      by depth tercile: shallow: T 5.4, H 13.8, H/T 2.89; mid: T 4.5, H 13.7, H/T 3.20; deep: T 6.7, H 16.5, H/T 2.74
+      by layer (rho_T, rho_H, n): {'-2': (np.float64(0.473), np.float64(-0.654), 95), '-1': (np.float64(0.353), np.float64(0.34), 255), '0': (np.float64(0.33), np.float64(0.326), 255), '1': (np.float64(0.472), np.float64(-0.653), 95)}
+  seed 3: ok, guesses 0, probes 697, mean T 5.9 rounds, mean H 14.6; rho_T +0.266 (perm p 0.001), rho_H +0.248 (perm p 0.001)
+      by depth tercile: shallow: T 5.6, H 14.0, H/T 3.01; mid: T 5.0, H 13.6, H/T 3.15; deep: T 7.2, H 16.1, H/T 2.70
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 95), '-1': (np.float64(0.276), np.float64(0.222), 249), '0': (np.float64(0.285), np.float64(0.253), 256), '1': (nan, nan, 97)}
+  seed 4: ok, guesses 0, probes 696, mean T 6.1 rounds, mean H 14.6; rho_T +0.277 (perm p 0.001), rho_H +0.248 (perm p 0.001)
+      by depth tercile: shallow: T 5.4, H 14.0, H/T 3.06; mid: T 5.5, H 13.6, H/T 3.12; deep: T 7.3, H 16.2, H/T 2.74
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 93), '-1': (np.float64(0.31), np.float64(0.255), 256), '0': (np.float64(0.234), np.float64(0.173), 253), '1': (nan, nan, 94)}
+  seed 5: ok, guesses 0, probes 692, mean T 6.5 rounds, mean H 14.6; rho_T +0.226 (perm p 0.001), rho_H +0.211 (perm p 0.001)
+      by depth tercile: shallow: T 6.1, H 14.1, H/T 2.96; mid: T 5.8, H 13.7, H/T 3.11; deep: T 7.8, H 16.0, H/T 2.66
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 97), '-1': (np.float64(0.19), np.float64(0.153), 250), '0': (np.float64(0.255), np.float64(0.188), 256), '1': (nan, nan, 89)}
+  seed 6: ok, guesses 0, probes 684, mean T 6.7 rounds, mean H 14.7; rho_T +0.229 (perm p 0.001), rho_H +0.209 (perm p 0.001)
+      by depth tercile: shallow: T 5.9, H 14.1, H/T 3.00; mid: T 6.1, H 13.8, H/T 3.11; deep: T 8.0, H 16.1, H/T 2.64
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 94), '-1': (np.float64(0.198), np.float64(0.166), 249), '0': (np.float64(0.215), np.float64(0.2), 250), '1': (nan, nan, 91)}
+  seed 7: ok, guesses 0, probes 696, mean T 6.9 rounds, mean H 14.6; rho_T +0.206 (perm p 0.001), rho_H +0.221 (perm p 0.001)
+      by depth tercile: shallow: T 6.6, H 14.1, H/T 2.89; mid: T 6.0, H 13.9, H/T 3.06; deep: T 8.1, H 15.9, H/T 2.59
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 92), '-1': (np.float64(0.157), np.float64(0.152), 256), '0': (np.float64(0.209), np.float64(0.213), 253), '1': (nan, nan, 95)}
+  seed 8: ok, guesses 0, probes 692, mean T 6.4 rounds, mean H 14.6; rho_T +0.207 (perm p 0.001), rho_H +0.211 (perm p 0.001)
+      by depth tercile: shallow: T 6.0, H 14.2, H/T 2.97; mid: T 5.7, H 13.8, H/T 3.12; deep: T 7.5, H 15.9, H/T 2.68
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 91), '-1': (np.float64(0.176), np.float64(0.175), 253), '0': (np.float64(0.228), np.float64(0.223), 253), '1': (nan, nan, 95)}
+  seed 9: ok, guesses 0, probes 695, mean T 6.8 rounds, mean H 14.7; rho_T +0.221 (perm p 0.001), rho_H +0.225 (perm p 0.001)
+      by depth tercile: shallow: T 6.3, H 14.1, H/T 2.92; mid: T 6.1, H 14.0, H/T 3.04; deep: T 7.9, H 15.9, H/T 2.63
+      by layer (rho_T, rho_H, n): {'-2': (nan, nan, 92), '-1': (np.float64(0.202), np.float64(0.202), 254), '0': (np.float64(0.202), np.float64(0.17), 254), '1': (nan, nan, 95)}
+  C1: HELD    rho(depth, T rounds): same sign in 8/8 (need >= 7), median |rho| 0.228 (need >= 0.15); values [0.288, 0.266, 0.277, 0.226, 0.229, 0.206, 0.207, 0.221]
+  C2: FAILED  rho(depth, H happenings): median |rho| 0.223 (need < 0.15); values [0.28, 0.248, 0.248, 0.211, 0.209, 0.221, 0.211, 0.225]
