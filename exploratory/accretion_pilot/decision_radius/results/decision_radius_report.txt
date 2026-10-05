@@ -1,0 +1,6 @@
+  seed 2: ok, guesses 0, probes 100; decision radius distribution {'1.25': 14, '1.5': 77, '2.0': 0, '2.5': 0, '3.0': 0, '4.0': 0, '5.0': 9}; by depth tercile {'shallow': 1.66, 'mid': 2.18, 'deep': 1.5}; rho(depth, radius) +0.120, rho(radius, T) +0.087
+  seed 3: ok, guesses 0, probes 100; decision radius distribution {'1.25': 26, '1.5': 67, '2.0': 0, '2.5': 0, '3.0': 0, '4.0': 0, '5.0': 7}; by depth tercile {'shallow': 1.62, 'mid': 1.93, 'deep': 1.48}; rho(depth, radius) +0.200, rho(radius, T) +0.219
+  seed 4: ok, guesses 0, probes 100; decision radius distribution {'1.25': 25, '1.5': 69, '2.0': 0, '2.5': 0, '3.0': 0, '4.0': 0, '5.0': 6}; by depth tercile {'shallow': 1.82, 'mid': 1.61, 'deep': 1.5}; rho(depth, radius) +0.228, rho(radius, T) +0.330
+  seed 5: ok, guesses 0, probes 100; decision radius distribution {'1.25': 32, '1.5': 63, '2.0': 0, '2.5': 0, '3.0': 0, '4.0': 0, '5.0': 5}; by depth tercile {'shallow': 1.7, 'mid': 1.59, 'deep': 1.49}; rho(depth, radius) +0.249, rho(radius, T) +0.413
+  R1: HELD    rho(depth, decision radius) > 0 in 4/4 (need >= 3), median +0.214 (need >= 0.15)
+  R2: HELD    rho(decision radius, settling time) > 0 in 4/4 (need >= 3); values [0.087, 0.219, 0.33, 0.413]

@@ -1,0 +1,7 @@
+EXPLORATORY (post hoc): what drives the follow-up correlation? Per depth tercile (pooled over 4 worlds, terciles per world):
+  shallow: n 136; decided by the thinnest ring (1.25) 0.32; needed 1.5 0.60; not decided even with 4 edges 0.08; mean settling time 5.3 rounds
+  mid    : n 132; decided by the thinnest ring (1.25) 0.38; needed 1.5 0.50; not decided even with 4 edges 0.12; mean settling time 4.5 rounds
+  deep   : n 132; decided by the thinnest ring (1.25) 0.02; needed 1.5 0.98; not decided even with 4 edges 0.00; mean settling time 6.6 rounds
+  decision radius 1.25: n 97, mean depth 0.201, mean settling time 3.7
+  decision radius 1.5: n 276, mean depth 0.412, mean settling time 6.3
+  decision radius 5.0: n 27, mean depth 0.239, mean settling time 3.1

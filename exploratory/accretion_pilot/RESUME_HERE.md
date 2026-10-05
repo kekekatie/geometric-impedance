@@ -18,6 +18,17 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🌊 Decision radius ([`decision_radius/`](decision_radius/))
+
+- Deep places can almost never be decided by the thinnest ring of their past: 98% need a wider ring.
+  R1 and R2 held in the follow-up, 4/4.
+- So "more of the world must weigh in" is supported, modestly.
+- Surprise: ~10% of shallow and middle places couldn't be decided even from 4 edges of past, yet
+  settled fast. Long-range news, or a sampling artefact?
+- **Two dials** (2026-10-05 chat): how long the now lasts = how much has to happen (structure,
+  Dial 1) ÷ how fast things happen (happening density, Dial 2). Deep places: ~15% more to happen
+  and ~10% slower, giving ~1.3×.
+
 ## ⏳ Structure and the local clock ([`structure_clock/`](structure_clock/))
 
 - In intact decapod worlds, **deep** places (in the hidden window) take ~30% longer to settle (C1
