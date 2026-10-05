@@ -65,4 +65,24 @@ to the last placement of its disc.
 
 ## Changes before the first run
 
-*(none yet)*
+*(none)*
+
+## Follow-up run (registered after the first run, before the second)
+
+- **What happened in the first run** (saved in `results/run1_full_context/`):
+  - **All 400 probes** were decided at the smallest context radius (1.5 edges).
+  - A place surrounded on every side by its final neighbours is always uniquely determined. This
+    agrees with the earlier finding that enclosed regions have exactly one filling ("Astra's checks"
+    in `../quiet_lasts_longer/`).
+  - So the measure had no spread, and **R1 and R2 failed because they could not be tested**. That
+    result stands.
+- **The design flaw.** At the growing edge, a place never has context on every side, only the world
+  as it stood when the place was laid.
+- **The follow-up:**
+  - The context at radius `ρ` is now every tile within `ρ` of `v`, outside the disc, laid **at or
+    before round `full`**: the round in which the disc's last tile was placed. That is the world as
+    it stood when the place was finished.
+  - Radii are `ρ ∈ {1.25, 1.5, 2, 2.5, 3, 4}` edges; censored = 5.
+  - Everything else is unchanged: probes, target, 16 attempts, success rule, predictions R1 and R2,
+    and thresholds.
+  - The follow-up's data have not been looked at.

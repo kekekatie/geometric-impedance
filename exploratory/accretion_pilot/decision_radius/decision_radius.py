@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.join(HERE, "..", "continuation_choices"))
 import structure_clock as SC
 import continuation_choices as CC
 M, D, L, S = SC.M, SC.D, SC.L, SC.S
-RADII, CENSORED, ATT, REACH, MAXADD = [1.5, 2.0, 2.5, 3.0, 4.0], 5.0, 16, 1.8, 80
+RADII, CENSORED, ATT, REACH, MAXADD = [1.25, 1.5, 2.0, 2.5, 3.0, 4.0], 5.0, 16, 1.8, 80   # follow-up radii
 SEEDS, NPROBE = [2, 3, 4, 5], 100
 RES = os.path.join(HERE, "results")
 cen = lambda t: sum(t[1:]) / 3
@@ -72,8 +72,8 @@ def world(s):
         actual = tuple(D.dkey(x) for x in CC.cover_of([tiles[i] for i in np.where(d <= 2.5 * S)[0]], pts))
         drad = CENSORED; detail = {}
         for rho in RADII:
-            base = [tiles[i] for i in np.where(d <= rho * S)[0] if D.dkey(tiles[i]) not in disc_keys]
-            sigs = [complete(base, c, pts, random.Random((2050 + s) * 100000 + len(rows) * 100 + int(rho * 10) * 3 + a)) for a in range(ATT)]
+            base = [tiles[i] for i in np.where((d <= rho * S) & (tr <= f))[0] if D.dkey(tiles[i]) not in disc_keys]   # follow-up: the world as it stood when the place was finished
+            sigs = [complete(base, c, pts, random.Random((2050 + s) * 100000 + len(rows) * 100 + int(rho * 100) * 3 + a)) for a in range(ATT)]
             ok = [g for g in sigs if g is not None]
             detail[str(rho)] = dict(success=len(ok), distinct=len(set(ok)), all_actual=bool(ok) and all(g == actual for g in ok))
             if ok and all(g == actual for g in ok):
