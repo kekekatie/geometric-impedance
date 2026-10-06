@@ -38,13 +38,20 @@ Breakdown by depth third, pooled over the 4 worlds
   ring out, and they take the longest to settle. That's the predicted mechanism, in a modest form:
   more of the world has to weigh in, and the present lasts longer while it does.
 - **Deep places are also always decidable from nearby.** None needed more than 1.5 edges.
-- **A surprise among shallow and middle places.** About 10% could *not* be decided even from a
-  4-edge ring of their past, yet they settled fast (3.1 rounds on average). Either:
-  - they're fixed by news from **further away** (long-range constraints), or
-  - our sampled completions find alternatives that would only dead-end further out (a limit of the
-    method).
-  
-  This is worth a closer look.
+- ~~**A surprise among shallow and middle places.**~~ **Resolved as a measurement artefact
+  (2026-10-06).** About 10% could not be decided even from a 4-edge ring, yet settled fast. Gemini
+  asked whether these were "zippers", places decided sideways by the active present.
+  - But the context already included everything laid up to the moment the place finished, same-round
+    sideways neighbours included.
+  - The check ([`undecided_check_EXPLORATORY.py`](undecided_check_EXPLORATORY.py),
+    [`results/undecided_check_EXPLORATORY.txt`](results/undecided_check_EXPLORATORY.txt)) found that
+    **all 27** "undecided" places have a target point covered by a tile lying *outside* the 1.0-edge
+    disc and laid *after* the disc finished, against 40 of 373 decided places.
+  - The target (out to 0.8 edges) reaches tiles whose centroids sit up to 1.8 edges away, while
+    "finished" was defined by the 1.0-edge disc. So the test asked these places to predict tiles
+    that didn't exist yet.
+  - They are not a special group. The R1 and R2 conclusions rest mainly on the 1.25 vs 1.5 split and
+    don't depend on them.
 
 ## Limits
 
@@ -59,4 +66,5 @@ Breakdown by depth third, pooled over the 4 worlds
 - `results/worlds.json`
 - `results/decision_radius_report.txt` (follow-up)
 - `results/breakdown_EXPLORATORY.txt`
+- `undecided_check_EXPLORATORY.py`, `results/undecided_check_EXPLORATORY.txt`
 - `results/run1_full_context/` (first run)
