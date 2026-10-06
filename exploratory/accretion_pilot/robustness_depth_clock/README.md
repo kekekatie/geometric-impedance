@@ -1,5 +1,7 @@
 # Robustness: does "the present lasts longer deep in the window" survive?
 
+> **Follow-up (2026-10-07, [`../window_cells/`](../window_cells/)):** Fable suggested that the clock is read off the **window cell** (local pattern) at each scale. It isn't. Within worlds, cells predict settling time no better than shuffled cells. Across worlds they predict only when the *same place* recurs (the decapod worlds are slices of one tiling). Settling time depends on **where** a place is (how growth reaches it), not on what kind of place it is. The withdrawal stands.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*
 

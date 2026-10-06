@@ -1,6 +1,6 @@
 # How much of the world must weigh in? Decision radius vs depth
 
-> **Caution (2026-10-06):** the depth effect in [`../structure_clock/`](../structure_clock/) turned out to be a vertex-type effect at one scale ([`../robustness_depth_clock/`](../robustness_depth_clock/)). This study's R1 uses the same depth measure at single scales, so it should be re-checked within vertex type before being relied on.
+> **Update (2026-10-07, [`../window_cells/`](../window_cells/)):** within 1-edge window cells, R1 **reverses** (ρ(depth, decision radius) +0.21 raw, −0.24 within cells). "Deep places need a wider ring" is not a depth law. Do not rely on R1.
 
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md). The first run couldn't test the idea, so a follow-up was

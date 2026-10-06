@@ -1,0 +1,17 @@
+PART B1 (M1 within 1-edge cells): regrown runs reproduce saved medians: True
+    run 0: raw gap (open - forced mean depth) +0.0212; within-cell gap +0.0177 (ratio +0.83); events in cells with both kinds 0.44; cells 468
+    run 1: raw gap (open - forced mean depth) +0.0213; within-cell gap +0.0019 (ratio +0.09); events in cells with both kinds 0.43; cells 442
+    run 2: raw gap (open - forced mean depth) +0.0383; within-cell gap +0.0042 (ratio +0.11); events in cells with both kinds 0.62; cells 498
+    run 3: raw gap (open - forced mean depth) +0.0191; within-cell gap -0.0007 (ratio -0.04); events in cells with both kinds 0.39; cells 448
+    run 4: raw gap (open - forced mean depth) +0.0212; within-cell gap +0.0177 (ratio +0.83); events in cells with both kinds 0.44; cells 468
+    run 5: raw gap (open - forced mean depth) +0.0309; within-cell gap +0.0075 (ratio +0.24); events in cells with both kinds 0.56; cells 473
+    run 6: raw gap (open - forced mean depth) +0.0287; within-cell gap +0.0059 (ratio +0.21); events in cells with both kinds 0.54; cells 467
+    run 7: raw gap (open - forced mean depth) +0.0206; within-cell gap +0.0035 (ratio +0.17); events in cells with both kinds 0.50; cells 451
+    run 8: raw gap (open - forced mean depth) +0.0213; within-cell gap +0.0019 (ratio +0.09); events in cells with both kinds 0.43; cells 442
+    run 9: raw gap (open - forced mean depth) +0.0405; within-cell gap -0.0010 (ratio -0.02); events in cells with both kinds 0.65; cells 477
+    run 10: raw gap (open - forced mean depth) +0.0163; within-cell gap +0.0067 (ratio +0.41); events in cells with both kinds 0.40; cells 449
+    run 11: raw gap (open - forced mean depth) +0.0405; within-cell gap -0.0010 (ratio -0.02); events in cells with both kinds 0.65; cells 477
+  B1: HELD    within-cell gap < 1/3 of raw gap in 9/12 (need >= 9)
+PART B2 (R1 within 1-edge cells): regrown probes match saved depths: True; cells 199, probes in cells with >= 2: 312
+    raw pooled rho(depth, decision radius) +0.212; within-cell -0.238; eta2 of decision radius by cell 0.914
+  B2: FAILED  |within-cell rho| < 0.1

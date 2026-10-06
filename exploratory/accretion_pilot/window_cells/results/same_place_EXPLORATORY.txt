@@ -1,0 +1,7 @@
+EXPLORATORY: cross-world R2, all matches vs matches at a different radius only
+  disc 0.6: all matches R2 +0.111 (coverage 0.95; share of cell-mates at the same radius 0.26) | different radius only R2 -0.070 (coverage 0.85)
+  disc 0.8: all matches R2 +0.179 (coverage 0.93; share of cell-mates at the same radius 0.32) | different radius only R2 -0.031 (coverage 0.79)
+  disc 1.0: all matches R2 +0.282 (coverage 0.88; share of cell-mates at the same radius 0.44) | different radius only R2 -0.147 (coverage 0.67)
+  disc 1.25: all matches R2 +0.313 (coverage 0.84; share of cell-mates at the same radius 0.58) | different radius only R2 -0.242 (coverage 0.53)
+  disc 1.5: all matches R2 +0.418 (coverage 0.78; share of cell-mates at the same radius 0.69) | different radius only R2 -0.328 (coverage 0.38)
+  disc 2.0: all matches R2 +0.565 (coverage 0.71; share of cell-mates at the same radius 0.83) | different radius only R2 -0.570 (coverage 0.21)

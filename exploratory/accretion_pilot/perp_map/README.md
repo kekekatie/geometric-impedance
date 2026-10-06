@@ -1,6 +1,9 @@
 # A perp-space map of grown worlds
 
-> **Caution (2026-10-06):** M1 (open choices sit deeper) uses one depth measure at one scale. Depth and vertex type are entangled in Penrose tilings ([`../robustness_depth_clock/`](../robustness_depth_clock/)), so M1 should be re-checked within vertex type.
+> **Update (2026-10-07, [`../window_cells/`](../window_cells/)):**
+>
+> - **M1:** inside 1-edge window cells, the open/forced depth gap mostly disappears (9/12 runs). So "choices sit deeper" is a fact about **local pattern**, which depth tracked.
+> - **M2:** decapod worlds do **not** smear or leave the true Penrose window. Every one fits it exactly, with 54–60 vertices sitting **on the window's edge** along the ten ribbons (ordinary worlds: none). The bigger hull comes from reaching the window's edges. The "shifted windows" hypothesis below is not needed.
 
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*

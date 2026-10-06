@@ -1,0 +1,16 @@
+PART C: window orientation from the reference tiling: signs (1, -1, 1, -1), s* -0.0279 (next best -0.0279); true window area 17.205
+    DECAPOD  seed   2: hull 16.02; whole-world s* -0.0000; vertices outside 0/460 at radii []; wedges (phase 18) worst s* -0.1008; random partitions all-fit 100/100; wedge-union area 20.43
+    DECAPOD  seed   3: hull 15.81; whole-world s* -0.0000; vertices outside 0/454 at radii []; wedges (phase 18) worst s* -0.1008; random partitions all-fit 100/100; wedge-union area 21.22
+    DECAPOD  seed   4: hull 15.49; whole-world s* -0.0000; vertices outside 0/454 at radii []; wedges (phase 18) worst s* -0.1008; random partitions all-fit 100/100; wedge-union area 21.47
+    DECAPOD  seed   5: hull 15.53; whole-world s* -0.0000; vertices outside 0/454 at radii []; wedges (phase 18) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 21.61
+    DECAPOD  seed   6: hull 15.11; whole-world s* -0.0000; vertices outside 0/455 at radii []; wedges (phase 18) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 21.36
+    DECAPOD  seed   7: hull 15.70; whole-world s* -0.0000; vertices outside 0/452 at radii []; wedges (phase 18) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 21.03
+    DECAPOD  seed   8: hull 15.32; whole-world s* -0.0000; vertices outside 0/452 at radii []; wedges (phase 18) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 21.57
+    DECAPOD  seed   9: hull 15.41; whole-world s* -0.0000; vertices outside 0/455 at radii []; wedges (phase 18) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 21.53
+    FILLABLE seed   0: hull 14.16; whole-world s* -0.0451; vertices outside 0/452 at radii []; wedges (phase 18) worst s* -0.0623; random partitions all-fit 100/100; wedge-union area 19.60
+    FILLABLE seed   1: hull 14.14; whole-world s* -0.0451; vertices outside 0/454 at radii []; wedges (phase 0) worst s* -0.0729; random partitions all-fit 100/100; wedge-union area 20.57
+    FILLABLE seed  65: hull 14.12; whole-world s* -0.0451; vertices outside 0/454 at radii []; wedges (phase 18) worst s* -0.0451; random partitions all-fit 100/100; wedge-union area 20.27
+    FILLABLE seed 109: hull 14.16; whole-world s* -0.0451; vertices outside 0/453 at radii []; wedges (phase 0) worst s* -0.0623; random partitions all-fit 100/100; wedge-union area 24.62
+  C0: PASS  reference and fillable worlds fit the true window (s* <= 0.01); M2 areas reproduced: True
+  C1: FAILED  decapod worlds exceed the true window in 0/8 (need >= 6)
+  C2: FAILED  every wedge fits while the whole does not, and beats random partitions, in 0/8 (need >= 6)

@@ -1,5 +1,7 @@
 # Where does a decapod keep its memory?
 
+> **Update (2026-10-07, [`../window_cells/`](../window_cells/)):** decapod worlds fit the true Penrose window exactly. Their extra spread comes from 54–60 vertices sitting **on the window's edge** along the ten ribbons. That is reading (c) in the caution below (sampling), not translated windows.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*
 
