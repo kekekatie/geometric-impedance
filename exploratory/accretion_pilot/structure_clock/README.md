@@ -1,5 +1,7 @@
 # Structure and the local clock in an intact decapod world
 
+> **Not robust (2026-10-06; see [`../robustness_depth_clock/`](../robustness_depth_clock/)).** It replicated in new decapod worlds and in ordinary worlds at the 1-edge disc. But the sign **flips** with disc size (−0.31 at 0.6 edges, +0.35 at 0.9, −0.24 at 2.0), and **within each vertex type** the 1-edge effect vanishes. The headline below is withdrawn as a general law: it is a vertex-geometry effect at one scale.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*
 

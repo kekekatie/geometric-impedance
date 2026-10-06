@@ -1,5 +1,7 @@
 # A perp-space map of grown worlds
 
+> **Caution (2026-10-06):** M1 (open choices sit deeper) uses one depth measure at one scale. Depth and vertex type are entangled in Penrose tilings ([`../robustness_depth_clock/`](../robustness_depth_clock/)), so M1 should be re-checked within vertex type.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md).*
 
