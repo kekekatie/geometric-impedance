@@ -18,6 +18,14 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🕰️ Past or present? ([`past_or_present/`](past_or_present/)), Gemini's question
+
+- **74% of forced tiles are decided by the last round alone**: the now mostly decides itself (G1
+  held).
+- Depth does **not** change how far back in time a place must look (G2 failed, ρ ≈ 0).
+- The rare long-memory tiles (8+ rounds) sit most at **shallow** depth (5.8% against 2–3%,
+  exploratory). That rhymes with "memory at the boundary".
+
 ## 🌊 Decision radius ([`decision_radius/`](decision_radius/))
 
 - Deep places can almost never be decided by the thinnest ring of their past: 98% need a wider ring.

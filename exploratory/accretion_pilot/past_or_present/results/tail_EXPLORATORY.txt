@@ -1,0 +1,4 @@
+EXPLORATORY (post hoc): where do the rare long-memory tiles (a* >= 8 rounds) sit in the window? (depth thirds per world, pooled)
+  shallow: n 2669; decided by the last round alone 0.70; needed >= 8 rounds of memory 0.058
+  mid    : n 2663; decided by the last round alone 0.79; needed >= 8 rounds of memory 0.021
+  deep   : n 2668; decided by the last round alone 0.74; needed >= 8 rounds of memory 0.033
