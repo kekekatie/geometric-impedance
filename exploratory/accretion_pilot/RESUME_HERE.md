@@ -7,8 +7,8 @@ Three questions hold the whole programme:
 | Question | What we have | What's open |
 |---|---|---|
 | **1. Can a world grow locally?** | Decapod seeds grow by forced moves alone: no global decider, no guesses (`decapod_seed/`). | How general and enduring is that? |
-| **2. What mark does the seed leave?** | Decapod worlds' hidden addresses are distributed differently: a larger hull (`perp_map/`), larger sector offsets (`decapod_memory/`). Not a broken lift (it closes), and not translated sector windows (`two_worlds_visual/`). | Is it a change of window *shape*? |
-| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? The first answer (`structure_clock/`: deep places settle ~30% slower) **did not survive robustness** (`robustness_depth_clock/`). Its sign flips with disc size, and within vertex type it vanishes: depth was standing in for corner type. Still open. |
+| **2. What mark does the seed leave?** | **Answered (2026-10-07, `window_cells/`):** one exact Penrose window, with the decapod world **on its edge**. 54–60 vertices sit exactly on the window boundary, along the ten ribbons; ordinary worlds have none. The world's hidden position is pinned with zero slack. Not a smear, not shifted windows, not stored disagreement. | Does sitting on the edge explain no-guess growth? (Reading: nothing hidden is left to guess.) |
+| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? The first answer (`structure_clock/`: deep places settle ~30% slower) **did not survive robustness** (`robustness_depth_clock/`). Its sign flips with disc size, and within vertex type it vanishes: depth was standing in for corner type. Fable's rescue (the window cell sets the clock) also failed (`window_cells/`): settling time follows **where** a place is (how growth arrives), not what kind of place it is. Still open. |
 
 Katie's rattle principle (2026-10-03): keep the intact growing world as the main experiment. Use
 separated comparisons only as diagnostic controls, then go back to the whole system.
@@ -17,6 +17,24 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 *Katie, if you're reading this: you asked me to remind you what was waiting in the wings.
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
+
+## 🪟 Window cells ([`window_cells/`](window_cells/)), Fable's re-reading of the depth failure
+
+- **The clock is not read off the local pattern (window cell).** Within worlds, cells do no better
+  than shuffled cells (A1 and A2 failed).
+- Cross-world prediction worked (A3), but only because our 20 decapod worlds are slices of one
+  tiling. With same-place matches excluded, R² < 0 at every scale.
+- Settling time follows **where** a place is, i.e. the route of arrival.
+- **Fable was right that depth is just local pattern.** Depth adds nothing within cells (A4). "Choices
+  sit deeper" (M1) mostly vanishes within cells (B1).
+- R1 **reverses** within cells (B2). Don't rely on it.
+- 🌟 **Decapod worlds sit exactly on the edge of the true window** (C, exploratory figure
+  `window_cells/figures/window_boundary.png`).
+  - 54–60 edge vertices lie along the ten ribbons; ordinary worlds have none.
+  - The world's hidden position is pinned with zero slack.
+  - Reading: on the knife-edge of every ribbon's two-way choice, with nothing hidden left to guess.
+    That would be why decapods grow with no guesses.
+  - This replaces both "smeared/shifted windows" and Claude's "stored disagreement".
 
 ## 🧪 Robustness of the depth–clock finding ([`robustness_depth_clock/`](robustness_depth_clock/))
 

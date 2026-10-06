@@ -1,0 +1,35 @@
+PART A: 20 decapod worlds, statuses ['ok'], guesses [0], probes per world 571-600
+  disc 0.6: cells 660 (singletons/world median 142, cells/world median 226); eta2 median 0.314 vs null 0.368; adjusted eta2 median -0.103 [-0.221, +0.079]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 1/20
+      cross-world R2 +0.111 (coverage 0.95; null mean -0.034, null95 -0.018); A4 within-cell rho(depth,T) median -0.059; A5 rho(log freq,T) <0 in 0/20, median +0.227
+  disc 0.8: cells 903 (singletons/world median 184, cells/world median 276); eta2 median 0.466 vs null 0.458; adjusted eta2 median +0.003 [-0.161, +0.289]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 1/20
+      cross-world R2 +0.179 (coverage 0.93; null mean -0.044, null95 -0.027); A4 within-cell rho(depth,T) median -0.083; A5 rho(log freq,T) <0 in 0/20, median +0.194
+  disc 1.0: cells 1404 (singletons/world median 260, cells/world median 358); eta2 median 0.689 vs null 0.620; adjusted eta2 median +0.173 [-0.090, +0.328]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 10/20
+      cross-world R2 +0.282 (coverage 0.88; null mean -0.073, null95 -0.045); A4 within-cell rho(depth,T) median +0.016; A5 rho(log freq,T) <0 in 19/20, median -0.058
+  disc 1.25: cells 1879 (singletons/world median 356, cells/world median 442); eta2 median 0.804 vs null 0.772; adjusted eta2 median +0.123 [-0.166, +0.376]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 6/20
+      cross-world R2 +0.313 (coverage 0.84; null mean -0.097, null95 -0.070); A4 within-cell rho(depth,T) median -0.008; A5 rho(log freq,T) <0 in 6/20, median +0.014
+  disc 1.5: cells 2450 (singletons/world median 429, cells/world median 494); eta2 median 0.875 vs null 0.855; adjusted eta2 median +0.110 [-0.284, +0.289]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 3/20
+      cross-world R2 +0.418 (coverage 0.78; null mean -0.128, null95 -0.095); A4 within-cell rho(depth,T) median -0.079; A5 rho(log freq,T) <0 in 18/20, median -0.057
+  disc 2.0: cells 3109 (singletons/world median 510, cells/world median 546); eta2 median 0.939 vs null 0.936; adjusted eta2 median +0.000 [-0.492, +0.400]; A1 adj>=0.5 in 0/20; A2 eta2>null95 in 1/20
+      cross-world R2 +0.565 (coverage 0.71; null mean -0.166, null95 -0.123); A4 within-cell rho(depth,T) median -0.001; A5 rho(log freq,T) <0 in 15/20, median -0.019
+  A1: FAILED  (Fable strong) adjusted eta2 >= 0.5 in >= 15/20 worlds at every scale
+  A2: FAILED  eta2 above null 95th pct in >= 15/20 worlds at every scale
+  A3: HELD    cross-world R2 > 0 and > null95 at every scale; strong form R2 >= 0.5 everywhere: no
+  A4: HELD    |median within-cell rho(depth, T)| < 0.1 at every scale
+  A5: FAILED  rho(log cell frequency, T) < 0 in >= 15/20 worlds at >= 5/6 scales
+PART B1 (M1 within 1-edge cells): regrown runs reproduce saved medians: True
+    run 0: raw gap (open - forced mean depth) +0.0212; within-cell gap +0.0177 (ratio +0.83); events in cells with both kinds 0.44; cells 468
+    run 1: raw gap (open - forced mean depth) +0.0213; within-cell gap +0.0019 (ratio +0.09); events in cells with both kinds 0.43; cells 442
+    run 2: raw gap (open - forced mean depth) +0.0383; within-cell gap +0.0042 (ratio +0.11); events in cells with both kinds 0.62; cells 498
+    run 3: raw gap (open - forced mean depth) +0.0191; within-cell gap -0.0007 (ratio -0.04); events in cells with both kinds 0.39; cells 448
+    run 4: raw gap (open - forced mean depth) +0.0212; within-cell gap +0.0177 (ratio +0.83); events in cells with both kinds 0.44; cells 468
+    run 5: raw gap (open - forced mean depth) +0.0309; within-cell gap +0.0075 (ratio +0.24); events in cells with both kinds 0.56; cells 473
+    run 6: raw gap (open - forced mean depth) +0.0287; within-cell gap +0.0059 (ratio +0.21); events in cells with both kinds 0.54; cells 467
+    run 7: raw gap (open - forced mean depth) +0.0206; within-cell gap +0.0035 (ratio +0.17); events in cells with both kinds 0.50; cells 451
+    run 8: raw gap (open - forced mean depth) +0.0213; within-cell gap +0.0019 (ratio +0.09); events in cells with both kinds 0.43; cells 442
+    run 9: raw gap (open - forced mean depth) +0.0405; within-cell gap -0.0010 (ratio -0.02); events in cells with both kinds 0.65; cells 477
+    run 10: raw gap (open - forced mean depth) +0.0163; within-cell gap +0.0067 (ratio +0.41); events in cells with both kinds 0.40; cells 449
+    run 11: raw gap (open - forced mean depth) +0.0405; within-cell gap -0.0010 (ratio -0.02); events in cells with both kinds 0.65; cells 477
+  B1: HELD    within-cell gap < 1/3 of raw gap in 9/12 (need >= 9)
+PART B2 (R1 within 1-edge cells): regrown probes match saved depths: True; cells 199, probes in cells with >= 2: 312
+    raw pooled rho(depth, decision radius) +0.212; within-cell -0.238; eta2 of decision radius by cell 0.914
+  B2: FAILED  |within-cell rho| < 0.1
