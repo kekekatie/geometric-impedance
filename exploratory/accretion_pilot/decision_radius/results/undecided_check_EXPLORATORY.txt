@@ -1,0 +1,3 @@
+EXPLORATORY: are the 'undecided' places an artefact of disc vs target?
+  undecided: 27/27 have a target-covering tile outside the disc that was laid AFTER the disc finished
+  decided: 40/373 have a target-covering tile outside the disc that was laid AFTER the disc finished

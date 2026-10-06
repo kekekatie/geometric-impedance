@@ -23,8 +23,11 @@ rolled away.)*
 - Deep places can almost never be decided by the thinnest ring of their past: 98% need a wider ring.
   R1 and R2 held in the follow-up, 4/4.
 - So "more of the world must weigh in" is supported, modestly.
-- Surprise: ~10% of shallow and middle places couldn't be decided even from 4 edges of past, yet
-  settled fast. Long-range news, or a sampling artefact?
+- The "~10% undecided" surprise turned out to be **an artefact**. Their target reached tiles
+  outside the disc that were laid after it finished (27/27). There are no "zippers"; Gemini's
+  question prompted the check.
+- **Open idea:** are places decided by their past (behind) or their present (sideways along the
+  now)? This would need tracing which neighbours actually force each tile.
 - **Two dials** (2026-10-05 chat): how long the now lasts = how much has to happen (structure,
   Dial 1) ÷ how fast things happen (happening density, Dial 2). Deep places: ~15% more to happen
   and ~10% slower, giving ~1.3×.
