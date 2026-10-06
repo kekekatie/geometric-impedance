@@ -161,4 +161,10 @@ angle), and each wedge's best translation.
 
 ## Changes before the first run
 
-*(none yet)*
+- **C2 guard (2026-10-07, while writing the code, before any run).**
+  - A 36° wedge holds only about 45 vertices, spread over 4 layers. Such a sparse set may fit inside
+    the window whatever its shape, so "every wedge fits" could pass trivially.
+  - C2 therefore also requires that the wedges fit **better than chance**. For each world, take 100
+    random partitions of its vertices into 10 groups, with the same sizes as the wedges.
+  - C2 holds in a world only if fewer than 50 of those 100 random partitions have every group
+    fitting.
