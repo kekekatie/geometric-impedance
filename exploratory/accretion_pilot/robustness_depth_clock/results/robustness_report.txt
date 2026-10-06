@@ -1,0 +1,13 @@
+A: 12 worlds; rho_T > 0 in 12/12 (need >= 10); rho_T [0.232, 0.192, 0.192, 0.192, 0.18, 0.206, 0.228, 0.175, 0.211, 0.191, 0.186, 0.165]; rho_H [0.183, 0.221, 0.217, 0.202, 0.196, 0.213, 0.246, 0.152, 0.18, 0.209, 0.222, 0.186]; guesses [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; statuses ['ok']
+    mean T by depth third (averaged over worlds): shallow 6.80, mid 6.53, deep 8.64
+B: 12 worlds; rho_T > 0 in 12/12 (need >= 9); rho_T [0.206, 0.188, 0.186, 0.176, 0.158, 0.16, 0.139, 0.188, 0.2, 0.187, 0.19, 0.18]; rho_H [0.232, 0.222, 0.211, 0.222, 0.191, 0.192, 0.193, 0.222, 0.232, 0.212, 0.217, 0.209]; guesses [6, 4, 5, 4, 5, 5, 4, 4, 5, 5, 4, 3]; statuses ['ok']
+    mean T by depth third (averaged over worlds): shallow 13.79, mid 12.03, deep 16.39
+    distinct histories among the 12 ordinary worlds: 11
+C-small: 8 worlds; rho_T > 0 in 3/8 (need >= 7); rho_T [-0.106, -0.002, 0.001, -0.006, 0.01, -0.014, 0.012, -0.001]; rho_H [-0.124, -0.048, -0.038, -0.047, -0.003, -0.046, -0.023, -0.036]; guesses [0, 0, 0, 0, 0, 0, 0, 0]; statuses ['ok']
+    mean T by depth third (averaged over worlds): shallow 4.12, mid 3.59, deep 4.40
+C-large: 8 worlds; rho_T > 0 in 8/8 (need >= 7); rho_T [0.12, 0.097, 0.095, 0.074, 0.105, 0.049, 0.073, 0.053]; rho_H [0.116, -0.007, -0.02, -0.009, -0.033, -0.008, -0.005, -0.008]; guesses [0, 0, 0, 0, 0, 0, 0, 0]; statuses ['ok']
+    mean T by depth third (averaged over worlds): shallow 8.58, mid 8.04, deep 9.04
+  RA: HELD    new decapod worlds
+  RB: HELD    ordinary worlds
+  RC: FAILED  disc sizes (small False, large True)
+  ROBUST: NO

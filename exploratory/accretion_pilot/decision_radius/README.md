@@ -1,5 +1,7 @@
 # How much of the world must weigh in? Decision radius vs depth
 
+> **Caution (2026-10-06):** the depth effect in [`../structure_clock/`](../structure_clock/) turned out to be a vertex-type effect at one scale ([`../robustness_depth_clock/`](../robustness_depth_clock/)). This study's R1 uses the same depth measure at single scales, so it should be re-checked within vertex type before being relied on.
+
 *A pre-registered study. The pre-registration was committed before any code:
 [`PREREGISTRATION.md`](PREREGISTRATION.md). The first run couldn't test the idea, so a follow-up was
 registered before it ran.*

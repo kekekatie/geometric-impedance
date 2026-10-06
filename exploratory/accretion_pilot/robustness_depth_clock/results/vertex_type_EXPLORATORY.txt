@@ -1,0 +1,13 @@
+EXPLORATORY: depth vs vertex type. For each disc radius: overall rho(depth,T) | mean within-type rho | share of T variance between vertex types | number of types
+  seed 2 disc 0.6: overall -0.376 | within type -0.477 | between-type share of T variance 0.16 | types 4
+  seed 2 disc 1.0: overall +0.288 | within type -0.170 | between-type share of T variance 0.20 | types 8
+  seed 2 disc 2.0: overall -0.353 | within type -0.335 | between-type share of T variance 0.03 | types 8
+  seed 3 disc 0.6: overall -0.277 | within type -0.295 | between-type share of T variance 0.06 | types 4
+  seed 3 disc 1.0: overall +0.266 | within type -0.023 | between-type share of T variance 0.11 | types 8
+  seed 3 disc 2.0: overall -0.229 | within type -0.249 | between-type share of T variance 0.01 | types 8
+  seed 4 disc 0.6: overall -0.279 | within type -0.276 | between-type share of T variance 0.04 | types 4
+  seed 4 disc 1.0: overall +0.277 | within type +0.025 | between-type share of T variance 0.08 | types 8
+  seed 4 disc 2.0: overall -0.193 | within type -0.229 | between-type share of T variance 0.01 | types 8
+  seed 5 disc 0.6: overall -0.313 | within type -0.338 | between-type share of T variance 0.04 | types 4
+  seed 5 disc 1.0: overall +0.226 | within type -0.020 | between-type share of T variance 0.07 | types 8
+  seed 5 disc 2.0: overall -0.172 | within type -0.254 | between-type share of T variance 0.01 | types 8

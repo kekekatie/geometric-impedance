@@ -8,7 +8,7 @@ Three questions hold the whole programme:
 |---|---|---|
 | **1. Can a world grow locally?** | Decapod seeds grow by forced moves alone: no global decider, no guesses (`decapod_seed/`). | How general and enduring is that? |
 | **2. What mark does the seed leave?** | Decapod worlds' hidden addresses are distributed differently: a larger hull (`perp_map/`), larger sector offsets (`decapod_memory/`). Not a broken lift (it closes), and not translated sector windows (`two_worlds_visual/`). | Is it a change of window *shape*? |
-| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? First answer (`structure_clock/`, intact decapod worlds): places **deep in the window** take ~30% longer to settle **and** need ~15% more happenings (C1 held, C2 failed). Depth is also where choices live (`perp_map/`). |
+| **3. Does structure change clocks or motion?** | Quiet and full stripes change *arrival* and *activity* differently (`worldline_body/`, `free_fall/`). | How do structure and happenings **jointly** produce local time? The first answer (`structure_clock/`: deep places settle ~30% slower) **did not survive robustness** (`robustness_depth_clock/`). Its sign flips with disc size, and within vertex type it vanishes: depth was standing in for corner type. Still open. |
 
 Katie's rattle principle (2026-10-03): keep the intact growing world as the main experiment. Use
 separated comparisons only as diagnostic controls, then go back to the whole system.
@@ -17,6 +17,16 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 *Katie, if you're reading this: you asked me to remind you what was waiting in the wings.
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
+
+## 🧪 Robustness of the depth–clock finding ([`robustness_depth_clock/`](robustness_depth_clock/))
+
+- It replicated in new decapod worlds and in ordinary worlds (RA, RB). But the sign **flips** across
+  disc sizes (RC failed), and **within vertex type it vanishes**.
+- "The present lasts longer deep in the window" is **withdrawn** as a general claim.
+- `decision_radius` R1 and `perp_map` M1 need re-checking within vertex type.
+- Lesson: depth and vertex type are entangled in Penrose tilings.
+- **Paper status:** the depth–time part is not paper-ready. The local/global decider trade-off, the
+  decapod no-choice growth, the gromit check and past-or-present are the steadier pieces.
 
 ## 🕰️ Past or present? ([`past_or_present/`](past_or_present/)), Gemini's question
 
