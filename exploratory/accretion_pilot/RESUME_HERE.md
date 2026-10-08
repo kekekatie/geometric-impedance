@@ -18,6 +18,21 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧷 Fragility ([`fragility/`](fragility/)), Katie's "I can no longer be re-made"
+
+- What can a two-way choice un-make? At every choice, both alternative presents were grown 8 slices
+  ahead.
+- **A choice decides a whole strip lying along the now** (a zipper sideways along the present, both
+  ways from the choice point). Each choice changes 28–89 tiles; the region is 4.6–8.9× longer than
+  wide and lies within 2–11° of the front. Off the strip, both presents are identical. See
+  `fragility/figures/one_choice.png`.
+- **No dead ends:** both options always carry on (0/14 jams).
+- **Where, not what:** distance from the front line explains 81% of what is un-made; corner type 9%.
+- Only 14 distinct choices (shared histories).
+- **Next for decay:** a persisting thread is at risk each time a decided strip crosses it. Do those
+  crossings come at memoryless (coin-toss) intervals? That would decide whether there can be a true
+  half-life.
+
 ## 🪟 Window cells ([`window_cells/`](window_cells/)), Fable's re-reading of the depth failure
 
 - **The clock is not read off the local pattern (window cell).** Within worlds, cells do no better
