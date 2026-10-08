@@ -1,0 +1,11 @@
+worlds: statuses ['ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok', 'ok']; tiles [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]; rounds [147, 115, 145, 125, 152, 121, 125, 145, 121, 110, 147, 145]
+choices: 48 in total, 14 distinct; options per choice {2: 14}
+choices per world [4, 3, 5, 3, 5, 3, 4, 5, 3, 4, 4, 5]; mean rounds between choices 34.2; choice rounds (world 0) [2, 31, 72, 114]
+  F0: PASS  every choice has exactly 2 options and legal first tiles
+  dead ends (sibling jams): neither 14, one 0, both 0; sibling statuses {'needs_guess': 1, 'ahead': 27}; rounds ahead median 8
+  un-made tiles per choice: [28, 49, 55, 55, 67, 67, 87, 87, 87, 87, 87, 88, 89, 89]
+  F1: HELD    un-made region elongated (ratio >= 3) in 13/14 choices (need >= 70%); ratios [2.5, 4.6, 5.5, 5.5, 6.4, 6.4, 8.6, 8.6, 8.6, 8.6, 8.6, 8.6, 8.9, 8.9]; angle to front line [2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 9, 10, 11, 11]
+  F3: HELD    >= 80% of changed vertices within 1.5 edges of the front line in 11/14 choices (need >= 70%); shares [0.65, 0.65, 0.7, 0.85, 0.88, 0.88, 0.88, 0.88, 0.88, 0.88, 0.88, 0.9, 0.91, 0.91]
+  vertex types (flip sites, fragility, exposures): 0: 1.00, 0.720, 218; 1: 1.00, 1.000, 64; 2: 3.29, 0.792, 72
+  F2: FAILED  Spearman(flip sites, fragility) over 3 types = +0.000 (need >= +0.5)
+  F4: HELD    eta2 of changed by distance band 0.813 vs by vertex type 0.092; exposed 397, changed share 0.809
