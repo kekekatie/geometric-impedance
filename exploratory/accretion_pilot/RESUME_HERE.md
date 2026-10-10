@@ -22,14 +22,17 @@ rolled away.)*
 
 - Does the difference a choice makes travel *with* the decided ribbon? **No. It outruns it.**
 - D1, D2 and D3 all failed. The leading edge is on the decided ribbon only 53% of the time.
-- The difference reaches out at **0.73 edges/slice**, which is the speed of light again (exploratory
-  reach measure; D3's half-width measure was my mismatch). The ribbon reaches out at only 0.42
+- The difference reaches out at **0.73 edges/slice**, consistent with the earlier speed-of-light range
+  (exploratory reach measure; D3's half-width measure was my mismatch; per Astra, consistency, not
+  proof of a universal speed). The ribbon reaches out at only 0.42
   (**about 1.7×** slower).
 - Forward leakage is tiny (0.06): consequences race along the now.
-- **Reading:** the news travels through the corner (vertex) rules, ahead of the thread. Astra's thought
+- **Reading (one candidate, per Astra):** the news may travel through the corner (vertex) rules, or
+  through other crossing ribbons, ahead of the thread. The next step is to trace the actual constraint
+  chains. Astra's thought
   holds only in its broad form: the front's forcing as a whole makes things definite *and* carries
   influence. One thread doesn't do both.
-- Only ~27 distinct local situations.
+- "~27 distinct local situations" was a rough proxy (sibling tile counts), not structural deduplication.
 
 ## 🧵 The gold thread ([`gold_thread/`](gold_thread/)), Astra's handover (exploratory stage)
 

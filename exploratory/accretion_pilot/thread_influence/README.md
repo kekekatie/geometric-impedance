@@ -21,6 +21,14 @@ the process that carries influence through it.* `../gold_thread/` showed that a 
   since the same configuration recurs in different places.
 - At each choice, both siblings were grown up to 12 slices.
 
+> **Corrections after Astra's review (2026-10-10):**
+>
+> 1. **"Speed of light reconfirmed" was too strong.** The exploratory reach speed (0.73) falls *within the range* measured in `../speed_of_light/`. That is consistency with an earlier propagation measurement, not evidence of a universal speed.
+> 2. **Corner-hopping is only one candidate route.** Influence could also pass through other crossing ribbons, via chains of shared-edge constraints. Leaving the selected ribbon doesn't identify the route.
+> 3. **"About 27 distinct local situations" is a rough proxy.** It groups choices by the two siblings' tile counts, and different configurations can give the same counts. It is not structural deduplication.
+>
+> The broad guiding thought remains *compatible* with the result, but surviving the narrower test doesn't confirm it.
+
 ## Scorecard
 
 | | prediction | result | |
@@ -46,7 +54,7 @@ worlds:
 - the decided ribbon reaches out at only **0.42**;
 - so **influence outruns the thread by about 1.7 times**, whichever way it is measured.
 
-D3 stays failed as registered. The speed of light itself is reconfirmed by the reach measure.
+D3 stays failed as registered. The reach speed is consistent with the earlier measurement (not, by itself, evidence of a universal speed).
 
 ## What it means (plainly)
 
@@ -55,7 +63,7 @@ D3 stays failed as registered. The speed of light itself is reconfirmed by the r
   - The *consequences* of that decision show up further along the front, at about the speed of light,
     before the ribbon itself has been laid there.
   - So the news of the decision travels faster than the thread being made.
-- **The likely route is the vertex rules.** The matching rules act where tiles meet at a corner, not
+- **One candidate route is the vertex rules.** The matching rules act where tiles meet at a corner, not
   only across shared edges. Tiles that share only a corner are *not* ribbon-neighbours. So the forcing
   can pass information to places off the decided ribbon, ahead of it. (A reading, not tested here.)
 - **For Astra's guiding thought:**
