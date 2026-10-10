@@ -18,6 +18,20 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧵 The gold thread ([`gold_thread/`](gold_thread/)), Astra's handover (exploratory stage)
+
+- **Continuation rule:** the tiling's own **ribbons**, i.e. chains of tiles linked by shared parallel
+  edges (what the 5D lift counts). Identity comes from contact, never resemblance. No branching is
+  possible.
+- **Ribbons are conserved.** All ends sit at the frontier (censored); none are inside; none branch.
+- **The decapod hole is where exactly 10 ribbons end, 2 per direction**: a dislocation-like, charge-like
+  place (Astra's "decapod as mass?" idea).
+- **A choice decides mainly one ribbon lying along the now** (51–57% of the strip). It decides the
+  ribbon's path, not its existence.
+- **Side observation:** after a choice, the two alternative presents can advance at very different
+  speeds (24 vs 90 tiles).
+- Candidate tests A–D are listed in the README, to choose with Katie.
+
 ## 🧷 Fragility ([`fragility/`](fragility/)), Katie's "I can no longer be re-made"
 
 - What can a two-way choice un-make? At every choice, both alternative presents were grown 8 slices
