@@ -1,0 +1,12 @@
+choices: 67 in total, 37 distinct local configurations (3-edge structural key)
+slices both siblings reached: [2, 2, 7, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+  Z: PASS  3205/3205 difference tiles uniquely forced by their 2.5-edge context
+  advances: 1783, with a differing parent 1782 ({'corner': 632, 'other edge': 852, 'decided ribbon': 298, 'none': 1})
+  best-route shares among advances with a differing parent: {'decided ribbon': 0.167, 'other edge': 0.478, 'corner': 0.355, 'distant': 0.0, 'none': 0.0}
+  C1: HELD    corner share 0.355 (need >= 0.333)
+  C2: HELD    other-edge share 0.478 > corner share 0.355
+  C3: HELD    decided-ribbon share 0.167 (need <= 0.5)
+  reported: best route over all 3205 difference tiles: {'decided ribbon': 0.141, 'other edge': 0.661, 'corner': 0.197, 'distant': 0.0, 'none': 0.0}
+  reported: all differing-parent links (4093) by contact: {'decided ribbon': 0.111, 'other edge': 0.528, 'corner': 0.361, 'distant': 0.0, 'none': 0.0}
+  reported: baseline critical links of non-difference tiles (805) by contact: {'decided ribbon': 0.036, 'other edge': 0.514, 'corner': 0.45, 'distant': 0.0, 'none': 0.0}
+  reported: critical tiles per forced placement: median 1, range 1-7
