@@ -84,4 +84,7 @@ otherwise *other edge*; otherwise *corner*; otherwise *distant*; otherwise *none
 
 ## Changes before the first run
 
-*(none yet)*
+- **Baseline sampling (2026-10-10, while writing the code, before any run).** Instead of exactly 400
+  non-Δ tiles drawn from the whole pool, **6 per sibling per analysed choice** are sampled (random
+  stream `4040 + world`). This gives roughly 400 in total, and the sample is spread evenly over
+  choices.
