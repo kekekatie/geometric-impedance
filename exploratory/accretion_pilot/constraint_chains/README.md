@@ -24,6 +24,31 @@ directly.
 - **Data:** the same 24 worlds as before; 67 choices; **37 distinct local configurations** (structural
   3-edge key, answering Astra's de-duplication point); both siblings grown up to 12 slices.
 
+> **Refinement after Astra's review (2026-10-10, exploratory: [`web_EXPLORATORY.py`](web_EXPLORATORY.py), [`results/web_run.log`](results/web_run.log)).** Astra noted three things:
+>
+> - "other edge" mixed real ribbon-crossing edges with the diagonal inside a rhombus;
+> - the owner of the forcing edge was counted as critical **by convention**, without the removal test;
+> - the baseline wasn't a matched population.
+>
+> Re-tallied on the same 37 configurations, the picture changes a lot:
+>
+> | links | attachment (owner, untested) | decided ribbon | other ribbon edge | diagonal | corner |
+> |---|---|---|---|---|---|
+> | differing parents → difference tiles (4,093) | **0.604** | 0.006 | **0.000** | 0.029 | 0.361 |
+> | same, **removal-tested only** (1,620) | n/a | 0.015 | **0.000** | 0.073 | **0.912** |
+> | MATCHED: all parents of difference tiles (5,971) | 0.537 | 0.004 | 0.000 | 0.020 | 0.439 |
+> | MATCHED: all parents of non-difference tiles (1,359) | 0.575 | 0.000 | 0.010 | 0.006 | 0.409 |
+> | MATCHED, removal-tested only: difference vs non-difference | n/a | 0.009 vs 0 | 0 vs 0.023 | 0.043 vs 0.014 | **0.948 vs 0.964** |
+>
+> **What this means:**
+>
+> - **The "other edge" route in C1–C3 was almost entirely *attachment*.** A tile grows off the tile across the edge it was forced on. That edge is itself a step along *some* ribbon (or across a rhombus's diagonal), but not specifically the decided one.
+> - **Apart from attachment, what independently forces a tile is almost always a tile touching it only at a corner** (91% of tested links). Edge-neighbours other than the owner are essentially never independently necessary under single removal.
+> - So **C2 held only by the letter.** Its "other ribbons" meaning is not supported: tested links across other ribbons' edges are about 0. C1 and C3 stand as registered.
+> - The **matched comparison** shows difference and non-difference tiles forced through near-identical route mixes (corners 44% vs 41% of all parents; 95% vs 96% of tested parents). That is still descriptive, not a test of equivalence. A choice's consequences are carried the way any tile is forced: by growing from a neighbour, and by corner constraints.
+> - **Caveat (single removal):** if two edge-neighbours could each supply a constraint, neither registers. Edge contributions may be hidden by redundancy. These are the *detected necessary* neighbours, not a complete causal map.
+> - **Picture:** [`figures/constraint_web.png`](figures/constraint_web.png), one choice. Grey arrows are attachments, forming small local trees. Red arrows are corner-only links, which leap along the strip and carry the difference down the front. In this example, the simple rule picked a "decided ribbon" heading away from the strip, the misidentification risk noted in the limits.
+
 ## Scorecard
 
 | | prediction | result | |

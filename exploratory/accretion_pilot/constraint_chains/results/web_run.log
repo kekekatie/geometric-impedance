@@ -1,0 +1,7 @@
+figure (world 1, first choice, sibling A) differing-parent links: ({'attachment': 0.689, 'diagonal': 0.067, 'corner': 0.244}, 45)
+EXPLORATORY finer link categories over 37 distinct configurations
+  differing-parent links (as in the report), all: ({'attachment': 0.604, 'decided ribbon': 0.006, 'diagonal': 0.029, 'corner': 0.361}, 4093)
+  differing-parent links, removal-tested only (attachments excluded): ({'decided ribbon': 0.015, 'diagonal': 0.073, 'corner': 0.912}, 1620)
+  MATCHED: all critical parents of difference tiles: ({'attachment': 0.537, 'decided ribbon': 0.004, 'diagonal': 0.02, 'corner': 0.439}, 5971)
+  MATCHED: all critical parents of sampled non-difference tiles: ({'attachment': 0.575, 'ribbon edge': 0.01, 'diagonal': 0.006, 'corner': 0.409}, 1359)
+  MATCHED, removal-tested only: difference ({'decided ribbon': 0.009, 'diagonal': 0.043, 'corner': 0.948}, 2766) vs non-difference ({'ribbon edge': 0.023, 'diagonal': 0.014, 'corner': 0.964}, 577)
