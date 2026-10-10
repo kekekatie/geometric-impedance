@@ -21,10 +21,16 @@ rolled away.)*
 ## 🕸️ Constraint chains ([`constraint_chains/`](constraint_chains/)), Astra's next step
 
 - We traced which tiles actually force each consequence of a choice. C1, C2 and C3 all held.
-- Advances of the difference: **48% via other ribbons**, **36% purely via corners**, and only **17%
-  via the decided ribbon**. There are no "distant" links: nothing acts at a distance.
-- **Corners aren't special:** ordinary forcing uses corners for 45% of its critical links. Influence
-  spreads through roughly the same mix of routes as ordinary forcing.
+- As registered: advances were 48% "other edge", 36% corner-only and 17% decided ribbon. There are no
+  "distant" links: nothing acts at a distance.
+- **Refined after Astra's review (exploratory):** the "other edge" share was almost all
+  **attachment** (the tile a tile grows from, counted by convention). Among removal-tested links,
+  **91% are corners**, 7% diagonals, about 1.5% decided ribbon, and **0% other ribbons**.
+- So a tile, a consequence or not, is forced by growing from its neighbour plus corner constraints.
+  The matched comparison shows near-identical mixes for difference and non-difference tiles. C2's
+  "other ribbons" meaning is not supported.
+- Picture: `constraint_chains/figures/constraint_web.png` (grey attachment trees; red corner leaps
+  along the front).
 - "Influence travels via forcing links" holds by construction here, so it is **not** independent
   support for Astra's guiding thought. The route mix is the finding.
 - Structural de-duplication found 37 distinct configurations (the earlier proxy said ~27).
