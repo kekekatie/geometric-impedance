@@ -95,4 +95,7 @@ influence's leading edges, and at its own laying speed.
 
 ## Changes before the first run
 
-*(none yet)*
+- **Clarification (2026-10-10, while writing the code, before any run).** The two siblings place
+  *different* tiles at the choice, and their leg families may differ. So j\* is chosen **per sibling**
+  from that sibling's own chosen tile, using the same rule (the leg family whose ε_j is most nearly
+  perpendicular to the front line).
