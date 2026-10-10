@@ -23,9 +23,9 @@ rolled away.)*
 - **Continuation rule:** the tiling's own **ribbons**, i.e. chains of tiles linked by shared parallel
   edges (what the 5D lift counts). Identity comes from contact, never resemblance. No branching is
   possible.
-- **Ribbons are conserved.** All ends sit at the frontier (censored); none are inside; none branch.
-- **The decapod hole is where exactly 10 ribbons end, 2 per direction**: a dislocation-like, charge-like
-  place (Astra's "decapod as mass?" idea).
+- *(Corrected the same day)* "Ribbons are conserved, never branch, and 10 end at the decapod hole" all
+  follow from definitions and geometry, so they are **not discoveries**. Ribbons don't carry a constant
+  arrow either, so there is no simple arrow "charge" at the hole. Test A was dropped.
 - **A choice decides mainly one ribbon lying along the now** (51–57% of the strip). It decides the
   ribbon's path, not its existence.
 - **Side observation:** after a choice, the two alternative presents can advance at very different

@@ -7,6 +7,14 @@ show it, and say what it would let us conclude, before any pre-registered test.*
 **Astra's guiding thought:** *perhaps the process that makes the next piece of reality definite is also
 the process that carries influence through it.*
 
+> **Correction (2026-10-10, same day, before any test):** findings 1 and 2 below are true but **follow from definitions**, so they are not discoveries.
+>
+> - **Finding 1:** any edge with tiles on both sides continues a ribbon, so ribbons can only stop where an edge has one tile, which is the frontier by definition. Each tile has one way in and one way out, so ribbons can't branch. This holds for *any* rhombus tiling.
+> - **Finding 2:** any decagonal hole with sides one edge long has 10 edges, so 10 ribbons end there, fillable or not. That the decapod's ends *can't be joined* is just its definition (no legal filling).
+> - **"Dislocation-like charge" is too strong.** The lift closes around the hole, so there is no net offset like a crystal dislocation's.
+> - **Arrows:** a probe showed that ribbons don't carry a single constant arrow (`results/arrow_probe_EXPLORATORY.txt`). In 170 of 180 ribbons in the reference tiling, both arrow kinds (Penrose single and double) appear in both directions. There is no simple per-ribbon arrow "charge" to count at the hole.
+> - **Test A (conservation) is therefore dropped as uninformative.** Findings 3 and 4 (a choice decides mainly one ribbon along the now; observation-time differences between siblings) stand.
+
 ## The proposed continuation rule: ribbons
 
 The tiling supplies exactly one local continuation relation of its own. We don't have to import one.
@@ -84,7 +92,7 @@ These come from one ordinary world (954 half-tiles, 121 slices, 4 choices) and o
 
 ## Candidate pre-registered tests (to choose together)
 
-- **A. Conservation, on fresh worlds:**
+- **A. Conservation, on fresh worlds** *(dropped: uninformative, see the correction above)*:
   - ribbons never end or branch in legal growth;
   - every decapod hole ends exactly 10, 2 per family;
   - fillable rings end 0 once filled.
