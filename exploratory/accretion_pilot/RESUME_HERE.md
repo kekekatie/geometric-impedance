@@ -18,14 +18,27 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🏃 Thread influence ([`thread_influence/`](thread_influence/)), test D from the gold thread
+
+- Does the difference a choice makes travel *with* the decided ribbon? **No. It outruns it.**
+- D1, D2 and D3 all failed. The leading edge is on the decided ribbon only 53% of the time.
+- The difference reaches out at **0.73 edges/slice**, which is the speed of light again (exploratory
+  reach measure; D3's half-width measure was my mismatch). The ribbon reaches out at only 0.42
+  (**about 1.7×** slower).
+- Forward leakage is tiny (0.06): consequences race along the now.
+- **Reading:** the news travels through the corner (vertex) rules, ahead of the thread. Astra's thought
+  holds only in its broad form: the front's forcing as a whole makes things definite *and* carries
+  influence. One thread doesn't do both.
+- Only ~27 distinct local situations.
+
 ## 🧵 The gold thread ([`gold_thread/`](gold_thread/)), Astra's handover (exploratory stage)
 
 - **Continuation rule:** the tiling's own **ribbons**, i.e. chains of tiles linked by shared parallel
   edges (what the 5D lift counts). Identity comes from contact, never resemblance. No branching is
   possible.
-- **Ribbons are conserved.** All ends sit at the frontier (censored); none are inside; none branch.
-- **The decapod hole is where exactly 10 ribbons end, 2 per direction**: a dislocation-like, charge-like
-  place (Astra's "decapod as mass?" idea).
+- *(Corrected the same day)* "Ribbons are conserved, never branch, and 10 end at the decapod hole" all
+  follow from definitions and geometry, so they are **not discoveries**. Ribbons don't carry a constant
+  arrow either, so there is no simple arrow "charge" at the hole. Test A was dropped.
 - **A choice decides mainly one ribbon lying along the now** (51–57% of the strip). It decides the
   ribbon's path, not its existence.
 - **Side observation:** after a choice, the two alternative presents can advance at very different

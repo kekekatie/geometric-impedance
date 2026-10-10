@@ -1,0 +1,4 @@
+EXPLORATORY reach speeds over 63 distinct choices with >= 5 slices (distinct local situations, judged by sibling size pairs: about 27)
+  reach of the difference from the choice point: median 0.73 edges/slice (quartiles 0.71-0.78); speed_of_light found 0.67-1.13, median 0.95
+  reach of the decided ribbon: median 0.42 edges/slice
+  ratio difference/ribbon reach: median 1.70
