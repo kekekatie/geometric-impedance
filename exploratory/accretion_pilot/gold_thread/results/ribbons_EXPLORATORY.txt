@@ -1,0 +1,8 @@
+EXPLORATORY ribbons, ordinary world 0: 954 half-tiles, 121 rounds, 4 choices (options [2, 2, 2, 2])
+  ribbon ends: 90 open ends, all on the frontier except 0
+  gold ribbons (one per family, through the centre): tiles {0: 48, 1: 52, 2: 48, 3: 64, 4: 51}
+  choice at round 2: strip 14 tiles; gold ribbons continuing in both siblings 2/5, in one 3/5, in neither 0/5; new gold tiles per sibling [[0, 8], [8, 8], [0, 11], [8, 8], [0, 7]]
+  choice at round 31: strip 30 tiles; gold ribbons continuing in both siblings 3/5, in one 2/5, in neither 0/5; new gold tiles per sibling [[0, 6], [8, 8], [1, 2], [0, 8], [8, 8]]
+  choice at round 72: strip 52 tiles; gold ribbons continuing in both siblings 4/5, in one 0/5, in neither 1/5; new gold tiles per sibling [[9, 8], [1, 2], [2, 2], [8, 8], [0, 0]]
+  choice at round 114: strip 51 tiles; gold ribbons continuing in both siblings 2/5, in one 0/5, in neither 3/5; new gold tiles per sibling [[0, 0], [5, 4], [0, 0], [0, 0], [4, 4]]
+  decapod world (seed 3, 800 tiles, 0 guesses): ribbon ends at the hole 10 (by family {0: 2, 1: 2, 2: 2, 3: 2, 4: 2})

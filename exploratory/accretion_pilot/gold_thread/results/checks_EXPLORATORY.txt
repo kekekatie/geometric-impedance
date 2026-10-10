@@ -1,0 +1,5 @@
+(1) ribbons in world 0: 51; open ends per ribbon: {0: 1, 1: 10, 2: 40} (a branch would need 3+)
+(2) choice at slice 2: strip 14 tiles; largest single ribbon holds 8 (57%), family 2
+(2) choice at slice 31: strip 30 tiles; largest single ribbon holds 17 (57%), family 0
+(2) choice at slice 72: strip 52 tiles; largest single ribbon holds 28 (54%), family 4
+(2) choice at slice 114: strip 51 tiles; largest single ribbon holds 26 (51%), family 0
