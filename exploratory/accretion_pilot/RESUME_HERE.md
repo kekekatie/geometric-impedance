@@ -18,6 +18,17 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🕸️ Constraint chains ([`constraint_chains/`](constraint_chains/)), Astra's next step
+
+- We traced which tiles actually force each consequence of a choice. C1, C2 and C3 all held.
+- Advances of the difference: **48% via other ribbons**, **36% purely via corners**, and only **17%
+  via the decided ribbon**. There are no "distant" links: nothing acts at a distance.
+- **Corners aren't special:** ordinary forcing uses corners for 45% of its critical links. Influence
+  spreads through roughly the same mix of routes as ordinary forcing.
+- "Influence travels via forcing links" holds by construction here, so it is **not** independent
+  support for Astra's guiding thought. The route mix is the finding.
+- Structural de-duplication found 37 distinct configurations (the earlier proxy said ~27).
+
 ## 🏃 Thread influence ([`thread_influence/`](thread_influence/)), test D from the gold thread
 
 - Does the difference a choice makes travel *with* the decided ribbon? **No. It outruns it.**
