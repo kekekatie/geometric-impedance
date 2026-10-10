@@ -99,3 +99,8 @@ influence's leading edges, and at its own laying speed.
   *different* tiles at the choice, and their leg families may differ. So j\* is chosen **per sibling**
   from that sibling's own chosen tile, using the same rule (the leg family whose ε_j is most nearly
   perpendicular to the front line).
+- **Seed centres (2026-10-10, found by a smoke test of the centre list, before any run).** The
+  reference tiling has 5-fold mirror symmetry about its centre (10 symmetries), so the 24 nearest
+  vertices come in rotated and mirrored families, and would give rotated copies of the same histories.
+  The centres are instead the 24 vertices nearest the origin **within one 18° wedge** (angle in
+  [0°, 18°]; the mirror lines lie every 18°), so that no two are symmetric copies.
