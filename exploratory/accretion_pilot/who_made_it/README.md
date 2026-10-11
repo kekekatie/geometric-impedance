@@ -66,3 +66,33 @@ log's "0/123" was a reporting bug with numpy booleans):
 - `who_made_it.py`: the study
 - `results/who_made_it_report.txt`, `results/run.log`, `results/worlds.json`
 - `results/smaller_piece_recount.txt`
+
+## Held-out test: can a finished world's measurements tell? (2026-10-12)
+
+*Pre-registered: [`PREREGISTRATION_heldout.md`](PREREGISTRATION_heldout.md); [`heldout.py`](heldout.py);
+[`results/heldout_report.txt`](results/heldout_report.txt).* Astra's suggested step: measurements taken
+from the **finished patch only**, with classifiers fit on 48 training seeds (both modes) and scored on
+48 **held-out** seeds (both modes).
+
+| | prediction | result | |
+|---|---|---|---|
+| H1 | leftover wiggle room (log area of the finished F) identifies made vs discovered above chance | **42/96 = 0.44** (p = 0.91) | ❌ FAILED |
+| H2 | vertex-type frequencies stay below 0.60 accuracy | **0.56** (p = 0.13) | ✅ HELD (a weak-signal statement) |
+| H3 | every held-out world with empty F is SELECT | no held-out world had an empty F | ✅ HELD (vacuously) |
+
+M1 + M2 together: 0.56. All 96 held-out F's were polygons. There were no jams in the held-out set; the
+training set had 3 SELECT jams.
+
+**Why H1 failed** (exploratory, [`results/heldout_why_EXPLORATORY.txt`](results/heldout_why_EXPLORATORY.txt)):
+
+- A finished world's leftover wiggle room takes only **four sizes**, mostly one (log area −4.75, about
+  0.0087). The distributions are almost identical in both modes (mean log area −4.98 vs −4.96).
+- What differs is the **number of choices**. SELECT worlds took the smaller piece more often, so each
+  cut went deeper, and they needed **fewer** choices (more worlds with 1–2). REVEAL worlds kept the
+  larger piece more often and needed **more** (more worlds with 4–7).
+- **So the world's size sets how much of its hidden number is known at the end. Its history only sets
+  how many bites it took to get there.** This also explains the earlier curiosity (REVEAL met 163
+  choices vs SELECT's 123).
+- **Where the evidence of making is stored:** in the *path* (how many choices, and which pieces), not
+  in how pinned the world ends up. Whether the number of past choices can be read off a finished patch,
+  for example from the decided strips it contains, is the natural next question.
