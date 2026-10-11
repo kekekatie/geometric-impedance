@@ -18,6 +18,21 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🔢 Slack ([`slack/`](slack/)): Fable's test, voted for by Katie, Gemini and Astra
+
+- **Wiggle room F** = the window positions still consistent with the world, i.e. the unread part of
+  the hidden number.
+- **Forced growth never costs wiggle room** (S1 held; its 18 exceptions are a choice's cut finishing
+  one slice later).
+- **Each choice splits F exactly between the two alternative presents** (65/67 once the siblings grow
+  on; the registered S2 measured too early and failed).
+- **The splits are golden:** 0.382 (25×), 0.236 (17×), 0.309…; a fair 50/50 only 2×. The hidden number
+  is read in golden-ratio digits. (S3 as registered failed.)
+- **Decapods:** a bare ring has large wiggle room, and after one slice it is **exactly zero** (S4
+  held). The hidden number is fully read, so there is nothing to guess.
+- **Dead options:** 2/67 choices had an option consistent with no hidden number. World 14 took one,
+  its F went empty, and it jammed 14 slices later (the only jam among 24 worlds).
+
 ## 🕸️ Constraint chains ([`constraint_chains/`](constraint_chains/)), Astra's next step
 
 - We traced which tiles actually force each consequence of a choice. C1, C2 and C3 all held.
