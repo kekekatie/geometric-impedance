@@ -1,0 +1,16 @@
+Robinson check on the slack worlds: 65 two-option choices with both pieces live
+  R: HELD    Robinson triangle cut through exactly one corner -> share 1/tau^2, smaller piece same type, larger piece the other type: 18/18 (need >= 95%)
+  reported: census (corners, angles, share, corners crossed, parallel to a side) x count:
+      (3, (1.0, 1.0, 3.0), np.float64(0.236), 0, False) x14
+      (3, (1.0, 2.0, 2.0), np.float64(0.382), 1, False) x12
+      (4, (1.0, 3.0, 3.0, 3.0), np.float64(0.309), 0, False) x11
+      (5, (3.0, 3.0, 3.0, 3.0, 3.0), np.float64(0.276), 2, True) x6
+      (3, (1.0, 1.0, 3.0), np.float64(0.382), 1, False) x6
+      (3, (1.0, 2.0, 2.0), np.float64(0.382), 0, True) x4
+      (4, (2.0, 2.0, 3.0, 3.0), np.float64(0.382), 2, False) x3
+      (4, (2.0, 2.0, 3.0, 3.0), np.float64(0.236), 1, True) x3
+      (3, (1.0, 2.0, 2.0), np.float64(0.146), 0, True) x2
+      (4, (1.0, 3.0, 3.0, 3.0), np.float64(0.5), 1, True) x1
+      (4, (2.0, 3.0, 2.0, 3.0), np.float64(0.5), 2, False) x1
+      (4, (1.0, 3.0, 3.0, 3.0), np.float64(0.191), 2, False) x1
+      (4, (2.0, 2.0, 3.0, 3.0), np.float64(0.447), 1, False) x1
