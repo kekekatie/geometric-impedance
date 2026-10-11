@@ -1,0 +1,8 @@
+worlds: statuses {'JAM': 1, 'ok': 23}; choices 60, two-option with F > 0: 60, dead-optioned 1
+  G1: HELD    clean splits 59/59 (need >= 90%)
+  G2: HELD    smaller share within 0.002 of the golden family: 59/59 (need >= 90%)
+  G3: HELD    commonest member 1/t^2; counts {'1/t^2': 36, '1/t^3': 10, '1/t^4': 4, '1/(2t)': 4, '(5-sqrt5)/10': 3, '1/(2t^2)': 1, '1/sqrt5': 1}
+      shares outside the family: []
+  G4: HELD    forced slices that shrank F: 16; not exactly one slice after a choice: 0
+  G5: HELD    worlds with empty F [0]; jammed worlds [0]
+  reported: wiggle room kept per choice (main world) {np.float64(0.191): 1, np.float64(0.276): 1, np.float64(0.382): 10, np.float64(0.618): 14, np.float64(0.691): 2, np.float64(0.724): 2, np.float64(0.764): 4, np.float64(0.854): 2}; main world took the larger piece 29, smaller 30

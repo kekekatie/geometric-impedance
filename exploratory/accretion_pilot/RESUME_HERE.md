@@ -18,6 +18,16 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ✨ Golden digits ([`golden_digits/`](golden_digits/)): slack's follow-ups CONFIRMED on fresh worlds
+
+- Pre-registered on 24 fresh worlds; **G1–G5 all held**.
+- 59/59 choices split the wiggle room exactly in two; 59/59 splits are golden-ratio numbers (to within
+  0.002; chance about 6%); the commonest is 0.382 (36/59).
+- Forced growth never narrows the hidden number (all 16 shrinks come in the slice after a choice).
+- A dead option empties F, and that world jams (world 0); no other world jammed.
+- **Banked:** each choice is the reader taking in one *golden* digit of the hidden number.
+- **Open:** why these pieces, and these frequencies?
+
 ## 🔢 Slack ([`slack/`](slack/)): Fable's test, voted for by Katie, Gemini and Astra
 
 - **Wiggle room F** = the window positions still consistent with the world, i.e. the unread part of
