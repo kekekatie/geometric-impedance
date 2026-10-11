@@ -14,6 +14,14 @@ was rerun with identical seeds and code, apart from the save fix.*
 **The set-up.** Part 1 grew 48 seeds in both ways (96 worlds). Part 2 grew one seed 40 times each way
 (80 worlds).
 
+> **Corrections after Astra's review (2026-10-11):**
+>
+> - **"One world can't tell" overstates W2.** What was found: *across these finite patches, the 8 vertex-type frequencies showed no statistically significant difference at the registered threshold.* That is a **non-detection**, not an equivalence result. Effects reached about 0.37 SD, and no equivalence margin was set. Other statistics could still distinguish the generators.
+> - **One world can carry some evidence.** Suppose a finished world lies in the *smaller* first-choice piece. SELECT gives that outcome probability 0.5, and REVEAL gives it 0.382. That is a likelihood ratio of about **1.31 in favour of SELECT**: weak evidence, but not zero. Several recoverable choices in one world could add more, once their dependencies are accounted for. The sharper question: **how much evidence about its making survives in one finished world, and where is it stored?**
+> - **W3 checks consistency, not discrimination.** It tests each generator against its own expected frequency, and the two acceptance ranges overlap.
+> - **"Read from the finished tiling alone" needs qualifying.** The final offset region comes from the finished patch, but it is compared with first-choice boundaries saved during growth. Reconstructing those boundaries without the process record is a separate step.
+> - **The dead-option detector here still uses zero area.** The empty/point distinction from `../slack/classify_EXPLORATORY.py` has not yet been applied to these cases. The three observed jams are real regardless.
+
 ## Scorecard
 
 | | prediction | result | |
@@ -32,15 +40,17 @@ log's "0/123" was a reporting bug with numpy booleans):
 
 ## What it means (plainly)
 
-- **From inside one world, you can't tell whether it was made or discovered.** Both kinds are genuine
-  Penrose patches with the same local statistics.
+- *(Softened; see the corrections above.)* Within these finite patches, the 8 vertex-type frequencies did
+  **not detectably differ** between made and discovered worlds. That is not proof that one world carries
+  no trace.
 - **Except at a dead end.** A *maker* can blunder into a locally legal choice that no hidden number
   allows, and that world later jams. A *discovered* world never can, because its hidden number was
   always there to keep it consistent.
 - **A crowd of worlds can tell.** Across many worlds, makers land in small and large pieces equally
   often. Discoverers land in them in proportion to their size.
-- **For Katie's theory:** a single universe could not prove from the inside whether it is being made or
-  being discovered. You would need to compare many universes, or catch one at a dead end.
+- **For Katie's theory (softened):** everyday local counts in one world didn't reveal its making. Any trace
+  may be faint and stored elsewhere (larger arrangements, the leftover wiggle room). The open question is
+  how much evidence survives in one world.
 
 ## Limits
 
