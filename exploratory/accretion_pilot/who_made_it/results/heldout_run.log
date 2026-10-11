@@ -1,0 +1,10 @@
+training: jams SELECT 3, REVEAL 0; held out: jams SELECT 0, REVEAL 0
+F kinds (held out): {('SELECT', 'polygon'): 48, ('REVEAL', 'polygon'): 48}
+  classifier A (M1 leftover wiggle room): held-out accuracy 42/96 = 0.438 (one-sided binomial p 0.9079)
+  classifier B (M2 vertex frequencies): held-out accuracy 54/96 = 0.562 (one-sided binomial p 0.1307)
+  classifier C (M1 + M2): held-out accuracy 54/96 = 0.562 (one-sided binomial p 0.1307)
+  H1: FAILED  classifier A above chance on held-out seeds (p 0.9079)
+  H2: HELD    classifier B accuracy 0.562 (need < 0.60)
+  H3: HELD    held-out worlds with empty F: 0, all SELECT: True
+  reported: SELECT log leftover area median -4.75 (IQR -5.23 to -4.75); choices per world median 3
+  reported: REVEAL log leftover area median -4.75 (IQR -5.23 to -4.75); choices per world median 3

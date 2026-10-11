@@ -30,7 +30,13 @@ rolled away.)*
 - **Except dead ends:** only makers take dead options and jam (3/48 vs 0/48).
 - **A crowd can tell:** makers land in small pieces 50% of the time, discoverers in proportion to piece
   size.
-- Curiosity: discovered worlds met more choices (163 vs 123).
+- **Held-out test (2026-10-12): H1 failed.** The leftover wiggle room does *not* tell made from
+  discovered (0.44); vertex counts reach 0.56 (n.s.).
+- **How come:** every world ends knowing about the same amount (set by its size). Makers take fewer,
+  bigger bites; discoverers take more, smaller ones. That explains the earlier curiosity (163 vs 123
+  choices).
+- **The evidence of making lives in the path, not the destination.** Next question: can the number of
+  choices be read off a finished patch (its decided strips)?
 - Also new: `golden_digits/figures/reader.gif`, "the reader, reading" (the wiggle room cut choice by
   choice; the shapes recur at smaller scales).
 
