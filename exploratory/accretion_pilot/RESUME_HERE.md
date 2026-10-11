@@ -18,6 +18,18 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🎲 Who made it? ([`who_made_it/`](who_made_it/)): making vs discovering (Astra's question)
+
+- **SELECT** = fair coin at choices (made); **REVEAL** = hidden position drawn first (discovered).
+  W1–W3 all held.
+- **One world can't tell:** vertex statistics are the same (smallest p = 0.07).
+- **Except dead ends:** only makers take dead options and jam (3/48 vs 0/48).
+- **A crowd can tell:** makers land in small pieces 50% of the time, discoverers in proportion to piece
+  size.
+- Curiosity: discovered worlds met more choices (163 vs 123).
+- Also new: `golden_digits/figures/reader.gif`, "the reader, reading" (the wiggle room cut choice by
+  choice; the shapes recur at smaller scales).
+
 ## ✨ Golden digits ([`golden_digits/`](golden_digits/)): slack's follow-ups CONFIRMED on fresh worlds
 
 - Pre-registered on 24 fresh worlds; **G1–G5 all held**.

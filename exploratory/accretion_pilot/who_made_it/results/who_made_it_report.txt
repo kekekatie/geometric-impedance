@@ -1,0 +1,15 @@
+Part 1 SELECT: jams 3/48; choices 123; dead options met 7, taken 3; took the smaller piece 0/123; fallbacks 0
+Part 1 REVEAL: jams 0/48; choices 163; dead options met 9, taken 0; took the smaller piece 0/163; fallbacks 0
+  W1: HELD    REVEAL worlds that took a dead option or jammed: 0/48
+  W2: HELD    no vertex type differs at p < 0.01/8; smallest p 0.0695
+      ((0, 'A', False), (1, 'B', False), (1, 'B', True), (0, 'A', True), (0, 'A', False), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (0, 'A', True)): SELECT 0.0616 vs REVEAL 0.0600, effect 0.36 SD, p 0.092
+      ((0, 'A', False), (1, 'B', False), (1, 'B', True), (0, 'A', True), (1, 'A', False), (1, 'A', True)): SELECT 0.2458 vs REVEAL 0.2473, effect 0.34 SD, p 0.097
+      ((0, 'A', False), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (0, 'A', True)): SELECT 0.0351 vs REVEAL 0.0353, effect 0.27 SD, p 0.196
+      ((0, 'B', False), (0, 'B', True), (1, 'A', True), (1, 'A', False)): SELECT 0.3786 vs REVEAL 0.3792, effect 0.20 SD, p 0.317
+      ((0, 'C', False), (0, 'C', True), (0, 'C', False), (1, 'C', True), (1, 'C', False), (0, 'C', True)): SELECT 0.1409 vs REVEAL 0.1422, effect 0.31 SD, p 0.142
+      ((0, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True), (1, 'C', False), (0, 'C', True)): SELECT 0.0817 vs REVEAL 0.0818, effect 0.06 SD, p 0.783
+      ((1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True), (1, 'B', False), (1, 'B', True)): SELECT 0.0199 vs REVEAL 0.0196, effect 0.11 SD, p 0.578
+      ((1, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True), (1, 'C', False), (1, 'C', True)): SELECT 0.0365 vs REVEAL 0.0347, effect 0.37 SD, p 0.069
+  W3 SELECT: in the smaller first-choice piece 25/40 = 0.625; expected 0.500 (95% interval 0.345-0.655): consistent; first-choice shares [np.float64(0.618), np.float64(0.382)]
+  W3 REVEAL: in the smaller first-choice piece 15/40 = 0.375; expected 0.382 (95% interval 0.231-0.533): consistent; first-choice shares [np.float64(0.618), np.float64(0.382)]
+  W3: HELD    the crowd carries the signature
