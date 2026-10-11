@@ -1,0 +1,12 @@
+EXPLORATORY: what zero-area F really is
+  figure: ordinary choice shares and decapod slice-1 class: (np.float64(0.8541019662496814), np.float64(0.14589803375031124), ('point', 2.901205942151819e-09))
+  decapod seed 2: ring polygon, slice 1 point (4.9e-09), final point (4.9e-09)
+  decapod seed 3: ring polygon, slice 1 point (2.9e-09), final point (2.9e-09)
+  decapod seed 4: ring polygon, slice 1 point (2.9e-09), final point (2.9e-09)
+  decapod seed 5: ring polygon, slice 1 point (3.2e-09), final point (6.2e-09)
+  decapod seed 6: ring polygon, slice 1 point (3.2e-09), final point (6.2e-09)
+  decapod seed 7: ring polygon, slice 1 point (2.9e-09), final point (2.9e-09)
+  decapod seed 8: ring polygon, slice 1 point (2.9e-09), final point (2.9e-09)
+  decapod seed 9: ring polygon, slice 1 point (3.2e-09), final point (6.2e-09)
+  slack world 14: F class by slice (from-to: class): 1-14: polygon; 15-28: empty; 29-29: None
+  golden world 0: F class by slice (from-to: class): 1-28: polygon; 29-42: empty; 43-43: None

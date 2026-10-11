@@ -14,6 +14,23 @@ yet read. Its area shrinks as the reader learns more.
   choice.
 - 8 decapod worlds (`../perp_map/` M2).
 
+> **Refinements after Astra's review (2026-10-11):**
+>
+> 1. **Zero area is not the same as empty.** The original code gave a segment, a point and an empty set the same answer. Re-classified with linear programming ([`classify_EXPLORATORY.py`](classify_EXPLORATORY.py), [`results/classify_EXPLORATORY.txt`](results/classify_EXPLORATORY.txt)):
+>    - **decapod worlds:** the bare ring's F is a polygon. After one slice it is a single **point**, and it stays a point to the end, in all 8 worlds. They really are pinned to one offset.
+>    - **the two dead-option worlds** (slack world 14, golden world 0): F was a polygon, became genuinely **empty** at the dead choice's slice, and each world **jammed 14 slices later**.
+>    - So "pinned" and "impossible" are now distinguished, and both earlier readings survive.
+> 2. **Wording.**
+>    - "Exact splits" means **partitions within the registered numerical tolerances**. Exactness would need a geometric derivation.
+>    - "Fibonacci number system / golden digits" means **a recurring family of golden-ratio area shares**. A true digit system would need a demonstrated encoding and continuation rule.
+>    - "6% by chance" refers to shares spread evenly on (0, 0.5]. It is *not* a significance estimate against the tiling's actual geometry.
+>    - "The choice's cut finishing" is an interpretation. What was measured is the *timing*: every forced narrowing of F came exactly one slice after a choice.
+> 3. **Revealed or selected?** The growth picks between the two options **50/50** (a fair choice), even though the pieces are 38% and 62% of the possibilities. If instead a hidden offset were chosen uniformly first and then *revealed*, the pieces would be taken 38% and 62% of the time. These are two different models: *making* a world versus *discovering* a predetermined one. The present results don't decide between them.
+> 4. **Picture** ([`figures/window_cut.png`](figures/window_cut.png)):
+>    - *Left:* one ordinary choice. The wiggle room (a triangle) is divided by **one straight line**, a single new vertex's window-edge constraint, into option B's 14.6% and option A's 85.4%. The two options are the two sides of one line.
+>    - *Right:* a bare decapod ring's wiggle room is a large decagon. After one slice it is pinned to a single point at the decagon's **centre**.
+>    - Next sharp question (Astra): can the split proportions be derived from the cutting lines before measuring the areas?
+
 ## Scorecard
 
 | | prediction | result | |

@@ -25,7 +25,14 @@ rolled away.)*
   0.002; chance about 6%); the commonest is 0.382 (36/59).
 - Forced growth never narrows the hidden number (all 16 shrinks come in the slice after a choice).
 - A dead option empties F, and that world jams (world 0); no other world jammed.
-- **Banked:** each choice is the reader taking in one *golden* digit of the hidden number.
+- **Banked (wording per Astra):** each choice partitions the wiggle room (within tolerance) into a recurring
+  family of golden-ratio shares. "Golden digits" is the picture, not yet a demonstrated digit system.
+- **Astra's refinements (2026-10-11):** zero area was re-classified. Decapods are pinned to a **point**
+  (the centre of their ring's decagon of possibilities); dead-option worlds go genuinely **empty**, then
+  jam 14 slices later. A choice is decided by **one straight line** in the window (figure
+  `slack/figures/window_cut.png`). The growth picks 50/50 between unequal pieces (selected, not
+  revealed); which model is right is open.
+- **Next sharp question:** derive the split proportions from the cutting lines.
 - **Open:** why these pieces, and these frequencies?
 
 ## 🔢 Slack ([`slack/`](slack/)): Fable's test, voted for by Katie, Gemini and Astra
