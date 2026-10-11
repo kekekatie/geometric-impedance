@@ -1,0 +1,23 @@
+EXPLORATORY shape census: 59 two-option choices with both pieces live
+  cutting line found (A and B constraints on one line, opposite sides): 59/59
+  shapes of F at the choice (corners, angles in units of 36 deg): (3, (1.0, 1.0, 3.0)): 26; (3, (1.0, 2.0, 2.0)): 19; (4, (2.0, 2.0, 3.0, 3.0)): 6; (4, (1.0, 3.0, 3.0, 3.0)): 3; (5, (3.0, 3.0, 3.0, 3.0, 3.0)): 3; (4, (2.0, 3.0, 2.0, 3.0)): 2
+  F = (3, (1.0, 1.0, 3.0)):
+      share 0.382 x19: line through 1 corner(s), parallel to a side False; small piece (1.0, 1.0, 3.0), big piece (1.0, 2.0, 2.0)
+      share 0.236 x7: line through 0 corner(s), parallel to a side False; small piece (1.0, 2.0, 2.0), big piece (1.0, 3.0, 3.0, 3.0)
+  F = (3, (1.0, 2.0, 2.0)):
+      share 0.382 x10: line through 1 corner(s), parallel to a side False; small piece (1.0, 2.0, 2.0), big piece (1.0, 1.0, 3.0)
+      share 0.382 x5: line through 0 corner(s), parallel to a side True; small piece (1.0, 2.0, 2.0), big piece (2.0, 2.0, 3.0, 3.0)
+      share 0.146 x4: line through 0 corner(s), parallel to a side True; small piece (1.0, 2.0, 2.0), big piece (2.0, 2.0, 3.0, 3.0)
+  F = (4, (2.0, 2.0, 3.0, 3.0)):
+      share 0.236 x3: line through 1 corner(s), parallel to a side True; small piece (1.0, 2.0, 2.0), big piece (2.0, 3.0, 2.0, 3.0)
+      share 0.382 x2: line through 2 corner(s), parallel to a side False; small piece (1.0, 1.0, 3.0), big piece (1.0, 2.0, 2.0)
+      share 0.447 x1: line through 1 corner(s), parallel to a side False; small piece (1.0, 2.0, 2.0), big piece (1.0, 3.0, 3.0, 3.0)
+  F = (4, (1.0, 3.0, 3.0, 3.0)):
+      share 0.309 x2: line through 0 corner(s), parallel to a side False; small piece (1.0, 2.0, 2.0), big piece (3.0, 3.0, 3.0, 3.0, 3.0)
+      share 0.191 x1: line through 2 corner(s), parallel to a side False; small piece (1.0, 1.0, 3.0), big piece (1.0, 2.0, 2.0)
+  F = (5, (3.0, 3.0, 3.0, 3.0, 3.0)):
+      share 0.276 x3: line through 2 corner(s), parallel to a side True; small piece (1.0, 1.0, 3.0), big piece (2.0, 2.0, 3.0, 3.0)
+  F = (4, (2.0, 3.0, 2.0, 3.0)):
+      share 0.309 x2: line through 1 corner(s), parallel to a side False; small piece (1.0, 2.0, 2.0), big piece (2.0, 2.0, 3.0, 3.0)
+  F side ratios by shape: (3, (1.0, 2.0, 2.0)): [(0.618, 1.0, 1.0)]; (3, (1.0, 1.0, 3.0)): [(0.618, 0.618, 1.0)]; (4, (1.0, 3.0, 3.0, 3.0)): [(0.382, 0.382, 1.0, 1.0)]; (5, (3.0, 3.0, 3.0, 3.0, 3.0)): [(1.0, 1.0, 1.0, 1.0, 1.0)]; (4, (2.0, 2.0, 3.0, 3.0)): [(0.382, 1.0, 1.0, 1.0), (0.618, 0.618, 0.618, 1.0)]; (4, (2.0, 3.0, 2.0, 3.0)): [(1.0, 1.0, 1.0, 1.0)]
+  distinct F areas: [np.float64(0.010686), np.float64(0.013989), np.float64(0.019332), np.float64(0.022634), np.float64(0.027977), np.float64(0.036622), np.float64(0.059256), np.float64(0.073245), np.float64(0.095879), np.float64(0.132501)]; successive ratios [np.float64(1.309), np.float64(1.382), np.float64(1.171), np.float64(1.236), np.float64(1.309), np.float64(1.618), np.float64(1.236), np.float64(1.309), np.float64(1.382)]
