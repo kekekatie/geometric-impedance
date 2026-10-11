@@ -1,0 +1,3 @@
+EXPLORATORY (post hoc): timing of S1's forced shrinks, and world 14's fate
+  slices since the last choice, for each forced slice that shrank the wiggle room: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] | before any choice: 0
+  world 14 in the identical thread_influence run: status JAM after 29 slices; every other world: ['ok']
