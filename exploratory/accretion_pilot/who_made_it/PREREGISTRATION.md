@@ -77,4 +77,9 @@ Katie's intuition: "both, revealing mainly, selecting at special moments."
 
 ## Changes before the first run
 
-*(none yet)*
+- **Clarification (2026-10-11, while writing the code, before any run).**
+  - Part 2's random streams were not specified. They are SELECT `20261400 + i` and REVEAL
+    `20261500 + i` (i = 0–39).
+  - A finished world's piece is read from the centroid of its final F, tested against the first
+    choice's two piece constraints.
+  - A REVEAL world's 50/50 coin is never used, except in fallbacks.
