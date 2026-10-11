@@ -107,7 +107,8 @@ def main():
     part2 = [("SELECT", C[0], 20261400 + i) for i in range(40)] + [("REVEAL", C[0], 20261500 + i) for i in range(40)]
     with Pool(4, maxtasksperchild=1) as p:
         W1 = p.map(world, part1); W2 = p.map(world, part2)
-    json.dump(dict(part1=W1, part2=W2), open(os.path.join(RES, "worlds.json"), "w"))
+    json.dump(dict(part1=W1, part2=W2), open(os.path.join(RES, "worlds.json"), "w"),
+              default=lambda o: o.item() if hasattr(o, "item") else str(o))     # numpy scalars
     lines = []
     for mode in ("SELECT", "REVEAL"):
         ws = [w for w in W1 if w["mode"] == mode]; ch = [c for w in ws for c in w["choices"]]
