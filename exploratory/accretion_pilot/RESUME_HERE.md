@@ -32,7 +32,11 @@ rolled away.)*
   jam 14 slices later. A choice is decided by **one straight line** in the window (figure
   `slack/figures/window_cut.png`). The growth picks 50/50 between unequal pieces (selected, not
   revealed); which model is right is open.
-- **Next sharp question:** derive the split proportions from the cutting lines.
+- **Split derived (2026-10-11):** the wiggle room at a choice is always a golden shape (mostly Penrose's
+  Robinson triangles), cut by one line. A Robinson triangle cut through a corner splits into a smaller
+  copy of itself (**1/τ² = 0.382**) plus the other triangle. That is **Penrose's own subdivision rule**,
+  happening in the hidden window. Pre-registered check on the slack worlds: **18/18**. Each cut type
+  has one fixed share. Open: derive the other cut types; why only these shapes.
 - **Open:** why these pieces, and these frequencies?
 
 ## 🔢 Slack ([`slack/`](slack/)): Fable's test, voted for by Katie, Gemini and Astra

@@ -77,3 +77,52 @@ fair binary halves.
 
 - `golden_digits.py`: the study
 - `results/golden_digits_report.txt`, `results/run.log`, `results/worlds.json`
+
+## Deriving the split: the Robinson rule (2026-10-11)
+
+**Astra's sharp question:** can the split proportions be derived from the cutting geometry before
+measuring areas?
+
+**Step 1, exploratory** ([`shapes_EXPLORATORY.py`](shapes_EXPLORATORY.py),
+[`results/shapes_EXPLORATORY.txt`](results/shapes_EXPLORATORY.txt)). On the 24 golden_digits worlds:
+
+- **Every wiggle room at a choice is a golden shape.** In steps of 36°:
+  - 26 golden **gnomons** (36°-36°-108°);
+  - 19 golden **triangles** (36°-72°-72°), so 45 of 59 were Penrose's own **Robinson triangles**;
+  - the rest are golden trapezoids, a kite-like quadrilateral (36°-108°-108°-108°), the fat Penrose
+    rhombus, and regular pentagons.
+- **Every cut is one straight line** (59/59): a constraint of one sibling and a constraint of the other
+  lying on the same line, facing opposite ways.
+- **The commonest split is Penrose's subdivision rule.** A Robinson triangle cut through one corner
+  splits into a **smaller copy of itself** (scale 1/τ, so area 1/τ² = **0.382**) plus **the other**
+  Robinson triangle. That is exactly the rule that generates Penrose tilings by subdivision. (Found in
+  29/29 such cases.)
+
+**Step 2, pre-registered check** ([`PREREGISTRATION_robinson.md`](PREREGISTRATION_robinson.md),
+[`robinson_check.py`](robinson_check.py), [`results/robinson_check.txt`](results/robinson_check.txt)).
+On the 24 **slack** worlds, whose shapes had never been examined:
+
+- **Prediction R held: 18/18.** Every Robinson triangle cut through exactly one corner split 1/τ² :
+  1/τ, into a smaller same-type triangle plus the other type.
+
+**Each kind of cut has one fixed share** (both world sets combined; descriptive):
+
+| wiggle room | cut | share | count |
+|---|---|---|---|
+| golden triangle | through 1 corner (Robinson) | 1/τ² = 0.382 | 10 + 12 |
+| gnomon | through 1 corner (Robinson) | 1/τ² = 0.382 | 19 + 6 |
+| gnomon | through no corner | 1/τ³ = 0.236 | 7 + 14 |
+| golden triangle | parallel to a side | 0.382 or 0.146 (1/τ⁴) | 9 + 6 |
+| kite-like (36-108-108-108) | through no corner | 1/(2τ) = 0.309 | 2 + 11 |
+| regular pentagon | along a diagonal | (5−√5)/10 = 0.276 | 3 + 6 |
+
+**What it means (plainly).**
+
+- The hidden window's remaining possibilities are always **golden shapes**, and a choice cuts them
+  with **one line in a golden direction**. So the pieces are golden too, and their shares are golden
+  numbers.
+- The commonest case, 38/62, is **derived**: it is Penrose's own subdivision of a Robinson triangle,
+  happening in the hidden window.
+- **The world's possibilities get divided by the same rule that builds its tiles.**
+- *Still open:* deriving the other cut types from first principles (they are described, with fixed
+  shares, but not yet proven), and *why* the wiggle room stays within this small family of shapes.
