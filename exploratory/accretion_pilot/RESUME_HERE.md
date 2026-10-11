@@ -22,7 +22,11 @@ rolled away.)*
 
 - **SELECT** = fair coin at choices (made); **REVEAL** = hidden position drawn first (discovered).
   W1–W3 all held.
-- **One world can't tell:** vertex statistics are the same (smallest p = 0.07).
+- **One world (softened per Astra):** no *detected* difference in 8 vertex-type frequencies (smallest
+  p = 0.07). That is a non-detection, not sameness. One world can carry weak evidence (likelihood ratio
+  about 1.31 from the first-choice piece). **Next, per Astra:** predefine finished-patch measurements
+  and test whether they identify SELECT vs REVEAL on held-out seeds, keeping growth history as a
+  separate diagnostic. Also to do: apply the empty/point classifier to these dead options.
 - **Except dead ends:** only makers take dead options and jam (3/48 vs 0/48).
 - **A crowd can tell:** makers land in small pieces 50% of the time, discoverers in proportion to piece
   size.
