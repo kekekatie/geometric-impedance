@@ -1,0 +1,15 @@
+EXPLORATORY recheck of speed_of_now: 70 two-option choices, live 67, equal splits (|piece A - piece B| < 0.01) 2, live unequal-share 65, of which bursts differ by >= 10: 65
+  equal splits (set aside): w18 s42 pieces 0.5000/0.5000 bursts 378/368; w20 s56 pieces 0.5000/0.5000 bursts 378/368
+  S1 recount without equal splits: smaller piece has the larger burst in 60/65
+  grouped by local key R=4: 27 groups (sizes [11, 9, 5, 4, 4, 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); S1 majority holds in 22/27 groups; groups with mixed outcomes 0
+  grouped by local key R=8: 34 groups (sizes [9, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); S1 majority holds in 29/34 groups; groups with mixed outcomes 0
+  grouped by whole patch: 38 groups (sizes [9, 4, 4, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); S1 majority holds in 33/38 groups; groups with mixed outcomes 0
+  grouped by activity traces: 34 groups (sizes [7, 6, 6, 6, 5, 4, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]); S1 majority holds in 29/34 groups; groups with mixed outcomes 0
+  identical activity traces spanning more than one whole-patch geometry: 6 of 36
+  per world: 24 worlds with qualifying choices; S1 holds in a majority of choices in 24, exactly half 0, minority 0
+  unfinished bursts (never stalled in 40 slices; burst is a lower bound): 74/134 siblings (smaller piece 61/67, larger 13/67)
+  S3 pairs where burst = total for both (neither stalled): 11/65; for one: 50/65
+  S2 pairs whose late window (slices 21-40) still overlaps at least one burst: 67/67
+  dead option w2 s16: pieces 0.000/1.000; classifier on each sibling's F at its first stall or jam: [('empty', 'JAM', 14), ('polygon', 'stall', 3)]
+  dead option w13 s29: pieces 0.000/1.000; classifier on each sibling's F at its first stall or jam: [('empty', 'JAM', 14), ('polygon', 'stall', 3)]
+  dead option w20 s26: pieces 0.000/1.000; classifier on each sibling's F at its first stall or jam: [('empty', 'JAM', 14), ('polygon', 'stall', 3)]

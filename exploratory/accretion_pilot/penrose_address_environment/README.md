@@ -101,6 +101,6 @@ python3 make_figure.py       # figures/window_by_type.png, figures/information.p
 - This is the address → environment story, seen whole: places can be similar anywhere, but zoomed out
   far enough every place is unique.
 - It also contrasts with `../two_decapods/`. Ordinary twins coexist because they differ in their fine
-  "digits". Two decapods each claim one *exact* point, and can't.
+  "digits". Two decapods each claim one *exact* point, and in all 32 tested pairs they jammed before joining.
 
 ![twins](figures/twins.png)
