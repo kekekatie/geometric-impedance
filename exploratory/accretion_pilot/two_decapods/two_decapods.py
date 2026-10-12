@@ -99,7 +99,7 @@ def ctrl(args):
     s, n, j = args
     A = ring_of(s); v = n * (eps(j) + eps(j + 1))
     Pw, rnd, rounds, g, st = SC.grow(A, 3000, D.SEED0 + 100 * s)
-    piece = [t for t in Pw.tris if abs(Sl.cen(t) - v) <= PIECE_R * S]
+    piece = [t for t in Pw.tris if abs(SC.cen(t) - v) <= PIECE_R * S]
     out = grow(A + piece, [0j], {D.dkey(t) for t in A}, {D.dkey(t) for t in piece}) if piece else dict(status="NO PIECE")
     out.update(kind_run="CTRL", seed=s, n=n, j=j, dist=abs(v) / S, piece=len(piece))
     return out
@@ -109,7 +109,9 @@ def main():
     os.makedirs(RES, exist_ok=True)
     cfg = [(s, n, j) for s in SEEDS for n in NS for j in JS]
     with Pool(4, maxtasksperchild=1) as p:
-        T = p.map(two, cfg); C = p.map(ctrl, cfg)
+        T = p.map(two, cfg)
+        json.dump(dict(two=T), open(os.path.join(RES, "worlds_two.json"), "w"), default=lambda o: o.item() if hasattr(o, "item") else str(o))
+        C = p.map(ctrl, cfg)
     json.dump(dict(two=T, ctrl=C), open(os.path.join(RES, "worlds.json"), "w"), default=lambda o: o.item() if hasattr(o, "item") else str(o))
     lines = []
     for name, R in (("TWO", T), ("CTRL", C)):
