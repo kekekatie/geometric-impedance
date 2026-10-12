@@ -36,11 +36,17 @@ own world seamlessly. ([`figure_EXPLORATORY.py`](figure_EXPLORATORY.py))*
 
 ## What it means (plainly)
 
-- **Two centres can't coexist. They can't even touch.**
-  - In all 32 two-decapod worlds, the two growing regions jammed at their **first meeting**, almost
-    exactly halfway between the two centres, before they could join into one world.
-  - Each decapod pins the world to its own centre, and two different centres are incompatible.
-  - The incompatibility shows up locally, right where the two meet: no tile can fit the seam.
+- **In every pair we tested, the two centres jammed before joining.** *(Scoped after Astra's review,
+  2026-10-12: this is a result about 32 tested pairs, not a universal impossibility theorem.)*
+  - In all 32 two-decapod worlds, the two growing regions jammed before becoming **edge-connected**
+    (before any tile of one shared an edge with a tile of the other), almost exactly halfway between
+    the two centres.
+  - "Not edge-connected" is not the same as "untouched": the two regions could already share corners,
+    and each constrains the frontier the other grows into.
+  - The reading we suggest: each decapod pins the world to its own centre, and two different centres
+    are incompatible. The incompatibility shows up locally, where the two meet: no tile can fit the
+    seam. That reading fits all 32 cases but hasn't been proven in general.
+  - Tested: 8 seed rings, 2 distances, 2 directions, with B always a different ring from A.
 - **One world always rejoins itself.** A decapod meeting a piece of its own world joined seamlessly
   in all 32 cases, and the world stayed pinned to one point.
 - **For the "decapod as mass?" question:** a decapod behaves like a **world-organising centre**, not a

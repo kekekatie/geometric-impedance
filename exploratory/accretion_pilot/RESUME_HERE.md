@@ -23,8 +23,9 @@ In our tilings the two are visibly different:
 The questions this gives us:
 
 - Where does a world keep its memories?
-- What does it forget? (A finished world forgets *how* it was made; only the path held that:
-  `who_made_it/`.)
+- What does it forget? (In `who_made_it/`, the readers we tried on a finished world couldn't tell how
+  it was made, while the path clearly showed it. That is a non-detection, not proof that the finished
+  geometry forgets.)
 - How does difference become memory once something reads it?
 
 *"The way that can be named is not the way". But naming it badly, together, and checking it against
@@ -48,21 +49,27 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
-## ⏩ The speed of now ([`speed_of_now/`](speed_of_now/)), pre-registered
+## ⏩ The speed of now ([`speed_of_now/`](speed_of_now/)), pre-registered (corrected per Astra 2026-10-12)
 
-- **A choice that decides more lets the present run further.** At a two-way choice, the option keeping
-  the *smaller* piece of wiggle room sets off the longer burst of forced tiles in 60/67 cases (29/36
-  distinct). The trend runs across the shares: keeping 0.146 gives ~770 tiles; keeping 0.854 gives 24.
-- **It isn't only fewer pauses.** Even per forced slice, the decided future lays ~2× the tiles,
-  because its forced tiles spread along the whole front.
-- **It lasts at least 40 slices.** Both "evens out" predictions failed. Caveat: most fast futures were
-  still in their first burst when we stopped watching.
-- **Dead options rush (~200 tiles), then jam.** Their live sibling laid 4.
-- **Not a general "more pinned = faster" law:** across a world's history, shrinking F doesn't reliably
-  speed it up (exploratory). Guess, untested: Conway's *empire*. A rarer option forces more of its
-  surroundings, so the speed of now follows how *surprising* the choice was.
-- Next, if wanted: longer windows to see whether the speeds ever even out; measure the empire
-  directly.
+- **A choice that decides more unlocks more forced growth.** At a two-way choice, the option keeping
+  the *smaller* piece of wiggle room sets off the bigger burst of forced tiles: 60/65, once the two
+  exact 50/50 splits are set aside.
+  - It also holds in the majority of choices in all 24 worlds, and in most geometry-based groups.
+  - Earlier "36 distinct" = 36 activity traces, not 36 distinct situations.
+  - Trend across shares: keeping 0.146 gives ≥ 770 tiles (burst unfinished); keeping 0.854 gives 24.
+- **Burst ≠ activity ≠ front speed.** Per slice, the decided future lays ~2× the tiles. The picture
+  shows broader activation in one example, not yet a faster front.
+- **"Evens out" (S2, S3) failed, but that doesn't show a lasting difference.** Most fast bursts never
+  ended within 40 slices (61/67), so the late window mostly re-measured the burst.
+- **Dead options:** F confirmed empty by the classifier. They rush (~200 tiles, outgrowing their own
+  sibling) and then jam at slice 14.
+- **Not a general "more pinned = faster" law** across a world's history (exploratory).
+- **Naming:** "surprise" = **window information gain** (−log₂ of the share kept), meaningful under a
+  uniform hidden offset, not under SELECT's fair coin. Conway's *empire* is a guide only: a locally
+  forced burst isn't the full set of tiles every completion shares.
+- **Next (Astra's vote):** at matched slices, measure the active boundary length, tiles per active
+  length, and outward advance, plus relaxation *after both bursts end*. Is it more of the zip running,
+  or the zip running faster?
 
 ## 👯 Twins, drawn (`penrose_address_environment/figures/twins.png`, exploratory)
 
@@ -73,8 +80,10 @@ rolled away.)*
 
 ## 🌀 Two decapods ([`two_decapods/`](two_decapods/)): can two centres coexist?
 
-- **No, and they can't even touch.** All 32 two-decapod worlds jammed at their *first meeting*, at the
-  seam (median 0.46 edges from the halfway line), before joining.
+- **In all 32 tested pairs, no.** Every two-decapod world jammed at the seam (median 0.46 edges from the
+  halfway line) before the two regions became edge-connected. *(Scoped per Astra, 2026-10-12: a
+  result for 32 pairs, not a universal impossibility theorem; and not edge-connected does not mean
+  untouched.)*
 - **Controls:** a decapod plus a piece of its own world joined seamlessly (32/32, F stays a point).
 - T1 failed as worded (nothing merged); T2 and T3 held.
 - Decapod = a **world-organising centre**, not a particle (fits Astra's "organising seed").
@@ -95,10 +104,13 @@ rolled away.)*
   size.
 - **Held-out test (2026-10-12): H1 failed.** The leftover wiggle room does *not* tell made from
   discovered (0.44); vertex counts reach 0.56 (n.s.).
-- **How come:** every world ends knowing about the same amount (set by its size). Makers take fewer,
-  bigger bites; discoverers take more, smaller ones. That explains the earlier curiosity (163 vs 123
+- **How come (provisional):** at this growth budget, every world ends with similar leftover wiggle
+  room. Whether size *sets* that is untested; it would need several budgets. Makers take fewer, bigger
+  bites; discoverers take more, smaller ones. That explains the earlier curiosity (163 vs 123
   choices).
-- **The evidence of making lives in the path, not the destination.** Next question: can the number of
+- **The evidence of making showed up in the path.** The tested readers of the destination didn't
+  detect it, which is a non-detection, not forgetting (Astra, 2026-10-12). Also checked: REVEAL's coin
+  fallback never fired (0/317 choices), and H3 was untested (no empty F). Next question: can the number of
   choices be read off a finished patch (its decided strips)?
 - Also new: `golden_digits/figures/reader.gif`, "the reader, reading" (the wiggle room cut choice by
   choice; the shapes recur at smaller scales).

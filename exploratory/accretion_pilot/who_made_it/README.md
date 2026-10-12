@@ -78,7 +78,27 @@ from the **finished patch only**, with classifiers fit on 48 training seeds (bot
 |---|---|---|---|
 | H1 | leftover wiggle room (log area of the finished F) identifies made vs discovered above chance | **42/96 = 0.44** (p = 0.91) | ❌ FAILED |
 | H2 | vertex-type frequencies stay below 0.60 accuracy | **0.56** (p = 0.13) | ✅ HELD (a weak-signal statement) |
-| H3 | every held-out world with empty F is SELECT | no held-out world had an empty F | ✅ HELD (vacuously) |
+| H3 | every held-out world with empty F is SELECT | no held-out world had an empty F | ⚪ UNTESTED in this sample |
+
+> **Corrections after Astra's second review (2026-10-12):**
+>
+> - **REVEAL's fallbacks never fired.** When neither or both pieces contain the hidden point,
+>   `heldout.py` falls back to a coin, but it never counted how often. An exact replay of all 96 REVEAL
+>   worlds ([`fallbacks_audit_EXPLORATORY.py`](fallbacks_audit_EXPLORATORY.py),
+>   [`results/fallbacks_audit_EXPLORATORY.txt`](results/fallbacks_audit_EXPLORATORY.txt)) settles it:
+>   - the replay reproduces every stored world;
+>   - in all **317** two-way choices, exactly one piece held the hidden point, so there were **0
+>     fallbacks**;
+>   - there were no choices with any other number of options.
+>
+>   (The Part 1 run had already counted 0 fallbacks.)
+> - **Keep the non-detection narrow.** The tested readers (leftover wiggle-room size, vertex-type
+>   frequencies, and both together) did not reliably tell the generators apart. That does **not**
+>   establish that the finished geometry forgets its making. Richer finished-patch measurements might
+>   still find it.
+> - **The size explanation is provisional.** Similar leftover wiggle room at one growth budget doesn't
+>   yet show that world size *determines* the remaining uncertainty. That needs several budgets.
+> - **H3 was untested,** not "held vacuously": no held-out world had an empty F.
 
 M1 + M2 together: 0.56. All 96 held-out F's were polygons. There were no jams in the held-out set; the
 training set had 3 SELECT jams.
@@ -90,9 +110,11 @@ training set had 3 SELECT jams.
 - What differs is the **number of choices**. SELECT worlds took the smaller piece more often, so each
   cut went deeper, and they needed **fewer** choices (more worlds with 1–2). REVEAL worlds kept the
   larger piece more often and needed **more** (more worlds with 4–7).
-- **So the world's size sets how much of its hidden number is known at the end. Its history only sets
-  how many bites it took to get there.** This also explains the earlier curiosity (REVEAL met 163
+- **A provisional reading (not yet tested):** at this growth budget, both kinds of world end up with
+  similar leftover wiggle room. Their histories differ in how many bites they took to get there.
+  Whether *size* is what sets the leftover would need several budgets. This also explains the earlier curiosity (REVEAL met 163
   choices vs SELECT's 123).
-- **Where the evidence of making is stored:** in the *path* (how many choices, and which pieces), not
-  in how pinned the world ends up. Whether the number of past choices can be read off a finished patch,
+- **Where the evidence of making showed up:** in the *path* (how many choices, and which pieces). It
+  did *not* show up in how pinned the world ends up, as measured by these readers. That is a
+  non-detection, not proof that the finished geometry forgets. Whether the number of past choices can be read off a finished patch,
   for example from the decided strips it contains, is the natural next question.
