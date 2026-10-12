@@ -1,0 +1,2 @@
+EXPLORATORY twins in the reference tiling: separation 21.1 edges; identical out to radius 15.00 edges; first disagreement by radius 15.25; tiles that differ: 2 / 2
+  same layer: True; hidden-address distance 0.1060 (window circumradius 1 or tau)

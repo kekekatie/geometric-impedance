@@ -18,6 +18,13 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 👯 Twins, drawn (`penrose_address_environment/figures/twins.png`, exploratory)
+
+- Katie's "sames/similars" question, answered by our earlier address → environment work (`fibonacci_` /
+  `penrose_address_environment`): similars are everywhere, but zoomed out every place is unique.
+- Picture: two places 21 edges apart are identical out to 15 edges and first differ at 15.25. In the
+  hidden window they are neighbours, 0.106 apart.
+
 ## 🌀 Two decapods ([`two_decapods/`](two_decapods/)): can two centres coexist?
 
 - **No, and they can't even touch.** All 32 two-decapod worlds jammed at their *first meeting*, at the

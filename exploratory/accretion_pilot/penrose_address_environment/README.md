@@ -88,3 +88,19 @@ steps. That is the first design choice for 2-D growth.
 python3 penrose_address.py   # ~2 min; exit 0 iff all checks pass
 python3 make_figure.py       # figures/window_by_type.png, figures/information.png
 ```
+
+## Twins, drawn (exploratory, 2026-10-12)
+
+[`twins_EXPLORATORY.py`](twins_EXPLORATORY.py), [`results/twins_EXPLORATORY.txt`](results/twins_EXPLORATORY.txt),
+[`figures/twins.png`](figures/twins.png).
+
+- In the reference tiling, two vertices **21 edges apart** have identical surroundings (the same
+  decorated tiles in the same places) out to a radius of **15 edges**.
+- By 15.25 edges they first differ, in just **2 tiles** each, at different points on the rim.
+- In the hidden window they are neighbours, **0.106 apart, but not the same point**.
+- This is the address → environment story, seen whole: places can be similar anywhere, but zoomed out
+  far enough every place is unique.
+- It also contrasts with `../two_decapods/`. Ordinary twins coexist because they differ in their fine
+  "digits". Two decapods each claim one *exact* point, and can't.
+
+![twins](figures/twins.png)
