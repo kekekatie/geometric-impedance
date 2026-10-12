@@ -12,10 +12,10 @@ BG, INK, MUTED = "#07080d", "#ece8dc", "#8f8b80"
 COLA, COLB, EDGE = "#f2b84b", "#5b8fe0", "#1d1f29"
 
 
-def grow_keep(seed_tiles, centres):
+def grow_keep(seed_tiles, centres, rounds=400):
     P = L.Patch(list(seed_tiles)); jam = None
     walled = lambda e: any(abs((e[0] + e[1]) / 2 - c) <= D.APO + 1e-6 for c in centres)
-    for _ in range(400):
+    for _ in range(rounds):
         forced = {}
         for e in P.frontier():
             if walled(e):
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     P2, jam = grow_keep(A + B, [0j, v])
     Pw, rnd, rounds, g, st = SC.grow(A, 3000, D.SEED0 + 100 * s)
     piece = [t for t in Pw.tris if abs(SC.cen(t) - v) <= T.PIECE_R * S]
-    P1, jam1 = grow_keep(A + piece, [0j])
+    P1, jam1 = grow_keep(A + piece, [0j], rounds=16)
     fig, axes = plt.subplots(1, 2, figsize=(15, 7.4), facecolor=BG)
     panel(axes[0], P2, {D.dkey(t) for t in A}, [0j, v], jam, "two centres: gold grew from one decapod, blue from the other.\nThey jam at the seam (red star) before they can join.", COLB)
     panel(axes[1], P1, {D.dkey(t) for t in A}, [0j], jam1, "one centre and a piece of its own world:\nthey meet and join seamlessly (all gold once joined)", COLB)

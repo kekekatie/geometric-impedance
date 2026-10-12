@@ -18,6 +18,16 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🌀 Two decapods ([`two_decapods/`](two_decapods/)): can two centres coexist?
+
+- **No, and they can't even touch.** All 32 two-decapod worlds jammed at their *first meeting*, at the
+  seam (median 0.46 edges from the halfway line), before joining.
+- **Controls:** a decapod plus a piece of its own world joined seamlessly (32/32, F stays a point).
+- T1 failed as worded (nothing merged); T2 and T3 held.
+- Decapod = a **world-organising centre**, not a particle (fits Astra's "organising seed").
+- Still open: is this specific to decapods? Test two incompatible *ordinary* pieces.
+- Picture: `two_decapods/figures/two_centres.png`.
+
 ## 🎲 Who made it? ([`who_made_it/`](who_made_it/)): making vs discovering (Astra's question)
 
 - **SELECT** = fair coin at choices (made); **REVEAL** = hidden position drawn first (discovered).
