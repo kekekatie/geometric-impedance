@@ -49,6 +49,24 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🤐 More of the zip, or a faster zip? ([`front_activation/`](front_activation/)), pre-registered
+
+- Astra's question after `speed_of_now/`. 28 distinct situations, both futures grown up to 100 slices.
+- **A1 held (28/28):** the decided future (smaller piece) has more front active, median ~2.2×.
+- **A2 held (28/28):** active stretches fill at the same density (~0.72 tiles per edge) in both
+  futures.
+- **A3 failed, the opposite way:** the decided future moves *outward* more slowly. Its growth goes
+  sideways, along the now.
+- **A4 failed:** after both bursts end, the formerly fast future is a bit *quieter* for its size
+  (median ratio 0.76). It doesn't even out; it reverses slightly. A possible reading, untested: its
+  front is already settled.
+- **The picture (`front_activation/figures/zip.png`):** the decided option opens a **two-sided cone**
+  along the front (27/28 two-sided), while the other sends a **single thread** one way (12/28
+  two-sided). Its tips also seem to travel faster sideways (~0.35 vs 0.20 edges per slice, rough
+  ruler).
+- So: **mostly more of the zip** (both directions), with the growth going along the now rather than
+  out from it.
+
 ## ⏩ The speed of now ([`speed_of_now/`](speed_of_now/)), pre-registered (corrected per Astra 2026-10-12)
 
 - **A choice that decides more unlocks more forced growth.** At a two-way choice, the option keeping

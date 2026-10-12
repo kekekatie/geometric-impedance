@@ -1,0 +1,5 @@
+EXPLORATORY zip: 28 distinct situations, 40 slices each
+  smaller piece: zip extent growth during its burst, median 0.70 edges of arc per slice (IQR 0.55-0.81, n 28); extent after 20 slices median 14.9 edges; share of active edges within 1 edge of the old boundary 0.14
+  larger piece: zip extent growth during its burst, median 0.34 edges of arc per slice (IQR 0.28-0.39, n 28); extent after 20 slices median 9.3 edges; share of active edges within 1 edge of the old boundary 0.20
+  smaller piece: two-sided bursts (both tips >= 2 edges from the choice point) 27/28; single-tip speed median 0.35 edges per slice (IQR 0.25-0.44, n 55)
+  larger piece: two-sided bursts (both tips >= 2 edges from the choice point) 12/28; single-tip speed median 0.20 edges per slice (IQR 0.18-0.28, n 38)

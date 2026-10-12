@@ -4,7 +4,7 @@ For every distinct situation of front_activation.py, regrow both siblings for 40
 slice, WHERE along the front the active edges lie: the angle of each active edge's midpoint around the world's seed
 centre, relative to the choice point, converted to edges of arc at the base patch's mean radius. From that:
   * zip extent: the arc spanned so far by all active edges (furthest left to furthest right, in edges);
-  * tip speed: extent growth per slice over the matched slices;
+  * tip speed: extent growth per slice over the matched slices; and each side's tip separately (two-sided or one-sided);
   * outward distance of active edges from the base patch (are the decided future's new tiles mostly sideways?).
 Writes results/zip_EXPLORATORY.txt and figures/zip.png (kymograph of one pair)."""
 import os, math, cmath, random, json, collections
@@ -59,6 +59,7 @@ def main():
         R = p.map(trace, list(jobs.values()), chunksize=1)
     lines = [f"EXPLORATORY zip: {len(R)} distinct situations, {SLICES} slices each"]
     tipsp = {"sm": [], "lg": []}; side = {"sm": [], "lg": []}; ext20 = {"sm": [], "lg": []}
+    tips = {"sm": [], "lg": []}; twos = {"sm": [], "lg": []}
     for r in R:
         pcs = meta[r["key"]]; i = 0 if pcs[0] < pcs[1] else 1
         for nm, rows in (("sm", r["sibs"][i]), ("lg", r["sibs"][1 - i])):
@@ -70,6 +71,9 @@ def main():
             burst = next((k for k, x in enumerate(rows) if x["kind"] == "guess"), len(rows))
             if burst >= 3:
                 tipsp[nm].append(ext[burst - 1] / burst)
+                l = max([-a for x in rows[:burst] for a, _ in x["act"]] + [0]); h = max([a for x in rows[:burst] for a, _ in x["act"]] + [0])
+                twos[nm].append(min(l, h) >= 2.0)
+                tips[nm] += [v / burst for v in (l, h) if v >= 2.0]
             if len(ext) >= 20:
                 ext20[nm].append(ext[19])
             ds = [d for x in rows[:burst] for _, d in x["act"]]
@@ -79,6 +83,9 @@ def main():
         lines.append(f"  {lab}: zip extent growth during its burst, median {np.median(tipsp[nm]):.2f} edges of arc per slice "
                      f"(IQR {np.quantile(tipsp[nm], .25):.2f}-{np.quantile(tipsp[nm], .75):.2f}, n {len(tipsp[nm])}); extent after 20 slices median "
                      f"{np.median(ext20[nm]):.1f} edges; share of active edges within 1 edge of the old boundary {np.median(side[nm]):.2f}")
+    for nm, lab in (("sm", "smaller piece"), ("lg", "larger piece")):
+        lines.append(f"  {lab}: two-sided bursts (both tips >= 2 edges from the choice point) {sum(twos[nm])}/{len(twos[nm])}; "
+                     f"single-tip speed median {np.median(tips[nm]):.2f} edges per slice (IQR {np.quantile(tips[nm], .25):.2f}-{np.quantile(tips[nm], .75):.2f}, n {len(tips[nm])})")
     print("\n".join(lines))
     open(os.path.join(FA.RES, "zip_EXPLORATORY.txt"), "w").write("\n".join(lines) + "\n")
     # kymograph of the situation with the largest burst contrast among the first few
