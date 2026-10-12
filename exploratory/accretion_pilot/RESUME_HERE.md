@@ -1,5 +1,35 @@
 # 👋 Resume here — a note from past-us to future-us
 
+## 🌱 Guiding ideas (breadcrumbs for whoever comes looking)
+
+*Katie's bedrock, refined together on 2026-10-12.* The universe has to be made of something akin to
+memory to be perceived or tracked at all. To keep that open and fluid without letting the word stretch
+until it means everything, we keep **two layers, both held, and held distinct**:
+
+- **Difference** makes "many" possible. Stuff A ≠ stuff B, so there can be separate things, distance,
+  and not everything happening at once. (Bateson: information is "a difference that makes a
+  difference"; Leibniz: things identical in every respect would be one thing.)
+- **Memory** is a present that **carries a readable trace of its past**.
+
+In our tilings the two are visibly different:
+
+- **Twins:** places similar anywhere, unique when zoomed out. That is difference
+  (`penrose_address_environment/figures/twins.png`).
+- **Decided strips and golden digits:** the present holding a record of choices made. That is memory
+  (`fragility/`, `golden_digits/`).
+- A quasicrystal sits where **both** live: everything is *similar* to something, so there are kinds,
+  stuff and laws; nothing is *identical* to anything, so there are individuals, distance and time.
+
+The questions this gives us:
+
+- Where does a world keep its memories?
+- What does it forget? (A finished world forgets *how* it was made; only the path held that:
+  `who_made_it/`.)
+- How does difference become memory once something reads it?
+
+*"The way that can be named is not the way". But naming it badly, together, and checking it against
+little golden triangles, is a good way to walk around its edges.*
+
 ## 🧭 Where we are, at a glance (2026-10-03, after Astra's review)
 
 Three questions hold the whole programme:
