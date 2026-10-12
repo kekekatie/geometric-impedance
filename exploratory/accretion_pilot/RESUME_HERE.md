@@ -48,6 +48,22 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ⏩ The speed of now ([`speed_of_now/`](speed_of_now/)), pre-registered
+
+- **A choice that decides more lets the present run further.** At a two-way choice, the option keeping
+  the *smaller* piece of wiggle room sets off the longer burst of forced tiles in 60/67 cases (29/36
+  distinct). The trend runs across the shares: keeping 0.146 gives ~770 tiles; keeping 0.854 gives 24.
+- **It isn't only fewer pauses.** Even per forced slice, the decided future lays ~2× the tiles,
+  because its forced tiles spread along the whole front.
+- **It lasts at least 40 slices.** Both "evens out" predictions failed. Caveat: most fast futures were
+  still in their first burst when we stopped watching.
+- **Dead options rush (~200 tiles), then jam.** Their live sibling laid 4.
+- **Not a general "more pinned = faster" law:** across a world's history, shrinking F doesn't reliably
+  speed it up (exploratory). Guess, untested: Conway's *empire*. A rarer option forces more of its
+  surroundings, so the speed of now follows how *surprising* the choice was.
+- Next, if wanted: longer windows to see whether the speeds ever even out; measure the empire
+  directly.
+
 ## 👯 Twins, drawn (`penrose_address_environment/figures/twins.png`, exploratory)
 
 - Katie's "sames/similars" question, answered by our earlier address → environment work (`fibonacci_` /

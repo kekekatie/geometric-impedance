@@ -1,0 +1,4 @@
+EXPLORATORY pinned speed: 90 stretches of constant F in 24 worlds
+  across stretches: Spearman(F area, share of frontier laid per slice) = +0.310; Spearman(patch size, share) = -0.535; Spearman(F area, patch size) = -0.894
+  consecutive stretches where F shrank: share went up 25, down 41; (F unchanged: 0)
+  sibling bursts, same slices compared (36 distinct choices): smaller piece faster in 31, slower in 5; mean tiles per slice 14.4 vs 7.7

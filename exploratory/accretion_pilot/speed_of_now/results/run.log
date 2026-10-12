@@ -1,0 +1,15 @@
+worlds: statuses {'ok': 24}; choices 70; two-option with F > 0: 70; live 67; dead-optioned 3; live and unequal 67
+  bursts (live, smaller-piece sibling first): 395/108; 435/290; 862/298; 435/290; 862/298; 477/24; 373/110; 558/72; 816/60; 395/108; 849/186; 246/24; 848/108; 395/108; 435/290; 961/460; 435/290; 961/460; 395/108; 849/186; 1044/182; 395/108; 849/186; 1044/182; 435/290; 961/460; 395/108; 435/290; 862/298; 395/108; 849/186; 435/290; 862/298; 496/647; 770/24; 350/188; 737/186; 206/98; 435/290; 961/460; 206/98; 435/290; 862/298; 520/652; 397/108; 435/290; 862/298; 395/108; 435/290; 862/298; 547/660; 848/108; 368/378; 961/460; 395/108; 849/186; 1044/182; 618/661; 772/24; 350/188; 368/378; 545/635; 772/24; 206/98; 435/290; 961/460; 770/24
+  S1: HELD    smaller piece has the larger burst in 60/67 live unequal choices (need >= 70%)
+  S2: FAILED  Spearman(burst gap, late-rate gap, slices 21-40) = +0.718 over 67 (need within +-0.2)
+  S3: FAILED  total gap at slice 40 < half the burst gap in 25/67 (need >= 60%); (burst gap -> total gap): +287->+80, +145->+64, +564->+555, +145->+60, +564->+554, +453->+246, +263->+191, +486->+75, +756->+222, +287->+172, -663->-545, -222->-162, +740->+482, +287->+172, +145->+64, +501->+501, +145->+60, +501->+501, +287->+80, -663->-545, -862->-798, +287->+80, -663->-545, -862->-779, +145->+64, +501->+501, +287->+80, +145->+60, +564->+555, +287->+80, -663->-545, +145->+60, +564->+555, +151->+151, +746->+496, +162->+93, -551->-446, +108->-32, +145->+64, +501->+501, +108->-32, +145->+64, +564->+555, +132->+132, -289->-73, +145->+64, +564->+556, +287->+80, +145->+60, +564->+556, -113->-113, +740->+625, +10->-75, +501->+501, +287->+80, -663->-545, -862->-787, -43->-43, -748->-553, +162->+19, +10->-30, +90->+90, -748->-553, +108->+165, +145->+60, +501->+501, +746->+550
+  reported: burst by piece family -> (5-sqrt5)/10/large: n 2, median 48, range 24-72; (5-sqrt5)/10/small: n 2, median 402, range 246-558; 1/(2t)/large: n 2, median 386, range 110-661; 1/(2t)/small: n 2, median 496, range 373-618; 1/2/large: n 1, median 378, range 378-378; 1/2/small: n 3, median 368, range 368-378; 1/sqrt5/large: n 2, median 188, range 188-188; 1/sqrt5/small: n 2, median 350, range 350-350; 1/t^2/large: n 48, median 290, range 98-660; 1/t^2/small: n 48, median 435, range 206-961; 1/t^3/large: n 7, median 108, range 24-182; 1/t^3/small: n 7, median 848, range 477-1044; 1/t^4/large: n 4, median 24, range 24-24; 1/t^4/small: n 4, median 771, range 770-772
+  reported: burst slices smaller/larger piece medians 40/29; guesses in 40 slices smaller/larger piece 0.09/0.88
+  reported: Spearman(burst gap, total gap at 40) = +0.925
+  dead option (world 2, slice 16): dead sibling burst 207 status JAM after 13 slices; live sibling burst 4
+  dead option (world 13, slice 29): dead sibling burst 195 status JAM after 13 slices; live sibling burst 4
+  dead option (world 20, slice 26): dead sibling burst 195 status JAM after 13 slices; live sibling burst 4
+
+real	7m44.383s
+user	27m29.033s
+sys	0m4.219s
