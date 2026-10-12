@@ -1,0 +1,43 @@
+worlds: statuses {'ok': 23, 'JAM': 1}; two-way choices 55; skipped {'equal': 8, 'dead': 2}; live unequal 45; distinct situations 28
+  pairs with >= 3 matched slices: 28 of 28
+  A1: HELD    smaller piece has the larger mean active boundary in 28/28 (need >= 70%)
+  A2: HELD    activity per active length ratio within 0.8-1.25 in 28/28 (need >= 70%)
+  A3: FAILED  outward advance ratio within 0.8-1.25 in 2/28 (need >= 60%)
+  A4: FAILED  relaxation active-share ratio within 0.8-1.25 in 6/20 (need >= 60%); pairs not reaching a full window: 8 (jams 1); ratios [np.float64(0.21), np.float64(0.21), np.float64(0.36), np.float64(0.45), np.float64(0.51), np.float64(0.52), np.float64(0.71), np.float64(0.74), np.float64(0.74), np.float64(0.75), np.float64(0.77), np.float64(0.9), np.float64(0.91), np.float64(0.91), np.float64(0.93), np.float64(1.17), np.float64(1.19), np.float64(1.27), np.float64(1.42), np.float64(1.64)]
+  reported per pair (piece kept by smaller; matched slices m; active sm/lg; density sm/lg; outward advance sm/lg; active share sm/lg):
+    0.146  m   8  active 16.4/3.7  dens 0.75/0.84  adv 0.23/0.26  share 0.300/0.076
+    0.146  m   7  active 16.1/4.2  dens 0.74/0.82  adv 0.23/0.30  share 0.294/0.087
+    0.236  m  19  active 24.7/7.9  dens 0.71/0.74  adv 0.21/0.33  share 0.352/0.131
+    0.236  m  20  active 24.2/7.5  dens 0.72/0.75  adv 0.17/0.31  share 0.345/0.124
+    0.236  m  14  active 18.6/3.7  dens 0.74/0.81  adv 0.14/0.23  share 0.419/0.112
+    0.236  m  14  active 18.6/3.7  dens 0.74/0.81  adv 0.14/0.23  share 0.419/0.112
+    0.236  m  14  active 18.6/3.7  dens 0.74/0.81  adv 0.14/0.23  share 0.419/0.112
+    0.236  m  29  active 31.7/8.7  dens 0.71/0.74  adv 0.20/0.24  share 0.292/0.093
+    0.382  m  42  active 16.5/11.0  dens 0.72/0.74  adv 0.11/0.26  share 0.244/0.171
+    0.382  m  30  active 15.0/13.4  dens 0.72/0.75  adv 0.07/0.21  share 0.225/0.200
+    0.382  m  22  active 22.9/12.1  dens 0.71/0.69  adv 0.15/0.28  share 0.254/0.145
+    0.382  m  68  active 28.6/18.7  dens 0.70/0.72  adv 0.13/0.27  share 0.248/0.174
+    0.382  m  75  active 29.4/15.0  dens 0.70/0.72  adv 0.20/0.14  share 0.233/0.131
+    0.382  m  30  active 13.8/13.5  dens 0.74/0.75  adv 0.15/0.23  share 0.209/0.199
+    0.382  m  42  active 16.5/11.0  dens 0.72/0.74  adv 0.11/0.26  share 0.244/0.171
+    0.382  m  37  active 29.4/11.5  dens 0.71/0.74  adv 0.19/0.29  share 0.295/0.133
+    0.382  m  22  active 22.9/12.1  dens 0.71/0.69  adv 0.15/0.28  share 0.254/0.145
+    0.382  m  20  active 17.3/7.5  dens 0.72/0.75  adv 0.17/0.31  share 0.294/0.149
+    0.382  m  15  active 9.4/9.1  dens 0.73/0.72  adv 0.16/0.27  share 0.254/0.242
+    0.382  m  37  active 29.4/11.5  dens 0.71/0.74  adv 0.19/0.29  share 0.295/0.133
+    0.382  m  52  active 24.6/8.2  dens 0.71/0.74  adv 0.12/0.21  share 0.241/0.096
+    0.382  m  52  active 24.6/8.2  dens 0.71/0.74  adv 0.12/0.21  share 0.241/0.096
+    0.382  m  22  active 22.9/12.1  dens 0.71/0.69  adv 0.15/0.28  share 0.254/0.145
+    0.382  m  30  active 13.8/13.5  dens 0.74/0.75  adv 0.15/0.23  share 0.209/0.199
+    0.382  m  30  active 13.8/13.5  dens 0.74/0.75  adv 0.15/0.23  share 0.209/0.199
+    0.382  m  52  active 24.6/8.2  dens 0.71/0.74  adv 0.12/0.21  share 0.241/0.096
+    0.382  m  60  active 25.6/18.7  dens 0.71/0.72  adv 0.13/0.18  share 0.218/0.164
+    0.447  m  26  active 12.7/10.3  dens 0.72/0.70  adv 0.12/0.24  share 0.196/0.166
+  reported: bursts (smaller/larger piece; None = never ended by slice 100): 1370/108 (83/20); 1686/894 (None/68); 398/108 (42/20); 1080/186 (67/22); 1080/298 (79/52); 588/290 (62/30); 1080/298 (68/37); 588/290 (62/30); 1586/782 (90/75); 1478/24 (85/7); 370/188 (48/26); 1080/298 (79/52); 1080/298 (79/52); 624/326 (62/42); 1080/186 (67/22); 2691/182 (None/29); 1478/24 (86/8); 1370/108 (82/19); 496/38 (46/14); 588/290 (62/30); 1080/298 (68/37); 496/38 (46/14); 624/326 (62/42); 1080/186 (67/22); 206/98 (31/15); 588/290 (60/30); 1575/782 (None/60); 496/38 (46/14)
+  check: the smaller piece measured after the first slice is also smaller at burst end in 28/28 situations
+  reported: S1 replication (smaller piece has the larger burst): 28/28
+  reported per choice (not per situation): A1 holds in 45/45 choices with matched slices
+
+real	8m41.813s
+user	29m59.223s
+sys	0m2.549s
