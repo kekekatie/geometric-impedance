@@ -66,6 +66,13 @@ rolled away.)*
   ruler).
 - So: **mostly more of the zip** (both directions), with the growth going along the now rather than
   out from it.
+- **Argon's keystone idea (exploratory):** the decided option starts on both shoulders by slice 1 in
+  18/28 situations, against 11/28 for the other option. That is a lean, not a lock: part of the
+  two-sided zip is decided later.
+- **Ammann bars / worms ↔ cut lines:** a choice cutting F along a straight line should fix the track
+  of one ribbon (Conway worm) family. That is the "decided ribbon along the now" from
+  `thread_influence/`. Katie's guardrail stands: nothing outruns the front (`speed_of_light/` Z1); the
+  track is laid one local click per slice.
 
 ## ⏩ The speed of now ([`speed_of_now/`](speed_of_now/)), pre-registered (corrected per Astra 2026-10-12)
 
