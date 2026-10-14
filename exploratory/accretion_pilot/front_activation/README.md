@@ -78,6 +78,29 @@ across all 28 situations:
   given spot. It opens the zip **both ways**, and the zip then runs sideways along the present. A choice
   that decides less opens a thin thread going one way, which soon needs another choice.
 
+## Argon's "keystone" check (exploratory, 2026-10-14)
+
+Katie relayed an idea from Argon (Gemini): the decided option acts like a keystone, forcing tiles on
+**both shoulders** right at slice 1 and lighting two fuses at once. The other option forces only one
+side.
+
+[`shoulders_EXPLORATORY.py`](shoulders_EXPLORATORY.py)
+([`results/shoulders_EXPLORATORY.txt`](results/shoulders_EXPLORATORY.txt)) counts new tiles left and
+right of the choice tile in the first 5 slices:
+
+| | new tiles on both sides by slice 1 | by slice 3 |
+|---|---|---|
+| smaller-piece (decided) option | 18 / 28 | 22 / 28 |
+| larger-piece option | 11 / 28 | 17 / 28 |
+
+- **A lean, not a lock.** The decided option more often starts on both shoulders. But in several
+  situations it starts one-sided, and for its first slices it even grows *less* than its sibling. It
+  still ends up with the two-sided, bigger burst (27/28 overall).
+- So the shoulders matter, but the two-sided zip isn't fully settled at slice 1. Part of it is decided
+  further along.
+- In many pairs, one option's opening looks like the mirror image of the other option's opening in a
+  different situation.
+
 ## Limits
 
 - 28 distinct situations, ordinary worlds, one scheduler. Several situations have identical numbers,
