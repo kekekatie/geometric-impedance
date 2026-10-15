@@ -1,0 +1,42 @@
+EXPLORATORY follow-a-pattern: world wedge 192, seed 20261200; pattern chosen after 600 added tiles at frontier vertex 37.21+6.85j edges from origin (2.5 deg from the 0-degree ray of the seed centre); 1 tiles; vertex shape (((1, 'A', True),), 1.884956)
+  slice  1 (forced): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 15 outside
+  slice  2 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 14 outside
+  slice  3 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 14 outside
+  slice  4 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 15 outside
+  slice  5 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 15 outside
+  slice  6 (forced): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 16 outside
+  slice  7 (guess ): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 16 outside
+  slice  8 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 16 outside
+  slice  9 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 10 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 11 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 12 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 13 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 14 (forced): PAUSED no new descendants (5 placed elsewhere); lookalikes 0 in / 16 outside
+  slice 15 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 16 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 17 (forced): PAUSED no new descendants (5 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 18 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 19 (forced): PAUSED no new descendants (9 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 20 (forced): PAUSED no new descendants (9 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 21 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 22 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 23 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 24 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 16 outside
+  slice 25 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 26 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 13 outside
+  slice 27 (forced): PAUSED no new descendants (10 placed elsewhere); lookalikes 0 in / 13 outside
+  slice 28 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 29 (forced): PAUSED no new descendants (14 placed elsewhere); lookalikes 0 in / 13 outside
+  slice 30 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 16 outside
+  slice 31 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 32 (forced): PAUSED no new descendants (12 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 33 (forced): PAUSED no new descendants (10 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 34 (forced): PAUSED no new descendants (12 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 35 (forced): PAUSED no new descendants (14 placed elsewhere); lookalikes 0 in / 13 outside
+  slice 36 (forced): PAUSED no new descendants (14 placed elsewhere); lookalikes 0 in / 15 outside
+  slice 37 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 14 outside
+  slice 38 (forced): ACTIVE new descendants   2 of  12 placed; mean strength 0.20; spread  0.51 edges; centre  1.71 edges from the pattern; lookalikes 0 in lineage / 15 outside
+  slice 39 (forced): ACTIVE new descendants   5 of  13 placed; mean strength 0.45; spread  0.97 edges; centre  1.89 edges from the pattern; lookalikes 0 in lineage / 16 outside
+  slice 40 (forced): ACTIVE new descendants   6 of  13 placed; mean strength 0.60; spread  1.69 edges; centre  2.23 edges from the pattern; lookalikes 0 in lineage / 16 outside
+  ENDED after 40 slices: lineage 13 descendants; strength median 0.50; share with strength 1 (built only from the lineage) 0.15

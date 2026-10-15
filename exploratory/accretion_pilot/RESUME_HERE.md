@@ -49,6 +49,24 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🔭 Following one pattern ([`follow_a_pattern/`](follow_a_pattern/)), exploratory (Astra's step 1, 2026-10-15)
+
+- **Question:** can we follow one thing through new construction without swapping it for a
+  lookalike?
+- **Rules:** parents = all tiles sharing a corner at placement (a joint set); descendants = anything
+  with a lineage parent.
+- **Run A** (a single protruding tile): paused 37 of 40 slices. A pause is not a death.
+- **Run B** (6-tile corner, 120 slices): paused for 35 slices, then grew into a **domain**: 357
+  descendants, 71% built only from the lineage.
+  - It is a widening sector, with a thin **seam** of jointly built tiles where it meets unrelated
+    growth.
+  - Its newest edge stays compact (~2.5 edges) and drifts ~28 edges along the front.
+  - Lookalikes appear both outside and inside it.
+- **Answer for this example:** influence spreads into a domain; no travelling knot. Maybe "stuff" =
+  domains and seams.
+- **Next per Astra:** step 2, the two-choice compatibility table F_ab (cuts at a distance), then more
+  examples or seams.
+
 ## 🧵 NEXT, waiting: how do threads of consequence interact? (Katie's "sames and similars" + Argon, 2026-10-15)
 
 *Katie's meditation idea (sames and similars, close and far) meets Argon's reading of `cut_direction/`:

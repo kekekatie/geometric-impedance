@@ -1,0 +1,122 @@
+EXPLORATORY follow-a-pattern (variant B): world wedge 192, seed 20261200; pattern chosen after 600 added tiles at frontier vertex 36.62+6.05j edges from origin (4.4 deg from the 0-degree ray of the seed centre); 6 tiles; vertex shape (((1, 'C', False), (1, 'C', False), (1, 'C', False), (1, 'C', True), (1, 'C', True), (1, 'C', True)), 3.769911)
+  slice  1 (forced): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  2 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  3 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  4 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  5 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  6 (forced): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 7 outside
+  slice  7 (guess ): PAUSED no new descendants (1 placed elsewhere); lookalikes 0 in / 7 outside
+  slice  8 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 6 outside
+  slice  9 (forced): PAUSED no new descendants (2 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 10 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 11 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 12 (forced): PAUSED no new descendants (3 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 13 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 14 (forced): PAUSED no new descendants (5 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 15 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 16 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 17 (forced): PAUSED no new descendants (5 placed elsewhere); lookalikes 0 in / 6 outside
+  slice 18 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 19 (forced): PAUSED no new descendants (9 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 20 (forced): PAUSED no new descendants (9 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 21 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 22 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 23 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 24 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 25 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 26 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 27 (forced): PAUSED no new descendants (10 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 28 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 29 (forced): PAUSED no new descendants (14 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 30 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 31 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 32 (forced): PAUSED no new descendants (12 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 33 (forced): PAUSED no new descendants (10 placed elsewhere); lookalikes 0 in / 5 outside
+  slice 34 (forced): PAUSED no new descendants (12 placed elsewhere); lookalikes 0 in / 4 outside
+  slice 35 (forced): PAUSED no new descendants (14 placed elsewhere); lookalikes 0 in / 4 outside
+  slice 36 (forced): ACTIVE new descendants   1 of  14 placed; mean strength 0.25; spread  0.00 edges; centre  2.23 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 37 (forced): ACTIVE new descendants   2 of  13 placed; mean strength 0.44; spread  0.42 edges; centre  1.70 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 38 (forced): ACTIVE new descendants   5 of  12 placed; mean strength 0.74; spread  1.10 edges; centre  1.85 edges from the pattern; lookalikes 0 in lineage / 6 outside
+  slice 39 (forced): ACTIVE new descendants   7 of  13 placed; mean strength 0.85; spread  1.55 edges; centre  1.72 edges from the pattern; lookalikes 0 in lineage / 7 outside
+  slice 40 (forced): ACTIVE new descendants   8 of  13 placed; mean strength 0.77; spread  2.26 edges; centre  2.08 edges from the pattern; lookalikes 0 in lineage / 7 outside
+  slice 41 (forced): ACTIVE new descendants  11 of  21 placed; mean strength 0.79; spread  2.80 edges; centre  2.16 edges from the pattern; lookalikes 1 in lineage / 6 outside
+  slice 42 (forced): ACTIVE new descendants   8 of  21 placed; mean strength 0.90; spread  2.93 edges; centre  2.49 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 43 (forced): ACTIVE new descendants   9 of  20 placed; mean strength 0.88; spread  3.16 edges; centre  3.41 edges from the pattern; lookalikes 0 in lineage / 6 outside
+  slice 44 (forced): ACTIVE new descendants   9 of  19 placed; mean strength 0.92; spread  2.51 edges; centre  4.46 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 45 (forced): ACTIVE new descendants  11 of  22 placed; mean strength 0.91; spread  3.29 edges; centre  4.39 edges from the pattern; lookalikes 0 in lineage / 6 outside
+  slice 46 (forced): ACTIVE new descendants   7 of  12 placed; mean strength 0.79; spread  2.16 edges; centre  6.58 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 47 (forced): ACTIVE new descendants   9 of  12 placed; mean strength 0.80; spread  2.49 edges; centre  7.13 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 48 (forced): ACTIVE new descendants   8 of  12 placed; mean strength 0.88; spread  2.57 edges; centre  7.80 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 49 (forced): ACTIVE new descendants   8 of  11 placed; mean strength 0.96; spread  2.51 edges; centre  7.43 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 50 (forced): ACTIVE new descendants   9 of  12 placed; mean strength 0.97; spread  2.70 edges; centre  7.49 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 51 (forced): ACTIVE new descendants   9 of  13 placed; mean strength 1.00; spread  3.10 edges; centre  6.88 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 52 (forced): ACTIVE new descendants   6 of  11 placed; mean strength 0.95; spread  4.06 edges; centre  6.98 edges from the pattern; lookalikes 0 in lineage / 5 outside
+  slice 53 (forced): ACTIVE new descendants   6 of  10 placed; mean strength 0.92; spread  4.91 edges; centre  6.42 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 54 (forced): ACTIVE new descendants   7 of  11 placed; mean strength 0.76; spread  5.81 edges; centre  5.99 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 55 (forced): ACTIVE new descendants   9 of  13 placed; mean strength 0.89; spread  6.28 edges; centre  6.24 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 56 (forced): ACTIVE new descendants   5 of   9 placed; mean strength 0.85; spread  6.91 edges; centre  5.58 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 57 (forced): ACTIVE new descendants   4 of   8 placed; mean strength 0.68; spread  6.46 edges; centre 10.04 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 58 (forced): ACTIVE new descendants   4 of   6 placed; mean strength 0.78; spread  7.95 edges; centre  7.35 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 59 (forced): ACTIVE new descendants   7 of   7 placed; mean strength 0.74; spread  8.23 edges; centre  8.69 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 60 (forced): ACTIVE new descendants   5 of   5 placed; mean strength 0.87; spread  8.19 edges; centre  7.17 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 61 (forced): ACTIVE new descendants   4 of   4 placed; mean strength 0.88; spread  9.22 edges; centre  8.42 edges from the pattern; lookalikes 1 in lineage / 5 outside
+  slice 62 (forced): ACTIVE new descendants   1 of   1 placed; mean strength 1.00; spread  0.00 edges; centre  6.63 edges from the pattern; lookalikes 2 in lineage / 5 outside
+  slice 63 (guess ): PAUSED no new descendants (1 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 64 (forced): PAUSED no new descendants (4 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 65 (forced): PAUSED no new descendants (6 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 66 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 67 (forced): PAUSED no new descendants (10 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 68 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 69 (forced): PAUSED no new descendants (13 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 70 (forced): PAUSED no new descendants (15 placed elsewhere); lookalikes 2 in / 6 outside
+  slice 71 (forced): PAUSED no new descendants (18 placed elsewhere); lookalikes 2 in / 7 outside
+  slice 72 (forced): PAUSED no new descendants (16 placed elsewhere); lookalikes 2 in / 6 outside
+  slice 73 (forced): PAUSED no new descendants (17 placed elsewhere); lookalikes 2 in / 6 outside
+  slice 74 (forced): PAUSED no new descendants (18 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 75 (forced): PAUSED no new descendants (18 placed elsewhere); lookalikes 2 in / 3 outside
+  slice 76 (forced): PAUSED no new descendants (21 placed elsewhere); lookalikes 2 in / 4 outside
+  slice 77 (forced): PAUSED no new descendants (25 placed elsewhere); lookalikes 2 in / 4 outside
+  slice 78 (forced): PAUSED no new descendants (23 placed elsewhere); lookalikes 2 in / 3 outside
+  slice 79 (forced): PAUSED no new descendants (20 placed elsewhere); lookalikes 2 in / 3 outside
+  slice 80 (forced): PAUSED no new descendants (24 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 81 (forced): PAUSED no new descendants (24 placed elsewhere); lookalikes 2 in / 6 outside
+  slice 82 (forced): PAUSED no new descendants (31 placed elsewhere); lookalikes 2 in / 4 outside
+  slice 83 (forced): PAUSED no new descendants (39 placed elsewhere); lookalikes 2 in / 3 outside
+  slice 84 (forced): PAUSED no new descendants (42 placed elsewhere); lookalikes 2 in / 4 outside
+  slice 85 (forced): PAUSED no new descendants (43 placed elsewhere); lookalikes 2 in / 5 outside
+  slice 86 (forced): ACTIVE new descendants   1 of  45 placed; mean strength 0.22; spread  0.00 edges; centre 17.18 edges from the pattern; lookalikes 2 in lineage / 3 outside
+  slice 87 (forced): ACTIVE new descendants   2 of  42 placed; mean strength 0.42; spread  0.49 edges; centre 17.29 edges from the pattern; lookalikes 2 in lineage / 4 outside
+  slice 88 (forced): ACTIVE new descendants   2 of  32 placed; mean strength 0.71; spread  0.69 edges; centre 17.67 edges from the pattern; lookalikes 2 in lineage / 5 outside
+  slice 89 (forced): ACTIVE new descendants   1 of  30 placed; mean strength 0.62; spread  0.00 edges; centre 18.32 edges from the pattern; lookalikes 2 in lineage / 6 outside
+  slice 90 (forced): ACTIVE new descendants   2 of  25 placed; mean strength 0.70; spread  0.42 edges; centre 18.73 edges from the pattern; lookalikes 2 in lineage / 6 outside
+  slice 91 (forced): ACTIVE new descendants   3 of  28 placed; mean strength 0.64; spread  0.87 edges; centre 19.07 edges from the pattern; lookalikes 2 in lineage / 6 outside
+  slice 92 (forced): ACTIVE new descendants   3 of  28 placed; mean strength 0.59; spread  0.56 edges; centre 19.62 edges from the pattern; lookalikes 2 in lineage / 5 outside
+  slice 93 (forced): ACTIVE new descendants   4 of  23 placed; mean strength 0.75; spread  0.90 edges; centre 20.23 edges from the pattern; lookalikes 2 in lineage / 6 outside
+  slice 94 (forced): ACTIVE new descendants   5 of  25 placed; mean strength 0.74; spread  1.09 edges; centre 20.59 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 95 (forced): ACTIVE new descendants   3 of  22 placed; mean strength 0.56; spread  1.14 edges; centre 21.28 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 96 (forced): ACTIVE new descendants   4 of  21 placed; mean strength 0.58; spread  1.27 edges; centre 21.77 edges from the pattern; lookalikes 4 in lineage / 7 outside
+  slice 97 (forced): ACTIVE new descendants   3 of  16 placed; mean strength 0.50; spread  0.87 edges; centre 22.51 edges from the pattern; lookalikes 4 in lineage / 7 outside
+  slice 98 (forced): ACTIVE new descendants   5 of  17 placed; mean strength 0.75; spread  1.25 edges; centre 22.75 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 99 (forced): ACTIVE new descendants   8 of  16 placed; mean strength 0.87; spread  1.64 edges; centre 23.11 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 100 (forced): ACTIVE new descendants   8 of  17 placed; mean strength 0.84; spread  2.23 edges; centre 23.47 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 101 (forced): ACTIVE new descendants   8 of  16 placed; mean strength 0.87; spread  2.77 edges; centre 23.54 edges from the pattern; lookalikes 4 in lineage / 7 outside
+  slice 102 (forced): ACTIVE new descendants   8 of  16 placed; mean strength 0.85; spread  2.72 edges; centre 24.42 edges from the pattern; lookalikes 4 in lineage / 6 outside
+  slice 103 (forced): ACTIVE new descendants   7 of  14 placed; mean strength 0.86; spread  2.99 edges; centre 25.10 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 104 (forced): ACTIVE new descendants   7 of  14 placed; mean strength 0.82; spread  2.48 edges; centre 26.01 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 105 (forced): ACTIVE new descendants   8 of  16 placed; mean strength 0.84; spread  3.29 edges; centre 25.73 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 106 (forced): ACTIVE new descendants   7 of  13 placed; mean strength 0.75; spread  2.41 edges; centre 27.09 edges from the pattern; lookalikes 4 in lineage / 6 outside
+  slice 107 (forced): ACTIVE new descendants   9 of  14 placed; mean strength 0.75; spread  3.08 edges; centre 27.47 edges from the pattern; lookalikes 4 in lineage / 7 outside
+  slice 108 (forced): ACTIVE new descendants  11 of  16 placed; mean strength 0.96; spread  2.68 edges; centre 27.20 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 109 (forced): ACTIVE new descendants  13 of  17 placed; mean strength 0.98; spread  2.95 edges; centre 27.53 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 110 (forced): ACTIVE new descendants   9 of  13 placed; mean strength 0.95; spread  3.01 edges; centre 27.77 edges from the pattern; lookalikes 4 in lineage / 7 outside
+  slice 111 (forced): ACTIVE new descendants   9 of  14 placed; mean strength 0.95; spread  2.52 edges; centre 28.85 edges from the pattern; lookalikes 3 in lineage / 7 outside
+  slice 112 (forced): ACTIVE new descendants   8 of  15 placed; mean strength 1.00; spread  2.61 edges; centre 28.88 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 113 (forced): ACTIVE new descendants   5 of  14 placed; mean strength 1.00; spread  2.40 edges; centre 27.89 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 114 (forced): ACTIVE new descendants   5 of  14 placed; mean strength 1.00; spread  1.07 edges; centre 27.99 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 115 (forced): ACTIVE new descendants   5 of  12 placed; mean strength 1.00; spread  1.08 edges; centre 28.48 edges from the pattern; lookalikes 3 in lineage / 6 outside
+  slice 116 (forced): ACTIVE new descendants   3 of   9 placed; mean strength 1.00; spread  0.82 edges; centre 28.39 edges from the pattern; lookalikes 4 in lineage / 6 outside
+  slice 117 (forced): ACTIVE new descendants   1 of   7 placed; mean strength 1.00; spread  0.00 edges; centre 28.92 edges from the pattern; lookalikes 4 in lineage / 6 outside
+  slice 118 (forced): ACTIVE new descendants   1 of   7 placed; mean strength 1.00; spread  0.00 edges; centre 29.27 edges from the pattern; lookalikes 5 in lineage / 6 outside
+  slice 119 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 5 in / 6 outside
+  slice 120 (forced): PAUSED no new descendants (7 placed elsewhere); lookalikes 5 in / 6 outside
+  ENDED after 120 slices: lineage 357 descendants; strength median 1.00; share with strength 1 (built only from the lineage) 0.71
