@@ -68,6 +68,14 @@ its distance from the choice point.*
 - **This connects Argon's Ammann-bar picture to our data,** with Katie's correction built in. The
   "string" is laid one click per slice, inside the world, along the now.
 
+## The derivation
+
+[`DERIVATION.md`](DERIVATION.md) sketches why the rule holds: ribbons run across their edges,
+the lift-to-window map doubles angles, the window's facets face only five directions, and a choice
+about a family-*j* ribbon cuts along that family's window direction. The last step is observed in
+45/45 situations and argued from de Bruijn's picture, but not yet proven. Numerical checks:
+[`derivation_check_EXPLORATORY.py`](derivation_check_EXPLORATORY.py).
+
 ## Limits
 
 - 45 distinct situations; the 54° and 162° directions are rare (1 and 3 situations).
