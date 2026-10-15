@@ -49,6 +49,19 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🔒 Predicted, or settled? ([`settled_test/`](settled_test/)), pre-registered (Astra's three steps)
+
+- **P1 held, 45/45:** the forced burst alone, with no later choices, carries the cut's predicted
+  family.
+- **P2 held, 90/90:** one connected chain holds about two-thirds of the change.
+- **P3 held, 44/45:** the family is the same across 5 different continuations.
+- **P4 failed, nearly vacuous (2 situations):** tiles built after a *later* guess often differ.
+- **Settled for real:** a forced tile is the only one that fits, so it's in every completion. The
+  burst (usually all 40 slices) is what the first choice settles. Its reach ends where the next
+  choice begins.
+- Later guesses were rare in 20 slices (380/450 continuations made none), so `cut_direction/`'s strips
+  were mostly forced-only anyway.
+
 ## 🧭 Cut direction ([`cut_direction/`](cut_direction/)), pre-registered (corrected per Astra 2026-10-15)
 
 - Grew from Katie and Argon's Ammann-bar picture plus Katie's rule that nothing outruns the now. C1–C4

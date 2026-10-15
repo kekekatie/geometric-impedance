@@ -1,0 +1,15 @@
+worlds: statuses {'JAM': 3, 'ok': 21}; skipped {'not live': 6}; choices used 65; distinct situations 45; tested (>= 6 changed tiles in the initial bursts) 45
+  initial burst statuses {'stalled': 24, 'cap': 66}
+  P1: HELD    initial-burst dominant family = predicted family in 45/45 (need >= 90%)
+  P2: HELD    core chain covers >= 50% of a side's changed tiles in 90/90 situation-sides (need >= 60%); core shares median 0.67 (IQR 0.66-0.69)
+  P3: HELD    slice-20 dominant family identical across all 5 continuation pairs in 44/45 (need >= 90%); and equal to the predicted family in all 5: 44/45
+  P4: FAILED  core tiles built after the first guess identical across continuations of the same option (worst pair >= 99%) in 1/2 situations with such tiles (need >= 80%); pooled 44/92; situations without such tiles: 43
+  control (non-core changed tiles built after the first guess): worst pair >= 99% in 0/14; pooled 1208/2242
+  reported: guesses per continuation in 20 slices: {0: 380, 1: 70} (mean 0.16)
+  reported: cut read from the choice tile alone found in 14/45; same direction as after the first slice in 14/14
+  reported: slice-20 core share median 0.67; non-core changed tiles by family (counts, a tile can have two) [2806, 4260, 2771, 3639, 3464]
+  reported: P1 among all situations incl. small ones 45/45
+
+real	10m7.445s
+user	36m28.617s
+sys	0m3.701s
