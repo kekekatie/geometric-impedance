@@ -49,28 +49,27 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
-## 🧭 Settled vs built ([`cut_direction/`](cut_direction/)), pre-registered: the cut's direction names the ribbon
+## 🧭 Cut direction ([`cut_direction/`](cut_direction/)), pre-registered (corrected per Astra 2026-10-15)
 
 - Grew from Katie and Argon's Ammann-bar picture plus Katie's rule that nothing outruns the now. C1–C4
   all held.
-- **Each choice decides mainly one ribbon family** (44/45).
-- **The direction of the cut in the wiggle room predicts that family** in held-out worlds (17/17;
-  chance ~20%).
-  - With corrected bins, the five cut directions (18°, 54°, 90°, 126°, 162°) go one-to-one with the
-    five families, in 45/45 situations.
-  - *My registered bins were off by 18°*; this is reported in the README.
-- **Strip direction = 108° − 2 × cut direction** for every elongated strip (within 2.6°). The −2
-  hints at the star map that doubles angles. A derivation is the next step.
-- **Settled at once, built at ~0.9 edges per slice** outward from the choice point. That matches
-  `speed_of_light/`'s limit.
-- The window knows instantly; the world builds it one click at a time. Determined ≠ built.
+- **The window's cut direction predicts the dominant edge family of the changed strip.**
+  - Held-out: 17/17. Baseline: always-family-0 would score 11/17, and only three families appear in
+    the test.
+  - Corrected bins, all 45 cases: five directions ↔ five families, one-to-one. *My registered bins
+    were off by 18°.*
+- **Strip direction = 108° − 2 × cut direction** for every elongated strip (within 2.6°). The −2 is the
+  window map's angle-doubling (`DERIVATION.md`: arithmetic exact, some steps observed).
+- **Astra's corrections:**
+  - a dominant *family* is not one traced *ribbon* (~2/3 share);
+  - "predicts", not yet "settles": later guesses in the 20 slices were uncontrolled;
+  - the 0.9 edges per slice is a pooled placement-time fit, not a speed limit;
+  - "perpendicular by construction" is too strong for finite strips.
+- **Next (Astra's three small steps):**
+  1. stop each sibling before its next guess;
+  2. trace connected ribbons;
+  3. grow alternative continuations within each branch, to see whether the strip is *settled*.
 - Picture: `cut_direction/figures/cut_direction.png`.
-- **Derivation sketch (2026-10-15, `cut_direction/DERIVATION.md`):** the rule = ribbons run across
-  their edges + the window map doubles angles (family j → ζ^(2j)) + facets face only those five
-  directions + **[observed 45/45, argued, not proven]** a choice about family j cuts along ζ^(2j).
-- **Missing for a proof:** do a choice's two options always differ by one ribbon's track?
-- **🛬 LANDING SPOT:** `cut_direction/SUMMARY_FOR_ASTRA.md` is ready for Katie to send. Next: Astra's
-  review of it, then (optionally) close step 4.
 
 ## 🤐 More of the zip, or a faster zip? ([`front_activation/`](front_activation/)), pre-registered
 
