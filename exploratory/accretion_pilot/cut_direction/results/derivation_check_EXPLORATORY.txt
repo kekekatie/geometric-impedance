@@ -1,0 +1,4 @@
+EXPLORATORY derivation checks
+  (a) facet-normal line directions across the 4 pentagons: [0.0, 36.0, 72.0, 108.0, 144.0]; zeta^(2j) line directions: [0, 36, 72, 108, 144]; same set: True
+  (b) cut normal vs zeta^(2j) of the decided family: max deviation 0.000000 deg over 45 situations
+  (c) 108 + 72 j vs 108 - 2 x cut: max difference 0.000000 deg (identity given (b)); vs measured strip axis: max 2.59 deg over 41 elongated strips

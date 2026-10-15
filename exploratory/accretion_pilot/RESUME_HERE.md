@@ -65,6 +65,12 @@ rolled away.)*
   `speed_of_light/`'s limit.
 - The window knows instantly; the world builds it one click at a time. Determined ≠ built.
 - Picture: `cut_direction/figures/cut_direction.png`.
+- **Derivation sketch (2026-10-15, `cut_direction/DERIVATION.md`):** the rule = ribbons run across
+  their edges + the window map doubles angles (family j → ζ^(2j)) + facets face only those five
+  directions + **[observed 45/45, argued, not proven]** a choice about family j cuts along ζ^(2j).
+- **Missing for a proof:** do a choice's two options always differ by one ribbon's track?
+- **🛬 LANDING SPOT:** `cut_direction/SUMMARY_FOR_ASTRA.md` is ready for Katie to send. Next: Astra's
+  review of it, then (optionally) close step 4.
 
 ## 🤐 More of the zip, or a faster zip? ([`front_activation/`](front_activation/)), pre-registered
 
