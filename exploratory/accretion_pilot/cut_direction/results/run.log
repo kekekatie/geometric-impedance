@@ -1,0 +1,16 @@
+worlds: statuses {'ok': 23, 'JAM': 1}; skipped {'not live': 2}; choices used 67; distinct situations 45; with a non-empty strip 45; cut directions {72: 22, 36: 1, 144: 11, 0: 11}
+  C1: HELD    decided family beats the next by >= 0.15 in 44/45 (need >= 70%); top shares median 0.67, gaps median 0.26
+      training: cut direction   0 deg -> families {2: 8}
+      training: cut direction  36 deg -> families {1: 1}
+      training: cut direction  72 deg -> families {0: 11}
+      training: cut direction 144 deg -> families {4: 5, 3: 3}
+      lookup table (fixed from training): {0: 2, 36: 1, 72: 0, 144: 4}
+  C2: HELD    table predicts the decided family in 17/17 test situations (need >= 80%); test situations with an unseen direction: 0
+  C3: HELD    table is one-to-one: 4 directions -> 4 distinct families
+  C4: HELD    long axis within 20 deg of perpendicular to the family's edges in 41/41 elongated strips (need >= 70%); angles [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 3]
+  reported (settled vs built): median slice at which strip tiles were built, by distance from the choice point along the strip: 0-2 edges: 2 (n 1100); 2-4 edges: 5 (n 887); 4-6 edges: 7 (n 633); 6-8 edges: 9 (n 518); 8-12 edges: 13 (n 797); 12-20 edges: 18 (n 396)
+  reported: all situations (train and test) agreeing with the table: 42/45; strip sizes median 84; empty strips 0
+
+real	3m41.678s
+user	12m14.290s
+sys	0m2.170s
