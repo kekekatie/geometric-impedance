@@ -15,7 +15,11 @@ Rules, fixed before running:
   * Followed for 40 slices. Per slice: new descendants, their mean strength, their spread (rms distance from their own
     centre), how far their centre sits from the pattern, and the lookalikes (inside vs outside the lineage).
   * Labels per slice: ACTIVE (new descendants), PAUSED (none this slice, but growth elsewhere), ENDED (run over).
-Writes results/follow_EXPLORATORY.txt, figures/follow.gif and figures/follow_frames.png."""
+Writes results/follow_EXPLORATORY.txt, figures/follow.gif and figures/follow_frames.png.
+
+VARIANT B (added after run A picked a single protruding tile that then sat idle for 37 slices; rule fixed before
+running B): set VARIANT=B. The pattern vertex must have >= 3 tiles meeting at it (a compact cluster), still the one
+closest to the 0-degree ray; followed for 120 slices. Outputs get the suffix _B."""
 import os, sys, math, cmath, random, collections
 import numpy as np
 import matplotlib
@@ -28,7 +32,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "speed_of_now"))
 import speed_of_now as SN
 L, D, S = SN.L, SN.D, SN.S
-WEDGE, SEED, PRE, SLICES = 192, 20261200, 600, 40
+WEDGE, SEED, PRE = 192, 20261200, 600
+VARIANT = os.environ.get("VARIANT", "A")
+SLICES, MIN_TILES, SUF = (120, 3, "_B") if VARIANT == "B" else (40, 1, "")
 BG, INK, MUTED, GOLD, STRONG, WEAK, OTHER, OLD = "#07080d", "#ece8dc", "#8f8b80", "#f2b84b", "#ff7a45", "#7fb3ff", "#3a3f55", "#1b1d27"
 cen = lambda t: sum(t[1:]) / 3
 
@@ -88,10 +94,10 @@ def main():
     # pick the pattern
     fverts = {L.key(z) for e in T.P.frontier() for z in e[:2]}
     ang = lambda k: abs(((math.degrees(cmath.phase(complex(*k) - c0)) + 180) % 360) - 180)
-    kp = min(fverts, key=lambda k: (round(ang(k), 6), abs(complex(*k) - c0)))
+    kp = min((k for k in fverts if len(T.vt[k]) >= MIN_TILES), key=lambda k: (round(ang(k), 6), abs(complex(*k) - c0)))
     pattern = {D.dkey(t) for t in T.vt[kp]}; pshape = shape(T.P.V, kp); zp = complex(*kp)
     settled = list(T.P.tris); lineage = set(pattern); strength = {k: 1.0 for k in pattern}
-    frames = []; lines = [f"EXPLORATORY follow-a-pattern: world wedge {WEDGE}, seed {SEED}; pattern chosen after {PRE} added tiles at frontier vertex "
+    frames = []; lines = [f"EXPLORATORY follow-a-pattern (variant {VARIANT}): world wedge {WEDGE}, seed {SEED}; pattern chosen after {PRE} added tiles at frontier vertex "
                           f"{zp / S:.2f} edges from origin ({ang(kp):.1f} deg from the 0-degree ray of the seed centre); {len(pattern)} tiles; vertex shape {pshape}"]
     for s in range(1, SLICES + 1):
         out, kind = step(T, rng)
@@ -121,7 +127,7 @@ def main():
                  f"share with strength 1 (built only from the lineage) {np.mean([w == 1 for w in allw]):.2f}")
     print("\n".join(lines))
     os.makedirs(os.path.join(HERE, "results"), exist_ok=True); os.makedirs(os.path.join(HERE, "figures"), exist_ok=True)
-    open(os.path.join(HERE, "results", "follow_EXPLORATORY.txt"), "w").write("\n".join(lines) + "\n")
+    open(os.path.join(HERE, "results", f"follow_EXPLORATORY{SUF}.txt"), "w").write("\n".join(lines) + "\n")
 
     sk = {D.dkey(t) for t in settled}
     last = frames[-1]["tiles"]
@@ -157,15 +163,15 @@ def main():
 
     fig, ax = plt.subplots(figsize=(8, 8.4), facecolor=BG)
     anim = FuncAnimation(fig, lambda i: draw(ax, frames[i]), frames=len(frames))
-    anim.save(os.path.join(HERE, "figures", "follow.gif"), writer=PillowWriter(fps=4), dpi=80)
+    anim.save(os.path.join(HERE, "figures", f"follow{SUF}.gif"), writer=PillowWriter(fps=4), dpi=80)
     plt.close(fig)
-    pick = [0, 4, 9, 19, len(frames) - 1]
+    pick = sorted({0, len(frames) // 4, len(frames) // 2, 3 * len(frames) // 4, len(frames) - 1})
     fig, axes = plt.subplots(1, len(pick), figsize=(4.2 * len(pick), 4.8), facecolor=BG)
     for ax, i in zip(axes, pick):
         draw(ax, frames[i]); ax.set_title(f"slice {frames[i]['s']}", color=INK, fontsize=11)
     fig.suptitle("following one pattern: gold = pattern, orange = mostly-its descendants, blue = joint descendants, rings = lookalikes",
                  color=INK, fontsize=12, family="serif", style="italic")
-    plt.savefig(os.path.join(HERE, "figures", "follow_frames.png"), dpi=95, facecolor=BG, bbox_inches="tight")
+    plt.savefig(os.path.join(HERE, "figures", f"follow_frames{SUF}.png"), dpi=95, facecolor=BG, bbox_inches="tight")
 
 
 if __name__ == "__main__":
