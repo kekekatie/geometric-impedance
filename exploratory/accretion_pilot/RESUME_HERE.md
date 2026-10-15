@@ -49,6 +49,23 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧭 Settled vs built ([`cut_direction/`](cut_direction/)), pre-registered: the cut's direction names the ribbon
+
+- Grew from Katie and Argon's Ammann-bar picture plus Katie's rule that nothing outruns the now. C1–C4
+  all held.
+- **Each choice decides mainly one ribbon family** (44/45).
+- **The direction of the cut in the wiggle room predicts that family** in held-out worlds (17/17;
+  chance ~20%).
+  - With corrected bins, the five cut directions (18°, 54°, 90°, 126°, 162°) go one-to-one with the
+    five families, in 45/45 situations.
+  - *My registered bins were off by 18°*; this is reported in the README.
+- **Strip direction = 108° − 2 × cut direction** for every elongated strip (within 2.6°). The −2
+  hints at the star map that doubles angles. A derivation is the next step.
+- **Settled at once, built at ~0.9 edges per slice** outward from the choice point. That matches
+  `speed_of_light/`'s limit.
+- The window knows instantly; the world builds it one click at a time. Determined ≠ built.
+- Picture: `cut_direction/figures/cut_direction.png`.
+
 ## 🤐 More of the zip, or a faster zip? ([`front_activation/`](front_activation/)), pre-registered
 
 - Astra's question after `speed_of_now/`. 28 distinct situations, both futures grown up to 100 slices.

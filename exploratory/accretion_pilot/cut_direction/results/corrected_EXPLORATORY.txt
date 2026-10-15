@@ -1,0 +1,9 @@
+EXPLORATORY corrected binning (true cut angles 18 + 36k):
+  cut line at  18 deg -> decided family {2: 11}
+  cut line at  54 deg -> decided family {1: 1}
+  cut line at  90 deg -> decided family {0: 22}
+  cut line at 126 deg -> decided family {4: 8}
+  cut line at 162 deg -> decided family {3: 3}
+  one family per direction: True; directions seen 5, families 5
+  rule: family j <-> cut angle 90 - 36 j (mod 180); strip direction = 108 - 2 x cut angle (mod 180): max deviation 2.6 deg over 41 elongated strips (ratio >= 3); the 4 rounder strips deviate by [1, 8, 62, 62]
+  settled vs built: least-squares slice = 2.44 + 1.09 x distance (edges): about 0.92 edges built per slice along the strip
