@@ -49,6 +49,32 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🧵 NEXT, waiting: how do threads of consequence interact? (Katie's "sames and similars" + Argon, 2026-10-15)
+
+*Katie's meditation idea (sames and similars, close and far) meets Argon's reading of `cut_direction/`:
+each choice is one coherent "thread of consequence", a "packet of happening", not a smear. In Katie's
+words, coherence is the "rules for not being suddenly a penguin".*
+
+Three candidate studies. Pre-register **B first**: it could genuinely surprise us.
+
+- **B: cuts at a distance.**
+  - The wiggle room F is shared by the whole patch, but forcing is local.
+  - So a choice at spot A can quietly kill one option at a far spot B. B still *looks* free locally;
+    pick the dead option and the world grows, then jams (the "dead options" of `golden_digits/`,
+    `who_made_it/`, `speed_of_now/`).
+  - Question: where was the cut that killed them made, and how far away? Settled at once in the
+    window, discovered only when the front arrives. A constraint with no message: an echo of
+    correlation-without-signalling, not a claim.
+- **A: same family, close together.** Does one choice's burst swallow a nearby same-family spot
+  (forcing it), or do the two form a thicker bundle?
+- **C: different families crossing.** Where two threads meet they must share a tile. Do they lock,
+  deflect, or jam?
+
+Notes for whoever picks this up:
+
+- Argon's write-up said "proved"; it is 45/45 observed plus a partial derivation.
+- Label slip in that write-up: an 18° cut ↔ family 2 (54° ↔ family 1).
+
 ## 🔒 Predicted, or settled? ([`settled_test/`](settled_test/)), pre-registered (Astra's three steps)
 
 - **P1 held, 45/45:** the forced burst alone, with no later choices, carries the cut's predicted
