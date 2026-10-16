@@ -4,7 +4,7 @@
 
 ## What changed
 
-Added a reproducible descriptive audit, numerical geometry checks, three scientific figures in
+Added a reproducible descriptive audit, numerical geometry checks, four scientific figures in
 SVG and 300 dpi PNG, detailed captions, a scientific review and a restart note. Original registrations,
 implementations and deposited results were preserved.
 
@@ -16,7 +16,7 @@ implementations and deposited results were preserved.
 - Reconstructed two world prefixes and selected branch growth, using the original implementation.
 - Compared the overview's geometry measurements and every placement pair with the saved first-study record.
 - Recomputed the complete exception record and found exact agreement with its saved dictionary.
-- Inspected the three final figures visually, including labels, legends and the exception's later choice.
+- Inspected the four final figures visually, including labels, legends and the exception's later choice.
 
 No full historical study rerun or independent engine implementation was performed.
 
@@ -54,3 +54,5 @@ be confirmed during the manuscript pass.
 
 Next: review the figures and captions, then revise the paper around them. `START_HERE.md` preserves
 the restart point and commands. Work is saved locally; nothing has been merged or published.
+
+Presentation revision: see PRESENTATION_REVISION.md for the visual-review changes and verification pointers.

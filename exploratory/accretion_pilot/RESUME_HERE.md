@@ -3,7 +3,7 @@
 ## Expansion-front paper: checks and figures (2026-10-16)
 
 See [`expansion_front_paper/START_HERE.md`](expansion_front_paper/START_HERE.md) for the saved-data
-audit, three reconstructed figures, captions and reproduction commands. The numerical checks agree
+audit, four reconstructed figures, captions and reproduction commands. The numerical checks agree
 with the deposited results. The manuscript pass is deferred. The new review qualifies the historical
 wording below: a forced burst is a conditional guarantee, not the complete extent of a choice's influence;
 the next guess does not establish an end to all earlier consequences.

@@ -130,34 +130,57 @@ def save(fig,name):
 
 def overview_plot(o):
     base=o['base']; origin=CD.cen(o['cs'][0]); alltiles=base+o['tr'][0]['new']+o['tr'][1]['new']
-    fig,axs=plt.subplots(2,3,figsize=(13,9))
-    fig.suptitle('One local choice, two growing consequences',fontsize=19,y=.98)
+    fig,axs=plt.subplots(2,2,figsize=(8.3,10.2))
+    fig.suptitle('One local choice,\ntwo growing consequences',fontsize=19,y=.98)
     ax=axs[0,0]; draw(ax,base,origin,GRAY); border(ax,base,origin)
     for c,col in zip(o['cs'],(A,B)): draw(ax,[c],origin,col,edge=col,lw=2,alpha=.7)
-    ax.annotate('Two alternatives\nat the same exposed site',xy=(0,0),xytext=(.02,.97),textcoords='axes fraction',va='top',arrowprops={'arrowstyle':'->'},fontsize=9)
-    setup(ax,base+o['cs'],origin); ax.set_title('a  Common patch before the choice')
+    setup(ax,base+o['cs'],origin); ax.set_title('a  The common patch')
+    ax.plot(0,0,'o',mfc='none',mec='#172d39',ms=14,lw=1)
+    for i,(c,col) in enumerate(zip(o['cs'],(A,B))):
+        inset=ax.inset_axes([.02+i*.25,.74,.23,.23])
+        draw(inset,base,origin,GRAY); draw(inset,[c],origin,col,edge='#24343c',lw=.8)
+        inset.set(xlim=(-1.3,1.3),ylim=(-1.3,1.3),aspect='equal',xticks=[],yticks=[])
+        inset.set_title('Option '+ 'AB'[i],fontsize=8,pad=2)
+        for spine in inset.spines.values(): spine.set_color('#929da3')
     for i,(col,label) in enumerate(zip((A,B),('A','B'))):
-        ax=axs[0,i+1]; draw(ax,base,origin,GRAY); draw(ax,o['tr'][i]['new'],origin,'#f1f3f4')
+        ax=axs[1,i]; draw(ax,base,origin,GRAY)
+        ax.add_collection(PolyCollection(polygons(o['tr'][i]['new'],origin),facecolors='#fff8e3',edgecolors='#ae945e',linewidths=.35,hatch='///'))
         draw(ax,o['changed'][i],origin,col); border(ax,base,origin); setup(ax,alltiles,origin)
-        ax.set_title(f'{chr(98+i)}  Branch {label}, after 20 slices')
-    ax=axs[1,0]
+        ax.set_title(f'{chr(99+i)}  Branch {label}, after 20 slices')
+    ax=axs[0,1]
     for cm,col in [(o['cm'],GRAY),(o['cms'][0],A),(o['cms'][1],B)]:
         ax.add_patch(Polygon(Sl.region(cm),facecolor=col,edgecolor='#36464d',alpha=.65,lw=1))
     p=np.array(Sl.region(o['cm'])); lo=p.min(0); hi=p.max(0); pad=max(hi-lo)*.15
     ax.set(xlim=(lo[0]-pad,hi[0]+pad),ylim=(lo[1]-pad,hi[1]+pad),aspect='equal')
     n,c=o['line']; center=np.mean(p,axis=0); foot=center+(c-np.dot(n,center))*np.array(n)/np.dot(n,n); d=np.array([-n[1],n[0]])
     ax.plot(*np.array([foot-10*d,foot+10*d]).T,'--',color='#172d39',lw=1.2)
-    ax.tick_params(labelsize=8); ax.set_title('d  Compatible offsets F after first forced slice')
+    for cm,label in zip(o['cms'],('A','B')):
+        center=np.mean(np.unique(np.round(Sl.region(cm),10),axis=0),axis=0)
+        ax.text(*center,'Compatible\nwith '+label,ha='center',va='center',fontsize=8,color='#142630')
+    ax.tick_params(labelsize=8); ax.set_title('b  Remaining possibilities, F\nafter the first forced slice')
     ax.set_xlabel('Internal coordinate 1'); ax.set_ylabel('Internal coordinate 2')
-    for ax,s in zip(axs[1,1:],(1,8)):
-        ts=o['tr'][0]['snapshots'][s]; draw(ax,base,origin,GRAY)
-        draw(ax,ts[len(base):],origin,A); border(ax,base,origin); setup(ax,alltiles,origin)
-        ax.set_title(f'{"e" if s==1 else "f"}  Branch A, after {s} forced slice{ "s" if s>1 else ""}')
-        assert not [g for g in o['tr'][0]['guesses'] if g[0]<=s]
-    fig.legend(handles=[Patch(facecolor=GRAY,label='Already built at the choice'),Patch(facecolor=A,label='A: changed tiles (top) / additions (bottom)'),Patch(facecolor=B,label='B: changed tiles')],loc='lower center',ncol=3,fontsize=9,bbox_to_anchor=(.5,.065))
-    fig.text(.06,.025,'Dark outline: boundary at the original choice. Pale later tiles in b/c are outside the measured changed region.\nF is an analytical compatibility map, not a physical signal. Coordinates in world panels are measured in edge lengths.',fontsize=9)
-    fig.subplots_adjust(left=.06,right=.98,bottom=.14,top=.91,wspace=.28,hspace=.26)
+    fig.legend(handles=[Patch(facecolor=GRAY,label='Already built'),Patch(facecolor='#fff8e3',edgecolor='#ae945e',hatch='///',label='Other new additions'),Patch(facecolor=A,label='A: differing tiles'),Patch(facecolor=B,label='B: differing tiles')],loc='lower center',ncol=2,fontsize=9,bbox_to_anchor=(.5,.04))
+    fig.text(.07,.025,'Dark outline: original boundary. Hatching: outside the measured difference.',fontsize=8)
+    fig.subplots_adjust(left=.07,right=.97,bottom=.11,top=.86,wspace=.30,hspace=.22)
     save(fig,'01_choice_overview')
+
+def construction_plot(o):
+    base=o['base']; origin=CD.cen(o['cs'][0])
+    fig,axs=plt.subplots(1,3,figsize=(12,4.8))
+    fig.suptitle('Building the response, one slice at a time',fontsize=17)
+    changed={D.dkey(t) for t in o['changed'][0]}
+    for ax,s in zip(axs,(1,8,20)):
+        ts=o['tr'][0]['snapshots'][s]; new=ts[len(base):]
+        draw(ax,base,origin,GRAY)
+        if new: ax.add_collection(PolyCollection(polygons(new,origin),facecolors='#fff8e3',edgecolors='#ae945e',linewidths=.35,hatch='///'))
+        draw(ax,[t for t in new if D.dkey(t) in changed],origin,A)
+        border(ax,base,origin); setup(ax,base+o['tr'][0]['new'],origin)
+        ax.set_title(f'Branch A, slice {s}')
+        if s<=8: assert not [g for g in o['tr'][0]['guesses'] if g[0]<=s]
+    fig.legend(handles=[Patch(facecolor=GRAY,label='Already built'),Patch(facecolor='#fff8e3',edgecolor='#ae945e',hatch='///',label='Other new additions'),Patch(facecolor=A,label='Built part of the slice-20 difference')],loc='lower center',ncol=3,fontsize=9,bbox_to_anchor=(.5,.045))
+    fig.text(.06,.02,'Blue has the same meaning at every time: membership in the measured slice-20 difference. No unbuilt tiles are shown.',fontsize=9)
+    fig.subplots_adjust(left=.03,right=.98,top=.83,bottom=.20,wspace=.12)
+    save(fig,'04_construction_over_time')
 
 def evidence_plot(o):
     W=json.loads((ROOT/'cut_direction/results/worlds.json').read_text()); first={}
@@ -170,35 +193,34 @@ def evidence_plot(o):
     for c in first.values():
         ax.scatter(c['line_angle'],c['axis'],color=colors[int(np.argmax(c['shares']))],marker='o' if c['ratio']>=3 else 'x',s=32,alpha=.8)
     ax.set(xlim=(0,180),ylim=(-4,184),xlabel='Cut-line direction (degrees)',ylabel='Changed-region axis (degrees)',title='a  45 configurations; points can overlap')
-    ax.legend(handles=[Patch(facecolor=colors[j],label=f'Family {j}') for j in range(5)],fontsize=7,loc='lower right',frameon=False)
-    ax.text(.03,.97,'Circles: ratio >= 3 (41)\nCrosses: rounder regions (4)\nDotted: 108 - 2 x cut (mod 180)',transform=ax.transAxes,va='top',fontsize=8)
+    ax.legend(handles=[Patch(facecolor=colors[j],label=f'Family {j}') for j in range(5)],fontsize=7,loc='upper left',bbox_to_anchor=(0,-.23),ncol=3,frameon=False)
     origin=CD.cen(o['cs'][0])
     for i,ax in enumerate(axs[1:]):
         draw(ax,o['bc'][i],origin,A if i==0 else B)
-        draw(ax,[t for t in o['bc'][i] if D.dkey(t) in o['core'][i]],origin,CORE,edge='#422358',lw=.45)
+        draw(ax,[t for t in o['bc'][i] if D.dkey(t) in o['core'][i]],origin,'none',edge='#182a32',lw=1.5)
         setup(ax,o['bc'][0]+o['bc'][1],origin)
         ax.set_title(f'{chr(98+i)}  Branch {"AB"[i]}: initial forced response\nCore {len(o["core"][i])}/{len(o["bc"][i])} changed half-tiles')
-    fig.text(.05,.035,'Purple: largest connected chain under the registered adjacency rule. Other changed tiles retain their branch colour.\nPanels b/c are a new illustrative reconstruction, capped at 40 forced slices; they are not an additional all-sample test.',fontsize=9)
-    fig.subplots_adjust(bottom=.21,top=.80,wspace=.35)
+    fig.text(.05,.035,'Circles: 41 elongated regions. Crosses: 4 rounder regions. Dotted line: orientation rule (see caption).\nDark outlines in b/c mark the connected core; fill colours continue to identify the branch.',fontsize=9)
+    fig.subplots_adjust(bottom=.31,top=.80,wspace=.35)
     save(fig,'02_orientation_and_core')
 
 def exception_plot(e):
     i,k=e['pair']; origin=CD.cen(e['cs'][1]); base=e['base']; a,b=e['tr'][i],e['tr'][k]
     ka={D.dkey(t) for t in a['new']}; kb={D.dkey(t) for t in b['new']}
     da=[t for t in a['new'] if D.dkey(t) not in kb]; db=[t for t in b['new'] if D.dkey(t) not in ka]
-    fig,axs=plt.subplots(1,3,figsize=(13,5.5)); fig.suptitle('A later choice changes the continuation of the same original option',fontsize=16)
+    fig,axs=plt.subplots(1,3,figsize=(13,5.5)); fig.suptitle('The same first choice can lead to different later outcomes',fontsize=16)
     for ax,tr,label,changed in zip(axs[:2],(a,b),(i,k),(da,db)):
         draw(ax,base,origin,GRAY); draw(ax,tr['new'],origin,'#edf0f1'); draw(ax,changed,origin,B)
         for s,ts in tr['guesses']:
-            draw(ax,ts,origin,CORE,edge='#3e1a54',lw=2)
+            draw(ax,ts,origin,'#fff8e3',edge='#182a32',lw=2)
             z=CD.cen(ts[0]); xy=((z-origin).real/S,(z-origin).imag/S)
             ax.annotate(f'Later choice\nat slice {s}',xy=xy,xytext=(xy[0]-5,xy[1]+4),fontsize=9,arrowprops={'arrowstyle':'->'})
         border(ax,base,origin); setup(ax,base+a['new']+b['new'],origin)
-        ax.set_title(f'Branch B, continuation {label+1}\nPaired A/B dominant family: {e["result"]["dom_cont"][label]}')
+        ax.set_title(f'Branch B, continuation {label+1}')
     ax=axs[2]; draw(ax,da,origin,'none',edge=A,lw=1.3); draw(ax,db,origin,'none',edge=B,lw=1.3)
     setup(ax,da+db,origin); ax.set_title('Difference between these B continuations\nOutlines show nonidentical tiles')
     ax.legend(handles=[Patch(facecolor='none',edgecolor=A,label=f'B continuation {i+1}'),Patch(facecolor='none',edgecolor=B,label=f'B continuation {k+1}')],loc='lower left',fontsize=8,frameon=False)
-    fig.text(.045,.055,f'Original predicted family: 2. Five paired continuation families: [2, 2, 3, 3, 3].\nBoth panels start from the same B option. Purple marks its later choice; orange marks tiles absent from the other B continuation.\nDifference outlines include unequal coverage as well as replacements; P4 separately tests only covered places.',fontsize=9)
+    fig.text(.045,.055,'Both start from the same B option. The marked later choice changes some subsequent details.\nOrange marks nonidentical tiles; the differences include unequal coverage as well as replacements.',fontsize=9)
     fig.subplots_adjust(bottom=.23,top=.80,wspace=.15)
     save(fig,'03_later_choice_exception')
 
@@ -206,5 +228,5 @@ if __name__=='__main__':
     if '--plot-only' in sys.argv:
         with (RES/'geometry.pkl').open('rb') as f: o,e=pickle.load(f)
     else: o,e=reconstruct()
-    overview_plot(o); evidence_plot(o); exception_plot(e)
-    print('Saved three SVG/PNG figure pairs.',flush=True)
+    overview_plot(o); construction_plot(o); evidence_plot(o); exception_plot(e)
+    print('Saved four SVG/PNG figure pairs.',flush=True)

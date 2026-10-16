@@ -16,7 +16,7 @@ Working branch: `codex/expansion-front-checks`, in a separate clone.
 - Registered scorecards and corrected bins recomputed separately in `CHECKS.md` and `results/audit.json`.
 - Representative selection recorded before reconstruction in `results/selection.json`.
 - Both targeted reconstructions completed and agree with deposited results. Details in `results/reconstruction.json`.
-- Three figures exported as SVG and 300 dpi PNG, visually inspected; captions in `CAPTIONS.md`.
+- Four figures exported as SVG and 300 dpi PNG, visually inspected; captions in `CAPTIONS.md`.
 - Numerical geometry checks agree to floating-point precision; chronology in `results/geometry_checks.json`.
 - Source and interpretation review in `SCIENTIFIC_REVIEW.md`. No numerical discrepancy found in the checked claims.
 
@@ -77,3 +77,5 @@ AI model designations and final authorship wording remain for Katie to confirm d
 No universal ribbon theorem, scheduler comparison, rare-family campaign or 3D implementation is part of this pass.
 
 Single next action after this pass: review the figure package, then revise the paper around those pictures and verified claims.
+
+Presentation revision: see PRESENTATION_REVISION.md for the visual-review changes and verification pointers.
