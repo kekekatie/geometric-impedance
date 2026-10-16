@@ -124,6 +124,8 @@ def setup(ax,tiles,origin):
     ax.set(xlim=(lo[0],hi[0]),ylim=(lo[1],hi[1]),aspect='equal'); ax.axis('off')
 def save(fig,name):
     for ext in ('svg','png'): fig.savefig(OUT/f'{name}.{ext}',dpi=300,facecolor='white',bbox_inches='tight')
+    svg=OUT/f'{name}.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8')
     plt.close(fig)
 
 def overview_plot(o):
