@@ -1,0 +1,10 @@
+{
+  "criterion": "Among first occurrences with ratio >= 3, minimize absolute distance of n_strip from the eligible median; break ties lexicographically by key.",
+  "eligible": 41,
+  "median_n_strip": 84.0,
+  "key": "2a3cfb2c41f77386",
+  "world": 19,
+  "slice": 31,
+  "n_strip": 84,
+  "ratio": 8.007729915172416
+}
