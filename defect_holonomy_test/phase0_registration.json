@@ -1,0 +1,390 @@
+{
+  "note": "PHASE 0 pre-registration for defect-holonomy v3. Quanta = ideal pi_perp of approximant period vectors; measured E1/E2 must hit these before construction is tuned. Registered by Claude Code.",
+  "ammann_beenker": {
+    "substrate": "ammann_beenker",
+    "asymptotic_shrink_ratio_derived": 0.41421356237309515,
+    "asymptotic_shrink_ratio_note": "sqrt2 - 1 = 1/delta_silver ~ 0.41421 per consecutive convergent (NOT delta^-2 = 3-2sqrt2 ~ 0.1716; the guessed constant was one power too high -- derived here).",
+    "orders": [
+      {
+        "order": 1,
+        "convergent": "1/1",
+        "M_a": [
+          1,
+          1,
+          0,
+          -1
+        ],
+        "M_b": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "perp_par_check": [
+          2.414213562373095,
+          2.414213562373095
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.414213562373,
+          0.0
+        ],
+        "quantum_pi_perp_M_b": [
+          0.0,
+          0.414213562373
+        ],
+        "quantum_norm_a": 0.41421356237309515,
+        "quantum_norm_b": 0.4142135623730949,
+        "shrink_ratio_vs_prev": null
+      },
+      {
+        "order": 2,
+        "convergent": "3/2",
+        "M_a": [
+          3,
+          2,
+          0,
+          -2
+        ],
+        "M_b": [
+          0,
+          2,
+          3,
+          2
+        ],
+        "perp_par_check": [
+          5.82842712474619,
+          5.82842712474619
+        ],
+        "quantum_pi_perp_M_a": [
+          0.171572875254,
+          0.0
+        ],
+        "quantum_pi_perp_M_b": [
+          0.0,
+          -0.171572875254
+        ],
+        "quantum_norm_a": 0.1715728752538097,
+        "quantum_norm_b": 0.17157287525381015,
+        "shrink_ratio_vs_prev": 0.4142135623730945
+      },
+      {
+        "order": 3,
+        "convergent": "7/5",
+        "M_a": [
+          7,
+          5,
+          0,
+          -5
+        ],
+        "M_b": [
+          0,
+          5,
+          7,
+          5
+        ],
+        "perp_par_check": [
+          14.071067811865476,
+          14.071067811865476
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.071067811865,
+          0.0
+        ],
+        "quantum_pi_perp_M_b": [
+          0.0,
+          0.071067811865
+        ],
+        "quantum_norm_a": 0.07106781186547595,
+        "quantum_norm_b": 0.07106781186547462,
+        "shrink_ratio_vs_prev": 0.41421356237309964
+      },
+      {
+        "order": 4,
+        "convergent": "17/12",
+        "M_a": [
+          17,
+          12,
+          0,
+          -12
+        ],
+        "M_b": [
+          0,
+          12,
+          17,
+          12
+        ],
+        "perp_par_check": [
+          33.97056274847714,
+          33.97056274847714
+        ],
+        "quantum_pi_perp_M_a": [
+          0.029437251523,
+          0.0
+        ],
+        "quantum_pi_perp_M_b": [
+          -0.0,
+          -0.029437251523
+        ],
+        "quantum_norm_a": 0.029437251522859142,
+        "quantum_norm_b": 0.02943725152286092,
+        "shrink_ratio_vs_prev": 0.4142135623730871
+      },
+      {
+        "order": 5,
+        "convergent": "41/29",
+        "M_a": [
+          41,
+          29,
+          0,
+          -29
+        ],
+        "M_b": [
+          0,
+          29,
+          41,
+          29
+        ],
+        "perp_par_check": [
+          82.01219330881976,
+          82.01219330881976
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.01219330882,
+          0.0
+        ],
+        "quantum_pi_perp_M_b": [
+          0.0,
+          0.01219330882
+        ],
+        "quantum_norm_a": 0.012193308819760773,
+        "quantum_norm_b": 0.012193308819753668,
+        "shrink_ratio_vs_prev": 0.4142135623732469
+      }
+    ]
+  },
+  "penrose": {
+    "substrate": "penrose",
+    "inflation_matrix": [
+      [
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        -1,
+        0,
+        0
+      ]
+    ],
+    "asymptotic_shrink_ratio_derived": 0.6180339887498948,
+    "asymptotic_shrink_ratio_note": "1/phi = phi - 1 ~ 0.61803 per inflation/consecutive Fibonacci convergent (NOT phi^-2 ~ 0.3820; guessed constant was one power too high -- derived here via perp eigenvalue phi' = -1/phi of the inflation).",
+    "base_periods": {
+      "M0_a": [
+        -2,
+        0,
+        1,
+        0,
+        -2
+      ],
+      "M0_b": [
+        -1,
+        -1,
+        1,
+        2,
+        1
+      ]
+    },
+    "orders": [
+      {
+        "order": 1,
+        "convergent": "1/1",
+        "M_a": [
+          -2,
+          0,
+          1,
+          0,
+          -2
+        ],
+        "M_b": [
+          -1,
+          -1,
+          1,
+          2,
+          1
+        ],
+        "parallel_period_norms": [
+          4.23606797749979,
+          4.236067977499789
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.072949016875,
+          0.22451398829
+        ],
+        "quantum_pi_perp_M_b": [
+          -0.072949016875,
+          -0.22451398829
+        ],
+        "quantum_norm_a": 0.23606797749978892,
+        "quantum_norm_b": 0.2360679774997896,
+        "shrink_ratio_vs_prev": null
+      },
+      {
+        "order": 2,
+        "convergent": "2/1",
+        "M_a": [
+          -1,
+          2,
+          4,
+          2,
+          -1
+        ],
+        "M_b": [
+          -3,
+          -3,
+          0,
+          2,
+          0
+        ],
+        "parallel_period_norms": [
+          6.854101966249685,
+          6.854101966249685
+        ],
+        "quantum_pi_perp_M_a": [
+          0.045084971875,
+          -0.138757275713
+        ],
+        "quantum_pi_perp_M_b": [
+          0.045084971875,
+          0.138757275713
+        ],
+        "quantum_norm_a": 0.14589803375031585,
+        "quantum_norm_b": 0.1458980337503152,
+        "shrink_ratio_vs_prev": 0.6180339887498986
+      },
+      {
+        "order": 3,
+        "convergent": "3/2",
+        "M_a": [
+          -6,
+          -1,
+          2,
+          -1,
+          -6
+        ],
+        "M_b": [
+          -2,
+          -2,
+          3,
+          6,
+          3
+        ],
+        "parallel_period_norms": [
+          11.090169943749473,
+          11.090169943749476
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.027864045,
+          0.085756712577
+        ],
+        "quantum_pi_perp_M_b": [
+          -0.027864045,
+          -0.085756712577
+        ],
+        "quantum_norm_a": 0.09016994374947176,
+        "quantum_norm_b": 0.09016994374947404,
+        "shrink_ratio_vs_prev": 0.6180339887498763
+      },
+      {
+        "order": 4,
+        "convergent": "5/3",
+        "M_a": [
+          -1,
+          7,
+          12,
+          7,
+          -1
+        ],
+        "M_b": [
+          -9,
+          -9,
+          -1,
+          4,
+          -1
+        ],
+        "parallel_period_norms": [
+          17.94427190999916,
+          17.944271909999156
+        ],
+        "quantum_pi_perp_M_a": [
+          0.017220926874,
+          -0.053000563136
+        ],
+        "quantum_pi_perp_M_b": [
+          0.017220926874,
+          0.053000563136
+        ],
+        "quantum_norm_a": 0.05572809000084219,
+        "quantum_norm_b": 0.055728090000840426,
+        "shrink_ratio_vs_prev": 0.6180339887499227
+      },
+      {
+        "order": 5,
+        "convergent": "8/5",
+        "M_a": [
+          -19,
+          -6,
+          2,
+          -6,
+          -19
+        ],
+        "M_b": [
+          -3,
+          -3,
+          10,
+          18,
+          10
+        ],
+        "parallel_period_norms": [
+          29.034441853748636,
+          29.034441853748636
+        ],
+        "quantum_pi_perp_M_a": [
+          -0.010643118126,
+          0.032756149441
+        ],
+        "quantum_pi_perp_M_b": [
+          -0.010643118126,
+          -0.032756149441
+        ],
+        "quantum_norm_a": 0.034441853748626614,
+        "quantum_norm_b": 0.03444185374863312,
+        "shrink_ratio_vs_prev": 0.618033988749769
+      }
+    ]
+  }
+}
