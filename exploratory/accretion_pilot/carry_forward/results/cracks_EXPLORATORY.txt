@@ -1,0 +1,4 @@
+EXPLORATORY cracks in the 24 LOCAL carry-forward worlds: 60 cracks with >= 5 broken corners (per world [0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 6])
+  elongation median 2.5; >= 3 in 18/60
+  length median 3.5 edges (max 12.6)
+  reaching the rim (still at the growing edge) 46/60; radial span (outer - inner radius) median 3.2 edges
