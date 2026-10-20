@@ -49,6 +49,23 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🛣️ Which lane? ([`which_lane/`](which_lane/)), pre-registered (2026-10-20, from Argon's "handedness")
+
+- Same 45 configurations as `settled_test/`, rebuilt exactly.
+- **L1, 45/45:** the two options' cores sit in two parallel lanes, ~0.49 edges apart (0.43–0.52).
+- **L2, 45/45:** the side of the cut names the lane: sign(offset) × s_A = −1 always, in all four
+  window layers.
+- Extends the paper: cut direction → family; **cut side → lane**.
+- Next: derive the ~½-edge spacing and the sign from the pentagrid. The paper is *Decided before it is
+  built*, on branch `claude/world-growth-pilot-cy85ne`.
+- **Katie's 🫛 (2026-10-20):** a feeling that we're missing something basic and foundational.
+  Candidate peas offered:
+  1. a single global "now";
+  2. our scheduler is global, not the world's;
+  3. drifted from persistence to choices;
+  4. F treated as if the world consults it;
+  5. no readers inside the world.
+
 ## 🔭 Following one pattern ([`follow_a_pattern/`](follow_a_pattern/)), exploratory (Astra's step 1, 2026-10-15)
 
 - **Question:** can we follow one thing through new construction without swapping it for a
