@@ -1,0 +1,10 @@
+rebuilt 45 configurations (same keys as settled_test: True); with cut and both cores: 45; dominant family = predicted in 45/45
+  L1: HELD    |offset| >= 0.25 edges in 45/45 (need >= 80%); |offset| values [0.43, 0.43, 0.43, 0.43, 0.43, 0.45, 0.45, 0.47, 0.47, 0.47, 0.47, 0.48, 0.48, 0.48, 0.48, 0.48, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.49, 0.5, 0.5, 0.5, 0.5, 0.5, 0.52, 0.52, 0.52, 0.52, 0.52]
+  L2: HELD    sign(offset) x s_A: {-1: 45}; commonest value -1 in 45/45 (need >= 90%)
+  reported: L2 by the cut facet's window layer (rank: counts of the product) {0: {-1: 11}, 1: {-1: 4}, 2: {-1: 12}, 3: {-1: 18}}
+  reported: offset using all changed tiles, |offset_all| median 0.00; sign agrees with the core offset in 32/45
+  reported: core sizes A/B median 46/46
+
+real	4m51.820s
+user	16m39.015s
+sys	0m3.990s
