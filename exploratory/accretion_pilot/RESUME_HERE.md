@@ -49,6 +49,21 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## ⏱️ Local nows ([`local_nows/`](local_nows/)), pre-registered (2026-10-20, from Katie's 🫛)
+
+- **Set-up:** each quiet stretch of front (no forced edge within 3 edges) chooses for itself, while
+  the rest of the world is still busy.
+- **N1 held:** LOCAL 24/24 jammed (median 16 slices, ~300 tiles); GLOBAL 2/24.
+- **N2 failed narrowly:** death (F empty) came before the jam in 18/24, by a median of 2 slices
+  (needed ≥ 3).
+- Even a single premature choice can doom a world.
+- **Reading:** the global clock isn't just an artefact. Here, coherence needs the forced information
+  to arrive before deciding.
+- **Hypothesis, untested:** decapods (no choices) and two-decapod jams fit the same story;
+  independently decided regions can't meet.
+- **Caveat:** 6 jams had no detected empty F, because F ignores decorations.
+- **Next:** locate contradictions; gentler local rules; local nows in decapod worlds.
+
 ## 🛣️ Which lane? ([`which_lane/`](which_lane/)), pre-registered (2026-10-20, from Argon's "handedness")
 
 - Same 45 configurations as `settled_test/`, rebuilt exactly.

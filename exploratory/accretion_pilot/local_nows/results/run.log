@@ -1,0 +1,10 @@
+GLOBAL: statuses {'ok': 22, 'JAM': 2}; dead at end 2; jammed or dead 2/24
+LOCAL:  statuses {'JAM': 24}; dead at end 18; jammed or dead 24/24
+  N1: HELD    LOCAL jammed or dead 24 (need >= 6) vs GLOBAL 2 (need LOCAL >= 3x GLOBAL)
+  N2: FAILED  LOCAL jams with F already empty before the jam: 18/24; lead (slices) median 2.0; leads [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4]
+  reported GLOBAL: choices per world median 2; slices median 118; tiles median 1504; max simultaneous choices 1; died-at slices [7, 53]
+  reported LOCAL: choices per world median 4; slices median 16; tiles median 302; max simultaneous choices 2; died-at slices [2, 4, 4, 5, 6, 7, 10, 12, 13, 15, 15, 16, 20, 24, 24, 27, 30, 30]
+
+real	2m12.881s
+user	8m11.982s
+sys	0m2.389s
