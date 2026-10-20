@@ -78,11 +78,11 @@ def defects(P):
     return [k for k, l in list(P.V.items()) if l and not P.vertex_ok(k, [])]   # skip empty entries left by lookups
 
 
-def run(args):
+def run(args, keep=False):
     k, mode = args
     rng = random.Random(LN.SEED0 + k)
     P = L.Patch(L.seed_patch(LN.centres()[k], 3 * S)); n0 = len(P.tris)
-    status = "ok"; s = 0; n_bad = 0; n_choice = 0; trace = []
+    status = "ok"; s = 0; n_bad = 0; n_choice = 0; trace = []; bad_keys = set()
     while len(P.tris) - n0 < N_ADD and s < MAX_SLICES:
         s += 1
         fr = P.frontier(); forced = {}; opened = []; stuck = []
@@ -110,7 +110,9 @@ def run(args):
             if not rs:
                 continue
             sc = [badness(P, t) for t in rs]; best = [t for t, b in zip(rs, sc) if b == min(sc)]
-            P.add(rng.choice(SN.ordered(best))); n_bad += 1
+            tb = rng.choice(SN.ordered(best)); P.add(tb); n_bad += 1
+            if keep:
+                bad_keys.add(D.dkey(tb))
         picks = []
         if mode == "GLOBAL":
             if not forced and not stuck and fr:
@@ -142,6 +144,8 @@ def run(args):
         X = np.c_[pts.real - pts.real.mean(), pts.imag - pts.imag.mean()]
         w, _ = np.linalg.eigh(X.T @ X / len(pts)); elong = float(math.sqrt(w[-1] / max(w[0], 1e-12)))
     fverts = {L.key(z) for e in P.frontier() for z in e[:2]}
+    if keep:                                              # for the exploratory figure only; no effect on the study
+        return P, bad_keys, dk, n0
     return dict(world=k, mode=mode, status=status, slices=s, tiles=len(P.tris) - n0, least_bad=n_bad, choices=n_choice,
                 defects=len(dk), frontier_defects=sum(1 for v in dk if v in fverts), elongation=elong, trace=trace,
                 defect_pts=[[p.real, p.imag] for p in pts])

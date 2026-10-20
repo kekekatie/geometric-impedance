@@ -1,0 +1,13 @@
+LOCAL: statuses {'ok': 24}; reached 1500 tiles 24/24; used least-bad 24/24
+  M1: HELD    reached 1500 added tiles in 24/24 (need >= 20)
+  M2: HELD    defects still on the frontier at the end in 24/24 (need >= 50%)
+  M3: FAILED  elongation >= 3 in 2/22 worlds with >= 10 defects (need >= 50%); elongations [1.2, 1.2, 1.3, 1.5, 1.5, 1.5, 1.6, 1.6, 1.7, 1.7, 1.8, 1.8, 1.8, 1.8, 1.9, 1.9, 1.9, 2.0, 2.2, 2.6, 4.3, 5.8]
+  reported LOCAL: least-bad per world median 57 (share of tiles median 0.037); defects median 32; frontier defects at end median 30; choices median 13
+  reported LOCAL: frontier defects at 1/3, 2/3, end of the run (median) 0, 11, 30
+GLOBAL: statuses {'ok': 24}; reached 1500 tiles 24/24; used least-bad 2/24
+  reported GLOBAL: least-bad per world median 0 (share of tiles median 0.000); defects median 0; frontier defects at end median 0; choices median 2
+  reported GLOBAL: frontier defects at 1/3, 2/3, end of the run (median) 0, 1, 1
+
+real	2m39.131s
+user	9m59.598s
+sys	0m2.583s

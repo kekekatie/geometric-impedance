@@ -59,6 +59,19 @@ separated comparisons only as diagnostic controls, then go back to the whole sys
 Here it is, safe. (This file is the archive doing its job — catching the jewel before it
 rolled away.)*
 
+## 🩹 Carry it forward ([`carry_forward/`](carry_forward/)), pre-registered (2026-10-20, Katie's doozy; gods 5 and 6)
+
+- Impatient local nows (R = 3, same 24 seeds), but a world never jams: it places a least-bad tile
+  instead.
+- **M1 held:** 24/24 grow to full size. About 3.7% of tiles are compromises.
+- **M2 held:** broken corners are still on the frontier at the end in 24/24.
+- **M3 failed:** the whole defect set is not elongated.
+- **Picture:** the world grows *around* its broken corners, leaving **cracks** (open fissures) and a
+  few inner pockets.
+- **Per crack (exploratory):** 60 cracks, mostly short (median 3.5 edges), 46/60 at the growing rim.
+- **God #6 not yet shown.** Next: track individual cracks over time. Do they keep their identity and
+  lengthen with the front, or are they many short-lived ones?
+
 ## ⏱️ Local nows ([`local_nows/`](local_nows/)), pre-registered (2026-10-20, from Katie's 🫛)
 
 - **Set-up:** each quiet stretch of front (no forced edge within 3 edges) chooses for itself, while
