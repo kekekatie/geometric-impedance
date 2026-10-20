@@ -38,6 +38,16 @@ The questions this gives us:
   carry the disagreement forward: "more now, more now", more information in the world. Maybe that
   carried-forward disagreement is the stuff (campfire god #6; `local_nows/`).
 
+**A central hanger (Katie, 2026-10-21):**
+
+- **The universe topples relaxedly into the next now, within admissible windows, even at the heart
+  of a neutron star.** Effortlessness is a test of the rules: good rules let the next now fall into
+  place.
+- Patient local nows pass this test. The carry-forward world (`carry_forward/`) fails it: it breaks
+  the rules, patches and grows around unhealable cracks. Katie: "this could not be part of our
+  universe".
+- Disagreement may be carried forward as *undecidedness held open* (patience), not as broken tiles.
+
 *"The way that can be named is not the way". But naming it badly, together, and checking it against
 little golden triangles, is a good way to walk around its edges.*
 
