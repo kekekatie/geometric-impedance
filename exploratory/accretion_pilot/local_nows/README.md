@@ -70,3 +70,37 @@ So: what if each quiet stretch of front chose for itself, while other parts were
 - **Where** does the contradiction sit, and how far is it from the choice that caused it?
 - A gentler local rule: how patient does a local now have to be to stay coherent?
 - Local nows in a decapod world (prediction: nothing changes, since there are no choices).
+
+## Follow-up: how patient must a local now be? ([`PREREGISTRATION_patience.md`](PREREGISTRATION_patience.md))
+
+*Pre-registered and committed before running [`patience.py`](patience.py). Same 24 seeds and the same
+LOCAL rule, with the radius of patience R = 6, 12 and 24 edges.*
+
+| radius of patience R | 3 | 6 | 12 | 24 | GLOBAL |
+|---|---|---|---|---|---|
+| bad worlds (jammed or dead), of 24 | 24 | 17 | 10 | **4** | 2 |
+| median slices reached | 16 | 37 | 71 | 106 | 118 |
+| median death-to-jam lead (slices) | 2 | 8.5 | 15 | — (1 jam) | — |
+
+| | prediction | result | |
+|---|---|---|---|
+| Q1 | patience helps steadily: bad count never increases with R, and R = 24 < R = 3 | 24 → 17 → 10 → 4 | ✅ HELD |
+| Q2 | R = 24 matches the global clock (≤ 4/24 bad) | **4 / 24** (1 jammed, 3 dead but not yet jammed) | ✅ HELD (right at the line) |
+
+**What it means (plainly).**
+
+- **Local nows can work, if they're patient enough.** With 24 edges of quiet around a choice, local
+  worlds are nearly as coherent as worlds with one global clock. They also reach full size a little
+  sooner (median 106 slices vs 118).
+- **The further away the conflict, the longer it takes to find out.** The gap between a world
+  becoming impossible and its jam grows with R: about 2 slices at R = 3, 8.5 at R = 6, 15 at R = 12.
+  That fits news travelling at a finite speed: a contradiction set up far away takes longer to arrive.
+- Three of R = 24's four bad worlds are **dead but not yet jammed** when the run ended. Their
+  contradiction is still on its way.
+
+**Caveats.**
+
+- At R ≥ 12, choices are never simultaneous (at most one per slice). So patient local nows end up
+  making choices one at a time, much like the global clock. The difference is that they don't wait
+  for distant forced activity to finish.
+- R is a straight-line radius, not a true causal cone, and there are 24 seeds.

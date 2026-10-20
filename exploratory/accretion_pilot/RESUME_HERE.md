@@ -62,7 +62,18 @@ rolled away.)*
 - **Hypothesis, untested:** decapods (no choices) and two-decapod jams fit the same story;
   independently decided regions can't meet.
 - **Caveat:** 6 jams had no detected empty F, because F ignores decorations.
-- **Next:** locate contradictions; gentler local rules; local nows in decapod worlds.
+- **Patience follow-up (pre-registered; Q1 and Q2 held):**
+  - bad worlds by radius of patience R: R = 3: 24/24, R = 6: 17, R = 12: 10, R = 24: **4** (GLOBAL 2);
+  - death-to-jam lead grows with R (2 → 8.5 → 15 slices): far conflicts take longer to be discovered;
+  - local nows *can* stay coherent if they are patient enough.
+- **Katie's campfire gods (2026-10-20), ways to keep local worlds coherent:**
+  1. one clock;
+  2. one centre (decapod);
+  3. no choices (crystal);
+  4. patience (light cone): now tested, it works at R ≈ 24;
+  5. allow mistakes and heal them;
+  6. let the unhealed mistakes *be* the stuff.
+- **Next:** locate contradictions; local nows in decapod worlds; gods 5 and 6.
 
 ## 🛣️ Which lane? ([`which_lane/`](which_lane/)), pre-registered (2026-10-20, from Argon's "handedness")
 
