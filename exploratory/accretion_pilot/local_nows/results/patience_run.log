@@ -1,0 +1,11 @@
+bad worlds (jammed or dead) out of 24: R=3: 24, R=6: 17, R=12: 10, R=24: 4, GLOBAL: 2
+  Q1: HELD    non-increasing in R [24, 17, 10, 4] and R=24 below R=3
+  Q2: HELD    R=24 bad 4/24 (need <= 4; GLOBAL 2)
+  reported R=3: statuses {'JAM': 24}; dead at end 18; slices median 16; tiles median 302; choices median 4; max simultaneous 2; death-to-jam leads median 2.0
+  reported R=6: statuses {'JAM': 16, 'ok': 8}; dead at end 11; slices median 37; tiles median 802; choices median 4; max simultaneous 2; death-to-jam leads median 8.5
+  reported R=12: statuses {'ok': 15, 'JAM': 9}; dead at end 7; slices median 71; tiles median 1504; choices median 4; max simultaneous 1; death-to-jam leads median 15.0
+  reported R=24: statuses {'ok': 23, 'JAM': 1}; dead at end 3; slices median 106; tiles median 1513; choices median 3; max simultaneous 1; death-to-jam leads median nan
+
+real	2m44.063s
+user	10m19.891s
+sys	0m3.316s
