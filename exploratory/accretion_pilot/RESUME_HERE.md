@@ -28,6 +28,16 @@ The questions this gives us:
   geometry forgets.)
 - How does difference become memory once something reads it?
 
+**Doozies for the pool room (2026-10-20):**
+
+- **The reader is the growth rule itself.** The step at the front that asks "which tiles fit here?"
+  is the now consulting memory. Each slice the world reads itself, and only admissible tiles get
+  built. The window (projection) is our description of what that reading allows. Reader and
+  projection are one thing seen from two sides. (Katie: "bang on".)
+- **A real universe never jams.** Faced with two nows that disagree, it wouldn't stop. It would
+  carry the disagreement forward: "more now, more now", more information in the world. Maybe that
+  carried-forward disagreement is the stuff (campfire god #6; `local_nows/`).
+
 *"The way that can be named is not the way". But naming it badly, together, and checking it against
 little golden triangles, is a good way to walk around its edges.*
 
