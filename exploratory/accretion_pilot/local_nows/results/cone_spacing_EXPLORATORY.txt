@@ -1,0 +1,1 @@
+EXPLORATORY CONE(H=24) with simultaneous choices >= 48 edges apart: bad 24/24; statuses {'JAM': 24}; choices in the slice of death {1: 9}; tiles median 308

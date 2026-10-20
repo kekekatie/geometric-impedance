@@ -106,7 +106,16 @@ rolled away.)*
   4. patience (light cone): now tested, it works at R ≈ 24;
   5. allow mistakes and heal them;
   6. let the unhealed mistakes *be* the stuff.
-- **Next:** locate contradictions; local nows in decapod worlds; gods 5 and 6.
+- **Causally honest local nows (2026-10-21, pre-registered):** using only the past light cone, 23–24
+  of 24 worlds break for H = 12, 24 and 48 (K2 held; K1 failed).
+  - Exploratory: still 24/24 with choices kept 48 edges apart. So it isn't simultaneity; an honest
+    now can't see incoming forced growth.
+  - R = 24's success used faster-than-light knowledge.
+  - **Lesson:** Penrose rules hide a global constraint (the shared F). Relaxed toppling with honest
+    local nows needs rules where every locally admissible step is globally fine; decapod worlds have
+    that trivially.
+- **Next:** what rules have the "local ⇒ global" property? (Decapod worlds; other tilings; rules where
+  F never bites.)
 
 ## 🛣️ Which lane? ([`which_lane/`](which_lane/)), pre-registered (2026-10-20, from Argon's "handedness")
 
