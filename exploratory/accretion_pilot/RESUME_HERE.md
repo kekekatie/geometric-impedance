@@ -48,6 +48,22 @@ The questions this gives us:
   universe".
 - Disagreement may be carried forward as *undecidedness held open* (patience), not as broken tiles.
 
+**Only the now (Katie, 2026-10-21):**
+
+- **Two aspects of every self-laying now.** Each now lays itself by admissibility, informed by the past
+  only through the geometry it inherits.
+  - Its **forced part** is the permarules and constants: what every now is forced to re-lay.
+  - Its **free part** is where choices live: the kerb, which molecule meets which.
+- **Not** a settled fabric with walkers on it. A moving thing is a pattern each now re-lays a little
+  further on.
+- **Undecidedness is knitted in with decidedness.** A chain of open spots, each reached by the burst
+  of the one before, keeps the universe flexible within its constraints. That may be why it resembles
+  a Penrose tiling so well.
+- In a relaxedly toppling universe, the free spots must never be secret traps (`local_nows/`).
+- **Next, ready to pre-register:** do choices form chains? Does each burst deliver the next open spot
+  near where it ended, or do open spots pop up anywhere? Cheap with `settled_test/` or
+  `cut_direction/` worlds.
+
 *"The way that can be named is not the way". But naming it badly, together, and checking it against
 little golden triangles, is a good way to walk around its edges.*
 
