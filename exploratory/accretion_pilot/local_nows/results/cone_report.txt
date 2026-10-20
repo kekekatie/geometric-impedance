@@ -1,0 +1,6 @@
+bad worlds (jammed or dead) out of 24: CONE(H=12): 23, CONE(H=24): 24, CONE(H=48): 24   [for reference: R=24 (faster-than-light radius) 4, GLOBAL 2, R=3 24]
+  K1: FAILED  non-increasing in H: [23, 24, 24]
+  K2: HELD    CONE(48) bad 24/24 (need >= 8, i.e. clearly worse than R=24's 4)
+  reported H=12: statuses {'JAM': 23, 'ok': 1}; dead at end 17; slices median 35; tiles median 258; choices median 8; death-to-jam lead median 2.0; choices made in the slice of death {3: 6, 2: 4, 4: 3, 1: 3, 5: 1}
+  reported H=24: statuses {'JAM': 24}; dead at end 18; slices median 48; tiles median 267; choices median 10; death-to-jam lead median 2.0; choices made in the slice of death {3: 4, 2: 2, 4: 4, 6: 1, 7: 4, 5: 2, 1: 1}
+  reported H=48: statuses {'JAM': 24}; dead at end 18; slices median 72; tiles median 267; choices median 10; death-to-jam lead median 2.0; choices made in the slice of death {3: 4, 2: 2, 4: 4, 6: 1, 7: 4, 5: 2, 1: 1}

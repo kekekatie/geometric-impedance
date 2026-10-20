@@ -104,3 +104,46 @@ LOCAL rule, with the radius of patience R = 6, 12 and 24 edges.*
   making choices one at a time, much like the global clock. The difference is that they don't wait
   for distant forced activity to finish.
 - R is a straight-line radius, not a true causal cone, and there are 24 seeds.
+
+## Follow-up 2: causally honest local nows ([`PREREGISTRATION_cone.md`](PREREGISTRATION_cone.md))
+
+*Pre-registered and committed before running [`cone.py`](cone.py), 2026-10-21.*
+
+**Why.** The R = 24 rule above checks for forced activity within 24 edges *right now*. Influence
+travels at about 1 edge per slice, so that is **faster-than-light knowledge**. A causally honest
+local now may only use its **past light cone**: forced activity at distance ≤ 1.05·k + 1 edges, k
+slices ago, for k ≤ H.
+
+| | CONE H = 12 | CONE H = 24 | CONE H = 48 | (R = 24, faster than light) | (GLOBAL) |
+|---|---|---|---|---|---|
+| bad worlds of 24 | 23 | 24 | 24 | 4 | 2 |
+
+| | prediction | result | |
+|---|---|---|---|
+| K1 | a deeper past helps (non-increasing in H) | 23 → 24 → 24 | ❌ FAILED |
+| K2 | honest patience is not enough (CONE(48) ≥ 8/24 bad) | **24 / 24** | ✅ HELD |
+
+**Exploratory check** ([`cone_spacing_EXPLORATORY.py`](cone_spacing_EXPLORATORY.py)):
+
+- Fatal slices often held several simultaneous choices. So CONE(H = 24) was re-run with choices
+  forced ≥ 48 edges apart, which is itself a non-local coordination.
+- **Still 24/24 bad**, and now every fatal slice held a single choice.
+- So the failure is not simultaneity. **A causally honest local now cannot see incoming forced growth
+  until it arrives.** A burst heading towards a region stays outside that region's past light cone.
+
+**What it means (plainly).**
+
+- In a Penrose world, local nows can stay coherent only by using knowledge they couldn't honestly
+  have: what is happening far away right now.
+- **Penrose rules hide a global constraint.** The shared window F means that a locally admissible
+  choice can be ruled out by forced growth that hasn't arrived yet. No honest local process can see
+  that in time.
+- **For Katie's central hanger ("the universe topples relaxedly into the next now, within admissible
+  windows"):**
+  - a universe built from honest local nows that never breaks would need rules where **every locally
+    admissible step is always globally fine**;
+  - growth from an arbitrary Penrose patch lacks that property;
+  - the decapod world has it trivially, because it never needs a choice at all.
+
+**Limits.** One cone speed (c = 1.05, from `speed_of_light/`), straight-line distances, and one
+choice rule. A cone measured along the front might differ. 24 seeds. "Dead" again misses some jams.
