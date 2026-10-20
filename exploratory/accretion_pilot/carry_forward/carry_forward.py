@@ -66,12 +66,16 @@ def relaxed(P, p, q, r):
     return list(out.values())
 
 
+def legal_now(P, k):
+    return not P.V.get(k) or P.vertex_ok(k, [])          # an untouched corner counts as legal
+
+
 def badness(P, t):
-    return sum(1 for k, v in L.corners([t]).items() if P.vertex_ok(k, []) and not P.vertex_ok(k, v))
+    return sum(1 for k, v in L.corners([t]).items() if legal_now(P, k) and not P.vertex_ok(k, v))
 
 
 def defects(P):
-    return [k for k in P.V if not P.vertex_ok(k, [])]
+    return [k for k, l in list(P.V.items()) if l and not P.vertex_ok(k, [])]   # skip empty entries left by lookups
 
 
 def run(args):
