@@ -1,0 +1,116 @@
+{
+  "config": {
+    "radius": 22.0,
+    "L_direct": 12,
+    "n_zones": 4,
+    "interior_frac": 0.6,
+    "sensitivity_n": 500,
+    "equiv_margin_frac": 0.05,
+    "seed": 20260702
+  },
+  "substrates": {
+    "ammann_beenker": {
+      "patch_vertices": 1851,
+      "patch_edges": 3597,
+      "interior_pool": 662,
+      "matched_sets_exp1": 2000,
+      "loops_exp2": 2000,
+      "sensitivity": {
+        "d_zone": 0.7507937874088921,
+        "d_zone_ci": [
+          0.6218107837086633,
+          0.88751024814213
+        ],
+        "d_zone_p": 3.086508386224405e-30,
+        "sigma_ref": 0.5057985061363666,
+        "per_zone_means": [
+          1.2947682907430076,
+          1.1627674754162665,
+          1.0712504428846839,
+          0.9150179146551252
+        ],
+        "margin_d": 0.03753968937044461,
+        "margin_raw": 0.018987518804394123
+      },
+      "gammas": [
+        0.135,
+        0.065,
+        0.305,
+        -0.0050000000000000044
+      ],
+      "mechanism_spearman": {
+        "gap_to_residue": -0.28238627614273343,
+        "balance_to_residue": -0.06957249491570132,
+        "gap_to_balance": 0.022582563044898186
+      }
+    },
+    "penrose": {
+      "patch_vertices": 1869,
+      "patch_edges": 3643,
+      "interior_pool": 686,
+      "matched_sets_exp1": 2000,
+      "loops_exp2": 2000,
+      "sensitivity": {
+        "d_zone": 0.693582112650003,
+        "d_zone_ci": [
+          0.5711122708113805,
+          0.8229283540826633
+        ],
+        "d_zone_p": 2.3924437655406227e-26,
+        "sigma_ref": 0.5447465134517612,
+        "per_zone_means": [
+          1.3220252509777064,
+          1.245346293095938,
+          1.123109733727744,
+          0.9441988133191106
+        ],
+        "margin_d": 0.03467910563250015,
+        "margin_raw": 0.01889132188292979
+      },
+      "gammas": [
+        0.09,
+        0.01999999999999999,
+        0.26,
+        -0.05000000000000002,
+        0.17999999999999997
+      ],
+      "mechanism_spearman": {
+        "gap_to_residue": -0.22280392507329885,
+        "balance_to_residue": 0.018702020203390284,
+        "gap_to_balance": -0.015806034552990997
+      }
+    }
+  },
+  "timing": {
+    "ammann_beenker": 293.2,
+    "penrose": 225.7
+  },
+  "headline": {
+    "ammann_beenker": {
+      "d_zone": 0.7507937874088921,
+      "exp1_all_conditions_equivalent": true,
+      "exp1_max_abs_cohen_d": 2.8994993628492506e-16,
+      "exp2_C4_cancels": true,
+      "exp2_C4_max_holonomy": 8.881784197001252e-16,
+      "exp2_C5_cancels": true,
+      "exp2_C5_max_holonomy": 8.881784197001252e-16,
+      "exp3_max_transit_partial_r2": 0.0005468149374037903,
+      "exp3_residue_within_set_sd": 1.2415569661717207e-16,
+      "outcome": "A: full equivalence -- positional (not historical) confirmed at full strength"
+    },
+    "penrose": {
+      "d_zone": 0.693582112650003,
+      "exp1_all_conditions_equivalent": true,
+      "exp1_max_abs_cohen_d": 0.0,
+      "exp2_C4_cancels": true,
+      "exp2_C4_max_holonomy": 1.3506446028928519e-15,
+      "exp2_C5_cancels": true,
+      "exp2_C5_max_holonomy": 8.95090418262362e-16,
+      "exp3_max_transit_partial_r2": 0.00011593125962374759,
+      "exp3_residue_within_set_sd": 1.2745663143682859e-16,
+      "outcome": "A: full equivalence -- positional (not historical) confirmed at full strength"
+    }
+  },
+  "runtime_min": 8.68,
+  "n_sets": 2000
+}
