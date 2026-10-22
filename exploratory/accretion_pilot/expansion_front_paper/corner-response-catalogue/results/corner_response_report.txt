@@ -1,0 +1,12 @@
+worlds: 24; statuses {'ok': 20, 'JAM': 4}; total ties caught 10231
+drawers: {'single_keystone': 5994, 'committee': 612, 'stayed_open': 3559, 'directly_chosen': 66}
+A1: HELD    single keystones settle 5994/6606 = 90.74% of settled ties (need >= 60%)
+A2a: HELD    deciding touch is a corner (vertex rule, no overlap) in 5994/5994 = 100.00% (need >= 80%); keystone carries the failing vertex in 5982/5994
+A2b: HELD    mean fraction of neighbours that settle alone = 32.01% (need < 50%; keystone itself always settles = 100%)
+A3: HELD    recurring moves (>= 5x): 175; malleable (<90%): 91 = 52.00% (need >= 15%)
+    stiffness line (settle-fraction -> #moves): 0.0:5; 0.1:4; 0.2:8; 0.3:11; 0.4:15; 0.5:7; 0.6:7; 0.7:17; 0.8:11; 0.9:14; 1.0:76
+  reported (stiffness vs window radius):
+    radius 1*S: 45 recurring moves; malleable 80.00%; mean settle-fraction 67.18%
+    radius 2*S: 175 recurring moves; malleable 52.00%; mean settle-fraction 72.85%
+    radius 3*S: 338 recurring moves; malleable 47.04%; mean settle-fraction 71.27%
+    radius 4*S: 430 recurring moves; malleable 44.65%; mean settle-fraction 70.11%
