@@ -1,5 +1,7 @@
 # Expansion-front checks and figures
 
+**Latest checkpoint (22 October 2026):** start with [HANDOVER_ACTIVE_SKIN.md](HANDOVER_ACTIVE_SKIN.md) for the active-skin, cold-restart, endurance and local-response work, saved outputs and reproduction commands. The notes below preserve the earlier manuscript/figure stage.
+
 Work date: 16 October 2026. Manuscript title agreed in the supplied handoff:
 **Decided before it is built: Local choices and their consequences in a growing Penrose tiling**.
 

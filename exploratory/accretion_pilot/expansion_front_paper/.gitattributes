@@ -1,0 +1,5 @@
+# Stable bytes for checkpoint manifests across Windows and Unix checkouts.
+* text=auto eol=lf
+*.pkl -text
+*.png -text
+*.gif -text

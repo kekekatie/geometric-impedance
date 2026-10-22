@@ -1,0 +1,518 @@
+{
+  "date": "2026-10-21",
+  "key": "180fb0b920bb845b",
+  "continuations_one_based": [
+    1,
+    3
+  ],
+  "streams": [
+    20810350027,
+    20810365865
+  ],
+  "original_cut_angle": 18.0,
+  "original_predicted_family": 2,
+  "second_cut_angle": 161.99999999999997,
+  "second_predicted_family": 3,
+  "second_region_areas": [
+    0.07324497683104181,
+    0.05061103423765132,
+    0.02263394259339102
+  ],
+  "second_piece_fractions": [
+    0.6909830056250623,
+    0.30901699437494495
+  ],
+  "same_prechoice_patch": true,
+  "no_forced_site_before_second_choice": true,
+  "candidate_count": 2,
+  "replay_verified_all_slices": true,
+  "original_A_identical_and_no_later_guesses": true,
+  "paired_original_A_vs_B_families": [
+    2,
+    3
+  ],
+  "historical_B_difference_at_slice11": 22,
+  "choice_contact_with_historical_B_difference": [
+    {
+      "shared_vertices": 0,
+      "shared_edges": 0
+    },
+    {
+      "shared_vertices": 0,
+      "shared_edges": 0
+    }
+  ],
+  "measurements": [
+    {
+      "slice": 11,
+      "new": [
+        0,
+        0
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        0,
+        0
+      ],
+      "unequal_coverage": [
+        0,
+        0
+      ],
+      "dominant_second_difference": null,
+      "family_incidence_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tied_largest_families": [],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ]
+    },
+    {
+      "slice": 12,
+      "new": [
+        1,
+        1
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        1,
+        1
+      ],
+      "unequal_coverage": [
+        0,
+        0
+      ],
+      "dominant_second_difference": 1,
+      "family_incidence_counts": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "tied_largest_families": [
+        1
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ]
+    },
+    {
+      "slice": 13,
+      "new": [
+        3,
+        5
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        2,
+        3
+      ],
+      "unequal_coverage": [
+        1,
+        2
+      ],
+      "dominant_second_difference": 1,
+      "family_incidence_counts": [
+        2,
+        3,
+        1,
+        3,
+        1
+      ],
+      "tied_largest_families": [
+        1,
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ]
+    },
+    {
+      "slice": 14,
+      "new": [
+        5,
+        11
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        4,
+        6
+      ],
+      "unequal_coverage": [
+        1,
+        5
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        2,
+        3,
+        4,
+        7,
+        4
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 0,
+          "shared_edges": 0
+        }
+      ]
+    },
+    {
+      "slice": 15,
+      "new": [
+        8,
+        17
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        7,
+        8
+      ],
+      "unequal_coverage": [
+        1,
+        9
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        4,
+        4,
+        5,
+        11,
+        6
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 1,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 2,
+          "shared_edges": 0
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 1,
+          "shared_edges": 0
+        },
+        {
+          "shared_vertices": 1,
+          "shared_edges": 0
+        }
+      ]
+    },
+    {
+      "slice": 16,
+      "new": [
+        11,
+        24
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        11,
+        11
+      ],
+      "unequal_coverage": [
+        0,
+        13
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        6,
+        7,
+        8,
+        15,
+        8
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 2,
+          "shared_edges": 1
+        },
+        {
+          "shared_vertices": 3,
+          "shared_edges": 1
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 2,
+          "shared_edges": 1
+        },
+        {
+          "shared_vertices": 2,
+          "shared_edges": 1
+        }
+      ]
+    },
+    {
+      "slice": 17,
+      "new": [
+        14,
+        32
+      ],
+      "shared_new": 0,
+      "covered_difference": [
+        13,
+        14
+      ],
+      "unequal_coverage": [
+        1,
+        18
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        8,
+        10,
+        9,
+        18,
+        9
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 5,
+          "shared_edges": 2
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 2,
+          "shared_edges": 1
+        },
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        }
+      ]
+    },
+    {
+      "slice": 18,
+      "new": [
+        18,
+        43
+      ],
+      "shared_new": 1,
+      "covered_difference": [
+        16,
+        18
+      ],
+      "unequal_coverage": [
+        1,
+        24
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        10,
+        11,
+        12,
+        23,
+        12
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 6,
+          "shared_edges": 3
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        }
+      ]
+    },
+    {
+      "slice": 19,
+      "new": [
+        23,
+        52
+      ],
+      "shared_new": 3,
+      "covered_difference": [
+        19,
+        20
+      ],
+      "unequal_coverage": [
+        1,
+        29
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        10,
+        11,
+        15,
+        26,
+        16
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 7,
+          "shared_edges": 4
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        }
+      ]
+    },
+    {
+      "slice": 20,
+      "new": [
+        27,
+        63
+      ],
+      "shared_new": 4,
+      "covered_difference": [
+        22,
+        23
+      ],
+      "unequal_coverage": [
+        1,
+        36
+      ],
+      "dominant_second_difference": 3,
+      "family_incidence_counts": [
+        10,
+        11,
+        20,
+        30,
+        19
+      ],
+      "tied_largest_families": [
+        3
+      ],
+      "new_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 8,
+          "shared_edges": 5
+        }
+      ],
+      "changed_contact_with_old_difference": [
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        },
+        {
+          "shared_vertices": 3,
+          "shared_edges": 2
+        }
+      ]
+    }
+  ],
+  "scope": "One previously selected exception; original engine and existing 20-slice horizon. Contact is geometric, not a persistent-object or causal-interaction test.",
+  "cache_sha256": "84c8830a5a0b3279dbd7f5dadebefa5238747481ad6c68ee3ef107612f925aee"
+}

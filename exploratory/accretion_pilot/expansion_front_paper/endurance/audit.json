@@ -1,0 +1,53 @@
+[
+  {
+    "case": "continuation-1",
+    "witness_links_checked": 34633,
+    "real_motif_invariance_checks": 26,
+    "loss_descriptions": [
+      {
+        "family": "star",
+        "observed_losses_without_same_class_renewal": 404,
+        "median_nearby_active_steps_before_loss": 1.0
+      },
+      {
+        "family": "pocket",
+        "observed_losses_without_same_class_renewal": 1248,
+        "median_nearby_active_steps_before_loss": 1.0
+      }
+    ]
+  },
+  {
+    "case": "continuation-3",
+    "witness_links_checked": 53139,
+    "real_motif_invariance_checks": 26,
+    "loss_descriptions": [
+      {
+        "family": "star",
+        "observed_losses_without_same_class_renewal": 740,
+        "median_nearby_active_steps_before_loss": 1.0
+      },
+      {
+        "family": "pocket",
+        "observed_losses_without_same_class_renewal": 2120,
+        "median_nearby_active_steps_before_loss": 1.0
+      }
+    ]
+  },
+  {
+    "case": "alternative-29",
+    "witness_links_checked": 62468,
+    "real_motif_invariance_checks": 26,
+    "loss_descriptions": [
+      {
+        "family": "star",
+        "observed_losses_without_same_class_renewal": 859,
+        "median_nearby_active_steps_before_loss": 1
+      },
+      {
+        "family": "pocket",
+        "observed_losses_without_same_class_renewal": 2547,
+        "median_nearby_active_steps_before_loss": 1
+      }
+    ]
+  }
+]
