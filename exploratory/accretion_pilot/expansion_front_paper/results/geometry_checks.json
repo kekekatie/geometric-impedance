@@ -1,0 +1,29 @@
+{
+  "facet_normal_directions": [
+    0.0,
+    36.0,
+    72.0,
+    108.0,
+    144.0
+  ],
+  "indexed_star_directions": [
+    0,
+    36,
+    72,
+    108,
+    144
+  ],
+  "same_sets": true,
+  "maximum_observed_normal_error": 1.4210854715202004e-14,
+  "maximum_conditional_arithmetic_error": 5.684341886080802e-14,
+  "chronology": {
+    "cut_direction": {
+      "PREREGISTRATION.md": "25fd2f01a87d243cd94f6ee69e1c5dcbec76dea9 2026-10-15T04:59:34Z",
+      "cut_direction.py": "2d6082de06499235f0a2900b4876bc1d611c51d3 2026-10-15T05:00:48Z"
+    },
+    "settled_test": {
+      "PREREGISTRATION.md": "4ea7cfc7b775815c36dcae6bffc7618faf1b13d9 2026-10-15T05:46:30Z",
+      "settled_test.py": "2a6ca47f9f1146f9421bbd1f3449dc49d86ce865 2026-10-15T05:47:45Z"
+    }
+  }
+}

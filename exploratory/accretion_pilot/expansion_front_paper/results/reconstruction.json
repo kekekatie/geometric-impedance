@@ -1,0 +1,53 @@
+{
+  "base_commit": "d4e00c5d4396c38bd69b265907b5f3d6c5bc030a",
+  "overview_checks": "Matched configuration key, changed count, family shares, cut angle, PCA axis and ratio, and all placement-time pairs.",
+  "overview_stream": 21367916006,
+  "overview_world_seed": 20261199,
+  "core_diagnostics": [
+    {
+      "changed": 42,
+      "core": 27,
+      "predicted_family": 27,
+      "core_family": 27
+    },
+    {
+      "changed": 42,
+      "core": 29,
+      "predicted_family": 29,
+      "core_family": 29
+    }
+  ],
+  "exception_checks": "Full reconstructed situation dictionary equals saved dictionary.",
+  "exception_world_seed": 20261211,
+  "exception_streams": [
+    20810350027,
+    20810357946,
+    20810365865,
+    20810373784,
+    20810381703
+  ],
+  "exception_pair": [
+    0,
+    2
+  ],
+  "exception_later_guesses": [
+    {
+      "continuation": 0,
+      "slices": [
+        12
+      ]
+    },
+    {
+      "continuation": 2,
+      "slices": [
+        12
+      ]
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "scope": "Two world prefixes; selected branch continuations and bursts only. No full study rerun."
+}

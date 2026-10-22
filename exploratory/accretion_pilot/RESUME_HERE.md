@@ -1,5 +1,13 @@
 # 👋 Resume here — a note from past-us to future-us
 
+## Expansion-front paper: checks and figures (2026-10-16)
+
+See [`expansion_front_paper/START_HERE.md`](expansion_front_paper/START_HERE.md) for the saved-data
+audit, four reconstructed figures, captions and reproduction commands. The numerical checks agree
+with the deposited results. The manuscript pass is deferred. The new review qualifies the historical
+wording below: a forced burst is a conditional guarantee, not the complete extent of a choice's influence;
+the next guess does not establish an end to all earlier consequences.
+
 ## 🌱 Guiding ideas (breadcrumbs for whoever comes looking)
 
 *Katie's bedrock, refined together on 2026-10-12.* The universe has to be made of something akin to

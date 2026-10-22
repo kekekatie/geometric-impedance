@@ -1,0 +1,4 @@
+__pycache__/
+results/mpl-cache/
+# The small geometry checkpoint is intentionally versioned for reproducibility.
+.venv/

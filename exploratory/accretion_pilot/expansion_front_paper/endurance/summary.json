@@ -1,0 +1,54 @@
+[
+  {
+    "case": "continuation-1",
+    "last_slice": 70,
+    "stop": "JAM",
+    "tracks": 2606,
+    "classes": 887,
+    "same_links": 45,
+    "transition_links": 34588,
+    "max_candidate_chain_links": 1,
+    "example_chain": [
+      64,
+      462
+    ],
+    "unlinked_lookalikes": 824,
+    "fully_dropped": 87,
+    "right_censored": 531
+  },
+  {
+    "case": "continuation-3",
+    "last_slice": 120,
+    "stop": "ok",
+    "tracks": 3711,
+    "classes": 873,
+    "same_links": 87,
+    "transition_links": 53052,
+    "max_candidate_chain_links": 2,
+    "example_chain": [
+      2525,
+      2546,
+      2571
+    ],
+    "unlinked_lookalikes": 843,
+    "fully_dropped": 1367,
+    "right_censored": 575
+  },
+  {
+    "case": "alternative-29",
+    "last_slice": 120,
+    "stop": "ok",
+    "tracks": 4302,
+    "classes": 989,
+    "same_links": 74,
+    "transition_links": 62394,
+    "max_candidate_chain_links": 1,
+    "example_chain": [
+      17,
+      447
+    ],
+    "unlinked_lookalikes": 1331,
+    "fully_dropped": 1196,
+    "right_censored": 599
+  }
+]
