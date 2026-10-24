@@ -1,0 +1,8 @@
+worlds 24; statuses {'ok': 20, 'JAM': 4}; recurring-fingerprint ties 9985; bursted 9985
+burst fates: {'settled': 6054, 'saturated_open': 3931}
+METHOD CONTROL: rigid fingerprints burst-settle mean 0.994 over 84 fps (want ~1.0; validates the separator)
+C1: FAILED  secretly-rigid (timing) malleable fps 8/91 = 8.8% (need >= 50%)
+C2: HELD    genuine-(a) malleable fps 83/91 = 91.2% (need >= 15%)
+C3: HELD    wall-nearness settled median 0.000 (n 6099) < stayed-open 0.382 (n 3356); Mann-Whitney p 0.00e+00; std effect 1.406 (B's outer-depth effect was ~0.1)
+C4: HELD    genuine-(a) burst-settlers wall-nearness median 0.000 (n 2240) < stayers 0.382 (n 3886); p 0.00e+00
+  reported (true stiffness after removing timing; burst-settle fraction -> #malleable fps): 0.0:15; 0.1:15; 0.2:7; 0.3:1; 0.4:5; 0.5:6; 0.6:7; 0.7:8; 0.8:12; 0.9:6; 1.0:9

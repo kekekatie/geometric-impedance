@@ -232,8 +232,9 @@ def main():
             worlds = p.map(grow_world_c, ids)
     report, summary = score(worlds)
     print(report)
-    (RES / "worlds.json").write_text(json.dumps(worlds, default=lambda o: o.item() if hasattr(o, "item") else str(o)))
-    (RES / "summary.json").write_text(json.dumps(summary, indent=2))
+    jdefault = lambda o: o.item() if hasattr(o, "item") else str(o)
+    (RES / "worlds.json").write_text(json.dumps(worlds, default=jdefault))
+    (RES / "summary.json").write_text(json.dumps(summary, indent=2, default=jdefault))
     (RES / "malleable_chase_report.txt").write_text(report + "\n")
 
 
