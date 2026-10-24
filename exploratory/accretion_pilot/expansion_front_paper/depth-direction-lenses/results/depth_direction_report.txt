@@ -1,0 +1,7 @@
+worlds: 24; statuses {'ok': 20, 'JAM': 4}; lift conflicts [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; ties 10231; keystone ties 5994
+B1: FAILED  keystone-vertex median depth below world median in 0/24 worlds (need >= 20/24); pooled keystone depth median 0.342 vs world median 0.256
+B2: HELD    keystone inward alignment mean 0.749 (need > 0.5; +1=inward), over 5589 complete keystone vertices; tangential mean 0.002 (want ~0)
+B3: did not hold  depth<->settle-fraction Spearman -0.09 across 175 recurring moves (pledged <= -0.2; negative = shallower settles more)
+    pooled choice-vertex depth: settled median 0.393 (n 6606) vs stayed-open median 0.447 (n 3559)
+  reported (lens vs paper): depth<->balance Spearman on interior subset, per-world median -0.496 (June paper: -0.72 to -0.78)
+  reported (shuffled control for B1): keystone-below-world in 0/24 worlds when depths are drawn at random (should be ~half; real B1 was 0)

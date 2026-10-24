@@ -78,15 +78,16 @@ def map_figure(world=3):
     P = {v: PM.perp(K[v]) for v in verts}
     xs = [P[v].real for v in verts if v in dep]; ys = [P[v].imag for v in verts if v in dep]
     cs = [dep[v] for v in verts if v in dep]
-    sc = axR.scatter(xs, ys, c=cs, cmap=cmap, norm=norm, s=18, edgecolors="none")
-    cen = np.array([np.mean(xs), np.mean(ys)])
-    # inward arrows for shallow vertices (sampled)
-    shallow = [v for v in verts if v in dep and dep[v] < 0.35 and len(adj[v]) >= 4]
-    for v in shallow[::2]:
+    sc = axR.scatter(xs, ys, c=cs, cmap=cmap, norm=norm, s=16, edgecolors="none", alpha=.85)
+    # the deciding corners, and short arrows showing their inward pull
+    kin = [v for v in kverts if v in P and v in dep and len(adj[v]) >= 4]
+    axR.scatter([P[v].real for v in kin], [P[v].imag for v in kin], s=34, facecolors="none",
+                edgecolors=CORE, linewidths=1.0, label="keystone corner")
+    for v in kin[::3]:
         R = sum(sg * ZETA ** (2 * j) for j, sg in adj[v]) / len(adj[v])
-        axR.arrow(P[v].real, P[v].imag, R.real * 2.2, R.imag * 2.2, head_width=0.12, color="#d66a34", alpha=.8, length_includes_head=True)
-    kin = [v for v in kverts if v in P and v in dep]
-    axR.scatter([P[v].real for v in kin], [P[v].imag for v in kin], s=40, facecolors="none", edgecolors=CORE, linewidths=1.1)
+        axR.arrow(P[v].real, P[v].imag, R.real * 0.45, R.imag * 0.45, head_width=0.045,
+                  lw=0.6, color="#d66a34", alpha=.85, length_includes_head=True)
+    axR.legend(loc="lower right", fontsize=9, framealpha=.9)
     axR.set(aspect="equal"); axR.set_title("The hidden window (one layer)\nshallow vertices at the rim, arrows pulling inward")
     axR.set_xlabel("perp coordinate 1"); axR.set_ylabel("perp coordinate 2")
     fig.colorbar(sc, ax=axR, fraction=0.046, pad=0.04, label="hull depth")
