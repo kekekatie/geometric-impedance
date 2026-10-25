@@ -1,0 +1,5 @@
+worlds 1; settlements with rib length 24
+rib length: median -1.0, mean 5.0, p10 -1 p90 -1, max 71, negatives 22
+D'1: did not hold  Spearman(stiffness, rib) -0.440 (pledged > 0.2); rigid median -1.0 (n 17) vs malleable -1.0 (n 7)
+D'2: did not hold  bimodality gap/std 0.0 (pledged > 0.5)
+D'3: did not hold  Spearman(rib, advance-rate) -0.486 (pledged |rho| < 0.2; D's broken reach was -0.279)
