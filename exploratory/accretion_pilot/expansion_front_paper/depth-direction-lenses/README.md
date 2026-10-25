@@ -7,8 +7,11 @@ window-truncation, seen from the back?*
 > hull (1 at its point-cloud centroid), so "below 0.5" does not by itself prove unusually shallow
 > placement. Depth and arrows are measured at the *final* patch, not at settlement. The pledged
 > coordinate-shuffling null was replaced by resampling keystone depths (not the planned control).
-> Near-zero *mean* tangential alignment does not establish no individual handedness. B2 (inward 0.749)
-> stands as a real, if late-measured, signal; B1/B3's failures stand. The text below is the original.
+> Near-zero *mean* tangential alignment does not establish no individual handedness — **confirmed**: the
+> signed mean tangential is +0.002 but the **mean magnitude is 0.199** (± twists cancel). So B2 holds as
+> *inward-dominant* (|inward| 0.96, ~5× the tangential) with **no systematic handedness/chirality**
+> (balanced ± twists), but *not* "zero tangential" — each corner has a real symmetric sideways wiggle.
+> B1/B3's failures stand. The text below is the original.
 
 Marries the corner-response catalogue (Experiment A) to the June 2026 directional-balance paper
 (`../../../papers/`), using the lift / hull-depth machinery in `../../perp_map/`. Question, pictures,
