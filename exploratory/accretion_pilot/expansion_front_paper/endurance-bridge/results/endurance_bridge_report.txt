@@ -1,0 +1,7 @@
+worlds 24; recurring ties 9985; settlements with reach 6395
+reach: median 14.0, mean 24.3, max 173, p10 4 p90 63
+D1: did not hold  Spearman(stiffness, reach) -0.458 (pledged > 0.2); rigid-fp reach median 10.0 (n 3380) vs malleable 29.0 (n 3015)
+D2: did not hold  reach bimodality gap/std 0.054 (pledged > 0.5; crude dip -- see histogram)
+D3: did not hold  Spearman(reach, frontier-advance-rate) -0.279 (pledged |rho| < 0.2; structural, not temporal)
+  reported: reach median for burst=settled: 14.0 (n 5629)
+  reported: reach median for burst=saturated_open: 12.0 (n 766)
