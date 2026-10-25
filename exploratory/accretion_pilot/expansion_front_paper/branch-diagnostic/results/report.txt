@@ -1,0 +1,5 @@
+genuine free choices diagnosed: 24 (fresh worlds 216-225, radius 7*S, cap 50)
+branch divergence |A-only|+|B-only|: median 176, mean 191.2, p10 163, p90 272, max 278
+both-arms-identical (zero divergence excluded above): would be 0 of diagnosed
+stop reasons A: {'saturated': 24}
+stop reasons B: {'saturated': 24}

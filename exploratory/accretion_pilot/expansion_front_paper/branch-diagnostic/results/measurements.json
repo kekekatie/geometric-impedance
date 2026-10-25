@@ -1,0 +1,60 @@
+{
+  "n": 24,
+  "divergence": [
+    194,
+    197,
+    154,
+    194,
+    154,
+    197,
+    165,
+    165,
+    165,
+    165,
+    177,
+    177,
+    166,
+    163,
+    166,
+    163,
+    189,
+    174,
+    189,
+    174,
+    278,
+    272,
+    272,
+    278
+  ],
+  "median_divergence": 175.5,
+  "examples": [
+    {
+      "n_common": 10,
+      "n_a": 264,
+      "n_b": 14,
+      "stopA": "saturated",
+      "stopB": "saturated"
+    },
+    {
+      "n_common": 10,
+      "n_a": 14,
+      "n_b": 264,
+      "stopA": "saturated",
+      "stopB": "saturated"
+    },
+    {
+      "n_common": 10,
+      "n_a": 258,
+      "n_b": 14,
+      "stopA": "saturated",
+      "stopB": "saturated"
+    },
+    {
+      "n_common": 10,
+      "n_a": 14,
+      "n_b": 258,
+      "stopA": "saturated",
+      "stopB": "saturated"
+    }
+  ]
+}
