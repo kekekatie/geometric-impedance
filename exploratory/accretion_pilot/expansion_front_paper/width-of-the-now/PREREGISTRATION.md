@@ -1,114 +1,129 @@
-# The width of the now: does a choice's decisiveness change how long its structure is remembered?
+# The width of the now: how far does a choice's seam carry, and does decisiveness change it?
 
-### The faithful endurance bridge (Experiment E)
+### The faithful endurance bridge (Experiment E) — v2, sharpened before any run
 
-*Pre-registration. Written and committed **before any study code for E exists**. The numbers below are
-our called shots. This is the faithful replacement for D/D′: it measures persistence **directly** on the
-advancing active skin, with no forced-cascade proxy.*
+*Pre-registration. Written and committed **before any study code for E exists**. v2 incorporates
+Argon's pre-run critique (below); no confirmatory numbers have been produced. This is the faithful
+replacement for D/D′ and the keystone for the AI-memory paper's §4
+(`../../../AI_MEMORY_PAPER_SEED.md`): the one test that could move "distance-to-the-wall is a novelty
+budget" from `(Play.)` to `(True.)`.*
 
-*Katie (direction), with Astra (the renewal/clock/censoring spec), Argon, Fable, Claude (Opus 4.8).
-This is the keystone experiment for the AI-memory paper's §4 (`../../../AI_MEMORY_PAPER_SEED.md`): it is
-the one test that would move "distance-to-the-wall is a novelty budget" from `(Play.)` to `(True.)`.*
+*Katie (direction), Argon (the aperiodicity/seam sharpening), Astra (clock/censoring spec), Fable,
+Claude (Opus 4.8).*
 
 ---
 
-## The picture first
+## The picture first — memory in an aperiodic medium is transformation, not repetition
 
-On the hollow **active skin** (a true frontier with everything more than 2·S behind it pruned away),
-motifs — completed vertex stars — are born on the advancing rim and then **mostly turn over**: a
-different motif replaces them. Only rarely does a motif's *kind* **renew** — a same-class daughter
-appears nearby before the original is buried. A fresh-world probe (Astra's observer) found only **50 of
-2,851 motifs renewed, longest chain 1 link**. The advancing now, it seems, mostly *forgets*.
+On the hollow **active skin**, a probe found only **1.8% of motifs renew their exact class** (max chain
+1). The first instinct is "the now forgets." That instinct is wrong, and the reason matters:
 
-So this study asks: **when a choice settles and completes a motif, does the *decisiveness* of that
-choice change how long the motif persists — and whether its kind is remembered — along the now?**
+> An aperiodic tiling's matching rules **forbid a motif from cloning itself in place** — endless
+> A→A→A is a *crystal*. To carry information forward without locking into a dead periodic loop, a motif
+> **must transform**: a star forces a boat forces a crown forces a deuce, passing the baton through a
+> *changing* sequence of shapes along a causal seam. So 98% same-class turnover is not forgetting — it
+> is the **signature of aperiodic endo-reconstruction**.
 
-The active-skin growth is **verified identical** to the catalogue growth (Astra's finding #7: same
-scheduler, same ties, same placements), so each motif-completing settlement can be joined to its
-birth-state from A (fingerprint stiffness) and C (genuine-vs-secretly-rigid).
+This kills two of the original (v1) measures and replaces them:
 
-## Why the clock must be local
+- **Same-class renewal** (v1's E1/E2) measured the thing aperiodicity exists to prevent. Demoted to a
+  *reported* phenomenon check (E0).
+- **Static residence time** (v1's E1 — "local steps a birth-motif sits unburied") is **confounded and
+  inverted**: a motif only lingers unburied if the frontier *stalls*. A decisive, on-the-wall choice
+  **buries its own birth-star faster** by immediately closing its ring; a stalled open pocket waits.
+  So residence time measures *waiting*, not *memory*, and would read decisive = faster forgotten when
+  the truth is decisive = faster completed. Kept only as a *reported diagnostic*, to expose the confound.
 
-"How many global slices a motif lasts" is a stopwatch artifact — it only reflects how fast the front
-sweeps past. So the lifetime clock is **local active steps**: steps where the frontier actually touches
-the motif's neighbourhood. Motifs alive at the first or last observed slice are **censored** (their true
-lifetime is unknown) and handled explicitly, not scored as if complete.
+The real quantity is the **causal-support lineage seam**: when a choice commits, the tiles forced *as a
+consequence* form a transforming descendant lineage (the "domain wall" of *decided-before-it-is-built*,
+`../../decided_before_built.md`). **Lineage endurance** = how many active-skin steps that seam keeps
+feeding the advancing frontier before it is spent. That is memory as living inheritance.
 
 ---
 
 ## Words
 
-- **Active skin** — `ActiveSkin` (radius 2·S) grown with the patient scheduler; `endurance_observer`
-  tracks motifs across frames (`discover`, reflection-folded `canonical` classes, born/renewed/lost).
-- **Motif** — a completed vertex star or small pocket on the skin, with a canonical class.
-- **Renewal** — a same-class daughter motif appears (a same-class link, Astra's machinery) before the
-  parent is lost. **Chain length** — the longest same-class renewal chain a motif anchors.
-- **Burial** — the motif's tiles are pruned from the skin (the frontier advanced > 2·S past it).
-- **Local-active-step lifetime** — the number of steps, between birth and burial, in which the frontier
-  touched the motif's neighbourhood (its own clock, not global slices).
-- **Censored** — left-censored (present at the first observed frame) or right-censored (still present at
-  the run's end / jam); true lifetime unknown.
-- **Birth-decisiveness** — for a motif completed by a settlement, the completing tie's fingerprint
-  **stiffness** (A, rigid ≥ 0.9 vs malleable) and **burst class** (C, secretly-rigid vs genuine-(a)).
+- **Active skin** — `ActiveSkin` (radius 2·S), patient scheduler; `endurance_observer` for motif classes.
+- **Causal-support parent** — when a forced tile is placed, the already-present tile(s) across the edge
+  that made it forced. The forward **lineage** of a choice is the transitive closure of these links from
+  the committed tile.
+- **Live on the front** — a lineage tile that lies on (or within 2·S of) the current true frontier.
+- **Lineage endurance** — the number of **local active steps** between the choice and the last step at
+  which its lineage is still live on the front (the seam's forward reach in frontier-time). Censored if
+  the run jams or ends while the seam is still live.
+- **Static residence (diagnostic only)** — local active steps the birth-motif itself sits unburied.
+- **Same-class renewal (phenomenon only)** — a same-class daughter appears before the parent is lost.
+- **Birth-decisiveness** — the completing tie's fingerprint **stiffness** (A, rigid ≥ 0.9 vs malleable)
+  and **burst class** (C, secretly-rigid vs genuine-(a)).
+- **Local clock** — all endurance is counted in local active steps (frontier touches the neighbourhood),
+  never global slices; global slices are kept only for the E3 control.
 
 ## Set-up (fixed now)
 
-- **40 fresh active-skin worlds** (wedge entries 226–265), grown until jam or 120 steps. Active-skin
-  worlds jam early (~40–70 steps), so many are needed for enough uncensored motifs.
-- Every motif is tracked (lifetime, renewal, censoring). Motifs whose completing tile settles a two-way
-  tie are joined to that tie's birth-decisiveness.
-- All clocks are **local active steps**; global slices are recorded only for the E3 control.
+- **40 fresh active-skin worlds** (wedge entries 226–265), grown until jam or 120 steps (these worlds
+  jam early, ~40–70 steps, so many are needed). Growth is verified identical to the catalogue, so each
+  motif-completing settlement joins to its A/C birth-state.
+- A forced-support dependency graph is recorded during growth; every settlement's lineage endurance,
+  static residence, and same-class renewal are measured, with censoring flagged.
 
 ---
 
 ## Predictions (our called shots)
 
-**E0 — the now mostly forgets (the phenomenon).**
-Same-class renewal is rare and short: **fewer than 10%** of motifs renew at all, and the median renewal
-chain among those that do is **≤ 2 links**. *Confidence ≈ 80%* (the probe and Astra's #9 both point
-here; this establishes weak, short structural memory as the baseline).
+**E0 — aperiodicity forbids cloning (phenomenon).** Same-class renewal is rare — **< 10%** of motifs,
+median chain **≤ 2** among those that renew. This confirms memory cannot be carried by repetition here.
+*Confidence ≈ 80%.*
 
-**E1 — decisiveness modulates persistence (the memory-relevant test).**
-Among motifs completed by a settlement, birth-decisiveness predicts local-active-step lifetime. Lead
-guess, aligned with the memory thesis ("keep the forks — what can still change a decision"):
-**malleable-born motifs persist longer** than rigid-born ones — Spearman(stiffness, lifetime) **≤ −0.15**
-(lower stiffness → longer life), on censoring-handled data. *Confidence ≈ 40%* (genuinely open —
-direction may invert or vanish; we commit to reporting it either way, with the censoring explicit).
+**E1 — decisiveness carries the seam further (the memory-relevant test).** Among motifs completed by a
+settlement, **more decisive births carry a longer live lineage**: Spearman(stiffness, lineage endurance)
+**≥ +0.15** (rigid / on-the-wall → longer seam — the hardened stepping-stone feeds the next stones),
+on censoring-handled data. *Confidence ≈ 40%* (direction open; reported either way).
 
-**E2 — and they are remembered more, not just longer.**
-Malleable-born motifs renew (anchor a same-class chain ≥ 1) at a **higher rate** than rigid-born ones.
-*Confidence ≈ 35%* (renewal is sparse, so this may be underpowered; reported with its n).
+**E2 — the dissociation (the whole point).** Static residence and lineage endurance pull in **opposite
+directions** with decisiveness: malleable/open motifs **sit unburied longer** (waiting on the shelf),
+while decisive motifs **carry a longer live lineage** (living inheritance). Operationally,
+sign[corr(stiffness, residence)] ≠ sign[corr(stiffness, lineage endurance)]. *Confidence ≈ 40%* — if
+found, it cleanly separates "waiting" from "memory", which is the experiment's reason to exist.
 
-**E3 — the local clock is not the stopwatch.**
-The birth-decisiveness effect (if any in E1) is present with the **local-active-step** clock and is not
+**E3 — the local clock is not the stopwatch.** Lineage endurance measured in local active steps is not
 explained by the global frontier-advance rate. *Confidence ≈ 55%.*
 
 ---
 
 ## Reported, but not scored
 
-- **Survival curves** of local-active-step lifetime by birth-decisiveness, with censoring marked.
-- **Renewal chain-length distribution** overall and by birth-state.
-- **Transition vs same-class** link counts (how much the skin turns over vs renews).
-- The join coverage: what fraction of motifs could be matched to a settling tie.
+- Same-class renewal chain-length distribution (the aperiodicity signature) and transition-vs-same-class
+  link counts.
+- Static-residence distributions by birth-state (the confound, shown in the open).
+- Lineage-size vs lineage-endurance (static footprint vs forward reach — ties back to the branch
+  diagnostic's 264-vs-14).
+- Join coverage: fraction of motifs matched to a settling tie.
 
-## The implementation risk we will validate before the confirmatory run
+## The two implementation risks to validate before any confirmatory run
 
-The **motif ↔ settlement join** — matching a tracked motif to the two-way tie whose settlement completed
-it — is the one piece not yet built. It will be validated on a small run (does it match a sensible
-fraction of motifs; do the matched birth-states look right) **before** any confirmatory numbers are
-produced. If the join proves unreliable, E1/E2 fall back to a coarser birth-context (the local
-wall-nearness field at the motif's birth site) and that substitution will be disclosed.
+1. **The lineage measure must not re-be a frontier-speed proxy.** D died because forced-support reach
+   counted ambient traffic. Lineage endurance is *causal* (only descendants of the choice) and
+   *forward* (frontier-time), but this must be **shown**, not assumed: on a small run, confirm lineage
+   endurance does not simply track the frontier-advance rate, and that it dissociates from static
+   residence. If it fails this, E1/E2 do not run as scored.
+2. **The motif ↔ settlement join** — matching a tracked motif to the tie whose settlement completed it.
+   Validated for sensible coverage before confirmatory numbers; coarser fallback (local wall-nearness at
+   the birth site) disclosed if needed.
 
 ## Limits we already know
 
-- **Renewal is sparse** (≈ 2% in the probe), so E1/E2 may be underpowered — in which case the honest
-  finding is that structural memory along the now is weak regardless of birth-state (itself a result for
-  the memory paper).
-- Active-skin worlds **jam early**, so lifetimes are short and **heavily right-censored**; survival
-  methods, not raw means, are used.
-- Pruning radius 2·S defines "burial"; a different radius would move the clock.
-- The active-skin/catalogue growth equivalence is verified for three histories (finding #7), not
-  independently for these 40 worlds — a re-check is part of validation.
-- No claim about physical space or time; "memory" here is persistence of structure along the modelled
-  frontier.
+- Active-skin worlds jam early → heavy right-censoring; survival methods, not raw means.
+- "Burial" is set by the 2·S pruning radius; a different radius moves the clock.
+- The active-skin/catalogue equivalence is verified for three histories (finding #7); re-checked here.
+- No claim about physical space or time; "memory" is persistence of structure along the modelled front.
+
+---
+
+## Design history (disclosed)
+
+v1 (committed earlier today) made same-class renewal and static residence its primary measures. Before
+any run, Argon's critique showed both were the wrong microscope for an aperiodic medium: same-class
+cloning is forbidden by construction, and residence time measures waiting, not memory — and inverted.
+v2 replaces them with causal-lineage-seam endurance and the residence/lineage **dissociation**, keeps
+the originals as reported diagnostics, and is committed before any confirmatory numbers exist. No results
+were peeked at; this is a pre-run design correction, not a post-hoc amendment.
