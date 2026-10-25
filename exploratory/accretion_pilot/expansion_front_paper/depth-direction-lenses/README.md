@@ -3,6 +3,13 @@
 *Do A's deciding corners sit shallow in the acceptance window and pull inward — the same event as
 window-truncation, seen from the back?*
 
+> **⚠️ Audit correction (see `../AUDIT.md`).** Hull depth is normalised to the *finite patch's* per-layer
+> hull (1 at its point-cloud centroid), so "below 0.5" does not by itself prove unusually shallow
+> placement. Depth and arrows are measured at the *final* patch, not at settlement. The pledged
+> coordinate-shuffling null was replaced by resampling keystone depths (not the planned control).
+> Near-zero *mean* tangential alignment does not establish no individual handedness. B2 (inward 0.749)
+> stands as a real, if late-measured, signal; B1/B3's failures stand. The text below is the original.
+
 Marries the corner-response catalogue (Experiment A) to the June 2026 directional-balance paper
 (`../../../papers/`), using the lift / hull-depth machinery in `../../perp_map/`. Question, pictures,
 controls and called shots were fixed **before any code** in `PREREGISTRATION.md`.

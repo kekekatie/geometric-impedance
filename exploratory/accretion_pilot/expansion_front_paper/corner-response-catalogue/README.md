@@ -2,6 +2,13 @@
 
 *How does a growing Penrose tiling make up its mind at an open two-way choice?*
 
+> **⚠️ Audit correction (see `../AUDIT.md`).** The `single_keystone` drawer was coded as *sufficient-
+> alone*; the pre-registered keystone was *necessary **and** sufficient*. The planned count is
+> **5,434/6,606 = 82.3%** (not the 90.7% quoted below); A1 still holds, and all 5,434 true keystones are
+> corner-settles. Also: the placebo used observed additions, not the planned random legal candidate
+> tiles; the committee drawer bundles non-local/unresolved cases; corner-rule failure alone does not
+> exclude a shared edge. The text below is the original, uncorrected report.
+
 This extends the slice-45 local-response finding (`../local-response/`, finding #10 of the
 checkpoint handover): there, a single neighbouring tile, meeting a tie at one shared corner, settled
 an open choice. Here we ask whether that is how the pattern *usually* decides, and whether the same

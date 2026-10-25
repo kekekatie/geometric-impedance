@@ -2,6 +2,15 @@
 
 *What actually tips A's malleable moves — the scheduler's stopwatch, or Argon's interior wall?*
 
+> **⚠️ Audit correction (see `../AUDIT.md`).** C2's 91.2% counts malleable *fingerprint classes* with ≥1
+> occurrence unresolved by the **bounded** forced-only test (radius 10·S, 60 rounds) — **not** 91% of
+> individual ties, and "bounded-test-unresolved" is not "globally genuine free choice." The `≤1`
+> settled test conflates a surviving singleton with zero/closed edges. The wall measure is a
+> **branch-response diagnostic** (`after_first` → area), not a literal vertex-to-partition distance or
+> proof of a causal wall; C3 did not run the planned matched comparison against B's outer-depth effect.
+> The strong settled-vs-open split (≈0.000 vs ≈0.382) stands as a diagnostic. The text below is the
+> original.
+
 Follows Experiment A (found the malleable moves) and B (ruled out outer-hull depth). Separates two
 suspects with a forced-only burst and the compatibility-region (F) ruler of the decided-before study.
 Question, stages, controls and called shots fixed **before any code** in `PREREGISTRATION.md`.
