@@ -1,0 +1,30 @@
+E-prime -- the novelty budget or the coiled spring
+genuine free choices with a non-degenerate seam: 60 (fresh worlds from wedge 241, <= 3/world, seam radius 7*S cap 50)
+independence: 20 distinct worlds, forks/world {3: 20} (count:n_worlds)
+stiffness coverage (scored set): 59/60
+seam size |A triangle B|: median 162 mean 165.9 p10 106 p90 237 max 248
+seam reach MAX (S, scored): median 7.3 p10 7.2 p90 7.3 max 7.4  (watch for pinning at R=7)
+seam reach MEDIAN-of-differing (S, diagnostic): median 4.6 p10 3.7 p90 5.4
+cap-hit rate (truncation risk): A 0/60 B 0/60
+per-fork asymmetry |A-only| vs |B-only|: medians 53 vs 77; mean |A-only - B-only| 86.0
+
+=== age-confound audit (want stiffness ~ 0; the pre-reg's claim) ===
+  Spearman(patch_age, stiffness) = -0.005   (predictor's age-freedom)
+  Spearman(patch_age, seam size) = -0.255   (outcome's raw age confound)
+  Spearman(patch_age, seam reach)= -0.162
+
+=== E1  stiffness -> seam size (two-sided; - = Novelty Budget, + = Coiled Spring) ===
+  Spearman(stiffness, seam size) = +0.204   90% cluster CI [-0.017, +0.383]
+  partial (control patch age)    = +0.209
+  E1 PASS (|rho|>=0.2 & age-robust |partial|>=0.15 same sign): COILED SPRING (pinched forks diverge more)
+
+=== E2  stiffness -> seam reach (same sign as E1) ===
+  Spearman(stiffness, seam reach) = -0.253   90% cluster CI [-0.494, +0.001]
+  partial (control patch age)     = -0.257
+  E2 null  (NB: if max-reach is pinned at R the scored E2 is uninformative -- read the diagnostic below)
+  diagnostic (unpinned): Spearman(stiffness, median-reach-of-differing) = +0.177 partial(age) +0.178
+
+=== secondary (reported, not scored): wall-nearness -> seam size ===
+  Spearman(wall-nearness, seam size) = -0.133
+  partial (control patch age)        = -0.143
+  (wall is -0.68 age-confounded; compare the two partials)
