@@ -37,8 +37,10 @@ dk = BD.dk; ek = CR.ek
 RES = HERE / "results"; RES.mkdir(exist_ok=True)
 EPS = 1e-9
 SEED0 = BD.SEED0
-WEDGE0 = 240                 # fresh: A/B/C used 192-215, branch diagnostic 216-239
+WEDGE0 = 241                 # fresh: A/B/C used 192-215, branch diagnostic 216-239, E-prime validation 240
 SEEDSHIFT = 5000             # fresh seed base so the growth is unpeeked
+PER_WORLD = 3                # cap forks per world so a 60-fork target spans ~20 worlds (independence)
+SUBSEED = 73                 # deterministic age-spread subsampling within each world
 STIFF = json.loads((EFP / "corner-response-catalogue" / "results" / "summary.json").read_text())["stiffness"]
 
 
@@ -49,11 +51,13 @@ def centres(nworlds):
     return ks[WEDGE0:WEDGE0 + nworlds]
 
 
-def genuine_free_choices(k, centre, nadd, limit):
-    """Copy of the branch-diagnostic screen, on a fresh centre + fresh seed base."""
+def collect_candidates(k, centre, nadd):
+    """Grow one fresh world to its FULL extent and collect EVERY genuine free choice (a tie the
+    bounded wave leaves open), across all growth ages -- the caller subsamples a few per world, so
+    collecting the whole set (not the first few) is what keeps patch-age variance in the sample."""
     rng = random.Random(SEED0 + SEEDSHIFT + k)
     P = L.Patch(L.seed_patch(centre, 3 * S)); n0 = len(P.tris); seen = set(); out = []
-    while len(P.tris) - n0 < nadd and len(out) < limit:
+    while len(P.tris) - n0 < nadd:
         fr = P.frontier()
         for e in fr:
             sk = ek(e)
@@ -65,8 +69,6 @@ def genuine_free_choices(k, centre, nadd, limit):
                 tris0, _ = BD.forced_arm(before, mid, cap=12, R=5)   # cheap screen
                 if len(D.candidates(L.Patch(tris0), *e[:3])) == 2:   # bounded wave left it open
                     out.append((before, e, mid))
-                    if len(out) >= limit:
-                        break
         forced = {}
         for e in fr:
             c = D.candidates(P, *e[:3])
@@ -144,11 +146,15 @@ def main():
     ap.add_argument("--nadd", type=int, default=700)
     args = ap.parse_args()
     cs = centres(args.worlds)
+    sub = random.Random(SUBSEED)
     rows = []
     for k, centre in enumerate(cs):
         if len(rows) >= args.need:
             break
-        for before, edge, mid in genuine_free_choices(k, centre, args.nadd, args.need - len(rows)):
+        cands = collect_candidates(k, centre, args.nadd)
+        picks = sub.sample(cands, min(PER_WORLD, len(cands))) if cands else []   # age-spread, independent
+        got = 0
+        for before, edge, mid in picks:
             try:
                 d = BD.diagnose(before, edge, mid)
                 if not d or (d["n_a"] + d["n_b"]) == 0:
@@ -160,16 +166,20 @@ def main():
                 rows.append(dict(world=k, size=d["n_a"] + d["n_b"], n_a=d["n_a"], n_b=d["n_b"],
                                  reach=rmax, reach_med=rmed, capA=d["stopA"] == "cap", capB=d["stopB"] == "cap",
                                  **pr))
+                got += 1
             except Exception as e:
                 print(f"  world {k}: skipped a case ({type(e).__name__})", flush=True)
                 continue
-        print(f"world {k}: cumulative genuine-free seams {len(rows)}", flush=True)
+        print(f"world {k}: {len(cands)} candidates, kept {got}; cumulative seams {len(rows)}", flush=True)
 
     scored = [r for r in rows if r["stiff"] is not None]
     out = []
+    wc = collections.Counter(r["world"] for r in rows)
     out.append(f"E-prime -- the novelty budget or the coiled spring")
     out.append(f"genuine free choices with a non-degenerate seam: {len(rows)} "
-               f"(fresh worlds {WEDGE0}-{WEDGE0+args.worlds-1}, seam radius {BD.BIG_R}*S cap {BD.BIG_CAP})")
+               f"(fresh worlds from wedge {WEDGE0}, <= {PER_WORLD}/world, seam radius {BD.BIG_R}*S cap {BD.BIG_CAP})")
+    out.append(f"independence: {len(wc)} distinct worlds, forks/world {dict(sorted(collections.Counter(wc.values()).items()))} "
+               f"(count:n_worlds)")
     out.append(f"stiffness coverage (scored set): {len(scored)}/{len(rows)}")
     size = np.array([r["size"] for r in rows]); reach = np.array([r["reach"] for r in rows])
     out.append(f"seam size |A triangle B|: median {np.median(size):.0f} mean {size.mean():.1f} "
