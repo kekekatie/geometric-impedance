@@ -1,5 +1,22 @@
 # The width of the now: how far does a choice's seam carry, and does decisiveness change it?
 
+> **CORRECTION BANNER (26 Oct 2026, after Astra's handover). A mathematical premise below is wrong and is
+> retracted.** The claim that "an aperiodic tiling's matching rules **forbid a motif from cloning itself
+> in place**" (the block-quote in "The picture first", and E0's title "aperiodicity forbids cloning") is
+> **false**. Penrose/aperiodic tilings are **repetitive**: every finite patch recurs infinitely often,
+> with bounded gaps (local-isomorphism / repetitivity property; see arXiv:2212.09406). Aperiodicity rules
+> out *global translational periodicity*, not *local recurrence* of finite motifs, and it does not by
+> itself forbid connected same-class renewal. So:
+> - Low same-class renewal at the growing front is an **empirical / dynamical** observation about *this
+>   growth process*, **not** a theorem, and it does **not** prove that memory must survive "by
+>   transformation."
+> - Same-class renewal is restored as **one possible observable among several**, not a forbidden one.
+>
+> This whole experiment (E) was already retired by its validation gate (`VALIDATION_GATE.md`: the lineage
+> measure re-measures frontier volume) and replaced by E-prime (`../novelty-budget/`). The banner stays so
+> the error is visible in the trail rather than erased. Everything below is kept **as originally written,
+> uncorrected**, for that record.
+
 ### The faithful endurance bridge (Experiment E) — v2, sharpened before any run
 
 *Pre-registration. Written and committed **before any study code for E exists**. v2 incorporates

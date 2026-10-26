@@ -5,6 +5,27 @@ independent. Seam = the confound-free branch comparison (commit A vs B, keep onl
 Scored against the committed `PREREGISTRATION.md`; the invalid first run is documented in
 `VALIDATION_NOTE.md` and is not used here.*
 
+> **CORRECTIONS (26 Oct 2026, after Astra's handover) — four claims below are walked back; see the
+> dedicated note `../HANDOVER_REPLY.md` for the full point-by-point.**
+> 1. **"Seams are complete, not truncated" is wrong.** 0/60 *round-cap* hits does **not** mean the seam is
+>    spatially complete. Max-reach pins at the R=7·S rim (median 7.3) — that pinning is **direct evidence
+>    the seam IS spatially truncated** at the measurement radius. So seam *size* is a tile count *within
+>    R=7·S*, not a complete seam. Round-cap and spatial truncation are different things; only the former
+>    was absent.
+> 2. **"Three independent windows" overstates independence.** The three measures (stiffness→size,
+>    stiffness→median-reach, wall→size) are computed on the **same 60 forks** — they are convergent *in
+>    sign*, not independent replications. Convergence across differently-constructed measures is still
+>    worth something, but it is one dataset, not three.
+> 3. **The A/B labels are arbitrary** (candidate-enumeration order), so "A" vs "B" has **no consistent
+>    geometric meaning across forks**. The symmetric difference |A△B| is label-free and fine, but any
+>    *pooled* A-vs-B statement would be meaningless without a reproducible geometric label.
+> 4. **This is not an endurance result.** E-prime measured *total accumulated difference* between two
+>    grown patches, not whether a trace *persists at the current front* after the choice-tiles are gone.
+>    The Coiled-Spring lean is about accumulated consequence; the memory question is the paired-front
+>    pilot (`HANDOVER_REPLY.md`), still to be run.
+>
+> The numbers themselves stand exactly as reported; it is four *interpretive* claims that are corrected.
+
 ## The one-line answer
 
 The pre-registered effect **met its threshold, in the Coiled-Spring direction** — *more pinched / more
