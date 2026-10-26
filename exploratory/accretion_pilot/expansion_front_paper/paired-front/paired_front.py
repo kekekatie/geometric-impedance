@@ -156,6 +156,26 @@ def verify_skin_equivalence(Sstar, c, stream, steps):
 
 # ---------- the paired-front comparison at matched steps ----------
 
+def _grid(tiles):
+    """Bin tiles by centroid cell (size S) for O(1) point-in-set coverage queries."""
+    g = collections.defaultdict(list)
+    for t in tiles:
+        c = cen(t); g[(round(c.real / S), round(c.imag / S))].append(t)
+    return g
+
+
+def _covered(p, grid):
+    """Is point p inside any tile of grid? A tile (edge S) only contains p if its centroid is within
+    ~S of p, so only the 5x5 cell neighbourhood needs the exact L.inside test."""
+    ci, cj = round(p.real / S), round(p.imag / S)
+    for i in range(ci - 2, ci + 3):
+        for j in range(cj - 2, cj + 3):
+            for u in grid.get((i, j), ()):
+                if L.inside(p, *u[1:]):
+                    return True
+    return False
+
+
 def buckets(skinA, frA, skinB, frB, near=RADIUS):
     """Difference buckets between two skins in the shared coordinate frame, kept SEPARATE and with the
     shared-ground extent reported, so a shrinking overlap is never mistaken for a fading trace.
@@ -167,11 +187,11 @@ def buckets(skinA, frA, skinB, frB, near=RADIUS):
     a_A, a_B = CD.strip(skinA, skinB)            # (a) decorated diff on shared coverage
     kA = {dk(t) for t in skinA}; kB = {dk(t) for t in skinB}
     oA = [t for t in skinA if dk(t) not in kB]; oB = [t for t in skinB if dk(t) not in kA]
-    cov = lambda p, others: any(L.inside(p, *u[1:]) for u in others)
-    b_A = [t for t in oA if not cov(cen(t), skinB)]   # (b) A covers here, B doesn't
-    b_B = [t for t in oB if not cov(cen(t), skinA)]
+    gA, gB = _grid(skinA), _grid(skinB)
+    b_A = [t for t in oA if not _covered(cen(t), gB)]   # (b) A covers here, B doesn't
+    b_B = [t for t in oB if not _covered(cen(t), gA)]
     # shared ground: skin tiles whose centroid the other arm also covers (same-dkey OR differing)
-    co_A = sum(cov(cen(t), skinB) for t in skinA); co_B = sum(cov(cen(t), skinA) for t in skinB)
+    co_A = sum(_covered(cen(t), gB) for t in skinA); co_B = sum(_covered(cen(t), gA) for t in skinB)
     co_covered = min(co_A, co_B)
     shared = a_A + a_B
     coverage = b_A + b_B
@@ -321,6 +341,10 @@ def main():
               f"peak trace-density sig={m['peak_sig_frac']} bg={m['peak_bg_frac']}, "
               f"coverage_last={m['coverage_last']} cocov_last={m['cocov_last']}, "
               f"endures_on_shared_ground={m['endures_on_shared_ground']}", flush=True)
+        # incremental save: completed forks persist even if the run is later stopped
+        (RES / "measurements.json").write_text(json.dumps([dict(
+            meta=x['meta'], curves=x['curves'], steps_axis=x['steps_axis']) for x in forks],
+            indent=2, default=float))
 
     out = []
     out.append("Paired-front pilot (Phase 1): is there a readable trace at the current front, and does it")
