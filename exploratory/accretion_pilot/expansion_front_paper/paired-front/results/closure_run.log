@@ -1,0 +1,68 @@
+world 0: patch 198 | arm-streams scored 0/4, correct 0/0 | jam 0/4 | F1=None stiff=0.49
+world 1: patch 210 | arm-streams scored 4/4, correct 4/4 | jam 0/4 | F1=0.1605 stiff=0.45
+world 2: patch 596 | arm-streams scored 4/4, correct 4/4 | jam 0/4 | F1=0.092 stiff=0.73
+world 3: patch 306 | arm-streams scored 4/4, correct 4/4 | jam 0/4 | F1=0.274 stiff=0.65
+world 4: duplicate fork config, skipped
+world 5: patch 210 | arm-streams scored 2/4, correct 2/2 | jam 1/4 | F1=None stiff=0.45
+world 6: duplicate fork config, skipped
+world 7: patch 198 | arm-streams scored 2/4, correct 2/2 | jam 2/4 | F1=None stiff=0.65
+world 8: duplicate fork config, skipped
+world 9: duplicate fork config, skipped
+world 10: duplicate fork config, skipped
+world 11: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.45
+world 12: patch 198 | arm-streams scored 4/4, correct 4/4 | jam 0/4 | F1=0.35 stiff=0.73
+world 13: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.33
+world 14: duplicate fork config, skipped
+world 15: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 1/4 | F1=None stiff=0.45
+world 16: duplicate fork config, skipped
+world 17: duplicate fork config, skipped
+world 18: duplicate fork config, skipped
+world 19: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 2/4 | F1=None stiff=0.45
+world 20: duplicate fork config, skipped
+world 21: patch 210 | arm-streams scored 2/4, correct 2/2 | jam 2/4 | F1=None stiff=0.45
+world 22: duplicate fork config, skipped
+world 23: patch 306 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.53
+world 24: duplicate fork config, skipped
+world 25: patch 894 | arm-streams scored 0/4, correct 0/0 | jam 0/4 | F1=None stiff=None
+world 26: duplicate fork config, skipped
+world 27: duplicate fork config, skipped
+world 28: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 2/4 | F1=None stiff=0.45
+world 29: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 1/4 | F1=None stiff=0.45
+world 30: patch 306 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.65
+world 31: duplicate fork config, skipped
+world 32: duplicate fork config, skipped
+world 33: duplicate fork config, skipped
+world 34: duplicate fork config, skipped
+world 35: duplicate fork config, skipped
+world 36: duplicate fork config, skipped
+world 37: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.45
+world 38: duplicate fork config, skipped
+world 39: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.45
+world 40: patch 198 | arm-streams scored 3/4, correct 3/3 | jam 0/4 | F1=0.157 stiff=0.68
+world 41: patch 596 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.45
+world 42: duplicate fork config, skipped
+world 43: duplicate fork config, skipped
+world 44: duplicate fork config, skipped
+world 45: duplicate fork config, skipped
+world 46: patch 306 | arm-streams scored 2/4, correct 2/2 | jam 0/4 | F1=None stiff=0.65
+
+Window retrodiction closure (Phase 2): does the surviving front determine the deleted choice?
+distinct forks: 22   (arm-streams: 88; scored non-jammed: 49; censored: 39)
+candidate regions C^A, C^B disjoint: 22/22 forks
+
+F2  retrodiction (surviving ring excludes the wrong option to zero area, post-prune):
+    correct at last valid step: 49/49 scored arm-streams
+    correct at EVERY post-departure pre-jam step (robust): 49/49
+    wrong: 0   ambiguous: 0
+    censored (jammed, or choice-tile never left the skin, before a post-departure step): 39/88
+    jam rate by option: A 0/44, B 11/44 (is one option more dead-end-prone?)
+
+F1  decoration-trace survival post-prune: non-zero in 5/5 forks (median density 0.161)
+
+F3 (EXPLORATORY, two-sided, not scored): fork stiffness vs post-prune persistence
+    Spearman(stiffness, robust-arm count)   = -0.080  (n=21)
+    Spearman(stiffness, trace density)      = +0.559
+    (underpowered; a flag for a future test, not a closure claim)
+
+wrote results/closure_report.txt, results/closure_measurements.json
+EXIT 0
