@@ -151,12 +151,11 @@ def main():
             rB, armB = retrodict_arm(Sstar, B, A, stream, args.steps, rank, cB, cA)
             rA["opt"] = "A"; rA["stream"] = si; rB["opt"] = "B"; rB["stream"] = si
             armrecs += [rA, rB]
-            # F1: coupled trace density at a post-departure step (both choice-tiles gone). Use each arm's
-            # last valid (non-jammed) step so a jam doesn't poison it.
+            # F1: coupled trace density at a post-departure step (both choice-tiles gone). Requires BOTH
+            # arms valid (non-censored) at a common step within both snapshot lists.
             dep = max([d for d in (rA["dep"], rB["dep"]) if d is not None], default=None)
-            lv = [x for x in (rA["last_step"], rB["last_step"]) if x is not None]
-            if dep is not None and lv:
-                s = min(lv)   # both arms valid and post-departure here
+            if dep is not None and rA["last_step"] is not None and rB["last_step"] is not None:
+                s = min(rA["last_step"], rB["last_step"], len(armA["snaps"]) - 1, len(armB["snaps"]) - 1)
                 if s >= dep:
                     skA, frA = P.skin_of(armA["snaps"][s]); skB, frB = P.skin_of(armB["snaps"][s])
                     b = P.buckets(skA, frA, skB, frB)
