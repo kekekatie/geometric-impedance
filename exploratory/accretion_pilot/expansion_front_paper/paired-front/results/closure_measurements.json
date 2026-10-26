@@ -1,0 +1,1794 @@
+[
+  {
+    "world": 0,
+    "patch": 198,
+    "cAarea": 0.0366,
+    "cBarea": 0.0226,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [
+          17
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.38196601125008983,
+    "stiff": 0.4872
+  },
+  {
+    "world": 1,
+    "patch": 210,
+    "cAarea": 0.014,
+    "cBarea": 0.0366,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129751,
+        "aOther": 0.0,
+        "f0": 0.013988545822129057,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17,
+          26
+        ],
+        "dep": 41,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.022633942593391253,
+        "aOther": 0.0,
+        "f0": 0.02263394259339139,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129751,
+        "aOther": 0.0,
+        "f0": 0.013988545822129057,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17,
+          26
+        ],
+        "dep": 41,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212964,
+        "aOther": 0.0,
+        "f0": 0.013988545822130678,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": {
+      "frac": 0.1605,
+      "n": 2
+    },
+    "wall": 0.2763932022500224,
+    "stiff": 0.4476
+  },
+  {
+    "world": 2,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.00864539677126061,
+        "aOther": 0.0,
+        "f0": 0.008645396771261138,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 11,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129689,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129606,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.00864539677126061,
+        "aOther": 0.0,
+        "f0": 0.008645396771261138,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 11,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129689,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129606,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": {
+      "frac": 0.092,
+      "n": 2
+    },
+    "wall": 0.38196601125011165,
+    "stiff": 0.7312
+  },
+  {
+    "world": 3,
+    "patch": 306,
+    "cAarea": 0.0086,
+    "cBarea": 0.028,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261527,
+        "aOther": 0.0,
+        "f0": 0.008645396771261284,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          21
+        ],
+        "dep": 34,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212955,
+        "aOther": 0.0,
+        "f0": 0.013988545822129834,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261527,
+        "aOther": 0.0,
+        "f0": 0.008645396771261284,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          21
+        ],
+        "dep": 34,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212955,
+        "aOther": 0.0,
+        "f0": 0.013988545822129834,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": {
+      "frac": 0.274,
+      "n": 2
+    },
+    "wall": 0.23606797749978245,
+    "stiff": 0.6527
+  },
+  {
+    "world": 5,
+    "patch": 210,
+    "cAarea": 0.014,
+    "cBarea": 0.0366,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129855,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129744,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 29,
+        "jam": true,
+        "nsnaps": 43,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822129855,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129744,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17,
+          26,
+          29
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.2763932022500204,
+    "stiff": 0.4476
+  },
+  {
+    "world": 7,
+    "patch": 198,
+    "cAarea": 0.0086,
+    "cBarea": 0.0506,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261582,
+        "aOther": 0.0,
+        "f0": 0.008645396771261735,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          9
+        ],
+        "dep": 17,
+        "jam": true,
+        "nsnaps": 24,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261582,
+        "aOther": 0.0,
+        "f0": 0.008645396771261735,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          9
+        ],
+        "dep": 17,
+        "jam": true,
+        "nsnaps": 24,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.1458980337503183,
+    "stiff": 0.6527
+  },
+  {
+    "world": 11,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0086453967712605,
+        "aOther": 0.0,
+        "f0": 0.008645396771261527,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0086453967712605,
+        "aOther": 0.0,
+        "f0": 0.008645396771261527,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.381966011250109,
+    "stiff": 0.4476
+  },
+  {
+    "world": 12,
+    "patch": 198,
+    "cAarea": 0.0226,
+    "cBarea": 0.0366,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [
+          36
+        ],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.019331694872998136,
+        "aOther": 1.9081958235744878e-17,
+        "f0": 0.01933169487299803,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          13,
+          30
+        ],
+        "dep": 11,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261249,
+        "aOther": 0.0,
+        "f0": 0.00864539677126093,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          36
+        ],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.019331694872998136,
+        "aOther": 1.9081958235744878e-17,
+        "f0": 0.01933169487299803,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          13,
+          30
+        ],
+        "dep": 11,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.019331694872997976,
+        "aOther": 0.0,
+        "f0": 0.01933169487299804,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": {
+      "frac": 0.35,
+      "n": 2
+    },
+    "wall": 0.3819660112501071,
+    "stiff": 0.7312
+  },
+  {
+    "world": 13,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771260472,
+        "aOther": 0.0,
+        "f0": 0.008645396771261499,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 7,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771260472,
+        "aOther": 0.0,
+        "f0": 0.008645396771261499,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.3819660112501102,
+    "stiff": 0.325
+  },
+  {
+    "world": 15,
+    "patch": 596,
+    "cAarea": 0.0033,
+    "cBarea": 0.0193,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203927397,
+        "aOther": 0.0,
+        "f0": 0.0033022477203931352,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17,
+          25
+        ],
+        "dep": null,
+        "jam": true,
+        "nsnaps": 40,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203927397,
+        "aOther": 0.0,
+        "f0": 0.0033022477203931352,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17,
+          25,
+          28
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.1458980337503138,
+    "stiff": 0.4476
+  },
+  {
+    "world": 19,
+    "patch": 596,
+    "cAarea": 0.0033,
+    "cBarea": 0.0193,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203931075,
+        "aOther": 0.0,
+        "f0": 0.003302247720393156,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17,
+          25
+        ],
+        "dep": null,
+        "jam": true,
+        "nsnaps": 40,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203931075,
+        "aOther": 0.0,
+        "f0": 0.003302247720393156,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 30,
+        "jam": true,
+        "nsnaps": 44,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.14589803375031526,
+    "stiff": 0.4476
+  },
+  {
+    "world": 21,
+    "patch": 210,
+    "cAarea": 0.014,
+    "cBarea": 0.0366,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212998,
+        "aOther": 5.551115123125783e-17,
+        "f0": 0.01398854582213016,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 29,
+        "jam": true,
+        "nsnaps": 43,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212998,
+        "aOther": 5.551115123125783e-17,
+        "f0": 0.01398854582213016,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 29,
+        "jam": true,
+        "nsnaps": 43,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.2763932022500241,
+    "stiff": 0.4476
+  },
+  {
+    "world": 23,
+    "patch": 306,
+    "cAarea": 0.0226,
+    "cBarea": 0.014,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [
+          30
+        ],
+        "dep": 43,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203932254,
+        "aOther": 0.0,
+        "f0": 0.003302247720393614,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          30
+        ],
+        "dep": 43,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203932254,
+        "aOther": 0.0,
+        "f0": 0.003302247720393614,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.38196601125009216,
+    "stiff": 0.5317
+  },
+  {
+    "world": 25,
+    "patch": 894,
+    "cAarea": 0.0053,
+    "cBarea": 0.0086,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.3819660112501307,
+    "stiff": null
+  },
+  {
+    "world": 28,
+    "patch": 596,
+    "cAarea": 0.0033,
+    "cBarea": 0.0193,
+    "disjoint": true,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.003302247720392004,
+        "aOther": 0.0,
+        "f0": 0.0033022477203930034,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17,
+          25
+        ],
+        "dep": null,
+        "jam": true,
+        "nsnaps": 40,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.003302247720392004,
+        "aOther": 0.0,
+        "f0": 0.0033022477203930034,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 30,
+        "jam": true,
+        "nsnaps": 44,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.14589803375031848,
+    "stiff": 0.4476
+  },
+  {
+    "world": 29,
+    "patch": 596,
+    "cAarea": 0.0033,
+    "cBarea": 0.0193,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203930867,
+        "aOther": 0.0,
+        "f0": 0.003302247720393059,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          17,
+          25,
+          28
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.0033022477203930867,
+        "aOther": 0.0,
+        "f0": 0.003302247720393059,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "jam",
+        "guesses": [
+          17
+        ],
+        "dep": 30,
+        "jam": true,
+        "nsnaps": 44,
+        "verdict": null,
+        "aTrue": 0.0,
+        "aOther": 0.0,
+        "f0": 0.0,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.14589803375031452,
+    "stiff": 0.4476
+  },
+  {
+    "world": 30,
+    "patch": 306,
+    "cAarea": 0.014,
+    "cBarea": 0.0226,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212987,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129841,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212987,
+        "aOther": 2.7755575615628914e-17,
+        "f0": 0.013988545822129841,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.38196601125010704,
+    "stiff": 0.6527
+  },
+  {
+    "world": 37,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": true,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.3819660112501048,
+    "stiff": 0.4476
+  },
+  {
+    "world": 39,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": true,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.3819660112501048,
+    "stiff": 0.4476
+  },
+  {
+    "world": 40,
+    "patch": 198,
+    "cAarea": 0.0366,
+    "cBarea": 0.0226,
+    "disjoint": 1.0,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [
+          20
+        ],
+        "dep": 32,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.02263394259339052,
+        "aOther": 0.0,
+        "f0": 0.02263394259339173,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261624,
+        "aOther": 0.0,
+        "f0": 0.008645396771261221,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          20
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.013988545822130091,
+        "aOther": 0.0,
+        "f0": 0.013988545822129952,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": {
+      "frac": 0.157,
+      "n": 1
+    },
+    "wall": 0.3819660112501152,
+    "stiff": 0.6761
+  },
+  {
+    "world": 41,
+    "patch": 596,
+    "cAarea": 0.0086,
+    "cBarea": 0.014,
+    "disjoint": true,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 8,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.008645396771261468,
+        "aOther": 0.0,
+        "f0": 0.008645396771261471,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          43
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.3819660112501048,
+    "stiff": 0.4476
+  },
+  {
+    "world": 46,
+    "patch": 306,
+    "cAarea": 0.014,
+    "cBarea": 0.0226,
+    "disjoint": true,
+    "arms": [
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212956,
+        "aOther": 0.0,
+        "f0": 0.013988545822129946,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 0
+      },
+      {
+        "stop": "steps",
+        "guesses": [],
+        "dep": 10,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": "correct",
+        "aTrue": 0.01398854582212956,
+        "aOther": 0.0,
+        "f0": 0.013988545822129946,
+        "last_step": 44,
+        "all_correct": true,
+        "censored": false,
+        "opt": "A",
+        "stream": 1
+      },
+      {
+        "stop": "steps",
+        "guesses": [
+          42
+        ],
+        "dep": null,
+        "jam": false,
+        "nsnaps": 45,
+        "verdict": null,
+        "aTrue": null,
+        "aOther": null,
+        "f0": null,
+        "last_step": null,
+        "all_correct": null,
+        "censored": true,
+        "opt": "B",
+        "stream": 1
+      }
+    ],
+    "F1": null,
+    "wall": 0.38196601125010515,
+    "stiff": 0.6527
+  }
+]

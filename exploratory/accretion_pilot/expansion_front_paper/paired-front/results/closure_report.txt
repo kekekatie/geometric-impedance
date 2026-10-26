@@ -1,0 +1,17 @@
+Window retrodiction closure (Phase 2): does the surviving front determine the deleted choice?
+distinct forks: 22   (arm-streams: 88; scored non-jammed: 49; censored: 39)
+candidate regions C^A, C^B disjoint: 22/22 forks
+
+F2  retrodiction (surviving ring excludes the wrong option to zero area, post-prune):
+    correct at last valid step: 49/49 scored arm-streams
+    correct at EVERY post-departure pre-jam step (robust): 49/49
+    wrong: 0   ambiguous: 0
+    censored (jammed, or choice-tile never left the skin, before a post-departure step): 39/88
+    jam rate by option: A 0/44, B 11/44 (is one option more dead-end-prone?)
+
+F1  decoration-trace survival post-prune: non-zero in 5/5 forks (median density 0.161)
+
+F3 (EXPLORATORY, two-sided, not scored): fork stiffness vs post-prune persistence
+    Spearman(stiffness, robust-arm count)   = -0.080  (n=21)
+    Spearman(stiffness, trace density)      = +0.559
+    (underpowered; a flag for a future test, not a closure claim)
