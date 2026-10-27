@@ -1,0 +1,26 @@
+{
+  "source_commit": "a96c88b83a1d80f915dc29e0ffa193a6164f6e77",
+  "closure_sha256": "b56afbc34c046107be075c9e146867b1882012cde8f4673e1796febe01bb9c0f",
+  "source_forks": 22,
+  "source_continuations": 88,
+  "source_scored": 49,
+  "source_scored_forks": 20,
+  "source_censored": 39,
+  "original_positive_other_count": 10,
+  "original_max_other": 5.551115123125783e-17,
+  "checked": 3,
+  "checked_forks": 2,
+  "outcomes": {
+    "correct": 3,
+    "wrong": 0,
+    "ambiguous": 0,
+    "unreconstructible": 0
+  },
+  "all_comparisons_agree": true,
+  "all_swaps_pass": true,
+  "all_gauges_pass": true,
+  "compare_tolerance": 1e-10,
+  "max_constraint_residual": 1.3322676295501878e-15,
+  "max_area_residual": 7.112366251504909e-16,
+  "max_projection_residual": 2.0182620968848042e-13
+}

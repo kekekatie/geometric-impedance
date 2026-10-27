@@ -1,0 +1,1472 @@
+[
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      7.112366251504909e-16,
+      3.469446951953614e-17,
+      1.8939873215594498e-16
+    ],
+    "polygon_boundary_residual": 7.165025373129265e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0182620968848042e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w1-A-s0",
+    "world": 1,
+    "original_other_area": 0.0,
+    "payload_bytes": 60024,
+    "payload_sha256": "ece0161edcc6acaaa274e27076cc4fe1795b49a126f06d53e634ced82e50cc7b",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 9.992007221626409e-16,
+    "area_residuals": [
+      7.632783294297951e-17,
+      0.0,
+      1.97758476261356e-16
+    ],
+    "polygon_boundary_residual": 6.299995990468648e-15,
+    "lift_mismatches": 0,
+    "vertices": 198,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 5.822143342219158e-14,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w1-B-s0",
+    "world": 1,
+    "original_other_area": 0.0,
+    "payload_bytes": 42432,
+    "payload_sha256": "acf0a96c93a7e1945554ae51d9b971cf9ee25f04c5f21029a4e2fa118c359b22",
+    "source_residuals": [
+      6.938893903907228e-18,
+      6.938893903907228e-18,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      7.112366251504909e-16,
+      3.469446951953614e-17,
+      1.8939873215594498e-16
+    ],
+    "polygon_boundary_residual": 7.165025373129265e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0182620968848042e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w1-A-s1",
+    "world": 1,
+    "original_other_area": 0.0,
+    "payload_bytes": 60024,
+    "payload_sha256": "ece0161edcc6acaaa274e27076cc4fe1795b49a126f06d53e634ced82e50cc7b",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.1102230246251565e-15,
+    "area_residuals": [
+      1.1622647289044608e-15,
+      0.0,
+      1.249000902703301e-16
+    ],
+    "polygon_boundary_residual": 3.976537162958671e-15,
+    "lift_mismatches": 0,
+    "vertices": 214,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 7.755684626330686e-14,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w1-B-s1",
+    "world": 1,
+    "original_other_area": 0.0,
+    "payload_bytes": 45280,
+    "payload_sha256": "1af7979565159635d25dbb181cbca3a9e7655135100d486e0d2d8a097d538997",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      6.106226635438361e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 6.221212756561689e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0947646133377082e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w2-A-s0",
+    "world": 2,
+    "original_other_area": 0.0,
+    "payload_bytes": 81245,
+    "payload_sha256": "5c066b8222f1fd484fbeda62d5500d21baf78ded5eccb39dfc8b1abb18dd2f52",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      8.326672684688674e-17,
+      2.7755575615628914e-17,
+      1.6653345369377348e-16
+    ],
+    "polygon_boundary_residual": 2.994210678127337e-15,
+    "lift_mismatches": 0,
+    "vertices": 305,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0163019518779935e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w2-B-s0",
+    "world": 2,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 64023,
+    "payload_sha256": "87c31ac3c6cdcb5bf913ceae8ede5399ea9c9476bab168139a4a0fef1a02ad6d",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      6.106226635438361e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 6.221212756561689e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0947646133377082e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w2-A-s1",
+    "world": 2,
+    "original_other_area": 0.0,
+    "payload_bytes": 81245,
+    "payload_sha256": "5c066b8222f1fd484fbeda62d5500d21baf78ded5eccb39dfc8b1abb18dd2f52",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      8.326672684688674e-17,
+      2.7755575615628914e-17,
+      1.6653345369377348e-16
+    ],
+    "polygon_boundary_residual": 2.994210678127337e-15,
+    "lift_mismatches": 0,
+    "vertices": 305,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0163019518779935e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w2-B-s1",
+    "world": 2,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 64023,
+    "payload_sha256": "87c31ac3c6cdcb5bf913ceae8ede5399ea9c9476bab168139a4a0fef1a02ad6d",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.1102230246251565e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      1.1657341758564144e-15,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.662999964039994e-15,
+    "lift_mismatches": 0,
+    "vertices": 364,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0702179624317907e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w3-A-s0",
+    "world": 3,
+    "original_other_area": 0.0,
+    "payload_bytes": 75392,
+    "payload_sha256": "da7f1457275691e606a9a6ba15694c7f360f1ea43196586b1132a6a4f872b8ab",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.220446049250313e-15,
+    "area_residuals": [
+      2.7755575615628914e-17,
+      9.71445146547012e-17,
+      4.510281037539698e-16
+    ],
+    "polygon_boundary_residual": 3.3306690738754696e-15,
+    "lift_mismatches": 0,
+    "vertices": 261,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.8617880699857128e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w3-B-s0",
+    "world": 3,
+    "original_other_area": 0.0,
+    "payload_bytes": 54614,
+    "payload_sha256": "cad09e79ec517e77ffba294a22dfd1ca131e7debd5b8d9da53a08a36505a7bf7",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.1102230246251565e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      1.1657341758564144e-15,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.662999964039994e-15,
+    "lift_mismatches": 0,
+    "vertices": 364,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.0702179624317907e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w3-A-s1",
+    "world": 3,
+    "original_other_area": 0.0,
+    "payload_bytes": 75392,
+    "payload_sha256": "da7f1457275691e606a9a6ba15694c7f360f1ea43196586b1132a6a4f872b8ab",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.220446049250313e-15,
+    "area_residuals": [
+      2.7755575615628914e-17,
+      9.71445146547012e-17,
+      4.510281037539698e-16
+    ],
+    "polygon_boundary_residual": 3.3306690738754696e-15,
+    "lift_mismatches": 0,
+    "vertices": 261,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.8617880699857128e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w3-B-s1",
+    "world": 3,
+    "original_other_area": 0.0,
+    "payload_bytes": 54614,
+    "payload_sha256": "cad09e79ec517e77ffba294a22dfd1ca131e7debd5b8d9da53a08a36505a7bf7",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      1.6653345369377348e-16,
+      1.3877787807814457e-16
+    ],
+    "polygon_boundary_residual": 2.465081648498679e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.8957200377026857e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w5-A-s0",
+    "world": 5,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 59978,
+    "payload_sha256": "1e4cba66ce79af4c44608a478148784611875e5331d063d28db65f5a60b14729",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      1.6653345369377348e-16,
+      1.3877787807814457e-16
+    ],
+    "polygon_boundary_residual": 2.465081648498679e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.8957200377026857e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w5-A-s1",
+    "world": 5,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 59978,
+    "payload_sha256": "1e4cba66ce79af4c44608a478148784611875e5331d063d28db65f5a60b14729",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.9984014443252818e-15,
+    "area_residuals": [
+      3.2612801348363973e-16,
+      1.734723475976807e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 1.6250646570963809e-15,
+    "lift_mismatches": 0,
+    "vertices": 344,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.8798115247548976e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w7-A-s0",
+    "world": 7,
+    "original_other_area": 0.0,
+    "payload_bytes": 71318,
+    "payload_sha256": "56eb09b916c6683d731598f2b4c48ed2b0d99746dff2baa16e73cc1f25be35a3",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.9984014443252818e-15,
+    "area_residuals": [
+      3.2612801348363973e-16,
+      1.734723475976807e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 1.6250646570963809e-15,
+    "lift_mismatches": 0,
+    "vertices": 344,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.8798115247548976e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w7-A-s1",
+    "world": 7,
+    "original_other_area": 0.0,
+    "payload_bytes": 71318,
+    "payload_sha256": "56eb09b916c6683d731598f2b4c48ed2b0d99746dff2baa16e73cc1f25be35a3",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.6653345369377348e-16,
+      8.049116928532385e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.913601949815143e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.3615620739197994e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w11-A-s0",
+    "world": 11,
+    "original_other_area": 0.0,
+    "payload_bytes": 81462,
+    "payload_sha256": "bf3b3fbeaab23880ec6f0e50eb19920b810d43c9f6ae9188d9a07d220abb1ddd",
+    "source_residuals": [
+      5.551115123125783e-17,
+      5.551115123125783e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.6653345369377348e-16,
+      8.049116928532385e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.913601949815143e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.3615620739197994e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w11-A-s1",
+    "world": 11,
+    "original_other_area": 0.0,
+    "payload_bytes": 81462,
+    "payload_sha256": "bf3b3fbeaab23880ec6f0e50eb19920b810d43c9f6ae9188d9a07d220abb1ddd",
+    "source_residuals": [
+      5.551115123125783e-17,
+      5.551115123125783e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      7.632783294297951e-17,
+      8.326672684688674e-17,
+      1.9081958235744878e-17
+    ],
+    "polygon_boundary_residual": 1.1567783389051904e-15,
+    "lift_mismatches": 0,
+    "vertices": 263,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.961428224292954e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w12-A-s0",
+    "world": 12,
+    "original_other_area": 1.9081958235744878e-17,
+    "payload_bytes": 54507,
+    "payload_sha256": "9a45fdc50b9380e35b0282d70a55d4ee00b2c8c211d81881683057920e9feab9",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      5.134781488891349e-16,
+      0.0,
+      1.5265566588595902e-16
+    ],
+    "polygon_boundary_residual": 4.599417135123901e-15,
+    "lift_mismatches": 0,
+    "vertices": 202,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.4606147445783587e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w12-B-s0",
+    "world": 12,
+    "original_other_area": 0.0,
+    "payload_bytes": 42331,
+    "payload_sha256": "aa9711d76bae23d23483e7d4d215eb2f6d69fd60f9a6fcdc174f738ca2109130",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      7.632783294297951e-17,
+      8.326672684688674e-17,
+      1.9081958235744878e-17
+    ],
+    "polygon_boundary_residual": 1.1567783389051904e-15,
+    "lift_mismatches": 0,
+    "vertices": 263,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.961428224292954e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w12-A-s1",
+    "world": 12,
+    "original_other_area": 1.9081958235744878e-17,
+    "payload_bytes": 54507,
+    "payload_sha256": "9a45fdc50b9380e35b0282d70a55d4ee00b2c8c211d81881683057920e9feab9",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.220446049250313e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      5.377642775528102e-17,
+      1.8041124150158794e-16
+    ],
+    "polygon_boundary_residual": 2.4279387088187486e-15,
+    "lift_mismatches": 0,
+    "vertices": 223,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.081535902400336e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w12-B-s1",
+    "world": 12,
+    "original_other_area": 0.0,
+    "payload_bytes": 47261,
+    "payload_sha256": "96eec29d2cc388b8ead571ec6b6f8037775fcd06b74df00bea98d206a3e34d01",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.3314683517128287e-15,
+    "area_residuals": [
+      2.220446049250313e-16,
+      8.326672684688674e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 1.6653345369377352e-15,
+    "lift_mismatches": 0,
+    "vertices": 398,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.584583940484721e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w13-A-s0",
+    "world": 13,
+    "original_other_area": 0.0,
+    "payload_bytes": 81848,
+    "payload_sha256": "210f5eb6bc3b2c58fb87c5f8c9b780b5eb431410a1ead8c70eb64edabdc6ae73",
+    "source_residuals": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.3314683517128287e-15,
+    "area_residuals": [
+      2.220446049250313e-16,
+      8.326672684688674e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 1.6653345369377352e-15,
+    "lift_mismatches": 0,
+    "vertices": 398,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.584583940484721e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w13-A-s1",
+    "world": 13,
+    "original_other_area": 0.0,
+    "payload_bytes": 81848,
+    "payload_sha256": "210f5eb6bc3b2c58fb87c5f8c9b780b5eb431410a1ead8c70eb64edabdc6ae73",
+    "source_residuals": [
+      0.0,
+      2.7755575615628914e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.7520707107365752e-16,
+      2.203098814490545e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 2.6530671015302818e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.673237934425183e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 5.551115123125783e-16,
+    "case": "w15-A-s0",
+    "world": 15,
+    "original_other_area": 0.0,
+    "payload_bytes": 89302,
+    "payload_sha256": "4c87a8b7ef29d65b86707247703a399b4f12deb3acb1354f0743c0fd2ae7ce9d",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.7520707107365752e-16,
+      2.203098814490545e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 2.6530671015302818e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.673237934425183e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 5.551115123125783e-16,
+    "case": "w15-A-s1",
+    "world": 15,
+    "original_other_area": 0.0,
+    "payload_bytes": 89302,
+    "payload_sha256": "4c87a8b7ef29d65b86707247703a399b4f12deb3acb1354f0743c0fd2ae7ce9d",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.5543122344752192e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      6.245004513516506e-17,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.999607304150934e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.6562865492638673e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 9.992007221626409e-16,
+    "case": "w19-A-s0",
+    "world": 19,
+    "original_other_area": 0.0,
+    "payload_bytes": 89382,
+    "payload_sha256": "5489ac4593432c08883c62eae33e7dcfc08a8b598778061d29ca79a17b751447",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.5543122344752192e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      6.245004513516506e-17,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.999607304150934e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.6562865492638673e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 9.992007221626409e-16,
+    "case": "w19-A-s1",
+    "world": 19,
+    "original_other_area": 0.0,
+    "payload_bytes": 89382,
+    "payload_sha256": "5489ac4593432c08883c62eae33e7dcfc08a8b598778061d29ca79a17b751447",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.5543122344752192e-15,
+    "area_residuals": [
+      1.0269562977782698e-15,
+      9.159339953157541e-16,
+      1.6653345369377348e-16
+    ],
+    "polygon_boundary_residual": 8.42837711619113e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6861360272577437e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w21-A-s0",
+    "world": 21,
+    "original_other_area": 5.551115123125783e-17,
+    "payload_bytes": 60113,
+    "payload_sha256": "ba25f3a0c6c4e184b12d4a1e47cbc8cffc74056574beec6e1ccfd5bf43be14c1",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      1.3877787807814457e-17
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.5543122344752192e-15,
+    "area_residuals": [
+      1.0269562977782698e-15,
+      9.159339953157541e-16,
+      1.6653345369377348e-16
+    ],
+    "polygon_boundary_residual": 8.42837711619113e-15,
+    "lift_mismatches": 0,
+    "vertices": 284,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6861360272577437e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w21-A-s1",
+    "world": 21,
+    "original_other_area": 5.551115123125783e-17,
+    "payload_bytes": 60113,
+    "payload_sha256": "ba25f3a0c6c4e184b12d4a1e47cbc8cffc74056574beec6e1ccfd5bf43be14c1",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      1.3877787807814457e-17,
+      1.3877787807814457e-17
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      3.3306690738754696e-16,
+      1.6653345369377348e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.84632596913015e-15,
+    "lift_mismatches": 0,
+    "vertices": 316,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.724530548492318e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w23-A-s0",
+    "world": 23,
+    "original_other_area": 0.0,
+    "payload_bytes": 65574,
+    "payload_sha256": "7be57ef8faadd39d02153449100130272473536d1ce45564a4674dbb148e1d73",
+    "source_residuals": [
+      1.1102230246251565e-16,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      3.3306690738754696e-16,
+      1.6653345369377348e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 3.84632596913015e-15,
+    "lift_mismatches": 0,
+    "vertices": 316,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.724530548492318e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w23-A-s1",
+    "world": 23,
+    "original_other_area": 0.0,
+    "payload_bytes": 65574,
+    "payload_sha256": "7be57ef8faadd39d02153449100130272473536d1ce45564a4674dbb148e1d73",
+    "source_residuals": [
+      1.1102230246251565e-16,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.9984014443252818e-15,
+    "area_residuals": [
+      0.0,
+      9.992007221626409e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 2.025966904339278e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 6.66174077646657e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w28-A-s0",
+    "world": 28,
+    "original_other_area": 0.0,
+    "payload_bytes": 89320,
+    "payload_sha256": "aef8768c5ff389b9fca6228617a724369678bb6a874d4ecb7fcc148b5ceef420",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.9984014443252818e-15,
+    "area_residuals": [
+      0.0,
+      9.992007221626409e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 2.025966904339278e-15,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 6.66174077646657e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 6.661338147750939e-16,
+    "case": "w28-A-s1",
+    "world": 28,
+    "original_other_area": 0.0,
+    "payload_bytes": 89320,
+    "payload_sha256": "aef8768c5ff389b9fca6228617a724369678bb6a874d4ecb7fcc148b5ceef420",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.220446049250313e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      8.326672684688674e-17,
+      0.0
+    ],
+    "polygon_boundary_residual": 8.731489350413999e-16,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.67083184559348e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w29-A-s0",
+    "world": 29,
+    "original_other_area": 0.0,
+    "payload_bytes": 89324,
+    "payload_sha256": "3c6e82d3358c4d0f46a3ffc87ad2d0330390a4a07d50829f38be124c49aa75ed",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 2.220446049250313e-15,
+    "area_residuals": [
+      5.551115123125783e-17,
+      8.326672684688674e-17,
+      0.0
+    ],
+    "polygon_boundary_residual": 8.731489350413999e-16,
+    "lift_mismatches": 0,
+    "vertices": 433,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 3.67083184559348e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w29-A-s1",
+    "world": 29,
+    "original_other_area": 0.0,
+    "payload_bytes": 89324,
+    "payload_sha256": "3c6e82d3358c4d0f46a3ffc87ad2d0330390a4a07d50829f38be124c49aa75ed",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      5.898059818321144e-16,
+      5.967448757360216e-16,
+      2.7755575615628914e-17
+    ],
+    "polygon_boundary_residual": 2.3028766130352475e-15,
+    "lift_mismatches": 0,
+    "vertices": 299,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6810052494243397e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 2.220446049250313e-16,
+    "case": "w30-A-s0",
+    "world": 30,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 61730,
+    "payload_sha256": "dae1c20edc52b36537b788346a66f5786fd26832077e3142f8f56ddec25d6715",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      5.898059818321144e-16,
+      5.967448757360216e-16,
+      2.7755575615628914e-17
+    ],
+    "polygon_boundary_residual": 2.3028766130352475e-15,
+    "lift_mismatches": 0,
+    "vertices": 299,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6810052494243397e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 2.220446049250313e-16,
+    "case": "w30-A-s1",
+    "world": 30,
+    "original_other_area": 2.7755575615628914e-17,
+    "payload_bytes": 61730,
+    "payload_sha256": "dae1c20edc52b36537b788346a66f5786fd26832077e3142f8f56ddec25d6715",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6543977142014017e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w37-A-s0",
+    "world": 37,
+    "original_other_area": 0.0,
+    "payload_bytes": 81027,
+    "payload_sha256": "38f55b25897a4e575056835f95a83c26fd937fdf81615f5425ae4b0855ccad60",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.6543977142014017e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w37-A-s1",
+    "world": 37,
+    "original_other_area": 0.0,
+    "payload_bytes": 81027,
+    "payload_sha256": "38f55b25897a4e575056835f95a83c26fd937fdf81615f5425ae4b0855ccad60",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.121779983882823e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w39-A-s0",
+    "world": 39,
+    "original_other_area": 0.0,
+    "payload_bytes": 80970,
+    "payload_sha256": "0b5260189a54880b271f7b93b75be6ee5e9763323b7c32ad8d76994674714f9b",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 2.121779983882823e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w39-A-s1",
+    "world": 39,
+    "original_other_area": 0.0,
+    "payload_bytes": 80970,
+    "payload_sha256": "0b5260189a54880b271f7b93b75be6ee5e9763323b7c32ad8d76994674714f9b",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 9.992007221626409e-16,
+    "area_residuals": [
+      5.967448757360216e-16,
+      5.551115123125783e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 2.0807427796300308e-15,
+    "lift_mismatches": 0,
+    "vertices": 228,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.5203165631859584e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 3.3306690738754696e-16,
+    "case": "w40-A-s0",
+    "world": 40,
+    "original_other_area": 0.0,
+    "payload_bytes": 48318,
+    "payload_sha256": "cf371c5775234c747ba060e963455555c2a326a271ecc60eca1a221690578886",
+    "source_residuals": [
+      2.7755575615628914e-17,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.9984014443252818e-15,
+    "area_residuals": [
+      2.0990154059319366e-16,
+      0.0,
+      7.147060721024445e-16
+    ],
+    "polygon_boundary_residual": 4.416732971724544e-15,
+    "lift_mismatches": 0,
+    "vertices": 253,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.4976278996213914e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 2.220446049250313e-16,
+    "case": "w40-B-s0",
+    "world": 40,
+    "original_other_area": 0.0,
+    "payload_bytes": 53846,
+    "payload_sha256": "dc141e631e57a515018cce438e9d80f5002cee528a5daaa4094617bb7a7bcc72",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.2212453270876722e-15,
+    "area_residuals": [
+      2.983724378680108e-16,
+      0.0,
+      1.6653345369377348e-16
+    ],
+    "polygon_boundary_residual": 1.4626424656167145e-15,
+    "lift_mismatches": 0,
+    "vertices": 250,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.4141016613542122e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 2.220446049250313e-16,
+    "case": "w40-B-s1",
+    "world": 40,
+    "original_other_area": 0.0,
+    "payload_bytes": 53171,
+    "payload_sha256": "4b6d6b0203a936e1e537af6b11b11b6066e69774a267c18b1922d053dd0a8e53",
+    "source_residuals": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.7517616622445348e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w41-A-s0",
+    "world": 41,
+    "original_other_area": 0.0,
+    "payload_bytes": 80832,
+    "payload_sha256": "ed0e1f48cd0d1b8c14791f6a5c28df27d1d257dae18c7f2209f03dcbb2edf217",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.7763568394002505e-15,
+    "area_residuals": [
+      1.3183898417423734e-16,
+      1.734723475976807e-17,
+      3.469446951953614e-17
+    ],
+    "polygon_boundary_residual": 5.222331600583718e-15,
+    "lift_mismatches": 0,
+    "vertices": 394,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.7517616622445348e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w41-A-s1",
+    "world": 41,
+    "original_other_area": 0.0,
+    "payload_bytes": 80832,
+    "payload_sha256": "ed0e1f48cd0d1b8c14791f6a5c28df27d1d257dae18c7f2209f03dcbb2edf217",
+    "source_residuals": [
+      0.0,
+      1.3877787807814457e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      1.1102230246251565e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 8.645538799963171e-16,
+    "lift_mismatches": 0,
+    "vertices": 299,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.1055234961134537e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w46-A-s0",
+    "world": 46,
+    "original_other_area": 0.0,
+    "payload_bytes": 61710,
+    "payload_sha256": "34711cdf6d8998cb70e01ddbdd90c0797e8a66c6987389b9a61ad3405312ca82",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      4.163336342344337e-17,
+      0.0
+    ]
+  },
+  {
+    "outcome": "correct",
+    "agreement": true,
+    "constraint_keys_equal": true,
+    "max_constraint_residual": 1.3322676295501878e-15,
+    "area_residuals": [
+      1.1102230246251565e-16,
+      1.1102230246251565e-16,
+      0.0
+    ],
+    "polygon_boundary_residual": 8.645538799963171e-16,
+    "lift_mismatches": 0,
+    "vertices": 299,
+    "components": 1,
+    "omitted": 0,
+    "max_projection_residual": 1.1055234961134537e-13,
+    "candidate_swap_pass": true,
+    "gauge_shift_pass": true,
+    "gauge_constraint_residual": 4.440892098500626e-16,
+    "case": "w46-A-s1",
+    "world": 46,
+    "original_other_area": 0.0,
+    "payload_bytes": 61710,
+    "payload_sha256": "34711cdf6d8998cb70e01ddbdd90c0797e8a66c6987389b9a61ad3405312ca82",
+    "source_residuals": [
+      1.3877787807814457e-17,
+      4.163336342344337e-17,
+      0.0
+    ]
+  }
+]
