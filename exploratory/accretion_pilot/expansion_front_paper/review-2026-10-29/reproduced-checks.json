@@ -1,0 +1,37 @@
+[
+  {
+    "check": "reject_undeclared_branch_label",
+    "passed": true
+  },
+  {
+    "check": "reject_missing_common_origin",
+    "passed": true
+  },
+  {
+    "check": "reject_off_module_geometry",
+    "passed": true
+  },
+  {
+    "check": "input_tile_order_invariance",
+    "passed": true,
+    "residual": 0.0
+  },
+  {
+    "check": "disconnected_components_reconstruct_without_bridges",
+    "passed": true,
+    "components": 2
+  },
+  {
+    "check": "common_physical_translation",
+    "passed": true,
+    "residual": 0.0
+  },
+  {
+    "check": "reader_audit_hook_blocks_archive_open",
+    "passed": true
+  },
+  {
+    "check": "identical_compatible_hypotheses_report_ambiguous",
+    "passed": true
+  }
+]

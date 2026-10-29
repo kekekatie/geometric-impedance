@@ -1,0 +1,290 @@
+{
+  "date": "2026-10-29",
+  "reviewed_commit": "49b47c57d7af065b0711ca7f91e943613e795cac",
+  "A": {
+    "ties": 10231,
+    "drawers": {
+      "single_keystone": 5994,
+      "committee": 612,
+      "stayed_open": 3559,
+      "directly_chosen": 66
+    },
+    "sufficient": 5994,
+    "necessary_and_sufficient": 5434,
+    "redundant": 560,
+    "redundant_fraction_of_sufficient": 0.09342676009342676,
+    "redundant_fraction_of_settlements": 0.08477141992128367,
+    "necessary_corner_events": 5434,
+    "placebo_event_mean": 0.3200544455582582,
+    "placebo_event_denominator": 5994,
+    "placebo_pooled_numerator": 6468,
+    "placebo_pooled_denominator": 27690,
+    "recurring": 175,
+    "rigid": 84,
+    "always_settle": 63,
+    "malleable": 91,
+    "stiffness_bins": {
+      "0": 5,
+      "0.1": 4,
+      "0.2": 8,
+      "0.3": 11,
+      "0.4": 15,
+      "0.5": 7,
+      "0.6": 7,
+      "0.7": 17,
+      "0.8": 11,
+      "0.9": 14,
+      "1": 76
+    }
+  },
+  "B": {
+    "keystone_inward": {
+      "n": 5589,
+      "mean": 0.7489246116813327,
+      "mean_abs": 0.9627872116579026,
+      "median": 0.9774962332087095
+    },
+    "keystone_tangential": {
+      "n": 5589,
+      "mean": 0.0019732163312523904,
+      "mean_abs": 0.19859043412676386,
+      "median": 0.0026647887553971645
+    }
+  },
+  "C": {
+    "n": 9985,
+    "burst": {
+      "settled": 6054,
+      "saturated_open": 3931
+    },
+    "malleable_classes": 91,
+    "classes_with_unresolved": 83,
+    "saved_fields": [
+      "Farea",
+      "at_end",
+      "burst",
+      "drawer",
+      "fp",
+      "keystones",
+      "malleable",
+      "n_local",
+      "n_necessary",
+      "n_sufficient",
+      "placebo_rate",
+      "wall",
+      "world"
+    ],
+    "observed_settled": {
+      "n": 6099,
+      "mean": 0.1360128124752209,
+      "mean_abs": 0.1360128124752209,
+      "median": 0.0,
+      "near_inverse_phi_squared_1e_8": 319,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "observed_open": {
+      "n": 3356,
+      "mean": 0.31368474469548463,
+      "mean_abs": 0.31368474469548463,
+      "median": 0.38196601125010093,
+      "near_inverse_phi_squared_1e_8": 2007,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "core_burst_settled": {
+      "n": 2240,
+      "mean": 1.636905212808365e-17,
+      "mean_abs": 1.636905212808365e-17,
+      "median": 0.0,
+      "near_inverse_phi_squared_1e_8": 0,
+      "min": 0.0,
+      "max": 3.678843246302024e-15
+    },
+    "core_burst_open": {
+      "n": 3886,
+      "mean": 0.32997535866891825,
+      "mean_abs": 0.32997535866891825,
+      "median": 0.38196601125010166,
+      "near_inverse_phi_squared_1e_8": 2331,
+      "min": 0.0,
+      "max": 0.5000000000000131
+    }
+  },
+  "closure": {
+    "forks": 22,
+    "arms": 88,
+    "scored": 49,
+    "scored_forks": 20,
+    "censored": 39,
+    "last_steps": [
+      44
+    ],
+    "verdicts": {
+      "correct": 49
+    },
+    "all_correct": 49,
+    "F1": [
+      {
+        "world": 1,
+        "measurement": {
+          "frac": 0.1605,
+          "n": 2
+        }
+      },
+      {
+        "world": 2,
+        "measurement": {
+          "frac": 0.092,
+          "n": 2
+        }
+      },
+      {
+        "world": 3,
+        "measurement": {
+          "frac": 0.274,
+          "n": 2
+        }
+      },
+      {
+        "world": 12,
+        "measurement": {
+          "frac": 0.35,
+          "n": 2
+        }
+      },
+      {
+        "world": 40,
+        "measurement": {
+          "frac": 0.157,
+          "n": 1
+        }
+      }
+    ]
+  },
+  "pilot": [
+    {
+      "world": 0,
+      "skin_equiv": true,
+      "departA": 25,
+      "departB": null,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 1,
+      "skin_equiv": true,
+      "departA": 8,
+      "departB": 41,
+      "censored": false,
+      "endures_on_shared_ground": false
+    },
+    {
+      "world": 2,
+      "skin_equiv": true,
+      "departA": 7,
+      "departB": 11,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 3,
+      "skin_equiv": true,
+      "departA": 10,
+      "departB": 34,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 4,
+      "skin_equiv": true,
+      "departA": 7,
+      "departB": 11,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 5,
+      "skin_equiv": true,
+      "departA": 8,
+      "departB": 29,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 6,
+      "skin_equiv": true,
+      "departA": 25,
+      "departB": null,
+      "censored": false,
+      "endures_on_shared_ground": true
+    },
+    {
+      "world": 7,
+      "skin_equiv": true,
+      "departA": 10,
+      "departB": 17,
+      "censored": false,
+      "endures_on_shared_ground": true
+    }
+  ],
+  "active-skin": {
+    "histories": 3,
+    "steps": 310,
+    "edge_queries": 21185,
+    "cases": [
+      {
+        "case": "continuation-1",
+        "steps": 70,
+        "last_slice": 70,
+        "last_status": "JAM"
+      },
+      {
+        "case": "continuation-3",
+        "steps": 120,
+        "last_slice": 120,
+        "last_status": "ok"
+      },
+      {
+        "case": "alternative-29",
+        "steps": 120,
+        "last_slice": 120,
+        "last_status": "ok"
+      }
+    ]
+  },
+  "skin-restart": {
+    "histories": 3,
+    "steps": 130,
+    "edge_queries": 12078,
+    "cases": [
+      {
+        "case": "continuation-1",
+        "steps": 10,
+        "last_slice": 70,
+        "last_status": "JAM"
+      },
+      {
+        "case": "continuation-3",
+        "steps": 60,
+        "last_slice": 120,
+        "last_status": "ok"
+      },
+      {
+        "case": "alternative-29",
+        "steps": 60,
+        "last_slice": 120,
+        "last_status": "ok"
+      }
+    ]
+  },
+  "source_sha256": {
+    "corner-response-catalogue/results/worlds.json": "2ab949c0c71039a2a0f0b4bb0dc3b1bbb0f976e67a64e8e41dad8d0b6b322a24",
+    "depth-direction-lenses/results/worlds.json": "795e33c71008112b25095e8ba48516ede625d1402c96e31cda68418cdacbf210",
+    "malleable-chase/results/worlds.json": "ab79cc3380cd03ae82227139bf77a56be16990cc7ce27bd57037e90b0090b438",
+    "paired-front/results/closure_measurements.json": "b56afbc34c046107be075c9e146867b1882012cde8f4673e1796febe01bb9c0f",
+    "paired-front/results/measurements.json": "194f587c2709999a57b522c7d39c068b907fd858e2c841c5627abdc3f182cbc5",
+    "active-skin/results.json": "d5aff6b2d901497f44cc08cd80ff3b40a581b632e58ea96ff06cf949fa81eb08",
+    "skin-restart/results.json": "7f5938672536308bbe64ef4c1ac42435ccf8be287d8aa130a9923fb073c3eedb"
+  }
+}

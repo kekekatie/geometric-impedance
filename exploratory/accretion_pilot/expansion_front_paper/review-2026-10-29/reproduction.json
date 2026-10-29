@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-29",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "commit": "49b47c57d7af065b0711ca7f91e943613e795cac",
+  "commands": [
+    "python verify_reader.py --verify-only",
+    "python test_reader.py"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "generated_json_semantically_identical": 52,
+  "growth_regenerated": false
+}
