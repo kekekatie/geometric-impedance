@@ -227,6 +227,8 @@ See `README.md` for commands. Python 3.12; `numpy`, `scipy`, `matplotlib`
 `tests/test_hexflip.py` (9/9). Frozen engine: worktree at
 `84130b97f5044197392e72cd53e0e71f81b043f3`.
 
-Branch `claude/confident-cerf-404o4f`; commit id and push status recorded in the
-commit that adds this directory. No pull request opened (none requested). Nothing
-merged or force-pushed; no historical result changed.
+Branch `claude/confident-cerf-404o4f`. First commit of this directory:
+`4af813ac421f0d52a79e0823a9d242149be75a8a`. **Pushed** to
+`origin/claude/confident-cerf-404o4f` (this HANDBACK note is a follow-up commit on
+the same branch). No pull request opened (none requested). Nothing merged or
+force-pushed; no historical result changed.
