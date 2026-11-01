@@ -1,0 +1,194 @@
+[
+  {
+    "case": "w7-B-s0",
+    "world": 7,
+    "stream_idx": 0,
+    "jam_step": 23,
+    "F_full": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.08155948031231641,
+      "dim": null,
+      "witness": [
+        -0.45491502812526385,
+        1.0368132288720575
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "F_skin": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.08155948031231641,
+      "dim": null,
+      "witness": [
+        -0.45491502812526385,
+        1.0368132288720575
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "n_full": 417,
+    "n_skin": 315
+  },
+  {
+    "case": "w7-B-s1",
+    "world": 7,
+    "stream_idx": 1,
+    "jam_step": 23,
+    "F_full": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.08155948031231641,
+      "dim": null,
+      "witness": [
+        -0.45491502812526385,
+        1.0368132288720575
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "F_skin": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.08155948031231641,
+      "dim": null,
+      "witness": [
+        -0.45491502812526385,
+        1.0368132288720575
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "n_full": 417,
+    "n_skin": 315
+  },
+  {
+    "case": "w5-B-s0",
+    "world": 5,
+    "stream_idx": 0,
+    "jam_step": 42,
+    "F_full": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.050406530937789684,
+      "dim": null,
+      "witness": [
+        -0.3229490168751585,
+        0.7694208842938128
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "F_skin": {
+      "nconstraints": 20,
+      "polygon_area": 0.0,
+      "cls": "infeasible",
+      "chebyshev_r": -0.05040653093778957,
+      "dim": null,
+      "witness": [
+        0.10410196624968411,
+        -0.544906896004021
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    "n_full": 846,
+    "n_skin": 450
+  }
+]

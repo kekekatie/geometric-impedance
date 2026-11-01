@@ -1,0 +1,20 @@
+Part 2 -- feasibility certificate for the jam-trigger compatibility region
+Chebyshev-radius LP over the FROZEN Sl constraints; area shown for comparison only.
+radius tolerance tol_r = 1e-09 (window apothem ~ 0.81-1.31 offset units)
+
+      case  region            class    cheby_r*  poly_area stable
+   w7-B-s0    full       infeasible -8.1559e-02    0.0e+00   True
+   w7-B-s0    skin       infeasible -8.1559e-02    0.0e+00   True
+   w7-B-s1    full       infeasible -8.1559e-02    0.0e+00   True
+   w7-B-s1    skin       infeasible -8.1559e-02    0.0e+00   True
+   w5-B-s0    full       infeasible -5.0407e-02    0.0e+00   True
+   w5-B-s0    skin       infeasible -5.0407e-02    0.0e+00   True
+
+Reading: every jam-trigger region is INFEASIBLE (Chebyshev r* clearly negative,
+|r*| ~ 0.08 >> tol and >> the 1e-6 sensitivity band), not a feasible point or segment.
+The earlier area-threshold verdict was correct in substance; it is now certified by
+an independent feasibility test. F(full) and F(skin) share the same binding
+constraints, so the contradiction is present within the retained skin alone.
+
+Numerical limits: float LP over phi-irrational data. r* is far from any tolerance, so
+the infeasible verdict is robust; this is strong numerical evidence, not a symbolic proof.
