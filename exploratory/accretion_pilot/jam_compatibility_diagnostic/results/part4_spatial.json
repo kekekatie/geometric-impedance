@@ -1,0 +1,23 @@
+[
+  {
+    "case": "w7",
+    "jam_skin_iis_vertices": 2,
+    "max_pairwise_distance_S": 8.65,
+    "iis_vertex_dist_to_nearest_dead_S": [
+      4.11,
+      4.42
+    ],
+    "concentrated_near_notch": false
+  },
+  {
+    "case": "w5",
+    "jam_skin_iis_vertices": 3,
+    "max_pairwise_distance_S": 20.07,
+    "iis_vertex_dist_to_nearest_dead_S": [
+      12.8,
+      15.28,
+      17.3
+    ],
+    "concentrated_near_notch": false
+  }
+]

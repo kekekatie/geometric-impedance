@@ -1,0 +1,18 @@
+Part 4 -- inclusion-minimal infeasible subset (IIS) of compatibility constraints
+
+w7-first_infeasible_full@9: infeasible r*=-8.1559e-02
+   IIS size 2 constraints from 2 distinct originating vertices; IIS unique: True (alternatives found: 1)
+   constraints: [[2, 3], [3, 3]]
+w7-jam_trigger_skin@23: infeasible r*=-8.1559e-02
+   IIS size 2 constraints from 2 distinct originating vertices; IIS unique: False (alternatives found: 4)
+   constraints: [[0, 3], [3, 3]]
+w5-first_infeasible_full@17: infeasible r*=-5.0407e-02
+   IIS size 2 constraints from 2 distinct originating vertices; IIS unique: False (alternatives found: 2)
+   constraints: [[0, 3], [3, 3]]
+w5-jam_trigger_skin@42: infeasible r*=-5.0407e-02
+   IIS size 3 constraints from 3 distinct originating vertices; IIS unique: False (alternatives found: 3)
+   constraints: [[3, 2], [3, 3], [3, 4]]
+
+An IIS is inclusion-minimal (every constraint in it is needed for THAT subset's
+infeasibility), not minimum-cardinality, and not unique; it is a witness, not a proven
+causal repair target. Provenance (origin vertex + tiles) is in part4_provenance.json.
