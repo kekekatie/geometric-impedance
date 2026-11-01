@@ -1,0 +1,23 @@
+Phase 3 -- legal single-move (three-rhombus hexagon flip) repair feasibility
+cases (reconstructible B jams): 11
+
+        case dead  hex phason intr eligG legal eligL                      outcome
+     w5-B-s0    2   17     17   12     3     0     0   b_geometric_but_none_legal
+     w7-B-s0    2   13     13    9     2     0     0   b_geometric_but_none_legal
+     w7-B-s1    2   13     13    9     2     0     0   b_geometric_but_none_legal
+    w15-B-s0    2   13     13    9     2     0     0   b_geometric_but_none_legal
+    w19-B-s0    2   13     13    9     2     0     0   b_geometric_but_none_legal
+    w19-B-s1    2   17     17   12     3     0     0   b_geometric_but_none_legal
+    w21-B-s0    2   17     17   12     3     0     0   b_geometric_but_none_legal
+    w21-B-s1    2   17     17   12     3     0     0   b_geometric_but_none_legal
+    w28-B-s0    2   13     13    9     2     0     0   b_geometric_but_none_legal
+    w28-B-s1    2   17     17   12     3     0     0   b_geometric_but_none_legal
+    w29-B-s1    2   17     17   12     3     0     0   b_geometric_but_none_legal
+
+outcome tally:
+  b_geometric_but_none_legal: 11
+
+Legend: phason = alt dissection legal in isolation (geometric candidate); intr = closed
+hexagons (6 interior edges); eligG = geometric & eligible (interior & touches a dead site);
+legal = fully legal in the surrounding skin; eligL = legal AND eligible (could un-jam).
+no-repair baseline re-jams immediately for all cases: True

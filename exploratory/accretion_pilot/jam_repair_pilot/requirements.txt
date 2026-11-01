@@ -1,0 +1,7 @@
+# Tested with Python 3.12. The frozen engine import (perp_map, window_retrodiction)
+# pulls numpy and scipy at module load; matplotlib only for the optional figures.
+numpy>=2.0
+scipy>=1.11
+matplotlib>=3.7
+# The standalone reader (archive-free-reader/skin_reader.py) uses only the Python
+# standard library and is invoked in an isolated -I -S subprocess.

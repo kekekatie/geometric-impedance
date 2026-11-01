@@ -1,0 +1,156 @@
+[
+  {
+    "case": "w5-B-s0",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w7-B-s0",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w7-B-s1",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w15-B-s0",
+    "choice_tile_fate": "retained_in_skin",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w19-B-s0",
+    "choice_tile_fate": "retained_in_skin",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w19-B-s1",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w21-B-s0",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w21-B-s1",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w28-B-s0",
+    "choice_tile_fate": "retained_in_skin",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w28-B-s1",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  },
+  {
+    "case": "w29-B-s1",
+    "choice_tile_fate": "departed_under_pruning",
+    "pre_repair_outcome": "empty_incompatible",
+    "pre_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "reader_intersections": [
+      0.0,
+      0.0
+    ],
+    "post": null
+  }
+]

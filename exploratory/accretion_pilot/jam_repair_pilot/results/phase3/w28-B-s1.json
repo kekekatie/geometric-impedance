@@ -1,0 +1,18 @@
+{
+  "case": "w28-B-s1",
+  "world": 28,
+  "stream_idx": 1,
+  "jam_step": 43,
+  "horizon": 44,
+  "n_skin_tiles": 582,
+  "n_dead_sites": 2,
+  "norepair_jams_immediately": true,
+  "n_flip_hexagons": 17,
+  "n_flip_phason": 17,
+  "n_interior": 12,
+  "n_eligible_geom": 3,
+  "n_legal_in_context": 0,
+  "n_eligible_legal": 0,
+  "outcome": "b_geometric_but_none_legal",
+  "repair": null
+}

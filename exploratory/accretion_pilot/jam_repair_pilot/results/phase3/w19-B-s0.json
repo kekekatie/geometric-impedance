@@ -1,0 +1,18 @@
+{
+  "case": "w19-B-s0",
+  "world": 19,
+  "stream_idx": 0,
+  "jam_step": 39,
+  "horizon": 44,
+  "n_skin_tiles": 551,
+  "n_dead_sites": 2,
+  "norepair_jams_immediately": true,
+  "n_flip_hexagons": 13,
+  "n_flip_phason": 13,
+  "n_interior": 9,
+  "n_eligible_geom": 2,
+  "n_legal_in_context": 0,
+  "n_eligible_legal": 0,
+  "outcome": "b_geometric_but_none_legal",
+  "repair": null
+}

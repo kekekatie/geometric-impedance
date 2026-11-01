@@ -1,0 +1,52 @@
+[phase1] snapshot 84130b97f5044197392e72cd53e0e71f81b043f3
+[phase1] selecting 22 forks (frozen dedup loop)...
+[phase1] forks: 22 -> worlds [0, 1, 2, 3, 5, 7, 11, 12, 13, 15, 19, 21, 23, 25, 28, 29, 30, 37, 39, 40, 41, 46]
+[phase1] world 0 done
+[phase1] world 1 done
+[phase1] world 2 done
+[phase1] world 3 done
+[phase1] world 5 done
+[phase1] world 7 done
+[phase1] world 11 done
+[phase1] world 12 done
+[phase1] world 13 done
+[phase1] world 15 done
+[phase1] world 19 done
+[phase1] world 21 done
+[phase1] world 23 done
+[phase1] world 25 done
+[phase1] world 28 done
+[phase1] world 29 done
+[phase1] world 30 done
+[phase1] world 37 done
+[phase1] world 39 done
+[phase1] world 40 done
+[phase1] world 41 done
+[phase1] world 46 done
+
+Phase 1 -- baseline and state availability
+snapshot commit: 84130b97f5044197392e72cd53e0e71f81b043f3
+forks: 22  world ids: [0, 1, 2, 3, 5, 7, 11, 12, 13, 15, 19, 21, 23, 25, 28, 29, 30, 37, 39, 40, 41, 46]
+arm-streams: 88  (A: 44, B: 44)
+jam counts -- A 0/44, B 11/44   (saved: A 0/44, B 11/44)
+world-ids match saved: True
+per-arm milestone mismatches vs saved: 0
+
+B-jam cases (retained state exported to jam_cases/):
+        case jam_step #front #dead #grow F_empty B_in_skin
+     w5-B-s0       42     98     2    96    True     False
+     w7-B-s0       23     73     2    71    True     False
+     w7-B-s1       23     73     2    71    True     False
+    w15-B-s0       39    115     2   113    True      True
+    w19-B-s0       39    115     2   113    True      True
+    w19-B-s1       43    120     2   118    True     False
+    w21-B-s0       42     98     2    96    True     False
+    w21-B-s1       42     98     2    96    True     False
+    w28-B-s0       39    115     2   113    True      True
+    w28-B-s1       43    120     2   118    True     False
+    w29-B-s1       43    120     2   118    True     False
+
+Key finding: every B jam is a LOCAL dead-end -- a small number of zero-candidate frontier
+sites halting an engine with many (>=90) still-growable sites. A single dead site halts all.
+
+[phase1] wrote /home/user/geometric-impedance/exploratory/accretion_pilot/jam_repair_pilot/results/baseline/manifest.json, verification.json, baseline_report.txt, and 11 jam-case exports.

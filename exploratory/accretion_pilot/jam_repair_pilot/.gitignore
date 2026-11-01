@@ -1,0 +1,6 @@
+# regenerable cache (rebuild with build_fork_cache.py)
+results/baseline/forks.pkl
+# matplotlib cache
+**/mpl-cache/
+__pycache__/
+*.pyc

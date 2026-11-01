@@ -1,0 +1,15 @@
+{
+  "world_ids_match": true,
+  "arm_streams": 88,
+  "milestone_mismatches": [],
+  "all_milestones_match": true,
+  "jam_counts_replay": {
+    "A": "0/44",
+    "B": "11/44"
+  },
+  "jam_counts_saved": {
+    "A": "0/44",
+    "B": "11/44"
+  },
+  "jam_counts_match": true
+}

@@ -1,0 +1,1490 @@
+{
+  "snapshot_commit": "84130b97f5044197392e72cd53e0e71f81b043f3",
+  "provenance": "Deterministic replay of the frozen closure engine; verified against saved milestones.",
+  "forks": 22,
+  "world_ids": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7,
+    11,
+    12,
+    13,
+    15,
+    19,
+    21,
+    23,
+    25,
+    28,
+    29,
+    30,
+    37,
+    39,
+    40,
+    41,
+    46
+  ],
+  "arm_streams": 88,
+  "nstreams": 2,
+  "horizon": 44,
+  "jam_counts": {
+    "A": "0/44",
+    "B": "11/44"
+  },
+  "ab_ordering": "Canonical candidate order: SN.ordered(D.candidates(edge)) sorts by (shape c, key(A), key(B), key(C)); A=index 0, B=index 1. This is the scheduler's deterministic order, NOT an intrinsic geometric label.",
+  "jam_condition": "speed_of_now.patient() returns JAM at the FIRST frontier edge whose legal-candidate set is empty; a single such dead site halts the whole engine even when many other frontier sites could still grow (see per-case n_growable_sites).",
+  "restart_faithfulness": "No per-step checkpoints were saved for the closure runs (confirmed in the archive-free-reader VERIFICATION note). Faithful restart is available ONLY via deterministic replay from (world k, stream); replay here reproduces every saved milestone (stop, nsnaps/jam-step, dep, guesses) for all 88 arm-streams. Replay is NOT zero new computation.",
+  "arms": [
+    {
+      "world": 0,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262600000,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 518
+    },
+    {
+      "world": 0,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262600101,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 518
+    },
+    {
+      "world": 0,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262600000,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 605
+    },
+    {
+      "world": 0,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262600101,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 605
+    },
+    {
+      "world": 1,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262607919,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 1,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262608020,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 1,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262607919,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 41,
+      "guesses": [
+        17,
+        26
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 427
+    },
+    {
+      "world": 1,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262608020,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 41,
+      "guesses": [
+        17,
+        26
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 469
+    },
+    {
+      "world": 2,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262615838,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1480
+    },
+    {
+      "world": 2,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262615939,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1480
+    },
+    {
+      "world": 2,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262615838,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 11,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 893
+    },
+    {
+      "world": 2,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262615939,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 11,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 893
+    },
+    {
+      "world": 3,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262623757,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 1293
+    },
+    {
+      "world": 3,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262623858,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 1293
+    },
+    {
+      "world": 3,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262623757,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 34,
+      "guesses": [
+        21
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 709
+    },
+    {
+      "world": 3,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262623858,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 34,
+      "guesses": [
+        21
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 709
+    },
+    {
+      "world": 5,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262639595,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 5,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262639696,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 5,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262639595,
+      "stop": "jam",
+      "nsnaps": 43,
+      "jam_step": 42,
+      "dep": 29,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 846
+    },
+    {
+      "world": 5,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262639696,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        17,
+        26,
+        29
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 398
+    },
+    {
+      "world": 7,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262655433,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 1109
+    },
+    {
+      "world": 7,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262655534,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 1109
+    },
+    {
+      "world": 7,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262655433,
+      "stop": "jam",
+      "nsnaps": 24,
+      "jam_step": 23,
+      "dep": 17,
+      "guesses": [
+        9
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 417
+    },
+    {
+      "world": 7,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262655534,
+      "stop": "jam",
+      "nsnaps": 24,
+      "jam_step": 23,
+      "dep": 17,
+      "guesses": [
+        9
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 417
+    },
+    {
+      "world": 11,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262687109,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 11,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262687210,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 11,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262687109,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 899
+    },
+    {
+      "world": 11,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262687210,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 899
+    },
+    {
+      "world": 12,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262695028,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [
+        36
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 636
+    },
+    {
+      "world": 12,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262695129,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [
+        36
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 636
+    },
+    {
+      "world": 12,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262695028,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 11,
+      "guesses": [
+        13,
+        30
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 428
+    },
+    {
+      "world": 12,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262695129,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 11,
+      "guesses": [
+        13,
+        30
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 484
+    },
+    {
+      "world": 13,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262702947,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1439
+    },
+    {
+      "world": 13,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262703048,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 7,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1439
+    },
+    {
+      "world": 13,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262702947,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 899
+    },
+    {
+      "world": 13,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262703048,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 905
+    },
+    {
+      "world": 15,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262718785,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 15,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262718886,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 15,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262718785,
+      "stop": "jam",
+      "nsnaps": 40,
+      "jam_step": 39,
+      "dep": null,
+      "guesses": [
+        17,
+        25
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 875
+    },
+    {
+      "world": 15,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262718886,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        17,
+        25,
+        28
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 801
+    },
+    {
+      "world": 19,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262750461,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 19,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262750562,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 19,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262750461,
+      "stop": "jam",
+      "nsnaps": 40,
+      "jam_step": 39,
+      "dep": null,
+      "guesses": [
+        17,
+        25
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 875
+    },
+    {
+      "world": 19,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262750562,
+      "stop": "jam",
+      "nsnaps": 44,
+      "jam_step": 43,
+      "dep": 30,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1228
+    },
+    {
+      "world": 21,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262766299,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 21,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262766400,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 835
+    },
+    {
+      "world": 21,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262766299,
+      "stop": "jam",
+      "nsnaps": 43,
+      "jam_step": 42,
+      "dep": 29,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 846
+    },
+    {
+      "world": 21,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262766400,
+      "stop": "jam",
+      "nsnaps": 43,
+      "jam_step": 42,
+      "dep": 29,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 210,
+      "patch_final": 846
+    },
+    {
+      "world": 23,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262782137,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 43,
+      "guesses": [
+        30
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 810
+    },
+    {
+      "world": 23,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262782238,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 43,
+      "guesses": [
+        30
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 810
+    },
+    {
+      "world": 23,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262782137,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 800
+    },
+    {
+      "world": 23,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262782238,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 800
+    },
+    {
+      "world": 25,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262797975,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 894,
+      "patch_final": 1441
+    },
+    {
+      "world": 25,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262798076,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 894,
+      "patch_final": 1441
+    },
+    {
+      "world": 25,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262797975,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 894,
+      "patch_final": 1597
+    },
+    {
+      "world": 25,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262798076,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 894,
+      "patch_final": 1597
+    },
+    {
+      "world": 28,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262821732,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 28,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262821833,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 28,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262821732,
+      "stop": "jam",
+      "nsnaps": 40,
+      "jam_step": 39,
+      "dep": null,
+      "guesses": [
+        17,
+        25
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 875
+    },
+    {
+      "world": 28,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262821833,
+      "stop": "jam",
+      "nsnaps": 44,
+      "jam_step": 43,
+      "dep": 30,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1228
+    },
+    {
+      "world": 29,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262829651,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 29,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262829752,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1734
+    },
+    {
+      "world": 29,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262829651,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        17,
+        25,
+        28
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 801
+    },
+    {
+      "world": 29,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262829752,
+      "stop": "jam",
+      "nsnaps": 44,
+      "jam_step": 43,
+      "dep": 30,
+      "guesses": [
+        17
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1228
+    },
+    {
+      "world": 30,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262837570,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 883
+    },
+    {
+      "world": 30,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262837671,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 883
+    },
+    {
+      "world": 30,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262837570,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 607
+    },
+    {
+      "world": 30,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262837671,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 607
+    },
+    {
+      "world": 37,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262893003,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 37,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262893104,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 37,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262893003,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 897
+    },
+    {
+      "world": 37,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262893104,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 897
+    },
+    {
+      "world": 39,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262908841,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 39,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262908942,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 39,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262908841,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 897
+    },
+    {
+      "world": 39,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262908942,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 897
+    },
+    {
+      "world": 40,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262916760,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 32,
+      "guesses": [
+        20
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 551
+    },
+    {
+      "world": 40,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262916861,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        20
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 491
+    },
+    {
+      "world": 40,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262916760,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 607
+    },
+    {
+      "world": 40,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262916861,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 198,
+      "patch_final": 602
+    },
+    {
+      "world": 41,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262924679,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 41,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262924780,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 8,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 1409
+    },
+    {
+      "world": 41,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262924679,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 897
+    },
+    {
+      "world": 41,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262924780,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        43
+      ],
+      "horizon": 44,
+      "patch_Sstar": 596,
+      "patch_final": 899
+    },
+    {
+      "world": 46,
+      "opt": "A",
+      "stream_idx": 0,
+      "stream": 20262964274,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 883
+    },
+    {
+      "world": 46,
+      "opt": "A",
+      "stream_idx": 1,
+      "stream": 20262964375,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": 10,
+      "guesses": [],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 883
+    },
+    {
+      "world": 46,
+      "opt": "B",
+      "stream_idx": 0,
+      "stream": 20262964274,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 601
+    },
+    {
+      "world": 46,
+      "opt": "B",
+      "stream_idx": 1,
+      "stream": 20262964375,
+      "stop": "steps",
+      "nsnaps": 45,
+      "jam_step": null,
+      "dep": null,
+      "guesses": [
+        42
+      ],
+      "horizon": 44,
+      "patch_Sstar": 306,
+      "patch_final": 607
+    }
+  ],
+  "b_jam_cases": [
+    {
+      "world": 5,
+      "stream_idx": 0,
+      "n_frontier": 98,
+      "n_dead_sites": 2,
+      "n_growable_sites": 96,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 7,
+      "stream_idx": 0,
+      "n_frontier": 73,
+      "n_dead_sites": 2,
+      "n_growable_sites": 71,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 7,
+      "stream_idx": 1,
+      "n_frontier": 73,
+      "n_dead_sites": 2,
+      "n_growable_sites": 71,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 15,
+      "stream_idx": 0,
+      "n_frontier": 115,
+      "n_dead_sites": 2,
+      "n_growable_sites": 113,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": true
+    },
+    {
+      "world": 19,
+      "stream_idx": 0,
+      "n_frontier": 115,
+      "n_dead_sites": 2,
+      "n_growable_sites": 113,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": true
+    },
+    {
+      "world": 19,
+      "stream_idx": 1,
+      "n_frontier": 120,
+      "n_dead_sites": 2,
+      "n_growable_sites": 118,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 21,
+      "stream_idx": 0,
+      "n_frontier": 98,
+      "n_dead_sites": 2,
+      "n_growable_sites": 96,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 21,
+      "stream_idx": 1,
+      "n_frontier": 98,
+      "n_dead_sites": 2,
+      "n_growable_sites": 96,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 28,
+      "stream_idx": 0,
+      "n_frontier": 115,
+      "n_dead_sites": 2,
+      "n_growable_sites": 113,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": true
+    },
+    {
+      "world": 28,
+      "stream_idx": 1,
+      "n_frontier": 120,
+      "n_dead_sites": 2,
+      "n_growable_sites": 118,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    },
+    {
+      "world": 29,
+      "stream_idx": 1,
+      "n_frontier": 120,
+      "n_dead_sites": 2,
+      "n_growable_sites": 118,
+      "single_dead_site_halts_engine": true,
+      "f_full_empty": true,
+      "choice_tile_in_skin": false
+    }
+  ]
+}

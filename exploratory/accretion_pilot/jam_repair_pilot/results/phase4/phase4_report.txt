@@ -1,0 +1,26 @@
+Phase 4 -- A/B readout on surviving geometry at the jam-trigger checkpoint (pre-repair)
+Frozen reader (archive-free-reader/skin_reader.py), original gauge, hypotheses C^A,C^B.
+reader: /home/user/efp-snapshot/exploratory/accretion_pilot/expansion_front_paper/archive-free-reader/skin_reader.py
+
+        case                   fate            outcome selected       area  detail
+     w5-B-s0 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+     w7-B-s0 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+     w7-B-s1 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w15-B-s0       retained_in_skin empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w19-B-s0       retained_in_skin empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w19-B-s1 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w21-B-s0 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w21-B-s1 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w28-B-s0       retained_in_skin empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w28-B-s1 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+    w29-B-s1 departed_under_pruning empty_incompatible     None  0.000e+00  area=0.000e+00 ncompat=0
+
+outcome tally (B is the committed/true option; correct = reader selects B):
+  empty_incompatible: 11
+choice-tile fate tally:
+  departed_under_pruning: 8
+  retained_in_skin: 3
+
+Note: an empty F or unreconstructible readout at a jammed checkpoint is NOT by itself
+proof that historical information has vanished (the jam gives F(full)=0 globally, and the
+4-layer slab has a horizon as the front advances). Reported as its own category.
