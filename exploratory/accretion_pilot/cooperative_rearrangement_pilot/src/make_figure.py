@@ -32,8 +32,8 @@ def main():
     st = json.loads((CC.INPUT / "retained_state.json").read_text())
     band = [CC.dtile(t) for t in st["tiles"]]
     p3 = json.loads((CC.RESULTS / "part3_necessary.json").read_text())
-    greedy = p3["obstruction"]["greedy_vertex_engulfment"]
-    greedy_vkeys = {tuple(v) for v in greedy.get("vertices", [])}
+    greedy = p3["obstruction"]["heuristic_deletion_footprint"]
+    greedy_vkeys = {tuple(v) for v in greedy.get("selected_vertices", [])}
     dead = st["dead_sites"]
     witness = st["compatibility_witness_vertices"]
 
@@ -67,21 +67,23 @@ def main():
         v = complex(*w["vertex"])
         ax.plot(v.real, v.imag, "*", color="#7a1fb0", ms=18, mec="white", mew=1.2)
 
+    fp = greedy["footprint"]
     import matplotlib.patches as mpatches
     handles = [
-        mpatches.Patch(color="#f0a23a", label=f"min engulfment to restore compatibility "
-                                              f"({greedy['n_vertices']} vertex-stars, {greedy['footprint']['n_tiles']} tiles, "
-                                              f"{greedy['footprint']['vertex_span_S']} S, "
-                                              f"{'disconnected' if not greedy['footprint']['connected'] else 'connected'})"),
-        mpatches.Patch(color="#3f7fd0", label="sample bounded region (flip hexagon, 6 tiles; move class ≤ 8)"),
+        mpatches.Patch(color="#f0a23a", label=(
+            f"ONE heuristic DELETION footprint — NOT a repair/minimum "
+            f"({fp.get('n_actual_engulfed_vertices')} vertices removed, {fp['n_tiles']} triangles, "
+            f"{fp['n_components']} components, zero-margin)")),
+        mpatches.Patch(color="#3f7fd0", label="sample bounded region (flip hexagon = 6 triangles / 3 rhombi; move class ≤ 8 triangles)"),
         plt.Line2D([], [], color="#c0392b", marker="x", lw=0, ms=10, label="dead sites (2)"),
-        plt.Line2D([], [], color="#7a1fb0", marker="*", lw=0, ms=12, label="compatibility-witness vertices (span 8.65 S)"),
+        plt.Line2D([], [], color="#7a1fb0", marker="*", lw=0, ms=12, label="selected compatibility-witness vertices (span 8.65 S)"),
     ]
-    ax.legend(handles=handles, fontsize=9, loc="upper left")
+    ax.legend(handles=handles, fontsize=8.5, loc="upper left")
     ax.set_aspect("equal"); ax.axis("off")
     ax.set_title("w7-B-s0 jam: the compatibility obstruction is spatially distributed\n"
-                 "no connected fixed-exterior region of size ≤ 8 can restore compatibility (Part 3: 0/12248)",
-                 fontsize=11)
+                 "no SEEDED connected region of ≤ 8 triangular tiles has a feasible unchanged exterior "
+                 "(Part 3: 0/12248); orange = one heuristic deletion footprint, not a lawful repair",
+                 fontsize=10)
     fig.tight_layout()
     fig.savefig(CC.FIGURES / "obstruction_map.png", dpi=140, bbox_inches="tight")
     print("wrote figures/obstruction_map.png")

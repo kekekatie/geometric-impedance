@@ -1,0 +1,255 @@
+{
+  "case": "w7-B-s0 jam@23",
+  "move_class": "connected fixed-exterior region, size<=8",
+  "controls": {
+    "R_empty_full_band": {
+      "verdict": "infeasible",
+      "box_r": -0.08155948031231641
+    },
+    "synthetic_feasible": {
+      "verdict": "feasible"
+    }
+  },
+  "region_enumeration": {
+    "max_region_size": 8,
+    "cap": 50000,
+    "truncated": false,
+    "n_regions": 12248,
+    "by_size": {
+      "1": 21,
+      "2": 37,
+      "3": 84,
+      "4": 200,
+      "5": 499,
+      "6": 1230,
+      "7": 2978,
+      "8": 7199
+    },
+    "n_engulfing_a_vertex": 3118,
+    "verdict_tally": {
+      "infeasible": 12248
+    },
+    "path_diagnostics": {
+      "no_engulfment": 9130,
+      "engulfed_nonbinding": 2724,
+      "lp_evaluated": 394
+    },
+    "path_diagnostics_note": "Environment/last-bit sensitive via exact-dict equality of aggregate coefficients; NOT a scientific requirement (the independent audit saw a different split with identical final verdicts). The verdict_tally is the result.",
+    "n_permitted": 0,
+    "permitted": [],
+    "n_unresolved": 0,
+    "unresolved": []
+  },
+  "obstruction": {
+    "min_facet_drop": {
+      "min_rows": 4,
+      "min_certified": true,
+      "unresolved_at_smaller_cardinality": false,
+      "example_feasible_sets": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      ],
+      "cardinality_table": [
+        {
+          "cardinality": 0,
+          "subsets": 1,
+          "feasible": 0,
+          "unresolved": 0
+        },
+        {
+          "cardinality": 1,
+          "subsets": 20,
+          "feasible": 0,
+          "unresolved": 0
+        },
+        {
+          "cardinality": 2,
+          "subsets": 190,
+          "feasible": 0,
+          "unresolved": 0
+        },
+        {
+          "cardinality": 3,
+          "subsets": 1140,
+          "feasible": 0,
+          "unresolved": 0
+        },
+        {
+          "cardinality": 4,
+          "subsets": 4845,
+          "feasible": 5,
+          "unresolved": 0
+        }
+      ],
+      "searched_up_to": 4,
+      "note": "aggregate (rank,facet) row-deletion cardinality; not tiles/vertices/flips/steps"
+    },
+    "heuristic_deletion_footprint": {
+      "converged": true,
+      "is_minimum_repair": false,
+      "is_necessary_reach": false,
+      "is_replacement": false,
+      "n_selected_vertices": 11,
+      "selected_vertices": [
+        [
+          0.555029,
+          -0.068884
+        ],
+        [
+          0.575274,
+          -0.04102
+        ],
+        [
+          0.575274,
+          -0.006578
+        ],
+        [
+          0.595518,
+          0.021286
+        ],
+        [
+          0.60803,
+          0.059793
+        ],
+        [
+          0.60803,
+          0.094235
+        ],
+        [
+          0.628274,
+          0.122099
+        ],
+        [
+          0.628274,
+          0.156541
+        ],
+        [
+          0.648518,
+          0.163119
+        ],
+        [
+          0.681275,
+          0.13932
+        ],
+        [
+          0.714031,
+          -0.094235
+        ]
+      ],
+      "footprint": {
+        "n_tiles": 41,
+        "n_components": 10,
+        "connected": false,
+        "n_selected_vertices": 11,
+        "n_actual_engulfed_vertices": 12,
+        "selected_vertex_span_S": 12.4757,
+        "footprint_vertex_span_S": 14.0494,
+        "saved_outer_frontier_edges_lost": 8,
+        "saved_inner_boundary_edges_lost": 4
+      },
+      "exterior_verdict": "feasible",
+      "exterior_box_r": -0.0,
+      "exterior_box_free_margin": -0.0,
+      "zero_margin_numerically": true,
+      "symbolically_certified": false,
+      "n_greedy_steps": 11
+    },
+    "note": "The heuristic_deletion_footprint is ONE disconnected tile-DELETION example with zero-margin exterior feasibility; it is not a minimum, a necessary spatial reach, or a legal fixed-boundary replacement. min_facet_drop is an aggregate-row deletion cardinality, not tiles/vertices/flips/steps."
+  },
+  "characterisation": {
+    "witness_vertex_span_S": 8.65,
+    "witness_star_sizes": {
+      "[0.726543, -0.111456]": 4,
+      "[0.575274, -0.006578]": 6
+    },
+    "note": "A connected region drops a vertex's constraint only by engulfing its ENTIRE tile star. To drop an aggregate (rank,facet) row, neighbouring suppliers must also be engulfed, so the obstruction is distributed; the seeded size<=8 family cannot reach it (0/12248 permitted)."
+  }
+}

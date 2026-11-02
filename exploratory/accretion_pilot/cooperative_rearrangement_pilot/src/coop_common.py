@@ -31,8 +31,11 @@ import part4_iis as P4                         # noqa: E402
 
 HERE = Path(__file__).resolve().parents[1]     # cooperative_rearrangement_pilot
 INPUT = HERE / "input"
-RESULTS = HERE / "results"
-FIGURES = HERE / "figures"
+# Output dirs are env-overridable so an integration/validation re-run can write to
+# a SEPARATE location (COOP_RESULTS / COOP_FIGURES) without touching the historical
+# outputs. Default to the historical paths.
+RESULTS = Path(os.environ.get("COOP_RESULTS", str(HERE / "results")))
+FIGURES = Path(os.environ.get("COOP_FIGURES", str(HERE / "figures")))
 
 
 # ----------------------------- serialization -----------------------------
@@ -279,9 +282,16 @@ def overlap_or_dupe(exterior_local, fill_tiles):
 
 
 def completed_replacement_legal(exterior_local, region_tiles, fill_tiles):
-    """Order-independent frozen legality of replacing region_tiles by fill_tiles,
-    against the local exterior: no overlap/dup, and every touched vertex is a
-    complete/contiguous atlas star in the assembled patch."""
+    """DEPRECATED / WEAK (superseded 2026-11-03). Use
+    `safeguards.completed_replacement_legal` (the audited validator), which also
+    checks template membership, footprint coverage, boundary/interface
+    preservation, a general polygon-intersection overlap test, and runs against the
+    FULL exterior. This version ignores `region_tiles`, performs no coverage or
+    template check, and ACCEPTS AN EMPTY FILLING (it returns True for
+    fill_tiles=[]) -- the defect the audit found. Retained only to document that
+    defect; maintained code must not call it for validation."""
+    if not fill_tiles:
+        return False   # minimal hardening: never accept an empty filling
     if overlap_or_dupe(exterior_local, fill_tiles):
         return False
     touch = {L.key(z) for t in fill_tiles for z in t[1:]}

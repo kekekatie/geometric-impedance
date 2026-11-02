@@ -26,6 +26,7 @@ from __future__ import annotations
 import json
 import coop_common as CC
 from coop_common import Sl, PC, L, D, S
+import safeguards                 # audited true_frontier_counts (reused; audit 2026-11-03)
 import phase4_readout as RD   # frozen-reader adapter (pilot); unchanged
 
 
@@ -41,7 +42,13 @@ def load_evaluator():
     return ev, Sstar, cs
 
 
-def frontier_candidate_counts(band):
+def frontier_candidate_counts_DEPRECATED(band):
+    """SUPERSEDED (audit 2026-11-03). This counted Patch.frontier() of the band,
+    which mixes the TRUE growth frontier with pruning-exposed inner edges (it gave
+    103 edges / 101 growable). Use safeguards.true_frontier_counts(state, band),
+    which counts only the SAVED true-frontier edges with ownership checks (73
+    edges / 71 growable / 2 blocked). Retained only to document the corrected
+    defect; not called."""
     P = L.Patch(list(band))
     fr = P.frontier()
     counts = [len(D.candidates(P, *e[:3])) for e in fr]
@@ -66,8 +73,10 @@ def main():
     result = RD.run_reader(payload)
     outcome, detail = RD.classify(result)
 
-    # (2) candidate counts
-    fc = frontier_candidate_counts(band)
+    # (2) TRUE-frontier candidate counts (audited; saved identities + ownership,
+    #     excluding pruning-exposed inner edges). 73 edges / 71 growable / 2 blocked.
+    fc = safeguards.true_frontier_counts(st, band)
+    fc_combined_skin = frontier_candidate_counts_DEPRECATED(band)  # recorded for comparison only
 
     # choice-tile fate
     b_present = choice_tile_present(band, B)
@@ -83,11 +92,16 @@ def main():
             reader_area=result.get("area"),
             true_option="B (index 1); 'correct' = reader selects B",
             choice_tile_B_present_in_band=bool(b_present),
-            interpretation=("The initial jammed state is already reader-incompatible by design (the jam gives "
-                            "F=0). An empty/incompatible readout here is NOT memory loss; it is the absence of "
-                            "any consistent offset to read."),
+            interpretation=("For this recorded baseline, the reconstructed window-compatibility region is empty; "
+                            "this alone does not demonstrate erasure of historical information, nor is it a "
+                            "general equivalence between local jamming and global incompatibility."),
         ),
         frontier_candidate_counts=fc,
+        frontier_candidate_counts_combined_skin_DEPRECATED=fc_combined_skin,
+        frontier_note=("Audited correction (2026-11-03): frontier_candidate_counts now counts only the SAVED "
+                       "true growth-frontier edges (73, with ownership checks), 2 blocked / 71 growable. The "
+                       "earlier 103/101 figure counted the combined skin boundary (true frontier + 30 "
+                       "pruning-exposed inner edges) and is retained above for comparison only."),
         post_repair=dict(
             qualifying_repair_found=False,
             note=("No connected fixed-exterior region (size<=8) restored compatibility (Part 3/4), so there is "

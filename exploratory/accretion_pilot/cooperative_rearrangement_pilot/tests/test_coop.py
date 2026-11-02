@@ -9,6 +9,7 @@ import sys, os, json
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src"))
 import coop_common as CC
 from coop_common import L, S
+import safeguards                  # audited validator (reused)
 import hexflip as HF
 
 FAILS = []
@@ -51,13 +52,18 @@ def main():
     check(len(hexes) > 0, "found flip hexagons near dead sites")
     if hexes:
         h = hexes[0]["tiles"]
-        surr = [t for t in band if CC.dk(t) not in {CC.dk(u) for u in h}
-                and abs(HF.tile_centroid(t) - sum(HF.tile_centroid(u) for u in h) / len(h)) < 6 * S]
-        check(CC.completed_replacement_legal(surr, h, list(h)),
-              "positive control: identity replacement is legal")
+        # audited validator against the FULL exterior (band minus region)
+        exterior_full = [t for t in band if CC.dk(t) not in {CC.dk(u) for u in h}]
+        check(safeguards.completed_replacement_legal(exterior_full, h, list(h)),
+              "positive control: identity replacement is legal (audited validator)")
         bad = list(h); c, A, B, Cc = bad[0]; bad[0] = (c, A + 0.13 + 0.07j, B, Cc)
-        check(not CC.completed_replacement_legal(surr, h, bad),
+        check(not safeguards.completed_replacement_legal(exterior_full, h, bad),
               "rejection control: atlas-breaking replacement is rejected")
+        check(not safeguards.completed_replacement_legal(exterior_full, h, []),
+              "rejection control: EMPTY filling is rejected (the audited defect)")
+        # the deprecated weak validator is hardened to at least reject empties too
+        check(not CC.completed_replacement_legal(exterior_full, h, []),
+              "deprecated validator no longer accepts an empty filling")
 
     print()
     if FAILS:

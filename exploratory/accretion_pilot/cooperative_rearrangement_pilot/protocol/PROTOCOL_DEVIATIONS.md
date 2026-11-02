@@ -44,3 +44,45 @@ Deviations from `PROTOCOL.md`, recorded rather than edited into the original.
 - The frozen engine, frozen reader, historical hypotheses, and all existing
   outputs are unchanged. Historical A/B data was read only by the Part-5
   evaluator, never by candidate generation or selection.
+
+## 2026-11-03 — reconciliation after the independent Codex audit
+
+The audit (`audit/cooperative-rearrangement-2026-11-03`, commit `e7ff8ff`) found
+gaps between the frozen `PROTOCOL.md` wording and the historical implementation.
+These are recorded here (the frozen protocol is NOT rewritten as though it had
+specified the actual values); none changed a scientific verdict in this study.
+
+- **Region cap.** `PROTOCOL.md` lists a 200,000 max-regions cap; the earlier
+  deviation note and the code use 50,000. The seeded size-≤-8 family has only
+  **12,248** regions, so the cap never bound and the enumeration is exhaustive at
+  size ≤ 8. (`part3_necessary.REGION_CAP = 50000`.)
+- **Region ordering.** The order is size-first but **not** lexicographic within a
+  size (the frontier BFS order). Since **no region was permitted**, the
+  deterministic-selection ordering never affected any choice or the conclusion.
+- **Replacement caps.** `PROTOCOL.md` lists 2,000 completed solutions and
+  "depth ≤ 2 × region size"; the historical hex enumerator used a **256**-solution
+  cap (Part 4) and a **hardcoded depth 8**, and the "200,000 search nodes" limit is
+  not implemented. The audit's uncapped independent search reached at most depth 7
+  and recovered the **same complete candidate sets** (2 geometric dissections, 128
+  decorated fillings per hexagon), so these caps omitted no alternative here.
+- **Truncation reporting.** `part4_search` infers truncation from the
+  **deduplicated** returned solution count vs the cap, which can under-report
+  truncation; this is now stated in the Part-4 output `truncation` block, and the
+  audit's uncapped search is the authority on completeness for the 15 hexagons.
+- **Dormant general search.** `PROTOCOL.md` describes a general permitted-region
+  replacement search; only the flip-hexagon case is implemented. Because Part 3
+  permits **0** regions, this path is dormant. `part4_search.permitted_region_guard`
+  now reports it as **unsupported** and the run **stops clearly** if a future
+  Part-3 ever permits a region outside the implemented shapes, rather than
+  returning a spurious exhaustive negative. Building that general search is **out
+  of scope** for this maintenance task.
+- **Minimum-row-deletion.** The historical `min_facet_drop` returned the first
+  feasible four-row set; the maintained version checks **every** subset at each
+  cardinality and tracks `unresolved`, so it does not claim a minimum past an
+  unresolved smaller-cardinality check. (No subset was unresolved; minimum four is
+  certified.)
+- **Shortcut subtotals are not a scientific requirement.** The Part-3 path split
+  (no-engulfment / engulfed-nonbinding / LP) depends on exact-dict equality of
+  aggregate coefficients and is environment/last-bit sensitive (this environment:
+  9130 / 2724 / 394; the audit's: 9130 / 2793 / 325). All **final verdicts** agree
+  (12,248 infeasible). The split is now labelled diagnostic in the output.

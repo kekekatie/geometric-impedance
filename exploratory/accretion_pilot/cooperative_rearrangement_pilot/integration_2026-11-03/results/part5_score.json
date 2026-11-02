@@ -1,0 +1,41 @@
+{
+  "case": "w7-B-s0 jam@23",
+  "evaluator_only_inputs": "input/evaluator_historical.json (Sstar, cs); not seen by Part 3/4 search",
+  "reader": "frozen archive-free-reader/skin_reader.py (unchanged)",
+  "pre_repair_baseline": {
+    "reader_status": "reconstructed",
+    "outcome": "empty_incompatible",
+    "detail": "area=0.000e+00 ncompat=0",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "true_option": "B (index 1); 'correct' = reader selects B",
+    "choice_tile_B_present_in_band": false,
+    "interpretation": "For this recorded baseline, the reconstructed window-compatibility region is empty; this alone does not demonstrate erasure of historical information, nor is it a general equivalence between local jamming and global incompatibility."
+  },
+  "frontier_candidate_counts": {
+    "n_frontier": 73,
+    "n_dead_sites": 2,
+    "n_growable": 71,
+    "candidate_count_histogram": {
+      "0": 2,
+      "1": 28,
+      "2": 43
+    }
+  },
+  "frontier_candidate_counts_combined_skin_DEPRECATED": {
+    "n_frontier": 103,
+    "n_dead_sites": 2,
+    "n_growable": 101,
+    "candidate_count_histogram": {
+      "0": 2,
+      "1": 58,
+      "2": 43
+    }
+  },
+  "frontier_note": "Audited correction (2026-11-03): frontier_candidate_counts now counts only the SAVED true growth-frontier edges (73, with ownership checks), 2 blocked / 71 growable. The earlier 103/101 figure counted the combined skin boundary (true frontier + 30 pruning-exposed inner edges) and is retained above for comparison only.",
+  "post_repair": {
+    "qualifying_repair_found": false,
+    "note": "No connected fixed-exterior region (size<=8) restored compatibility (Part 3/4), so there is no qualifying post-repair candidate. A correct post-repair result would require RECOVERY of the historical readout; none was demonstrated or claimed. No archived lifts or deleted tiles were supplied to the reader."
+  },
+  "reader_coordinate_handling": "The reader processed the frozen-template band geometry without coordinate errors; no candidate generation produced reader-unhandleable coordinates (no qualifying candidate was produced)."
+}

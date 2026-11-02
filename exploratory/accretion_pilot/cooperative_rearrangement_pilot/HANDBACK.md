@@ -1,5 +1,28 @@
 # HANDBACK — cooperative rearrangement pilot
 
+> **Correction note — 2026-11-03 (integration of the independent Codex audit
+> `audit/cooperative-rearrangement-2026-11-03`, commit `e7ff8ff`).** The pilot's
+> principal bounded null **survives** independent reproduction; several
+> descriptions below are corrected. The precise, supported central result is:
+> *"For the recorded world-7/B/stream-0 jam, all 12,248 seed-containing,
+> edge-connected regions of at most eight triangular implementation tiles have a
+> numerically incompatible unchanged exterior under the specified fixed-coordinate,
+> four-layer projection-window convention."* Clarifications: **eight triangular
+> tiles ≠ eight rhombi**; the enumeration covers the **seeded** family, not every
+> region in the band; the fifteen hexagons each are **6 triangles / 3 rhombi** with
+> only the identity legal filling; no qualifying repair was found, so construction
+> and post-repair readout were **not attempted**; results are **numerical and
+> model-specific**. The "41-tile" footprint below is **one heuristic, disconnected
+> DELETION footprint — not a minimum, a necessary reach, or a lawful replacement**
+> (it removes 12 vertices in 10 components, loses 8 outer + 4 inner boundary edges,
+> spans 12.48 / 14.05 edge units, and is feasible only at numerically zero margin,
+> uncertified). "Four" is the minimum of the abstract **20-row aggregate-constraint
+> deletion** problem — not four tiles, vertices, flips, or steps. The true growth
+> frontier is **73 edges / 71 growable / 2 blocked** (the earlier 103/101 counted
+> the combined skin boundary). Full detail: `integration_2026-11-03/INTEGRATION_HANDBACK.md`
+> and `audit_2026-11-03/`. The prose below is the dated original (2026-11-02),
+> retained via Git history; read it through this note.*
+
 *2026-11-02. For Katie / Astra. A bounded exploratory pilot; a negative result is
 an acceptable outcome. No matching rules were relaxed. Experimental branch
 `claude/cooperative-rearrangement-pilot`, starting commit
