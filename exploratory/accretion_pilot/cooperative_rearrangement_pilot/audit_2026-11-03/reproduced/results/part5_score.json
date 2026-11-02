@@ -1,0 +1,30 @@
+{
+  "case": "w7-B-s0 jam@23",
+  "evaluator_only_inputs": "input/evaluator_historical.json (Sstar, cs); not seen by Part 3/4 search",
+  "reader": "frozen archive-free-reader/skin_reader.py (unchanged)",
+  "pre_repair_baseline": {
+    "reader_status": "reconstructed",
+    "outcome": "empty_incompatible",
+    "detail": "area=0.000e+00 ncompat=0",
+    "reader_selected": null,
+    "reader_area": 0.0,
+    "true_option": "B (index 1); 'correct' = reader selects B",
+    "choice_tile_B_present_in_band": false,
+    "interpretation": "The initial jammed state is already reader-incompatible by design (the jam gives F=0). An empty/incompatible readout here is NOT memory loss; it is the absence of any consistent offset to read."
+  },
+  "frontier_candidate_counts": {
+    "n_frontier": 103,
+    "n_dead_sites": 2,
+    "n_growable": 101,
+    "candidate_count_histogram": {
+      "0": 2,
+      "1": 58,
+      "2": 43
+    }
+  },
+  "post_repair": {
+    "qualifying_repair_found": false,
+    "note": "No connected fixed-exterior region (size<=8) restored compatibility (Part 3/4), so there is no qualifying post-repair candidate. A correct post-repair result would require RECOVERY of the historical readout; none was demonstrated or claimed. No archived lifts or deleted tiles were supplied to the reader."
+  },
+  "reader_coordinate_handling": "The reader processed the frozen-template band geometry without coordinate errors; no candidate generation produced reader-unhandleable coordinates (no qualifying candidate was produced)."
+}

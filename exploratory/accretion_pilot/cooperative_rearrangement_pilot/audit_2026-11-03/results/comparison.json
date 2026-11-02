@@ -1,0 +1,84 @@
+[
+  {
+    "file": "input/retained_state.json",
+    "git_blob_sha256": "0e8bbbb4ed3e329e2bb6118d1f2627c7789745d829374190482eb5c357a306ac",
+    "reproduced_sha256": "0bb832c565ea84ff99b49f4fe01c97fff23e339fbc983f6bc8cbf31feb9fc2d6",
+    "exact_bytes": false,
+    "exact_after_CRLF_normalization": false,
+    "structured_exact": false,
+    "differences": [
+      {
+        "path": "/edge_length",
+        "old": 0.02128623625220816,
+        "new": 0.021286236252208157,
+        "absolute_difference": 3.469446951953614e-18,
+        "within_atol_1e12": true
+      },
+      {
+        "path": "/windows/1/normals/0/0",
+        "old": -0.8090169943749476,
+        "new": -0.8090169943749475,
+        "absolute_difference": 1.1102230246251565e-16,
+        "within_atol_1e12": true
+      },
+      {
+        "path": "/windows/3/normals/0/0",
+        "old": -0.8090169943749476,
+        "new": -0.8090169943749475,
+        "absolute_difference": 1.1102230246251565e-16,
+        "within_atol_1e12": true
+      }
+    ]
+  },
+  {
+    "file": "input/evaluator_historical.json",
+    "git_blob_sha256": "79c8d50275437b646b0213490b5062e92f031a978ed3e50b589df906dae2cc4a",
+    "reproduced_sha256": "54ddbdf2a53ade204f1ddd8e06b82ffd4ebd6aa6ff0b0b7a1edc81055da7d8bd",
+    "exact_bytes": false,
+    "exact_after_CRLF_normalization": true,
+    "structured_exact": true,
+    "differences": []
+  },
+  {
+    "file": "results/part3_necessary.json",
+    "git_blob_sha256": "9a018072dc770e8b398546861fb95ef9da49523487b535b058694f7338821531",
+    "reproduced_sha256": "80be2ecb8ff738a431e523a63b676dbc8e8a4613ed2c6e173d17ccc459ab6428",
+    "exact_bytes": false,
+    "exact_after_CRLF_normalization": false,
+    "structured_exact": false,
+    "differences": [
+      {
+        "path": "/region_enumeration/verdict_counts/infeasible",
+        "old": 394,
+        "new": 325,
+        "absolute_difference": 69,
+        "within_atol_1e12": false
+      },
+      {
+        "path": "/region_enumeration/verdict_counts/infeasible(no binding change)",
+        "old": 2724,
+        "new": 2793,
+        "absolute_difference": 69,
+        "within_atol_1e12": false
+      }
+    ]
+  },
+  {
+    "file": "results/part4_search.json",
+    "git_blob_sha256": "f9f6388f551173f03dec3e388e1890255cadee6210287c322035e569ccef12ed",
+    "reproduced_sha256": "0da1891e76c8a0fe28e9eb302934437823dc76823ad768938722cea140e7aa04",
+    "exact_bytes": false,
+    "exact_after_CRLF_normalization": true,
+    "structured_exact": true,
+    "differences": []
+  },
+  {
+    "file": "results/part5_score.json",
+    "git_blob_sha256": "b28c21cd9f8ec5840a84480c0d9dbe4f02c3d6a9d17c4f23b3ea59d2c6ceab2c",
+    "reproduced_sha256": "def5bcdf76478256a4f1b0574804e82620a3ff59f2186e4b6b4f3662fa4bf741",
+    "exact_bytes": false,
+    "exact_after_CRLF_normalization": true,
+    "structured_exact": true,
+    "differences": []
+  }
+]

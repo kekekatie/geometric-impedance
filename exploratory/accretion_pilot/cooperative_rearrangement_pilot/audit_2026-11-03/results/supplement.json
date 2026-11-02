@@ -1,0 +1,489 @@
+{
+  "shortcuts": {
+    "no_engulfment": 9130,
+    "exact_unchanged": 2793,
+    "changed": 325
+  },
+  "changed_regions_max_delta_range": [
+    1.1102230246251565e-16,
+    0.16311896062463127
+  ],
+  "changed_regions_above_1e12": 12,
+  "n_unique_original_aggregate_systems": 12,
+  "exterior_leg_graph_components": {
+    "1": 12140,
+    "2": 108
+  },
+  "disconnected_example": [
+    [
+      0,
+      [
+        0.640786,
+        -0.062306
+      ],
+      [
+        0.653298,
+        -0.079527
+      ],
+      [
+        0.640786,
+        -0.083592
+      ]
+    ],
+    [
+      1,
+      [
+        0.653298,
+        -0.079527
+      ],
+      [
+        0.640786,
+        -0.062306
+      ],
+      [
+        0.673542,
+        -0.072949
+      ]
+    ],
+    [
+      1,
+      [
+        0.653298,
+        -0.079527
+      ],
+      [
+        0.653298,
+        -0.100813
+      ],
+      [
+        0.673542,
+        -0.072949
+      ]
+    ],
+    [
+      1,
+      [
+        0.673542,
+        -0.094235
+      ],
+      [
+        0.653298,
+        -0.100813
+      ],
+      [
+        0.673542,
+        -0.072949
+      ]
+    ]
+  ],
+  "numerical_checks": [
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231583,
+      "box1e6": -0.08155948031231583,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231583
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231583,
+      "box1e6": -0.08155948031231583,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231583
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    },
+    {
+      "box50": -0.08155948031231641,
+      "box1e6": -0.08155948031231641,
+      "box_free": [
+        "infeasible",
+        -0.08155948031231641
+      ],
+      "sensitivity": {
+        "base": "infeasible",
+        "classes_seen": [
+          "infeasible"
+        ],
+        "stable": true,
+        "detail": {
+          "+11e-12": "infeasible",
+          "-11e-12": "infeasible",
+          "+11e-10": "infeasible",
+          "-11e-10": "infeasible",
+          "+11e-08": "infeasible",
+          "-11e-08": "infeasible",
+          "+11e-06": "infeasible",
+          "-11e-06": "infeasible"
+        }
+      }
+    }
+  ],
+  "forced_free_solver_failure": {
+    "verdict": "unresolved",
+    "box_cls": "infeasible",
+    "box_r": -0.08155948031231641,
+    "box_free": "unresolved",
+    "box_free_margin": null,
+    "n_constraints": 20
+  },
+  "forced_box_solver_failure": {
+    "verdict": "unresolved",
+    "box_cls": "unresolved",
+    "box_r": null,
+    "box_free": "infeasible",
+    "box_free_margin": -0.08155948031231641,
+    "n_constraints": 20
+  },
+  "greedy_boundary_sensitivity": {
+    "base": "lower_dimensional",
+    "classes_seen": [
+      "infeasible",
+      "lower_dimensional",
+      "positive_area"
+    ],
+    "stable": false,
+    "detail": {
+      "+11e-12": "lower_dimensional",
+      "-11e-12": "lower_dimensional",
+      "+11e-10": "lower_dimensional",
+      "-11e-10": "lower_dimensional",
+      "+11e-08": "infeasible",
+      "-11e-08": "positive_area",
+      "+11e-06": "infeasible",
+      "-11e-06": "positive_area"
+    }
+  },
+  "recorded_case": {
+    "world": 7,
+    "stream_index": 0,
+    "stream": 20262655433,
+    "option": "B",
+    "option_shape": 1,
+    "jam_step": 23,
+    "stop": "jam",
+    "selected_timeline": [
+      {
+        "step": 0,
+        "tiles": 199,
+        "feasibility": {
+          "verdict": "feasible",
+          "box_cls": "positive_area",
+          "box_r": 0.1008130618755782,
+          "box_free": "feasible",
+          "box_free_margin": 0.1008130618755782,
+          "n_constraints": 20
+        }
+      },
+      {
+        "step": 8,
+        "tiles": 222,
+        "feasibility": {
+          "verdict": "feasible",
+          "box_cls": "positive_area",
+          "box_r": 0.1008130618755782,
+          "box_free": "feasible",
+          "box_free_margin": 0.1008130618755782,
+          "n_constraints": 20
+        }
+      },
+      {
+        "step": 9,
+        "tiles": 223,
+        "feasibility": {
+          "verdict": "infeasible",
+          "box_cls": "infeasible",
+          "box_r": -0.08155948031231541,
+          "box_free": "infeasible",
+          "box_free_margin": -0.08155948031231541,
+          "n_constraints": 20
+        }
+      },
+      {
+        "step": 22,
+        "tiles": 417,
+        "feasibility": {
+          "verdict": "infeasible",
+          "box_cls": "infeasible",
+          "box_r": -0.08155948031231641,
+          "box_free": "infeasible",
+          "box_free_margin": -0.08155948031231641,
+          "n_constraints": 20
+        }
+      },
+      {
+        "step": 23,
+        "tiles": 417,
+        "feasibility": {
+          "verdict": "infeasible",
+          "box_cls": "infeasible",
+          "box_r": -0.08155948031231641,
+          "box_free": "infeasible",
+          "box_free_margin": -0.08155948031231641,
+          "n_constraints": 20
+        }
+      }
+    ],
+    "retained_tile_set_exact": true,
+    "dead_sites_reconfirmed_from_band": true
+  }
+}

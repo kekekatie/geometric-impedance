@@ -1,0 +1,175 @@
+{
+  "environment": {
+    "python": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.2.6",
+    "scipy": "1.16.0"
+  },
+  "input_provenance": {
+    "world": 7,
+    "stream_index": 0,
+    "jam_step": 23,
+    "source_commit": "53692c20c68a03a96b1e682ad8c90e60b764df21",
+    "note": "self-contained retained-state input; no deleted interior tiles, no history, no A/B identity"
+  },
+  "n_tiles": 315,
+  "n_vertices": 209,
+  "rank": {
+    "-1": 0,
+    "0": 1,
+    "1": 2,
+    "2": 3
+  },
+  "independent_lift_conflicts": 0,
+  "enumeration": {
+    "n_seeds": 21,
+    "n_regions": 12248,
+    "by_size": {
+      "1": 21,
+      "2": 37,
+      "3": 84,
+      "4": 200,
+      "5": 499,
+      "6": 1230,
+      "7": 2978,
+      "8": 7199
+    },
+    "exact_set_agreement": true,
+    "synthetic_graph_seed_cases": 3297,
+    "exterior_tile_components": {
+      "1": 6051,
+      "2": 5246,
+      "3": 898,
+      "4": 53
+    },
+    "engulfed_vertex_counts": {
+      "0": 9130,
+      "1": 2481,
+      "2": 512,
+      "3": 110,
+      "4": 15
+    },
+    "lexicographic_order_matches": false
+  },
+  "constraints": {
+    "max_coefficient_difference": 1.3322676295501878e-15,
+    "n_unique_aggregated_systems": 5,
+    "all_unaggregated_box_free_margins_negative": true,
+    "margin_range": [
+      -0.08155948031231575,
+      -0.08155948031231575
+    ]
+  },
+  "facet_deletion": {
+    "exhaustive_by_cardinality": [
+      {
+        "size": 0,
+        "counts": {
+          "infeasible": 1
+        },
+        "largest_margin": -0.08155948031231619
+      },
+      {
+        "size": 1,
+        "counts": {
+          "infeasible": 20
+        },
+        "largest_margin": -0.08155948031231597
+      },
+      {
+        "size": 2,
+        "counts": {
+          "infeasible": 190
+        },
+        "largest_margin": -0.027864045000420848
+      },
+      {
+        "size": 3,
+        "counts": {
+          "infeasible": 1140
+        },
+        "largest_margin": -0.023798735622528433
+      },
+      {
+        "size": 4,
+        "counts": {
+          "infeasible": 4840,
+          "feasible": 5
+        },
+        "largest_margin": 0.023798735622529203
+      }
+    ],
+    "n_feasible_size4": 5,
+    "example": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  "greedy": {
+    "selected_vertices": 11,
+    "union_tiles": 41,
+    "components": 10,
+    "actual_removed_vertices": 12,
+    "collateral_vertices": [
+      [
+        0.567541,
+        -0.086105
+      ]
+    ],
+    "selected_vertex_span_S": 12.475748681106746,
+    "whole_footprint_span_S": 14.049444571057505,
+    "actual_exterior_raw_LP": {
+      "status": 0,
+      "margin": -0.0
+    },
+    "aggregate_verdict": {
+      "verdict": "feasible",
+      "box_cls": "lower_dimensional",
+      "box_r": -0.0,
+      "box_free": "feasible",
+      "box_free_margin": -0.0,
+      "n_constraints": 20
+    },
+    "true_boundary_edges_lost": 8,
+    "inner_boundary_edges_lost": 4,
+    "is_fixed_boundary_replacement": false
+  },
+  "baseline_frontiers": {
+    "true": {
+      "n_edges": 73,
+      "histogram": {
+        "0": 2,
+        "1": 28,
+        "2": 43
+      }
+    },
+    "inner": {
+      "n_edges": 30,
+      "histogram": {
+        "1": 30
+      }
+    },
+    "all": {
+      "n_edges": 103,
+      "histogram": {
+        "0": 2,
+        "1": 58,
+        "2": 43
+      }
+    }
+  }
+}
