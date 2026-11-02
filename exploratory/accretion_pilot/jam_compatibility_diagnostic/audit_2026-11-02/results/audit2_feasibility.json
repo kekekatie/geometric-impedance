@@ -1,0 +1,393 @@
+{
+  "cases": [
+    {
+      "label": "w7-first_infeasible_full@9",
+      "n_tiles": 223,
+      "n_constraints": 20,
+      "feas_box50": "infeasible",
+      "cheby_r_box50": -0.08155948031231541,
+      "deep_point_box50": [
+        -0.5053215590630517,
+        1.0204351541515968
+      ],
+      "box_free_phase1": "infeasible",
+      "box_free_margin": -0.08155948031231543,
+      "cheby_r_box_1e6": -0.08155948031231541,
+      "iis": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "iis_box_free_phase1": "infeasible",
+      "iis_box_free_margin": -0.08155948031231543,
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true,
+          "opposing_gap": 0.163119
+        }
+      ]
+    },
+    {
+      "label": "w7-jam_trigger_skin@23",
+      "n_tiles": 315,
+      "n_constraints": 20,
+      "feas_box50": "infeasible",
+      "cheby_r_box50": -0.08155948031231641,
+      "deep_point_box50": [
+        -0.45491502812526385,
+        1.0368132288720575
+      ],
+      "box_free_phase1": "infeasible",
+      "box_free_margin": -0.08155948031231641,
+      "cheby_r_box_1e6": -0.08155948031231641,
+      "iis": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "iis_box_free_phase1": "infeasible",
+      "iis_box_free_margin": -0.0815594803123161,
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true,
+          "opposing_gap": 0.163119
+        }
+      ]
+    },
+    {
+      "label": "w5-first_infeasible_full@17",
+      "n_tiles": 271,
+      "n_constraints": 20,
+      "feas_box50": "infeasible",
+      "cheby_r_box50": -0.05040653093778957,
+      "deep_point_box50": [
+        -0.3733555478129471,
+        0.7530428095733519
+      ],
+      "box_free_phase1": "infeasible",
+      "box_free_margin": -0.050406530937789525,
+      "cheby_r_box_1e6": -0.05040653093778957,
+      "iis": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "iis_box_free_phase1": "infeasible",
+      "iis_box_free_margin": -0.05040653093778936,
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true,
+          "opposing_gap": 0.100813
+        }
+      ]
+    },
+    {
+      "label": "w5-jam_trigger_skin@42",
+      "n_tiles": 450,
+      "n_constraints": 20,
+      "feas_box50": "infeasible",
+      "cheby_r_box50": -0.05040653093778957,
+      "deep_point_box50": [
+        0.10410196624968411,
+        -0.544906896004021
+      ],
+      "box_free_phase1": "infeasible",
+      "box_free_margin": -0.050406530937789636,
+      "cheby_r_box_1e6": -0.05040653093778957,
+      "iis": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "iis_size": 3,
+      "iis_box_free_phase1": "infeasible",
+      "iis_box_free_margin": -0.017220926874316533,
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -0.809017,
+          "antiparallel": false,
+          "opposing_gap": null
+        },
+        {
+          "keys": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "unit_dot": 0.309017,
+          "antiparallel": false,
+          "opposing_gap": null
+        },
+        {
+          "keys": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "unit_dot": -0.809017,
+          "antiparallel": false,
+          "opposing_gap": null
+        }
+      ]
+    }
+  ],
+  "field": {
+    "n_normals": 20,
+    "normals": [
+      {
+        "rank": 0,
+        "facet": 0,
+        "angle_deg": 36.0,
+        "nx": 0.8090169943749475,
+        "ny": 0.5877852522924731,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 0,
+        "facet": 1,
+        "angle_deg": 180.0,
+        "nx": -1.0,
+        "ny": 1.2246467991473532e-16,
+        "has_degree4_component": false
+      },
+      {
+        "rank": 0,
+        "facet": 2,
+        "angle_deg": 324.0,
+        "nx": 0.8090169943749473,
+        "ny": -0.5877852522924732,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 0,
+        "facet": 3,
+        "angle_deg": 108.0,
+        "nx": -0.3090169943749471,
+        "ny": 0.9510565162951536,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 0,
+        "facet": 4,
+        "angle_deg": 252.0,
+        "nx": -0.3090169943749478,
+        "ny": -0.9510565162951534,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 1,
+        "facet": 0,
+        "angle_deg": 216.0,
+        "nx": -0.8090169943749476,
+        "ny": -0.587785252292473,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 1,
+        "facet": 1,
+        "angle_deg": 360.0,
+        "nx": 1.0,
+        "ny": -2.220446049250313e-16,
+        "has_degree4_component": false
+      },
+      {
+        "rank": 1,
+        "facet": 2,
+        "angle_deg": 144.0,
+        "nx": -0.8090169943749473,
+        "ny": 0.5877852522924732,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 1,
+        "facet": 3,
+        "angle_deg": 288.0,
+        "nx": 0.30901699437494706,
+        "ny": -0.9510565162951536,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 1,
+        "facet": 4,
+        "angle_deg": 72.0,
+        "nx": 0.3090169943749479,
+        "ny": 0.9510565162951534,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 2,
+        "facet": 0,
+        "angle_deg": 36.0,
+        "nx": 0.8090169943749475,
+        "ny": 0.5877852522924731,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 2,
+        "facet": 1,
+        "angle_deg": 180.0,
+        "nx": -1.0,
+        "ny": 1.2246467991473532e-16,
+        "has_degree4_component": false
+      },
+      {
+        "rank": 2,
+        "facet": 2,
+        "angle_deg": 324.0,
+        "nx": 0.8090169943749473,
+        "ny": -0.5877852522924732,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 2,
+        "facet": 3,
+        "angle_deg": 108.0,
+        "nx": -0.3090169943749471,
+        "ny": 0.9510565162951536,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 2,
+        "facet": 4,
+        "angle_deg": 252.0,
+        "nx": -0.3090169943749478,
+        "ny": -0.9510565162951534,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 3,
+        "facet": 0,
+        "angle_deg": 216.0,
+        "nx": -0.8090169943749476,
+        "ny": -0.587785252292473,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 3,
+        "facet": 1,
+        "angle_deg": 360.0,
+        "nx": 1.0,
+        "ny": -2.220446049250313e-16,
+        "has_degree4_component": false
+      },
+      {
+        "rank": 3,
+        "facet": 2,
+        "angle_deg": 144.0,
+        "nx": -0.8090169943749473,
+        "ny": 0.5877852522924732,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 3,
+        "facet": 3,
+        "angle_deg": 288.0,
+        "nx": 0.30901699437494706,
+        "ny": -0.9510565162951536,
+        "has_degree4_component": true
+      },
+      {
+        "rank": 3,
+        "facet": 4,
+        "angle_deg": 72.0,
+        "nx": 0.3090169943749479,
+        "ny": 0.9510565162951534,
+        "has_degree4_component": true
+      }
+    ],
+    "sin36": 0.5877852522924731,
+    "sin72": 0.9510565162951535,
+    "sin36_satisfies_16x4_20x2_5": true,
+    "sin72_satisfies_16x4_20x2_5": true,
+    "quartic_irreducible_over_Q": true,
+    "conclusion": "window facet normals carry sin(36)/sin(72); their minimal polynomial over Q has degree 4, so they are NOT in Q(sqrt5). feas.Q5 (Q(sqrt5)) is insufficient for an exact certificate; the needed field is Q(cos36,sin36)=Q(zeta_20)^+ (degree 4).",
+    "normals_with_degree4_component": 16
+  },
+  "solver_and_box": {
+    "sim_failure_class": "unresolved",
+    "sim_failure_not_feasible": true,
+    "far_region_box50_class": "infeasible",
+    "far_region_box1e6_r": 1.0,
+    "note": "feas uses a fixed BOX=50; a feasible region lying entirely outside it is misread as infeasible. This does not affect the study cases (their deep points sit well inside the box; see per-case deep_point_box50), but is a real scope limit of the certifier."
+  }
+}

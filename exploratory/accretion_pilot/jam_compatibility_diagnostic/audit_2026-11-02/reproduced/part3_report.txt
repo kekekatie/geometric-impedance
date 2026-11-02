@@ -1,0 +1,21 @@
+Part 3 -- first loss of compatibility along the replay
+Feasibility certified per step for F(full) and F(skin); frozen growth rules.
+
+      case  jam 1st_inf_full 1st_inf_skin before_jam      guesses
+   w7-B-s0   23            9            9       True          [9]
+   w7-B-s1   23            9            9       True          [9]
+   w5-B-s0   42           17           17       True         [17]
+
+w7-B-s0: F(full) first infeasible at step 9 (visible jam at 23).
+   triggering tile: addition 1/1 within step 9, centroid (0.6039,0.0257).
+   gauge consistent across steps: True (layers [-1, 0, 1, 2]); skin recovers after infeasible (non-monotone): False
+w7-B-s1: F(full) first infeasible at step 9 (visible jam at 23).
+   triggering tile: addition 1/1 within step 9, centroid (0.6039,0.0257).
+   gauge consistent across steps: True (layers [-1, 0, 1, 2]); skin recovers after infeasible (non-monotone): False
+w5-B-s0: F(full) first infeasible at step 17 (visible jam at 42).
+   triggering tile: addition 1/1 within step 17, centroid (0.6096,0.1538).
+   gauge consistent across steps: True (layers [-1, 0, 1, 2]); skin recovers after infeasible (non-monotone): False
+
+Reading: if 'before_jam' is True, the global compatibility region dies BEFORE the engine
+reports its local zero-candidate jam -- the first loss of compatibility precedes the
+visible jam. The triggering tile is the specific commitment that first makes F empty.

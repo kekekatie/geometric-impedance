@@ -1,0 +1,1239 @@
+{
+  "witnesses": [
+    {
+      "label": "w7-first_infeasible_full@9",
+      "feasibility": "infeasible",
+      "n_constraints_total": 20,
+      "iis": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "n_distinct_origin_vertices": 2,
+      "constraints": [
+        {
+          "constraint": [
+            2,
+            3
+          ],
+          "origin_vertex": [
+            0.595518,
+            0.021286
+          ],
+          "origin_layer": 1,
+          "n_tiles_at_vertex": 1,
+          "tile_centroids": [
+            [
+              0.603859087405582,
+              0.025671442084350488
+            ]
+          ]
+        },
+        {
+          "constraint": [
+            3,
+            3
+          ],
+          "origin_vertex": [
+            0.759299,
+            -0.010643
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 6,
+          "tile_centroids": [
+            [
+              0.7525505395479294,
+              -0.01722092687431649
+            ],
+            [
+              0.7660468153446365,
+              -0.01722092687431649
+            ],
+            [
+              0.7686243746610363,
+              -0.009288015000140197
+            ],
+            [
+              0.7416318230676221,
+              -0.009288015000140207
+            ],
+            [
+              0.757705658180729,
+              -0.0013551031259638826
+            ],
+            [
+              0.7442093823840219,
+              -0.0013551031259639223
+            ]
+          ]
+        }
+      ],
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true
+        }
+      ],
+      "opposing_pair_description_valid": true,
+      "is_single_pentagon_multifacet": false,
+      "n_drop_orders_tried": 301,
+      "n_distinct_iis_found": 6,
+      "distinct_iis": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "uniqueness_wording": "6 distinct inclusion-minimal witnesses found in 301 drop orders"
+    },
+    {
+      "label": "w7-jam_trigger_skin@23",
+      "feasibility": "infeasible",
+      "n_constraints_total": 20,
+      "iis": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "n_distinct_origin_vertices": 2,
+      "constraints": [
+        {
+          "constraint": [
+            0,
+            3
+          ],
+          "origin_vertex": [
+            0.575274,
+            -0.006578
+          ],
+          "origin_layer": -1,
+          "n_tiles_at_vertex": 6,
+          "tile_centroids": [
+            [
+              0.5929403709252745,
+              -0.007932911874175148
+            ],
+            [
+              0.5820216544449672,
+              1.1666015375944028e-15
+            ],
+            [
+              0.5903628116088746,
+              -0.015865823748351354
+            ],
+            [
+              0.5685253786482604,
+              1.3074032597278535e-15
+            ],
+            [
+              0.5768665358121677,
+              -0.01586582374835123
+            ],
+            [
+              0.5659478193318604,
+              -0.0079329118741749
+            ]
+          ]
+        },
+        {
+          "constraint": [
+            3,
+            3
+          ],
+          "origin_vertex": [
+            0.726543,
+            -0.111456
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 4,
+          "tile_centroids": [
+            [
+              0.7114532329430996,
+              -0.10216816500154152
+            ],
+            [
+              0.7249495087398068,
+              -0.10216816500154169
+            ],
+            [
+              0.7088756736266998,
+              -0.11010107687571774
+            ],
+            [
+              0.7358682252201141,
+              -0.11010107687571802
+            ]
+          ]
+        }
+      ],
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true
+        }
+      ],
+      "opposing_pair_description_valid": true,
+      "is_single_pentagon_multifacet": false,
+      "n_drop_orders_tried": 301,
+      "n_distinct_iis_found": 20,
+      "distinct_iis": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "uniqueness_wording": "20 distinct inclusion-minimal witnesses found in 301 drop orders"
+    },
+    {
+      "label": "w5-first_infeasible_full@17",
+      "feasibility": "infeasible",
+      "n_constraints_total": 20,
+      "iis": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_size": 2,
+      "n_distinct_origin_vertices": 2,
+      "constraints": [
+        {
+          "constraint": [
+            0,
+            3
+          ],
+          "origin_vertex": [
+            0.832544,
+            0.055728
+          ],
+          "origin_layer": -1,
+          "n_tiles_at_vertex": 6,
+          "tile_centroids": [
+            [
+              0.8232179570625732,
+              0.05437298687487733
+            ],
+            [
+              0.8392917921756803,
+              0.062305898749053644
+            ],
+            [
+              0.8257955163789731,
+              0.062305898749053644
+            ],
+            [
+              0.8341366735428806,
+              0.046440075000700964
+            ],
+            [
+              0.8502105086559876,
+              0.05437298687487735
+            ],
+            [
+              0.8476329493395879,
+              0.0464400750007009
+            ]
+          ]
+        },
+        {
+          "constraint": [
+            3,
+            3
+          ],
+          "origin_vertex": [
+            0.600297,
+            0.152476
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 1,
+          "tile_centroids": [
+            [
+              0.609622685253088,
+              0.15383094562449126
+            ]
+          ]
+        }
+      ],
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -1.0,
+          "antiparallel": true
+        }
+      ],
+      "opposing_pair_description_valid": true,
+      "is_single_pentagon_multifacet": false,
+      "n_drop_orders_tried": 301,
+      "n_distinct_iis_found": 2,
+      "distinct_iis": [
+        [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      ],
+      "uniqueness_wording": "2 distinct inclusion-minimal witnesses found in 301 drop orders"
+    },
+    {
+      "label": "w5-jam_trigger_skin@42",
+      "feasibility": "infeasible",
+      "n_constraints_total": 20,
+      "iis": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "iis_size": 3,
+      "n_distinct_origin_vertices": 3,
+      "constraints": [
+        {
+          "constraint": [
+            3,
+            2
+          ],
+          "origin_vertex": [
+            0.898056,
+            -0.034442
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 3,
+          "tile_centroids": [
+            [
+              0.8938853745772167,
+              -0.017220926874316554
+            ],
+            [
+              0.8897147959952628,
+              -0.030056647916491448
+            ],
+            [
+              0.9022265317411243,
+              -0.017220926874316565
+            ]
+          ]
+        },
+        {
+          "constraint": [
+            3,
+            3
+          ],
+          "origin_vertex": [
+            0.653298,
+            0.315595
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 6,
+          "tile_centroids": [
+            [
+              0.6465494132759644,
+              0.3090169943749462
+            ],
+            [
+              0.6600456890726716,
+              0.3090169943749463
+            ],
+            [
+              0.6626232483890712,
+              0.3169499062491226
+            ],
+            [
+              0.635630696795657,
+              0.31694990624912245
+            ],
+            [
+              0.6517045319087638,
+              0.32488281812329894
+            ],
+            [
+              0.6382082561120567,
+              0.3248828181232988
+            ]
+          ]
+        },
+        {
+          "constraint": [
+            3,
+            4
+          ],
+          "origin_vertex": [
+            0.885544,
+            0.253289
+          ],
+          "origin_layer": 2,
+          "n_tiles_at_vertex": 8,
+          "tile_centroids": [
+            [
+              0.8787960795149555,
+              0.23690547728989644
+            ],
+            [
+              0.8720479416166022,
+              0.24180828645789518
+            ],
+            [
+              0.8922923553116627,
+              0.23690547728989642
+            ],
+            [
+              0.876218520198556,
+              0.25464400750007005
+            ],
+            [
+              0.8990404932100162,
+              0.24180828645789496
+            ],
+            [
+              0.8871372366788634,
+              0.26257691937424643
+            ],
+            [
+              0.90321107179197,
+              0.2546440075000698
+            ],
+            [
+              0.9006335124755706,
+              0.26257691937424643
+            ]
+          ]
+        }
+      ],
+      "iis_pairs": [
+        {
+          "keys": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "unit_dot": -0.809017,
+          "antiparallel": false
+        },
+        {
+          "keys": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "unit_dot": 0.309017,
+          "antiparallel": false
+        },
+        {
+          "keys": [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "unit_dot": -0.809017,
+          "antiparallel": false
+        }
+      ],
+      "opposing_pair_description_valid": false,
+      "is_single_pentagon_multifacet": true,
+      "n_drop_orders_tried": 301,
+      "n_distinct_iis_found": 24,
+      "distinct_iis": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "uniqueness_wording": "24 distinct inclusion-minimal witnesses found in 301 drop orders"
+    }
+  ],
+  "cross_time_tracking": [
+    {
+      "case": "w7",
+      "first_inf_step": 9,
+      "jam_step": 23,
+      "iis_first": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_jam": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "first_iis_keys_present_at_jam": true,
+      "first_iis_subsystem_infeasible_at_jam": true,
+      "first_iis_origin_vertices_unchanged_at_jam": false,
+      "reported_witness_identical": false
+    },
+    {
+      "case": "w5",
+      "first_inf_step": 17,
+      "jam_step": 42,
+      "iis_first": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "iis_jam": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "first_iis_keys_present_at_jam": true,
+      "first_iis_subsystem_infeasible_at_jam": true,
+      "first_iis_origin_vertices_unchanged_at_jam": false,
+      "reported_witness_identical": false
+    }
+  ],
+  "repair_note": "Changing EITHER constraint of an IIS removes THAT witness, not necessarily the infeasibility: other IISes may remain. A repair touching both IIS locations is sufficient to break that one witness but is neither necessary (breaking one suffices for that witness) nor guaranteed to resolve all conflicts."
+}

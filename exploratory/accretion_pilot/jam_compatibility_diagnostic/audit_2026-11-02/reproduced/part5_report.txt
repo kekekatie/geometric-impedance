@@ -1,0 +1,12 @@
+Part 5 -- bounded inner-rim erosion (world 7 jam skin)
+Inner-rim tiles removed in nested levels; outer growth boundary + dead sites held fixed.
+
+level  theta  tiles         feasible         r*   dead_cands flip_legal             reader
+   L0   None    315       infeasible -8.156e-02       [0, 0]       0/15 empty_incompatible
+   L1    2.0    260       infeasible -8.156e-02       [0, 0]       0/10 empty_incompatible
+   L2    1.5    226       infeasible -8.156e-02       [0, 0]        0/6 empty_incompatible
+   L3    1.0    170       infeasible -8.156e-02       [0, 0]        0/2 empty_incompatible
+
+Reading: feasibility (global) and candidate availability at the dead site (local) are
+tracked separately. Removing inner tiles alone may loosen the global constraint without
+restoring local candidates at a still-present dead site -- these are different things.

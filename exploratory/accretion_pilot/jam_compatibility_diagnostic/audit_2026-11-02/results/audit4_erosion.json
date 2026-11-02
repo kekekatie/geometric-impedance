@@ -1,0 +1,89 @@
+{
+  "case": "w7",
+  "jam_step": 23,
+  "dead_site_definition": {
+    "study_used": "skin frontier (mixes true frontier + pruning-exposed inner edges)",
+    "audit_uses": "FULL-patch true growth frontier with zero frozen candidates",
+    "n_true_frontier_dead": 2,
+    "n_skin_frontier_dead": 2,
+    "skin_dead_all_on_true_frontier": true,
+    "skin_and_true_dead_identical": true
+  },
+  "adjacency_definition": "two half-tiles adjacent iff they share a full edge (both own it); BFS components",
+  "levels": [
+    {
+      "level": "L0",
+      "theta": null,
+      "n_tiles": 315,
+      "removed": 0,
+      "true_frontier_preserved": true,
+      "tf_violations": [],
+      "dead_site_neighbourhood_preserved": true,
+      "n_components": 1,
+      "dead_sites_in_single_component": true,
+      "level_valid": true,
+      "feasibility": "infeasible",
+      "chebyshev_r": -0.08155948031231641,
+      "candidates_at_dead_sites": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": "L1",
+      "theta": 2.0,
+      "n_tiles": 260,
+      "removed": 55,
+      "true_frontier_preserved": true,
+      "tf_violations": [],
+      "dead_site_neighbourhood_preserved": true,
+      "n_components": 1,
+      "dead_sites_in_single_component": true,
+      "level_valid": true,
+      "feasibility": "infeasible",
+      "chebyshev_r": -0.08155948031231575,
+      "candidates_at_dead_sites": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": "L2",
+      "theta": 1.5,
+      "n_tiles": 226,
+      "removed": 89,
+      "true_frontier_preserved": true,
+      "tf_violations": [],
+      "dead_site_neighbourhood_preserved": true,
+      "n_components": 1,
+      "dead_sites_in_single_component": true,
+      "level_valid": true,
+      "feasibility": "infeasible",
+      "chebyshev_r": -0.08155948031231575,
+      "candidates_at_dead_sites": [
+        0,
+        0
+      ]
+    },
+    {
+      "level": "L3",
+      "theta": 1.0,
+      "n_tiles": 170,
+      "removed": 145,
+      "true_frontier_preserved": true,
+      "tf_violations": [],
+      "dead_site_neighbourhood_preserved": true,
+      "n_components": 1,
+      "dead_sites_in_single_component": true,
+      "level_valid": true,
+      "feasibility": "infeasible",
+      "chebyshev_r": -0.08155948031231575,
+      "candidates_at_dead_sites": [
+        0,
+        0
+      ]
+    }
+  ],
+  "stopped_at": null,
+  "conclusion": "With explicit connectivity, dead-site-neighbourhood, and true-frontier-ownership checks (and a loop that actually stops on violation), the world-7 erosion outcome is re-evaluated; see per-level level_valid and feasibility."
+}

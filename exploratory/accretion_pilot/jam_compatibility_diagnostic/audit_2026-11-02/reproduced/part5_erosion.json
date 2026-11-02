@@ -1,0 +1,82 @@
+[
+  {
+    "level": "L0",
+    "theta": null,
+    "n_tiles": 315,
+    "removed": 0,
+    "dead_site_neighbour_removed": false,
+    "feasibility": "infeasible",
+    "chebyshev_r": -0.08155948031231641,
+    "iis_origin_vertices_present": 2,
+    "iis_total": 2,
+    "candidates_at_dead_sites": [
+      0,
+      0
+    ],
+    "flip_hexagons_checked": 15,
+    "flip_legal": 0,
+    "reader_outcome": "empty_incompatible",
+    "reader_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed"
+  },
+  {
+    "level": "L1",
+    "theta": 2.0,
+    "n_tiles": 260,
+    "removed": 55,
+    "dead_site_neighbour_removed": false,
+    "feasibility": "infeasible",
+    "chebyshev_r": -0.08155948031231575,
+    "iis_origin_vertices_present": 2,
+    "iis_total": 2,
+    "candidates_at_dead_sites": [
+      0,
+      0
+    ],
+    "flip_hexagons_checked": 10,
+    "flip_legal": 0,
+    "reader_outcome": "empty_incompatible",
+    "reader_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed"
+  },
+  {
+    "level": "L2",
+    "theta": 1.5,
+    "n_tiles": 226,
+    "removed": 89,
+    "dead_site_neighbour_removed": false,
+    "feasibility": "infeasible",
+    "chebyshev_r": -0.08155948031231575,
+    "iis_origin_vertices_present": 2,
+    "iis_total": 2,
+    "candidates_at_dead_sites": [
+      0,
+      0
+    ],
+    "flip_hexagons_checked": 6,
+    "flip_legal": 0,
+    "reader_outcome": "empty_incompatible",
+    "reader_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed"
+  },
+  {
+    "level": "L3",
+    "theta": 1.0,
+    "n_tiles": 170,
+    "removed": 145,
+    "dead_site_neighbour_removed": false,
+    "feasibility": "infeasible",
+    "chebyshev_r": -0.08155948031231575,
+    "iis_origin_vertices_present": 2,
+    "iis_total": 2,
+    "candidates_at_dead_sites": [
+      0,
+      0
+    ],
+    "flip_hexagons_checked": 2,
+    "flip_legal": 0,
+    "reader_outcome": "empty_incompatible",
+    "reader_detail": "area=0.000e+00 ncompat=0",
+    "reader_status": "reconstructed"
+  }
+]
