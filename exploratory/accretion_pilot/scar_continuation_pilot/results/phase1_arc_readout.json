@@ -1,0 +1,5280 @@
+[
+  {
+    "case": "w5-B-s0",
+    "world": 5,
+    "si": 0,
+    "jam_step": 42,
+    "n_band_tiles": 450,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 96,
+    "theta0": -2.1435,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 0.6545,
+      "n_tiles": 90,
+      "n_tiles_requested": 90,
+      "connected": true,
+      "reader_status": "reconstructed",
+      "F_area": 0.013988545822129758,
+      "intersections": [
+        0.0,
+        0.013988545822129758
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.2
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 8,
+        "band_fraction": 0.0178,
+        "F_area": 0.05925643100891334,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 17,
+        "band_fraction": 0.0378,
+        "F_area": 0.05925643100891331,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 27,
+        "band_fraction": 0.06,
+        "F_area": 0.059256431008913216,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 34,
+        "band_fraction": 0.0756,
+        "F_area": 0.05925643100891323,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 45,
+        "band_fraction": 0.1,
+        "F_area": 0.059256431008913195,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 54,
+        "band_fraction": 0.12,
+        "F_area": 0.022633942593391278,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 62,
+        "band_fraction": 0.1378,
+        "F_area": 0.022633942593391278,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 70,
+        "band_fraction": 0.1556,
+        "F_area": 0.022633942593390986,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 77,
+        "band_fraction": 0.1711,
+        "F_area": 0.013988545822130244,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 90,
+        "band_fraction": 0.2,
+        "F_area": 0.013988545822129758,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 103,
+        "band_fraction": 0.2289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 115,
+        "band_fraction": 0.2556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 122,
+        "band_fraction": 0.2711,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 134,
+        "band_fraction": 0.2978,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 142,
+        "band_fraction": 0.3156,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 152,
+        "band_fraction": 0.3378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 158,
+        "band_fraction": 0.3511,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 169,
+        "band_fraction": 0.3756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 178,
+        "band_fraction": 0.3956,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 184,
+        "band_fraction": 0.4089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 192,
+        "band_fraction": 0.4267,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 200,
+        "band_fraction": 0.4444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 211,
+        "band_fraction": 0.4689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 217,
+        "band_fraction": 0.4822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 229,
+        "band_fraction": 0.5089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 238,
+        "band_fraction": 0.5289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 250,
+        "band_fraction": 0.5556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 260,
+        "band_fraction": 0.5778,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 271,
+        "band_fraction": 0.6022,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 283,
+        "band_fraction": 0.6289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 294,
+        "band_fraction": 0.6533,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 304,
+        "band_fraction": 0.6756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 312,
+        "band_fraction": 0.6933,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 321,
+        "band_fraction": 0.7133,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 329,
+        "band_fraction": 0.7311,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 335,
+        "band_fraction": 0.7444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 344,
+        "band_fraction": 0.7644,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 354,
+        "band_fraction": 0.7867,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 360,
+        "band_fraction": 0.8,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 371,
+        "band_fraction": 0.8244,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 382,
+        "band_fraction": 0.8489,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 391,
+        "band_fraction": 0.8689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 401,
+        "band_fraction": 0.8911,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 410,
+        "band_fraction": 0.9111,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 422,
+        "band_fraction": 0.9378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 430,
+        "band_fraction": 0.9556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 442,
+        "band_fraction": 0.9822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 450,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 115,
+        "n_tiles_requested": 115,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2556
+      },
+      {
+        "n_tiles": 217,
+        "n_tiles_requested": 217,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.4822
+      },
+      {
+        "n_tiles": 335,
+        "n_tiles_requested": 336,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7444
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 222,
+        "n_tiles_requested": 222,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.005343149050868176,
+        "intersections": [
+          0.0,
+          0.005343149050868176
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.4933
+      },
+      {
+        "n_tiles": 228,
+        "n_tiles_requested": 228,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.5067
+      }
+    ],
+    "witness_complement": {
+      "available": true,
+      "n_footprint_tiles": 57,
+      "n_selected_witness_vertices": 19,
+      "n_components": 9,
+      "components": [
+        {
+          "n_tiles": 100,
+          "n_tiles_requested": 100,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.010686298101736574,
+          "intersections": [
+            0.0,
+            0.005343149050868398
+          ],
+          "selected": 1,
+          "outcome": "correct",
+          "detail": null,
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 94,
+          "n_tiles_requested": 94,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.07324497683104296,
+          "intersections": [
+            0.0,
+            0.005343149050868121
+          ],
+          "selected": 1,
+          "outcome": "correct",
+          "detail": null,
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 93,
+          "n_tiles_requested": 93,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.0,
+          "intersections": [
+            0.0,
+            0.0
+          ],
+          "selected": null,
+          "outcome": "empty_incompatible",
+          "detail": "area=0.000e+00 ncompat=0",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 91,
+          "n_tiles_requested": 91,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.0,
+          "intersections": [
+            0.0,
+            0.0
+          ],
+          "selected": null,
+          "outcome": "empty_incompatible",
+          "detail": "area=0.000e+00 ncompat=0",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 8,
+          "n_tiles_requested": 8,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.40614962029113244,
+          "intersections": [
+            0.0033022477203933503,
+            0.017290793542523206
+          ],
+          "selected": null,
+          "outcome": "ambiguous",
+          "detail": "ncompat=2",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 2,
+          "n_tiles_requested": 2,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 1.7204774005889645,
+          "intersections": [
+            0.01398854582212991,
+            0.03662248841552179
+          ],
+          "selected": null,
+          "outcome": "ambiguous",
+          "detail": "ncompat=2",
+          "choice_tile_retention": "departed"
+        }
+      ]
+    }
+  },
+  {
+    "case": "w7-B-s0",
+    "world": 7,
+    "si": 0,
+    "jam_step": 23,
+    "n_band_tiles": 315,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 71,
+    "theta0": -2.3995,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 1.1781,
+      "n_tiles": 100,
+      "n_tiles_requested": 103,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.022633942593391423,
+      "intersections": [
+        0.0,
+        0.022633942593391534
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.3175
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 2,
+        "band_fraction": 0.0063,
+        "F_area": 1.7204774005889718,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 6,
+        "band_fraction": 0.019,
+        "F_area": 0.502028539715568,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 11,
+        "band_fraction": 0.0349,
+        "F_area": 0.1551353504333485,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 14,
+        "band_fraction": 0.0444,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 20,
+        "band_fraction": 0.0635,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 26,
+        "band_fraction": 0.0825,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 30,
+        "band_fraction": 0.0952,
+        "F_area": 0.095878919424435,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 34,
+        "band_fraction": 0.1079,
+        "F_area": 0.095878919424435,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 49,
+        "band_fraction": 0.1556,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 58,
+        "band_fraction": 0.1841,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 66,
+        "band_fraction": 0.2095,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 69,
+        "band_fraction": 0.219,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 74,
+        "band_fraction": 0.2349,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 81,
+        "band_fraction": 0.2571,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 87,
+        "band_fraction": 0.2762,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 91,
+        "band_fraction": 0.2889,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 94,
+        "band_fraction": 0.2984,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 100,
+        "band_fraction": 0.3175,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 111,
+        "band_fraction": 0.3524,
+        "F_area": 1.3877787807814457e-17,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 120,
+        "band_fraction": 0.381,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 126,
+        "band_fraction": 0.4,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 142,
+        "band_fraction": 0.4508,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 155,
+        "band_fraction": 0.4921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 165,
+        "band_fraction": 0.5238,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 174,
+        "band_fraction": 0.5524,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 180,
+        "band_fraction": 0.5714,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 187,
+        "band_fraction": 0.5937,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 193,
+        "band_fraction": 0.6127,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 198,
+        "band_fraction": 0.6286,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 205,
+        "band_fraction": 0.6508,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 212,
+        "band_fraction": 0.673,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 218,
+        "band_fraction": 0.6921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 225,
+        "band_fraction": 0.7143,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 231,
+        "band_fraction": 0.7333,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 235,
+        "band_fraction": 0.746,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 243,
+        "band_fraction": 0.7714,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 249,
+        "band_fraction": 0.7905,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 253,
+        "band_fraction": 0.8032,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 259,
+        "band_fraction": 0.8222,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 261,
+        "band_fraction": 0.8286,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 265,
+        "band_fraction": 0.8413,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 279,
+        "band_fraction": 0.8857,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 285,
+        "band_fraction": 0.9048,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 292,
+        "band_fraction": 0.927,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 299,
+        "band_fraction": 0.9492,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 305,
+        "band_fraction": 0.9683,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 312,
+        "band_fraction": 0.9905,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 315,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 69,
+        "n_tiles_requested": 70,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.022633942593391423,
+        "intersections": [
+          0.0,
+          0.022633942593391534
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.219
+      },
+      {
+        "n_tiles": 165,
+        "n_tiles_requested": 165,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.5238
+      },
+      {
+        "n_tiles": 243,
+        "n_tiles_requested": 243,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7714
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 151,
+        "n_tiles_requested": 151,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.013988545822129994,
+        "intersections": [
+          0.0,
+          0.013988545822129952
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.4794
+      },
+      {
+        "n_tiles": 164,
+        "n_tiles_requested": 164,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.5206
+      }
+    ],
+    "witness_complement": {
+      "available": true,
+      "n_footprint_tiles": 41,
+      "n_selected_witness_vertices": 11,
+      "n_components": 9,
+      "components": [
+        {
+          "n_tiles": 227,
+          "n_tiles_requested": 227,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.0,
+          "intersections": [
+            0.0,
+            0.0
+          ],
+          "selected": null,
+          "outcome": "empty_incompatible",
+          "detail": "area=0.000e+00 ncompat=0",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 32,
+          "n_tiles_requested": 32,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 0.19175783884887035,
+          "intersections": [
+            0.0,
+            0.013988545822130466
+          ],
+          "selected": 1,
+          "outcome": "correct",
+          "detail": null,
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 4,
+          "n_tiles_requested": 4,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 1.0633135104400504,
+          "intersections": [
+            0.008645396771261589,
+            0.0506110342376518
+          ],
+          "selected": null,
+          "outcome": "ambiguous",
+          "detail": "ncompat=2",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 3,
+          "n_tiles_requested": 3,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 1.0633135104400493,
+          "intersections": [
+            0.0,
+            0.022633942593392006
+          ],
+          "selected": 1,
+          "outcome": "correct",
+          "detail": null,
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 3,
+          "n_tiles_requested": 3,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 1.0633135104400473,
+          "intersections": [
+            0.008645396771261589,
+            0.0506110342376518
+          ],
+          "selected": null,
+          "outcome": "ambiguous",
+          "detail": "ncompat=2",
+          "choice_tile_retention": "departed"
+        },
+        {
+          "n_tiles": 2,
+          "n_tiles_requested": 2,
+          "connected": true,
+          "reader_status": "reconstructed",
+          "F_area": 1.7204774005889663,
+          "intersections": [
+            0.008645396771261589,
+            0.0506110342376518
+          ],
+          "selected": null,
+          "outcome": "ambiguous",
+          "detail": "ncompat=2",
+          "choice_tile_retention": "departed"
+        }
+      ]
+    }
+  },
+  {
+    "case": "w7-B-s1",
+    "world": 7,
+    "si": 1,
+    "jam_step": 23,
+    "n_band_tiles": 315,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 71,
+    "theta0": -2.3995,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 1.1781,
+      "n_tiles": 100,
+      "n_tiles_requested": 103,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.022633942593391423,
+      "intersections": [
+        0.0,
+        0.022633942593391534
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.3175
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 2,
+        "band_fraction": 0.0063,
+        "F_area": 1.7204774005889718,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 6,
+        "band_fraction": 0.019,
+        "F_area": 0.502028539715568,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 11,
+        "band_fraction": 0.0349,
+        "F_area": 0.1551353504333485,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 14,
+        "band_fraction": 0.0444,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 20,
+        "band_fraction": 0.0635,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 26,
+        "band_fraction": 0.0825,
+        "F_area": 0.15513535043334845,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 30,
+        "band_fraction": 0.0952,
+        "F_area": 0.095878919424435,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 34,
+        "band_fraction": 0.1079,
+        "F_area": 0.095878919424435,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 49,
+        "band_fraction": 0.1556,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 58,
+        "band_fraction": 0.1841,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 66,
+        "band_fraction": 0.2095,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 69,
+        "band_fraction": 0.219,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 74,
+        "band_fraction": 0.2349,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 81,
+        "band_fraction": 0.2571,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 87,
+        "band_fraction": 0.2762,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 91,
+        "band_fraction": 0.2889,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 94,
+        "band_fraction": 0.2984,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 100,
+        "band_fraction": 0.3175,
+        "F_area": 0.022633942593391423,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 111,
+        "band_fraction": 0.3524,
+        "F_area": 1.3877787807814457e-17,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 120,
+        "band_fraction": 0.381,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 126,
+        "band_fraction": 0.4,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 142,
+        "band_fraction": 0.4508,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 155,
+        "band_fraction": 0.4921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 165,
+        "band_fraction": 0.5238,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 174,
+        "band_fraction": 0.5524,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 180,
+        "band_fraction": 0.5714,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 187,
+        "band_fraction": 0.5937,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 193,
+        "band_fraction": 0.6127,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 198,
+        "band_fraction": 0.6286,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 205,
+        "band_fraction": 0.6508,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 212,
+        "band_fraction": 0.673,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 218,
+        "band_fraction": 0.6921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 225,
+        "band_fraction": 0.7143,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 231,
+        "band_fraction": 0.7333,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 235,
+        "band_fraction": 0.746,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 243,
+        "band_fraction": 0.7714,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 249,
+        "band_fraction": 0.7905,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 253,
+        "band_fraction": 0.8032,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 259,
+        "band_fraction": 0.8222,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 261,
+        "band_fraction": 0.8286,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 265,
+        "band_fraction": 0.8413,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 279,
+        "band_fraction": 0.8857,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 285,
+        "band_fraction": 0.9048,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 292,
+        "band_fraction": 0.927,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 299,
+        "band_fraction": 0.9492,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 305,
+        "band_fraction": 0.9683,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 312,
+        "band_fraction": 0.9905,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 315,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 69,
+        "n_tiles_requested": 70,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.022633942593391423,
+        "intersections": [
+          0.0,
+          0.022633942593391534
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.219
+      },
+      {
+        "n_tiles": 165,
+        "n_tiles_requested": 165,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.5238
+      },
+      {
+        "n_tiles": 243,
+        "n_tiles_requested": 243,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7714
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 151,
+        "n_tiles_requested": 151,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.013988545822129994,
+        "intersections": [
+          0.0,
+          0.013988545822129952
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.4794
+      },
+      {
+        "n_tiles": 164,
+        "n_tiles_requested": 164,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.5206
+      }
+    ]
+  },
+  {
+    "case": "w15-B-s0",
+    "world": 15,
+    "si": 0,
+    "jam_step": 39,
+    "n_band_tiles": 551,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 113,
+    "theta0": 3.0365,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 2.3562,
+      "n_tiles": 349,
+      "n_tiles_requested": 360,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.010686298101736312,
+      "intersections": [
+        3.122502256758253e-17,
+        0.010686298101736293
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "retained_outside_arc",
+      "band_fraction": 0.6334
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0236,
+        "F_area": 0.2510142698577839,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 26,
+        "band_fraction": 0.0472,
+        "F_area": 0.19175783884887124,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 53,
+        "band_fraction": 0.0962,
+        "F_area": 0.09587891942443087,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 70,
+        "band_fraction": 0.127,
+        "F_area": 0.05925643100891083,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 86,
+        "band_fraction": 0.1561,
+        "F_area": 0.05925643100891083,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 103,
+        "band_fraction": 0.1869,
+        "F_area": 0.036622488415520474,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 116,
+        "band_fraction": 0.2105,
+        "F_area": 0.03662248841552036,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 125,
+        "band_fraction": 0.2269,
+        "F_area": 0.03662248841552036,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 135,
+        "band_fraction": 0.245,
+        "F_area": 0.02263394259339184,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 144,
+        "band_fraction": 0.2613,
+        "F_area": 0.022633942593391833,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 152,
+        "band_fraction": 0.2759,
+        "F_area": 0.022633942593391833,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 161,
+        "band_fraction": 0.2922,
+        "F_area": 0.022633942593391805,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 170,
+        "band_fraction": 0.3085,
+        "F_area": 0.022633942593391805,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 176,
+        "band_fraction": 0.3194,
+        "F_area": 0.022633942593391666,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 190,
+        "band_fraction": 0.3448,
+        "F_area": 0.022633942593391666,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 212,
+        "band_fraction": 0.3848,
+        "F_area": 0.022633942593391666,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 227,
+        "band_fraction": 0.412,
+        "F_area": 0.022633942593391666,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 243,
+        "band_fraction": 0.441,
+        "F_area": 0.022633942593391396,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 250,
+        "band_fraction": 0.4537,
+        "F_area": 0.022633942593391396,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 259,
+        "band_fraction": 0.4701,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 264,
+        "band_fraction": 0.4791,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 270,
+        "band_fraction": 0.49,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 273,
+        "band_fraction": 0.4955,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 276,
+        "band_fraction": 0.5009,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 279,
+        "band_fraction": 0.5064,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 286,
+        "band_fraction": 0.5191,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 288,
+        "band_fraction": 0.5227,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 292,
+        "band_fraction": 0.5299,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 297,
+        "band_fraction": 0.539,
+        "F_area": 0.022633942593391368,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 304,
+        "band_fraction": 0.5517,
+        "F_area": 0.022633942593391382,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 309,
+        "band_fraction": 0.5608,
+        "F_area": 0.01398854582212971,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 316,
+        "band_fraction": 0.5735,
+        "F_area": 0.010686298101736472,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 321,
+        "band_fraction": 0.5826,
+        "F_area": 0.010686298101736427,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 330,
+        "band_fraction": 0.5989,
+        "F_area": 0.010686298101736427,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 339,
+        "band_fraction": 0.6152,
+        "F_area": 0.010686298101736312,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 349,
+        "band_fraction": 0.6334,
+        "F_area": 0.010686298101736312,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 375,
+        "band_fraction": 0.6806,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 389,
+        "band_fraction": 0.706,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 407,
+        "band_fraction": 0.7387,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 415,
+        "band_fraction": 0.7532,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 426,
+        "band_fraction": 0.7731,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 439,
+        "band_fraction": 0.7967,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 451,
+        "band_fraction": 0.8185,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 465,
+        "band_fraction": 0.8439,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 478,
+        "band_fraction": 0.8675,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 497,
+        "band_fraction": 0.902,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 523,
+        "band_fraction": 0.9492,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 551,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 161,
+        "n_tiles_requested": 161,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.022633942593391805,
+        "intersections": [
+          0.0033022477203933313,
+          0.019331694872998198
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2922
+      },
+      {
+        "n_tiles": 276,
+        "n_tiles_requested": 276,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.022633942593391368,
+        "intersections": [
+          0.0033022477203932775,
+          0.019331694872998097
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi",
+        "band_fraction": 0.5009
+      },
+      {
+        "n_tiles": 349,
+        "n_tiles_requested": 360,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.010686298101736312,
+        "intersections": [
+          3.122502256758253e-17,
+          0.010686298101736293
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.6334
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 312,
+        "n_tiles_requested": 314,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "retained_outside_arc",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5662
+      },
+      {
+        "n_tiles": 234,
+        "n_tiles_requested": 237,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.01068629810173516,
+        "intersections": [
+          3.122502256758253e-17,
+          0.010686298101735141
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_in_arc",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.4247
+      }
+    ]
+  },
+  {
+    "case": "w19-B-s0",
+    "world": 19,
+    "si": 0,
+    "jam_step": 39,
+    "n_band_tiles": 551,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 113,
+    "theta0": 3.0365,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 2.3562,
+      "n_tiles": 349,
+      "n_tiles_requested": 360,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.010686298101735815,
+      "intersections": [
+        0.0,
+        0.01068629810173577
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "retained_outside_arc",
+      "band_fraction": 0.6334
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0236,
+        "F_area": 0.25101426985778297,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 26,
+        "band_fraction": 0.0472,
+        "F_area": 0.19175783884887104,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 53,
+        "band_fraction": 0.0962,
+        "F_area": 0.09587891942443517,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 70,
+        "band_fraction": 0.127,
+        "F_area": 0.05925643100891339,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 86,
+        "band_fraction": 0.1561,
+        "F_area": 0.059256431008913354,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 103,
+        "band_fraction": 0.1869,
+        "F_area": 0.036622488415521987,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 116,
+        "band_fraction": 0.2105,
+        "F_area": 0.03662248841552194,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 125,
+        "band_fraction": 0.2269,
+        "F_area": 0.03662248841552194,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 135,
+        "band_fraction": 0.245,
+        "F_area": 0.02263394259339196,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 144,
+        "band_fraction": 0.2613,
+        "F_area": 0.022633942593391965,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 152,
+        "band_fraction": 0.2759,
+        "F_area": 0.022633942593391965,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 161,
+        "band_fraction": 0.2922,
+        "F_area": 0.02263394259339192,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 170,
+        "band_fraction": 0.3085,
+        "F_area": 0.02263394259339192,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 176,
+        "band_fraction": 0.3194,
+        "F_area": 0.02263394259339192,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 190,
+        "band_fraction": 0.3448,
+        "F_area": 0.02263394259339192,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 212,
+        "band_fraction": 0.3848,
+        "F_area": 0.022633942593391916,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 227,
+        "band_fraction": 0.412,
+        "F_area": 0.02263394259339193,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 243,
+        "band_fraction": 0.441,
+        "F_area": 0.022633942593391618,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 250,
+        "band_fraction": 0.4537,
+        "F_area": 0.022633942593391618,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 259,
+        "band_fraction": 0.4701,
+        "F_area": 0.02263394259339154,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 264,
+        "band_fraction": 0.4791,
+        "F_area": 0.02263394259339154,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 270,
+        "band_fraction": 0.49,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 273,
+        "band_fraction": 0.4955,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 276,
+        "band_fraction": 0.5009,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 279,
+        "band_fraction": 0.5064,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 286,
+        "band_fraction": 0.5191,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 288,
+        "band_fraction": 0.5227,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 292,
+        "band_fraction": 0.5299,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 297,
+        "band_fraction": 0.539,
+        "F_area": 0.0226339425933915,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 304,
+        "band_fraction": 0.5517,
+        "F_area": 0.022633942593391507,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 309,
+        "band_fraction": 0.5608,
+        "F_area": 0.013988545822129772,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 316,
+        "band_fraction": 0.5735,
+        "F_area": 0.010686298101735919,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 321,
+        "band_fraction": 0.5826,
+        "F_area": 0.010686298101735922,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 330,
+        "band_fraction": 0.5989,
+        "F_area": 0.010686298101735922,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 339,
+        "band_fraction": 0.6152,
+        "F_area": 0.010686298101735815,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 349,
+        "band_fraction": 0.6334,
+        "F_area": 0.010686298101735815,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 375,
+        "band_fraction": 0.6806,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 389,
+        "band_fraction": 0.706,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 407,
+        "band_fraction": 0.7387,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 415,
+        "band_fraction": 0.7532,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 426,
+        "band_fraction": 0.7731,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 439,
+        "band_fraction": 0.7967,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 451,
+        "band_fraction": 0.8185,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 465,
+        "band_fraction": 0.8439,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 478,
+        "band_fraction": 0.8675,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 497,
+        "band_fraction": 0.902,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 523,
+        "band_fraction": 0.9492,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 551,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 161,
+        "n_tiles_requested": 161,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.02263394259339192,
+        "intersections": [
+          0.0033022477203932775,
+          0.019331694872998153
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2922
+      },
+      {
+        "n_tiles": 276,
+        "n_tiles_requested": 276,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0226339425933915,
+        "intersections": [
+          0.0033022477203932775,
+          0.019331694872998163
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi",
+        "band_fraction": 0.5009
+      },
+      {
+        "n_tiles": 349,
+        "n_tiles_requested": 360,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.010686298101735815,
+        "intersections": [
+          0.0,
+          0.01068629810173577
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.6334
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 312,
+        "n_tiles_requested": 314,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "retained_outside_arc",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5662
+      },
+      {
+        "n_tiles": 234,
+        "n_tiles_requested": 237,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.010686298101736439,
+        "intersections": [
+          0.0,
+          0.010686298101736418
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_in_arc",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.4247
+      }
+    ]
+  },
+  {
+    "case": "w19-B-s1",
+    "world": 19,
+    "si": 1,
+    "jam_step": 43,
+    "n_band_tiles": 582,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 118,
+    "theta0": 2.5313,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 1.3744,
+      "n_tiles": 235,
+      "n_tiles_requested": 238,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.008645396771261537,
+      "intersections": [
+        0.0,
+        0.008645396771261402
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.4038
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0223,
+        "F_area": 0.05925643100891347,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 22,
+        "band_fraction": 0.0378,
+        "F_area": 0.059256431008913354,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 34,
+        "band_fraction": 0.0584,
+        "F_area": 0.03662248841552159,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 46,
+        "band_fraction": 0.079,
+        "F_area": 0.03662248841552146,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 56,
+        "band_fraction": 0.0962,
+        "F_area": 0.03662248841552146,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 78,
+        "band_fraction": 0.134,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 91,
+        "band_fraction": 0.1564,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 104,
+        "band_fraction": 0.1787,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 111,
+        "band_fraction": 0.1907,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 119,
+        "band_fraction": 0.2045,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 132,
+        "band_fraction": 0.2268,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 142,
+        "band_fraction": 0.244,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 149,
+        "band_fraction": 0.256,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 158,
+        "band_fraction": 0.2715,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 168,
+        "band_fraction": 0.2887,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 177,
+        "band_fraction": 0.3041,
+        "F_area": 0.00864539677126155,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 185,
+        "band_fraction": 0.3179,
+        "F_area": 0.008645396771261537,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 199,
+        "band_fraction": 0.3419,
+        "F_area": 0.00864539677126154,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 207,
+        "band_fraction": 0.3557,
+        "F_area": 0.00864539677126154,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 218,
+        "band_fraction": 0.3746,
+        "F_area": 0.00864539677126154,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 235,
+        "band_fraction": 0.4038,
+        "F_area": 0.008645396771261537,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 258,
+        "band_fraction": 0.4433,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 283,
+        "band_fraction": 0.4863,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 301,
+        "band_fraction": 0.5172,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 317,
+        "band_fraction": 0.5447,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 325,
+        "band_fraction": 0.5584,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 335,
+        "band_fraction": 0.5756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 347,
+        "band_fraction": 0.5962,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 360,
+        "band_fraction": 0.6186,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 369,
+        "band_fraction": 0.634,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 380,
+        "band_fraction": 0.6529,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 393,
+        "band_fraction": 0.6753,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 409,
+        "band_fraction": 0.7027,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 416,
+        "band_fraction": 0.7148,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 429,
+        "band_fraction": 0.7371,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 443,
+        "band_fraction": 0.7612,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 450,
+        "band_fraction": 0.7732,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 461,
+        "band_fraction": 0.7921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 470,
+        "band_fraction": 0.8076,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 477,
+        "band_fraction": 0.8196,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 489,
+        "band_fraction": 0.8402,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 497,
+        "band_fraction": 0.854,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 506,
+        "band_fraction": 0.8694,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 521,
+        "band_fraction": 0.8952,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 534,
+        "band_fraction": 0.9175,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 550,
+        "band_fraction": 0.945,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 565,
+        "band_fraction": 0.9708,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 582,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 142,
+        "n_tiles_requested": 142,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.00864539677126155,
+        "intersections": [
+          0.0,
+          0.008645396771261412
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.244
+      },
+      {
+        "n_tiles": 301,
+        "n_tiles_requested": 301,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.5172
+      },
+      {
+        "n_tiles": 443,
+        "n_tiles_requested": 443,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7612
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 297,
+        "n_tiles_requested": 297,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5103
+      },
+      {
+        "n_tiles": 284,
+        "n_tiles_requested": 285,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.005343149050868124,
+        "intersections": [
+          0.0,
+          0.005343149050868107
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.488
+      }
+    ]
+  },
+  {
+    "case": "w21-B-s0",
+    "world": 21,
+    "si": 0,
+    "jam_step": 42,
+    "n_band_tiles": 450,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 96,
+    "theta0": -2.1435,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 0.6545,
+      "n_tiles": 90,
+      "n_tiles_requested": 90,
+      "connected": true,
+      "reader_status": "reconstructed",
+      "F_area": 0.013988545822130032,
+      "intersections": [
+        0.0,
+        0.013988545822129952
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.2
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 8,
+        "band_fraction": 0.0178,
+        "F_area": 0.05925643100890794,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 17,
+        "band_fraction": 0.0378,
+        "F_area": 0.059256431008913514,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 27,
+        "band_fraction": 0.06,
+        "F_area": 0.05925643100891345,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 34,
+        "band_fraction": 0.0756,
+        "F_area": 0.059256431008913354,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 45,
+        "band_fraction": 0.1,
+        "F_area": 0.059256431008913354,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 54,
+        "band_fraction": 0.12,
+        "F_area": 0.0226339425933916,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 62,
+        "band_fraction": 0.1378,
+        "F_area": 0.022633942593391486,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 70,
+        "band_fraction": 0.1556,
+        "F_area": 0.022633942593391247,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 77,
+        "band_fraction": 0.1711,
+        "F_area": 0.013988545822130133,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 90,
+        "band_fraction": 0.2,
+        "F_area": 0.013988545822130032,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 103,
+        "band_fraction": 0.2289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 115,
+        "band_fraction": 0.2556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 122,
+        "band_fraction": 0.2711,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 134,
+        "band_fraction": 0.2978,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 142,
+        "band_fraction": 0.3156,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 152,
+        "band_fraction": 0.3378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 158,
+        "band_fraction": 0.3511,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 169,
+        "band_fraction": 0.3756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 178,
+        "band_fraction": 0.3956,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 184,
+        "band_fraction": 0.4089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 192,
+        "band_fraction": 0.4267,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 200,
+        "band_fraction": 0.4444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 211,
+        "band_fraction": 0.4689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 217,
+        "band_fraction": 0.4822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 229,
+        "band_fraction": 0.5089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 238,
+        "band_fraction": 0.5289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 250,
+        "band_fraction": 0.5556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 260,
+        "band_fraction": 0.5778,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 271,
+        "band_fraction": 0.6022,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 283,
+        "band_fraction": 0.6289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 294,
+        "band_fraction": 0.6533,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 304,
+        "band_fraction": 0.6756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 312,
+        "band_fraction": 0.6933,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 321,
+        "band_fraction": 0.7133,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 329,
+        "band_fraction": 0.7311,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 335,
+        "band_fraction": 0.7444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 344,
+        "band_fraction": 0.7644,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 354,
+        "band_fraction": 0.7867,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 360,
+        "band_fraction": 0.8,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 371,
+        "band_fraction": 0.8244,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 382,
+        "band_fraction": 0.8489,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 391,
+        "band_fraction": 0.8689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 401,
+        "band_fraction": 0.8911,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 410,
+        "band_fraction": 0.9111,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 422,
+        "band_fraction": 0.9378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 430,
+        "band_fraction": 0.9556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 442,
+        "band_fraction": 0.9822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 450,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 115,
+        "n_tiles_requested": 115,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2556
+      },
+      {
+        "n_tiles": 217,
+        "n_tiles_requested": 217,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.4822
+      },
+      {
+        "n_tiles": 335,
+        "n_tiles_requested": 336,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7444
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 222,
+        "n_tiles_requested": 222,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.005343149050868294,
+        "intersections": [
+          0.0,
+          0.005343149050868294
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.4933
+      },
+      {
+        "n_tiles": 228,
+        "n_tiles_requested": 228,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.5067
+      }
+    ]
+  },
+  {
+    "case": "w21-B-s1",
+    "world": 21,
+    "si": 1,
+    "jam_step": 42,
+    "n_band_tiles": 450,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 96,
+    "theta0": -2.1435,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 0.6545,
+      "n_tiles": 90,
+      "n_tiles_requested": 90,
+      "connected": true,
+      "reader_status": "reconstructed",
+      "F_area": 0.013988545822130032,
+      "intersections": [
+        0.0,
+        0.013988545822129952
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.2
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 8,
+        "band_fraction": 0.0178,
+        "F_area": 0.05925643100890794,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 17,
+        "band_fraction": 0.0378,
+        "F_area": 0.059256431008913514,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 27,
+        "band_fraction": 0.06,
+        "F_area": 0.05925643100891345,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 34,
+        "band_fraction": 0.0756,
+        "F_area": 0.059256431008913354,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 45,
+        "band_fraction": 0.1,
+        "F_area": 0.059256431008913354,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 54,
+        "band_fraction": 0.12,
+        "F_area": 0.0226339425933916,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 62,
+        "band_fraction": 0.1378,
+        "F_area": 0.022633942593391486,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 70,
+        "band_fraction": 0.1556,
+        "F_area": 0.022633942593391247,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 77,
+        "band_fraction": 0.1711,
+        "F_area": 0.013988545822130133,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 90,
+        "band_fraction": 0.2,
+        "F_area": 0.013988545822130032,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 103,
+        "band_fraction": 0.2289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 115,
+        "band_fraction": 0.2556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 122,
+        "band_fraction": 0.2711,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 134,
+        "band_fraction": 0.2978,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 142,
+        "band_fraction": 0.3156,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 152,
+        "band_fraction": 0.3378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 158,
+        "band_fraction": 0.3511,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 169,
+        "band_fraction": 0.3756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 178,
+        "band_fraction": 0.3956,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 184,
+        "band_fraction": 0.4089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 192,
+        "band_fraction": 0.4267,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 200,
+        "band_fraction": 0.4444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 211,
+        "band_fraction": 0.4689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 217,
+        "band_fraction": 0.4822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 229,
+        "band_fraction": 0.5089,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 238,
+        "band_fraction": 0.5289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 250,
+        "band_fraction": 0.5556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 260,
+        "band_fraction": 0.5778,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 271,
+        "band_fraction": 0.6022,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 283,
+        "band_fraction": 0.6289,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 294,
+        "band_fraction": 0.6533,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 304,
+        "band_fraction": 0.6756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 312,
+        "band_fraction": 0.6933,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 321,
+        "band_fraction": 0.7133,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 329,
+        "band_fraction": 0.7311,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 335,
+        "band_fraction": 0.7444,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 344,
+        "band_fraction": 0.7644,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 354,
+        "band_fraction": 0.7867,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 360,
+        "band_fraction": 0.8,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 371,
+        "band_fraction": 0.8244,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 382,
+        "band_fraction": 0.8489,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 391,
+        "band_fraction": 0.8689,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 401,
+        "band_fraction": 0.8911,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 410,
+        "band_fraction": 0.9111,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 422,
+        "band_fraction": 0.9378,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 430,
+        "band_fraction": 0.9556,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 442,
+        "band_fraction": 0.9822,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 450,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 115,
+        "n_tiles_requested": 115,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2556
+      },
+      {
+        "n_tiles": 217,
+        "n_tiles_requested": 217,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.4822
+      },
+      {
+        "n_tiles": 335,
+        "n_tiles_requested": 336,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7444
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 222,
+        "n_tiles_requested": 222,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.005343149050868294,
+        "intersections": [
+          0.0,
+          0.005343149050868294
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.4933
+      },
+      {
+        "n_tiles": 228,
+        "n_tiles_requested": 228,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.5067
+      }
+    ]
+  },
+  {
+    "case": "w28-B-s0",
+    "world": 28,
+    "si": 0,
+    "jam_step": 39,
+    "n_band_tiles": 551,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 113,
+    "theta0": 3.0365,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 2.3562,
+      "n_tiles": 349,
+      "n_tiles_requested": 360,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.010686298101736158,
+      "intersections": [
+        0.0,
+        0.010686298101735991
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "retained_outside_arc",
+      "band_fraction": 0.6334
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0236,
+        "F_area": 0.2510142698577843,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 26,
+        "band_fraction": 0.0472,
+        "F_area": 0.19175783884887193,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 53,
+        "band_fraction": 0.0962,
+        "F_area": 0.09587891942443383,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 70,
+        "band_fraction": 0.127,
+        "F_area": 0.05925643100891259,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 86,
+        "band_fraction": 0.1561,
+        "F_area": 0.05925643100891259,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 103,
+        "band_fraction": 0.1869,
+        "F_area": 0.036622488415521515,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 116,
+        "band_fraction": 0.2105,
+        "F_area": 0.036622488415521404,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 125,
+        "band_fraction": 0.2269,
+        "F_area": 0.03662248841552146,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 135,
+        "band_fraction": 0.245,
+        "F_area": 0.022633942593392076,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 144,
+        "band_fraction": 0.2613,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 152,
+        "band_fraction": 0.2759,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 161,
+        "band_fraction": 0.2922,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 170,
+        "band_fraction": 0.3085,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 176,
+        "band_fraction": 0.3194,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 190,
+        "band_fraction": 0.3448,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 212,
+        "band_fraction": 0.3848,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 227,
+        "band_fraction": 0.412,
+        "F_area": 0.02263394259339191,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 243,
+        "band_fraction": 0.441,
+        "F_area": 0.022633942593391354,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 250,
+        "band_fraction": 0.4537,
+        "F_area": 0.022633942593391354,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 259,
+        "band_fraction": 0.4701,
+        "F_area": 0.022633942593391465,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 264,
+        "band_fraction": 0.4791,
+        "F_area": 0.022633942593391465,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 270,
+        "band_fraction": 0.49,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 273,
+        "band_fraction": 0.4955,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 276,
+        "band_fraction": 0.5009,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 279,
+        "band_fraction": 0.5064,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 286,
+        "band_fraction": 0.5191,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 288,
+        "band_fraction": 0.5227,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 292,
+        "band_fraction": 0.5299,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 297,
+        "band_fraction": 0.539,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 304,
+        "band_fraction": 0.5517,
+        "F_area": 0.0226339425933913,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 309,
+        "band_fraction": 0.5608,
+        "F_area": 0.01398854582212955,
+        "outcome": "ambiguous"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 316,
+        "band_fraction": 0.5735,
+        "F_area": 0.010686298101736602,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 321,
+        "band_fraction": 0.5826,
+        "F_area": 0.010686298101736158,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 330,
+        "band_fraction": 0.5989,
+        "F_area": 0.010686298101736158,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 339,
+        "band_fraction": 0.6152,
+        "F_area": 0.010686298101736158,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 349,
+        "band_fraction": 0.6334,
+        "F_area": 0.010686298101736158,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 375,
+        "band_fraction": 0.6806,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 389,
+        "band_fraction": 0.706,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 407,
+        "band_fraction": 0.7387,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 415,
+        "band_fraction": 0.7532,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 426,
+        "band_fraction": 0.7731,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 439,
+        "band_fraction": 0.7967,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 451,
+        "band_fraction": 0.8185,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 465,
+        "band_fraction": 0.8439,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 478,
+        "band_fraction": 0.8675,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 497,
+        "band_fraction": 0.902,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 523,
+        "band_fraction": 0.9492,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 551,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 161,
+        "n_tiles_requested": 161,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.02263394259339191,
+        "intersections": [
+          0.0033022477203932254,
+          0.01933169487299813
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.2922
+      },
+      {
+        "n_tiles": 276,
+        "n_tiles_requested": 276,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0226339425933913,
+        "intersections": [
+          0.0033022477203932254,
+          0.019331694872997907
+        ],
+        "selected": null,
+        "outcome": "ambiguous",
+        "detail": "ncompat=2",
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "pi",
+        "band_fraction": 0.5009
+      },
+      {
+        "n_tiles": 349,
+        "n_tiles_requested": 360,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.010686298101736158,
+        "intersections": [
+          0.0,
+          0.010686298101735991
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_outside_arc",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.6334
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 312,
+        "n_tiles_requested": 314,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "retained_outside_arc",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5662
+      },
+      {
+        "n_tiles": 234,
+        "n_tiles_requested": 237,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.010686298101736491,
+        "intersections": [
+          1.1102230246251565e-16,
+          0.01068629810173638
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "retained_in_arc",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.4247
+      }
+    ]
+  },
+  {
+    "case": "w28-B-s1",
+    "world": 28,
+    "si": 1,
+    "jam_step": 43,
+    "n_band_tiles": 582,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 118,
+    "theta0": 2.5313,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 1.3744,
+      "n_tiles": 235,
+      "n_tiles_requested": 238,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.008645396771261693,
+      "intersections": [
+        0.0,
+        0.008645396771261527
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.4038
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0223,
+        "F_area": 0.059256431008913424,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 22,
+        "band_fraction": 0.0378,
+        "F_area": 0.059256431008913146,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 34,
+        "band_fraction": 0.0584,
+        "F_area": 0.03662248841552168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 46,
+        "band_fraction": 0.079,
+        "F_area": 0.03662248841552168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 56,
+        "band_fraction": 0.0962,
+        "F_area": 0.036622488415521626,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 78,
+        "band_fraction": 0.134,
+        "F_area": 0.008645396771261471,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 91,
+        "band_fraction": 0.1564,
+        "F_area": 0.008645396771261693,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 104,
+        "band_fraction": 0.1787,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 111,
+        "band_fraction": 0.1907,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 119,
+        "band_fraction": 0.2045,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 132,
+        "band_fraction": 0.2268,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 142,
+        "band_fraction": 0.244,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 149,
+        "band_fraction": 0.256,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 158,
+        "band_fraction": 0.2715,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 168,
+        "band_fraction": 0.2887,
+        "F_area": 0.008645396771261638,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 177,
+        "band_fraction": 0.3041,
+        "F_area": 0.008645396771261527,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 185,
+        "band_fraction": 0.3179,
+        "F_area": 0.008645396771261582,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 199,
+        "band_fraction": 0.3419,
+        "F_area": 0.008645396771261582,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 207,
+        "band_fraction": 0.3557,
+        "F_area": 0.008645396771261582,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 218,
+        "band_fraction": 0.3746,
+        "F_area": 0.008645396771261582,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 235,
+        "band_fraction": 0.4038,
+        "F_area": 0.008645396771261693,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 258,
+        "band_fraction": 0.4433,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 283,
+        "band_fraction": 0.4863,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 301,
+        "band_fraction": 0.5172,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 317,
+        "band_fraction": 0.5447,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 325,
+        "band_fraction": 0.5584,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 335,
+        "band_fraction": 0.5756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 347,
+        "band_fraction": 0.5962,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 360,
+        "band_fraction": 0.6186,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 369,
+        "band_fraction": 0.634,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 380,
+        "band_fraction": 0.6529,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 393,
+        "band_fraction": 0.6753,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 409,
+        "band_fraction": 0.7027,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 416,
+        "band_fraction": 0.7148,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 429,
+        "band_fraction": 0.7371,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 443,
+        "band_fraction": 0.7612,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 450,
+        "band_fraction": 0.7732,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 461,
+        "band_fraction": 0.7921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 470,
+        "band_fraction": 0.8076,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 477,
+        "band_fraction": 0.8196,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 489,
+        "band_fraction": 0.8402,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 497,
+        "band_fraction": 0.854,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 506,
+        "band_fraction": 0.8694,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 521,
+        "band_fraction": 0.8952,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 534,
+        "band_fraction": 0.9175,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 550,
+        "band_fraction": 0.945,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 565,
+        "band_fraction": 0.9708,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 582,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 142,
+        "n_tiles_requested": 142,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.008645396771261638,
+        "intersections": [
+          0.0,
+          0.008645396771261415
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.244
+      },
+      {
+        "n_tiles": 301,
+        "n_tiles_requested": 301,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.5172
+      },
+      {
+        "n_tiles": 443,
+        "n_tiles_requested": 443,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7612
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 297,
+        "n_tiles_requested": 297,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5103
+      },
+      {
+        "n_tiles": 284,
+        "n_tiles_requested": 285,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.00534314905086819,
+        "intersections": [
+          0.0,
+          0.00534314905086819
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.488
+      }
+    ]
+  },
+  {
+    "case": "w29-B-s1",
+    "world": 29,
+    "si": 1,
+    "jam_step": 43,
+    "n_band_tiles": 582,
+    "n_dead_sites": 2,
+    "n_growable_true_frontier": 118,
+    "theta0": 2.5313,
+    "whole_band": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_connected_arc": {
+      "half_width": 1.3744,
+      "n_tiles": 235,
+      "n_tiles_requested": 238,
+      "connected": false,
+      "reader_status": "reconstructed",
+      "F_area": 0.008645396771261665,
+      "intersections": [
+        0.0,
+        0.008645396771261471
+      ],
+      "selected": 1,
+      "outcome": "correct",
+      "detail": null,
+      "choice_tile_retention": "departed",
+      "band_fraction": 0.4038
+    },
+    "maximal_compatible_scan": [
+      {
+        "half_width": 0.0654,
+        "n_tiles": 13,
+        "band_fraction": 0.0223,
+        "F_area": 0.0592564310089135,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1309,
+        "n_tiles": 22,
+        "band_fraction": 0.0378,
+        "F_area": 0.059256431008913375,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.1963,
+        "n_tiles": 34,
+        "band_fraction": 0.0584,
+        "F_area": 0.0366224884155216,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.2618,
+        "n_tiles": 46,
+        "band_fraction": 0.079,
+        "F_area": 0.0366224884155216,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3272,
+        "n_tiles": 56,
+        "band_fraction": 0.0962,
+        "F_area": 0.0366224884155216,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.3927,
+        "n_tiles": 78,
+        "band_fraction": 0.134,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.4581,
+        "n_tiles": 91,
+        "band_fraction": 0.1564,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.5236,
+        "n_tiles": 104,
+        "band_fraction": 0.1787,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.589,
+        "n_tiles": 111,
+        "band_fraction": 0.1907,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.6545,
+        "n_tiles": 119,
+        "band_fraction": 0.2045,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7199,
+        "n_tiles": 132,
+        "band_fraction": 0.2268,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.7854,
+        "n_tiles": 142,
+        "band_fraction": 0.244,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.8508,
+        "n_tiles": 149,
+        "band_fraction": 0.256,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9163,
+        "n_tiles": 158,
+        "band_fraction": 0.2715,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 0.9817,
+        "n_tiles": 168,
+        "band_fraction": 0.2887,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.0472,
+        "n_tiles": 177,
+        "band_fraction": 0.3041,
+        "F_area": 0.00864539677126168,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1126,
+        "n_tiles": 185,
+        "band_fraction": 0.3179,
+        "F_area": 0.008645396771261665,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.1781,
+        "n_tiles": 199,
+        "band_fraction": 0.3419,
+        "F_area": 0.008645396771261665,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.2435,
+        "n_tiles": 207,
+        "band_fraction": 0.3557,
+        "F_area": 0.008645396771261665,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.309,
+        "n_tiles": 218,
+        "band_fraction": 0.3746,
+        "F_area": 0.008645396771261665,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.3744,
+        "n_tiles": 235,
+        "band_fraction": 0.4038,
+        "F_area": 0.008645396771261665,
+        "outcome": "correct"
+      },
+      {
+        "half_width": 1.4399,
+        "n_tiles": 258,
+        "band_fraction": 0.4433,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5053,
+        "n_tiles": 283,
+        "band_fraction": 0.4863,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.5708,
+        "n_tiles": 301,
+        "band_fraction": 0.5172,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.6362,
+        "n_tiles": 317,
+        "band_fraction": 0.5447,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7017,
+        "n_tiles": 325,
+        "band_fraction": 0.5584,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.7671,
+        "n_tiles": 335,
+        "band_fraction": 0.5756,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.8326,
+        "n_tiles": 347,
+        "band_fraction": 0.5962,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.898,
+        "n_tiles": 360,
+        "band_fraction": 0.6186,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 1.9635,
+        "n_tiles": 369,
+        "band_fraction": 0.634,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0289,
+        "n_tiles": 380,
+        "band_fraction": 0.6529,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.0944,
+        "n_tiles": 393,
+        "band_fraction": 0.6753,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.1598,
+        "n_tiles": 409,
+        "band_fraction": 0.7027,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2253,
+        "n_tiles": 416,
+        "band_fraction": 0.7148,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.2907,
+        "n_tiles": 429,
+        "band_fraction": 0.7371,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.3562,
+        "n_tiles": 443,
+        "band_fraction": 0.7612,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4216,
+        "n_tiles": 450,
+        "band_fraction": 0.7732,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.4871,
+        "n_tiles": 461,
+        "band_fraction": 0.7921,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.5525,
+        "n_tiles": 470,
+        "band_fraction": 0.8076,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.618,
+        "n_tiles": 477,
+        "band_fraction": 0.8196,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.6834,
+        "n_tiles": 489,
+        "band_fraction": 0.8402,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.7489,
+        "n_tiles": 497,
+        "band_fraction": 0.854,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8143,
+        "n_tiles": 506,
+        "band_fraction": 0.8694,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.8798,
+        "n_tiles": 521,
+        "band_fraction": 0.8952,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 2.9452,
+        "n_tiles": 534,
+        "band_fraction": 0.9175,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0107,
+        "n_tiles": 550,
+        "band_fraction": 0.945,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.0761,
+        "n_tiles": 565,
+        "band_fraction": 0.9708,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      },
+      {
+        "half_width": 3.1416,
+        "n_tiles": 582,
+        "band_fraction": 1.0,
+        "F_area": 0.0,
+        "outcome": "empty_incompatible"
+      }
+    ],
+    "sectors": [
+      {
+        "n_tiles": 142,
+        "n_tiles_requested": 142,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.00864539677126168,
+        "intersections": [
+          0.0,
+          0.008645396771261499
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi/2",
+        "band_fraction": 0.244
+      },
+      {
+        "n_tiles": 301,
+        "n_tiles_requested": 301,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "pi",
+        "band_fraction": 0.5172
+      },
+      {
+        "n_tiles": 443,
+        "n_tiles_requested": 443,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "delta_theta": "3pi/2",
+        "band_fraction": 0.7612
+      }
+    ],
+    "notch_halves": [
+      {
+        "n_tiles": 297,
+        "n_tiles_requested": 297,
+        "connected": true,
+        "reader_status": "reconstructed",
+        "F_area": 0.0,
+        "intersections": [
+          0.0,
+          0.0
+        ],
+        "selected": null,
+        "outcome": "empty_incompatible",
+        "detail": "area=0.000e+00 ncompat=0",
+        "choice_tile_retention": "departed",
+        "half": "cw_from_notch",
+        "band_fraction": 0.5103
+      },
+      {
+        "n_tiles": 284,
+        "n_tiles_requested": 285,
+        "connected": false,
+        "reader_status": "reconstructed",
+        "F_area": 0.0053431490508681345,
+        "intersections": [
+          0.0,
+          0.005343149050868121
+        ],
+        "selected": 1,
+        "outcome": "correct",
+        "detail": null,
+        "choice_tile_retention": "departed",
+        "half": "ccw_from_notch",
+        "band_fraction": 0.488
+      }
+    ]
+  }
+]

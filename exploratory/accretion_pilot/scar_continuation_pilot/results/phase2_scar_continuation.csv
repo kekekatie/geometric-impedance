@@ -1,0 +1,12 @@
+case,jam_step,final_step,reached_step_44,total_arrest,tiles_added_after_jam,n_scar_edges,n_scar_components,scar_angular_span,localized,choice_departs_step,illegal_placements
+w5-B-s0,42,44,True,False,79,2,1,0.0224,True,29,0
+w7-B-s0,23,44,True,False,589,12,2,2.9022,False,17,0
+w7-B-s1,23,44,True,False,589,12,2,2.9022,False,17,0
+w15-B-s0,39,44,True,False,140,12,2,1.292,True,41,0
+w19-B-s0,39,44,True,False,140,12,2,1.292,True,41,0
+w19-B-s1,43,44,True,False,36,4,2,1.9002,False,30,0
+w21-B-s0,42,44,True,False,79,2,1,0.0224,True,29,0
+w21-B-s1,42,44,True,False,79,2,1,0.0224,True,29,0
+w28-B-s0,39,44,True,False,140,12,2,1.292,True,41,0
+w28-B-s1,43,44,True,False,36,4,2,1.9002,False,30,0
+w29-B-s1,43,44,True,False,36,4,2,1.9002,False,30,0

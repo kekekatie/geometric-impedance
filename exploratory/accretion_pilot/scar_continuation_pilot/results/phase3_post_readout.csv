@@ -1,0 +1,12 @@
+case,jam_step,final_step,n_band_tiles_final,n_scar_edges,global_outcome,max_arc_fraction,max_arc_outcome,choice_tile_fate
+w5-B-s0,42,44,492,2,empty_incompatible,0.1667,correct,departed_by_pruning
+w7-B-s0,23,44,644,12,empty_incompatible,0.4984,correct,departed_by_pruning
+w7-B-s1,23,44,644,12,empty_incompatible,0.4984,correct,departed_by_pruning
+w15-B-s0,39,44,597,12,empty_incompatible,0.7203,correct,departed_by_pruning
+w19-B-s0,39,44,597,12,empty_incompatible,0.7203,correct,departed_by_pruning
+w19-B-s1,43,44,608,4,empty_incompatible,0.6332,correct,departed_by_pruning
+w21-B-s0,42,44,492,2,empty_incompatible,0.1667,correct,departed_by_pruning
+w21-B-s1,42,44,492,2,empty_incompatible,0.1667,correct,departed_by_pruning
+w28-B-s0,39,44,597,12,empty_incompatible,0.7203,correct,departed_by_pruning
+w28-B-s1,43,44,608,4,empty_incompatible,0.6332,correct,departed_by_pruning
+w29-B-s1,43,44,608,4,empty_incompatible,0.6332,correct,departed_by_pruning

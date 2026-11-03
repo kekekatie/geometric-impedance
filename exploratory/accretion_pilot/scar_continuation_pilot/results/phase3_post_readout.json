@@ -1,0 +1,354 @@
+[
+  {
+    "case": "w5-B-s0",
+    "world": 5,
+    "si": 0,
+    "jam_step": 42,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 492,
+    "n_scar_edges": 2,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.1667,
+      "n_tiles": 82,
+      "F_area": 0.02263394259339152,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.013988545822129925
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 29
+  },
+  {
+    "case": "w7-B-s0",
+    "world": 7,
+    "si": 0,
+    "jam_step": 23,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 644,
+    "n_scar_edges": 12,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.4984,
+      "n_tiles": 321,
+      "F_area": 0.008645396771261471,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.008645396771261443
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 17
+  },
+  {
+    "case": "w7-B-s1",
+    "world": 7,
+    "si": 1,
+    "jam_step": 23,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 644,
+    "n_scar_edges": 12,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.4984,
+      "n_tiles": 321,
+      "F_area": 0.008645396771261471,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.008645396771261443
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 17
+  },
+  {
+    "case": "w15-B-s0",
+    "world": 15,
+    "si": 0,
+    "jam_step": 39,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 597,
+    "n_scar_edges": 12,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.7203,
+      "n_tiles": 430,
+      "F_area": 0.007384050381342435,
+      "outcome": "correct",
+      "intersections": [
+        3.122502256758253e-17,
+        0.007384050381342409
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 41
+  },
+  {
+    "case": "w19-B-s0",
+    "world": 19,
+    "si": 0,
+    "jam_step": 39,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 597,
+    "n_scar_edges": 12,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.7203,
+      "n_tiles": 430,
+      "F_area": 0.007384050381343049,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.00738405038134303
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 41
+  },
+  {
+    "case": "w19-B-s1",
+    "world": 19,
+    "si": 1,
+    "jam_step": 43,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 608,
+    "n_scar_edges": 4,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.6332,
+      "n_tiles": 385,
+      "F_area": 0.005343149050868086,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.005343149050868086
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 30
+  },
+  {
+    "case": "w21-B-s0",
+    "world": 21,
+    "si": 0,
+    "jam_step": 42,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 492,
+    "n_scar_edges": 2,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.1667,
+      "n_tiles": 82,
+      "F_area": 0.022633942593391604,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.01398854582213008
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 29
+  },
+  {
+    "case": "w21-B-s1",
+    "world": 21,
+    "si": 1,
+    "jam_step": 42,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 492,
+    "n_scar_edges": 2,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.1667,
+      "n_tiles": 82,
+      "F_area": 0.022633942593391604,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.01398854582213008
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 29
+  },
+  {
+    "case": "w28-B-s0",
+    "world": 28,
+    "si": 0,
+    "jam_step": 39,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 597,
+    "n_scar_edges": 12,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.7203,
+      "n_tiles": 430,
+      "F_area": 0.007384050381342933,
+      "outcome": "correct",
+      "intersections": [
+        1.1102230246251565e-16,
+        0.007384050381342988
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 41
+  },
+  {
+    "case": "w28-B-s1",
+    "world": 28,
+    "si": 1,
+    "jam_step": 43,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 608,
+    "n_scar_edges": 4,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.6332,
+      "n_tiles": 385,
+      "F_area": 0.00534314905086819,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.00534314905086819
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 30
+  },
+  {
+    "case": "w29-B-s1",
+    "world": 29,
+    "si": 1,
+    "jam_step": 43,
+    "final_step": 44,
+    "reached_step_44": true,
+    "total_arrest": false,
+    "n_band_tiles_final": 608,
+    "n_scar_edges": 4,
+    "global_reader": {
+      "outcome": "empty_incompatible",
+      "F_area": 0.0,
+      "intersections": [
+        0.0,
+        0.0
+      ]
+    },
+    "maximal_compatible_arc": {
+      "band_fraction": 0.6332,
+      "n_tiles": 385,
+      "F_area": 0.0053431490508681345,
+      "outcome": "correct",
+      "intersections": [
+        0.0,
+        0.005343149050868121
+      ],
+      "choice_tile_retention": "departed"
+    },
+    "choice_tile_fate": "departed_by_pruning",
+    "choice_departs_step": 30
+  }
+]
