@@ -1,0 +1,12 @@
+case,stream,jam_step,final_step,baseline_jam_full_tiles,first_scar_step_added,later_added,added_from_frozen_jam,final_full_tiles,cumulative_labels,labelled_current,current_blocked,current_blocked_components,current_blocked_span,new_unlabelled_blocked,labelled_extendable,labelled_disappeared,B_in_jam_band,B_departure_step,B_in_final_band,B_in_final_archive,jam_selected_tiles,jam_selected_fraction,jam_reader_selection,jam_A_intersection,jam_B_in_selected,final_selected_tiles,final_selected_fraction,final_reader_selection,final_A_intersection,final_B_in_selected
+w5-B-s0,20262639595,42,44,846,34,79,113,959,2,2,5,2,2.655257277226643,3,0,0,False,29,False,True,90,0.2,B,point,False,82,0.16666666666666666,B,point,False
+w7-B-s0,20262655433,23,44,417,22,589,611,1028,12,12,12,2,2.902184034851617,0,0,0,False,17,False,True,100,0.31746031746031744,B,infeasible,False,321,0.4984472049689441,B,infeasible,False
+w7-B-s1,20262655534,23,44,417,22,589,611,1028,12,12,12,2,2.902184034851617,0,0,0,False,17,False,True,100,0.31746031746031744,B,infeasible,False,321,0.4984472049689441,B,infeasible,False
+w15-B-s0,20262718785,39,44,875,22,140,162,1037,12,12,12,2,1.2920154452311348,0,0,0,True,41,False,True,349,0.6333938294010889,B,segment,False,430,0.7202680067001676,B,segment,False
+w19-B-s0,20262750461,39,44,875,22,140,162,1037,12,12,12,2,1.2920154452311383,0,0,0,True,41,False,True,349,0.6333938294010889,B,segment,False,430,0.7202680067001676,B,segment,False
+w19-B-s1,20262750562,43,44,1228,34,36,70,1298,4,4,4,2,1.9001990941156102,0,0,0,False,30,False,True,235,0.40378006872852235,B,infeasible,False,385,0.6332236842105263,B,infeasible,False
+w21-B-s0,20262766299,42,44,846,34,79,113,959,2,2,5,2,2.655257277226644,3,0,0,False,29,False,True,90,0.2,B,point,False,82,0.16666666666666666,B,point,False
+w21-B-s1,20262766400,42,44,846,34,79,113,959,2,2,5,2,2.655257277226644,3,0,0,False,29,False,True,90,0.2,B,point,False,82,0.16666666666666666,B,point,False
+w28-B-s0,20262821732,39,44,875,22,140,162,1037,12,12,12,2,1.2920154452311348,0,0,0,True,41,False,True,349,0.6333938294010889,B,segment,False,430,0.7202680067001676,B,segment,False
+w28-B-s1,20262821833,43,44,1228,34,36,70,1298,4,4,4,2,1.9001990941156013,0,0,0,False,30,False,True,235,0.40378006872852235,B,infeasible,False,385,0.6332236842105263,B,infeasible,False
+w29-B-s1,20262829752,43,44,1228,34,36,70,1298,4,4,4,2,1.9001990941156084,0,0,0,False,30,False,True,235,0.40378006872852235,B,infeasible,False,385,0.6332236842105263,B,infeasible,False

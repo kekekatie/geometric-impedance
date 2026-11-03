@@ -1,0 +1,43 @@
+{
+  "scheduled_additions_checked": 7325,
+  "step0_B_legality_passed": [
+    "w5-B-s0",
+    "w7-B-s0",
+    "w7-B-s1",
+    "w15-B-s0",
+    "w19-B-s0",
+    "w19-B-s1",
+    "w21-B-s0",
+    "w21-B-s1",
+    "w28-B-s0",
+    "w28-B-s1",
+    "w29-B-s1"
+  ],
+  "final_vertex_stars_checked": 6627,
+  "max_numerical_triangle_intersection_area": 2.6107588313450947e-16,
+  "grid_counts": {
+    "A": 0,
+    "B": 111,
+    "ambiguous": 64,
+    "empty_incompatible": 353,
+    "reconstruction_failure": 0
+  },
+  "reader_empty_category_split": {
+    "boundary_margin": 50,
+    "negative_margin": 265,
+    "positive_margin_no_birth_hypothesis": 38
+  },
+  "A_boundary_intersections": {
+    "point": 6,
+    "infeasible": 10,
+    "segment": 6
+  },
+  "environment": {
+    "python": "3.12.16 (main, Oct 26 2026, 14:10:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.2.6"
+  },
+  "all_frozen_histories_match": true,
+  "all_steps_make_progress": true
+}

@@ -1,0 +1,7 @@
+{
+  "permanent_pin_can_cause_scheduler_arrest": true,
+  "no_scar_forced_step_matches_baseline": true,
+  "crossing_overlap_detected": true,
+  "disjoint_overlap_rejected": true,
+  "zero_area_segment_not_infeasible": true
+}

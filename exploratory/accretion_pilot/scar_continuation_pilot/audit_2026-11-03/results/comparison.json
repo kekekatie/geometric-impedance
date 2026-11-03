@@ -1,0 +1,327 @@
+[
+  {
+    "file": "phase1_arc_readout.json",
+    "git_sha256": "653519bfa4dc50b37c93a2836e1d463450802a6603697b098e644e699d0395dc",
+    "produced_sha256": "5775c8d29e8310537289c22a04c50895c8d5aca7d9f6065ac99e25be347f67f4",
+    "exact_bytes": false,
+    "exact_after_line_ending_normalization": false,
+    "structured_exact": false,
+    "difference_count": 36,
+    "max_numeric_difference": 6.661338147750939e-15,
+    "non_numeric_or_discrete_differences": [],
+    "differences": [
+      {
+        "path": "/0/maximal_compatible_scan/0/F_area",
+        "old": 0.05925643100891334,
+        "new": 0.05925643100891338,
+        "absolute_difference": 4.163336342344337e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/1/F_area",
+        "old": 0.05925643100891331,
+        "new": 0.0592564310089133,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/2/F_area",
+        "old": 0.059256431008913216,
+        "new": 0.05925643100891324,
+        "absolute_difference": 2.7755575615628914e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/3/F_area",
+        "old": 0.05925643100891323,
+        "new": 0.05925643100891327,
+        "absolute_difference": 4.163336342344337e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/4/F_area",
+        "old": 0.059256431008913195,
+        "new": 0.05925643100891326,
+        "absolute_difference": 6.245004513516506e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/5/F_area",
+        "old": 0.022633942593391278,
+        "new": 0.022633942593391285,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/6/F_area",
+        "old": 0.022633942593391278,
+        "new": 0.022633942593391285,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/7/F_area",
+        "old": 0.022633942593390986,
+        "new": 0.022633942593391035,
+        "absolute_difference": 4.85722573273506e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/maximal_compatible_scan/8/F_area",
+        "old": 0.013988545822130244,
+        "new": 0.013988545822130258,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/witness_complement/components/0/F_area",
+        "old": 0.010686298101736574,
+        "new": 0.01068629810173656,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/0/witness_complement/components/0/intersections/1",
+        "old": 0.005343149050868398,
+        "new": 0.005343149050868343,
+        "absolute_difference": 5.551115123125783e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/maximal_compatible_connected_arc/intersections/1",
+        "old": 0.022633942593391534,
+        "new": 0.02263394259339152,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/notch_halves/0/F_area",
+        "old": 0.013988545822129994,
+        "new": 0.013988545822129966,
+        "absolute_difference": 2.7755575615628914e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/sectors/0/intersections/1",
+        "old": 0.022633942593391534,
+        "new": 0.02263394259339152,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/witness_complement/components/1/F_area",
+        "old": 0.19175783884887035,
+        "new": 0.19175783884887024,
+        "absolute_difference": 1.1102230246251565e-16,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/witness_complement/components/2/F_area",
+        "old": 1.0633135104400504,
+        "new": 1.0633135104400488,
+        "absolute_difference": 1.5543122344752192e-15,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/1/witness_complement/components/5/F_area",
+        "old": 1.7204774005889663,
+        "new": 1.7204774005889596,
+        "absolute_difference": 6.661338147750939e-15,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/2/maximal_compatible_connected_arc/intersections/1",
+        "old": 0.022633942593391534,
+        "new": 0.02263394259339152,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/2/notch_halves/0/F_area",
+        "old": 0.013988545822129994,
+        "new": 0.013988545822129966,
+        "absolute_difference": 2.7755575615628914e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/2/sectors/0/intersections/1",
+        "old": 0.022633942593391534,
+        "new": 0.02263394259339152,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/3/maximal_compatible_scan/0/F_area",
+        "old": 0.2510142698577839,
+        "new": 0.25101426985778386,
+        "absolute_difference": 5.551115123125783e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/4/maximal_compatible_scan/0/F_area",
+        "old": 0.25101426985778297,
+        "new": 0.251014269857783,
+        "absolute_difference": 5.551115123125783e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/4/maximal_compatible_scan/1/F_area",
+        "old": 0.19175783884887104,
+        "new": 0.19175783884887102,
+        "absolute_difference": 2.7755575615628914e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/6/maximal_compatible_scan/0/F_area",
+        "old": 0.05925643100890794,
+        "new": 0.0592564310089079,
+        "absolute_difference": 4.163336342344337e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/6/maximal_compatible_scan/1/F_area",
+        "old": 0.059256431008913514,
+        "new": 0.05925643100891344,
+        "absolute_difference": 7.632783294297951e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/6/maximal_compatible_scan/7/F_area",
+        "old": 0.022633942593391247,
+        "new": 0.02263394259339124,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/6/notch_halves/0/F_area",
+        "old": 0.005343149050868294,
+        "new": 0.005343149050868287,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/6/notch_halves/0/intersections/1",
+        "old": 0.005343149050868294,
+        "new": 0.005343149050868287,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/7/maximal_compatible_scan/0/F_area",
+        "old": 0.05925643100890794,
+        "new": 0.0592564310089079,
+        "absolute_difference": 4.163336342344337e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/7/maximal_compatible_scan/1/F_area",
+        "old": 0.059256431008913514,
+        "new": 0.05925643100891344,
+        "absolute_difference": 7.632783294297951e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/7/maximal_compatible_scan/7/F_area",
+        "old": 0.022633942593391247,
+        "new": 0.02263394259339124,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/7/notch_halves/0/F_area",
+        "old": 0.005343149050868294,
+        "new": 0.005343149050868287,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/7/notch_halves/0/intersections/1",
+        "old": 0.005343149050868294,
+        "new": 0.005343149050868287,
+        "absolute_difference": 6.938893903907228e-18,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/8/maximal_compatible_scan/7/F_area",
+        "old": 0.03662248841552146,
+        "new": 0.036622488415521404,
+        "absolute_difference": 5.551115123125783e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/10/maximal_compatible_scan/0/F_area",
+        "old": 0.0592564310089135,
+        "new": 0.059256431008913535,
+        "absolute_difference": 3.469446951953614e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/10/notch_halves/1/F_area",
+        "old": 0.0053431490508681345,
+        "new": 0.005343149050868148,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      }
+    ]
+  },
+  {
+    "file": "phase1_arc_readout.csv",
+    "git_sha256": "18b5f5d899cd5cb2a059d32539ea037b85b0ca2b91b09dfd248d6ea2581f87a0",
+    "produced_sha256": "bdabb8de75a4dbfaa53486a45fdfc5a739590bebece2c71755e87669b00f73bc",
+    "exact_bytes": false,
+    "exact_after_line_ending_normalization": false
+  },
+  {
+    "file": "phase2_scar_continuation.json",
+    "git_sha256": "054409e065831f1acffc820f57195403599b69c7b41a191c6d628e20d832bd4e",
+    "produced_sha256": "1632252c179aaf58954caf61bc3de5cb04e300c85c7f4b27c3fe4d707669b31e",
+    "exact_bytes": false,
+    "exact_after_line_ending_normalization": true,
+    "structured_exact": true,
+    "difference_count": 0,
+    "max_numeric_difference": 0,
+    "non_numeric_or_discrete_differences": [],
+    "differences": []
+  },
+  {
+    "file": "phase2_scar_continuation.csv",
+    "git_sha256": "a8ba0345a7be9fd3ba3084161af416842e0a30d05293faec6e2b16dd9766cb0c",
+    "produced_sha256": "a8ba0345a7be9fd3ba3084161af416842e0a30d05293faec6e2b16dd9766cb0c",
+    "exact_bytes": true,
+    "exact_after_line_ending_normalization": true
+  },
+  {
+    "file": "phase3_post_readout.json",
+    "git_sha256": "07f8c295b1c15190fc7fc5670eea6a1c3edd04e606efbbe49605ce524528f563",
+    "produced_sha256": "92b2c19db5585f00627b750cda309e29f5ff2a95548a3b5b71e6845ddbd5971a",
+    "exact_bytes": false,
+    "exact_after_line_ending_normalization": false,
+    "structured_exact": false,
+    "difference_count": 2,
+    "max_numeric_difference": 3.469446951953614e-17,
+    "non_numeric_or_discrete_differences": [],
+    "differences": [
+      {
+        "path": "/0/maximal_compatible_arc/F_area",
+        "old": 0.02263394259339152,
+        "new": 0.022633942593391555,
+        "absolute_difference": 3.469446951953614e-17,
+        "within_atol_1e10": true
+      },
+      {
+        "path": "/10/maximal_compatible_arc/F_area",
+        "old": 0.0053431490508681345,
+        "new": 0.005343149050868148,
+        "absolute_difference": 1.3877787807814457e-17,
+        "within_atol_1e10": true
+      }
+    ]
+  },
+  {
+    "file": "phase3_post_readout.csv",
+    "git_sha256": "26fc2f1dca1cce31186021ac69bf33a2f502d39222b26cfff32dcd1fb29eca32",
+    "produced_sha256": "26fc2f1dca1cce31186021ac69bf33a2f502d39222b26cfff32dcd1fb29eca32",
+    "exact_bytes": true,
+    "exact_after_line_ending_normalization": true
+  }
+]
