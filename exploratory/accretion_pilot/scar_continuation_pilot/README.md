@@ -1,5 +1,19 @@
 # Scar-continuation pilot — 2026-11-03
 
+> **⚠ Read first — corrections (2026-11-04).** An independent audit
+> (`audit/scar-continuation-2026-11-03`, commit `3dc43ea`) reproduced the
+> full-patch baseline and corrected several headline interpretations below. In
+> particular: these Phase-2 runs **retained the full construction archive** (not
+> archive-free); "selects B" is a positive-area reader decision and is **not**
+> always exclusion of A (12/22 endpoints keep a zero-area A intersection); the w7
+> "32%→50%" increase was a **scan-centre confound** (withdrawn); and "maximal arc"
+> means "largest connected subset found in a bounded scan." Full list:
+> [`CORRECTIONS_2026-11-04.md`](CORRECTIONS_2026-11-04.md). The genuinely
+> archive-free follow-up (a worker retaining only the band) is in
+> [`archive_free_2026-11-04/`](archive_free_2026-11-04/). The original
+> [`HANDBACK.md`](HANDBACK.md) is preserved as a dated historical document — read
+> it through the corrections note.
+
 Two bounded questions on the recorded B-jams, building on the jam diagnostics and
 the cooperative-rearrangement audit (`d2e075a`):
 
