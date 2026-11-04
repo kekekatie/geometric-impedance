@@ -1,0 +1,38 @@
+{
+  "w7-s0": {
+    "jam_step": 23,
+    "post_jam_steps": 21,
+    "spawned_process_isolation_matches": true,
+    "cold_restart_matches": true,
+    "metadata_fields": [
+      "boundary",
+      "fields",
+      "radius",
+      "rng_state",
+      "scars",
+      "schema",
+      "tiles"
+    ],
+    "metadata_only_declared_fields": true,
+    "serialized_band_tiles": 327,
+    "serialized_boundary_edges": 75
+  },
+  "w5-s0": {
+    "jam_step": 42,
+    "post_jam_steps": 2,
+    "spawned_process_isolation_matches": true,
+    "cold_restart_matches": true,
+    "metadata_fields": [
+      "boundary",
+      "fields",
+      "radius",
+      "rng_state",
+      "scars",
+      "schema",
+      "tiles"
+    ],
+    "metadata_only_declared_fields": true,
+    "serialized_band_tiles": 453,
+    "serialized_boundary_edges": 92
+  }
+}

@@ -61,5 +61,6 @@ def jam_prep(world, si):
     jam_step = len(arm["snaps"]) - 1
     full_jam = arm["snaps"][jam_step]
     band, _ = PC.skin_of(full_jam)
+    _, dead, _ = PC.dead_sites(full_jam)
     return dict(world=world, si=si, Sstar=Sstar, cs=cs, B=B, stream=stream,
-                jam_step=jam_step, full_jam=full_jam, band=band)
+                jam_step=jam_step, full_jam=full_jam, band=band, dead=dead)
