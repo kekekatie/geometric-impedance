@@ -32,29 +32,38 @@ All eleven recorded B-jam cases pass every strengthened check:
 | **Spawned-process** restart from the actual pre-scar state == full-patch == uninterrupted worker, step jam..44, in order | ✅ all 11 | `results/prescar_restart.json` |
 | Endpoint decorated vertex stars valid; no over-full vertex | ✅ all 11 (0 invalid) | `results/verification.json` |
 | Positive-area triangle overlaps in the cumulative history | ✅ all 11 (0; max area ≤ 2.6e-16) | `results/verification.json` |
-| Deep retained-state metadata (boundary owners/coords, caches, cavity exclusion, serialized fields, pre-scar == jam band) | ✅ all 11 | `results/verification.json` |
+| Retained-state metadata (boundary owners/coords, endpoint edge cache, cavity exclusion, serialized fields, pre-scar == jam band) | ✅ all 11 | `results/verification.json` |
 | Real scar-adjacency exercised and legal (w7) | ✅ 18/18 | `test_supplement.py` |
-| Step-44 endpoint geometry identical to the original export (→ readout reuse) | ✅ all 11 (sorted key list identical) | `results/endpoint_geometry.json` |
+| Failure-stop path: injected illegal placement stops the trial, no later growth | ✅ | `test_failstop.py` |
+| Step-44 band == original export by **sorted decorated-key list** (→ readout reuse; not a raw-byte check) | ✅ all 11 | `results/endpoint_geometry.json` |
 
 Per-case summary (`results/verification.json`):
 
 ```
-case       jam  n_band   placements  ordered  set  prescar(g/f/p)  stars(cmpl/bad/over)  overlaps  blocked labels
-w5-B-s0    42   450=450  748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
-w7-B-s0    23   315=315  829         ✓        ✓    ✓✓✓             456/0/0               0         12     12
-w7-B-s1    23   315=315  829         ✓        ✓    ✓✓✓             456/0/0               0         12     12
-w15-B-s0   39   551=551  440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
-w19-B-s0   39   551=551  440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
-w19-B-s1   43   582=582  701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
-w21-B-s0   42   450=450  748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
-w21-B-s1   42   450=450  748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
-w28-B-s0   39   551=551  440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
-w28-B-s1   43   582=582  701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
-w29-B-s1   43   582=582  701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
+case       jam  band@jam  band@44  placements  ordered  set  prescar(g/f/p)  stars(cmpl/bad/over)  overlaps  blocked labels
+w5-B-s0    42   450       492      748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
+w7-B-s0    23   315       644      829         ✓        ✓    ✓✓✓             456/0/0               0         12     12
+w7-B-s1    23   315       644      829         ✓        ✓    ✓✓✓             456/0/0               0         12     12
+w15-B-s0   39   551       597      440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
+w19-B-s0   39   551       597      440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
+w19-B-s1   43   582       608      701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
+w21-B-s0   42   450       492      748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
+w21-B-s1   42   450       492      748         ✓        ✓    ✓✓✓             427/0/0               0          5      2
+w28-B-s0   39   551       597      440         ✓        ✓    ✓✓✓             456/0/0               0         12     12
+w28-B-s1   43   582       608      701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
+w29-B-s1   43   582       608      701         ✓        ✓    ✓✓✓             586/0/0               0          4      4
 ```
 
-(`n_band` is the worker's pruned radius-2 band at step 44; `prescar(g/f/p)` = geometry /
-ordered-frontier / PRNG alignment at the top of the jam step.)
+- `band@jam` is the retained radius-2 band at the **top of the jam step** (equals the
+  frozen jam band — `n_worker_band == n_frozen_band` in `prescar_alignment`).
+- `band@44` is the pruned radius-2 band at the **step-44 endpoint** (`endpoint.n_band`);
+  it is **46.8–62.6 %** of the full patch (e.g. w7: 644 of 1028). The band grows between
+  the two checkpoints; the earlier "n_band" column conflated them and is corrected here.
+- `placements` is the number of additions validated over the **full replayed trajectory
+  (steps 1–44)** from the fork, **not** only post-jam additions.
+- `prescar(g/f/p)` = geometry / ordered-frontier / PRNG alignment at the top of the jam
+  step. All eleven endpoints are `horizon_complete` (`endpoint_status`), none a
+  `validation_failure`.
 
 ---
 
@@ -113,13 +122,30 @@ that is now **verified directly**, not assumed.
 
 The original reported "0 illegal" from the worker's own in-loop `verify_legal` counter
 and a final evaluator pass. This supplement maintains a **separate evaluator-only
-cumulative patch** (`worker_hist`, an `L.Patch` seeded from the complete pre-scar jam
-patch `Sstar+[B]`) that follows the **worker's own trajectory**. For every worker addition,
-in placement order, it checks frozen `Patch.legal(t)` against that history **before**
-adding it. The worker never consults this history; it exists only in the evaluator. All
-eleven cases validate every placement (440–829 per case) with no failure
-(`independent_legality.all_legal = True`; `first_failure = null`). Had a placement failed,
-the pre-state and placement would be recorded and the run stopped — no corrective veto.
+cumulative patch** (`worker_hist`, an `L.Patch` seeded from the **fork state `Sstar + B`**
+— the fork seed itself, **not** the complete pre-scar jam patch, which is reached only
+later, at the jam step) and **replays** the worker's own trajectory onto it. For every
+worker addition, in placement order, it checks frozen `Patch.legal(t)` against that history
+**before** adding it. The worker never consults this history; it exists only in the
+evaluator. Because the evaluator starts at the fork and replays the whole run, the
+validated counts (**440–829 per case**) span the **entire trajectory, steps 1–44** — the
+pre-jam replay *and* the post-jam scar continuation — not only post-jam additions. All
+eleven cases validate every placement with no failure
+(`independent_legality.all_legal = True`; `first_failure = null`;
+`endpoint_status = "horizon_complete"`).
+
+**Failure handling (implemented, exercised by a regression).** `patient_scar` computes and
+places a whole step's batch into the worker **before** the evaluator validates it; the
+validation is a read-only audit of that already-computed batch and never feeds anything
+back. On the **first** failed `legal(t)` the trial records the step, the batch position,
+the offending tile, the evaluator pre-state (the accepted history's decorated keys), and
+the **unvalidated remainder** of the already-computed batch, then **stops the entire trial
+before the next growth step** — no subsequent `patient_scar` runs, the offending tile and
+the remainder are **not** accepted into history, and the endpoint is marked
+`endpoint_status = "validation_failure"` with `horizon_complete = False` (never reported as
+horizon completion). `test_failstop.py` injects a forced failure (via the test-only
+`_FORCE_ILLEGAL` hook, `None` in every scientific run) and verifies that the trial stops at
+the injected step with no later growth and that the remainder is not accepted.
 
 At the endpoint, the cumulative history is checked independently: every complete (2π)
 vertex carries a valid atlas star (427–586 complete vertices/case, **0** invalid, **0**
@@ -135,13 +161,17 @@ This history validation is kept separate from the comparator history.
   edge — identifies those placements, and validates each against the independent full
   history. For w7 this is exercised (18 scar-adjacent placements, 18/18 legal). Zero
   eligible placements would be reported as "not exercised," not as a positive result.
-- **Deep retained-state check (was: field-name presence).** Beyond confirming the
-  serialized state has exactly the declared fields, the supplement checks that every
-  `boundary` owner tile is a retained band tile; every boundary edge coordinate is a
-  retained vertex; the worker's edge/vertex caches reference only retained tiles after
-  pruning; the frontier exposes no deletion-cavity edge
-  (`{frontier_id(e)} ⊆ full.frontier`); and the serialized **pre-scar** state equals the
-  frozen jam band and shares **no** tile with the deleted interior.
+- **Stronger retained-state check (was: field-name presence).** Beyond confirming the
+  serialized state has exactly the declared fields, the supplement checks, **at the
+  step-44 endpoint**, that every `boundary` owner tile is a retained band tile; every
+  boundary edge coordinate is a retained vertex; the worker's **edge cache**
+  (`skin.edges`) references only retained tiles; the frontier exposes no deletion-cavity
+  edge (`{frontier_id(e)} ⊆ full.frontier`); and the serialized **pre-scar** state equals
+  the frozen jam band and shares **no** tile with the deleted interior. This is a targeted
+  check of the boundary owners/coordinates, the endpoint edge cache, and the listed
+  serialized-state properties — **not** an exhaustive inspection of every cache or of all
+  reachable worker objects after every prune (an expanded metadata audit is out of scope
+  for this supplement).
 - **Current blocked edges vs cumulative scar labels, recorded separately.**
   `current_blocked_edges` counts frontier edges with zero candidates **at step 44**;
   `cumulative_scar_labels` counts edges ever pinned as dormant scars over the run. They
@@ -194,9 +224,12 @@ only) plus exact reproduction, not by the separateness of the process alone.
   neighbourhoods of interior scar components. Proximity to an old scar boundary does **not**
   establish proximity to the advancing outer perimeter; the two are different components of
   the same declared frontier. Retained count stays 47–63 % of the full patch at step 44.
-- **Positive-area readout qualifications retained.** The endpoint geometry is byte-for-byte
-  identical to the original export for all eleven cases (`results/endpoint_geometry.json`:
-  sorted decorated-key lists identical), so the original 528-window readout
+- **Positive-area readout qualifications retained.** The step-44 endpoint band matches the
+  original export for all eleven cases by **equality of the sorted list of decorated tile
+  keys** (`results/endpoint_geometry.json`: `endpoint_sorted_list_identical` and
+  `endpoint_set_identical`). This is a decorated-key-level comparison — it establishes the
+  same set of tiles in the same sorted order — and does **not** itself check raw coordinate
+  bytes or the on-disk serialization order. On that basis the original 528-window readout
   (`results/readout.json`: 111 B / 64 ambiguous / 353 reader-incompatible / 0 A / 0
   failures) is **reused unchanged** rather than recomputed. Its qualifications stand: the
   largest-compatible subset selects B, but the independent box-free check shows the closed
@@ -215,7 +248,7 @@ only) plus exact reproduction, not by the separateness of the process alone.
 | Worker genuinely cannot see the deleted interior; "**separate process receiving only the serialized band**" | **Survives, refined** | True by input contract + exact reproduction; **not** by filesystem isolation. The pre-scar restart now starts from the **actual jam state** (top of the jam step), verified against the frozen checkpoint, and the spawned restart matches both comparators 11/11. |
 | "candidate sets … ordered candidate lists … all match" | **Survives, wording corrected** | The frozen `inventory` sorts candidates, so inventory equality is *set* equality; ordered agreement is now measured directly and reported separately from set agreement. |
 | Band is "**radially thin** (within ~2.7·S of the true frontier)" but "not thin in count (47–63 %)" | **Survives, framing sharpened** | Thinness is distance from the **declared true frontier including blocked scar edges**; it does not imply proximity to the advancing outer perimeter (§3). |
-| Readout "111 B / 64 ambiguous / 353 reader-incompatible / 0 A"; "selects B … not symbolic exclusion of A" | **Survives, reused on identical geometry** | Endpoint geometry is identical to the original export (11/11), so the readout is reused unchanged; the zero-area-segment and conditional-positive-area qualifications stand. |
+| Readout "111 B / 64 ambiguous / 353 reader-incompatible / 0 A"; "selects B … not symbolic exclusion of A" | **Survives, reused on matched geometry** | The step-44 band matches the original export by equality of the sorted decorated-key list (11/11; not a raw-byte or serialization-order check), so the readout is reused unchanged; the zero-area-segment and conditional-positive-area qualifications stand. |
 
 ---
 
@@ -226,13 +259,24 @@ only) plus exact reproduction, not by the separateness of the process alone.
   restart begin at the first scar step. The original control is preserved; this is an
   added, stronger control, not a replacement of recorded results.
 - The endpoint readout is **reused** from the original run rather than recomputed, justified
-  by a documented byte-for-byte endpoint-geometry comparison (`results/endpoint_geometry.json`).
+  by a documented endpoint-geometry comparison — equality of the sorted decorated-tile-key
+  lists, not a raw-byte or serialization-order comparison (`results/endpoint_geometry.json`).
 - No matching rule, reader threshold, scheduler policy, case list, horizon, or frozen file
   was changed. The frozen `active_skin_engine.py` and reader are imported unchanged; all new
   code is in this `supplement_2026-11-04/` directory.
+- **Worker lifecycle across the harnesses.** The main verification worker
+  (`verify_supplement.verify_case`) and the spawned worker (`isolated_worker`) prune the
+  radius-2 band **every step**. The finishing patch restored the same per-step prune in the
+  *uninterrupted-worker comparator* (`restart_prescar.uninterrupted_worker_placements`),
+  which had omitted it. Pruning removes only off-band interior tiles and does not change the
+  frontier, candidates, decisions or placements, so **no restart outcome changed** — but the
+  band that comparator returns is now the genuine radius-2 band. See
+  `FINISHING_PATCH_2026-11-04.md`.
 
 A pointer to this supplement is appended to `protocol/PROTOCOL_DEVIATIONS.md`; the original
 `HANDBACK.md` and `README.md` are preserved with a dated pointer added, not rewritten.
+Corrections made after the initial supplement commit (`102d928`) are logged in
+`FINISHING_PATCH_2026-11-04.md`.
 
 ---
 
@@ -249,10 +293,11 @@ python3 verify_supplement.py    # all 11: ordered+set equivalence, independent l
                                 #   input/prescar_states.json
 python3 restart_prescar.py      # spawned-process restart from the pre-scar state, all 11
                                 #   -> results/prescar_restart.json
-python3 endpoint_geom.py        # endpoint geometry identical to original export, all 11
-                                #   -> results/endpoint_geometry.json
+python3 endpoint_geom.py        # step-44 band == original export by sorted decorated-key
+                                #   list, all 11 -> results/endpoint_geometry.json
 python3 test_supplement.py      # focused corrected tests (ordered+legality, real
-                                #   scar-adjacency, deep retained-state, pre-scar restart)
+                                #   scar-adjacency, retained-state, pre-scar restart)
+python3 test_failstop.py        # failure-stop regression (injected illegal placement)
 ```
 
 Machine-readable outputs: `results/verification.json`, `results/prescar_restart.json`,
@@ -270,9 +315,9 @@ now confirmed at the **ordered** level (candidate enumeration, placements, front
 before and after), with **every** placement independently validated legal against a
 separate full history (no illegal placements, clean vertex stars, no positive-area
 overlaps), and with a **separate-process restart from the actual pre-scar jam state**
-(verified against the frozen checkpoint) matching both comparators. The endpoint geometry
-is identical to the original, so the conditional positive-area readout carries over
-unchanged.
+(verified against the frozen checkpoint) matching both comparators. The step-44 endpoint
+band matches the original export by equality of the sorted decorated-key list, so the
+conditional positive-area readout carries over unchanged.
 
 **Changed.** Only wording and the strength of evidence, never the policy or the results.
 "Exactly, every step" was, in the original harness, a set-level measurement (the frozen

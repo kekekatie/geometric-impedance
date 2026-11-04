@@ -42,6 +42,13 @@ def full_patch_placements(world, si):
 
 
 def uninterrupted_worker_placements(world, si):
+    """Continuously pruned radius-2 band worker, following the SAME lifecycle as the
+    main verification worker (verify_supplement.verify_case) and the spawned worker
+    (isolated_worker._worker_proc): per step, capture the ordered additions, clear the
+    transient addition record, then prune. (Pruning removes only interior tiles off the
+    radius-2 band; it does not alter the frontier, candidates, decisions or placements,
+    so the ordered placement sequence is unchanged -- but the retained band returned
+    here is now the genuine radius-2 band, matching the declared worker.)"""
     forks = AF.RD.load_forks()
     Sstar = forks[world]["Sstar"]; B = forks[world]["cs"][1]
     stream = AF.PC.streams_for(world)[si]
@@ -51,7 +58,10 @@ def uninterrupted_worker_placements(world, si):
     for s in range(1, 45):
         skin.additions = []
         st, n, k, nw, il = SCN.patient_scar(skin, rng, scars, verify_legal=True)
-        per.append((s, [repr(dk(t)) for t in skin.additions]))
+        placed = list(skin.additions)
+        per.append((s, [repr(dk(t)) for t in placed]))
+        skin.additions = []
+        skin.prune()
         if st == "total_arrest":
             break
     return per, list(skin.tris)

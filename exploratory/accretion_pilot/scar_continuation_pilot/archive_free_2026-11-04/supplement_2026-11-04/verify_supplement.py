@@ -44,6 +44,12 @@ import scar_continuation as SCN
 RESULTS = Path(__file__).resolve().parent / "results"
 INPUT = Path(__file__).resolve().parent / "input"
 
+# Test-only injection hook for the failure-stop regression (test_failstop.py). It is
+# None for every scientific run, so it never touches recorded results. When set, it is
+# called as hook(step, batch_position, tile, legal) -> bool and may override the
+# evaluator's legality verdict to exercise the failure-stop path.
+_FORCE_ILLEGAL = None
+
 
 # ---- independent convex clipping (adopted verbatim from audit_2026-11-03/audit_common.py) ----
 def _area(poly):
@@ -120,6 +126,7 @@ def verify_case(world, si):
     ordered_mismatch = None; set_mismatch = None; legality_fail = None
     prescar = None; prescar_state = None
     checked_steps = []; placements_validated = 0
+    growth_steps = 0; validation_failed = False; arrested = False
     for s in range(1, 45):
         if s == jam_step:
             prescar_state = IW.serialize_state(skin, rng_w, scars_w)
@@ -142,6 +149,7 @@ def verify_case(world, si):
         st_w, n_w, k_w, new_w, il_w = SCN.patient_scar(skin, rng_w, scars_w, verify_legal=True)
         placed_w = list(skin.additions); skin.additions = []
         skin.prune()
+        growth_steps += 1
 
         ord_placed = ([dk(t) for t in placed_w] == [dk(t) for t in placed_e])
         ord_front = ([frontier_id(e) for e in skin.frontier()] == [frontier_id(e) for e in full.frontier()])
@@ -158,15 +166,35 @@ def verify_case(world, si):
         if set_mismatch is None and not set_inv:
             set_mismatch = dict(step=s)
 
-        # independent legality of each worker placement vs the worker's cumulative FULL history
-        for t in placed_w:
-            if not worker_hist.legal(t):
-                if legality_fail is None:
-                    legality_fail = dict(step=s, tile=repr(dk(t)))
+        # Independent legality of each worker placement vs the worker's cumulative FULL
+        # history. NOTE: patient_scar above already COMPUTED and placed this step's batch
+        # into the worker (placed_w) BEFORE the evaluator validates it here. Validation is
+        # a read-only audit of that already-computed batch; it never feeds back into the
+        # worker. On the first failure the whole trial stops before the next growth step,
+        # and the unvalidated remainder of the batch is NOT accepted into history.
+        for idx, t in enumerate(placed_w):
+            legal = worker_hist.legal(t)
+            if _FORCE_ILLEGAL is not None:          # test-only injection; None in all scientific runs
+                legal = _FORCE_ILLEGAL(s, idx, t, legal)
+            if not legal:
+                legality_fail = dict(
+                    step=s, batch_position=idx, batch_size=len(placed_w), tile=repr(dk(t)),
+                    # evaluator pre-state sufficient to reproduce: the validated history
+                    # just before the offending add (decorated keys), plus the offending
+                    # candidate and the unaccepted remainder of this already-computed batch.
+                    evaluator_pre_state_keys=sorted(repr(dk(u)) for u in worker_hist.tris),
+                    unvalidated_remainder=[repr(dk(u)) for u in placed_w[idx:]],
+                    note=("worker batch for this step was computed by patient_scar before "
+                          "evaluator validation; the remainder from batch_position onward is "
+                          "NOT accepted as history and the trial stops before the next step"))
+                validation_failed = True
                 break
             worker_hist.add(t); placements_validated += 1
 
+        if validation_failed:
+            break      # stop the entire trial: no subsequent growth step executes
         if st_e == "total_arrest" or st_w == "total_arrest":
+            arrested = True
             break
 
     # endpoint geometry: worker's cumulative construction history + the retained band
@@ -208,9 +236,16 @@ def verify_case(world, si):
         prescar_state_excludes_deleted_interior=state_excludes_deleted,
     )
 
+    endpoint_status = ("validation_failure" if validation_failed
+                       else "total_arrest" if arrested
+                       else "horizon_complete")
+    horizon_complete = (not validation_failed) and (checked_steps[-1] == 44)
     rec = dict(
         case=f"w{world}-B-s{si}", world=world, si=si, jam_step=jam_step,
         steps_checked=[checked_steps[0], checked_steps[-1]],
+        growth_steps_executed=growth_steps,
+        endpoint_status=endpoint_status,
+        horizon_complete=bool(horizon_complete),
         ordered_equivalence=(ordered_mismatch is None),
         ordered_first_mismatch=ordered_mismatch,
         set_inventory_equivalence=(set_mismatch is None),
@@ -240,7 +275,8 @@ def main():
         rec, pre = verify_case(w, si)
         out.append(rec); prestates[f"w{w}-s{si}"] = pre
         p = rec["prescar_alignment"] or {}
-        print(f"   ordered_equiv={rec['ordered_equivalence']} indep_legal={rec['independent_legality']['all_legal']} "
+        print(f"   endpoint={rec['endpoint_status']} (steps={rec['growth_steps_executed']}) "
+              f"ordered_equiv={rec['ordered_equivalence']} indep_legal={rec['independent_legality']['all_legal']} "
               f"({rec['independent_legality']['placements_validated']} placements) "
               f"prescar_align(geom={p.get('geometry_matches_frozen_jam')},front={p.get('ordered_frontier_matches')},"
               f"prng={p.get('prng_matches_evaluator')}) blocked={rec['current_blocked_edges']} "
@@ -249,7 +285,8 @@ def main():
     (RESULTS / "verification.json").write_text(json.dumps(out, indent=2, default=float))
     (INPUT / "prescar_states.json").write_text(json.dumps(prestates, default=float))
     print("\nSUMMARY ordered-equivalent:", sum(c["ordered_equivalence"] for c in out), "/", len(out),
-          "| indep-legal:", sum(c["independent_legality"]["all_legal"] for c in out), "/", len(out))
+          "| indep-legal:", sum(c["independent_legality"]["all_legal"] for c in out), "/", len(out),
+          "| horizon-complete:", sum(c["horizon_complete"] for c in out), "/", len(out))
     print("wrote results/verification.json, input/prescar_states.json")
 
 

@@ -58,7 +58,7 @@ def test_deep_retained_state():
     m = rec()["metadata"]
     check(m["boundary_owner_tiles_in_band"], "boundary owner tiles are retained band tiles")
     check(m["boundary_coords_in_band"], "boundary edge coordinates are retained vertices")
-    check(m["caches_reference_only_retained_tiles"], "worker edge/vertex caches reference only retained tiles after pruning")
+    check(m["caches_reference_only_retained_tiles"], "worker endpoint edge cache (skin.edges) references only retained tiles")
     check(m["cavity_edges_excluded_from_frontier"], "deletion-cavity edges excluded from the construction frontier")
     check(m["serialized_only_declared_fields"], "serialized state has only the declared fields")
     check(m["prescar_state_equals_jam_band"], "pre-scar serialized state equals the frozen jam band")

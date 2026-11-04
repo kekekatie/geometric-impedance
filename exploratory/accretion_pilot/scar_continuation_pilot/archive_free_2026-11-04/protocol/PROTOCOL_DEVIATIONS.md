@@ -34,8 +34,10 @@ Deviations from `PROTOCOL.md`, recorded rather than edited into the original.
   set) equivalence, independent per-placement legality against a separate full history,
   a spawned-process restart from the **actual pre-scar jam state** (top of the jam step,
   before the first scar batch — stronger than the original post-first-batch control), a
-  real scar-adjacency test, a deep retained-state audit, and a byte-for-byte endpoint-
-  geometry comparison justifying reuse of the original readout. No scientific policy
+  real scar-adjacency test, a targeted retained-state audit, and an endpoint-geometry
+  comparison (equality of the sorted decorated-tile-key list) justifying reuse of the
+  original readout. A finishing patch (`FINISHING_PATCH_2026-11-04.md`) then corrected two
+  code defects and several reporting inaccuracies. No scientific policy
   changed; all original results are preserved. Added control, not a replacement.
 
 ## Notes
