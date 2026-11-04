@@ -1,5 +1,15 @@
 # Archive-free scar continuation — 2026-11-04
 
+> **Verification supplement (2026-11-04):** the headline claims below were independently
+> re-run with stronger checks — ordered (not just set) equivalence, independent
+> per-placement legality, a spawned-process restart from the *actual pre-scar jam state*,
+> a real scar-adjacency test, a deep retained-state audit, and an endpoint-geometry
+> comparison justifying readout reuse. All eleven cases pass; every headline survives,
+> with wording sharpened (set vs ordered; isolation by input contract, not filesystem;
+> width as distance from the declared true frontier incl. blocked scar edges). See
+> [`supplement_2026-11-04/SUPPLEMENT_2026-11-04.md`](supplement_2026-11-04/SUPPLEMENT_2026-11-04.md).
+> The results and files below are the preserved originals.
+
 Can a worker retaining **only** the specified boundary band continue legally past
 the recorded jams toward step 44, **without consulting the deleted interior**, and
 how does it compare to the audited full-patch scar scheduler? (Follows the scar

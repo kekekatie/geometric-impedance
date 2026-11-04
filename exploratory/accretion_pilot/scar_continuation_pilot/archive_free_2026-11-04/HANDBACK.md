@@ -7,6 +7,16 @@ frozen file was changed. Branch `claude/scar-archive-free-2026-11-04`, based on 
 audit tip `3dc43ea`; frozen engine/reader `84130b9`. The protocol was committed
 before any new outcomes (`archive_free_2026-11-04/protocol/PROTOCOL.md`).*
 
+> **Verification supplement (2026-11-04):** these claims were independently re-run with
+> stronger checks — see [`supplement_2026-11-04/SUPPLEMENT_2026-11-04.md`](supplement_2026-11-04/SUPPLEMENT_2026-11-04.md).
+> Every headline survives on stronger evidence; wording is sharpened (the frozen
+> `inventory` sorts candidates, so the original "exactly" was a set-level measurement now
+> backed by direct ordered checks; "zero illegal" is now an independent per-placement
+> check; isolation rests on the serialized-state-only input contract plus exact
+> reproduction, not on filesystem inaccessibility; the pre-scar restart now starts before
+> the first scar batch; band width is distance from the declared true frontier including
+> blocked scar edges). This HANDBACK is preserved as the original record.
+
 ## Plain-language summary
 
 **The question.** My earlier scar-continuation pilot grew on the *full* patch and

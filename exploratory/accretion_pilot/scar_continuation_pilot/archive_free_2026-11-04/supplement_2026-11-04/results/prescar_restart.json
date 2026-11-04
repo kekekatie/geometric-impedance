@@ -1,0 +1,145 @@
+[
+  {
+    "case": "w5-B-s0",
+    "jam_step": 42,
+    "steps_run": [
+      42,
+      44
+    ],
+    "n_steps": 3,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 450,
+    "serialized_boundary_edges": 98
+  },
+  {
+    "case": "w7-B-s0",
+    "jam_step": 23,
+    "steps_run": [
+      23,
+      44
+    ],
+    "n_steps": 22,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 315,
+    "serialized_boundary_edges": 73
+  },
+  {
+    "case": "w7-B-s1",
+    "jam_step": 23,
+    "steps_run": [
+      23,
+      44
+    ],
+    "n_steps": 22,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 315,
+    "serialized_boundary_edges": 73
+  },
+  {
+    "case": "w15-B-s0",
+    "jam_step": 39,
+    "steps_run": [
+      39,
+      44
+    ],
+    "n_steps": 6,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 551,
+    "serialized_boundary_edges": 115
+  },
+  {
+    "case": "w19-B-s0",
+    "jam_step": 39,
+    "steps_run": [
+      39,
+      44
+    ],
+    "n_steps": 6,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 551,
+    "serialized_boundary_edges": 115
+  },
+  {
+    "case": "w19-B-s1",
+    "jam_step": 43,
+    "steps_run": [
+      43,
+      44
+    ],
+    "n_steps": 2,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 582,
+    "serialized_boundary_edges": 120
+  },
+  {
+    "case": "w21-B-s0",
+    "jam_step": 42,
+    "steps_run": [
+      42,
+      44
+    ],
+    "n_steps": 3,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 450,
+    "serialized_boundary_edges": 98
+  },
+  {
+    "case": "w21-B-s1",
+    "jam_step": 42,
+    "steps_run": [
+      42,
+      44
+    ],
+    "n_steps": 3,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 450,
+    "serialized_boundary_edges": 98
+  },
+  {
+    "case": "w28-B-s0",
+    "jam_step": 39,
+    "steps_run": [
+      39,
+      44
+    ],
+    "n_steps": 6,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 551,
+    "serialized_boundary_edges": 115
+  },
+  {
+    "case": "w28-B-s1",
+    "jam_step": 43,
+    "steps_run": [
+      43,
+      44
+    ],
+    "n_steps": 2,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 582,
+    "serialized_boundary_edges": 120
+  },
+  {
+    "case": "w29-B-s1",
+    "jam_step": 43,
+    "steps_run": [
+      43,
+      44
+    ],
+    "n_steps": 2,
+    "restart_matches_full_patch": true,
+    "restart_matches_uninterrupted_worker": true,
+    "serialized_band_tiles": 582,
+    "serialized_boundary_edges": 120
+  }
+]

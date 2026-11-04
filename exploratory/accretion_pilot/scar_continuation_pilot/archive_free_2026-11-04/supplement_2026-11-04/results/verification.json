@@ -1,0 +1,728 @@
+[
+  {
+    "case": "w5-B-s0",
+    "world": 5,
+    "si": 0,
+    "jam_step": 42,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 42,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 450,
+      "n_frozen_band": 450
+    },
+    "independent_legality": {
+      "placements_validated": 748,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 427,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 6.938893903907228e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 1741
+      },
+      "band_overlaps": {
+        "max_area": 6.938893903907228e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 959,
+      "n_band": 492
+    },
+    "current_blocked_edges": 5,
+    "cumulative_scar_labels": 2,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 467,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w7-B-s0",
+    "world": 7,
+    "si": 0,
+    "jam_step": 23,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 23,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 315,
+      "n_frozen_band": 315
+    },
+    "independent_legality": {
+      "placements_validated": 829,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 456,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 1.3877787807814457e-16,
+        "positive_area_overlaps": 0,
+        "pairs": 1851
+      },
+      "band_overlaps": {
+        "max_area": 1.3877787807814457e-16,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1028,
+      "n_band": 644
+    },
+    "current_blocked_edges": 12,
+    "cumulative_scar_labels": 12,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 384,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w7-B-s1",
+    "world": 7,
+    "si": 1,
+    "jam_step": 23,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 23,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 315,
+      "n_frozen_band": 315
+    },
+    "independent_legality": {
+      "placements_validated": 829,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 456,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 1.3877787807814457e-16,
+        "positive_area_overlaps": 0,
+        "pairs": 1851
+      },
+      "band_overlaps": {
+        "max_area": 1.3877787807814457e-16,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1028,
+      "n_band": 644
+    },
+    "current_blocked_edges": 12,
+    "cumulative_scar_labels": 12,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 384,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w15-B-s0",
+    "world": 15,
+    "si": 0,
+    "jam_step": 39,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 39,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 551,
+      "n_frozen_band": 551
+    },
+    "independent_legality": {
+      "placements_validated": 440,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 456,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 1876
+      },
+      "band_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1037,
+      "n_band": 597
+    },
+    "current_blocked_edges": 12,
+    "cumulative_scar_labels": 12,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 440,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w19-B-s0",
+    "world": 19,
+    "si": 0,
+    "jam_step": 39,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 39,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 551,
+      "n_frozen_band": 551
+    },
+    "independent_legality": {
+      "placements_validated": 440,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 456,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 1876
+      },
+      "band_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1037,
+      "n_band": 597
+    },
+    "current_blocked_edges": 12,
+    "cumulative_scar_labels": 12,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 440,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w19-B-s1",
+    "world": 19,
+    "si": 1,
+    "jam_step": 43,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 43,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 582,
+      "n_frozen_band": 582
+    },
+    "independent_legality": {
+      "placements_validated": 701,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 586,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 2357
+      },
+      "band_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1298,
+      "n_band": 608
+    },
+    "current_blocked_edges": 4,
+    "cumulative_scar_labels": 4,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 690,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w21-B-s0",
+    "world": 21,
+    "si": 0,
+    "jam_step": 42,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 42,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 450,
+      "n_frozen_band": 450
+    },
+    "independent_legality": {
+      "placements_validated": 748,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 427,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 1741
+      },
+      "band_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 959,
+      "n_band": 492
+    },
+    "current_blocked_edges": 5,
+    "cumulative_scar_labels": 2,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 467,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w21-B-s1",
+    "world": 21,
+    "si": 1,
+    "jam_step": 42,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 42,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 450,
+      "n_frozen_band": 450
+    },
+    "independent_legality": {
+      "placements_validated": 748,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 427,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 1741
+      },
+      "band_overlaps": {
+        "max_area": 5.551115123125783e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 959,
+      "n_band": 492
+    },
+    "current_blocked_edges": 5,
+    "cumulative_scar_labels": 2,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 467,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w28-B-s0",
+    "world": 28,
+    "si": 0,
+    "jam_step": 39,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 39,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 551,
+      "n_frozen_band": 551
+    },
+    "independent_legality": {
+      "placements_validated": 440,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 456,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 2.6107588313450947e-16,
+        "positive_area_overlaps": 0,
+        "pairs": 1876
+      },
+      "band_overlaps": {
+        "max_area": 2.6107588313450947e-16,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1037,
+      "n_band": 597
+    },
+    "current_blocked_edges": 12,
+    "cumulative_scar_labels": 12,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 440,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w28-B-s1",
+    "world": 28,
+    "si": 1,
+    "jam_step": 43,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 43,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 582,
+      "n_frozen_band": 582
+    },
+    "independent_legality": {
+      "placements_validated": 701,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 586,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 1.3530843112619095e-16,
+        "positive_area_overlaps": 0,
+        "pairs": 2357
+      },
+      "band_overlaps": {
+        "max_area": 1.3530843112619095e-16,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1298,
+      "n_band": 608
+    },
+    "current_blocked_edges": 4,
+    "cumulative_scar_labels": 4,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 690,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  },
+  {
+    "case": "w29-B-s1",
+    "world": 29,
+    "si": 1,
+    "jam_step": 43,
+    "steps_checked": [
+      1,
+      44
+    ],
+    "ordered_equivalence": true,
+    "ordered_first_mismatch": null,
+    "set_inventory_equivalence": true,
+    "prescar_alignment": {
+      "step": 43,
+      "geometry_matches_frozen_jam": true,
+      "ordered_frontier_matches": true,
+      "prng_matches_evaluator": true,
+      "scars_empty": true,
+      "n_worker_band": 582,
+      "n_frozen_band": 582
+    },
+    "independent_legality": {
+      "placements_validated": 701,
+      "first_failure": null,
+      "all_legal": true
+    },
+    "endpoint": {
+      "cumulative_history_stars": {
+        "n_complete_vertices": 586,
+        "invalid_complete_stars": 0,
+        "overfull_vertices": 0
+      },
+      "cumulative_history_overlaps": {
+        "max_area": 7.28583859910259e-17,
+        "positive_area_overlaps": 0,
+        "pairs": 2357
+      },
+      "band_overlaps": {
+        "max_area": 7.28583859910259e-17,
+        "positive_area_overlaps": 0
+      },
+      "n_full_tiles": 1298,
+      "n_band": 608
+    },
+    "current_blocked_edges": 4,
+    "cumulative_scar_labels": 4,
+    "metadata": {
+      "boundary_owner_tiles_in_band": true,
+      "boundary_coords_in_band": true,
+      "caches_reference_only_retained_tiles": true,
+      "cavity_edges_excluded_from_frontier": true,
+      "n_deleted_tiles_final": 690,
+      "serialized_fields": [
+        "boundary",
+        "fields",
+        "radius",
+        "rng_state",
+        "scars",
+        "schema",
+        "tiles"
+      ],
+      "serialized_only_declared_fields": true,
+      "prescar_state_equals_jam_band": true,
+      "prescar_state_excludes_deleted_interior": true
+    }
+  }
+]

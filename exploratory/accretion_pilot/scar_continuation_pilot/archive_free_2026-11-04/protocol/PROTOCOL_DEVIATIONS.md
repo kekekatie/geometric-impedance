@@ -27,6 +27,17 @@ Deviations from `PROTOCOL.md`, recorded rather than edited into the original.
   against the audited baseline, kept separate from any ordering control (none was
   needed: no divergence occurred, so historical insertion order was reproduced).
 
+## 2026-11-04 (verification supplement)
+
+- A dated **verification supplement** (`supplement_2026-11-04/SUPPLEMENT_2026-11-04.md`)
+  independently re-runs the headline claims with stronger procedures: ordered (not just
+  set) equivalence, independent per-placement legality against a separate full history,
+  a spawned-process restart from the **actual pre-scar jam state** (top of the jam step,
+  before the first scar batch — stronger than the original post-first-batch control), a
+  real scar-adjacency test, a deep retained-state audit, and a byte-for-byte endpoint-
+  geometry comparison justifying reuse of the original readout. No scientific policy
+  changed; all original results are preserved. Added control, not a replacement.
+
 ## Notes
 
 - No matching rule, reader threshold, scheduler policy, or frozen file was changed.
