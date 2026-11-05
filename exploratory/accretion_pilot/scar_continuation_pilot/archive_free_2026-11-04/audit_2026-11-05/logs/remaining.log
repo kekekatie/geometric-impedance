@@ -1,0 +1,105 @@
+[spawn setup/run] w7-s0
+[restart] w7-s0: from step 23 (22 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w5-s0
+[restart] w5-s0: from step 42 (3 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w7-s1
+[restart] w7-s1: from step 23 (22 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w15-s0
+[restart] w15-s0: from step 39 (6 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w19-s0
+[restart] w19-s0: from step 39 (6 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w19-s1
+[restart] w19-s1: from step 43 (2 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w21-s0
+[restart] w21-s0: from step 42 (3 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w21-s1
+[restart] w21-s1: from step 42 (3 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w28-s0
+[restart] w28-s0: from step 39 (6 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w28-s1
+[restart] w28-s1: from step 43 (2 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[spawn setup/run] w29-s1
+[restart] w29-s1: from step 43 (2 steps) matches_full=True matches_worker=True
+
+SUMMARY restart==full: 1 / 1 | restart==worker: 1 / 1
+wrote results/prescar_restart.json
+[endpoint] w5-s0: now=492 exported=492 set_identical=True sorted_list_identical=True
+[endpoint] w7-s0: now=644 exported=644 set_identical=True sorted_list_identical=True
+[endpoint] w7-s1: now=644 exported=644 set_identical=True sorted_list_identical=True
+[endpoint] w15-s0: now=597 exported=597 set_identical=True sorted_list_identical=True
+[endpoint] w19-s0: now=597 exported=597 set_identical=True sorted_list_identical=True
+[endpoint] w19-s1: now=608 exported=608 set_identical=True sorted_list_identical=True
+[endpoint] w21-s0: now=492 exported=492 set_identical=True sorted_list_identical=True
+[endpoint] w21-s1: now=492 exported=492 set_identical=True sorted_list_identical=True
+[endpoint] w28-s0: now=597 exported=597 set_identical=True sorted_list_identical=True
+[endpoint] w28-s1: now=608 exported=608 set_identical=True sorted_list_identical=True
+[endpoint] w29-s1: now=608 exported=608 set_identical=True sorted_list_identical=True
+
+SUMMARY endpoint geometry unchanged for all cases: True
+  -> readout.json (original experiment) is reused on identical endpoints.
+wrote results/endpoint_geometry.json
+[ordered + legality]
+  PASS ORDERED equivalence (placements, frontier, candidate enumeration, PRNG before+after)
+  PASS set inventory also agrees (kept distinct from ordered)
+  PASS every worker placement legal vs independent full history (829 checked)
+  PASS all complete decorated vertex stars valid; no over-full vertex
+  PASS no positive-area triangle overlaps (max 1.39e-16)
+[scar adjacency, real]
+  PASS scar-adjacency actually exercised (18 placements touch a pinned scar)
+  PASS all scar-adjacent placements legal vs full history (18/18)
+[deep retained state]
+  PASS boundary owner tiles are retained band tiles
+  PASS boundary edge coordinates are retained vertices
+  PASS worker endpoint edge cache (skin.edges) references only retained tiles
+  PASS deletion-cavity edges excluded from the construction frontier
+  PASS serialized state has only the declared fields
+  PASS pre-scar serialized state equals the frozen jam band
+  PASS pre-scar serialized state excludes the deleted interior
+[pre-scar restart]
+  PASS pre-scar state (top of jam step) aligns with frozen jam: geometry, ordered frontier, PRNG, empty scars
+  PASS spawned restart from pre-scar state runs steps 23..44 without error
+  PASS spawned restart reproduces the uninterrupted worker's ordered continuation exactly
+
+ALL SUPPLEMENT CHECKS PASSED.
+[failstop] forced illegal at step 3, batch position 0
+  PASS failure path was exercised (a legal placement was forced illegal)
+  PASS independent_legality.all_legal is False
+  PASS failure record pins the exact step and batch position
+  PASS failure record carries reproducible pre-state, unvalidated remainder, and note
+  PASS endpoint marked 'validation_failure', not horizon completion
+  PASS NO subsequent growth step executed (stopped at step 3, before 44)
+  PASS offending tile is absent from accepted history (not added)
+  PASS unvalidated remainder is absent from accepted history (not accepted)
+
+FAILURE-STOP REGRESSION PASSED.
+Original restart, endpoint and focused tests completed.

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "exploratory/accretion_pilot/scar_continuation_pilot/archive_free_2026-11-04/supplement_2026-11-04/results/verification.json",
+    "bytes_exact": false,
+    "line_endings_normalized_exact": true,
+    "structured_exact": true,
+    "original_sha256": "e88462cf93af57be071c3aef583938ad2dfc5ac0b22f8d98a0ac3860b8415b12",
+    "regenerated_sha256": "67641ecf9ef5497e68b62566efd798897f11948bce5c48a74b0878e4b9840df8",
+    "differences": []
+  },
+  {
+    "file": "exploratory/accretion_pilot/scar_continuation_pilot/archive_free_2026-11-04/supplement_2026-11-04/results/prescar_restart.json",
+    "bytes_exact": false,
+    "line_endings_normalized_exact": true,
+    "structured_exact": true,
+    "original_sha256": "610a44a7ffb9c960ab08ed04f9b71e0c1a986c6d422bd3bb82a582d255530143",
+    "regenerated_sha256": "f2ba6984d409397b5a0ac5836c72de73c2309b5cc2968a520faf7f9a76ff77dc",
+    "differences": []
+  },
+  {
+    "file": "exploratory/accretion_pilot/scar_continuation_pilot/archive_free_2026-11-04/supplement_2026-11-04/results/endpoint_geometry.json",
+    "bytes_exact": false,
+    "line_endings_normalized_exact": true,
+    "structured_exact": true,
+    "original_sha256": "bdd56bf15b78ba128d9e36ef113babed1d0cb89105f5581b10466ba7bb296d70",
+    "regenerated_sha256": "ffb99a80c079f581ef8223aef0f890e6e4405427cbe1d991ae1da80878226a33",
+    "differences": []
+  },
+  {
+    "file": "exploratory/accretion_pilot/scar_continuation_pilot/archive_free_2026-11-04/supplement_2026-11-04/input/prescar_states.json",
+    "bytes_exact": true,
+    "line_endings_normalized_exact": true,
+    "structured_exact": true,
+    "original_sha256": "fc2643a284eee3945e85b5eb38cf4add10f04033f04c44e4f18e843642e8fafc",
+    "regenerated_sha256": "fc2643a284eee3945e85b5eb38cf4add10f04033f04c44e4f18e843642e8fafc",
+    "differences": []
+  }
+]

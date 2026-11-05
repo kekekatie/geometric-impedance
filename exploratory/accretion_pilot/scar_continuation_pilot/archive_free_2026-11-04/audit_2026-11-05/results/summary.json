@@ -1,0 +1,65 @@
+{
+  "cases": 11,
+  "full_replay_steps": 484,
+  "spawned_postjam_steps": 77,
+  "placements_validated": 7325,
+  "all_scientific_outcomes_unchanged": true,
+  "all_checks_passed": true,
+  "final_full_vertices": 6627,
+  "final_band_vertices": 4254,
+  "completed_full_stars": 5319,
+  "max_overlap_area": 2.6107588313450947e-16,
+  "reused_readout_tally": {
+    "empty_incompatible": 353,
+    "correct": 111,
+    "ambiguous": 64
+  },
+  "readout_rerun": false,
+  "max_raw_coordinate_difference": 0.0,
+  "corrected_statuses": [
+    {
+      "case": "w5-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w7-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w7-B-s1",
+      "horizon_complete": true
+    },
+    {
+      "case": "w15-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w19-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w19-B-s1",
+      "horizon_complete": true
+    },
+    {
+      "case": "w21-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w21-B-s1",
+      "horizon_complete": true
+    },
+    {
+      "case": "w28-B-s0",
+      "horizon_complete": true
+    },
+    {
+      "case": "w28-B-s1",
+      "horizon_complete": true
+    },
+    {
+      "case": "w29-B-s1",
+      "horizon_complete": true
+    }
+  ]
+}

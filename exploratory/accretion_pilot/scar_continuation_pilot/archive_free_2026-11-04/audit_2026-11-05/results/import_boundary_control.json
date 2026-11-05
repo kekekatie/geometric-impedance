@@ -1,0 +1,11 @@
+{
+  "summary_reads_replaced": [
+    "C:/Users/Karen/Documents/Codex/2026-11-03/g/work/efp-snapshot/exploratory/accretion_pilot/expansion_front_paper/corner-response-catalogue/results/summary.json"
+  ],
+  "forbidden_stiffness_modules": [
+    "window_retrodiction.STIFF"
+  ],
+  "all_original_worker_messages_exact": true,
+  "steps": 22,
+  "scope": "w7-B-s0 pre-scar restart only; original worker target, summary replaced only at import and lookup subsequently forbidden; no historical replay/fork API calls permitted"
+}

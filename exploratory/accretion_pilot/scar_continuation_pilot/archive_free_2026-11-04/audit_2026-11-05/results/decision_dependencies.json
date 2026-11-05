@@ -1,0 +1,32 @@
+{
+  "Patch.legal": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\soft_zone\\..\\laying_the_tiling\\laying_the_tiling.py",
+    "line": 182,
+    "source": "    def legal(s, t):\n        cen = sum(t[1:]) / 3\n        for u in s.tris:\n            if abs(u[1] - cen) < 3 * SCALE_LEN and (inside(cen, *u[1:]) or any(inside(z, *u[1:]) for z in t[1:])):\n                return False\n        if canon(t) in {canon(u) for u in s.edges.get(frozenset((key(t[1]), key(t[2]))), [])}:\n            return False\n        return all(s.vertex_ok(k, v) for k, v in corners([t]).items())\n"
+  },
+  "Patch.vertex_ok": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\continuation_choices\\..\\soft_zone\\soft_zone.py",
+    "line": 23,
+    "source": "def vertex_ok_fixed(s, k, extra):\n    \"\"\"Corrected version of laying_the_tiling.Patch.vertex_ok. The original wraps each gap between\n    consecutive corners into (-pi, pi], so a gap WIDER than pi (common around holes) was misread as an\n    overlap and a legal partial star was rejected. Here gaps are measured linearly along the sorted start\n    angles, with one explicit wrap-around gap; arcs and complete stars are then checked exactly as before.\"\"\"\n    lst = sorted(s.V[k] + extra); n = len(lst)\n    tot = sum(d for _, d, _ in lst)\n    if tot > 2 * math.pi + 1e-6:\n        return False\n    if abs(tot - 2 * math.pi) < 1e-6:\n        return L.star(lst) in L.STARS\n    gaps = [lst[i][0] - (lst[i - 1][0] + lst[i - 1][1]) for i in range(1, n)]\n    gaps = [lst[0][0] + 2 * math.pi - (lst[-1][0] + lst[-1][1])] + gaps      # gaps[i] = gap before lst[i]\n    if any(g < -1e-6 for g in gaps):\n        return False                                     # genuinely overlapping corners\n    start = next((i for i in range(n) if gaps[i] > 1e-6), None)\n    if start is None:\n        return False\n    seq = lst[start:] + lst[:start]; gs = gaps[start:] + gaps[:start]; arcs = [[seq[0]]]\n    for i in range(1, n):\n        if gs[i] > 1e-6:\n            arcs.append([seq[i]])\n        else:\n            arcs[-1].append(seq[i])\n    return all(tuple(l for _, _, l in arc) in L.ARCS for arc in arcs)\n"
+  },
+  "D.candidates": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\perp_map\\..\\decapod_seed\\decapod_seed.py",
+    "line": 30,
+    "source": "def candidates(P, p, q, r):\n    \"\"\"Patch.candidates, but keeping BOTH decorations of a tile position. laying_the_tiling's version keys its output\n    by canon(), which ignores the A/B/C roles, so the two mirror decorations of an isosceles half-tile at the same place\n    collapse to one (see PREREGISTRATION.md, changes before the first run).\"\"\"\n    out = {}\n    for (c, o), (tc, A, B, C) in L.TEMPL.items():\n        Pp = {\"A\": A, \"B\": B, \"C\": C}\n        for X, Y, Z in ((\"A\", \"B\", \"C\"), (\"B\", \"C\", \"A\"), (\"C\", \"A\", \"B\"), (\"B\", \"A\", \"C\"), (\"C\", \"B\", \"A\"), (\"A\", \"C\", \"B\")):\n            x, y, z = Pp[X], Pp[Y], Pp[Z]\n            if abs(abs(y - x) - abs(q - p)) > 1e-6:\n                continue\n            a = (q - p) / (y - x); zz = p + a * (z - x)\n            if L.orient(p, q, zz) * L.orient(p, q, r) >= 0:\n                continue\n            img = {X: p, Y: q, Z: zz}; nt = (tc, img[\"A\"], img[\"B\"], img[\"C\"])\n            if P.legal(nt):\n                out[dkey(nt)] = nt\n    return list(out.values())\n"
+  },
+  "dk": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\paired-front\\paired_front.py",
+    "line": 42,
+    "source": "dk = lambda t: D.dkey(t)\n"
+  },
+  "ordered": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\cut_direction\\..\\speed_of_now\\speed_of_now.py",
+    "line": 30,
+    "source": "def ordered(cs):\n    return sorted(cs, key=lambda w: (w[0], L.key(w[1]), L.key(w[2]), L.key(w[3])))\n"
+  },
+  "patient_scar": {
+    "file": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\src\\scar_continuation.py",
+    "line": 21,
+    "source": "def patient_scar(P, rng, scars, verify_legal=True):\n    \"\"\"One scar-tolerant slice. `scars` (set of pinned edge-keys) is mutated.\n    Returns (status, n_placed, kind, newly_pinned_list, illegal_count).\n    status in {'ok','total_arrest'}.\"\"\"\n    fr = P.frontier()\n    forced = {}\n    growable = []\n    newly = []\n    illegal = 0\n    for e in fr:\n        ek = ekey(e[0], e[1])\n        if ek in scars:\n            continue\n        cs = D.candidates(P, *e[:3])\n        if not cs:\n            scars.add(ek); newly.append(ek); continue\n        growable.append((e, cs))\n        if len(cs) == 1:\n            forced.setdefault(D.dkey(cs[0]), cs[0])\n    if not growable:\n        return \"total_arrest\", 0, None, newly, illegal\n    if forced:\n        n = 0\n        for t in forced.values():\n            if P.legal(t):\n                P.add(t); n += 1\n            elif verify_legal:\n                pass  # a forced candidate made illegal by a sibling placement is simply skipped (baseline behaviour)\n        return \"ok\", n, \"forced\", newly, illegal\n    e0, cs0 = growable[0]\n    t = rng.choice(ordered(cs0))\n    if verify_legal and not P.legal(t):\n        illegal += 1            # must never happen: candidates come from D.candidates (legal by construction)\n    P.add(t)\n    return \"ok\", 1, \"guess\", newly, illegal\n"
+  }
+}

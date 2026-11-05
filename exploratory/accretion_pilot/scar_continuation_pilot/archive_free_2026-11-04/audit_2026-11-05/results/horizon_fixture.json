@@ -1,0 +1,39 @@
+{
+  "before": {
+    "endpoint_status": "total_arrest",
+    "horizon_complete": true,
+    "growth_steps_executed": 44,
+    "steps_checked": [
+      1,
+      44
+    ]
+  },
+  "after": {
+    "endpoint_status": "total_arrest",
+    "horizon_complete": false,
+    "growth_steps_executed": 44,
+    "steps_checked": [
+      1,
+      44
+    ]
+  },
+  "earlier_arrest": {
+    "endpoint_status": "total_arrest",
+    "horizon_complete": false,
+    "growth_steps_executed": 43,
+    "steps_checked": [
+      1,
+      43
+    ]
+  },
+  "ordinary_loop_completion": {
+    "endpoint_status": "horizon_complete",
+    "horizon_complete": true,
+    "growth_steps_executed": 44,
+    "steps_checked": [
+      1,
+      44
+    ]
+  },
+  "scope": "Status control only; zero-placement synthetic steps do not demonstrate construction progress."
+}

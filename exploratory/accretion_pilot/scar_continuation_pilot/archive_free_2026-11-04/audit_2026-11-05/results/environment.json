@@ -1,0 +1,153 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:10:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.2.6",
+  "scipy": "1.16.0",
+  "matplotlib": "3.10.6",
+  "modules": {
+    "active_skin_engine": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\active_skin_engine.py",
+      "sha256": "1f1b9ee33bb089ba302218593c835b15260a481605fb2d4a9de208f482f9c0b0"
+    },
+    "af_common": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\archive_free_2026-11-04\\src\\af_common.py",
+      "sha256": "d9d598c966deae52e03fe5e362ec779e46f67327c37fd99c06868731d1037827"
+    },
+    "choice_tracking": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\choice_tracking.py",
+      "sha256": "cd4deeb5faa7efbfe581b7e8edc0428a6c8e472cb4c717bda743091c4dc248b1"
+    },
+    "continuation_choices": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\continuation_choices\\continuation_choices.py",
+      "sha256": "5d866bf7bae94bc8a78abca1fd6a17ac4cb32daca63eb197ade0cb9f9ce7626a"
+    },
+    "corner_response": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\corner-response-catalogue\\corner_response.py",
+      "sha256": "e0b872420fdb7572920396543d9ccd0a3407693ca3b9e76377c421239e8601aa"
+    },
+    "cut_direction": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\cut_direction\\cut_direction.py",
+      "sha256": "996d57932395e8583a81dbccdd22ae4fa3eb411b81cc02117f88ebfb24406726"
+    },
+    "decapod_seed": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\decapod_seed\\decapod_seed.py",
+      "sha256": "bccf1eedf4e698ba3f9e6f64fc8994380a79f8d3a7721418b155aaa66c29b8d9"
+    },
+    "endurance_observer": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\endurance_observer.py",
+      "sha256": "6723fc7a05eec6b23e69f3a30be5f22b132287c9ce945b6eff52b2ebfef4ff9f"
+    },
+    "engine_bridge": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\jam_repair_pilot\\src\\engine_bridge.py",
+      "sha256": "a905ece7cec1a092b250a51fbf602dd42cdb334a14de31dd2f630d3bf34c0d09"
+    },
+    "figures": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\figures.py",
+      "sha256": "472397958428d79800c81a98bc7bfd93b066d14b09cd62ba9a288dbdacc79c53"
+    },
+    "fragility": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\fragility\\fragility.py",
+      "sha256": "972c96df3c408dd43b967e8b1d0e12d5b845f1401fea91efe37e03b4c42116e0"
+    },
+    "golden_digits": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\golden_digits\\golden_digits.py",
+      "sha256": "6c9d8263beed8841a565251254e20a352d17c8d7bb49a8bf4ea0ff667320d67c"
+    },
+    "gromit_check": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\gromit_check\\gromit_check.py",
+      "sha256": "ddc65b24b1091f57444238ac3e87b02362f9fa901204d5f13954ac0bac819e30"
+    },
+    "isolated_worker": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\archive_free_2026-11-04\\src\\isolated_worker.py",
+      "sha256": "f1a9a80a872738eb1bbc22948738c1b33da7c01ff7cd13fd8beba9ac95006cc0"
+    },
+    "laying_the_tiling": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\laying_the_tiling\\laying_the_tiling.py",
+      "sha256": "5b9663a24fc9d2c92ee452617961b210414d2ca395fc88c7ca74d1e9ce70cf1e"
+    },
+    "local_deciders": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\local_deciders\\local_deciders.py",
+      "sha256": "905c321edeb094339f2e44c4b0e0549d84bc04b2204229fe4b0007f08e296170"
+    },
+    "local_response": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\local_response.py",
+      "sha256": "20a1fe8a1116d2a2dece33448967d8f2c49ec984f271144710956e52ffecbb75"
+    },
+    "paired_front": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\paired-front\\paired_front.py",
+      "sha256": "aa977e1784ecc76d8a125811e5e35b1d7895ea4b1debd11498a852398a8ed305"
+    },
+    "perp_map": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\perp_map\\perp_map.py",
+      "sha256": "c46fb4379fba27454a134ba0ec33fa613d6c1b6ab57a41e0c75cca59f9c62da1"
+    },
+    "phase4_readout": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\jam_repair_pilot\\src\\phase4_readout.py",
+      "sha256": "3a7152e0ab90be3caf0b241325e7f877b06b82a4b1959f9a683b089aa22f84ac"
+    },
+    "pilot_common": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\jam_repair_pilot\\src\\pilot_common.py",
+      "sha256": "01ba8e39cabc0671c23ed71ff2fabb439bb928d89883c3cdacb5f69e50a7914c"
+    },
+    "ribbons_EXPLORATORY": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\gold_thread\\ribbons_EXPLORATORY.py",
+      "sha256": "b6a144ac3bab498dad4eb0061ee1b43a9820b93cc27c1a137a5fdbbd384748a3"
+    },
+    "scar_common": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\src\\scar_common.py",
+      "sha256": "6191cfa0f6b91188bad554f1ed78594c80fa791819aabb15904d24fc4a48ae29"
+    },
+    "scar_continuation": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\src\\scar_continuation.py",
+      "sha256": "ecea4e5599ea4ac16fad752ac3e7f9424026b5dd3f894b63a22137dffc6aa19a"
+    },
+    "settled_test": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\settled_test\\settled_test.py",
+      "sha256": "6d9b3a4ac9f6e18b696c352ce9d148bf7c0d8c528b292456d75778e316dbbe96"
+    },
+    "shapes_EXPLORATORY": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\golden_digits\\shapes_EXPLORATORY.py",
+      "sha256": "d57545b8040989d134a56343be039361eb825d25ae066eadde915c25a1ff18fb"
+    },
+    "skin_reader": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\archive-free-reader\\skin_reader.py",
+      "sha256": "5c74d9a82e2af3d2da46c220116aa16b3f557fda5af072a8004f37bc95004185"
+    },
+    "slack": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\slack\\slack.py",
+      "sha256": "c628193c2123fadc9ec608acde8352f5171c727feff7c2931ad6b603d4d9c5ce"
+    },
+    "soft_zone": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\soft_zone\\soft_zone.py",
+      "sha256": "dcb1c3e15d237a62ad9dbb77380855a58dde6031ffb677f8328cb69d45fb9970"
+    },
+    "speed_of_now": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\speed_of_now\\speed_of_now.py",
+      "sha256": "f4b8ab5b57ab50414cef1a2c6ce894ba2a05e2d6d1246f7f0e6838acb7a9f245"
+    },
+    "structure_clock": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\structure_clock\\structure_clock.py",
+      "sha256": "75450f301b236a0c1c7880e98425d2ec12f2af83e8e55e9eeff7d4cb85543543"
+    },
+    "thread_influence": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\thread_influence\\thread_influence.py",
+      "sha256": "cc635c6c3cfcd173ecf90f1de533b4f31ecacf223b8d0b1caa11a5544f45f333"
+    },
+    "verify_supplement": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-reproduction\\exploratory\\accretion_pilot\\scar_continuation_pilot\\archive_free_2026-11-04\\supplement_2026-11-04\\verify_supplement.py",
+      "sha256": "ad3c1edfa82865efed270d132f082e439979f4a670f10abf084aaf24fa298695"
+    },
+    "window_cells": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\window_cells\\window_cells.py",
+      "sha256": "66739b87cea23b885cf7691ffefb8e604e434265cc187ac4537798d6f4144954"
+    },
+    "window_retrodiction": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\paired-front\\window_retrodiction.py",
+      "sha256": "0aa8ec53fe7bcfa30262fd9321945999bf88a00eaa995f3e07fdda07c3554306"
+    }
+  },
+  "pinned_commit": "e4a7503b5273dbc1fa72232de5c29b7048672b0d",
+  "frozen_commit": "84130b97f5044197392e72cd53e0e71f81b043f3",
+  "fork_cache_sha256": "b0d8e0d48d4272f943867c0d9c7382423deea88e903080c7a4d09be14a71a879"
+}

@@ -1,0 +1,14 @@
+{
+  "before": {
+    "step": 44,
+    "transient_additions": 829,
+    "deleted_tiles_in_additions": 209
+  },
+  "after": {
+    "step": 44,
+    "transient_additions": 0,
+    "deleted_tiles_in_additions": 0
+  },
+  "raw_endpoint_unchanged": true,
+  "scope": "Diagnostic endpoint helper only; cached real placements replayed to test lifecycle. Main verifier and spawned worker already clear additions."
+}

@@ -239,7 +239,7 @@ def verify_case(world, si):
     endpoint_status = ("validation_failure" if validation_failed
                        else "total_arrest" if arrested
                        else "horizon_complete")
-    horizon_complete = (not validation_failed) and (checked_steps[-1] == 44)
+    horizon_complete = (not validation_failed) and (not arrested) and (checked_steps[-1] == 44)
     rec = dict(
         case=f"w{world}-B-s{si}", world=world, si=si, jam_step=jam_step,
         steps_checked=[checked_steps[0], checked_steps[-1]],

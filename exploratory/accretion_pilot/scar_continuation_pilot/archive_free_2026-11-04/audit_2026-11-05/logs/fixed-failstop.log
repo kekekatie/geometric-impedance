@@ -1,0 +1,11 @@
+[failstop] forced illegal at step 3, batch position 0
+  PASS failure path was exercised (a legal placement was forced illegal)
+  PASS independent_legality.all_legal is False
+  PASS failure record pins the exact step and batch position
+  PASS failure record carries reproducible pre-state, unvalidated remainder, and note
+  PASS endpoint marked 'validation_failure', not horizon completion
+  PASS NO subsequent growth step executed (stopped at step 3, before 44)
+  PASS offending tile is absent from accepted history (not added)
+  PASS unvalidated remainder is absent from accepted history (not accepted)
+
+FAILURE-STOP REGRESSION PASSED.

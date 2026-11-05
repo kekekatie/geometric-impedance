@@ -1,0 +1,90 @@
+[
+  {
+    "case": "w5-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "8a731a6682c731a645953e39a4736bd7d9c47120e82a7812a54b5685112bd2ae",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w7-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "d085f0696c4a01d0fbabc72e7100271bc517c559ebcdc38dbc67044de08df553",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w7-B-s1",
+    "available": true,
+    "baseline_cache_sha256": "3430bd01e4a091482c1927d37ba765aba0930e130bd4906a341ee654997d1e6b",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w15-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "8f8f36a8386a6ad8b1b9c5443fed50cd6b4919c0b6f96720f843e36c0bd7800a",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w19-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "8a86b629bad87e55b576b6ce84f457c598880a501458a883ff82de91eba11b48",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w19-B-s1",
+    "available": true,
+    "baseline_cache_sha256": "22a3981dca54690342f80acd6dce35a3071efcbcd4add47d9c626ac32e6e88b7",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w21-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "2b3445165d780c277f865741dcd44d4b148ce6a87acdf48af8be088e89ec0b9f",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w21-B-s1",
+    "available": true,
+    "baseline_cache_sha256": "0e76698a674526dd64babed5ad96e9b12b014969dd3b5bd4451243cf9b12bd81",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w28-B-s0",
+    "available": true,
+    "baseline_cache_sha256": "9245abd76251efe05385a19a1fb5a49299bf9c715633212fab8a86db950d03b0",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w28-B-s1",
+    "available": true,
+    "baseline_cache_sha256": "c970a67fbdbf6be2a41ba8659d8683d401b535fc54822ded815f9635acb1ad78",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  },
+  {
+    "case": "w29-B-s1",
+    "available": true,
+    "baseline_cache_sha256": "e09f8645b9fed43cacbde9ed55f48bd9b9d754f597cb217f756bb424ad007308",
+    "prng_before_jam_matches": true,
+    "jam_raw_geometry_matches": true,
+    "initial_scars_empty": true
+  }
+]

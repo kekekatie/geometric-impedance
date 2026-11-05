@@ -43,6 +43,7 @@ def worker_final_band(world, si):
     rng = random.Random(stream); scars = set()
     for s in range(1, 45):
         st, n, k, nw, il = SCN.patient_scar(skin, rng, scars, verify_legal=True)
+        skin.additions = []
         skin.prune()
         if st == "total_arrest":
             break
