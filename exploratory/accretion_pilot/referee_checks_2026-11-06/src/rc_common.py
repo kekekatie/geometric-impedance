@@ -139,35 +139,119 @@ def boundary_edges(tiles):
 
 
 def boundary_loops(tiles):
-    """Chain the boundary legs into closed vertex loops. Returns a list of loops,
-    each a list of vertex keys in order (first != last; the loop is cyclic)."""
+    """Trace the band's boundary legs into CLOSED loops by planar face traversal.
+
+    Each boundary leg gives two directed half-edges; each half-edge is walked once.
+    At each vertex the next half-edge is chosen by the smallest counter-clockwise
+    turn from the reversed incoming direction (consistent face tracing), which
+    closes every loop correctly even where the boundary pinches (vertices with >2
+    boundary legs). Returns a list of (loop_vertex_keys, pos); each loop is cyclic
+    (its last vertex connects back to its first by a boundary leg)."""
     bedges = boundary_edges(tiles)
-    adj = collections.defaultdict(list)
     pos = {}
+    out = collections.defaultdict(list)
     for ek, (p, q) in bedges.items():
         kp, kq = L.key(p), L.key(q)
-        adj[kp].append(kq); adj[kq].append(kp)
         pos[kp] = p; pos[kq] = q
-    unused = set(bedges)
+        out[kp].append(kq); out[kq].append(kp)
+    used = set()
     loops = []
-    while unused:
-        ek0 = next(iter(unused))
-        a, b = tuple(ek0)
-        loop = [a, b]
-        unused.discard(ek0)
-        cur, prev = b, a
-        while True:
-            nxts = [w for w in adj[cur] if w != prev and frozenset((cur, w)) in unused]
-            if not nxts:
-                break
-            nxt = nxts[0]
-            unused.discard(frozenset((cur, nxt)))
-            if nxt == loop[0]:
-                break
-            loop.append(nxt)
-            prev, cur = cur, nxt
-        loops.append((loop, pos))
+    for a0 in list(out):
+        for b0 in out[a0]:
+            if (a0, b0) in used:
+                continue
+            loop = [a0]; a, b = a0, b0
+            while (a, b) not in used:
+                used.add((a, b)); loop.append(b)
+                back = cmath.phase(pos[a] - pos[b])          # direction b -> a
+                cand = [c for c in out[b] if c != a] or [a]
+                c = min(cand, key=lambda c: (cmath.phase(pos[c] - pos[b]) - back) % (2 * math.pi))
+                a, b = b, c
+            loops.append((loop[:-1] if loop[-1] == loop[0] else loop, pos))
     return loops
+
+
+# ---------------------------------------------------------------------------
+# mechanical geometry utilities (adjacency, components, arcs, PCA, worm match)
+# ---------------------------------------------------------------------------
+def tile_adjacency(tiles):
+    """Edge adjacency over shared rhombus legs. Returns (adj dict, tmap by dk)."""
+    by_edge = collections.defaultdict(list)
+    tmap = {}
+    for t in tiles:
+        tmap[dk(t)] = t
+        for p, q in ((t[1], t[2]), (t[2], t[3]), (t[3], t[1])):
+            by_edge[frozenset((L.key(p), L.key(q)))].append(dk(t))
+    adj = collections.defaultdict(set)
+    for ts in by_edge.values():
+        for i in range(len(ts)):
+            for j in range(i + 1, len(ts)):
+                adj[ts[i]].add(ts[j]); adj[ts[j]].add(ts[i])
+    return adj, tmap
+
+
+def edge_components(tiles):
+    """Edge-connected components, largest first (ties by sorted key tuple)."""
+    adj, tmap = tile_adjacency(tiles)
+    seen = set(); comps = []
+    for start in sorted(tmap):
+        if start in seen:
+            continue
+        comp = set(); stack = [start]
+        while stack:
+            u = stack.pop()
+            if u in seen:
+                continue
+            seen.add(u); comp.add(u); stack.extend(adj[u] - seen)
+        comps.append([tmap[d] for d in comp])
+    comps.sort(key=lambda c: (-len(c), tuple(sorted(repr(dk(t)) for t in c))))
+    return comps
+
+
+def connected_arc(tiles, seed_dk, K):
+    """Nearest-first BFS arc of exactly K tiles grown from seed over edge adjacency.
+    Returns the list of tiles (len <= K if the component is smaller)."""
+    adj, tmap = tile_adjacency(tiles)
+    if seed_dk not in tmap:
+        return []
+    order = []; seen = {seed_dk}; dq = collections.deque([seed_dk])
+    while dq and len(order) < K:
+        u = dq.popleft(); order.append(tmap[u])
+        for v in sorted(adj[u]):
+            if v not in seen:
+                seen.add(v); dq.append(v)
+    return order
+
+
+def pca_axis_extent(points):
+    """Principal physical axis (complex unit), and (length, width) extents in S units.
+    points: list of complex centroids."""
+    import numpy as np
+    P = np.array([[z.real, z.imag] for z in points])
+    c = P.mean(axis=0); Q = P - c
+    if len(P) < 2:
+        return 1 + 0j, 0.0, 0.0
+    cov = Q.T @ Q / len(P)
+    w, V = np.linalg.eigh(cov)
+    axis = V[:, int(np.argmax(w))]          # principal direction
+    tvec = np.array([-axis[1], axis[0]])
+    s = Q @ axis; t = Q @ tvec
+    length = float((s.max() - s.min()) / S)
+    width = float((t.max() - t.min()) / S)
+    return complex(axis[0], axis[1]), length, width
+
+
+def nearest_worm(axis):
+    """Nearest of the 5 worm directions (mod 180 deg) to a complex axis.
+    Returns (index, residual_degrees)."""
+    ang = math.degrees(cmath.phase(axis)) % 180.0
+    best = None
+    for j, d in enumerate(WORM_DIRS):
+        wa = math.degrees(cmath.phase(d)) % 180.0
+        resid = abs(((ang - wa + 90) % 180) - 90)
+        if best is None or resid < best[1]:
+            best = (j, resid)
+    return best
 
 
 # ---------------------------------------------------------------------------

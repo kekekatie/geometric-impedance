@@ -1,0 +1,2993 @@
+{
+  "summary": {
+    "n_bands": 11,
+    "total_loops": 190,
+    "max_b_perp_abs_all": 0.0,
+    "tolerance": 1e-06,
+    "P3a_held": true
+  },
+  "bands": [
+    {
+      "case": "w5-s0",
+      "world": 5,
+      "n_tiles": 450,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 20,
+          "legs": 20,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 50,
+          "legs": 50,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 28,
+          "legs": 28,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w7-s0",
+      "world": 7,
+      "n_tiles": 315,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 11,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 48,
+          "legs": 48,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w7-s1",
+      "world": 7,
+      "n_tiles": 315,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 11,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 48,
+          "legs": 48,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w15-s0",
+      "world": 15,
+      "n_tiles": 551,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 16,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 132,
+          "legs": 132,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w19-s0",
+      "world": 19,
+      "n_tiles": 551,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 16,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 132,
+          "legs": 132,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w19-s1",
+      "world": 19,
+      "n_tiles": 582,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 82,
+          "legs": 82,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 46,
+          "legs": 46,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 26,
+          "legs": 26,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w21-s0",
+      "world": 21,
+      "n_tiles": 450,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 20,
+          "legs": 20,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 50,
+          "legs": 50,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 28,
+          "legs": 28,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w21-s1",
+      "world": 21,
+      "n_tiles": 450,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 20,
+          "legs": 20,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 50,
+          "legs": 50,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 28,
+          "legs": 28,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w28-s0",
+      "world": 28,
+      "n_tiles": 551,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 16,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 132,
+          "legs": 132,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 18,
+          "legs": 18,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 4,
+          "legs": 4,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w28-s1",
+      "world": 28,
+      "n_tiles": 582,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 82,
+          "legs": 82,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 46,
+          "legs": 46,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 26,
+          "legs": 26,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    },
+    {
+      "case": "w29-s1",
+      "world": 29,
+      "n_tiles": 582,
+      "global_lift_conflicts": 0,
+      "n_boundary_loops": 20,
+      "max_b_perp_abs": 0.0,
+      "max_b_par_abs": 0.0,
+      "n_loops_b_perp_nonzero": 0,
+      "loops": [
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 16,
+          "legs": 16,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 82,
+          "legs": 82,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 46,
+          "legs": 46,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 24,
+          "legs": 24,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 8,
+          "legs": 8,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 6,
+          "legs": 6,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 26,
+          "legs": 26,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 10,
+          "legs": 10,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 14,
+          "legs": 14,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        },
+        {
+          "n_vertices": 2,
+          "legs": 2,
+          "nonleg_steps": 0,
+          "H": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "b_par_abs": 0.0,
+          "b_perp_abs": 0.0,
+          "index_component": 0
+        }
+      ]
+    }
+  ]
+}

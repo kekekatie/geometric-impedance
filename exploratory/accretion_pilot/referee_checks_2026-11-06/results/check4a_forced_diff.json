@@ -1,0 +1,705 @@
+{
+  "summary": {
+    "n_forks": 22,
+    "n_single_strip": 0,
+    "prediction_P4a_threshold": 20,
+    "P4a_held": false
+  },
+  "forks": [
+    {
+      "world": 0,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        71,
+        397
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 40,
+      "n_B_only": 366,
+      "n_diff": 406,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 3,
+      "worm_index": 1,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 90.0,
+      "length_S": 18.317,
+      "width_S": 18.409,
+      "aspect_ratio": 0.995,
+      "component_sizes": [
+        190,
+        108,
+        108
+      ]
+    },
+    {
+      "world": 1,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        683,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 646,
+      "n_B_only": 22,
+      "n_diff": 668,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 3,
+      "axis_residual_deg": 18.0,
+      "axis_angle_deg": 72.0,
+      "length_S": 30.42,
+      "width_S": 17.905,
+      "aspect_ratio": 1.699,
+      "component_sizes": [
+        668
+      ]
+    },
+    {
+      "world": 2,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 1,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 80.17,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 3,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1369,
+        107
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 1302,
+      "n_B_only": 40,
+      "n_diff": 1342,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 2,
+      "axis_residual_deg": 2.44,
+      "axis_angle_deg": 164.44,
+      "length_S": 31.551,
+      "width_S": 31.176,
+      "aspect_ratio": 1.012,
+      "component_sizes": [
+        1342
+      ]
+    },
+    {
+      "world": 5,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        683,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 646,
+      "n_B_only": 22,
+      "n_diff": 668,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 3,
+      "axis_residual_deg": 18.0,
+      "axis_angle_deg": 72.0,
+      "length_S": 30.42,
+      "width_S": 17.905,
+      "aspect_ratio": 1.699,
+      "component_sizes": [
+        668
+      ]
+    },
+    {
+      "world": 7,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1477,
+        23
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 1468,
+      "n_B_only": 14,
+      "n_diff": 1482,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 2,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 162.0,
+      "length_S": 30.716,
+      "width_S": 31.204,
+      "aspect_ratio": 0.984,
+      "component_sizes": [
+        1482
+      ]
+    },
+    {
+      "world": 11,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 4,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 135.83,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 12,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        397,
+        71
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 366,
+      "n_B_only": 40,
+      "n_diff": 406,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 3,
+      "worm_index": 0,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 18.0,
+      "length_S": 18.317,
+      "width_S": 18.409,
+      "aspect_ratio": 0.995,
+      "component_sizes": [
+        190,
+        108,
+        108
+      ]
+    },
+    {
+      "world": 13,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 4,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 135.83,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 15,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        4001,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 3964,
+      "n_B_only": 22,
+      "n_diff": 3986,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 0,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 18.0,
+      "length_S": 50.778,
+      "width_S": 52.541,
+      "aspect_ratio": 0.966,
+      "component_sizes": [
+        3986
+      ]
+    },
+    {
+      "world": 19,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        4001,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 3964,
+      "n_B_only": 22,
+      "n_diff": 3986,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 0,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 18.0,
+      "length_S": 50.778,
+      "width_S": 52.541,
+      "aspect_ratio": 0.966,
+      "component_sizes": [
+        3986
+      ]
+    },
+    {
+      "world": 21,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        683,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 646,
+      "n_B_only": 22,
+      "n_diff": 668,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 3,
+      "axis_residual_deg": 18.0,
+      "axis_angle_deg": 72.0,
+      "length_S": 30.42,
+      "width_S": 17.905,
+      "aspect_ratio": 1.699,
+      "component_sizes": [
+        668
+      ]
+    },
+    {
+      "world": 23,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        289,
+        587
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 222,
+      "n_B_only": 520,
+      "n_diff": 742,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 3,
+      "axis_residual_deg": 0.804,
+      "axis_angle_deg": 53.196,
+      "length_S": 29.06,
+      "width_S": 23.778,
+      "aspect_ratio": 1.222,
+      "component_sizes": [
+        526,
+        216
+      ]
+    },
+    {
+      "world": 25,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1585,
+        781
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 1358,
+      "n_B_only": 554,
+      "n_diff": 1912,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 4,
+      "axis_residual_deg": 0.798,
+      "axis_angle_deg": 126.798,
+      "length_S": 49.211,
+      "width_S": 39.5,
+      "aspect_ratio": 1.246,
+      "component_sizes": [
+        1912
+      ]
+    },
+    {
+      "world": 28,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        4001,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 3964,
+      "n_B_only": 22,
+      "n_diff": 3986,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 0,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 18.0,
+      "length_S": 50.778,
+      "width_S": 52.541,
+      "aspect_ratio": 0.966,
+      "component_sizes": [
+        3986
+      ]
+    },
+    {
+      "world": 29,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        4001,
+        59
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 3964,
+      "n_B_only": 22,
+      "n_diff": 3986,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 0,
+      "axis_residual_deg": 0.0,
+      "axis_angle_deg": 18.0,
+      "length_S": 50.778,
+      "width_S": 52.541,
+      "aspect_ratio": 0.966,
+      "component_sizes": [
+        3986
+      ]
+    },
+    {
+      "world": 30,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        587,
+        289
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 520,
+      "n_B_only": 222,
+      "n_diff": 742,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 0,
+      "axis_residual_deg": 0.804,
+      "axis_angle_deg": 17.196,
+      "length_S": 29.06,
+      "width_S": 23.778,
+      "aspect_ratio": 1.222,
+      "component_sizes": [
+        526,
+        216
+      ]
+    },
+    {
+      "world": 37,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 3,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 44.17,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 39,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 3,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 44.17,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 40,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        107,
+        397
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 40,
+      "n_B_only": 330,
+      "n_diff": 370,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 1,
+      "worm_index": 4,
+      "axis_residual_deg": 12.063,
+      "axis_angle_deg": 138.063,
+      "length_S": 21.407,
+      "width_S": 18.73,
+      "aspect_ratio": 1.143,
+      "component_sizes": [
+        370
+      ]
+    },
+    {
+      "world": 41,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        1079,
+        297
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 852,
+      "n_B_only": 70,
+      "n_diff": 922,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 3,
+      "axis_residual_deg": 9.83,
+      "axis_angle_deg": 44.17,
+      "length_S": 36.505,
+      "width_S": 31.734,
+      "aspect_ratio": 1.15,
+      "component_sizes": [
+        736,
+        186
+      ]
+    },
+    {
+      "world": 46,
+      "closure_status": [
+        "closed",
+        "closed"
+      ],
+      "n_added": [
+        587,
+        289
+      ],
+      "zero_candidate_edges": [
+        0,
+        0
+      ],
+      "n_A_only": 520,
+      "n_B_only": 222,
+      "n_diff": 742,
+      "diff_lift_conflicts": 0,
+      "single_strip": false,
+      "kind": "not_single_strip",
+      "n_components": 2,
+      "worm_index": 0,
+      "axis_residual_deg": 0.804,
+      "axis_angle_deg": 18.804,
+      "length_S": 29.06,
+      "width_S": 23.778,
+      "aspect_ratio": 1.222,
+      "component_sizes": [
+        526,
+        216
+      ]
+    }
+  ]
+}
