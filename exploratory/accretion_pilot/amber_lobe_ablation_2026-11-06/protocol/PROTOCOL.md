@@ -1,0 +1,37 @@
+# Amber-lobe ablation: protocol fixed before outcomes
+
+2026-11-06. Base `41a9952edfbe350abfd9e2807e6cb6871d9f4881`; audited archive-free baseline `19981c2b75a76da1787dfab04cfc1a381ec4d68e`; frozen engine/reader `84130b97f5044197392e72cd53e0e71f81b043f3`. Only this new experiment directory may change. Eleven correlated B-jam labels, existing streams, stop at step 44. No fresh worlds, repair of a failed scientific trial, or horizon extension.
+
+## Primary intervention and timing
+
+Primary radius is 2S. At each pruning point, a retention centre is a true-boundary endpoint belonging to an edge that is **not persistently pinned and currently has at least one frozen legal candidate**, evaluated on the worker's available tiles BEFORE deletion. Keep a tile iff any of its vertices is within radius*S + 1e-12 of one such endpoint. This is the frozen vertex-to-frontier-endpoint distance convention, not distance to an edge segment.
+
+Before initial thinning at the pre-scar checkpoint, perform the scheduler's zero-candidate reconnaissance on that checkpoint's band and permanently tag these dead edges. This is the first scar scan moved before serialization, without any placement or PRNG draw. It prevents deleting a known dead edge's context and then treating it as a fresh growable edge at restart. Record this timing explicitly: initial labels equal the baseline's first scan additions; compare normalized post-step scar sets, not the number newly tagged during the first batch. All later pinning is performed by the unchanged patient_scar scheduler. Newly blocked unlabelled edges are excluded as retention centres when found during pruning but are not silently promoted to persistent labels.
+
+Preserve the incremental true-boundary map, including dormant edges, with endpoint coordinates and the third coordinate defining its occupied side. Set owner-tile references to None throughout; they are not consumed by the scheduler. These oriented edge records are still geometry-bearing metadata and will be counted/disclosed. Never reconstruct the construction frontier from the pruned tile index. Clear transient additions before pruning. No deleted tile list, vertex-star summary, occupancy summary or hypothesis enters the constructor.
+
+A fresh spawned constructor receives only this prepared state, radius and STEP/STOP commands. Its matching rules and scheduler remain frozen. The parent evaluator retains history and baseline traces but sends no choices, corrections or restoration tiles during a scientific trial. Each worker placement is validated before acceptance; first invalid placement stops the trial before another step. Legal divergence may continue to 44 and remains a failed equivalence outcome.
+
+## Fixed comparisons and controls
+
+Start w7-B-s0, then the other ten labels in historical order. Run radii 1, 2, 3 as a fixed **continuation-only** sensitivity (33 trials total). Initial r=3 preparation uses the corresponding radius-3 neighbourhood of the existing full pre-scar checkpoint; it must not pretend that previously discarded r=2 tiles can be recovered during continuation. Preparation is external and explicit. Primary r=2 preparation starts from the audited band. Cache reuse: prior independently executed pre-scar states, full-patch traces and fork cache may be used after hashes/provenance and pinned source identities are recorded.
+
+Per step compare ordered live candidate menus, forced/free outcomes, ordered placements, frontier identities/order, RNG before/after, and post-step scars with the audited full-patch trace. Record first mismatch by category, not just an aggregate flag. Record actual progress and endpoint full-history decorated-star/overlap validation.
+
+Monitor every pinned edge after each prune in the worker and evaluator, without feeding results back. This is a new observational monitoring schedule, not an existing scheduled constructor duty: the frozen scheduler permanently skips pinned edges. Record monitor mismatches separately from construction mismatches. A context-free query on a dormant edge need not remain meaningful after its neighbourhood is deleted.
+
+If monitoring or construction queries differ, retain the first query witness. On evaluator copies only, test restoring deleted tiles within fixed radii 0, 0.5S, 1S, 1.5S, 2S of that query's endpoints. Report the smallest tested successful radius and a deletion-minimal subset for that **single query**, with a cap of 64 tiles/128 subset checks. Do not call it globally cardinality-minimal or sufficient for all future steps. If primary construction diverges, additionally run all eleven cases with fixed scar-neighbourhood radii 0.5, 1, 1.5, 2S added to live-only 2S retention, stopping at the first radius that restores all eleven; at most 44 additional trials. A restored policy is reported separately, never substituted for the primary outcome. If no candidate works, report unresolved rather than broaden the search.
+
+Report actual retained counts/fractions at pre-scar jam, post-step23 where the intervention has begun, and post-step44. Cases whose jam is after 23 have **not started the intervention at step23**; report their unchanged baseline count and mark the experimental value not applicable. Compare to the matching full-patch checkpoint, not to one universal denominator. Include retained metadata coordinates/edges, not just tile percentage.
+
+## Readout: primary radius 2 only
+
+Use the existing 6 centres x 4 half-widths x 11 cases x 2 endpoints = 528 requested windows on the primary thinned jam/final bands. Keep the absolute original jam-notch anchor from the original radius-2 band fixed; use each target band's own centroid, original half-widths pi/8, pi/4, pi/2, 3pi/4 and 1e-12 angular tolerance. Choose the largest edge-connected component, ties by sorted decorated keys, with deterministic key serialization. Score every requested window, including empty/reconstruction failures; use no B-based selection. No extra readout search on radius controls or restoration variants.
+
+Also reproduce the original full-band 528-window grid as the paired baseline; identical frozen-reader payloads may be cached. Open means the native positive-area reader (`1e-9` hypothesis area, `1e-12` F area), not an exact r>0 symbolic predicate. Closed uses the referee check4b LP feasibility convention, including zero-area contacts, its [-50,50] clip bounds and SciPy default feasibility tolerances. Record these numerical conventions explicitly rather than equating them with exact r>=0. Reuse the frozen reader and referee feasibility function unchanged. Preserve reconstruction failures and empty selections as separate categories. If a trial stops early, mark final-window slots unavailable; never present its last state as step44.
+
+Compare A/B/ambiguous/empty/failure counts in both conventions. Native full-band gate must reproduce 111 B, 64 ambiguous, 353 empty, 0 A. Record all A-only witnesses if any; absence of A does not by itself imply retained discrimination if B decisions disappear. No mathematical necessity/sufficiency conclusion beyond tested finite policies; no independent-trials count or continuous-memory claim.
+
+## Deliverables
+
+Protocol commit before outcomes, source/tests, machine-readable traces and witnesses, concise HANDBACK with tables, reproducibility/provenance and one optional descriptive retention figure. Commit and publish the new experiment branch; no merge or force-push. Preserve all frozen scar/referee files.
