@@ -10,6 +10,97 @@ again.*
 
 ---
 
+## 🔭 To pursue soon: the Atlas of Jams (seed for "Paper 2")
+
+*Added 2026-11-06, from a Katie × Argon brainstorm (toned down a notch, the ideas kept intact),
+cross-checked against Fable's referee checks (`claude/referee-checks-2026-11-06`) and the
+jam-compatibility / cooperative-rearrangement work. Read in two layers: **grounded** = what the
+frozen engine and our checks actually showed; **speculative** = the physics bridge to pursue,
+explicitly not established.*
+
+**The one-line idea.** Treat the ways a quasiperiodic growth frontier can **jam** as a
+*taxonomy* — a "periodic table of jams" — classified by the geometry of the 5-D acceptance
+window, instead of treating "it jams" as one undifferentiated event.
+
+**Two phrasings worth keeping verbatim:**
+- *"The particle families are the window facets."*
+- *"Create an Atlas of Jams: how many distinct, mathematically unique ways can it jam?"*
+
+### Grounded (what we can already stand on)
+
+- **Jams are empty-F events, and emptiness has witnesses.** The reader's compatibility region F
+  is an intersection of convex half-plane constraints (window facets across layer-ranks). By
+  **Helly's theorem**, when F goes empty there is a *minimal* conflicting subset of those
+  constraints — a "Helly witness". So jams genuinely fall into discrete combinatorial classes by
+  *which* facets and layer-ranks collide; that part is a theorem, not a wish. *(Caveat: the
+  reader's F is 2-D, where Helly caps the minimal witness at 3; the full construction window is
+  higher-dimensional, so the witness size in the real jam needs its own careful count before any
+  "3 or 4 facets" claim.)*
+- **The sleeve is a smooth ramp, not a worm and not a wall.** From Fable's checks: **0/22** forks
+  are 1-D Conway worms (Check 4a — the A/B forced-consequence difference is a 2-D region, aspect
+  ≈ 1), **0/11** jammed bands show sharp domain-wall steps (Check 3b — the perpendicular offset
+  x⊥(θ) drifts around the ring as a smooth continuous ramp), and loop holonomy b⊥ = 0 on all 190
+  boundary loops (Check 3a — no topological defect).
+- **"Never A" is robust.** 0 A-selections on any B-committed case across **1,274** local arcs
+  under both reader conventions (Check 4b). Keep it as an empirical regularity of this
+  reader/convention, and keep "selects B" separate from "excludes A".
+- **The w7 obstruction has a measured footprint** (from the jam-compatibility / cooperative-
+  rearrangement work, "Check 1"): a minimum repair footprint of ≈41 tiles in ~10 pieces spanning
+  ~12.5 edges, with a small number of star defects and a reported witness separation.
+  *(Re-verify the exact numbers from those results files before a paper uses them.)*
+
+### Speculative — the physics bridge to pursue (NOT established)
+
+A conjectural dictionary from jam-geometry to particle-like properties. Record as a program, not
+a result:
+
+- **Family / species ← Helly-witness signature.** Which window facets and which layer-ranks lock
+  against each other → discrete "families" of jams, built from the window geometry with zero free
+  parameters.
+- **Mass ← phason-strain *density* (steepness of the sleeve), not detour length.** *(Argon's
+  correction, to stay consistent with the March "Compton, not de Broglie" result: a heavier
+  particle has a* smaller *spatial footprint, λ_C ∝ 1/m. So mass should track how steep and
+  tightly-wound the ramp is within a compact radius — high strain density = high impedance = high
+  mass = tiny footprint — the opposite of "heavy = wider detour".)*
+- **Charge / spin ← chirality and multi-layer winding of the smooth phason ramp** — which way x⊥
+  sweeps across the facets as you walk the ring, plus the orientation of an opposed witness pair.
+  *(Argon's correction: build the "twist" on the chiral ramp Fable found, not the Conway worm he
+  ruled out.)*
+- **Decay / half-life ← exit route from an append-only jam.** Under append-only growth F only
+  shrinks, so a jam never self-unzips; two distinct exits: (i) cooperative simultaneous release
+  of the whole witness set (exponentially harder as strain/mass grows), or (ii) "open-flavor"
+  splitting — growing fresh legal vacuum between opposed scar pockets so one jam becomes two
+  daughter lobes.
+
+### Proposed shape
+
+- **Paper 1 (grounded, close to ready):** under-determined choices wind smooth tension sleeves
+  (11/11 ramps) that pin localized scars, continue growing on a razor-thin 1S live skin
+  (Astra's 33/33 radius ablation — *reported, pending push; see below*), and carry a robust
+  historical identity (0 false calls across the arc scans).
+- **Paper 2 (the Atlas):** classify the discrete species of jams by Helly-witness signature,
+  strain-density / footprint (the impedance/"mass" axis), chiral ramp orientation (the
+  charge/spin "twist"), and split-vs-cooperative-release threshold (the two decay channels).
+  Dworkin–Shieh (1995) proved deceptions *exist*; nobody has catalogued the combinatorial
+  *species* of jams.
+
+### Concrete first steps when we pick this up
+
+1. Re-verify the w7 witness numbers from the jam-compatibility results files.
+2. Over the 11 jams (and more forks) extract each jam's Helly-witness set (facets + layer-ranks)
+   and cluster them → a first draft of the "families".
+3. Measure ramp chirality (sign of the x⊥ winding) per jam from the Check-3b profiles already
+   saved under `referee_checks_2026-11-06/results/`.
+4. Define a strain-density measure (ramp steepness per unit footprint) and test whether it
+   separates the families.
+
+*Provenance: Katie × Argon brainstorm, 2026-11-06. Grounded against `claude/referee-checks-2026-11-06`
+(Fable) and the jam-compatibility / cooperative-rearrangement audits. Astra's radius-ablation
+("amber-lobe": 1S/2S/3S continuation, reported 33/33, w7 band 644→485) is **not yet on GitHub** —
+its publish step was interrupted by a usage limit, so those numbers are unverified here.*
+
+---
+
 ## The big maps: start here
 
 | what | branch | path |
