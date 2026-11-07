@@ -1,0 +1,98 @@
+{
+  "case": "w28-B-s1",
+  "world": 28,
+  "si": 1,
+  "radius": 3,
+  "collar": 0,
+  "jam_step": 43,
+  "initial_retention": {
+    "dropped": 516,
+    "live_centres_edges": 118,
+    "retained": 712,
+    "metadata_edges": 120,
+    "metadata_coordinates": 151,
+    "metadata_coordinates_outside_tiles": 0
+  },
+  "initial_full": 1228,
+  "initial_full_band": 582,
+  "completed": true,
+  "equivalent": true,
+  "first_differences": {},
+  "validation_failure": null,
+  "endpoint_complete_stars": {
+    "n_complete_vertices": 586,
+    "invalid_complete_stars": 0,
+    "overfull_vertices": 0
+  },
+  "endpoint_invalid_partial_or_complete": 0,
+  "overlaps": {
+    "test_pairs": 2357,
+    "max_intersection_area": 1.3530843112619095e-16,
+    "positive_area_overlaps": [],
+    "area_tolerance": 1e-12
+  },
+  "full_band_step44": 608,
+  "full_patch_step44": 1298,
+  "full_band_step23": 463,
+  "full_patch_step23": 717,
+  "step23_intervention_started": false,
+  "monitor_witness": null,
+  "rows": [
+    {
+      "step": 43,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 34,
+      "status": "ok",
+      "n_full": 1262,
+      "retained": 720,
+      "fraction": 0.5705229793977813,
+      "retention": {
+        "dropped": 26,
+        "live_centres_edges": 116,
+        "retained": 720,
+        "metadata_edges": 120,
+        "metadata_coordinates": 155,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 2,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 44,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 36,
+      "status": "ok",
+      "n_full": 1298,
+      "retained": 725,
+      "fraction": 0.5585516178736518,
+      "retention": {
+        "dropped": 31,
+        "live_centres_edges": 124,
+        "retained": 725,
+        "metadata_edges": 128,
+        "metadata_coordinates": 164,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 4,
+      "monitor_mismatches": 0
+    }
+  ]
+}

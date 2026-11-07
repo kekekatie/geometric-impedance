@@ -1,0 +1,16 @@
+{
+  "target_commit": "804542e41fbdddecb5a3003fe730d91bd7f24dc8",
+  "frozen_commit": "84130b97f5044197392e72cd53e0e71f81b043f3",
+  "all_eight_phases_exit_zero": true,
+  "comparison_exact": true,
+  "independent_query_passed": true,
+  "inventory_passed": true,
+  "source_sha256": {
+    "compare.py": "162e2289895d1eba7c23b4bd9ee1f7bdf8903217a532117c5697eb77d4fb17b5",
+    "execute.py": "90a734acb31212c318760657fb0d3d95a4a1f5314fcb2c485e35109c58f29015",
+    "independent_query.py": "d58bd4503500f22a7b79470379b9eef284430da90ad0017107e3f60e79aed0c3",
+    "inventory.py": "e2f42248b434df07eb93a9c50e0c43344b776e8f14573c9b74f66b229aebfbdd",
+    "launch.ps1": "68623dd2a4f257ef61389ede33943a0f2168cf4c5db86492c3a213e17c7ae84e",
+    "run.py": "d9b960b5cf462e31e6b51e8da338a6a334a1023e1620bd430041aedeb4808cef"
+  }
+}

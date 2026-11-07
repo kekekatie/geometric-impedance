@@ -1,0 +1,73 @@
+{
+  "python": "3.12.16 (main, Oct 26 2026, 14:10:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.16.0",
+    "matplotlib": "3.10.6"
+  },
+  "modules": {
+    "engine": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\soft_zone\\..\\laying_the_tiling\\laying_the_tiling.py",
+      "sha256": "5b9663a24fc9d2c92ee452617961b210414d2ca395fc88c7ca74d1e9ce70cf1e"
+    },
+    "candidates": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\perp_map\\..\\decapod_seed\\decapod_seed.py",
+      "sha256": "bccf1eedf4e698ba3f9e6f64fc8994380a79f8d3a7721418b155aaa66c29b8d9"
+    },
+    "active_skin": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\active_skin_engine.py",
+      "sha256": "1f1b9ee33bb089ba302218593c835b15260a481605fb2d4a9de208f482f9c0b0"
+    },
+    "scheduler": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\amber-audit\\exploratory\\accretion_pilot\\scar_continuation_pilot\\src\\scar_continuation.py",
+      "sha256": "ecea4e5599ea4ac16fad752ac3e7f9424026b5dd3f894b63a22137dffc6aa19a"
+    },
+    "adapter": {
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\amber-audit\\exploratory\\accretion_pilot\\jam_repair_pilot\\src\\phase4_readout.py",
+      "sha256": "3a7152e0ab90be3caf0b241325e7f877b06b82a4b1959f9a683b089aa22f84ac"
+    }
+  },
+  "input_hashes": {
+    "jam-5-0.pkl": "53a24e775151cae2ace9ee3b9cabdeb0ac7bf844455366c4500cf65e80776466",
+    "verify-5-0.pkl": "631ae4ad9fccc6774ad2b673da609a14a669d27d6067a62c880dad529ba93fd5",
+    "trace-5-0.pkl": "627ad45be09c16512c3b99986eaf50a70e59c5c99f9e7dad5f72db07a55a2b07",
+    "jam-7-0.pkl": "00432648644545d3312228cbe36c2329f8a5db9fa8655bccfb87eaef0ff77cce",
+    "verify-7-0.pkl": "50b30f7ec97d0cf77225985a8e3284323d17c75d0a3d806bc78b8311ff20b9b7",
+    "trace-7-0.pkl": "0efb9955bc33b0612403674e88f0eb762507bcb5fcdd1cd4f86c84c81b2b64f2",
+    "jam-7-1.pkl": "2475897a49143fa67d760c5d4731e743d0fcf8ea8c5b5f2b980046cf5daa7141",
+    "verify-7-1.pkl": "d6420fdb7463c840f593044a99b4d09121a669507486f6ef35e0007216fb619a",
+    "trace-7-1.pkl": "3c550e0be861107796a300b7397fc9967e1f66ed85b0f2b463dbdbe5c7a2f036",
+    "jam-15-0.pkl": "623097ae95048cdb1967d0a69f861a02f1fda6a36bee7d1e1111f50ceb652393",
+    "verify-15-0.pkl": "9a45ec54c92b7b9a2fd0e10ba41181af86f996365b8377941ba99c48323144ec",
+    "trace-15-0.pkl": "48195d6ad4695fdc74468e79558eba5878596ed939b08817075530c0b91a0e2c",
+    "jam-19-0.pkl": "524e1b33499acac175f9e6b14e497ffaec046d0d0500ca379f4c8d26feb4062a",
+    "verify-19-0.pkl": "749cbbe029c2f35473e495faea0db90d316c09787efb4d9d625e149c1f91fff4",
+    "trace-19-0.pkl": "8000851889f10211bde8c29dea9acb5e1a4ea5ee5694369add1ccfba7b7cb2d4",
+    "jam-19-1.pkl": "65aee04db0549be8b7f81819f5ce2b7dc3a8796b7837a47680556c4d7ea20389",
+    "verify-19-1.pkl": "a7027010037d9a0986820b27eb02addc6974513cefca1908a8d4dc6132be23c1",
+    "trace-19-1.pkl": "49a1baa89459e192ef2cc1416c149ab3cef320d5ef8318caa7245f3ff0196fcf",
+    "jam-21-0.pkl": "bdf5b6a5c123bc14ea753209ea50cedb714cb7e4a1083db185c83359a2a28614",
+    "verify-21-0.pkl": "9c973f22796c969edf1029864e3ede9e66d2833a4d5fadc0ff8049d13005108a",
+    "trace-21-0.pkl": "e45afdfbc789cc687f3cea765f6b8e28a48618a8370c9d4ecc3c7f29cfdc5dd6",
+    "jam-21-1.pkl": "3853d84cdc2b5f5e712c4869281affc95c263fc9ae25a390ee7b05a642fdef8e",
+    "verify-21-1.pkl": "3084e00f06e4fd9d3370e762c742ab67ebda8e9b430c933ea330f738ba21984d",
+    "trace-21-1.pkl": "b906544d9fe0a0e1fcf9ea1300895f974260d87c2e2cfa8f5df3b1e0138d60f8",
+    "jam-28-0.pkl": "dd1b6b7abf9343ca629b28e184f4b9479fe1f08baf8f2cf4ea878d8dd615c986",
+    "verify-28-0.pkl": "24124d0c8db01de65b825555c556dc18804306fafbc29039a5a6d000391bce32",
+    "trace-28-0.pkl": "e72e6b7843379343daff70ec8220b18ed7e72b0d1712f54cf8fa23f7ab6cbde8",
+    "jam-28-1.pkl": "7767c8f11657da8ef590885c7e7e01b72eec06b3e9bd5ecfd50d5dec4c1e365d",
+    "verify-28-1.pkl": "1406e521d9d5f4b051195ca9eed3c9f70ad456c972777ccd9c6185ca6d336146",
+    "trace-28-1.pkl": "9384d6c5f0418fa1b1464d905305f4bce7e1cd7585a591dcb0e12c20a65c4fab",
+    "jam-29-1.pkl": "9f77094adbbdd42cdf61ef2d595e921ffe8cf0afdb49d148a7f54fc180e0945d",
+    "verify-29-1.pkl": "1eb2b6c84bf05fbcc81363b230bc05945e34057fe2fcbb20bcd0d1649a02c95a",
+    "trace-29-1.pkl": "be3904cbd39fbe5a0f762969a31e6186d1a8cd435513ef4afcabf430c06101e7"
+  },
+  "env": {
+    "EFP_SNAPSHOT": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper",
+    "AMBER_BASE_CACHE": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\archive-free-cache",
+    "AMBER_CACHE": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\amber-audit-cache",
+    "AMBER_FORK_CACHE": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-audit\\exploratory\\accretion_pilot\\jam_repair_pilot\\results\\baseline\\forks.pkl"
+  },
+  "all_passed": true
+}

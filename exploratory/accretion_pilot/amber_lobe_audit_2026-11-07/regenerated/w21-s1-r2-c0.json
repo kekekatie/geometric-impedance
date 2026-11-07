@@ -1,0 +1,126 @@
+{
+  "case": "w21-B-s1",
+  "world": 21,
+  "si": 1,
+  "radius": 2,
+  "collar": 0,
+  "jam_step": 42,
+  "initial_retention": {
+    "dropped": 6,
+    "live_centres_edges": 96,
+    "retained": 444,
+    "metadata_edges": 98,
+    "metadata_coordinates": 122,
+    "metadata_coordinates_outside_tiles": 0
+  },
+  "initial_full": 846,
+  "initial_full_band": 450,
+  "completed": true,
+  "equivalent": true,
+  "first_differences": {},
+  "validation_failure": null,
+  "endpoint_complete_stars": {
+    "n_complete_vertices": 427,
+    "invalid_complete_stars": 0,
+    "overfull_vertices": 0
+  },
+  "endpoint_invalid_partial_or_complete": 0,
+  "overlaps": {
+    "test_pairs": 1741,
+    "max_intersection_area": 5.551115123125783e-17,
+    "positive_area_overlaps": [],
+    "area_tolerance": 1e-12
+  },
+  "full_band_step44": 492,
+  "full_patch_step44": 959,
+  "full_band_step23": 272,
+  "full_patch_step23": 330,
+  "step23_intervention_started": false,
+  "monitor_witness": null,
+  "rows": [
+    {
+      "step": 42,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 34,
+      "status": "ok",
+      "n_full": 880,
+      "retained": 446,
+      "fraction": 0.5068181818181818,
+      "retention": {
+        "dropped": 32,
+        "live_centres_edges": 90,
+        "retained": 446,
+        "metadata_edges": 92,
+        "metadata_coordinates": 122,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 2,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 43,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 35,
+      "status": "ok",
+      "n_full": 915,
+      "retained": 469,
+      "fraction": 0.512568306010929,
+      "retention": {
+        "dropped": 12,
+        "live_centres_edges": 103,
+        "retained": 469,
+        "metadata_edges": 105,
+        "metadata_coordinates": 127,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 2,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 44,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 44,
+      "status": "ok",
+      "n_full": 959,
+      "retained": 479,
+      "fraction": 0.4994786235662148,
+      "retention": {
+        "dropped": 34,
+        "live_centres_edges": 102,
+        "retained": 479,
+        "metadata_edges": 107,
+        "metadata_coordinates": 137,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 2,
+      "monitor_mismatches": 0
+    }
+  ]
+}

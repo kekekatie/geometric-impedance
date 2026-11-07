@@ -1,0 +1,59 @@
+{
+  "trials": 33,
+  "by_radius": {
+    "1": {
+      "n": 11,
+      "equivalent": 11
+    },
+    "2": {
+      "n": 11,
+      "equivalent": 11
+    },
+    "3": {
+      "n": 11,
+      "equivalent": 11
+    }
+  },
+  "readout": {
+    "full_band": {
+      "open": {
+        "empty_incompatible": 353,
+        "B": 111,
+        "ambiguous": 64,
+        "A": 0,
+        "empty_selection": 0,
+        "unreconstructible": 0,
+        "unavailable": 0
+      },
+      "closed": {
+        "empty_incompatible": 348,
+        "ambiguous": 94,
+        "B": 86,
+        "A": 0,
+        "empty_selection": 0,
+        "unreconstructible": 0,
+        "unavailable": 0
+      }
+    },
+    "live_only": {
+      "open": {
+        "empty_incompatible": 330,
+        "B": 131,
+        "ambiguous": 67,
+        "A": 0,
+        "empty_selection": 0,
+        "unreconstructible": 0,
+        "unavailable": 0
+      },
+      "closed": {
+        "empty_incompatible": 324,
+        "B": 89,
+        "ambiguous": 115,
+        "A": 0,
+        "empty_selection": 0,
+        "unreconstructible": 0,
+        "unavailable": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "compared_files": 59,
+  "differences": [],
+  "all_structural_and_numeric_values_exact": true,
+  "tolerance_applied_to_comparison": null,
+  "trials": 33,
+  "steps": 231,
+  "validated_placements": 6771,
+  "largest_overlap_residual": 2.6107588313450947e-16,
+  "reader_tallies": {
+    "full_band": {
+      "open": {
+        "empty_incompatible": 353,
+        "ambiguous": 64,
+        "B": 111
+      },
+      "closed": {
+        "empty_incompatible": 348,
+        "ambiguous": 94,
+        "B": 86
+      }
+    },
+    "live_only": {
+      "open": {
+        "empty_incompatible": 330,
+        "ambiguous": 67,
+        "B": 131
+      },
+      "closed": {
+        "empty_incompatible": 324,
+        "ambiguous": 115,
+        "B": 89
+      }
+    }
+  },
+  "provenance_note": "Original and regenerated provenance differ in isolated-worktree module paths; hashes and versions checked separately.",
+  "all_passed": true
+}

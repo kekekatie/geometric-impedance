@@ -1,0 +1,41 @@
+{
+  "first_mismatch_step": 35,
+  "queries_checked_through_first_mismatch": 120,
+  "edge": "[(0.628274, -0.079527), (0.640786, -0.062306)]",
+  "reduced_menu": [
+    "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+  ],
+  "full_history_menu": [],
+  "one_tile_restored_menu": [],
+  "no_context_fails": true,
+  "one_tile_is_deleted_full_history_tile": true,
+  "one_tile_count_minimal_for_this_query": true,
+  "independently_derived_corner": [
+    {
+      "vertex": [
+        0.640786,
+        -0.062306
+      ],
+      "arcs": [
+        [
+          4.712388980384679,
+          0.6283185307179586,
+          [
+            0,
+            "A",
+            false
+          ]
+        ]
+      ]
+    }
+  ],
+  "vertex_only_menu": [],
+  "vertex_only_preserves_tiles_and_edges": true,
+  "diagnostic_next_step": 36,
+  "scheduler_calls": 87,
+  "pinned_edges_queried": 0,
+  "next_step_placements_equal": true,
+  "constructor_received_no_restoration": true,
+  "scope": "First primary w7-s0 scar query only; no global or future minimality assertion.",
+  "all_passed": true
+}

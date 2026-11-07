@@ -1,0 +1,107 @@
+{
+  "replay": "w7-s0 primary2 through44; unchanged constructor with observing pipe stand-in",
+  "frames": [
+    {
+      "step": 35,
+      "worker_local_names": [
+        "P",
+        "before",
+        "calls",
+        "capture",
+        "cmd",
+        "collar",
+        "collections",
+        "conn",
+        "meta",
+        "monitors",
+        "original",
+        "pinned",
+        "placed",
+        "rb",
+        "result",
+        "rng"
+      ],
+      "patch_attributes": [
+        "V",
+        "additions",
+        "boundary",
+        "edges",
+        "radius",
+        "tris"
+      ],
+      "tiles": 419,
+      "edge_index": 705,
+      "vertex_index": 285,
+      "boundary_edges": 99,
+      "boundary_coordinates": 133,
+      "boundary_coordinates_outside_tiles": 2,
+      "all_boundary_owners_none": true,
+      "rebuilt_indexes_exact": true,
+      "scar_labels": 12,
+      "input_state_deleted": true,
+      "transient_placed_tiles": 30,
+      "transient_placed_not_retained": 0,
+      "transient_candidate_keys": 134,
+      "transient_candidate_keys_not_retained": 94,
+      "transient_monitor_keys": 8,
+      "transient_monitor_keys_not_retained": 8
+    },
+    {
+      "step": 44,
+      "worker_local_names": [
+        "P",
+        "before",
+        "calls",
+        "capture",
+        "cmd",
+        "collar",
+        "collections",
+        "conn",
+        "meta",
+        "monitors",
+        "original",
+        "pinned",
+        "placed",
+        "rb",
+        "result",
+        "rng"
+      ],
+      "patch_attributes": [
+        "V",
+        "additions",
+        "boundary",
+        "edges",
+        "radius",
+        "tris"
+      ],
+      "tiles": 485,
+      "edge_index": 812,
+      "vertex_index": 327,
+      "boundary_edges": 114,
+      "boundary_coordinates": 153,
+      "boundary_coordinates_outside_tiles": 20,
+      "all_boundary_owners_none": true,
+      "rebuilt_indexes_exact": true,
+      "scar_labels": 12,
+      "input_state_deleted": true,
+      "transient_placed_tiles": 35,
+      "transient_placed_not_retained": 0,
+      "transient_candidate_keys": 155,
+      "transient_candidate_keys_not_retained": 112,
+      "transient_monitor_keys": 96,
+      "transient_monitor_keys_not_retained": 96
+    }
+  ],
+  "runtime_file_opens": [],
+  "static_reference_tiles": 15970,
+  "historical_stiffness_globals": [
+    {
+      "module": "window_retrodiction",
+      "path": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\efp-snapshot\\exploratory\\accretion_pilot\\expansion_front_paper\\paired-front\\window_retrodiction.py",
+      "type": "dict",
+      "size": 175
+    }
+  ],
+  "limits": "In-process observation of the unchanged constructor, not an operating-system access sandbox. Imports precede runtime file-open observation. Transient telemetry persists in worker locals until overwritten; it is not consulted by the next scheduling step.",
+  "all_passed": true
+}

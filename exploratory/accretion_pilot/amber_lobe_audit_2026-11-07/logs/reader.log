@@ -1,0 +1,46 @@
+reader full_band 5 0 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader full_band 5 0 final {'empty_incompatible': 17, 'B': 7}
+reader full_band 7 0 jam {'empty_incompatible': 17, 'B': 5, 'ambiguous': 2}
+reader full_band 7 0 final {'empty_incompatible': 17, 'B': 7}
+reader full_band 7 1 jam {'empty_incompatible': 17, 'B': 5, 'ambiguous': 2}
+reader full_band 7 1 final {'empty_incompatible': 17, 'B': 7}
+reader full_band 15 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader full_band 15 0 final {'empty_incompatible': 13, 'ambiguous': 8, 'B': 3}
+reader full_band 19 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader full_band 19 0 final {'empty_incompatible': 13, 'ambiguous': 8, 'B': 3}
+reader full_band 19 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader full_band 19 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader full_band 21 0 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader full_band 21 0 final {'empty_incompatible': 17, 'B': 7}
+reader full_band 21 1 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader full_band 21 1 final {'empty_incompatible': 17, 'B': 7}
+reader full_band 28 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader full_band 28 0 final {'empty_incompatible': 13, 'ambiguous': 8, 'B': 3}
+reader full_band 28 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader full_band 28 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader full_band 29 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader full_band 29 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+Native baseline gate passed.
+reader live_only 7 0 jam {'empty_incompatible': 17, 'B': 5, 'ambiguous': 2}
+reader live_only 7 0 final {'empty_incompatible': 16, 'B': 8}
+reader live_only 5 0 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader live_only 5 0 final {'empty_incompatible': 17, 'B': 7}
+reader live_only 7 1 jam {'empty_incompatible': 17, 'B': 5, 'ambiguous': 2}
+reader live_only 7 1 final {'empty_incompatible': 16, 'B': 8}
+reader live_only 15 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader live_only 15 0 final {'empty_incompatible': 6, 'B': 9, 'ambiguous': 9}
+reader live_only 19 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader live_only 19 0 final {'empty_incompatible': 6, 'B': 9, 'ambiguous': 9}
+reader live_only 19 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader live_only 19 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader live_only 21 0 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader live_only 21 0 final {'empty_incompatible': 17, 'B': 7}
+reader live_only 21 1 jam {'empty_incompatible': 18, 'B': 5, 'ambiguous': 1}
+reader live_only 21 1 final {'empty_incompatible': 17, 'B': 7}
+reader live_only 28 0 jam {'empty_incompatible': 13, 'ambiguous': 9, 'B': 2}
+reader live_only 28 0 final {'empty_incompatible': 6, 'B': 9, 'ambiguous': 9}
+reader live_only 28 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader live_only 28 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader live_only 29 1 jam {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+reader live_only 29 1 final {'empty_incompatible': 17, 'B': 6, 'ambiguous': 1}
+{"full_band": {"open": {"empty_incompatible": 353, "B": 111, "ambiguous": 64}, "closed": {"empty_incompatible": 348, "ambiguous": 94, "B": 86}}, "live_only": {"open": {"empty_incompatible": 330, "B": 131, "ambiguous": 67}, "closed": {"empty_incompatible": 324, "B": 89, "ambiguous": 115}}}

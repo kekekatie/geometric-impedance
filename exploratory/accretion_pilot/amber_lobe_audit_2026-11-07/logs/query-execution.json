@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+    "-u",
+    "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\amber-audit\\exploratory\\accretion_pilot\\amber_lobe_audit_2026-11-07\\src\\run.py",
+    "query"
+  ],
+  "start_utc": "2026-11-07T06:21:52.420443+00:00",
+  "end_utc": "2026-11-07T06:21:59.707023+00:00",
+  "exit_code": 0
+}
