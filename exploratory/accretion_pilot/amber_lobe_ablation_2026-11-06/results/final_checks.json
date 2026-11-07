@@ -1,0 +1,13 @@
+{
+  "all_passed": true,
+  "trials": 33,
+  "trials_per_radius": {
+    "1": 11,
+    "2": 11,
+    "3": 11
+  },
+  "steps": 231,
+  "validated_placements": 6771,
+  "largest_overlap_residual": 2.6107588313450947e-16,
+  "reader_windows_per_band_and_convention": 528
+}

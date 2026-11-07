@@ -1,0 +1,286 @@
+{
+  "case": "w28-B-s0",
+  "world": 28,
+  "si": 0,
+  "radius": 1,
+  "collar": 0,
+  "jam_step": 39,
+  "initial_retention": {
+    "dropped": 150,
+    "live_centres_edges": 113,
+    "retained": 401,
+    "metadata_edges": 115,
+    "metadata_coordinates": 141,
+    "metadata_coordinates_outside_tiles": 0
+  },
+  "initial_full": 875,
+  "initial_full_band": 551,
+  "completed": true,
+  "equivalent": true,
+  "first_differences": {
+    "scar_monitor": {
+      "step": 42,
+      "queries": [
+        {
+          "edge": "[(0.489517, 0.124612), (0.502029, 0.107391)]",
+          "worker": [
+            "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+          ],
+          "evaluator": []
+        },
+        {
+          "edge": "[(0.489517, 0.124612), (0.502029, 0.141833)]",
+          "worker": [
+            "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+          ],
+          "evaluator": []
+        }
+      ]
+    }
+  },
+  "validation_failure": null,
+  "endpoint_complete_stars": {
+    "n_complete_vertices": 456,
+    "invalid_complete_stars": 0,
+    "overfull_vertices": 0
+  },
+  "endpoint_invalid_partial_or_complete": 0,
+  "overlaps": {
+    "test_pairs": 1876,
+    "max_intersection_area": 2.6107588313450947e-16,
+    "positive_area_overlaps": [],
+    "area_tolerance": 1e-12
+  },
+  "full_band_step44": 597,
+  "full_patch_step44": 1037,
+  "full_band_step23": 434,
+  "full_patch_step23": 678,
+  "step23_intervention_started": false,
+  "monitor_witness": {
+    "step": 42,
+    "edge": "frozenset({(0.489517, 0.124612), (0.502029, 0.107391)})",
+    "expected": [],
+    "without_restoration": [
+      "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+    ],
+    "radii": [
+      {
+        "radius": 0,
+        "added_tiles": 7,
+        "matches": true
+      },
+      {
+        "radius": 0.5,
+        "added_tiles": 7,
+        "matches": true
+      },
+      {
+        "radius": 1,
+        "added_tiles": 17,
+        "matches": true
+      },
+      {
+        "radius": 1.5,
+        "added_tiles": 17,
+        "matches": true
+      },
+      {
+        "radius": 2,
+        "added_tiles": 29,
+        "matches": true
+      }
+    ],
+    "minimal": {
+      "n_tiles": 1,
+      "tiles": [
+        [
+          0,
+          [
+            0.502028539715572,
+            0.10739087062379372
+          ],
+          [
+            0.5145402754614334,
+            0.1246117974981098
+          ],
+          [
+            0.5020285397155724,
+            0.12867710687600153
+          ]
+        ]
+      ],
+      "subset_checks": 7,
+      "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+    }
+  },
+  "rows": [
+    {
+      "step": 39,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 22,
+      "status": "ok",
+      "n_full": 897,
+      "retained": 409,
+      "fraction": 0.4559643255295429,
+      "retention": {
+        "dropped": 14,
+        "live_centres_edges": 113,
+        "retained": 409,
+        "metadata_edges": 117,
+        "metadata_coordinates": 148,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 2,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 40,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 22,
+      "status": "ok",
+      "n_full": 919,
+      "retained": 414,
+      "fraction": 0.4504896626768226,
+      "retention": {
+        "dropped": 17,
+        "live_centres_edges": 113,
+        "retained": 414,
+        "metadata_edges": 117,
+        "metadata_coordinates": 154,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 4,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 41,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 25,
+      "status": "ok",
+      "n_full": 944,
+      "retained": 413,
+      "fraction": 0.4375,
+      "retention": {
+        "dropped": 26,
+        "live_centres_edges": 117,
+        "retained": 413,
+        "metadata_edges": 122,
+        "metadata_coordinates": 160,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 4,
+      "monitor_mismatches": 0
+    },
+    {
+      "step": 42,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 30,
+      "status": "ok",
+      "n_full": 974,
+      "retained": 409,
+      "fraction": 0.419917864476386,
+      "retention": {
+        "dropped": 34,
+        "live_centres_edges": 115,
+        "retained": 409,
+        "metadata_edges": 124,
+        "metadata_coordinates": 161,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 5,
+      "monitor_mismatches": 2
+    },
+    {
+      "step": 43,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 32,
+      "status": "ok",
+      "n_full": 1006,
+      "retained": 401,
+      "fraction": 0.3986083499005964,
+      "retention": {
+        "dropped": 40,
+        "live_centres_edges": 110,
+        "retained": 401,
+        "metadata_edges": 122,
+        "metadata_coordinates": 159,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 9,
+      "monitor_mismatches": 4
+    },
+    {
+      "step": 44,
+      "checks": {
+        "live_candidate_enumeration": true,
+        "outcome": true,
+        "ordered_placements": true,
+        "frontier_before": true,
+        "frontier_after": true,
+        "rng_before": true,
+        "rng_after": true,
+        "scars": true
+      },
+      "placed": 31,
+      "status": "ok",
+      "n_full": 1037,
+      "retained": 405,
+      "fraction": 0.390549662487946,
+      "retention": {
+        "dropped": 27,
+        "live_centres_edges": 115,
+        "retained": 405,
+        "metadata_edges": 127,
+        "metadata_coordinates": 160,
+        "metadata_coordinates_outside_tiles": 0
+      },
+      "scar_labels": 12,
+      "monitor_mismatches": 4
+    }
+  ]
+}

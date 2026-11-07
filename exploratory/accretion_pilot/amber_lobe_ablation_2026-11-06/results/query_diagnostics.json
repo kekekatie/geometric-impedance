@@ -1,0 +1,776 @@
+[
+  {
+    "case": "w15-B-s0",
+    "radius": 1,
+    "kind": "scar_monitor",
+    "step": 42,
+    "witness": {
+      "step": 42,
+      "edge": "frozenset({(0.489517, 0.124612), (0.502029, 0.107391)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.5020285397155693,
+              0.10739087062379196
+            ],
+            [
+              0.5145402754614307,
+              0.12461179749810838
+            ],
+            [
+              0.5020285397155694,
+              0.12867710687600004
+            ]
+          ]
+        ],
+        "subset_checks": 7,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.502029,
+          0.107391
+        ],
+        "arcs": [
+          [
+            0.9424777960769347,
+            0.6283185307179567,
+            [
+              0,
+              "A",
+              true
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 10,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w19-B-s0",
+    "radius": 1,
+    "kind": "scar_monitor",
+    "step": 42,
+    "witness": {
+      "step": 42,
+      "edge": "frozenset({(0.489517, 0.124612), (0.502029, 0.107391)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.5020285397155687,
+              0.10739087062379066
+            ],
+            [
+              0.5145402754614301,
+              0.12461179749810708
+            ],
+            [
+              0.5020285397155688,
+              0.12867710687599873
+            ]
+          ]
+        ],
+        "subset_checks": 7,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.502029,
+          0.107391
+        ],
+        "arcs": [
+          [
+            0.9424777960769347,
+            0.6283185307179567,
+            [
+              0,
+              "A",
+              true
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 10,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w28-B-s0",
+    "radius": 1,
+    "kind": "scar_monitor",
+    "step": 42,
+    "witness": {
+      "step": 42,
+      "edge": "frozenset({(0.489517, 0.124612), (0.502029, 0.107391)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.502028539715572,
+              0.10739087062379372
+            ],
+            [
+              0.5145402754614334,
+              0.1246117974981098
+            ],
+            [
+              0.5020285397155724,
+              0.12867710687600153
+            ]
+          ]
+        ],
+        "subset_checks": 7,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.502029,
+          0.107391
+        ],
+        "arcs": [
+          [
+            0.9424777960769252,
+            0.6283185307179558,
+            [
+              0,
+              "A",
+              true
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 10,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s0",
+    "radius": 1,
+    "kind": "scar_monitor",
+    "step": 26,
+    "witness": {
+      "step": 26,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 7,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 10,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s0",
+    "radius": 2,
+    "kind": "scar_monitor",
+    "step": 35,
+    "witness": {
+      "step": 35,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 6,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 9,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s0",
+    "radius": 3,
+    "kind": "scar_monitor",
+    "step": 37,
+    "witness": {
+      "step": 37,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 27,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 6,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 9,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s1",
+    "radius": 1,
+    "kind": "scar_monitor",
+    "step": 26,
+    "witness": {
+      "step": 26,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 7,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 17,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 7,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 10,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s1",
+    "radius": 2,
+    "kind": "scar_monitor",
+    "step": 35,
+    "witness": {
+      "step": 35,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 29,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 6,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 9,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  },
+  {
+    "case": "w7-B-s1",
+    "radius": 3,
+    "kind": "scar_monitor",
+    "step": 37,
+    "witness": {
+      "step": 37,
+      "edge": "frozenset({(0.640786, -0.062306), (0.628274, -0.079527)})",
+      "expected": [],
+      "without_restoration": [
+        "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+      ],
+      "radii": [
+        {
+          "radius": 0,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 0.5,
+          "added_tiles": 6,
+          "matches": true
+        },
+        {
+          "radius": 1,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 1.5,
+          "added_tiles": 16,
+          "matches": true
+        },
+        {
+          "radius": 2,
+          "added_tiles": 27,
+          "matches": true
+        }
+      ],
+      "minimal": {
+        "n_tiles": 1,
+        "tiles": [
+          [
+            0,
+            [
+              0.6407858154284567,
+              -0.0623058987490523
+            ],
+            [
+              0.6532975511743178,
+              -0.07952682562336877
+            ],
+            [
+              0.6407858154284565,
+              -0.08359213500126031
+            ]
+          ]
+        ],
+        "subset_checks": 6,
+        "scope": "one-pass deletion-minimal for this single observed query; not cardinality-minimal or a global continuation guarantee"
+      }
+    },
+    "single_deletion_minimal_verified": true,
+    "vertex_summary_only_suffices": true,
+    "vertex_summary": [
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "arcs": [
+          [
+            4.712388980384679,
+            0.6283185307179586,
+            [
+              0,
+              "A",
+              false
+            ]
+          ]
+        ]
+      }
+    ],
+    "diagnostic_checks": 9,
+    "scope": "This first query only; summary never supplied to construction. No global minimality claim."
+  }
+]

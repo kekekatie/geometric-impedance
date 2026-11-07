@@ -1,0 +1,7 @@
+{
+  "all_dormant_deletes_all_tiles": true,
+  "pinned_edges_never_queried": true,
+  "cold_restore_preserves_true_frontier": true,
+  "cavity_edges_not_promoted": 30,
+  "all_passed": true
+}
