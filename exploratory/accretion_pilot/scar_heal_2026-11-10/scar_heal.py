@@ -281,6 +281,7 @@ def run(outpath):
         onet = run_one_tile(cp, HORIZON)
         requ = run_skinarm('REQUERY', cp, HORIZON)
         skip44 = next((rw['scars'] for rw in skip['rows'] if rw['step'] == PAPER_N), skip['rows'][-1]['scars'])
+        skip_horizon = skip['rows'][-1]['scars'] if skip['rows'] else None
         healN = heal['rows'][-1]['scars'] if heal['rows'] else None
         # identity readout on HEAL final band at horizon
         heal_readout = readout_grid(cp, [IW.dtile(t) for t in heal['final_band']])
@@ -289,10 +290,11 @@ def run(outpath):
         for step in sorted(set(skip['placements']) | set(heal['placements'])):
             if skip['placements'].get(step) != heal['placements'].get(step):
                 div = step; break
-        cls = classify(heal, skip44, HORIZON)
+        cls = classify(heal, skip_horizon, HORIZON)
         rec = dict(case=f'w{w}-s{si}-r{r}', world=w, si=si, radius=r, scar_edge=AF.frontier_id(cp['e']),
                    candidate_c=repr(dk(cp['c'])), horizon=HORIZON, paper_checkpoint=PAPER_N,
-                   skip_scars_at44=skip44, null_equals_skip=(null['placements'] == skip['placements']),
+                   skip_scars_at44=skip44, skip_scars_at_horizon=skip_horizon,
+                   null_equals_skip=(null['placements'] == skip['placements']),
                    heal=dict({k: v for k, v in heal.items() if k not in ('placements', 'final_band', 'rows')},
                              ledger_scars=[[rw['step'], rw['scars']] for rw in heal['rows']],
                              heal_scars_at_horizon=healN, identity_readout=heal_readout, first_divergence=div),

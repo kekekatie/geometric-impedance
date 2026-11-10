@@ -1,0 +1,2483 @@
+{
+  "summary": {
+    "primary": "w7-s0-r2",
+    "declared_class": "A. Heals",
+    "horizon": 60,
+    "paper_checkpoint": 44,
+    "skip_reproduced": true,
+    "note": "group-3 labelled separately; correlated replicates"
+  },
+  "cases": [
+    {
+      "case": "w7-s0-r2",
+      "world": 7,
+      "si": 0,
+      "radius": 2,
+      "scar_edge": "[(0.628274, -0.079527), (0.640786, -0.062306)]",
+      "candidate_c": "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 14,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 36,
+        "closure_step": 36,
+        "arrest_step": null,
+        "scars0": 12,
+        "scars_final": 13,
+        "new_scars_within_3S": [],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 3.141593,
+            "degree": 5,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.769911,
+            "degree": 4,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [
+          {
+            "step": 36,
+            "F_area": 0.036622488415521764
+          },
+          {
+            "step": 37,
+            "F_area": 0.036622488415521764
+          },
+          {
+            "step": 38,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 39,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 40,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 41,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 42,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 43,
+            "F_area": 0.03662248841552174
+          },
+          {
+            "step": 44,
+            "F_area": 0.03662248841552071
+          },
+          {
+            "step": 45,
+            "F_area": 0.059256431008913396
+          },
+          {
+            "step": 46,
+            "F_area": 0.059256431008913396
+          },
+          {
+            "step": 47,
+            "F_area": 0.059256431008913396
+          },
+          {
+            "step": 48,
+            "F_area": 0.05925643100891137
+          },
+          {
+            "step": 49,
+            "F_area": 0.05925643100891137
+          },
+          {
+            "step": 50,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 51,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 52,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 53,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 54,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 55,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 56,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 57,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 58,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 59,
+            "F_area": 0.05925643100891165
+          },
+          {
+            "step": 60,
+            "F_area": 0.05925643100891165
+          }
+        ],
+        "ledger_scars": [
+          [
+            36,
+            11
+          ],
+          [
+            37,
+            11
+          ],
+          [
+            38,
+            11
+          ],
+          [
+            39,
+            11
+          ],
+          [
+            40,
+            11
+          ],
+          [
+            41,
+            11
+          ],
+          [
+            42,
+            11
+          ],
+          [
+            43,
+            11
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            45,
+            11
+          ],
+          [
+            46,
+            11
+          ],
+          [
+            47,
+            11
+          ],
+          [
+            48,
+            11
+          ],
+          [
+            49,
+            11
+          ],
+          [
+            50,
+            11
+          ],
+          [
+            51,
+            11
+          ],
+          [
+            52,
+            11
+          ],
+          [
+            53,
+            11
+          ],
+          [
+            54,
+            11
+          ],
+          [
+            55,
+            11
+          ],
+          [
+            56,
+            11
+          ],
+          [
+            57,
+            11
+          ],
+          [
+            58,
+            11
+          ],
+          [
+            59,
+            11
+          ],
+          [
+            60,
+            13
+          ]
+        ],
+        "heal_scars_at_horizon": 13,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 19,
+            "B": 5
+          },
+          "closed": {
+            "empty_incompatible": 19,
+            "ambiguous": 2,
+            "B": 3
+          },
+          "A_calls": []
+        },
+        "first_divergence": 36
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.640786, -0.062306), (0.653298, -0.079527), (0.640786, -0.083592))",
+        "evaluator_menu": [
+          "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 36,
+        "closure_step": 36,
+        "arrest_step": null,
+        "scars_final": 16,
+        "new_scars_within_3S": [
+          {
+            "step": 37,
+            "distance": 0.01643
+          },
+          {
+            "step": 37,
+            "distance": 0.01064
+          },
+          {
+            "step": 37,
+            "distance": 0.01251
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 20,
+        "closure_step": 36,
+        "arrest_step": null,
+        "c_placed_step": 36,
+        "ledger_scars": [
+          [
+            36,
+            8
+          ],
+          [
+            37,
+            4
+          ],
+          [
+            38,
+            4
+          ],
+          [
+            39,
+            5
+          ],
+          [
+            40,
+            6
+          ],
+          [
+            41,
+            6
+          ],
+          [
+            42,
+            6
+          ],
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            13
+          ],
+          [
+            50,
+            14
+          ],
+          [
+            51,
+            14
+          ],
+          [
+            52,
+            16
+          ],
+          [
+            53,
+            18
+          ],
+          [
+            54,
+            18
+          ],
+          [
+            55,
+            18
+          ],
+          [
+            56,
+            18
+          ],
+          [
+            57,
+            18
+          ],
+          [
+            58,
+            18
+          ],
+          [
+            59,
+            18
+          ],
+          [
+            60,
+            20
+          ]
+        ]
+      },
+      "declared_class": "A. Heals"
+    },
+    {
+      "case": "w7-s1-r2",
+      "world": 7,
+      "si": 1,
+      "radius": 2,
+      "scar_edge": "[(0.628274, -0.079527), (0.640786, -0.062306)]",
+      "candidate_c": "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 14,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 36,
+        "closure_step": 36,
+        "arrest_step": null,
+        "scars0": 12,
+        "scars_final": 13,
+        "new_scars_within_3S": [],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 3.141593,
+            "degree": 5,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.769911,
+            "degree": 4,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            36,
+            11
+          ],
+          [
+            37,
+            11
+          ],
+          [
+            38,
+            11
+          ],
+          [
+            39,
+            11
+          ],
+          [
+            40,
+            11
+          ],
+          [
+            41,
+            11
+          ],
+          [
+            42,
+            11
+          ],
+          [
+            43,
+            11
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            45,
+            11
+          ],
+          [
+            46,
+            11
+          ],
+          [
+            47,
+            11
+          ],
+          [
+            48,
+            11
+          ],
+          [
+            49,
+            11
+          ],
+          [
+            50,
+            11
+          ],
+          [
+            51,
+            11
+          ],
+          [
+            52,
+            11
+          ],
+          [
+            53,
+            11
+          ],
+          [
+            54,
+            11
+          ],
+          [
+            55,
+            11
+          ],
+          [
+            56,
+            11
+          ],
+          [
+            57,
+            11
+          ],
+          [
+            58,
+            11
+          ],
+          [
+            59,
+            11
+          ],
+          [
+            60,
+            13
+          ]
+        ],
+        "heal_scars_at_horizon": 13,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 19,
+            "B": 5
+          },
+          "closed": {
+            "empty_incompatible": 19,
+            "ambiguous": 2,
+            "B": 3
+          },
+          "A_calls": []
+        },
+        "first_divergence": 36
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.640786, -0.062306), (0.653298, -0.079527), (0.640786, -0.083592))",
+        "evaluator_menu": [
+          "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 36,
+        "closure_step": 36,
+        "arrest_step": null,
+        "scars_final": 16,
+        "new_scars_within_3S": [
+          {
+            "step": 37,
+            "distance": 0.01643
+          },
+          {
+            "step": 37,
+            "distance": 0.01064
+          },
+          {
+            "step": 37,
+            "distance": 0.01251
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 20,
+        "closure_step": 36,
+        "arrest_step": null,
+        "c_placed_step": 36,
+        "ledger_scars": [
+          [
+            36,
+            8
+          ],
+          [
+            37,
+            4
+          ],
+          [
+            38,
+            4
+          ],
+          [
+            39,
+            5
+          ],
+          [
+            40,
+            6
+          ],
+          [
+            41,
+            6
+          ],
+          [
+            42,
+            6
+          ],
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            13
+          ],
+          [
+            50,
+            14
+          ],
+          [
+            51,
+            14
+          ],
+          [
+            52,
+            16
+          ],
+          [
+            53,
+            18
+          ],
+          [
+            54,
+            18
+          ],
+          [
+            55,
+            18
+          ],
+          [
+            56,
+            18
+          ],
+          [
+            57,
+            18
+          ],
+          [
+            58,
+            18
+          ],
+          [
+            59,
+            18
+          ],
+          [
+            60,
+            20
+          ]
+        ]
+      },
+      "declared_class": "A. Heals"
+    },
+    {
+      "case": "w7-s0-r1",
+      "world": 7,
+      "si": 0,
+      "radius": 1,
+      "scar_edge": "[(0.628274, -0.079527), (0.640786, -0.062306)]",
+      "candidate_c": "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 14,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 27,
+        "closure_step": 27,
+        "arrest_step": null,
+        "scars0": 5,
+        "scars_final": 14,
+        "new_scars_within_3S": [
+          {
+            "step": 27,
+            "distance": 0.04049
+          },
+          {
+            "step": 27,
+            "distance": 0.02469
+          },
+          {
+            "step": 27,
+            "distance": 0.03701
+          },
+          {
+            "step": 28,
+            "distance": 0.01064
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            27,
+            8
+          ],
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ],
+          [
+            30,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            32,
+            12
+          ],
+          [
+            33,
+            12
+          ],
+          [
+            34,
+            12
+          ],
+          [
+            35,
+            12
+          ],
+          [
+            36,
+            12
+          ],
+          [
+            37,
+            12
+          ],
+          [
+            38,
+            12
+          ],
+          [
+            39,
+            12
+          ],
+          [
+            40,
+            12
+          ],
+          [
+            41,
+            12
+          ],
+          [
+            42,
+            12
+          ],
+          [
+            43,
+            12
+          ],
+          [
+            44,
+            12
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            50,
+            12
+          ],
+          [
+            51,
+            12
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            53,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            55,
+            12
+          ],
+          [
+            56,
+            12
+          ],
+          [
+            57,
+            12
+          ],
+          [
+            58,
+            12
+          ],
+          [
+            59,
+            12
+          ],
+          [
+            60,
+            14
+          ]
+        ],
+        "heal_scars_at_horizon": 14,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 19,
+            "B": 5
+          },
+          "closed": {
+            "empty_incompatible": 19,
+            "ambiguous": 2,
+            "B": 3
+          },
+          "A_calls": []
+        },
+        "first_divergence": 27
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.640786, -0.062306), (0.653298, -0.079527), (0.640786, -0.083592))",
+        "evaluator_menu": [
+          "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 27,
+        "closure_step": 27,
+        "arrest_step": null,
+        "scars_final": 16,
+        "new_scars_within_3S": [
+          {
+            "step": 27,
+            "distance": 0.04049
+          },
+          {
+            "step": 27,
+            "distance": 0.02469
+          },
+          {
+            "step": 27,
+            "distance": 0.03701
+          },
+          {
+            "step": 28,
+            "distance": 0.01643
+          },
+          {
+            "step": 28,
+            "distance": 0.01251
+          },
+          {
+            "step": 28,
+            "distance": 0.01064
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 8,
+        "closure_step": 27,
+        "arrest_step": null,
+        "c_placed_step": 27,
+        "ledger_scars": [
+          [
+            27,
+            7
+          ],
+          [
+            28,
+            9
+          ],
+          [
+            29,
+            10
+          ],
+          [
+            30,
+            10
+          ],
+          [
+            31,
+            10
+          ],
+          [
+            32,
+            10
+          ],
+          [
+            33,
+            10
+          ],
+          [
+            34,
+            8
+          ],
+          [
+            35,
+            6
+          ],
+          [
+            36,
+            5
+          ],
+          [
+            37,
+            5
+          ],
+          [
+            38,
+            6
+          ],
+          [
+            39,
+            6
+          ],
+          [
+            40,
+            6
+          ],
+          [
+            41,
+            6
+          ],
+          [
+            42,
+            6
+          ],
+          [
+            43,
+            6
+          ],
+          [
+            44,
+            6
+          ],
+          [
+            45,
+            6
+          ],
+          [
+            46,
+            6
+          ],
+          [
+            47,
+            6
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            49,
+            6
+          ],
+          [
+            50,
+            6
+          ],
+          [
+            51,
+            6
+          ],
+          [
+            52,
+            6
+          ],
+          [
+            53,
+            6
+          ],
+          [
+            54,
+            6
+          ],
+          [
+            55,
+            6
+          ],
+          [
+            56,
+            6
+          ],
+          [
+            57,
+            6
+          ],
+          [
+            58,
+            6
+          ],
+          [
+            59,
+            6
+          ],
+          [
+            60,
+            8
+          ]
+        ]
+      },
+      "declared_class": "B. Moves"
+    },
+    {
+      "case": "w7-s0-r3",
+      "world": 7,
+      "si": 0,
+      "radius": 3,
+      "scar_edge": "[(0.628274, -0.079527), (0.640786, -0.062306)]",
+      "candidate_c": "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 14,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 38,
+        "closure_step": 38,
+        "arrest_step": null,
+        "scars0": 12,
+        "scars_final": 13,
+        "new_scars_within_3S": [],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 3.141593,
+            "degree": 5,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.769911,
+            "degree": 4,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            38,
+            11
+          ],
+          [
+            39,
+            11
+          ],
+          [
+            40,
+            11
+          ],
+          [
+            41,
+            11
+          ],
+          [
+            42,
+            11
+          ],
+          [
+            43,
+            11
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            45,
+            11
+          ],
+          [
+            46,
+            11
+          ],
+          [
+            47,
+            11
+          ],
+          [
+            48,
+            11
+          ],
+          [
+            49,
+            11
+          ],
+          [
+            50,
+            11
+          ],
+          [
+            51,
+            11
+          ],
+          [
+            52,
+            11
+          ],
+          [
+            53,
+            11
+          ],
+          [
+            54,
+            11
+          ],
+          [
+            55,
+            11
+          ],
+          [
+            56,
+            11
+          ],
+          [
+            57,
+            11
+          ],
+          [
+            58,
+            11
+          ],
+          [
+            59,
+            11
+          ],
+          [
+            60,
+            13
+          ]
+        ],
+        "heal_scars_at_horizon": 13,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 19,
+            "B": 5
+          },
+          "closed": {
+            "empty_incompatible": 19,
+            "ambiguous": 2,
+            "B": 3
+          },
+          "A_calls": []
+        },
+        "first_divergence": 38
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.640786, -0.062306), (0.653298, -0.079527), (0.640786, -0.083592))",
+        "evaluator_menu": [
+          "(1, (0.628274, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 38,
+        "closure_step": 38,
+        "arrest_step": null,
+        "scars_final": 16,
+        "new_scars_within_3S": [
+          {
+            "step": 39,
+            "distance": 0.01643
+          },
+          {
+            "step": 39,
+            "distance": 0.01064
+          },
+          {
+            "step": 39,
+            "distance": 0.01251
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.628274,
+              -0.079527
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.062306
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.640786,
+              -0.096748
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 10,
+        "closure_step": 38,
+        "arrest_step": null,
+        "c_placed_step": 38,
+        "ledger_scars": [
+          [
+            38,
+            10
+          ],
+          [
+            39,
+            8
+          ],
+          [
+            40,
+            8
+          ],
+          [
+            41,
+            8
+          ],
+          [
+            42,
+            8
+          ],
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            8
+          ],
+          [
+            45,
+            8
+          ],
+          [
+            46,
+            8
+          ],
+          [
+            47,
+            8
+          ],
+          [
+            48,
+            8
+          ],
+          [
+            49,
+            8
+          ],
+          [
+            50,
+            8
+          ],
+          [
+            51,
+            8
+          ],
+          [
+            52,
+            8
+          ],
+          [
+            53,
+            8
+          ],
+          [
+            54,
+            8
+          ],
+          [
+            55,
+            8
+          ],
+          [
+            56,
+            8
+          ],
+          [
+            57,
+            8
+          ],
+          [
+            58,
+            8
+          ],
+          [
+            59,
+            8
+          ],
+          [
+            60,
+            10
+          ]
+        ]
+      },
+      "declared_class": "A. Heals"
+    },
+    {
+      "case": "w15-s0-r1",
+      "world": 15,
+      "si": 0,
+      "radius": 1,
+      "scar_edge": "[(0.489517, 0.124612), (0.502029, 0.107391)]",
+      "candidate_c": "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 12,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars0": 5,
+        "scars_final": 12,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            12
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            50,
+            12
+          ],
+          [
+            51,
+            12
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            53,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            55,
+            12
+          ],
+          [
+            56,
+            12
+          ],
+          [
+            57,
+            12
+          ],
+          [
+            58,
+            12
+          ],
+          [
+            59,
+            12
+          ],
+          [
+            60,
+            12
+          ]
+        ],
+        "heal_scars_at_horizon": 12,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 15,
+            "ambiguous": 5,
+            "B": 4
+          },
+          "closed": {
+            "empty_incompatible": 15,
+            "ambiguous": 9
+          },
+          "A_calls": []
+        },
+        "first_divergence": 43
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.502029, 0.107391), (0.51454, 0.124612), (0.502029, 0.128677))",
+        "evaluator_menu": [
+          "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars_final": 14,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          },
+          {
+            "step": 44,
+            "distance": 0.01251
+          },
+          {
+            "step": 44,
+            "distance": 0.01643
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 6,
+        "closure_step": 43,
+        "arrest_step": null,
+        "c_placed_step": 43,
+        "ledger_scars": [
+          [
+            43,
+            7
+          ],
+          [
+            44,
+            9
+          ],
+          [
+            45,
+            10
+          ],
+          [
+            46,
+            10
+          ],
+          [
+            47,
+            10
+          ],
+          [
+            48,
+            10
+          ],
+          [
+            49,
+            10
+          ],
+          [
+            50,
+            8
+          ],
+          [
+            51,
+            6
+          ],
+          [
+            52,
+            5
+          ],
+          [
+            53,
+            5
+          ],
+          [
+            54,
+            6
+          ],
+          [
+            55,
+            6
+          ],
+          [
+            56,
+            6
+          ],
+          [
+            57,
+            6
+          ],
+          [
+            58,
+            6
+          ],
+          [
+            59,
+            6
+          ],
+          [
+            60,
+            6
+          ]
+        ]
+      },
+      "declared_class": "B. Moves"
+    },
+    {
+      "case": "w19-s0-r1",
+      "world": 19,
+      "si": 0,
+      "radius": 1,
+      "scar_edge": "[(0.489517, 0.124612), (0.502029, 0.107391)]",
+      "candidate_c": "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 12,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars0": 5,
+        "scars_final": 12,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            12
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            50,
+            12
+          ],
+          [
+            51,
+            12
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            53,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            55,
+            12
+          ],
+          [
+            56,
+            12
+          ],
+          [
+            57,
+            12
+          ],
+          [
+            58,
+            12
+          ],
+          [
+            59,
+            12
+          ],
+          [
+            60,
+            12
+          ]
+        ],
+        "heal_scars_at_horizon": 12,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 15,
+            "ambiguous": 5,
+            "B": 4
+          },
+          "closed": {
+            "empty_incompatible": 15,
+            "ambiguous": 9
+          },
+          "A_calls": []
+        },
+        "first_divergence": 43
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.502029, 0.107391), (0.51454, 0.124612), (0.502029, 0.128677))",
+        "evaluator_menu": [
+          "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars_final": 14,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          },
+          {
+            "step": 44,
+            "distance": 0.01251
+          },
+          {
+            "step": 44,
+            "distance": 0.01643
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 6,
+        "closure_step": 43,
+        "arrest_step": null,
+        "c_placed_step": 43,
+        "ledger_scars": [
+          [
+            43,
+            7
+          ],
+          [
+            44,
+            9
+          ],
+          [
+            45,
+            10
+          ],
+          [
+            46,
+            10
+          ],
+          [
+            47,
+            10
+          ],
+          [
+            48,
+            10
+          ],
+          [
+            49,
+            10
+          ],
+          [
+            50,
+            8
+          ],
+          [
+            51,
+            6
+          ],
+          [
+            52,
+            5
+          ],
+          [
+            53,
+            5
+          ],
+          [
+            54,
+            6
+          ],
+          [
+            55,
+            6
+          ],
+          [
+            56,
+            6
+          ],
+          [
+            57,
+            6
+          ],
+          [
+            58,
+            6
+          ],
+          [
+            59,
+            6
+          ],
+          [
+            60,
+            6
+          ]
+        ]
+      },
+      "declared_class": "B. Moves"
+    },
+    {
+      "case": "w28-s0-r1",
+      "world": 28,
+      "si": 0,
+      "radius": 1,
+      "scar_edge": "[(0.489517, 0.124612), (0.502029, 0.107391)]",
+      "candidate_c": "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))",
+      "horizon": 60,
+      "paper_checkpoint": 44,
+      "skip_scars_at44": 12,
+      "skip_scars_at_horizon": 12,
+      "null_equals_skip": true,
+      "heal": {
+        "arm": "HEAL",
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars0": 5,
+        "scars_final": 12,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 0,
+            "degree": 0,
+            "complete": false,
+            "legal_star": null
+          }
+        ],
+        "F_pi8_sequence": [],
+        "ledger_scars": [
+          [
+            43,
+            8
+          ],
+          [
+            44,
+            12
+          ],
+          [
+            45,
+            12
+          ],
+          [
+            46,
+            12
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            50,
+            12
+          ],
+          [
+            51,
+            12
+          ],
+          [
+            52,
+            12
+          ],
+          [
+            53,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            55,
+            12
+          ],
+          [
+            56,
+            12
+          ],
+          [
+            57,
+            12
+          ],
+          [
+            58,
+            12
+          ],
+          [
+            59,
+            12
+          ],
+          [
+            60,
+            12
+          ]
+        ],
+        "heal_scars_at_horizon": 12,
+        "identity_readout": {
+          "open": {
+            "empty_incompatible": 15,
+            "ambiguous": 5,
+            "B": 4
+          },
+          "closed": {
+            "empty_incompatible": 15,
+            "ambiguous": 9
+          },
+          "A_calls": []
+        },
+        "first_divergence": 43
+      },
+      "one_tile": {
+        "arm": "ONE-TILE",
+        "witness_removed": "(0, (0.502029, 0.107391), (0.51454, 0.124612), (0.502029, 0.128677))",
+        "evaluator_menu": [
+          "(1, (0.489517, 0.124612), (0.502029, 0.107391), (0.502029, 0.141833))"
+        ],
+        "evaluator_menu_is_c": true,
+        "c_placed_step": 43,
+        "closure_step": 43,
+        "arrest_step": null,
+        "scars_final": 14,
+        "new_scars_within_3S": [
+          {
+            "step": 43,
+            "distance": 0.04049
+          },
+          {
+            "step": 43,
+            "distance": 0.02469
+          },
+          {
+            "step": 43,
+            "distance": 0.03701
+          },
+          {
+            "step": 44,
+            "distance": 0.01064
+          },
+          {
+            "step": 44,
+            "distance": 0.01251
+          },
+          {
+            "step": 44,
+            "distance": 0.01643
+          }
+        ],
+        "c_vertex_stars": [
+          {
+            "vertex": [
+              0.489517,
+              0.124612
+            ],
+            "angle_sum": 6.283185,
+            "degree": 6,
+            "complete": true,
+            "legal_star": true
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.107391
+            ],
+            "angle_sum": 5.654867,
+            "degree": 9,
+            "complete": false,
+            "legal_star": null
+          },
+          {
+            "vertex": [
+              0.502029,
+              0.141833
+            ],
+            "angle_sum": 3.141593,
+            "degree": 3,
+            "complete": false,
+            "legal_star": null
+          }
+        ]
+      },
+      "requery": {
+        "scars_final": 6,
+        "closure_step": 43,
+        "arrest_step": null,
+        "c_placed_step": 43,
+        "ledger_scars": [
+          [
+            43,
+            7
+          ],
+          [
+            44,
+            9
+          ],
+          [
+            45,
+            10
+          ],
+          [
+            46,
+            10
+          ],
+          [
+            47,
+            10
+          ],
+          [
+            48,
+            10
+          ],
+          [
+            49,
+            10
+          ],
+          [
+            50,
+            8
+          ],
+          [
+            51,
+            6
+          ],
+          [
+            52,
+            5
+          ],
+          [
+            53,
+            5
+          ],
+          [
+            54,
+            6
+          ],
+          [
+            55,
+            6
+          ],
+          [
+            56,
+            6
+          ],
+          [
+            57,
+            6
+          ],
+          [
+            58,
+            6
+          ],
+          [
+            59,
+            6
+          ],
+          [
+            60,
+            6
+          ]
+        ]
+      },
+      "declared_class": "B. Moves"
+    }
+  ]
+}
