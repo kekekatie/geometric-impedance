@@ -292,7 +292,241 @@ def gates():
           f"tiles={len(g['tiles'])}; true third_Kz={list(trueKz)}; g_shape==true? {same}")
 
 
+# ---------- measurement over an offset set ----------
+def tile_vertices_Kz(w, si, W, tile):
+    """lift W + tile, return {vkey: Kz} for the tile's vertices (consistent gauge)."""
+    raw, _, st = read_tiles(w, si, list(W) + [tile])
+    if st != 'ok':
+        return None
+    lift = {tuple(v): k for v, k in raw['lift']}
+    out = {}
+    for z in tile[1:]:
+        out[(round(z.real, 6), round(z.imag, 6))] = lift.get((round(z.real, 6), round(z.imag, 6)))
+    return out
+
+def present(tileKz, t, wins, rank):
+    if tileKz is None or any(k is None for k in tileKz.values()):
+        return None
+    return all(accept(k, t, wins, rank) for k in tileKz.values())
+
+def f_polygon(w, si, W):
+    raw, payload, st = read_tiles(w, si, W)
+    if st != 'ok':
+        return None, None, None, st
+    wins, rank = windows_and_rank(payload)
+    return raw, wins, rank, 'ok'
+
+def measure(w, si, W, edge, cobj, wit, label, offsets=None):
+    raw, wins, rank, st = f_polygon(w, si, W)
+    if st != 'ok':
+        return dict(label=label, status=st)
+    area = raw['area']
+    if area <= 1e-12:
+        return dict(label=label, status='F_empty', area=area)
+    if offsets is None:
+        offsets, dropped = sample_offsets(raw['polygon'], 400, constraints=raw['constraints'], wins=wins)
+    else:
+        dropped = 0
+    cands, Kz, _, _ = gap_reader(w, si, W, edge)
+    cthird = tuple(int(x) for x in Kz[dk(cobj)]) if Kz.get(dk(cobj)) is not None else None
+    witKz = tile_vertices_Kz(w, si, W, wit) if wit is not None else None
+    shape_count = collections.Counter(); n_c = 0; n_w = 0; n_both = 0; n_multi = 0; n_none = 0
+    g_by_offset = []
+    for (tx, ty) in offsets:
+        t = complex(tx, ty)
+        g = g_of_t(cands, Kz, t, wins, rank)
+        key = g['third_Kz']
+        if key is None:
+            n_none += 1; continue
+        if key == 'MULTI':
+            n_multi += 1; continue
+        shape_count[tuple(key)] += 1
+        is_c = (cthird is not None and tuple(key) == cthird)
+        if is_c:
+            n_c += 1
+        w_present = present(witKz, t, wins, rank) if witKz is not None else None
+        if w_present:
+            n_w += 1
+            if is_c:
+                n_both += 1
+        g_by_offset.append((tx, ty, list(key), bool(is_c), bool(w_present) if w_present is not None else None))
+    nacc = sum(shape_count.values())
+    distinct = []
+    for kz, cnt in shape_count.most_common():
+        tiles = [dk(x) for x in cands if Kz.get(dk(x)) is not None and tuple(int(v) for v in Kz[dk(x)]) == kz]
+        distinct.append(dict(third_Kz=list(kz), fraction=round(cnt / nacc, 4), n=cnt,
+                             is_c=(cthird is not None and kz == cthird), tiles=tiles))
+    return dict(label=label, status='ok', area=area, n_offsets=len(offsets), n_accepted=nacc,
+                n_dropped_grid=dropped, n_none=n_none, n_multi=n_multi,
+                p_c=round(n_c / nacc, 4) if nacc else None,
+                p_w=round(n_w / nacc, 4) if (nacc and witKz is not None) else None,
+                p_both=round(n_both / nacc, 4) if nacc else None,
+                c_third_Kz=list(cthird) if cthird else None,
+                distinct_shapes=distinct, _offsets=offsets, _wins=wins, _rank=rank,
+                _cands=cands, _Kz=Kz)
+
+# ---------- controls (primary window + its offsets) ----------
+def live_sites(dd, W):
+    band = dd['band']; baseline = dd['baseline']; step = dd['step']
+    wv = {tuple(L.key(z)) for t in W for z in t[1:]}
+    sites = []
+    for t in baseline[step]['added']:
+        for (p, q) in ((t[1], t[2]), (t[2], t[3]), (t[3], t[1])):
+            if tuple(L.key(p)) in wv and tuple(L.key(q)) in wv:
+                sites.append((p, q, GRID.centroid(band.tris), t)); break
+    return sites
+
+def control_true_wrong(w, si, dd, W, offsets, wins, rank):
+    sites = live_sites(dd, W); true_rows = []; wrong_rows = []
+    for idx, (p, q, rref, ttrue) in enumerate(sites):
+        edge = (p, q, rref)
+        cands, Kz, _, _ = gap_reader(w, si, W, edge)
+        # true tile shape
+        tv = third_vertex(ttrue, p, q); traw, _, tst = read_tiles(w, si, list(W) + [ttrue])
+        if tst != 'ok':
+            continue
+        tKz = {tuple(v): k for v, k in traw['lift']}.get((round(tv.real, 6), round(tv.imag, 6)))
+        tKz = tuple(int(x) for x in tKz) if tKz is not None else None
+        # wrong tile: first excluded decorated key
+        legal = {dk(x) for x in D.candidates(dd['band'], p, q, rref)}
+        geo = geometric_candidates(p, q, rref)
+        excl = [geo_t for geo_t in sorted(geo, key=lambda x: repr(dk(x))) if dk(geo_t) not in legal]
+        wtile = excl[0] if excl else None
+        wthird = None
+        if wtile is not None:
+            wv = third_vertex(wtile, p, q); wr, _, wst = read_tiles(w, si, list(W) + [wtile])
+            if wst == 'ok':
+                wk = {tuple(v): k for v, k in wr['lift']}.get((round(wv.real, 6), round(wv.imag, 6)))
+                wthird = tuple(int(x) for x in wk) if wk is not None else None
+        dis = 0; nd = 0; wrong_hit = 0; nw = 0
+        for (tx, ty) in offsets:
+            g = g_of_t(cands, Kz, complex(tx, ty), wins, rank)
+            k = g['third_Kz']
+            if k is None or k == 'MULTI':
+                continue
+            nd += 1
+            if tKz is not None and tuple(k) != tKz:
+                dis += 1
+            if wthird is not None:
+                nw += 1
+                if tuple(k) == wthird:
+                    wrong_hit += 1
+        true_rows.append(dict(site=idx, n_defined=nd, disagreements=dis))
+        if wthird is not None:
+            wrong_rows.append(dict(site=idx, n_defined=nw, wrong_is_ideal=wrong_hit))
+    tot_dis = sum(r['disagreements'] for r in true_rows)
+    return dict(true_tile=dict(total_disagreements=tot_dis, n_sites=len(true_rows), rows=true_rows),
+                wrong_tile=dict(rows=wrong_rows,
+                                wrong_is_ideal_total=sum(r['wrong_is_ideal'] for r in wrong_rows),
+                                n_defined_total=sum(r['n_defined'] for r in wrong_rows)))
+
+def control_two_sides(w, si, dd, W, edge, offsets):
+    p, q = edge[0], edge[1]
+    def side(tile):
+        c = sum(tile[1:]) / 3
+        return 1 if ((c - p) * (q - p).conjugate()).imag > 0 else -1
+    A = [t for t in W if side(t) > 0]; Bside = [t for t in W if side(t) < 0]
+    out = {}
+    for name, half in (('sideA', A), ('sideB', Bside)):
+        if len(half) < 3:
+            out[name] = dict(n=len(half), status='too_small'); continue
+        raw, wins, rank, st = f_polygon(w, si, half)
+        out[name] = dict(n=len(half), status=st, area=(raw['area'] if st == 'ok' else None))
+    return dict(n_sideA=len(A), n_sideB=len(Bside), halves=out)
+
+def ordinary_scars(w, si, dd, W, offsets, wins, rank):
+    """pinned scars where reduced AND full-history menus are both empty: g(t) there."""
+    hist = dd['hist']; band = dd['band']; pinned = {frozenset(tuple(v) for v in ek) for ek in dd['m']['scars']}
+    wv = {tuple(L.key(z)) for t in W for z in t[1:]}
+    rows = []
+    for e in hist.frontier():
+        if AF.edge_id(*e[:2]) not in pinned:
+            continue
+        if not ({tuple(L.key(e[0])), tuple(L.key(e[1]))} <= wv):
+            continue
+        if C.keys(D.candidates(band, *e[:3])) or C.keys(D.candidates(hist, *e[:3])):
+            continue  # want BOTH empty
+        cands, Kz, _, _ = gap_reader(w, si, W, e)
+        if not cands:
+            rows.append(dict(edge=AF.frontier_id(e), n_candidates=0)); continue
+        sc = collections.Counter()
+        for (tx, ty) in offsets:
+            g = g_of_t(cands, Kz, complex(tx, ty), wins, rank)
+            if g['third_Kz'] not in (None, 'MULTI'):
+                sc[tuple(g['third_Kz'])] += 1
+        rows.append(dict(edge=AF.frontier_id(e), n_candidates=len(cands),
+                         distinct_gap_shapes=len(sc), top=[[list(k), v] for k, v in sc.most_common(3)]))
+    return rows
+
+def run(outpath):
+    cases_out = []; co_presence_any = []
+    for (w, si, r), expect in CASES.items():
+        dd = first_disagreement(w, si, r); e = dd['edge']; band = dd['band']
+        assert dd['step'] == expect
+        cobj = candidate_c(dd); wit = witness_tile(w, si, r)
+        proto = PROTO[f'w{w}-s{si}-r{r}']
+        # windows with F(W) non-empty, by committed rule
+        windows = []
+        for hw in GRID.HALFWIDTHS:
+            W, _ = committed_window(band, e, hw)
+            label = ('primary' if hw == GRID.HALFWIDTHS[0] else 'ladder') + f'_hw{round(hw,4)}'
+            windows.append((label, hw, W))
+        results = []; primary = None; prim_offsets = None
+        for label, hw, W in windows:
+            res = measure(w, si, W, e, cobj, wit, label)
+            if res.get('status') == 'ok' and label.startswith('primary'):
+                primary = res; prim_offsets = res['_offsets']
+            results.append(res)
+            if res.get('status') == 'ok' and (res.get('p_both') or 0) > 0:
+                co_presence_any.append(f"w{w}-s{si}-r{r}/{label}")
+        # controls on the primary window + its offsets
+        controls = None
+        if primary is not None:
+            W = next(W for (lab, hw, W) in windows if lab.startswith('primary'))
+            wins, rank = primary['_wins'], primary['_rank']
+            controls = dict(
+                true_wrong=control_true_wrong(w, si, dd, W, prim_offsets, wins, rank),
+                two_sides=control_two_sides(w, si, dd, W, e, prim_offsets),
+                ordinary_scars=ordinary_scars(w, si, dd, W, prim_offsets, wins, rank))
+        # strip helper fields from results for JSON
+        for res in results:
+            for k in ('_offsets', '_wins', '_rank', '_cands', '_Kz'):
+                res.pop(k, None)
+        cases_out.append(dict(case=f'w{w}-s{si}-r{r}', world=w, si=si, radius=r, step=dd['step'],
+                              edge=AF.frontier_id(e), candidate_c=repr(dk(cobj)),
+                              witness=repr(dk(wit)) if wit is not None else None,
+                              windows=results, controls=controls))
+        p = next((x for x in results if x['label'].startswith('primary')), {})
+        print(f"[gapfill] w{w}-s{si}-r{r}: primary p_c={p.get('p_c')} p_w={p.get('p_w')} p_both={p.get('p_both')} "
+              f"shapes={len(p.get('distinct_shapes',[]))} true_dis="
+              f"{(controls or {}).get('true_wrong',{}).get('true_tile',{}).get('total_disagreements')}", flush=True)
+    prim = cases_out[0]
+    pp = next(x for x in prim['windows'] if x['label'].startswith('primary'))
+    gate_clean = (prim['controls']['true_wrong']['true_tile']['total_disagreements'] == 0)
+    p_c = pp.get('p_c')
+    if not gate_clean:
+        cls = 'NO_HEADLINE (true-tile control disagreements; see table)'
+    elif co_presence_any:
+        cls = 'OVERRIDE: c and witness co-present in an ideal patch (see list) -- rejection is not a perfect-tiling fact'
+    elif p_c == 0:
+        cls = 'A. Address forbids (p_c = 0)'
+    elif p_c == 1:
+        cls = 'B. Address predicts (p_c = 1)'
+    elif p_c is None:
+        cls = 'D. Not readable (F(W) empty at primary)'
+    else:
+        cls = 'C. Address undecided (0 < p_c < 1)'
+    summary = dict(primary_case='w7-s0-r2', primary_p_c=p_c, primary_p_w=pp.get('p_w'),
+                   primary_p_both=pp.get('p_both'), true_tile_gate_clean=gate_clean,
+                   co_presence_windows=co_presence_any, declared_outcome_class=cls)
+    Path(outpath).write_text(json.dumps(dict(summary=summary, cases=cases_out), indent=2, default=repr) + '\n')
+    print('\nDECLARED OUTCOME:', cls)
+    print('wrote', outpath)
+
+
 if __name__ == '__main__':
     mode = sys.argv[1] if len(sys.argv) > 1 else 'gates'
     if mode == 'gates':
         gates()
+    elif mode == 'run':
+        run(sys.argv[2] if len(sys.argv) > 2 else str(HERE / 'address_gapfill.json'))

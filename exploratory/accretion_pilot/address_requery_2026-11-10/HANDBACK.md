@@ -115,3 +115,25 @@ cd address_requery_2026-11-10 && python3 address_requery.py address_requery.json
 Files: `PROTOCOL.md`, `protocol_windows.json` (committed first), `address_requery.py`,
 `address_requery.json` (raw per-window results, both conventions, controls, witnesses),
 `HANDBACK.md`. No merge, no force-push; branch `claude/address-requery-2026-11-10`.
+
+---
+
+## Correction note (2026-11-10, added not edited)
+
+Fable identified that this brief's test was structurally unable to answer Katie's question. The
+frozen reader constrains the hidden offset by **vertex positions only**, and all three vertices of
+the candidate `c` already belong to tiles in every tested window, so `F(W + c) = F(W)` was
+guaranteed before the run. This brief's result therefore shows the reader is **blind to `c`** (it
+cannot register a tile whose corners are already present), **not** that the hidden address is silent
+about `c`. The handback line above — "the shed reason was local to the corner record; a window
+address-reader does not recover it" — should be read as "a **vertex-position** reader does not
+recover it", and no stronger conclusion.
+
+The follow-up, Brief 2 (`exploratory/accretion_pilot/address_gapfill_2026-11-10/`, branch
+`claude/address-gapfill-2026-11-10`, protocol commit `ea8009f`), asks the generative question
+instead — for each hidden offset the nearby skin allows, which tile does the perfect Penrose tiling
+put in the gap? — and finds **`p_c = 1`**: the nearby skin's hidden address **predicts `c`** (it
+calls for exactly the tile the local rule admits), while the deleted witness tile is never part of
+the perfect floor there (`p_w = 0`, address-foreign). So the address is not silent; it agrees with
+the local rule that `c` fits, and the piece that globally forbids `c` lives outside the nearby
+skin's own address. See that study's `HANDBACK.md`.
