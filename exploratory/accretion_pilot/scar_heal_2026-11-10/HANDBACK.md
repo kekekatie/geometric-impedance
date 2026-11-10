@@ -103,3 +103,40 @@ python3 make_figure.py
 ```
 
 No merge, no force-push; branch `claude/scar-heal-2026-11-10` from `100c06e`.
+
+---
+
+## Correction note (2026-11-10, added not edited — after Fable's review of `0a581dc`)
+
+Fable's read-only review was right, and it revises the headline. The original "A. Heals" leaned on a
+lenient reading (only **one** of `c`'s three vertex stars had completed; the scar *edge* closed and
+the live front moved on with one fewer label). Tracking `c`'s **long side**
+`(0.640786,-0.062306)–(0.640786,-0.096748)` — the base of the Robinson triangle `c`, at distance
+`0.0106` from `e`'s midpoint — tells the real story (`scar_heal_followup.py`,
+`scar_heal_followup.json`):
+
+1. **The witness was not the whole scar; it relocated the obstruction to `c`'s own long side.**
+   When `c` is placed, its long side becomes a frontier edge. What happens to it decides everything:
+   - **Full history (ONE-TILE, nothing pruned):** `c`'s long side **pins as a dead site at step 37**
+     → **C. Returns**. (ONE-TILE's "new scars within 3·S" from the main handback are this pin.)
+   - **Thin live-only (w7-s0 1S; group-3 w15/w19/w28 1S):** the long side **pins** within the live
+     band (the nearest new scar, distance `0.01064`, **is** `c`'s long side) → **reclassify C.
+     Returns** (was "B. Moves").
+   - **Rich live-only (w7-s0/s1 2S, w7-s0 3S):** the long side is **pruned out of the radius-2 band**
+     at step 37 (menu of one legal tile, then thinned away before it is grown) and **never pins**
+     (nearest new scar is far, `0.225`). Two of `c`'s three stars **never complete**, even extended
+     to **step 200**. So under the brief's **strict** wording ("all three stars complete and legal")
+     the primary **does not satisfy A. Heals**: the scar edge closes, but `c`'s base is left open and
+     forgotten — the "heal" is really another act of pruning, not a settling.
+2. **No arm strictly heals.** In full history the flaw returns at `c`'s base; in rich live-only the
+   return is only pre-empted by forgetting that base. The honest one-line answer to "can forgetting
+   heal a scar?" becomes: *forgetting the foreign witness closes the labelled edge but moves the
+   misfit to `c`'s long side, which returns in full history and is merely re-forgotten in a rich live
+   skin.* This strengthens, not weakens, the trilogy's theme — "healing" here is forgetting wearing a
+   nicer name.
+3. **Real NULL.** A genuine unpin-then-repin (place nothing) was implemented and **equals SKIP**
+   exactly — the earlier NULL was a no-op; the harness holds under the real operation.
+4. **Revised class table** (strict wording): w7-s0-r2/-r3 and w7-s1-r2 → *closes-but-base-forgotten*
+   (not strict A); w7-s0-r1 and group-3 → **C. Returns**; ONE-TILE → **C. Returns**. The original
+   `scar_heal.json` and figure are preserved; `scar_heal_followup.json` carries the per-step long-side
+   trace, the extended run, the real-NULL check, and the nearest-new-scar identification.

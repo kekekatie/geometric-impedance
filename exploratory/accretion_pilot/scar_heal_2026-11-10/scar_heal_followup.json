@@ -1,0 +1,4278 @@
+{
+  "heal_primary_extended": {
+    "case": "w7-s0-r2",
+    "c_placed_step": 36,
+    "closure_step": 36,
+    "longside": [
+      [
+        0.640786,
+        -0.062306
+      ],
+      [
+        0.640786,
+        -0.096748
+      ]
+    ],
+    "longside_pinned_step": null,
+    "all_stars_complete_step": null,
+    "last_step": 200,
+    "final_c_stars": [
+      {
+        "vertex": [
+          0.628274,
+          -0.079527
+        ],
+        "angle_sum": 6.283185,
+        "degree": 6,
+        "complete": true,
+        "legal_star": true
+      },
+      {
+        "vertex": [
+          0.640786,
+          -0.062306
+        ],
+        "angle_sum": 3.141593,
+        "degree": 5,
+        "complete": false,
+        "legal_star": null
+      },
+      {
+        "vertex": [
+          0.640786,
+          -0.096748
+        ],
+        "angle_sum": 3.769911,
+        "degree": 4,
+        "complete": false,
+        "legal_star": null
+      }
+    ],
+    "strict_all_three_complete_and_legal": false,
+    "rows": [
+      {
+        "step": 36,
+        "placed": 24,
+        "longside_in_frontier": true,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": true,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 37,
+        "placed": 20,
+        "longside_in_frontier": false,
+        "longside_menu": [
+          "(1, (0.653298, -0.079527), (0.640786, -0.062306), (0.640786, -0.096748))"
+        ],
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 38,
+        "placed": 20,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 39,
+        "placed": 28,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 40,
+        "placed": 33,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 41,
+        "placed": 32,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 42,
+        "placed": 31,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 43,
+        "placed": 34,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 44,
+        "placed": 35,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 45,
+        "placed": 38,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 46,
+        "placed": 34,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 47,
+        "placed": 30,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 48,
+        "placed": 29,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 49,
+        "placed": 30,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 50,
+        "placed": 38,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 51,
+        "placed": 36,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 52,
+        "placed": 34,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 53,
+        "placed": 40,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 54,
+        "placed": 44,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 55,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 56,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 57,
+        "placed": 40,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 58,
+        "placed": 43,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 59,
+        "placed": 51,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 60,
+        "placed": 52,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 61,
+        "placed": 45,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 62,
+        "placed": 44,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 63,
+        "placed": 43,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 64,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 65,
+        "placed": 36,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 66,
+        "placed": 34,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 67,
+        "placed": 34,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 68,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 69,
+        "placed": 46,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 70,
+        "placed": 53,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 71,
+        "placed": 53,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 72,
+        "placed": 51,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 73,
+        "placed": 47,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 74,
+        "placed": 43,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 75,
+        "placed": 43,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 76,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 77,
+        "placed": 41,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 78,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 79,
+        "placed": 66,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 80,
+        "placed": 73,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 81,
+        "placed": 79,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 82,
+        "placed": 75,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 83,
+        "placed": 67,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 84,
+        "placed": 63,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 85,
+        "placed": 57,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 86,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 87,
+        "placed": 60,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 88,
+        "placed": 61,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 89,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 90,
+        "placed": 50,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 91,
+        "placed": 56,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 92,
+        "placed": 57,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 93,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 94,
+        "placed": 60,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 95,
+        "placed": 68,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 96,
+        "placed": 72,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 97,
+        "placed": 69,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 98,
+        "placed": 66,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 99,
+        "placed": 61,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 100,
+        "placed": 64,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 101,
+        "placed": 69,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 102,
+        "placed": 69,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 103,
+        "placed": 64,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 104,
+        "placed": 69,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 105,
+        "placed": 71,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 106,
+        "placed": 64,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 107,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 108,
+        "placed": 54,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 109,
+        "placed": 55,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 110,
+        "placed": 53,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 111,
+        "placed": 48,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 112,
+        "placed": 43,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 113,
+        "placed": 42,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 114,
+        "placed": 39,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 115,
+        "placed": 38,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 116,
+        "placed": 45,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 117,
+        "placed": 51,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 118,
+        "placed": 59,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 119,
+        "placed": 72,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 120,
+        "placed": 82,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 121,
+        "placed": 89,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 122,
+        "placed": 99,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 123,
+        "placed": 107,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 124,
+        "placed": 107,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 125,
+        "placed": 109,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 126,
+        "placed": 109,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 127,
+        "placed": 103,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 128,
+        "placed": 97,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 129,
+        "placed": 91,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 130,
+        "placed": 85,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 131,
+        "placed": 90,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 132,
+        "placed": 106,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 133,
+        "placed": 115,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 134,
+        "placed": 123,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 135,
+        "placed": 133,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 136,
+        "placed": 148,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 137,
+        "placed": 151,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 138,
+        "placed": 143,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 139,
+        "placed": 135,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 140,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 141,
+        "placed": 118,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 142,
+        "placed": 125,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 143,
+        "placed": 129,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 144,
+        "placed": 126,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 145,
+        "placed": 130,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 146,
+        "placed": 135,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 147,
+        "placed": 137,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 148,
+        "placed": 134,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 149,
+        "placed": 129,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 150,
+        "placed": 126,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 151,
+        "placed": 125,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 152,
+        "placed": 107,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 153,
+        "placed": 97,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 154,
+        "placed": 96,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 155,
+        "placed": 96,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 156,
+        "placed": 103,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 157,
+        "placed": 114,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 158,
+        "placed": 119,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 159,
+        "placed": 114,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 160,
+        "placed": 113,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 161,
+        "placed": 115,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 162,
+        "placed": 119,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 163,
+        "placed": 140,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 164,
+        "placed": 137,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 165,
+        "placed": 137,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 166,
+        "placed": 134,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 167,
+        "placed": 130,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 168,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 169,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 170,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 171,
+        "placed": 117,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 172,
+        "placed": 117,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 173,
+        "placed": 117,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 174,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 175,
+        "placed": 121,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 176,
+        "placed": 123,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 177,
+        "placed": 131,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 178,
+        "placed": 145,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 179,
+        "placed": 144,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 180,
+        "placed": 137,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 181,
+        "placed": 126,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 182,
+        "placed": 129,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 183,
+        "placed": 121,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 184,
+        "placed": 110,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 185,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 186,
+        "placed": 130,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 187,
+        "placed": 124,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 188,
+        "placed": 131,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 189,
+        "placed": 137,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 190,
+        "placed": 129,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 191,
+        "placed": 130,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 192,
+        "placed": 140,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 193,
+        "placed": 141,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 194,
+        "placed": 143,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 195,
+        "placed": 141,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 196,
+        "placed": 124,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 197,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 198,
+        "placed": 126,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 199,
+        "placed": 123,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      },
+      {
+        "step": 200,
+        "placed": 120,
+        "longside_in_frontier": false,
+        "longside_menu": null,
+        "longside_pinned": false,
+        "c_in_placed": false,
+        "c_stars": [
+          {
+            "complete": true,
+            "legal": true
+          },
+          {
+            "complete": false,
+            "legal": null
+          },
+          {
+            "complete": false,
+            "legal": null
+          }
+        ],
+        "all_stars_complete": false,
+        "status": "ok"
+      }
+    ]
+  },
+  "real_null": {
+    "w7-s0-r2": {
+      "null_equals_skip": true
+    }
+  },
+  "nearest_new_scar": {
+    "w7-s0-r1": {
+      "case": "w7-s0-r1",
+      "longside": [
+        [
+          0.640786,
+          -0.062306
+        ],
+        [
+          0.640786,
+          -0.096748
+        ]
+      ],
+      "new_scars": [
+        {
+          "step": 28,
+          "distance": 0.01064,
+          "is_c_longside": true
+        },
+        {
+          "step": 27,
+          "distance": 0.02469,
+          "is_c_longside": false
+        },
+        {
+          "step": 27,
+          "distance": 0.03701,
+          "is_c_longside": false
+        },
+        {
+          "step": 27,
+          "distance": 0.04049,
+          "is_c_longside": false
+        },
+        {
+          "step": 27,
+          "distance": 0.2082,
+          "is_c_longside": false
+        },
+        {
+          "step": 28,
+          "distance": 0.20895,
+          "is_c_longside": false
+        },
+        {
+          "step": 28,
+          "distance": 0.22517,
+          "is_c_longside": false
+        },
+        {
+          "step": 60,
+          "distance": 0.22517,
+          "is_c_longside": false
+        },
+        {
+          "step": 28,
+          "distance": 0.22577,
+          "is_c_longside": false
+        },
+        {
+          "step": 60,
+          "distance": 0.22577,
+          "is_c_longside": false
+        }
+      ],
+      "nearest": {
+        "step": 28,
+        "distance": 0.01064,
+        "is_c_longside": true
+      },
+      "reclassify_C": true
+    },
+    "w15-s0-r1": {
+      "case": "w15-s0-r1",
+      "longside": [
+        [
+          0.502029,
+          0.107391
+        ],
+        [
+          0.502029,
+          0.141833
+        ]
+      ],
+      "new_scars": [
+        {
+          "step": 44,
+          "distance": 0.01064,
+          "is_c_longside": true
+        },
+        {
+          "step": 43,
+          "distance": 0.02469,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.03701,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.04049,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.2082,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.20895,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22517,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22577,
+          "is_c_longside": false
+        }
+      ],
+      "nearest": {
+        "step": 44,
+        "distance": 0.01064,
+        "is_c_longside": true
+      },
+      "reclassify_C": true
+    },
+    "w19-s0-r1": {
+      "case": "w19-s0-r1",
+      "longside": [
+        [
+          0.502029,
+          0.107391
+        ],
+        [
+          0.502029,
+          0.141833
+        ]
+      ],
+      "new_scars": [
+        {
+          "step": 44,
+          "distance": 0.01064,
+          "is_c_longside": true
+        },
+        {
+          "step": 43,
+          "distance": 0.02469,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.03701,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.04049,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.2082,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.20895,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22517,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22577,
+          "is_c_longside": false
+        }
+      ],
+      "nearest": {
+        "step": 44,
+        "distance": 0.01064,
+        "is_c_longside": true
+      },
+      "reclassify_C": true
+    },
+    "w28-s0-r1": {
+      "case": "w28-s0-r1",
+      "longside": [
+        [
+          0.502029,
+          0.107391
+        ],
+        [
+          0.502029,
+          0.141833
+        ]
+      ],
+      "new_scars": [
+        {
+          "step": 44,
+          "distance": 0.01064,
+          "is_c_longside": true
+        },
+        {
+          "step": 43,
+          "distance": 0.02469,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.03701,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.04049,
+          "is_c_longside": false
+        },
+        {
+          "step": 43,
+          "distance": 0.2082,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.20895,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22517,
+          "is_c_longside": false
+        },
+        {
+          "step": 44,
+          "distance": 0.22577,
+          "is_c_longside": false
+        }
+      ],
+      "nearest": {
+        "step": 44,
+        "distance": 0.01064,
+        "is_c_longside": true
+      },
+      "reclassify_C": true
+    }
+  }
+}
