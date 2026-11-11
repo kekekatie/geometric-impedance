@@ -44,9 +44,9 @@ def main():
     draw(ax1, tiles_near(band35, emid, span * 1.4), e, c,
          'Before (step 35): the dormant scar edge e is open (blue);\nthe reduced skin admits c but keeps the skip label', span)
     draw(ax2, tiles_near(after, emid, span * 1.4), e, c,
-         f"After (step {H.HORIZON}, HEAL): c placed (red), edge e is now interior;\n"
-         f"neighbourhood settles, no new scar within 3S  -> A. Heals", span)
-    fig.suptitle('w7-s0 r2: forgetting the foreign witness heals the scar', fontsize=13)
+         f"After (step {H.HORIZON}, HEAL): c placed (red), labelled edge e closes;\n"
+         f"but c's long-side base never settles (pruned in 2S/3S, re-pins in 1S)  -> not a strict heal", span)
+    fig.suptitle("w7-s0 r2: forgetting the witness closes edge e, but relocates the misfit to c's base", fontsize=12)
     fig.tight_layout(rect=[0, 0, 1, 0.96])
     (HERE / 'figures').mkdir(exist_ok=True)
     fig.savefig(HERE / 'figures' / 'heal_w7_s0.png', dpi=130)
