@@ -138,5 +138,8 @@ the live front moved on with one fewer label). Tracking `c`'s **long side**
    exactly — the earlier NULL was a no-op; the harness holds under the real operation.
 4. **Revised class table** (strict wording): w7-s0-r2/-r3 and w7-s1-r2 → *closes-but-base-forgotten*
    (not strict A); w7-s0-r1 and group-3 → **C. Returns**; ONE-TILE → **C. Returns**. The original
-   `scar_heal.json` and figure are preserved; `scar_heal_followup.json` carries the per-step long-side
-   trace, the extended run, the real-NULL check, and the nearest-new-scar identification.
+   raw `scar_heal.json` is preserved; `figures/heal_w7_s0.png` has been **regenerated** with corrected
+   captions (no longer "A. Heals"), after verifying the world-7 reconstruction reproduces the committed
+   result exactly (scar edge `e`, c placed @36, closure @36, retained band 485 tiles).
+   `scar_heal_followup.json` carries the per-step long-side trace, the extended run, the real-NULL check,
+   and the nearest-new-scar identification.
