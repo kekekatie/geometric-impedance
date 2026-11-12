@@ -1,0 +1,195 @@
+{
+  "config": {
+    "d": 3,
+    "T": 6,
+    "O": [
+      1,
+      2
+    ],
+    "report_round": 4,
+    "commit_C": 3,
+    "buffer_B": 1,
+    "window_W": 4,
+    "w_max": 3,
+    "p_d": 0.001,
+    "p_m": 0.001,
+    "eps": 1e-12
+  },
+  "coverage": {
+    "histories": 843,
+    "groups": 180,
+    "multi_member_groups": 150,
+    "group_sizes_top": [
+      38,
+      35,
+      33,
+      32,
+      20,
+      19,
+      16,
+      16,
+      15,
+      14,
+      14,
+      12
+    ],
+    "snapshot_restart_failures": 0
+  },
+  "witness_count": 129,
+  "controls": {
+    "boundary_fields_identical": true,
+    "only_core_syndrome_differs": true,
+    "first_pair_differing_core_detectors": [
+      "(c0,t0)",
+      "(c0,t1)",
+      "(c1,t0)",
+      "(c1,t1)"
+    ],
+    "no_flag": {
+      "streaming_vs_reference_preflag_agree": 657,
+      "strict_decisions": 843,
+      "note": "before the flag, streaming and reference agree on these; the flag machinery alone introduces no divergence."
+    },
+    "prompt_flag": {
+      "report_released": "before commit",
+      "witness_pairs_distinction_restored": 52,
+      "witness_pairs": 129
+    },
+    "loss_aware": {
+      "commit_delay_rounds": 2,
+      "retained_core_detectors": [
+        "(c0,t0)",
+        "(c0,t1)",
+        "(c0,t2)",
+        "(c1,t0)",
+        "(c1,t1)",
+        "(c1,t2)"
+      ],
+      "witness_pairs_distinction_restored": 52,
+      "witness_pairs": 129
+    },
+    "wide_window": {
+      "window_W": 5,
+      "retained_rounds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "commit_delay_rounds": 2,
+      "witness_pairs_distinction_restored": 52,
+      "witness_pairs": 129
+    }
+  },
+  "restoration": {
+    "preregistered_frozen_rule": {
+      "rule": "delta(b)=b^1, b = det(c0,1)^det(c1,1)",
+      "decisions": 258,
+      "agree_with_reference_post": 141,
+      "restored_logical_correct": 133,
+      "baseline_streaming_logical_correct": 101
+    },
+    "preregistered_frozen_rule_verdict": "FAILED: best variant agrees with reference on 141/258 witness decisions (~chance). The pre-registered single bit does not carry the distinction. See restoration_analysis_EXPLORATORY.py for the re-frozen minimal rule."
+  },
+  "witness_pair": {
+    "group_state": {
+      "frame": 0,
+      "m2": [
+        0,
+        1
+      ],
+      "d3": [
+        0,
+        0
+      ]
+    },
+    "post_cut_identical": true,
+    "report_payload": {
+      "site": "d1",
+      "onset_interval": [
+        1,
+        2
+      ],
+      "report_round": 4
+    },
+    "history_1": {
+      "faults": [
+        [
+          "d",
+          0,
+          0
+        ],
+        [
+          "d",
+          1,
+          1
+        ]
+      ],
+      "core_syndrome": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "b": 0,
+      "truth": 1,
+      "ref_pre": {
+        "pred": 0,
+        "p0": 0.5004987487453623,
+        "p1": 0.4995012512546377
+      },
+      "ref_post": {
+        "pred": 1,
+        "p0": 0.002001998981933857,
+        "p1": 0.9979980010180661
+      },
+      "stream_pre": 0,
+      "stream_post": 0
+    },
+    "history_2": {
+      "faults": [
+        [
+          "d",
+          0,
+          1
+        ],
+        [
+          "d",
+          1,
+          1
+        ],
+        [
+          "m",
+          1,
+          0
+        ]
+      ],
+      "core_syndrome": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "b": 0,
+      "truth": 1,
+      "ref_pre": {
+        "pred": 0,
+        "p0": 0.998998992977961,
+        "p1": 0.0010010070220389559
+      },
+      "ref_post": {
+        "pred": 0,
+        "p0": 0.9979980010180661,
+        "p1": 0.002001998981933856
+      },
+      "stream_pre": 0,
+      "stream_post": 0
+    },
+    "streaming_single_prediction_pre": 0,
+    "streaming_single_prediction_post": 0
+  }
+}

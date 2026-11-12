@@ -1,0 +1,63 @@
+{
+  "histories": 843,
+  "reference_splitting_witness_pairs": 129,
+  "minimal_global_restoration": {
+    "n_detectors": 2,
+    "detectors": [
+      "(c0,t0)",
+      "(c1,t0)"
+    ],
+    "claim": "with (frame, m2) and these pruned detectors, the full-history reference post-flag revision is determined in every group."
+  },
+  "single_detector_pair_specific": {
+    "total_pairs": 129,
+    "best": {
+      "detector": "(c0,t0)",
+      "pairs_separated": 89
+    },
+    "all": [
+      {
+        "detector": "(c0,t0)",
+        "pairs_separated": 89
+      },
+      {
+        "detector": "(c1,t0)",
+        "pairs_separated": 88
+      },
+      {
+        "detector": "(c0,t2)",
+        "pairs_separated": 70
+      },
+      {
+        "detector": "(c1,t2)",
+        "pairs_separated": 69
+      },
+      {
+        "detector": "(c0,t1)",
+        "pairs_separated": 63
+      },
+      {
+        "detector": "(c1,t1)",
+        "pairs_separated": 59
+      }
+    ],
+    "note": "no single fixed detector separates all pairs; one bit is a pair-specific restoration only."
+  },
+  "held_out": {
+    "train_minimal_detectors": [
+      "(c0,t0)",
+      "(c1,t0)"
+    ],
+    "same_positions_determine_reference_on_held_out_groups": true
+  },
+  "correctness": {
+    "witness_decisions": 258,
+    "restored_agrees_with_reference": 258,
+    "restored_agrees_with_reference_frac": 1.0,
+    "reference_logical_correct": 160,
+    "reference_logical_correct_frac": 0.62,
+    "unrestored_streaming_logical_correct": 101,
+    "unrestored_streaming_logical_correct_frac": 0.391,
+    "note": "Restoration recovers AGREEMENT WITH FULL HISTORY (the retention claim). It does not make the logical always correct: witness decisions sit on the logical boundary where the reference itself is far from certain."
+  }
+}
