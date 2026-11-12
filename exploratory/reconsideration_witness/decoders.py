@@ -157,21 +157,68 @@ def _marginal_cached(syndrome_key, free_key):
     return P0 / s, P1 / s
 
 
-def reference_predict(detset, flagged):
-    """Full-history soft decoder.
+@lru_cache(maxsize=None)
+def _marginal_unnorm(syndrome_key, free_key):
+    """Exact UNNORMALISED (P0, P1) on a consistent ABSOLUTE scale. Memoised.
 
-    flagged: False -> pre-flag (no erasure); True -> post-flag (free O faults).
-    Returns (pred, p0, p1, strict).
+    Unlike _marginal_cached (which subtracts a per-syndrome max and normalises),
+    this returns absolute probability sums, so results for different syndromes or
+    different free-sets can be added together -- needed for the onset mixture and
+    for the restorer's sum over discarded completions.
     """
-    b = _syndrome_vec(detset)
-    if flagged:
-        free = frozenset(('d', rc.LOSS_SITE, s) for s in rc.O)
-    else:
-        free = frozenset()
-    p0, p1 = _marginal_cached(b.tobytes(), free)
-    pred = 0 if p0 >= p1 else 1
-    strict = abs(p0 - p1) > EPS
-    return pred, p0, p1, strict
+    b = np.frombuffer(syndrome_key, dtype=np.uint8).copy()
+    free = set(free_key)
+    llr = np.zeros(NF)
+    const = 0.0
+    for i, f in enumerate(FAULT_IDS):
+        w = 0.5 if f in free else base_weight(f)
+        const += np.log(1.0 - w)
+        llr[i] = 0.0 if f in free else np.log(w / (1.0 - w))
+    e0 = _particular(b)
+    E = M ^ e0[None, :]
+    logw = const + E @ llr                                 # absolute log-weight
+    lpar = M_LPAR ^ (int(e0 @ LVEC) % 2)
+    w = np.exp(logw)
+    return float(w[lpar == 0].sum()), float(w[lpar == 1].sum())
+
+
+# Named onset models (Astra's reconciliation):
+#   FREE_BOTH : both located faults ('d',1,1),('d',1,2) freed simultaneously
+#               (an independent-erasure region; what Stage 0 actually computed).
+#   ONSET_AVG : exactly one onset s in O, uniform prior, marginalised -- only
+#               ('d',1,s) freed per term (what the prose described).
+FREE_BOTH = 'free_both'
+ONSET_AVG = 'onset_avg'
+
+
+def reference_marginal(detset, flagged, onset_model=FREE_BOTH):
+    """Absolute-scale (P0, P1) for the full-history reference under a named model."""
+    key = _syndrome_vec(detset).tobytes()
+    if not flagged:
+        return _marginal_unnorm(key, frozenset())
+    if onset_model == FREE_BOTH:
+        return _marginal_unnorm(key, frozenset(('d', rc.LOSS_SITE, s) for s in rc.O))
+    if onset_model == ONSET_AVG:
+        acc0 = acc1 = 0.0
+        for s in rc.O:
+            p0, p1 = _marginal_unnorm(key, frozenset([('d', rc.LOSS_SITE, s)]))
+            acc0 += p0 / len(rc.O)
+            acc1 += p1 / len(rc.O)
+        return acc0, acc1
+    raise ValueError(onset_model)
+
+
+def reference_predict(detset, flagged, onset_model=FREE_BOTH):
+    """Full-history soft decoder. Returns (pred, p0_norm, p1_norm, strict).
+
+    onset_model defaults to FREE_BOTH, reproducing Stage 0 exactly.
+    """
+    p0, p1 = reference_marginal(detset, flagged, onset_model)
+    s = p0 + p1
+    p0n, p1n = p0 / s, p1 / s
+    pred = 0 if p0n >= p1n else 1
+    strict = abs(p0n - p1n) > EPS
+    return pred, p0n, p1n, strict
 
 
 # ---- streaming (sliding-window hard committer) ------------------------------
