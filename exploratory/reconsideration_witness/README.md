@@ -20,16 +20,33 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 
 ## Files
 
+**Stage 0** — does the witness exist, and what restores it?
+
 | file | role |
 |---|---|
 | `PREREGISTRATION.md` | the frozen protocol — committed **before** any code or outcome (`5971221`) |
 | `repcode.py` | exact GF(2) simulator + linear model of the code (self-checking) |
-| `decoders.py` | soft full-history reference (exact MAP) + hard streaming decoder (commit / prune / serialize / restore) + control policies |
+| `decoders.py` | soft full-history reference (exact MAP, both onset models) + hard streaming decoder (commit / prune / serialize / restore) + control policies |
 | `search.py` | bounded witness search, controls, frozen restoration rule -> `handback.json` |
 | `restoration_analysis_EXPLORATORY.py` | post-hoc minimal-restoration analysis -> `restoration_posthoc.json` |
-| `REPORT.md` | results, prediction scorecard (held / failed), handback |
+| `REPORT.md` | Stage 0 results, prediction scorecard (held / failed), handback |
 | `CHANGES.md` | the one allowed post-outcome change: the restoration rule |
-| `handback.json`, `restoration_posthoc.json` | machine-readable results |
+
+**Stage 1** — a principled restorer, on fresh data, at a real decision deadline.
+
+| file | role |
+|---|---|
+| `PREREGISTRATION_stage1.md` | frozen Stage-1 protocol — committed before scoring (`28dacf1`) |
+| `stage1.py` | Bayesian restorer + 0-bit / hard-streaming baselines + deadline-reference diagnostic + fresh weight-4 eval + both onset models -> `stage1_handback.json` |
+| `STAGE1_REPORT.md` | Stage 1 results, scorecard, the deadline-vs-pruning decomposition, Astra's two reconciliations |
+
+**Stage 1 result in one line.** The restorer beats both baselines everywhere (the
+two bits are usable), but under a realistic decision deadline it recovers ~80% of the
+full reference on witnesses, not ~100%: ~5% is the deadline (future detectors unseen),
+~15% is pruning to two bits. Stage 0's "two bits suffice" held only because its
+post-hoc analysis also used the post-cut future. The witness is robust to the onset
+model (129 under FREE_BOTH, 575 under the prose-faithful ONSET_AVG) and generalises to
+fresh weight-4 data.
 
 ## Replay
 

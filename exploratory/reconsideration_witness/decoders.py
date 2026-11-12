@@ -158,15 +158,9 @@ def _marginal_cached(syndrome_key, free_key):
 
 
 @lru_cache(maxsize=None)
-def _marginal_unnorm(syndrome_key, free_key):
-    """Exact UNNORMALISED (P0, P1) on a consistent ABSOLUTE scale. Memoised.
-
-    Unlike _marginal_cached (which subtracts a per-syndrome max and normalises),
-    this returns absolute probability sums, so results for different syndromes or
-    different free-sets can be added together -- needed for the onset mixture and
-    for the restorer's sum over discarded completions.
-    """
-    b = np.frombuffer(syndrome_key, dtype=np.uint8).copy()
+def _free_tables(free_key):
+    """Per-free-set precompute: (const, llr, base = M@llr). base is the 65536
+    log-weight contribution shared by every syndrome with this free-set."""
     free = set(free_key)
     llr = np.zeros(NF)
     const = 0.0
@@ -174,9 +168,29 @@ def _marginal_unnorm(syndrome_key, free_key):
         w = 0.5 if f in free else base_weight(f)
         const += np.log(1.0 - w)
         llr[i] = 0.0 if f in free else np.log(w / (1.0 - w))
+    base = M @ llr                                         # 65536, fixed per free-set
+    return const, llr, base
+
+
+@lru_cache(maxsize=None)
+def _marginal_unnorm(syndrome_key, free_key):
+    """Exact UNNORMALISED (P0, P1) on a consistent ABSOLUTE scale. Memoised.
+
+    Absolute probability sums (no per-syndrome max subtraction), so results for
+    different syndromes or free-sets can be ADDED -- needed for the onset mixture
+    and the restorer's sum over discarded completions. Uses the identity
+    (M ^ e0) @ llr = base + e0dot - 2 * M[:, e0] @ llr[e0] to avoid a full
+    65536 x NF pass per syndrome.
+    """
+    b = np.frombuffer(syndrome_key, dtype=np.uint8).copy()
+    const, llr, base = _free_tables(free_key)
     e0 = _particular(b)
-    E = M ^ e0[None, :]
-    logw = const + E @ llr                                 # absolute log-weight
+    e0idx = np.nonzero(e0)[0]
+    if e0idx.size:
+        corr = float(llr[e0idx].sum()) - 2.0 * (M[:, e0idx] @ llr[e0idx])
+    else:
+        corr = 0.0
+    logw = const + base + corr
     lpar = M_LPAR ^ (int(e0 @ LVEC) % 2)
     w = np.exp(logw)
     return float(w[lpar == 0].sum()), float(w[lpar == 1].sum())

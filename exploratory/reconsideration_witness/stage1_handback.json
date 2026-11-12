@@ -1,0 +1,528 @@
+{
+  "built_on_commit": "c0fb273",
+  "eps": 1e-12,
+  "onset_model_reconciliation": {
+    "FREE_BOTH": {
+      "description": "both located faults freed simultaneously (independent-erasure region); what Stage 0 computed",
+      "witnesses": 129
+    },
+    "ONSET_AVG": {
+      "description": "uniform mixture over a single unknown onset; what the Stage-0 prose described (physically correct)",
+      "witnesses": 575
+    },
+    "verdict": "The witness exists under both models; it is not an artefact of FREE_BOTH. ONSET_AVG (prose/physical) yields MORE witnesses."
+  },
+  "controls_reconciliation": {
+    "shared_calculation": "streaming_commit_erasure XOR streaming_live",
+    "why_identical": "prompt_flag, loss_aware and wide_window all retain the full core at the moment of decision in this geometry, so they are one computation, not three independent controls.",
+    "shared_result_vs_original_predictions": {
+      "witness_pairs_distinguished": "52/129",
+      "scored_against": "P2 (delay is the cause) and P3 (wide skin preserves the distinction)",
+      "note": "Reported once as a single Stage-0 figure; the Stage-1 restorer below is the genuinely new, independent control."
+    },
+    "where_they_would_diverge": "a report interval wider than the buffer that the loss-aware deferral still cannot cover, or a multi-stage commit -- not exercised here."
+  },
+  "eval_sets": {
+    "indist_all_histories": 843,
+    "indist_witness_decisions": 258,
+    "fresh_weight4_histories": 6930
+  },
+  "witness_gap_decomposition": {
+    "onset_avg": {
+      "witness_decisions": 258,
+      "deadline_ref_vs_full_ref": 0.9535,
+      "restorer_vs_full_ref": 0.7713,
+      "restorer_vs_deadline_ref": 0.8101,
+      "deadline_ref_correct": 0.6512,
+      "restorer_correct": 0.469,
+      "reading": "deadline_ref_vs_full_ref < 1 is the cost of the DEADLINE (future detectors unseen); restorer_vs_deadline_ref < 1 is the cost of pruning to 2 bits. Stage 0 \"2 bits suffice\" held only because its post-hoc analysis also used the post-cut future, which an online decoder at the deadline lacks."
+    },
+    "free_both": {
+      "witness_decisions": 258,
+      "deadline_ref_vs_full_ref": 0.9535,
+      "restorer_vs_full_ref": 0.8023,
+      "restorer_vs_deadline_ref": 0.8488,
+      "deadline_ref_correct": 0.6202,
+      "restorer_correct": 0.469,
+      "reading": "deadline_ref_vs_full_ref < 1 is the cost of the DEADLINE (future detectors unseen); restorer_vs_deadline_ref < 1 is the cost of pruning to 2 bits. Stage 0 \"2 bits suffice\" held only because its post-hoc analysis also used the post-cut future, which an online decoder at the deadline lacks."
+    }
+  },
+  "results": {
+    "onset_avg": {
+      "flag_after_checks": {
+        "restorer_2bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.7713,
+            "logical_correct": 0.469,
+            "reference_agreement_raw": "199/258",
+            "logical_correct_raw": "121/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.8066,
+            "logical_correct": 0.6975,
+            "reference_agreement_raw": "680/843",
+            "logical_correct_raw": "588/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7649,
+            "logical_correct": 0.5808,
+            "reference_agreement_raw": "5301/6930",
+            "logical_correct_raw": "4025/6930"
+          }
+        },
+        "baseline_0bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.469,
+            "logical_correct": 0.2984,
+            "reference_agreement_raw": "121/258",
+            "logical_correct_raw": "77/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.7829,
+            "logical_correct": 0.6809,
+            "reference_agreement_raw": "660/843",
+            "logical_correct_raw": "574/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7416,
+            "logical_correct": 0.5722,
+            "reference_agreement_raw": "5139/6930",
+            "logical_correct_raw": "3965/6930"
+          }
+        },
+        "streaming_hard": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.469,
+            "logical_correct": 0.345,
+            "reference_agreement_raw": "121/258",
+            "logical_correct_raw": "89/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.7414,
+            "logical_correct": 0.6465,
+            "reference_agreement_raw": "625/843",
+            "logical_correct_raw": "545/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7087,
+            "logical_correct": 0.5525,
+            "reference_agreement_raw": "4911/6930",
+            "logical_correct_raw": "3829/6930"
+          }
+        },
+        "deadline_reference": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.9535,
+            "logical_correct": 0.6512,
+            "reference_agreement_raw": "246/258",
+            "logical_correct_raw": "168/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.8648,
+            "logical_correct": 0.72,
+            "reference_agreement_raw": "729/843",
+            "logical_correct_raw": "607/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.8105,
+            "logical_correct": 0.5903,
+            "reference_agreement_raw": "5617/6930",
+            "logical_correct_raw": "4091/6930"
+          }
+        }
+      },
+      "flag_before_checks": {
+        "restorer_2bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.7016,
+            "logical_correct": 0.4612,
+            "reference_agreement_raw": "181/258",
+            "logical_correct_raw": "119/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.7687,
+            "logical_correct": 0.6785,
+            "reference_agreement_raw": "648/843",
+            "logical_correct_raw": "572/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7303,
+            "logical_correct": 0.5762,
+            "reference_agreement_raw": "5061/6930",
+            "logical_correct_raw": "3993/6930"
+          }
+        },
+        "baseline_0bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.469,
+            "logical_correct": 0.3605,
+            "reference_agreement_raw": "121/258",
+            "logical_correct_raw": "93/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.7426,
+            "logical_correct": 0.6572,
+            "reference_agreement_raw": "626/843",
+            "logical_correct_raw": "554/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7068,
+            "logical_correct": 0.5639,
+            "reference_agreement_raw": "4898/6930",
+            "logical_correct_raw": "3908/6930"
+          }
+        },
+        "streaming_hard": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.469,
+            "logical_correct": 0.3605,
+            "reference_agreement_raw": "121/258",
+            "logical_correct_raw": "93/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.739,
+            "logical_correct": 0.6536,
+            "reference_agreement_raw": "623/843",
+            "logical_correct_raw": "551/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.702,
+            "logical_correct": 0.5603,
+            "reference_agreement_raw": "4865/6930",
+            "logical_correct_raw": "3883/6930"
+          }
+        },
+        "deadline_reference": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.8333,
+            "logical_correct": 0.5853,
+            "reference_agreement_raw": "215/258",
+            "logical_correct_raw": "151/258"
+          },
+          "indist_all": {
+            "decisions": 843,
+            "committed": 843,
+            "coverage": 1.0,
+            "reference_agreement": 0.8185,
+            "logical_correct": 0.6928,
+            "reference_agreement_raw": "690/843",
+            "logical_correct_raw": "584/843"
+          },
+          "fresh_weight4": {
+            "decisions": 6930,
+            "committed": 6930,
+            "coverage": 1.0,
+            "reference_agreement": 0.7593,
+            "logical_correct": 0.5821,
+            "reference_agreement_raw": "5262/6930",
+            "logical_correct_raw": "4034/6930"
+          }
+        }
+      }
+    },
+    "free_both": {
+      "flag_after_checks": {
+        "restorer_2bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.8023,
+            "logical_correct": 0.469,
+            "reference_agreement_raw": "207/258",
+            "logical_correct_raw": "121/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.8469,
+            "logical_correct": 0.7403,
+            "reference_agreement_raw": "636/751",
+            "logical_correct_raw": "556/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7995,
+            "logical_correct": 0.5985,
+            "reference_agreement_raw": "5131/6418",
+            "logical_correct_raw": "3841/6418"
+          }
+        },
+        "baseline_0bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.5,
+            "logical_correct": 0.2984,
+            "reference_agreement_raw": "129/258",
+            "logical_correct_raw": "77/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.8136,
+            "logical_correct": 0.715,
+            "reference_agreement_raw": "611/751",
+            "logical_correct_raw": "537/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7657,
+            "logical_correct": 0.5824,
+            "reference_agreement_raw": "4914/6418",
+            "logical_correct_raw": "3738/6418"
+          }
+        },
+        "streaming_hard": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.5,
+            "logical_correct": 0.345,
+            "reference_agreement_raw": "129/258",
+            "logical_correct_raw": "89/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.767,
+            "logical_correct": 0.6764,
+            "reference_agreement_raw": "576/751",
+            "logical_correct_raw": "508/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7286,
+            "logical_correct": 0.5606,
+            "reference_agreement_raw": "4676/6418",
+            "logical_correct_raw": "3598/6418"
+          }
+        },
+        "deadline_reference": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.9535,
+            "logical_correct": 0.6202,
+            "reference_agreement_raw": "246/258",
+            "logical_correct_raw": "160/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.8562,
+            "logical_correct": 0.7497,
+            "reference_agreement_raw": "643/751",
+            "logical_correct_raw": "563/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.8119,
+            "logical_correct": 0.6013,
+            "reference_agreement_raw": "5211/6418",
+            "logical_correct_raw": "3859/6418"
+          }
+        }
+      },
+      "flag_before_checks": {
+        "restorer_2bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.7326,
+            "logical_correct": 0.4612,
+            "reference_agreement_raw": "189/258",
+            "logical_correct_raw": "119/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.8043,
+            "logical_correct": 0.7137,
+            "reference_agreement_raw": "604/751",
+            "logical_correct_raw": "536/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7638,
+            "logical_correct": 0.5874,
+            "reference_agreement_raw": "4902/6418",
+            "logical_correct_raw": "3770/6418"
+          }
+        },
+        "baseline_0bit": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.5,
+            "logical_correct": 0.3605,
+            "reference_agreement_raw": "129/258",
+            "logical_correct_raw": "93/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.775,
+            "logical_correct": 0.6951,
+            "reference_agreement_raw": "582/751",
+            "logical_correct_raw": "522/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7325,
+            "logical_correct": 0.5801,
+            "reference_agreement_raw": "4701/6418",
+            "logical_correct_raw": "3723/6418"
+          }
+        },
+        "streaming_hard": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.5,
+            "logical_correct": 0.3605,
+            "reference_agreement_raw": "129/258",
+            "logical_correct_raw": "93/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.7643,
+            "logical_correct": 0.6844,
+            "reference_agreement_raw": "574/751",
+            "logical_correct_raw": "514/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7199,
+            "logical_correct": 0.569,
+            "reference_agreement_raw": "4620/6418",
+            "logical_correct_raw": "3652/6418"
+          }
+        },
+        "deadline_reference": {
+          "indist_witness": {
+            "decisions": 258,
+            "committed": 258,
+            "coverage": 1.0,
+            "reference_agreement": 0.8372,
+            "logical_correct": 0.5659,
+            "reference_agreement_raw": "216/258",
+            "logical_correct_raw": "146/258"
+          },
+          "indist_all": {
+            "decisions": 751,
+            "committed": 751,
+            "coverage": 1.0,
+            "reference_agreement": 0.8123,
+            "logical_correct": 0.7217,
+            "reference_agreement_raw": "610/751",
+            "logical_correct_raw": "542/751"
+          },
+          "fresh_weight4": {
+            "decisions": 6418,
+            "committed": 6418,
+            "coverage": 1.0,
+            "reference_agreement": 0.7694,
+            "logical_correct": 0.594,
+            "reference_agreement_raw": "4938/6418",
+            "logical_correct_raw": "3812/6418"
+          }
+        }
+      }
+    }
+  }
+}
