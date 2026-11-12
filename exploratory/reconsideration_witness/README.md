@@ -39,6 +39,15 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 | `PREREGISTRATION_stage1.md` | frozen Stage-1 protocol — committed before scoring (`28dacf1`) |
 | `stage1.py` | Bayesian restorer + 0-bit / hard-streaming baselines + deadline-reference diagnostic + fresh weight-4 eval + both onset models -> `stage1_handback.json` |
 | `STAGE1_REPORT.md` | Stage 1 results, scorecard, the deadline-vs-pruning decomposition, Astra's two reconciliations |
+| `stage1_5_onset_lip.py` | Stage 1.5 diagnostic: live-vs-live scoring + onset-lip variants (t0/t1/lip-parity/3bit/bracket4) + frame-redundancy -> `stage1_5_handback.json` |
+| `STAGE1_5_ADDENDUM.md` | Stage 1.5 results: the pruning gap is *exactly* the 4-bit onset bracket; frame redundant given it but non-substitutable; the t0/t1 lip asymmetry |
+
+**Stage 1.5 result in one line.** The deadline pruning gap is exactly the four
+onset-bracket detectors `(c0,t0),(c1,t0),(c0,t1),(c1,t1)`: restoring them makes the
+decoder equal the deadline-optimal (1.000), `frame` is then redundant but cannot
+replace any of the four (it is a non-invertible threshold), and the t0-vs-t1
+asymmetry follows Argon's lip geometry on unbiased data (FREE_BOTH→t0, ONSET_AVG→t1
+/ timing-parity) — modestly, and masked on the t0-selected witness set.
 
 **Stage 1 result in one line.** The restorer beats both baselines everywhere (the
 two bits are usable), but under a realistic decision deadline it recovers ~80% of the
