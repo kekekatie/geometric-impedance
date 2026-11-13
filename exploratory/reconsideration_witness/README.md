@@ -44,6 +44,20 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 | `stage1_6_abstention.py` | Stage 1.6: two abstention policies (low-confidence margin vs sensitivity-to-discarded-history) on the same restorer, matched-coverage (tie-fixed) -> `stage1_6_handback.json` |
 | `STAGE1_6_ADDENDUM.md` | Stage 1.6 results (tie-fixed): sensitivity-to-discarded-history strictly beats low-confidence vs the deadline-reference and is level on truth |
 
+**Stage 2 (2D surface code) — design / pre-registration.**
+
+| file | role |
+|---|---|
+| `PREREGISTRATION_2D.md` | the 2D capstone design: the onset-lip witness bracket around a lost qubit in 2D (a 4-check diamond × onset rounds), and the frozen "Thin window + local bracket vs Thick window everywhere" protocol + predictions D1–D5 |
+| `make_figure_2d.py` → `onset_lip_2d.svg` | the visual: the spatial 4-check diamond and the spacetime tube/lip |
+
+**Stage 2 design in one line.** In 2D a lost qubit sits inside a **4-check diamond**
+(2 X + 2 Z), and the delayed-loss witness bracket is that diamond at the earliest-onset
+*lip* — a local, O(1), distance-independent object. So the efficient streaming
+surface-code decoder is a **thin window everywhere + a live local bracket at each
+loss**, not a thick window everywhere; the pre-registered experiment tests exactly
+that trade (accuracy matched, retained state ~`W_thick/b_thin` smaller).
+
 **Stage 1.6 result in one line.** Given the two retained bits, ranking cases for
 abstention by *sensitivity to discarded history* (would the past I threw away change
 the best same-deadline answer?) drives pruning (deadline-reference) error to ~0 by
