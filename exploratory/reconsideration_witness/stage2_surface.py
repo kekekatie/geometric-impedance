@@ -355,6 +355,96 @@ def decode_arm(DZ, DX, arm):
     return decide(az, ax, bz, bx)
 
 
+# ---------- causal pipeline: serialize before the flag, restart, read only kept ----------
+COORD_BITS = int(np.ceil(np.log2(len(STABS)))) + int(np.ceil(np.log2(COMMIT_CUT)))
+
+
+def serialize_pre_flag(DZ, DX):
+    """The thin decoder's saved state, written BEFORE the flag names the site:
+    live rounds, committed boundary (round-2 syndrome), and the sparse scar archive
+    = coordinates of fired pruned checks (site-agnostic). Quiet checks are not stored."""
+    live = {}
+    for k in ZSTABS + XSTABS:
+        for t in LIVE:
+            live[(k, t)] = (DZ if k in ZSTABS else DX)[(k, t)]
+    boundary = {}
+    for k in ZSTABS:
+        boundary[k] = DZ[(k, 0)] ^ DZ[(k, 1)] ^ DZ[(k, 2)]
+    for k in XSTABS:
+        boundary[k] = DX[(k, 0)] ^ DX[(k, 1)] ^ DX[(k, 2)]
+    archive = set()
+    for k in ZSTABS:
+        for t in range(COMMIT_CUT):
+            if DZ[(k, t)]:
+                archive.add(('Z', k, t))
+    for k in XSTABS:
+        for t in range(COMMIT_CUT):
+            if DX[(k, t)]:
+                archive.add(('X', k, t))
+    return {'live': live, 'boundary': boundary, 'archive': archive}
+
+
+def archive_bits(state):
+    """Sparse archive payload (bits): fired events x coordinate overhead."""
+    return len(state['archive']) * COORD_BITS
+
+
+def peak_storage_bits(state, arm):
+    """Peak retained state through the flag, in bits, per arm."""
+    live_b = len(state['live'])                 # 1 bit per live detector (8 stabs x 2)
+    bnd_b = len(state['boundary'])              # 1 bit per stab
+    if arm == 'thick':
+        return len(STABS) * T                   # full uncommitted window, active
+    if arm == 'thin':
+        return live_b + bnd_b                    # no archive read/kept
+    # diamond and whole keep the SAME archive (built before the flag); identical footprint
+    return live_b + bnd_b + archive_bits(state)
+
+
+def query_readings(state, arm):
+    """Number of detector readings actually passed to the restorer at the flag."""
+    if arm == 'thick':
+        return len(STABS) * T
+    if arm == 'thin':
+        return 0
+    if arm == 'diamond':
+        return len(STAR_Z) * len(DIAMOND_ROUNDS) + len(STAR_X) * len(DIAMOND_ROUNDS)
+    return len(state['archive'])                 # whole: reads every archived event
+
+
+def decode_restart(state, arm, site):
+    """Restart a fresh decoder from the serialized state ALONE and read only what the
+    arm kept. thick reads the full (uncommitted) window; thin/diamond/whole restart
+    from `state`. The diamond/whole arms QUERY the sparse archive (fired->1, absent->0,
+    including quiet checks recovered as 0)."""
+    availZ, availX = {}, {}
+    for (k, t), v in state['live'].items():
+        (availZ if k in ZSTABS else availX)[(k, t)] = v
+    bndZ = {k: v for k, v in state['boundary'].items() if k in ZSTABS}
+    bndX = {k: v for k, v in state['boundary'].items() if k in XSTABS}
+    arch = state['archive']
+
+    def qry(tag, k, t):
+        return 1 if (tag, k, t) in arch else 0
+
+    if arm == 'diamond':
+        for k in STAR_Z:
+            for t in DIAMOND_ROUNDS:
+                availZ[(k, t)] = qry('Z', k, t)
+        for k in STAR_X:
+            for t in DIAMOND_ROUNDS:
+                availX[(k, t)] = qry('X', k, t)
+    elif arm == 'whole':
+        for k in ZSTABS:
+            for t in range(COMMIT_CUT):
+                availZ[(k, t)] = qry('Z', k, t)
+        for k in XSTABS:
+            for t in range(COMMIT_CUT):
+                availX[(k, t)] = qry('X', k, t)
+    # arm == 'thin': nothing beyond live + boundary
+    return decide(availZ, availX, bndZ, bndX)
+
+
 if __name__ == '__main__':
     _self_check()
     # decoder sanity: fault-free -> 0; a logical-X chain on LZ support -> predicts 1

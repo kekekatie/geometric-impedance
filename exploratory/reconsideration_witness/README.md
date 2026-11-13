@@ -51,14 +51,15 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 | `PREREGISTRATION_2D.md` | the 2D capstone design: the onset-lip witness bracket around a lost qubit in 2D (a 4-check diamond × onset rounds), and the frozen "Thin window + local bracket vs Thick window everywhere" protocol + predictions D1–D5 |
 | `make_figure_2d.py` → `onset_lip_2d.svg` | the visual: the spatial 4-check diamond and the spacetime tube/lip |
 | `stage2_retention_accounting.py` → `STAGE2_COMPONENT1_RESULTS.md` | 2D component 1 (built): surface-code geometry (bulk star = 4-check diamond; edge 3, corner 2) + the Shredder-resolution accounting — sparse scar archive ~`p·N·L` vs thick `N·L`, saving grows as p→0; post-flag query O(1). |
-| `stage2_surface.py` + `stage2_run.py` → `STAGE2_COMPONENT2_RESULTS.md` | 2D component 2 (built): exact two-sector onset-averaged decoder, four arms vs same-deadline reference. Diamond recovers the decision to **99.994%** (11× fewer disagreements than thin-alone) — but **not exactly thick**: 514 cases need pruned readings *outside* the loss star (a real locality gap, C4). Protocol: `PREREGISTRATION_2D.md` Amendment A (`d22dbe9`). |
+| `stage2_surface.py` + `stage2_run.py` → `STAGE2_COMPONENT2_RESULTS.md` | 2D component 2 (built): exact two-sector onset-averaged decoder; archive built **before** the flag, serialize → restart → each arm reads only what it kept (restart == direct, verified). Diamond recovers the decision to **99.994%** (11× fewer disagreements than thin-alone). The 514 residual disagreements aren't all the diamond losing: on **150** it is right and the reference wrong. Protocol: `PREREGISTRATION_2D.md` Amendment A (`d22dbe9`). |
 
 **Stage 2 Component 2 result in one line.** In a d=3 surface-code patch with one delayed
-bulk loss, the local onset-lip diamond recovers the same-deadline logical decision on
-99.994% of the ensemble (an 11× cut in disagreements vs a thin window alone) — so it is
-the right *local* object for the loss — but it is **not** a full substitute for a thick
-window: 514 rare multi-error cases need pruned detectors outside the loss star, so pure
-locality is necessary and highly effective yet not sufficient.
+bulk loss, the local onset-lip diamond — queried from a genuinely pre-flag, site-agnostic
+archive after a fresh restart — recovers the same-deadline logical decision on 99.994% of
+the ensemble (an 11× cut in disagreements vs a thin window alone); of the 514 residual
+disagreements with the reference, the diamond is actually **correct** (and the reference
+wrong) on 150, so agreement with the reference is not correctness and pure locality is
+sometimes the better call.
 
 **Stage 2 design in one line.** In 2D a lost qubit sits inside a **4-check diamond**
 (2 X + 2 Z), and the delayed-loss witness bracket is that diamond at the earliest-onset

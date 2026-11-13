@@ -5,24 +5,31 @@
 then `python3 stage2_run.py` -> `stage2_handback.json`. d=3 rotated patch, bulk loss
 at (1,1), 68,128 histories (weight ≤ 2), exact two-sector onset-averaged decoder.*
 
+**Joined causal pipeline (per Sol).** The sparse scar archive is built **before the
+flag names the site** (site-agnostic fired-check coordinates). Each arm then **restarts
+from the serialized state alone** and reads only what it kept — thin-alone reads
+live + boundary; thin+diamond and thin+whole **query the one shared archive** (a fired
+check → 1, a quiet one → 0). A self-check confirms the restart reproduces the direct
+decode on all 68,128 histories (0 mismatches), so the result below is from the real
+keep-then-restart pipeline, not from reading the simulator's record.
+
 ## One-line answer
 
-**Mostly, but not completely — and the gap is informative.** The local diamond
-recovers the same-deadline reference on **99.994%** of the ensemble (weighted), an
-**11× reduction** in disagreements versus thin-alone (5679 → 514), so it is the right
-*local* object for re-judging the loss. But it is **not** exactly the thick window:
-**514 cases** need pruned readings *outside* the lost qubit's star, which only the
-whole archive keeps. Pure locality around the loss is necessary and highly effective,
-but a thin window still sheds re-judgment-relevant detectors elsewhere.
+The local diamond recovers the same-deadline reference on **99.994%** of the ensemble —
+an **11× cut** in disagreements vs a thin window alone (5679 → 514) — so it is the right
+*local* object for the loss. But the 514 residual disagreements are **not** all the
+diamond being worse: on **150** of them the diamond is *correct and the reference is
+wrong*. Agreement with the reference is not correctness, and pure locality is sometimes
+better than the full soft reference on a rare individual history.
 
 ## The four arms (d=3 bulk, weighted by model prior)
 
-| arm | agreement vs reference | logical correct vs truth | raw disagreements | query readings | memory (bits) |
+| arm | agreement vs reference | logical correct vs truth | raw disagreements | query readings | peak storage (bits) |
 |---|---|---|---|---|---|
-| Thick window | 1.000000 (ref) | 0.995904 | 0 | all detectors | full record |
-| Thin alone | 0.994111 | 0.992025 | 5679 | 0 beyond live+boundary | live 16 + boundary 8 |
-| **Thin + diamond** | **0.999944** | 0.995880 | **514** | **≤ 8 (fixed, local)** | live 16 + boundary 8 + diamond 8 |
-| Thin + whole archive | 1.000000 | 0.995904 | 0 | mean 3.33 fired (O(pruned fired)) | live 16 + boundary 8 + archive |
+| Thick window | 1.000000 (ref) | 0.995904 | 0 | all | 40 (full window) |
+| Thin alone | 0.994111 | 0.992025 | 5679 | 0 | 24 (live 16 + boundary 8) |
+| **Thin + diamond** | **0.999944** | 0.995880 | **514** | **≤ 8 fixed, local** | 64 (24 + archive) |
+| Thin + whole archive | 1.000000 | 0.995904 | 0 | mean 3.33 fired | 64 (same archive) |
 
 ## Scorecard (frozen C1–C5)
 
@@ -31,57 +38,59 @@ but a thin window still sheds re-judgment-relevant detectors elsewhere.
 | C1 | thin+diamond ≥ 99% agreement, far above thin-alone | **HELD** (0.99994 vs 0.9941; 11× fewer disagreements) |
 | C2 | thin+whole-archive == thick == reference exactly | **HELD** (0 mismatches over 68,128) |
 | C3 | thin-alone strictly more disagreements than thin+diamond | **HELD** (5679 > 514) — the 2D witness exists |
-| C4 | if whole beats diamond, resolving readings lie outside the star | **HELD, and it happens**: 514 cases, resolving readings outside the loss star (not hidden) |
+| C4 | if whole beats diamond, resolving readings lie outside the star | **HELD** (514 cases; resolving reading outside the star) — *but see the correctness nuance* |
 | C5 | diamond query ≤ 8 fixed; whole = O(pruned fired) | **HELD** (diamond 8; whole mean 3.33 at p=1e-3) |
 
-Self-checks all passed: whole-archive == thick on every history; the sparse fired-check
-archive and the dense lip-plane reconstruct the **same** readings (quiet checks = 0);
-`decode_arm` is a pure function of each arm's serialized evidence, so a fresh restart
-reproduces it.
+Self-checks: restart == direct decode (0); whole-archive == thick (0); sparse and dense
+archives reconstruct the same readings including quiet checks = 0.
 
-## The locality gap (C4), honestly
+## Agreement is not correctness (the Sol nuance, quantified)
 
-The 514 diamond-misses are all one-directional: **whole recovers, diamond misses; never
-the reverse.** A replayable example: faults `X@(0,0) round 0` and `X@(0,0) round 4` on
-the corner qubit (0,0) — far from the loss at (1,1). The round-4 reading is live; the
-**round-0 reading is pruned**, and it fires Z-stab 0, which is in (0,0)'s star but
-**not** in the loss diamond `{1,2,5,6}`. The diamond arm therefore cannot pair the two
-X-errors and mis-judges; the whole archive keeps that pruned Z-stab-0 reading and
-re-judges correctly. So the resolving reading is a pruned fired check **outside the loss
-star** — exactly the failure mode C4 named.
+Of the **514** histories where thin+diamond disagrees with the same-deadline reference:
 
-**What this means.** The diamond solves the *loss-locality* problem: nearly all of
-thin-alone's extra failures were loss-neighbourhood re-judgments, and the diamond fixes
-them (5679 → 514). The residual 514 are not about the loss at all — they are ordinary
-pruned errors on the logical support that a thin window sheds regardless, and that only
-a full archive restores. So **"thin + local bracket = thick" holds for the loss, but a
-thin window is not a full substitute for a thick window in general.** At a realistic
-error rate the residual is tiny (0.006% weighted), because those cases are rare
-multi-error configurations — but it is non-zero, and it is a genuine limit on pure
-locality, not an artefact to sweep away.
+| | count |
+|---|---|
+| diamond matches truth → **the reference is wrong** | **150** |
+| reference matches truth → the diamond is wrong | 364 |
+| both wrong | 0 |
 
-**Caveat (frozen choice).** The gap is measured against this protocol's minimal carried
-state (boundary = the round-2 syndrome, 8 bits). A richer committed frame would carry
-more of the pruned region and shrink the 514; the number is an upper bound on the
-locality failure given the thinnest honest boundary.
+So a third of the "locality gap" is the reference — an *optimal soft decoder at the
+deadline* — mispredicting a rare individual history, where the local diamond happens to
+be right. This is why the diamond's correctness-vs-truth (0.995880) sits a hair below
+thick's (0.995904): its 364 genuine misses are nearly offset by 150 cases where it beats
+the reference. The capstone claim is therefore even gentler than Component-2's first
+pass suggested: the diamond is *not* strictly worse than the full record for being
+right — it is differently wrong, and sometimes more right.
 
-## Memory and query size
+**The replayable example.** Faults `X@(0,0) round 0` and `X@(0,0) round 4` on the corner
+qubit (0,0), far from the loss. **Reference = 1, truth = 0, diamond = 0** — the diamond
+is correct and the reference is wrong. The single resolving reading is the pruned fired
+check **`Z-stab 0 at round 0`** (in (0,0)'s star, *outside* the loss diamond `{1,2,5,6}`):
+putting just that one old reading into the diamond flips it from 0 to 1 — i.e. onto the
+*reference's wrong* answer. So the reading that "resolves" the disagreement toward the
+reference here actually resolves it toward the error.
 
-At p = 1e-3 the whole-archive's mean readings (3.33 fired) are actually **fewer** than
-the diamond's fixed 8 — syndromes are sparse, so "keep every fired check" is cheap. The
-diamond's advantage is that it is **bounded and local** (≤ 8 readings regardless of
-patch size or error rate), while the whole archive grows with the firing rate and the
-patch. The trade is the one Component 1 quantified: local-bounded vs
-activity-proportional.
+## Memory and query size (honest at d=3)
+
+Peak retained state through the flag: thick 40 bits (full uncommitted window), thin 24,
+thin+diamond = thin+whole = 64 (they keep the **same** archive). At d=3 the archive's
+coordinate overhead (5 bits/event) makes thin+archive peak *larger* than the tiny dense
+window — the Component-1 crossover: on a small patch "keep every fired check's address"
+costs more than "keep the whole dense window." The storage **saving is a larger-d
+phenomenon** (Component 1: it grows with `N·L` and as `p→0`). What is already distance-
+independent here is the **query**: the diamond reads a fixed ≤ 8 local positions whatever
+the archive holds, while the whole arm reads every archived event (mean 3.33).
 
 ## What this establishes, and the next step
 
-- The 2D re-judgment witness is real (C3), and the onset-lip diamond is the correct
-  *local* restoration for it (C1), recovering the same-deadline decision to 99.994%.
-- Pure locality is **not exact** (C4): 514 rare cases need pruned information outside the
-  star — the capstone "thin + bracket = thick" is true for the loss but not in general.
-- **Decision on boundary / d=5 (per the protocol).** The interesting open question the
-  d=3 bulk run surfaces is whether the locality gap *grows* with distance (more room for
-  distant pruned errors on a longer logical) or stays a rare-multi-error tail. That —
-  and the boundary-loss case (smaller diamond, D4) — is the natural next run. The d=3
+- The 2D re-judgment witness is real (C3); the onset-lip diamond is the right *local*
+  restoration (C1), recovering the same-deadline decision to 99.994% from a genuinely
+  serialized, site-agnostic, pre-flag archive (restart verified).
+- Locality is not *exact* (C4): 514 cases differ from the full record — but on 150 of
+  them locality is the one that is right. "Thin + bracket = thick" holds for the loss;
+  beyond it, the diamond and the full record simply make different rare errors.
+- **Decision on boundary / d=5.** Two questions the d=3 bulk run sharpens: does the
+  locality gap (and its diamond-right share) *grow* with distance, and does the storage
+  saving turn positive once `N·L` is large enough to beat the coordinate overhead? Those,
+  plus the boundary-loss case (3-check diamond, D4), are the natural next run. The d=3
   bulk deliverable is complete.
