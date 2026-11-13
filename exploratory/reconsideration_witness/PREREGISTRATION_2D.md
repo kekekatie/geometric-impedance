@@ -242,3 +242,104 @@ record exactly where a tile went missing.
 - This file is the design; no 2D outcome has been computed. Implementation
   (`stage2_surface.py`) and results are a separate, later commit, following the repo's
   pre-registration-before-code discipline.
+
+---
+
+## Amendment A (2026-11-13): frozen decoder protocol for the d=3 bulk run
+
+*Component 1 (`2592901`) reproduced the geometry and the background-storage accounting.
+This amendment freezes the **decoder** before Component 2 runs: can the diamond query
+recover the same-deadline decision? It is committed before `stage2_surface.py` is
+written. Distance-3 bulk site only; boundary and d=5 are decided from this result.*
+
+**Code.** The d=3 rotated patch of Component 1: 9 data qubits, 8 stabilizers —
+X-stabs {1,3,4,6}, Z-stabs {0,2,5,7} (indices as printed by `build_code(3)`). `T = 6`
+rounds, perfect prep of `|0_L>` and (for the reference only) perfect final readout.
+
+**Two sectors (exact, decoupled except through the shared onset).** X-errors (bit
+flips) are seen by the Z-stabs and flip the logical `Z_L`; Z-errors are seen by the
+X-stabs and flip `X_L`. The scored logical is **`Z_L`** (an `X`-error / Z-stab memory).
+Each sector is an exact GF(2) detector model built by single-fault simulation (as in
+1D); the logical functionals `ℓ_Z` (for X-errors) and `ℓ_X` (for Z-errors) are derived
+from the stabilizer group (kernel-minus-rowspace) and self-checked
+(`ℓ_Z·X_L = 1`, fault-free ⇒ clean, single error ⇒ corrected).
+
+**Noise.** Phenomenological: each data qubit each round takes an independent X error
+w.p. `p` and a Z error w.p. `p`; each stabilizer measurement flips w.p. `p`
+(`p = 1e-3`, used only to weight the exact bounded-weight marginal; the ensemble is
+enumerated, not sampled).
+
+**Loss model and what the simulation does.** Exactly one data qubit — the **bulk site
+`(1,1)`**, whose star is the 4-check diamond `{1(X), 2(Z), 5(Z), 6(X)}` — is erased at a
+true onset `s ∈ O = {1,2}` (uniform). The erasure is modelled, linearly and exactly as
+in 1D, as a **free X fault and a free Z fault on `(1,1)` at round `s`** (weight-1/2
+edges): from round `s` on, that qubit's X and Z are unknown, so every star-stabilizer
+measurement from round `s` and the final readout of `(1,1)` are taken against the freed
+value. The true `s` and the freed values are scoring-only. The delayed **report** gives
+`(site = (1,1), onset_interval = {1,2}, report_round = 4)` — the three timescales kept
+distinct.
+
+**Commit cut, flag/check order, deadline.** The thin window commits rounds `{0,1,2}`
+(core) after reading round 3 and keeps rounds `{3,4}` live; the committed state is a
+per-sector **frame** bit (the committed region's logical contribution, MAP-decoded
+**without** erasure knowledge, since the report has not arrived) plus a **boundary** =
+the raw measured syndrome at the cut round 2. The flag arrives **after** the round-4
+checks (flag-after; the reverse order is a later control). The **deadline** is round 4:
+no decoder (and not the reference) sees round 5 or the closing readout — those are
+future and are marginalised.
+
+**Decision routine (shared across all arms).** For each candidate onset `s ∈ O`,
+condition on `s`, then combine the sectors: the X-sector (Z-stab) marginal split by
+`Z_L` gives `(q0[s], q1[s])` over X-error configs consistent with the arm's available
+Z-stab detectors and the free X-erasure at `s`; the Z-sector (X-stab) total likelihood
+`r[s]` is over Z-error configs consistent with the available X-stab detectors and the
+free Z-erasure at `s`. Average over onset: `P(Z_L=c) = Σ_s r[s]·q_c[s]` (uniform prior);
+decide `argmax`, strict by `eps = 1e-12`. Each sector marginal is the exact
+bounded-weight sum (decoder hypothesis weight ≤ `w_dec = 3`), conditioned on
+`frame + boundary + available detectors`, marginalising the rest — the Stage-1.5
+restorer, ported to two sectors. The same histories, flags, and this one routine are
+used across all arms; arms differ **only** in which detectors are available.
+
+**The four arms (what each may condition on at the flag).**
+
+| Arm | Available detectors (on top of frame + boundary + live rounds 3–4) |
+|---|---|
+| Thick window | all detectors, rounds 0–4, whole patch (no commit) |
+| Thin alone | none beyond frame + boundary + live |
+| Thin + diamond | the diamond `{1,2,5,6} × onset-interval rounds {1,2}` (pruned) |
+| Thin + whole archive | every fired detector in the pruned rounds {0,1,2}, whole patch |
+
+**Archive.** Written **before** the flag names the site, from observed fired-check
+coordinates only (Mode A sparse) and the dense `N·L` lip-plane (Mode B). A self-check
+verifies dense and sparse reconstruct the *same* readings (including quiet checks = 0)
+for the rounds they cover. The two archive arms are given an identical footprint so the
+comparison isolates **what they read**; where whole-archive + thin covers the same
+record as thick, feeding it to the one decision routine must reproduce the thick result
+(checked). A fresh restart from each arm's serialized state is tested.
+
+**Evaluation ensemble (documented).** All histories = {the loss at onset `s ∈ O`} +
+up to `w_max = 2` extra base faults (data X, data Z, or measurement, any round), total
+extra weight ≤ 2, each weighted by its model prior; plus a **witness stress set** of
+histories that collide in the thin decoder's serialized state. The d=3 bulk run is the
+first deliverable.
+
+**Scoring.** Agreement with the same-deadline unpruned **reference** (= thick) and
+logical error vs **simulator truth**, reported **separately**; raw disagreement counts,
+including whether whole-archive recovers cases the diamond misses; one replayable
+disagreement if found; storage on the actual loss-injected runs (live window,
+frame/boundary, archive payload, coordinate + bookkeeping overhead, peak retained
+through the flag), and the **number of detector readings passed to the restorer**
+reported separately from total storage.
+
+**Frozen predictions (d=3 bulk).**
+- **C1.** Thin+diamond agrees with the reference on ≥ 99% of the ensemble, far above
+  thin-alone. Conf ~65%.
+- **C2.** Thin+whole-archive == thick == reference exactly (same record ⇒ same decision).
+  Conf ~90%.
+- **C3.** Thin-alone has strictly more reference-disagreements than thin+diamond (the
+  2D witness). Conf ~80%.
+- **C4.** If whole-archive beats the diamond anywhere, the resolving readings lie
+  **outside** the lost site's star — a failure of pure locality to be reported, not
+  hidden. Conf ~40% that this happens at all.
+- **C5.** Query size (detector readings to the restorer): thin+diamond ≤ 8, independent
+  of the archive footprint; thin+whole-archive = O(pruned fired checks). Conf ~90%.
