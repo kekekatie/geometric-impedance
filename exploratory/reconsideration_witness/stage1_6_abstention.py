@@ -367,18 +367,30 @@ def _rank_diff(cases):
 
 def _divergent_example(cases):
     # normalize both scores to ranks, find the largest rank disagreement
-    n = len(cases)
-    by1 = {id(c): i for i, c in enumerate(sorted(cases, key=lambda c: (c['score_lowconf'], c['faults'])))}
-    by2 = {id(c): i for i, c in enumerate(sorted(cases, key=lambda c: (c['score_sens'], c['faults'])))}
-    best = max(cases, key=lambda c: abs(by1[id(c)] - by2[id(c)]))
+    # The documented illustrative case (a double-onset loss): report its two RAW
+    # scores, never an integer rank inside the tied reversal_mass=0 bucket (such a rank
+    # depends on list order, as Astra noted). Fall back to the smallest-margin correct
+    # P2-kept case if the documented one is absent from this set.
+    tie0 = [c for c in cases if abs(c['score_sens']) <= 1e-12]
+    documented = frozenset([('d', 0, 0), ('d', 1, 1), ('d', 1, 2)])
+    match = [c for c in cases if frozenset(c['faults']) == documented]
+    if match:
+        best = match[0]
+    else:
+        pool = [c for c in tie0 if c['proposed'] == c['truth']] or tie0
+        best = min(pool, key=lambda c: (c['margin'], c['faults']))
     return {'faults': [list(f) for f in best['faults']],
-            'proposed': best['proposed'], 'margin': round(best['margin'], 6),
-            'reversal_mass': round(best['reversal_mass'], 6),
-            'lowconf_rank(0=abstain_first)': n - 1 - by1[id(best)],
-            'sensitivity_rank(0=abstain_first)': n - 1 - by2[id(best)],
+            'proposed': best['proposed'],
+            'P1_score_margin': round(best['margin'], 6),
+            'P2_score_reversal_mass': round(best['reversal_mass'], 6),
+            'in_P2_zero_reversal_bucket_of_size': len(tie0),
             'actual_deadline_ref': best['dref'], 'truth': best['truth'],
-            'reading': 'low rank = abstained early. A case low-conf keeps but '
-                       'sensitivity drops (or vice versa) shows what each noticed.'}
+            'reading': 'P1 is tempted to abstain (small margin) though the answer is '
+                       'correct; P2 keeps it (reversal_mass = 0, i.e. no discarded '
+                       'completion would flip the deadline-optimal) -- it sits in the '
+                       'large zero-reversal bucket and is not singled out. No integer '
+                       'rank is reported because ranks inside the tied bucket depend '
+                       'on list order.'}
 
 
 def _print(out):

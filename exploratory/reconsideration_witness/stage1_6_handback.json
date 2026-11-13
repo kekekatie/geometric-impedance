@@ -1237,12 +1237,11 @@
       ]
     ],
     "proposed": 1,
-    "margin": 0.497001,
-    "reversal_mass": 0.0,
-    "lowconf_rank(0=abstain_first)": 104,
-    "sensitivity_rank(0=abstain_first)": 249,
+    "P1_score_margin": 0.497001,
+    "P2_score_reversal_mass": 0.0,
+    "in_P2_zero_reversal_bucket_of_size": 171,
     "actual_deadline_ref": 1,
     "truth": 1,
-    "reading": "low rank = abstained early. A case low-conf keeps but sensitivity drops (or vice versa) shows what each noticed."
+    "reading": "P1 is tempted to abstain (small margin) though the answer is correct; P2 keeps it (reversal_mass = 0, i.e. no discarded completion would flip the deadline-optimal) -- it sits in the large zero-reversal bucket and is not singled out. No integer rank is reported because ranks inside the tied bucket depend on list order."
   }
 }
