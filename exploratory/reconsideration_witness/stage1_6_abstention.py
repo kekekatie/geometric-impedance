@@ -210,25 +210,53 @@ def build_cases(hist_weights, variant, flag_after, onset):
 
 
 def sweep(cases, score_key):
+    """Matched-coverage error curve.
+
+    stage1_6_tie_fix: ties in the abstention score are resolved by EXACT EXPECTATION
+    over the tied score bucket -- NEVER by the hidden simulator fault tuple (which the
+    decoder cannot see and which front-loads heavier fault patterns). When a coverage
+    cutoff lands inside a tied-score bucket, that bucket is included fractionally and
+    contributes its MEAN error, i.e. the exact expected value over uniform random
+    tie-breaking within the bucket. Equivalent to keying only by permitted observables
+    and averaging across ties.
+    """
+    from collections import defaultdict
     W = sum(c['weight'] for c in cases)
-    ordered_ans = sorted(cases, key=lambda c: (c[score_key], c['faults']))  # lowest score first
+    buckets = defaultdict(lambda: {'w': 0.0, 'cnt': 0, 'truth_err': 0.0,
+                                   'dw': 0.0, 'dref_err': 0.0})
+    for c in cases:
+        b = buckets[round(c[score_key], 12)]
+        b['w'] += c['weight']
+        b['cnt'] += 1
+        b['truth_err'] += c['weight'] if c['proposed'] != c['truth'] else 0.0
+        if c['dref'] is not None:
+            b['dw'] += c['weight']
+            b['dref_err'] += c['weight'] if c['proposed'] != c['dref'] else 0.0
+    order = sorted(buckets)                       # ascending score = answered first
     res = {}
     for kappa in GRID:
-        target = kappa * W + 1e-12
-        acc = 0.0
-        answered = []
-        for c in ordered_ans:
-            if acc + c['weight'] <= target:
-                answered.append(c)
-                acc += c['weight']
+        budget = kappa * W
+        inc_w = inc_cnt = inc_truth = inc_dw = inc_dref = acc = 0.0
+        for s in order:
+            b = buckets[s]
+            if acc + b['w'] <= budget + 1e-12:
+                f = 1.0
             else:
+                f = (budget - acc) / b['w'] if b['w'] > 0 else 0.0
+                if f <= 0:
+                    break
+            inc_w += f * b['w']
+            inc_cnt += f * b['cnt']
+            inc_truth += f * b['truth_err']
+            inc_dw += f * b['dw']
+            inc_dref += f * b['dref_err']
+            acc += b['w']
+            if f < 1.0:
                 break
-        ew = sum(c['weight'] for c in answered)
-        dw = sum(c['weight'] for c in answered if c['dref'] is not None)
-        e_dref = (sum(c['weight'] for c in answered
-                      if c['dref'] is not None and c['proposed'] != c['dref']) / dw) if dw else None
-        e_truth = sum(c['weight'] for c in answered if c['proposed'] != c['truth']) / ew if ew else None
-        res[kappa] = {'answered_frac': round(ew / W, 4), 'n_answered': len(answered),
+        e_dref = inc_dref / inc_dw if inc_dw > 0 else None
+        e_truth = inc_truth / inc_w if inc_w > 0 else None
+        res[kappa] = {'answered_frac': round(inc_w / W, 4),
+                      'n_answered_expected': round(inc_cnt, 1),
                       'err_vs_dref': round(e_dref, 4) if e_dref is not None else None,
                       'err_vs_truth': round(e_truth, 4) if e_truth is not None else None}
     return res

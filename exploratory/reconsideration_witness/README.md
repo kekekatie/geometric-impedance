@@ -41,15 +41,16 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 | `STAGE1_REPORT.md` | Stage 1 results, scorecard, the deadline-vs-pruning decomposition, Astra's two reconciliations |
 | `stage1_5_onset_lip.py` | Stage 1.5 diagnostic: live-vs-live scoring + onset-lip variants (t0/t1/lip-parity/3bit/bracket4) + frame-redundancy -> `stage1_5_handback.json` |
 | `STAGE1_5_ADDENDUM.md` | Stage 1.5 results: the pruning gap is *exactly* the 4-bit onset bracket; frame redundant given it but non-substitutable; the t0/t1 lip asymmetry |
-| `stage1_6_abstention.py` | Stage 1.6: two abstention policies (low-confidence margin vs sensitivity-to-discarded-history) on the same restorer, matched-coverage -> `stage1_6_handback.json` |
-| `STAGE1_6_ADDENDUM.md` | Stage 1.6 results: the two abstention reasons target different errors — sensitivity wins vs the deadline-reference, low-confidence wins vs truth |
+| `stage1_6_abstention.py` | Stage 1.6: two abstention policies (low-confidence margin vs sensitivity-to-discarded-history) on the same restorer, matched-coverage (tie-fixed) -> `stage1_6_handback.json` |
+| `STAGE1_6_ADDENDUM.md` | Stage 1.6 results (tie-fixed): sensitivity-to-discarded-history strictly beats low-confidence vs the deadline-reference and is level on truth |
 
-**Stage 1.6 result in one line.** Given the two retained bits, the streaming decoder
-has two principled reasons to abstain, and they are *not* interchangeable: ranking by
-sensitivity-to-discarded-history drives pruning (deadline-reference) error to ~0 by
-κ≈0.7, while ranking by posterior margin (low confidence) is the one that lowers error
-vs truth. One asks "would the past I discarded change the best same-time answer?"; the
-other asks "am I unsure?" — and which you want depends on which error you fear.
+**Stage 1.6 result in one line.** Given the two retained bits, ranking cases for
+abstention by *sensitivity to discarded history* (would the past I threw away change
+the best same-deadline answer?) drives pruning (deadline-reference) error to ~0 by
+κ≈0.7 and is **level with low-confidence on truth error** — so it is the preferable
+abstention reason. (An earlier version claimed the two diverged on truth; that was a
+tie-breaking artifact — `stage1_6_tie_fix` scores score-ties by exact expectation,
+never by the hidden fault tuple.)
 
 **Stage 1.5 result in one line.** The deadline pruning gap is exactly the four
 onset-bracket detectors `(c0,t0),(c1,t0),(c0,t1),(c1,t1)`: restoring them makes the
