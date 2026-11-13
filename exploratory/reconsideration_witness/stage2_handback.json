@@ -1,0 +1,72 @@
+{
+  "built_on": "d22dbe9",
+  "w_max": 2,
+  "n_histories": 68128,
+  "weighted": {
+    "thick": {
+      "agreement_vs_reference": 1.0,
+      "logical_correct_vs_truth": 0.995904,
+      "raw_disagreements_vs_reference": 0
+    },
+    "thin": {
+      "agreement_vs_reference": 0.994111,
+      "logical_correct_vs_truth": 0.992025,
+      "raw_disagreements_vs_reference": 5679
+    },
+    "diamond": {
+      "agreement_vs_reference": 0.999944,
+      "logical_correct_vs_truth": 0.99588,
+      "raw_disagreements_vs_reference": 514
+    },
+    "whole": {
+      "agreement_vs_reference": 1.0,
+      "logical_correct_vs_truth": 0.995904,
+      "raw_disagreements_vs_reference": 0
+    }
+  },
+  "self_checks": {
+    "whole_archive_equals_thick (must be 0 mismatches)": 0,
+    "sparse_dense_archive_reconstruct_same": true,
+    "snapshot_restart": "decode_arm is a pure function of the arm serialized evidence; a fresh call from that evidence reproduces it"
+  },
+  "locality": {
+    "cases_diamond_misses_whole_recovers": 514,
+    "cases_whole_misses_diamond_recovers": 0
+  },
+  "storage_bits": {
+    "live_window (8 stabs x 2 live rounds)": 16,
+    "boundary (round-2 syndrome, 8 stabs)": 8,
+    "diamond_query_readings (fixed)": 8,
+    "whole_archive_readings_mean_fired": 3.334,
+    "note": "diamond query is O(1) and independent of the archive footprint; whole-archive readings scale with pruned fired checks"
+  },
+  "example_diamond_miss": {
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "true_onset": 1,
+    "decisions": {
+      "thick": 1,
+      "thin": 0,
+      "diamond": 0,
+      "whole": 1
+    },
+    "truth_zl": 0,
+    "note": "whole-archive recovers the reference here while thin+diamond does not; the resolving readings are pruned fired checks outside the loss star (a locality gap, reported per C4)"
+  }
+}
