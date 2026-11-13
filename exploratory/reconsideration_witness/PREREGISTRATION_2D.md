@@ -94,17 +94,71 @@ post-deadline future (scored against a same-deadline unpruned reference, as in 1
   history and re-judges optimally. Retained live state ≈ **O(d² · W_thick)** detectors
   (whole patch × thick buffer).
 
-- **THIN + LOCAL BRACKET.** A thin global window, buffer `b_thin ≪ L` (just enough for
-  ordinary decoding), **plus** a rule: when a loss is flagged at site `p`, keep the
-  local bracket(p) — its star × onset interval — live past the cut, carried with the
-  Pauli frame as a small side record. Retained live state ≈ **O(d² · b_thin) +
-  n_loss · O(1)**. For sparse losses this is ~`W_thick / b_thin` times smaller.
+- **THIN + WITNESS ARCHIVE.** A thin global window, buffer `b_thin ≪ L` (just enough
+  for ordinary decoding), **plus** a sparse *scar archive* written at commit time —
+  **not** a per-loss bracket, which cannot be known before the flag (see §2b). On the
+  flag, the restorer *queries* the local diamond from that archive. Retained pre-flag
+  state ≈ **O(d² · b_thin)** active **+** the sparse scar archive (§2b); the post-flag
+  query it feeds the restorer is **O(1)** (≤ a star × onset interval).
 
-- **THIN-ALONE** (control). The thin window with no bracket: it prunes the loss site
+- **THIN-ALONE** (control). The thin window with no archive: it prunes the loss site
   like everything else. This is the 2D witness decoder — it should fail to re-judge.
 
 - **SAME-DEADLINE REFERENCE** (scoring only). Unpruned full history, decided at the
   deadline. The gold standard for re-judgment, as in 1D.
+
+## 2b. Sol's Shredder Paradox, and the pre-flag causal accounting
+
+**The paradox (Sol).** The thin window prunes rounds 0–1 at round 2. The delayed loss
+flag does not arrive until round 4 and only then names the site `q`. So at the moment
+of the shredder cut the decoder *cannot know which diamond to save*. What, then, does
+it retain across the patch before the flag — and how is that storage honestly counted?
+
+**The resolution.** You do not save "the diamond for `q`" (unknowable at the cut). You
+save, cheaply, the sparse record of **all syndrome activity** in the prune-eligible
+rounds, and **query** the local diamond only once the flag names `q`. Syndromes are
+sparse, so this record is small — and it is exactly the Penrose living-skin move: *pin
+a scar only where a local frustration actually fired.* We pre-register two explicit
+pre-flag retention modes and count each against THICK-EVERYWHERE, reporting pre-flag
+retained bits/events **and** the O(1) post-flag diamond query separately.
+
+Let `N = d²-1` checks, `L` = maximum loss-report latency (rounds a report may reach
+back across the cut), `p_eff` = per-check-per-round firing probability (~ the physical
+error rate).
+
+- **Mode A — Sparse Activity-Triggered Pinning (local scar archive).** At each commit,
+  for the committed rounds still inside the report-reach window (the last `L`
+  committed rounds), write to a side-buffer **only the coordinates `(check, round)` of
+  detectors that fired (`det = 1`)**. Quiet checks (`det = 0`) write nothing — they are
+  the default vacuum and are recovered as `0` at query time for free. The buffer is a
+  sliding window of the last `L` committed rounds, so older scars are dropped once no
+  report can reach them.
+  - Pre-flag retained: `O(d²·b_thin)` active **+** `|fired detectors in last L rounds|`
+    sparse events `≈ p_eff · N · L` coordinates. **Activity-triggered: it scales with
+    the errors that actually happened, not with patch area × latency.**
+  - Post-flag: the restorer queries `◇(q)` = `{q's star checks} × {onset interval}`
+    from the buffer (absent ⇒ 0). **O(1)**, ≤ `4 × |onset interval|` bits.
+
+- **Mode B — Dense Lip Bit-Plane (the honest no-free-lunch baseline).** Commit the thin
+  window on schedule but keep a *passive dense* bit-plane of the last `L` rounds'
+  detectors over the whole patch: `N · L` bits. Same post-flag O(1) query as Mode A.
+  Pre-flag retained: `O(d²·b_thin)` active **+** `N · L` passive bits — the same order
+  as THICK, but *passive storage* rather than a *live decoding graph* (cheaper to
+  maintain, not re-matched each round).
+
+**The honest hierarchy of pre-flag cost** (all three give the same O(1) post-flag
+diamond, and — the hypothesis — the same re-judgment accuracy):
+
+| scheme | pre-flag retention | kind | scales with |
+|---|---|---|---|
+| THICK-EVERYWHERE | `O(N · L)` | **active** decoding graph | patch area × latency |
+| THIN + dense lip-plane (Mode B) | `O(N · L)` | passive bit-plane | patch area × latency |
+| THIN + sparse scar (Mode A) | `O(p_eff · N · L)` | passive event list | **actual syndrome activity** |
+
+The payoff is Mode A: the archive you must keep *before you know where the loss was* is
+proportional to the frustration that actually occurred, so for a low physical error
+rate it is far below the thick window's spacetime volume — while the thing the restorer
+actually consumes at the flag is the same tiny local diamond either way.
 
 ## 3. Frozen protocol
 
@@ -117,30 +171,45 @@ post-deadline future (scored against a same-deadline unpruned reference, as in 1
   `O = {s_a, s_b}`, reported at a frozen delayed round after the commit cut. The
   report gives site + interval, not the true onset — the three timescales kept
   distinct, as in 1D. Onset models `ONSET_AVG` (primary) and `FREE_BOTH`, as 1D.
-- **Decoders.** The four above. The thin window's commit/prune/boundary scheme is the
-  2D generalization of the 1D sliding window (commit temporal slabs, carry the
-  committed correction's boundary defects on the cut + a Pauli frame); documented and
-  serialized so a fresh decoder resumes from the snapshot alone.
-- **Bracket rule.** `bracket(p)` = the stabilizers in `p`'s star (≤4 bulk, 3 edge, 2
-  corner) × the onset interval rounds. Retained live, keyed only by permitted
-  observables.
+- **Decoders.** THICK-EVERYWHERE, THIN+WITNESS-ARCHIVE (Mode A sparse; Mode B dense as
+  a baseline), THIN-ALONE, and the SAME-DEADLINE REFERENCE. The thin window's
+  commit/prune/boundary scheme is the 2D generalization of the 1D sliding window
+  (commit temporal slabs, carry the committed correction's boundary defects on the cut
+  + a Pauli frame); documented and serialized so a fresh decoder resumes from the
+  snapshot alone.
+- **Pre-flag retention rule (the Shredder resolution, §2b).** At each commit, the scar
+  archive records the sparse coordinates of *fired* detectors (`det = 1`) in the last
+  `L` committed rounds across the whole patch (Mode A), or the dense `N·L` lip
+  bit-plane (Mode B). It is **not** keyed on the (unknown) loss site. Quiet checks cost
+  nothing. The archive is a sliding `L`-round window.
+- **Post-flag query rule.** On the flag at site `q`, the restorer reads
+  `◇(q) = {q's star checks (≤4 bulk, 3 edge, 2 corner)} × {onset interval rounds}` from
+  the archive (absent ⇒ 0). O(1), distance-independent.
 - **Evaluation.** A bounded/weighted ensemble of allowed histories (one loss + up to
   `w_max` extra faults), documented sampling rule, plus a witness stress set of
   histories that collide in the thin decoder's serialized state. Scored at matched
   coverage where abstention is used.
 - **Metrics (reported separately).** (i) re-judgment agreement with the same-deadline
-  reference; (ii) logical error vs simulator truth; (iii) **retained live-state size**
-  (detector count / bytes) for each decoder — the efficiency axis that makes this 2D
-  experiment worth running. Tie handling by exact expectation (`stage1_6_tie_fix`).
+  reference; (ii) logical error vs simulator truth; (iii) **pre-flag retained state**
+  — counted honestly as both active decoding-graph size and passive storage, in bits
+  and in events, for THICK vs Mode A vs Mode B (the §2b table); (iv) **post-flag query
+  size** fed to the restorer (target O(1) for every retaining scheme). Tie handling by
+  exact expectation (`stage1_6_tie_fix`).
 
 ## 4. Predictions (fixed now)
 
-- **D1 — thin + bracket ≈ thick, far cheaper.** THIN+BRACKET matches THICK-EVERYWHERE
-  on re-judgment agreement with the reference to within a small ε (target: both ≥ 0.99
-  on the bulk-loss primary run), while retaining **O(W_thick / b_thin)** less live
-  state. Conf ~70%.
-- **D2 — the 2D witness persists.** THIN-ALONE has strictly higher re-judgment error
-  than both (it sheds the bracket). Conf ~80%.
+- **D1 — thin + archive ≈ thick on accuracy.** THIN+WITNESS-ARCHIVE matches
+  THICK-EVERYWHERE on re-judgment agreement with the reference to within a small ε
+  (target: both ≥ 0.99 on the bulk-loss primary run), delivering the same O(1)
+  post-flag diamond. Conf ~70%.
+- **D1b — sparse archive is the win; dense lip-plane is not.** Pre-flag, Mode A's scar
+  archive costs `O(p_eff · N · L)` and falls as the physical error rate `p_eff → 0`,
+  while THICK and Mode B both cost `O(N · L)` independent of `p_eff`. So the sparse
+  archive's advantage over thick *grows* at low error rate; the dense lip-plane shows
+  there is no free lunch if you keep every check rather than only the fired ones.
+  Conf ~70%.
+- **D2 — the 2D witness persists.** THIN-ALONE (no archive) has strictly higher
+  re-judgment error than both (it sheds the diamond). Conf ~80%.
 - **D3 — the diamond is minimal.** Dropping any single stabilizer from the star, or
   the lip (earliest-onset) rounds, degrades THIN+BRACKET's re-judgment — the 2D analog
   of the 1D "all four onset-bracket bits are needed." Conf ~55%.
