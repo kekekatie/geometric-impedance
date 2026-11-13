@@ -50,6 +50,7 @@ small local remnant heals it, but **two** detectors, not the paper's one.
 |---|---|
 | `PREREGISTRATION_2D.md` | the 2D capstone design: the onset-lip witness bracket around a lost qubit in 2D (a 4-check diamond × onset rounds), and the frozen "Thin window + local bracket vs Thick window everywhere" protocol + predictions D1–D5 |
 | `make_figure_2d.py` → `onset_lip_2d.svg` | the visual: the spatial 4-check diamond and the spacetime tube/lip |
+| `stage2_retention_accounting.py` → `STAGE2_COMPONENT1_RESULTS.md` | 2D component 1 (built): surface-code geometry (bulk star = 4-check diamond; edge 3, corner 2) + the Shredder-resolution accounting — sparse scar archive ~`p·N·L` vs thick `N·L`, saving grows as p→0; post-flag query O(1). Component 2 (the re-judgment decoder, D1/D2/D3) is the next build. |
 
 **Stage 2 design in one line.** In 2D a lost qubit sits inside a **4-check diamond**
 (2 X + 2 Z), and the delayed-loss witness bracket is that diamond at the earliest-onset
