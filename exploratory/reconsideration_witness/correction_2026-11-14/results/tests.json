@@ -1,0 +1,13 @@
+{
+  "parity_cancellation": true,
+  "frame_probability_convolution": true,
+  "frame_is_statistic_not_truth": true,
+  "full_prefix_support": true,
+  "wire_roundtrip_and_schema": true,
+  "arm_isolation": true,
+  "report_routing_and_erasure": true,
+  "deadline_guard": true,
+  "shared_onset_product": true,
+  "epsilon_ties": true,
+  "all_passed": true
+}

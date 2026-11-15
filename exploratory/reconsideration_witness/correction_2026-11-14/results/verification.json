@@ -1,0 +1,76 @@
+{
+  "all_passed": true,
+  "variants": 5,
+  "histories_per_variant": 68128,
+  "total_direct_roundtrip_checks": 1362560,
+  "legacy_per_history": {
+    "histories": 68128,
+    "arm_comparisons": 272512,
+    "label_mismatches": 0,
+    "max_probability_difference": 0.0,
+    "all_passed": true,
+    "elapsed_seconds": 473.34711027145386
+  },
+  "cold": {
+    "thick": {
+      "command": [
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+        "worker",
+        "thick"
+      ],
+      "exit_code": 0,
+      "unique_states": 29427,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 73.69126081466675
+    },
+    "thin": {
+      "command": [
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+        "worker",
+        "thin"
+      ],
+      "exit_code": 0,
+      "unique_states": 5854,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 15.945016384124756
+    },
+    "diamond": {
+      "command": [
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+        "worker",
+        "diamond"
+      ],
+      "exit_code": 0,
+      "unique_states": 29427,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 47.4611554145813
+    },
+    "whole": {
+      "command": [
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+        "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+        "worker",
+        "whole"
+      ],
+      "exit_code": 0,
+      "unique_states": 29427,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 81.3499526977539
+    }
+  },
+  "python": "3.12.16 (main, Oct 26 2026, 14:10:56) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "protocol_commit": "fa18eb240880e68f76d3daa32361ea7758ff517e",
+  "source_sha256": {
+    "diagnose.py": "6d06ef80aba71b2404c6866bab0f88cf8819f20cb9a359c32c45d2a10187238a",
+    "legacy_regression.py": "ddcdceff3bbd349a6e8fcb3dd00eb211480ec6def03fe59ee8bf217079595ef4",
+    "model.py": "3835d5bb88cc3077c5dd584978444c0c6b23f34c9b3bd0ce1972cdb6051bca62",
+    "run.py": "a7d3eb7ca16992f0105eded495383bb4d30aaf13c0d09b4b7e3b24824d572c3c",
+    "summarize.py": "d37614463c4f30feb7374d7fb286c461ef7bd8622cd42f641fb098c854c68894",
+    "tests.py": "0d00ca8ed0796330d97bbb856a9bd79cce38cd5705052bed272ef9ee78c3e696"
+  }
+}

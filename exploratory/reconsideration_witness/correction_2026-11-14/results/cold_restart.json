@@ -1,0 +1,50 @@
+{
+  "thick": {
+    "command": [
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+      "worker",
+      "thick"
+    ],
+    "exit_code": 0,
+    "unique_states": 29427,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 73.69126081466675
+  },
+  "thin": {
+    "command": [
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+      "worker",
+      "thin"
+    ],
+    "exit_code": 0,
+    "unique_states": 5854,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 15.945016384124756
+  },
+  "diamond": {
+    "command": [
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+      "worker",
+      "diamond"
+    ],
+    "exit_code": 0,
+    "unique_states": 29427,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 47.4611554145813
+  },
+  "whole": {
+    "command": [
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+      "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+      "worker",
+      "whole"
+    ],
+    "exit_code": 0,
+    "unique_states": 29427,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 81.3499526977539
+  }
+}

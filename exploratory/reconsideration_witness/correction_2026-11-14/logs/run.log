@@ -1,0 +1,39 @@
+A_legacy 10000 histories 50.8 s
+A_legacy 20000 histories 83.9 s
+A_legacy 30000 histories 131.2 s
+A_legacy 40000 histories 166.3 s
+A_legacy 50000 histories 200.4 s
+A_legacy 60000 histories 233.0 s
+A_legacy COMPLETE {"thick": 0, "thin": 5679, "diamond": 514, "whole": 0}
+B_xor 10000 histories 11.6 s
+B_xor 20000 histories 23.1 s
+B_xor 30000 histories 34.5 s
+B_xor 40000 histories 47.1 s
+B_xor 50000 histories 64.4 s
+B_xor 60000 histories 81.0 s
+B_xor COMPLETE {"thick": 0, "thin": 5679, "diamond": 514, "whole": 0}
+C_prior 10000 histories 84.3 s
+C_prior 20000 histories 130.4 s
+C_prior 30000 histories 197.3 s
+C_prior 40000 histories 249.8 s
+C_prior 50000 histories 298.7 s
+C_prior 60000 histories 347.9 s
+C_prior COMPLETE {"thick": 0, "thin": 5685, "diamond": 512, "whole": 0}
+D_ties 10000 histories 16.7 s
+D_ties 20000 histories 34.4 s
+D_ties 30000 histories 47.1 s
+D_ties 40000 histories 59.0 s
+D_ties 50000 histories 70.7 s
+D_ties 60000 histories 82.7 s
+D_ties COMPLETE {"thick": 0, "thin": 5683, "diamond": 510, "whole": 0}
+E_frame 10000 histories 50.4 s
+E_frame 20000 histories 81.3 s
+E_frame 30000 histories 123.4 s
+E_frame 40000 histories 156.0 s
+E_frame 50000 histories 186.4 s
+E_frame 60000 histories 215.6 s
+E_frame COMPLETE {"thick": 0, "thin": 3433, "diamond": 341, "whole": 0}
+cold check thick 29427 PASS
+cold check thin 5854 PASS
+cold check diamond 29427 PASS
+cold check whole 29427 PASS

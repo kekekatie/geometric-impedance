@@ -1,0 +1,7 @@
+10000 113.1
+20000 166.6
+30000 253.5
+40000 316.9
+50000 373.6
+60000 426.9
+{'histories': 68128, 'arm_comparisons': 272512, 'label_mismatches': 0, 'max_probability_difference': 0.0, 'all_passed': True, 'elapsed_seconds': 473.34711027145386}

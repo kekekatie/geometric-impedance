@@ -1,0 +1,27 @@
+[
+  {
+    "variant": "A_legacy",
+    "archive_weighted_mean_events": 2.0889593591375357,
+    "archive_max_events": 8
+  },
+  {
+    "variant": "B_xor",
+    "archive_weighted_mean_events": 2.086993416156946,
+    "archive_max_events": 8
+  },
+  {
+    "variant": "C_prior",
+    "archive_weighted_mean_events": 2.0870789681644197,
+    "archive_max_events": 8
+  },
+  {
+    "variant": "D_ties",
+    "archive_weighted_mean_events": 2.0870789681644197,
+    "archive_max_events": 8
+  },
+  {
+    "variant": "E_frame",
+    "archive_weighted_mean_events": 2.0870789681502657,
+    "archive_max_events": 8
+  }
+]

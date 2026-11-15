@@ -1,0 +1,532 @@
+[
+  {
+    "label": "historical_corner",
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "truth": 0,
+    "diamond": {
+      "label": 0,
+      "p0": 0.5706999149900822,
+      "p1": 0.42930008500991784,
+      "tie": false
+    },
+    "reference": {
+      "label": 1,
+      "p0": 0.499502487562189,
+      "p1": 0.5004975124378109,
+      "tie": false
+    },
+    "frame": [
+      1,
+      0
+    ],
+    "interventions": [
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 0,
+        "value": 1,
+        "outside_star": true,
+        "answer": {
+          "label": 1,
+          "p0": 0.4997523526498267,
+          "p1": 0.5002476473501734,
+          "tie": false
+        },
+        "changed_label": true
+      },
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5991259435836312,
+          "p1": 0.4008740564163688,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 1,
+          "p0": 0.4996280684354078,
+          "p1": 0.5003719315645921,
+          "tie": false
+        },
+        "changed_label": true
+      },
+      {
+        "tag": "Z",
+        "check": 2,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 5,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706991916040278,
+          "p1": 0.42930080839597223,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706984667802385,
+          "p1": 0.42930153321976144,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706991916040278,
+          "p1": 0.42930080839597223,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 1,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 6,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      }
+    ],
+    "note": "Single detector-value additions for this example only, including zeros. No unique or universal outside-star claim."
+  },
+  {
+    "label": "primary_highest_weight_disagreement",
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "truth": 0,
+    "diamond": {
+      "label": 0,
+      "p0": 0.5706999149900822,
+      "p1": 0.42930008500991784,
+      "tie": false
+    },
+    "reference": {
+      "label": 1,
+      "p0": 0.499502487562189,
+      "p1": 0.5004975124378109,
+      "tie": false
+    },
+    "frame": [
+      1,
+      0
+    ],
+    "interventions": [
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 0,
+        "value": 1,
+        "outside_star": true,
+        "answer": {
+          "label": 1,
+          "p0": 0.4997523526498267,
+          "p1": 0.5002476473501734,
+          "tie": false
+        },
+        "changed_label": true
+      },
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5991259435836312,
+          "p1": 0.4008740564163688,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 0,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 1,
+          "p0": 0.4996280684354078,
+          "p1": 0.5003719315645921,
+          "tie": false
+        },
+        "changed_label": true
+      },
+      {
+        "tag": "Z",
+        "check": 2,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 5,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706991916040278,
+          "p1": 0.42930080839597223,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706984667802385,
+          "p1": 0.42930153321976144,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "Z",
+        "check": 7,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706991916040278,
+          "p1": 0.42930080839597223,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 1,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 3,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 0,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 1,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 4,
+        "round": 2,
+        "value": 0,
+        "outside_star": true,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900821,
+          "p1": 0.4293000850099178,
+          "tie": false
+        },
+        "changed_label": false
+      },
+      {
+        "tag": "X",
+        "check": 6,
+        "round": 0,
+        "value": 0,
+        "outside_star": false,
+        "answer": {
+          "label": 0,
+          "p0": 0.5706999149900822,
+          "p1": 0.42930008500991784,
+          "tie": false
+        },
+        "changed_label": false
+      }
+    ],
+    "note": "Single detector-value additions for this example only, including zeros. No unique or universal outside-star claim."
+  }
+]

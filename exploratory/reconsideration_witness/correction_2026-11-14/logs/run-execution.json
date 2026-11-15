@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\scar-venv\\Scripts\\python.exe",
+    "-u",
+    "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix\\exploratory\\reconsideration_witness\\correction_2026-11-14\\src\\run.py",
+    "all"
+  ],
+  "start": "2026-11-13T23:31:00.630394+00:00",
+  "end": "2026-11-13T23:52:39.258125+00:00",
+  "exit_code": 0,
+  "cache": "C:\\Users\\Karen\\Documents\\Codex\\2026-11-03\\g\\work\\distance3-fix-cache"
+}

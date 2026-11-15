@@ -1,0 +1,132 @@
+{
+  "variant": "A_legacy",
+  "config": {
+    "parity": false,
+    "odds": false,
+    "epsilon": false,
+    "frame": false
+  },
+  "n_histories": 68128,
+  "total_weight": 9.107079999949221,
+  "arms": {
+    "thick": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.995903736434047,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9959037364340495,
+      "raw_disagree": 0,
+      "ties": 26,
+      "payload_weighted": 40.000000000318884,
+      "payload_max": 40,
+      "wire_weighted": 388.00000000163783,
+      "wire_max": 388
+    },
+    "thin": {
+      "hard_agree": 0.994111065237589,
+      "hard_correct": 0.9920246665238573,
+      "expected_agree": 0.9941113946516514,
+      "expected_correct": 0.9920246665238823,
+      "raw_disagree": 5679,
+      "ties": 256,
+      "payload_weighted": 24.000000000106297,
+      "payload_max": 24,
+      "wire_weighted": 223.0000000012783,
+      "wire_max": 223
+    },
+    "diamond": {
+      "hard_agree": 0.9999435603948117,
+      "hard_correct": 0.995880238232665,
+      "expected_agree": 0.9999441094182094,
+      "expected_correct": 0.9958802382326666,
+      "raw_disagree": 514,
+      "ties": 16,
+      "payload_weighted": 34.44479679568768,
+      "payload_max": 64,
+      "wire_weighted": 250.7650845285452,
+      "wire_max": 286
+    },
+    "whole": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.995903736434047,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9959037364340495,
+      "raw_disagree": 0,
+      "ties": 26,
+      "payload_weighted": 34.44479679568768,
+      "payload_max": 64,
+      "wire_weighted": 248.7650845287638,
+      "wire_max": 284
+    }
+  },
+  "diamond_disagreements": {
+    "diamond_right": 150,
+    "reference_right": 364
+  },
+  "example": {
+    "weight": 1e-06,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "onset": 1,
+    "truth": 0,
+    "decisions": {
+      "thick": {
+        "label": 1,
+        "p0": 0.4995029821073558,
+        "p1": 0.5004970178926442,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.5701521708781236,
+        "p1": 0.4298478291218764,
+        "tie": false
+      },
+      "diamond": {
+        "label": 0,
+        "p0": 0.5707006369426749,
+        "p1": 0.429299363057325,
+        "tie": false
+      },
+      "whole": {
+        "label": 1,
+        "p0": 0.4995029821073558,
+        "p1": 0.5004970178926442,
+        "tie": false
+      }
+    }
+  },
+  "checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "duplicate_contribution_histories": 1038,
+  "elapsed_seconds": 262.28589630126953,
+  "query_counts": {
+    "thick": 40,
+    "thin": 0,
+    "diamond": 8,
+    "whole": 24
+  },
+  "note": "Payload maxima across deadline snapshots; wire sizes are actual UTF-8 JSON bytes. Not process-memory or time-resolved peaks.",
+  "baseline_gate_passed": true
+}
