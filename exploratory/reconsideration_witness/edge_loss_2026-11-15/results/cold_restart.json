@@ -1,0 +1,50 @@
+{
+  "thick": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+      "worker",
+      "thick"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 27.751279592514038
+  },
+  "thin": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+      "worker",
+      "thin"
+    ],
+    "exit_code": 0,
+    "unique_states": 5514,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 5.583543062210083
+  },
+  "diamond": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+      "worker",
+      "diamond"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 14.50553011894226
+  },
+  "whole": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+      "worker",
+      "whole"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 35.85125255584717
+  }
+}

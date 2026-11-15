@@ -1,0 +1,181 @@
+{
+  "variant": "E_frame",
+  "site": [
+    1,
+    2
+  ],
+  "star": [
+    2,
+    3,
+    6
+  ],
+  "report": {
+    "site": [
+      1,
+      2
+    ],
+    "onsets": [
+      1,
+      2
+    ],
+    "deadline": 4
+  },
+  "config": {
+    "parity": true,
+    "odds": true,
+    "epsilon": true,
+    "frame": true
+  },
+  "n_histories": 68128,
+  "total_weight": 9.108255402497775,
+  "arms": {
+    "thick": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9956655894450673,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9956655894450673,
+      "raw_disagree": 0,
+      "ties": 82,
+      "payload_weighted": 40.00000000041864,
+      "payload_max": 40,
+      "wire_weighted": 387.00000000093706,
+      "wire_max": 387
+    },
+    "thin": {
+      "hard_agree": 0.996565034640337,
+      "hard_correct": 0.9942059711901263,
+      "expected_agree": 0.9965662447549581,
+      "expected_correct": 0.9942059711901263,
+      "raw_disagree": 3280,
+      "ties": 16,
+      "payload_weighted": 26.00000000020932,
+      "payload_max": 26,
+      "wire_weighted": 236.00000000043417,
+      "wire_max": 236
+    },
+    "diamond": {
+      "hard_agree": 0.9995720594655456,
+      "hard_correct": 0.9955234559822097,
+      "expected_agree": 0.9995737096218471,
+      "expected_correct": 0.9955234559822097,
+      "raw_disagree": 896,
+      "ties": 40,
+      "payload_weighted": 33.97489298200017,
+      "payload_max": 61,
+      "wire_weighted": 260.80199169618743,
+      "wire_max": 293
+    },
+    "whole": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9956655894450673,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9956655894450673,
+      "raw_disagree": 0,
+      "ties": 82,
+      "payload_weighted": 33.97489298200017,
+      "payload_max": 61,
+      "wire_weighted": 258.80199169600166,
+      "wire_max": 291
+    }
+  },
+  "diamond_disagreements": {
+    "diamond_right": 301,
+    "reference_right": 595
+  },
+  "example": {
+    "weight": 0.001001001001001001,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      [
+        "X",
+        [
+          1,
+          2
+        ],
+        1
+      ]
+    ],
+    "onset": 1,
+    "truth": 1,
+    "decisions": {
+      "thick": {
+        "label": 0,
+        "p0": 0.6655537770915347,
+        "p1": 0.3344462229084654,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.5992764019835167,
+        "p1": 0.4007235980164832,
+        "tie": false
+      },
+      "diamond": {
+        "label": 1,
+        "p0": 0.4004819467034597,
+        "p1": 0.5995180532965403,
+        "tie": false
+      },
+      "whole": {
+        "label": 0,
+        "p0": 0.6655537770915347,
+        "p1": 0.3344462229084654,
+        "tie": false
+      }
+    }
+  },
+  "checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "duplicate_contribution_histories": 1038,
+  "elapsed_seconds": 112.1594226360321,
+  "query_counts": {
+    "thick": 40,
+    "thin": 0,
+    "diamond": 6,
+    "whole": 24
+  },
+  "reconstructed_old_values": {
+    "diamond": 6,
+    "whole": 24
+  },
+  "note": "Edge site (1,2); star {2,3,6}; diamond query 6 readings. Reuses correction_2026-11-14 model unchanged. Payload maxima are deadline snapshots, not temporal peaks.",
+  "cold_input": {
+    "thick": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "c6d96b80203cba145274039f00c73761afbb830b05ef90906509a71c98327467",
+      "bytes": 14507424
+    },
+    "thin": {
+      "unique_states": 5514,
+      "histories": 68128,
+      "sha256": "be6b91798326e652a53448869ca5b84582d634fd175982b669fb2b79db5e3153",
+      "bytes": 2045694
+    },
+    "diamond": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "ecfa53c795490824755c82282831c29270c2137f76ae922e8365fc0f8fc33908",
+      "bytes": 11300625
+    },
+    "whole": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "55cea169325e4d2a1a393f9455be2214e99ca8234fc2cc461ac1da18138bcd4d",
+      "bytes": 11245041
+    }
+  }
+}

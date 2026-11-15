@@ -1,0 +1,191 @@
+{
+  "bulk_commit": "09a79c1",
+  "edge_protocol_commit": "4509bd6",
+  "bulk_site": [
+    1,
+    1
+  ],
+  "edge_site": [
+    1,
+    2
+  ],
+  "bulk_query": 8,
+  "edge_query": 6,
+  "bulk_diamond_split": {
+    "diamond_right": 123,
+    "reference_right": 218
+  },
+  "edge_diamond_split": {
+    "diamond_right": 301,
+    "reference_right": 595
+  },
+  "table": [
+    {
+      "arm": "thick",
+      "bulk_raw_disagree": 0,
+      "edge_raw_disagree": 0,
+      "bulk_agree": 1.0,
+      "edge_agree": 1.0,
+      "bulk_correct": 0.995901,
+      "edge_correct": 0.995666,
+      "bulk_payload_max": 40,
+      "edge_payload_max": 40,
+      "bulk_payload_mean": 40.0,
+      "edge_payload_mean": 40.0,
+      "bulk_wire_max": 387,
+      "edge_wire_max": 387
+    },
+    {
+      "arm": "thin",
+      "bulk_raw_disagree": 3433,
+      "edge_raw_disagree": 3280,
+      "bulk_agree": 0.996987,
+      "edge_agree": 0.996565,
+      "bulk_correct": 0.993003,
+      "edge_correct": 0.994206,
+      "bulk_payload_max": 26,
+      "edge_payload_max": 26,
+      "bulk_payload_mean": 26.0,
+      "edge_payload_mean": 26.0,
+      "bulk_wire_max": 236,
+      "edge_wire_max": 236
+    },
+    {
+      "arm": "diamond",
+      "bulk_raw_disagree": 341,
+      "edge_raw_disagree": 896,
+      "bulk_agree": 0.999962,
+      "edge_agree": 0.999572,
+      "bulk_correct": 0.995891,
+      "edge_correct": 0.995523,
+      "bulk_payload_max": 66,
+      "edge_payload_max": 61,
+      "bulk_payload_mean": 36.4354,
+      "edge_payload_mean": 33.9749,
+      "bulk_wire_max": 299,
+      "edge_wire_max": 293
+    },
+    {
+      "arm": "whole",
+      "bulk_raw_disagree": 0,
+      "edge_raw_disagree": 0,
+      "bulk_agree": 1.0,
+      "edge_agree": 1.0,
+      "bulk_correct": 0.995901,
+      "edge_correct": 0.995666,
+      "bulk_payload_max": 66,
+      "edge_payload_max": 61,
+      "bulk_payload_mean": 36.4354,
+      "edge_payload_mean": 33.9749,
+      "bulk_wire_max": 297,
+      "edge_wire_max": 291
+    }
+  ],
+  "edge_checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "cold_restart": {
+    "thick": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+        "worker",
+        "thick"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 27.751279592514038
+    },
+    "thin": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+        "worker",
+        "thin"
+      ],
+      "exit_code": 0,
+      "unique_states": 5514,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 5.583543062210083
+    },
+    "diamond": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+        "worker",
+        "diamond"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 14.50553011894226
+    },
+    "whole": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/edge_loss_2026-11-15/src/edge_run.py",
+        "worker",
+        "whole"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 35.85125255584717
+    }
+  },
+  "edge_example": {
+    "weight": 0.001001001001001001,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        1
+      ],
+      [
+        "X",
+        [
+          1,
+          2
+        ],
+        1
+      ]
+    ],
+    "onset": 1,
+    "truth": 1,
+    "decisions": {
+      "thick": {
+        "label": 0,
+        "p0": 0.6655537770915347,
+        "p1": 0.3344462229084654,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.5992764019835167,
+        "p1": 0.4007235980164832,
+        "tie": false
+      },
+      "diamond": {
+        "label": 1,
+        "p0": 0.4004819467034597,
+        "p1": 0.5995180532965403,
+        "tie": false
+      },
+      "whole": {
+        "label": 0,
+        "p0": 0.6655537770915347,
+        "p1": 0.3344462229084654,
+        "tie": false
+      }
+    }
+  }
+}
