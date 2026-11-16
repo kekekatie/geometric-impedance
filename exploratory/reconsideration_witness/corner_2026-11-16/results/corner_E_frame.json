@@ -1,0 +1,180 @@
+{
+  "variant": "E_frame",
+  "site": [
+    2,
+    2
+  ],
+  "star": [
+    6,
+    7
+  ],
+  "report": {
+    "site": [
+      2,
+      2
+    ],
+    "onsets": [
+      1,
+      2
+    ],
+    "deadline": 4
+  },
+  "config": {
+    "parity": true,
+    "odds": true,
+    "epsilon": true,
+    "frame": true
+  },
+  "n_histories": 68128,
+  "total_weight": 9.108255402497775,
+  "arms": {
+    "thick": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9966288406841654,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9966288406841654,
+      "raw_disagree": 0,
+      "ties": 32,
+      "payload_weighted": 40.00000000041864,
+      "payload_max": 40,
+      "wire_weighted": 387.00000000093706,
+      "wire_max": 387
+    },
+    "thin": {
+      "hard_agree": 0.9984520433777161,
+      "hard_correct": 0.9951600915643558,
+      "expected_agree": 0.9984494031276336,
+      "expected_correct": 0.9951600915643558,
+      "raw_disagree": 2095,
+      "ties": 80,
+      "payload_weighted": 26.00000000020932,
+      "payload_max": 26,
+      "wire_weighted": 236.00000000043417,
+      "wire_max": 236
+    },
+    "diamond": {
+      "hard_agree": 0.9999171621536622,
+      "hard_correct": 0.9965981477769565,
+      "expected_agree": 0.9999140818618993,
+      "expected_correct": 0.9965981477769565,
+      "raw_disagree": 753,
+      "ties": 88,
+      "payload_weighted": 31.504542990429563,
+      "payload_max": 56,
+      "wire_weighted": 257.8376877672259,
+      "wire_max": 287
+    },
+    "whole": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9966288406841654,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9966288406841654,
+      "raw_disagree": 0,
+      "ties": 32,
+      "payload_weighted": 31.504542990429563,
+      "payload_max": 56,
+      "wire_weighted": 255.83768776718426,
+      "wire_max": 285
+    }
+  },
+  "diamond_disagreements": {
+    "diamond_right": 237,
+    "reference_right": 516
+  },
+  "example": {
+    "weight": 1.002003004005006e-06,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "onset": 1,
+    "truth": 0,
+    "decisions": {
+      "thick": {
+        "label": 1,
+        "p0": 0.499502487562189,
+        "p1": 0.5004975124378109,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.57076336954988,
+        "p1": 0.42923663045011995,
+        "tie": false
+      },
+      "diamond": {
+        "label": 0,
+        "p0": 0.5707607309817255,
+        "p1": 0.4292392690182746,
+        "tie": false
+      },
+      "whole": {
+        "label": 1,
+        "p0": 0.499502487562189,
+        "p1": 0.5004975124378109,
+        "tie": false
+      }
+    }
+  },
+  "checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "duplicate_contribution_histories": 1038,
+  "elapsed_seconds": 84.28133773803711,
+  "query_counts": {
+    "thick": 40,
+    "thin": 0,
+    "diamond": 4,
+    "whole": 24
+  },
+  "reconstructed_old_values": {
+    "diamond": 4,
+    "whole": 24
+  },
+  "note": "Corner (2,2); star {6,7} = 1 X-arm + 1 Z-arm; diamond query 4 readings. Reuses correction_2026-11-14 model unchanged.",
+  "cold_input": {
+    "thick": {
+      "unique_states": 26752,
+      "histories": 68128,
+      "sha256": "3380e2a0affcd6638c906f1c350bd8bbbea903fe4d0699012c302603752ffafa",
+      "bytes": 13964544
+    },
+    "thin": {
+      "unique_states": 5234,
+      "histories": 68128,
+      "sha256": "a6ae143d5fcef95095d8021c22e411ea86e762bece2088d5547ee0b157420d89",
+      "bytes": 1941814
+    },
+    "diamond": {
+      "unique_states": 26752,
+      "histories": 68128,
+      "sha256": "d234dd5e95c34990260617131c80c51f64026afb6fba3c2814b82f7edc0ab878",
+      "bytes": 10802165
+    },
+    "whole": {
+      "unique_states": 26752,
+      "histories": 68128,
+      "sha256": "9904032d33120d3f1b8e7168cf489383ff215ae3b06705cbf8ee47d89f333669",
+      "bytes": 10748661
+    }
+  }
+}

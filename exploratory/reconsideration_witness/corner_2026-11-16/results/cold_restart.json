@@ -1,0 +1,50 @@
+{
+  "thick": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+      "worker",
+      "thick"
+    ],
+    "exit_code": 0,
+    "unique_states": 26752,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 20.519940853118896
+  },
+  "thin": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+      "worker",
+      "thin"
+    ],
+    "exit_code": 0,
+    "unique_states": 5234,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 3.726168632507324
+  },
+  "diamond": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+      "worker",
+      "diamond"
+    ],
+    "exit_code": 0,
+    "unique_states": 26752,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 9.192691802978516
+  },
+  "whole": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+      "worker",
+      "whole"
+    ],
+    "exit_code": 0,
+    "unique_states": 26752,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 24.234304189682007
+  }
+}

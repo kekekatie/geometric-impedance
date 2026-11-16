@@ -1,0 +1,183 @@
+{
+  "baseline": "09a79c1",
+  "edge12": "93cf914",
+  "edge21": "9564067",
+  "corner_protocol": "351945b",
+  "series": [
+    {
+      "label": "bulk (1,1)",
+      "star_arms": "2Z+2X",
+      "local_readings": 8,
+      "thin_disagree": 3433,
+      "diamond_disagree": 341,
+      "diamond_weighted_agreement": 0.999962,
+      "diamond_weighted_disagreement_pct": 0.0038,
+      "diamond_truth_accuracy": 0.995891,
+      "thick_truth_accuracy": 0.995901,
+      "diamond_split": {
+        "diamond_right": 123,
+        "reference_right": 218
+      },
+      "diamond_payload_max": 66,
+      "diamond_payload_mean": 36.4354
+    },
+    {
+      "label": "edge (1,2)",
+      "star_arms": "1Z+2X",
+      "local_readings": 6,
+      "thin_disagree": 3280,
+      "diamond_disagree": 896,
+      "diamond_weighted_agreement": 0.999572,
+      "diamond_weighted_disagreement_pct": 0.0428,
+      "diamond_truth_accuracy": 0.995523,
+      "thick_truth_accuracy": 0.995666,
+      "diamond_split": {
+        "diamond_right": 301,
+        "reference_right": 595
+      },
+      "diamond_payload_max": 61,
+      "diamond_payload_mean": 33.9749
+    },
+    {
+      "label": "edge (2,1)",
+      "star_arms": "2Z+1X",
+      "local_readings": 6,
+      "thin_disagree": 2545,
+      "diamond_disagree": 837,
+      "diamond_weighted_agreement": 0.99903,
+      "diamond_weighted_disagreement_pct": 0.097,
+      "diamond_truth_accuracy": 0.996618,
+      "thick_truth_accuracy": 0.996625,
+      "diamond_split": {
+        "reference_right": 450,
+        "diamond_right": 387
+      },
+      "diamond_payload_max": 61,
+      "diamond_payload_mean": 33.9749
+    },
+    {
+      "label": "corner (2,2)",
+      "star_arms": "1Z+1X",
+      "local_readings": 4,
+      "thin_disagree": 2095,
+      "diamond_disagree": 753,
+      "diamond_weighted_agreement": 0.999917,
+      "diamond_weighted_disagreement_pct": 0.0083,
+      "diamond_truth_accuracy": 0.996598,
+      "thick_truth_accuracy": 0.996629,
+      "diamond_split": {
+        "diamond_right": 237,
+        "reference_right": 516
+      },
+      "diamond_payload_max": 56,
+      "diamond_payload_mean": 31.5045
+    }
+  ],
+  "corner_example": {
+    "weight": 1.002003004005006e-06,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "onset": 1,
+    "truth": 0,
+    "decisions": {
+      "thick": {
+        "label": 1,
+        "p0": 0.499502487562189,
+        "p1": 0.5004975124378109,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.57076336954988,
+        "p1": 0.42923663045011995,
+        "tie": false
+      },
+      "diamond": {
+        "label": 0,
+        "p0": 0.5707607309817255,
+        "p1": 0.4292392690182746,
+        "tie": false
+      },
+      "whole": {
+        "label": 1,
+        "p0": 0.499502487562189,
+        "p1": 0.5004975124378109,
+        "tie": false
+      }
+    }
+  },
+  "corner_checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "cold_restart": {
+    "thick": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+        "worker",
+        "thick"
+      ],
+      "exit_code": 0,
+      "unique_states": 26752,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 20.519940853118896
+    },
+    "thin": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+        "worker",
+        "thin"
+      ],
+      "exit_code": 0,
+      "unique_states": 5234,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 3.726168632507324
+    },
+    "diamond": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+        "worker",
+        "diamond"
+      ],
+      "exit_code": 0,
+      "unique_states": 26752,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 9.192691802978516
+    },
+    "whole": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/corner_2026-11-16/src/corner_run.py",
+        "worker",
+        "whole"
+      ],
+      "exit_code": 0,
+      "unique_states": 26752,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 24.234304189682007
+    }
+  }
+}
