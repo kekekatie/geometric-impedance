@@ -1,0 +1,602 @@
+{
+  "d3": {
+    "n": 68128,
+    "weight": 9.108255402549739,
+    "pi": {
+      "0": 0.87832,
+      "1": 0.1143,
+      "2": 0.00738
+    },
+    "per_stratum": {
+      "0": {
+        "hist": 8,
+        "weight": 8.0,
+        "pi": 0.87832,
+        "arms": {
+          "thick": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "thin": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "diamond": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "whole": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 8.0,
+            "both_wrong": 0.0,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.0,
+            "B_ahead": 0.0,
+            "net": 0.0,
+            "A_ahead_frac": 0.0,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.0
+          },
+          "thick_vs_diamond": {
+            "both_right": 8.0,
+            "both_wrong": 0.0,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.0,
+            "B_ahead": 0.0,
+            "net": 0.0,
+            "A_ahead_frac": 0.0,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.0
+          }
+        }
+      },
+      "1": {
+        "hist": 1040,
+        "weight": 1.0410410410410287,
+        "pi": 0.1143,
+        "arms": {
+          "thick": {
+            "hard": 0.969231,
+            "tie": 0.969231,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "thin": {
+            "hard": 0.946154,
+            "tie": 0.946154,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "diamond": {
+            "hard": 0.969231,
+            "tie": 0.969231,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "whole": {
+            "hard": 0.969231,
+            "tie": 0.969231,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 0.98498498,
+            "both_wrong": 0.03203203,
+            "A_only": 0.02402402,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.02402402,
+            "B_ahead": 0.0,
+            "net": 0.02402402,
+            "A_ahead_frac": 0.02307692,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.02307692
+          },
+          "thick_vs_diamond": {
+            "both_right": 1.00900901,
+            "both_wrong": 0.03203203,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.0,
+            "B_ahead": 0.0,
+            "net": 0.0,
+            "A_ahead_frac": 0.0,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.0
+          }
+        }
+      },
+      "2": {
+        "hist": 67080,
+        "weight": 0.06721436150871063,
+        "pi": 0.00738,
+        "arms": {
+          "thick": {
+            "hard": 0.921154,
+            "tie": 0.921154,
+            "tie_count": 30,
+            "tie_wfrac": 0.000447
+          },
+          "thin": {
+            "hard": 0.887179,
+            "tie": 0.887179,
+            "tie_count": 24,
+            "tie_wfrac": 0.000358
+          },
+          "diamond": {
+            "hard": 0.919618,
+            "tie": 0.919618,
+            "tie_count": 24,
+            "tie_wfrac": 0.000358
+          },
+          "whole": {
+            "hard": 0.921154,
+            "tie": 0.921154,
+            "tie_count": 30,
+            "tie_wfrac": 0.000447
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 0.05908511,
+            "both_wrong": 0.0047535,
+            "A_only": 0.00281262,
+            "B_only": 0.00052906,
+            "tie_involved_mass": 3.407e-05,
+            "A_ahead": 0.00281964,
+            "B_ahead": 0.00053607,
+            "net": 0.00228356,
+            "A_ahead_frac": 0.04194991,
+            "B_ahead_frac": 0.00797555,
+            "net_frac": 0.03397436
+          },
+          "thick_vs_diamond": {
+            "both_right": 0.06168531,
+            "both_wrong": 0.00517334,
+            "A_only": 0.00021343,
+            "B_only": 0.00011022,
+            "tie_involved_mass": 3.206e-05,
+            "A_ahead": 0.00021844,
+            "B_ahead": 0.00011523,
+            "net": 0.00010321,
+            "A_ahead_frac": 0.00324985,
+            "B_ahead_frac": 0.00171437,
+            "net_frac": 0.00153548
+          }
+        }
+      }
+    },
+    "overall": {
+      "arms": {
+        "thick": {
+          "hard": 0.995901,
+          "tie": 0.995901
+        },
+        "thin": {
+          "hard": 0.993013,
+          "tie": 0.993013
+        },
+        "diamond": {
+          "hard": 0.99589,
+          "tie": 0.99589
+        },
+        "whole": {
+          "hard": 0.995901,
+          "tie": 0.995901
+        }
+      },
+      "margin_thick_minus_thin": {
+        "hard": 0.002888,
+        "tie": 0.002888
+      },
+      "margin_thick_minus_diamond": {
+        "hard": 1.1e-05,
+        "tie": 1.1e-05
+      }
+    }
+  },
+  "d5": {
+    "n": 549088,
+    "weight": 11.510176843513731,
+    "pi": {
+      "0": 0.69504,
+      "1": 0.25742,
+      "2": 0.04754
+    },
+    "per_stratum": {
+      "0": {
+        "hist": 8,
+        "weight": 8.0,
+        "pi": 0.69504,
+        "arms": {
+          "thick": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "thin": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "diamond": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "whole": {
+            "hard": 1.0,
+            "tie": 1.0,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 8.0,
+            "both_wrong": 0.0,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.0,
+            "B_ahead": 0.0,
+            "net": 0.0,
+            "A_ahead_frac": 0.0,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.0
+          },
+          "thick_vs_diamond": {
+            "both_right": 8.0,
+            "both_wrong": 0.0,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.0,
+            "A_ahead": 0.0,
+            "B_ahead": 0.0,
+            "net": 0.0,
+            "A_ahead_frac": 0.0,
+            "B_ahead_frac": 0.0,
+            "net_frac": 0.0
+          }
+        }
+      },
+      "1": {
+        "hist": 2960,
+        "weight": 2.9629629629631205,
+        "pi": 0.25742,
+        "arms": {
+          "thick": {
+            "hard": 0.991892,
+            "tie": 0.991892,
+            "tie_count": 16,
+            "tie_wfrac": 0.005405
+          },
+          "thin": {
+            "hard": 0.991892,
+            "tie": 0.991892,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "diamond": {
+            "hard": 0.991892,
+            "tie": 0.991892,
+            "tie_count": 0,
+            "tie_wfrac": 0.0
+          },
+          "whole": {
+            "hard": 0.991892,
+            "tie": 0.991892,
+            "tie_count": 16,
+            "tie_wfrac": 0.005405
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 2.93093093,
+            "both_wrong": 0.01601602,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.01601602,
+            "A_ahead": 0.00800801,
+            "B_ahead": 0.00800801,
+            "net": 0.0,
+            "A_ahead_frac": 0.0027027,
+            "B_ahead_frac": 0.0027027,
+            "net_frac": 0.0
+          },
+          "thick_vs_diamond": {
+            "both_right": 2.93093093,
+            "both_wrong": 0.01601602,
+            "A_only": 0.0,
+            "B_only": 0.0,
+            "tie_involved_mass": 0.01601602,
+            "A_ahead": 0.00800801,
+            "B_ahead": 0.00800801,
+            "net": 0.0,
+            "A_ahead_frac": 0.0027027,
+            "B_ahead_frac": 0.0027027,
+            "net_frac": 0.0
+          }
+        }
+      },
+      "2": {
+        "hist": 546120,
+        "weight": 0.54721388055061,
+        "pi": 0.04754,
+        "arms": {
+          "thick": {
+            "hard": 0.982934,
+            "tie": 0.982934,
+            "tie_count": 5392,
+            "tie_wfrac": 0.009873
+          },
+          "thin": {
+            "hard": 0.982443,
+            "tie": 0.982443,
+            "tie_count": 1952,
+            "tie_wfrac": 0.003574
+          },
+          "diamond": {
+            "hard": 0.982736,
+            "tie": 0.982736,
+            "tie_count": 2040,
+            "tie_wfrac": 0.003735
+          },
+          "whole": {
+            "hard": 0.982934,
+            "tie": 0.982934,
+            "tie_count": 5392,
+            "tie_wfrac": 0.009873
+          }
+        },
+        "pairs": {
+          "thick_vs_thin": {
+            "both_right": 0.53488123,
+            "both_wrong": 0.00661322,
+            "A_only": 0.00029258,
+            "B_only": 2.405e-05,
+            "tie_involved_mass": 0.0054028,
+            "A_ahead": 0.00201603,
+            "B_ahead": 0.00174749,
+            "net": 0.00026854,
+            "A_ahead_frac": 0.00368417,
+            "B_ahead_frac": 0.00319344,
+            "net_frac": 0.00049073
+          },
+          "thick_vs_diamond": {
+            "both_right": 0.53506359,
+            "both_wrong": 0.00663526,
+            "A_only": 0.00011022,
+            "B_only": 2e-06,
+            "tie_involved_mass": 0.0054028,
+            "A_ahead": 0.00178958,
+            "B_ahead": 0.00168136,
+            "net": 0.00010822,
+            "A_ahead_frac": 0.00327034,
+            "B_ahead_frac": 0.00307258,
+            "net_frac": 0.00019776
+          }
+        }
+      }
+    },
+    "overall": {
+      "arms": {
+        "thick": {
+          "hard": 0.997101,
+          "tie": 0.997101
+        },
+        "thin": {
+          "hard": 0.997078,
+          "tie": 0.997078
+        },
+        "diamond": {
+          "hard": 0.997092,
+          "tie": 0.997092
+        },
+        "whole": {
+          "hard": 0.997101,
+          "tie": 0.997101
+        }
+      },
+      "margin_thick_minus_thin": {
+        "hard": 2.3e-05,
+        "tie": 2.3e-05
+      },
+      "margin_thick_minus_diamond": {
+        "hard": 9e-06,
+        "tie": 9e-06
+      }
+    }
+  },
+  "standardization": {
+    "d3_mix": {
+      "d3": {
+        "thick": {
+          "hard": 0.995901,
+          "tie": 0.995901
+        },
+        "thin": {
+          "hard": 0.993013,
+          "tie": 0.993013
+        },
+        "diamond": {
+          "hard": 0.99589,
+          "tie": 0.99589
+        },
+        "margin_thick_thin": {
+          "hard": 0.002888,
+          "tie": 0.002888
+        }
+      },
+      "d5": {
+        "thick": {
+          "hard": 0.998947,
+          "tie": 0.998947
+        },
+        "thin": {
+          "hard": 0.998944,
+          "tie": 0.998944
+        },
+        "diamond": {
+          "hard": 0.998946,
+          "tie": 0.998946
+        },
+        "margin_thick_thin": {
+          "hard": 4e-06,
+          "tie": 4e-06
+        }
+      }
+    },
+    "d5_mix": {
+      "d3": {
+        "thick": {
+          "hard": 0.988331,
+          "tie": 0.988331
+        },
+        "thin": {
+          "hard": 0.980775,
+          "tie": 0.980775
+        },
+        "diamond": {
+          "hard": 0.988258,
+          "tie": 0.988258
+        },
+        "margin_thick_thin": {
+          "hard": 0.007556,
+          "tie": 0.007556
+        }
+      },
+      "d5": {
+        "thick": {
+          "hard": 0.997101,
+          "tie": 0.997101
+        },
+        "thin": {
+          "hard": 0.997078,
+          "tie": 0.997078
+        },
+        "diamond": {
+          "hard": 0.997092,
+          "tie": 0.997092
+        },
+        "margin_thick_thin": {
+          "hard": 2.3e-05,
+          "tie": 2.3e-05
+        }
+      }
+    },
+    "flat_k12": {
+      "d3": {
+        "thick": {
+          "hard": 0.945192,
+          "tie": 0.945192
+        },
+        "thin": {
+          "hard": 0.916667,
+          "tie": 0.916667
+        },
+        "diamond": {
+          "hard": 0.944425,
+          "tie": 0.944425
+        },
+        "margin_thick_thin": {
+          "hard": 0.028526,
+          "tie": 0.028526
+        }
+      },
+      "d5": {
+        "thick": {
+          "hard": 0.987413,
+          "tie": 0.987413
+        },
+        "thin": {
+          "hard": 0.987168,
+          "tie": 0.987168
+        },
+        "diamond": {
+          "hard": 0.987314,
+          "tie": 0.987314
+        },
+        "margin_thick_thin": {
+          "hard": 0.000245,
+          "tie": 0.000245
+        }
+      }
+    }
+  },
+  "within_stratum_margin_thick_thin": {
+    "d3": {
+      "0": {
+        "hard": 0.0,
+        "tie": 0.0
+      },
+      "1": {
+        "hard": 0.023077,
+        "tie": 0.023077
+      },
+      "2": {
+        "hard": 0.033974,
+        "tie": 0.033974
+      }
+    },
+    "d5": {
+      "0": {
+        "hard": 0.0,
+        "tie": 0.0
+      },
+      "1": {
+        "hard": 0.0,
+        "tie": -0.0
+      },
+      "2": {
+        "hard": 0.000491,
+        "tie": 0.000491
+      }
+    }
+  },
+  "pairwise_thick_vs_thin_overall_frac": {
+    "d3": {
+      "both_right": 0.99295306,
+      "both_wrong": 0.0040387,
+      "A_only": 0.00294641,
+      "B_only": 5.809e-05,
+      "tie_involved_mass": 3.74e-06,
+      "A_ahead": 0.00294718,
+      "B_ahead": 5.886e-05,
+      "net": 0.00288832
+    },
+    "d5": {
+      "both_right": 0.99614561,
+      "both_wrong": 0.00196602,
+      "A_only": 2.542e-05,
+      "B_only": 2.09e-06,
+      "tie_involved_mass": 0.00186086,
+      "A_ahead": 0.00087088,
+      "B_ahead": 0.00084755,
+      "net": 2.333e-05
+    }
+  }
+}

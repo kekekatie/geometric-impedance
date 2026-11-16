@@ -72,7 +72,14 @@ and the thin record alone reaches the full record's accuracy at d=5. That is the
 result we stand behind. (A follow-up that holds the single-fault weight fraction
 fixed across distances would sharpen the disagreement number specifically.)
 
-## Replayable disagreement (a single fault where the skin beats the archive)
+## Replayable disagreement (a single fault where the arms split)
+
+> **Erratum (Pass 1, `HANDBACK_PASS1.md`).** This was originally described as a
+> case where the skin *beats* the archive. That overreads it: on this history the
+> full record returns an **exact 50/50 tie** (p = 0.5), which the zero-favouring
+> tiebreak drops on label 0, while thin/diamond tip narrowly to the true 1. It is a
+> knife-edge tie, not a defeat of the archive — and tie-aware scoring (Pass 1) is
+> the correct lens. The table below shows the hard labels after the tiebreak.
 
 The highest-weight history where the bracket and the record part ways at d=5 is a
 **single** X fault on data (0,0) at round 4, onset-1 loss at (2,2), weight 1e-3:
