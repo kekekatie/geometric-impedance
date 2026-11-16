@@ -5,8 +5,9 @@ reduction Amendment A in `ee0c23d`). Starts from Pass 1 `f278297`; same d=5 bulk
 site (2,2), noise, deadline, four arms.
 
 - Protocol commit: `ecb7113` (+ Amendment A `ee0c23d`)
-- Results commits: primary `0920b2b`, stress `ee0c23d`, caps + this handback: see final commit
-- Replay: `cd src && python3 pass2.py primary && python3 pass2.py stress && python3 pass2.py caps && ...`
+- Results commits: primary `0920b2b`, stress `ee0c23d`; caps + this handback in this commit
+- Replay: `cd src && python3 pass2_sample.py && python3 pass2.py primary && python3 pass2.py stress && python3 pass2.py caps`
+  (`results/pass2_primary.json`, `pass2_stress.json`, `pass2_caps.json`)
 
 ## Headline
 
@@ -82,6 +83,56 @@ come from *delocalized* weight-2 configurations, not the loss neighbourhood. A
 useful negative result: the ambiguity that erodes the archive's authority lives in
 the code at large, not around the missing tile.
 
-## (iii) Cap sensitivity — (3,3) vs (4,3) vs (3,4) [+ (4,4)]
+## (iii) Cap sensitivity — (3,3) vs (4,3) vs (3,4)
 
-_Pending the cap run; filled on completion._
+Panel (frozen, Amendment A, before any cap outcome): the first 250 sample triples
+(`cap250` sha256 `cc8be35776…0eab5310`) × 8 = 2,000 histories, plus the 110
+weight-1 near-loss primitives × 8 = 880, total **2,880**. Same panel to every cap.
+Build method: exact chunked weight-≤4 enumeration into packed-uint64 tables
+(`pass2_caps.CapDecoder`, validated bit-for-bit against the stock decoder at (3,3)).
+Runtime: (3,3) 48.8 s, (4,3) 98.3 s, (3,4) **6,841.7 s** (the w_dec=4 marginal is
+~47 M rows/sector, ~90× the (3,3) query cost).
+
+| cap change | frame changes | posterior shifts | **label flips** | tie changes | thick tie-truth base→new |
+|---|---:|---:|---:|---:|---:|
+| **(4,3)** vs (3,3) — frame cap↑ | 112 | 0 | **0** | 0 | 0.999306 → 0.999306 |
+| **(3,4)** vs (3,3) — marginal cap↑ | 0 | 2108 | **1** | 0 | 0.999306 → 0.998958 |
+
+**Reading.** Raising the **frame** cap to w_frame=4 re-selects the committed frame on
+112/2,880 histories, yet changes **no** thick label, posterior, or tie — the decision
+is robust to the frame cap even where the frame table is not. Raising the **marginal**
+cap to w_dec=4 (frame reused, so 0 frame changes) moves the thick posterior
+*numerically* on 2,108/2,880 histories but flips exactly **one** label (0 ties): the
+tie-truth drop 0.999306 → 0.998958 is precisely −1/2880, a single knife-edge history
+going right→wrong under the fuller marginal. So across both cap increases the worst-case
+decision change on this panel is **1 label in 2,880 (0.035%)** — an order of magnitude
+below the within-k=3 effect (0.234 pp) and the combined archive gap.
+
+**Prefix accounting (with caveat).**
+
+| cap | observed-prefix absent | fallback zeros | supported zeros | frame-zero outputs |
+|---|---:|---:|---:|---:|
+| (3,3) | 0 *(vacuous)* | 0 *(vacuous)* | 2700 | 2700 |
+| (4,3) | **0** | 0 | 2700 | 2700 |
+| (3,4) | **128** | 128 | 2572 | 2700 |
+
+The (3,3) row is **not** a genuine check: the stock `base` decoder has no
+`prefix_absent` method, so `_decode_panel`'s `hasattr` guard records 0 by default, not
+by inspection. The meaningful comparison is between the two CapDecoders: at **w_frame=3**
+(the (3,4) config) **128** observed prefixes fall outside the frame table → default-0
+(fallback) frames; at **w_frame=4** (the (4,3) config) **0** do — the richer frame table
+closes the whole coverage gap. Because (3,3) and (3,4) share the w_frame=3 table, their
+frames are identical on all 2,880 (frame_changes=0), so those 128 fallback histories are
+decoded the *same* under (3,3) and (3,4) — the 128 is a coverage/visibility fact, not a
+behavioural divergence. And since closing the gap ((4,3)) flips 0 labels, the
+fallback-zero prefixes are **not decision-relevant** on this panel.
+
+**Escalation.** (4,4) requires label flips on **both** individual caps; (4,3) had 0, so
+the condition is unmet — `escalate_44 = false`, (4,4) not run (and the prediction from
+the checkpoints held).
+
+**Verdict.** The Pass 2 conclusions are robust to the decoder bounds tested: raising
+either the frame or the marginal cap changes at most one decision in 2,880, with no tie
+changes and no (4,4) escalation. The paper claim stays tied to fault range **k ≤ 3**
+(exact k≤2 + 25k-triple k=3 sample) and decoder bounds **(w_frame, w_dec) ∈
+{(3,3), (4,3), (3,4)}**, with **P(k≥4) = 0.000574** the untested residual.

@@ -1,0 +1,51 @@
+{
+  "kind": "caps",
+  "d": 5,
+  "site": [
+    2,
+    2
+  ],
+  "panel_n": 2880,
+  "cap250_sha256": "cc8be35776d64ddca09dc534666a29ee8198b449b982b686d2ed9eda0eab5310",
+  "comparisons": {
+    "43_vs_33": {
+      "n": 2880,
+      "frame_changes": 112,
+      "posterior_shifts": 0,
+      "label_flips": 0,
+      "tie_changes": 0,
+      "thick_tie_truth_base": 0.999306,
+      "thick_tie_truth_new": 0.999306
+    },
+    "34_vs_33": {
+      "n": 2880,
+      "frame_changes": 0,
+      "posterior_shifts": 2108,
+      "label_flips": 1,
+      "tie_changes": 0,
+      "thick_tie_truth_base": 0.999306,
+      "thick_tie_truth_new": 0.998958
+    }
+  },
+  "prefix_absence": {
+    "33": {
+      "observed_prefix_absent": 0,
+      "frame_zero_outputs": 2700,
+      "fallback_zeros": 0,
+      "supported_zeros": 2700
+    },
+    "43": {
+      "observed_prefix_absent": 0,
+      "frame_zero_outputs": 2700,
+      "fallback_zeros": 0,
+      "supported_zeros": 2700
+    },
+    "34": {
+      "observed_prefix_absent": 128,
+      "frame_zero_outputs": 2700,
+      "fallback_zeros": 128,
+      "supported_zeros": 2572
+    }
+  },
+  "escalate_44": false
+}
