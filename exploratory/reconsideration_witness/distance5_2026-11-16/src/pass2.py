@@ -391,10 +391,16 @@ def caps():
     configs = [(3, 3), (4, 3), (3, 4)]
     results = {}
     for (wf, wd) in configs:
+        ck = R / f'_caps_ckpt_{wf}{wd}.json'
+        if ck.exists():                                         # resume after a kill
+            results[(wf, wd)] = json.loads(ck.read_text())
+            print(f'cap ({wf},{wd}) loaded from checkpoint', flush=True)
+            continue
         t0 = time.time()
         Dc = base if (wf, wd) == (3, 3) else pass2_caps.CapDecoder(5, SITE, wf, wd, p=P)
         recs = _decode_panel(Dc, sims)
         results[(wf, wd)] = recs
+        ck.write_text(json.dumps(recs))                         # persist before next (slow) cap
         print(f'cap ({wf},{wd}) decoded in {round(time.time()-t0,1)}s', flush=True)
         if (wf, wd) != (3, 3):
             del Dc
@@ -405,7 +411,7 @@ def caps():
     def compare(a, b):
         n = len(a); frame_ch = post = flip = tie_ch = 0
         for ra, rb in zip(a, b):
-            if ra['frames'] != rb['frames']:
+            if list(ra['frames']) != list(rb['frames']):        # tuple vs JSON-reloaded list
                 frame_ch += 1
             if abs(ra['thick'][1] - rb['thick'][1]) > nd_infer.EPS:
                 post += 1
@@ -434,16 +440,24 @@ def caps():
            out['comparisons']['34_vs_33']['label_flips'] > 0)
     out['escalate_44'] = esc
     if esc:
-        t0 = time.time()
-        D44 = pass2_caps.CapDecoder(5, SITE, 4, 4, p=P)
-        recs44 = _decode_panel(D44, sims); del D44
-        print(f'cap (4,4) decoded in {round(time.time()-t0,1)}s', flush=True)
+        ck = R / '_caps_ckpt_44.json'
+        if ck.exists():
+            recs44 = json.loads(ck.read_text())
+            print('cap (4,4) loaded from checkpoint', flush=True)
+        else:
+            t0 = time.time()
+            D44 = pass2_caps.CapDecoder(5, SITE, 4, 4, p=P)
+            recs44 = _decode_panel(D44, sims); del D44
+            ck.write_text(json.dumps(recs44))
+            print(f'cap (4,4) decoded in {round(time.time()-t0,1)}s', flush=True)
         out['comparisons']['44_vs_33'] = compare(base_recs, recs44)
         absent = sum(r['absent'] for r in recs44); frame0 = sum(r['frame0'] for r in recs44)
         fallback0 = sum(r['frame0'] and r['absent'] for r in recs44)
         out['prefix_absence']['44'] = dict(observed_prefix_absent=absent, frame_zero_outputs=frame0,
                                            fallback_zeros=fallback0, supported_zeros=frame0 - fallback0)
     (R / 'pass2_caps.json').write_text(json.dumps(out, indent=2) + '\n')
+    for ck in R.glob('_caps_ckpt_*.json'):                      # final result written; drop checkpoints
+        ck.unlink()
     for k, v in out['comparisons'].items():
         print(k, 'frame_ch', v['frame_changes'], 'post', v['posterior_shifts'],
               'flips', v['label_flips'], 'tie_ch', v['tie_changes'],
