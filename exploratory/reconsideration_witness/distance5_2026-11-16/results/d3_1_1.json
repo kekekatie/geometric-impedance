@@ -1,0 +1,90 @@
+{
+  "d": 3,
+  "site": [
+    1,
+    1
+  ],
+  "query": 8,
+  "n": 68128,
+  "weight": 9.108255402497775,
+  "arms": {
+    "thick": {
+      "raw_disagree": 0,
+      "weighted_agreement": 1.0,
+      "weighted_disagreement_pct": 0.0,
+      "weighted_truth": 0.995901,
+      "payload_max": 40,
+      "payload_mean": 40.0
+    },
+    "thin": {
+      "raw_disagree": 3371,
+      "weighted_agreement": 0.996994,
+      "weighted_disagreement_pct": 0.3006,
+      "weighted_truth": 0.993013,
+      "payload_max": 26,
+      "payload_mean": 26.0
+    },
+    "diamond": {
+      "raw_disagree": 331,
+      "weighted_agreement": 0.999964,
+      "weighted_disagreement_pct": 0.0036,
+      "weighted_truth": 0.99589,
+      "payload_max": 66,
+      "payload_mean": 36.4354
+    },
+    "whole": {
+      "raw_disagree": 0,
+      "weighted_agreement": 1.0,
+      "weighted_disagreement_pct": 0.0,
+      "weighted_truth": 0.995901,
+      "payload_max": 66,
+      "payload_mean": 36.4354
+    }
+  },
+  "diamond_split": {
+    "diamond_right": 114,
+    "reference_right": 217
+  },
+  "roundtrip_mismatches": 0,
+  "whole_ne_thick": 0,
+  "example": {
+    "weight": 1.002003004005006e-06,
+    "faults": [
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        0
+      ],
+      [
+        "X",
+        [
+          0,
+          0
+        ],
+        4
+      ]
+    ],
+    "onset": 1,
+    "truth": 0,
+    "decisions": {
+      "thick": 1,
+      "thin": 0,
+      "diamond": 0,
+      "whole": 1
+    }
+  },
+  "elapsed": 83.3,
+  "frame_table_sizes": {
+    "X": 4812,
+    "Z": 4812
+  },
+  "w_dec": 3,
+  "w_frame": 3,
+  "config_table_rows": {
+    "X": 45826,
+    "Z": 45826
+  }
+}
