@@ -1,0 +1,50 @@
+{
+  "thick": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+      "worker",
+      "thick"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 21.48755145072937
+  },
+  "thin": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+      "worker",
+      "thin"
+    ],
+    "exit_code": 0,
+    "unique_states": 5506,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 4.204629421234131
+  },
+  "diamond": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+      "worker",
+      "diamond"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 11.327288627624512
+  },
+  "whole": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+      "worker",
+      "whole"
+    ],
+    "exit_code": 0,
+    "unique_states": 27792,
+    "max_probability_difference": 0.0,
+    "elapsed_seconds": 25.82306480407715
+  }
+}

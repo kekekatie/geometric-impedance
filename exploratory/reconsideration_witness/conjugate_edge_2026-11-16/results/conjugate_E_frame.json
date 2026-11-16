@@ -1,0 +1,181 @@
+{
+  "variant": "E_frame",
+  "site": [
+    2,
+    1
+  ],
+  "star": [
+    5,
+    6,
+    7
+  ],
+  "report": {
+    "site": [
+      2,
+      1
+    ],
+    "onsets": [
+      1,
+      2
+    ],
+    "deadline": 4
+  },
+  "config": {
+    "parity": true,
+    "odds": true,
+    "epsilon": true,
+    "frame": true
+  },
+  "n_histories": 68128,
+  "total_weight": 9.108255402497775,
+  "arms": {
+    "thick": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9966254303611422,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9966254303611422,
+      "raw_disagree": 0,
+      "ties": 32,
+      "payload_weighted": 40.00000000041864,
+      "payload_max": 40,
+      "wire_weighted": 387.00000000093706,
+      "wire_max": 387
+    },
+    "thin": {
+      "hard_agree": 0.9975242154938913,
+      "hard_correct": 0.9956363266733198,
+      "expected_agree": 0.9975198150770872,
+      "expected_correct": 0.9956363266733198,
+      "raw_disagree": 2545,
+      "ties": 80,
+      "payload_weighted": 26.00000000020932,
+      "payload_max": 26,
+      "wire_weighted": 236.00000000043417,
+      "wire_max": 236
+    },
+    "diamond": {
+      "hard_agree": 0.9990295980835951,
+      "hard_correct": 0.9966184997046756,
+      "expected_agree": 0.9990260777501518,
+      "expected_correct": 0.9966184997046756,
+      "raw_disagree": 837,
+      "ties": 96,
+      "payload_weighted": 33.97489298200017,
+      "payload_max": 61,
+      "wire_weighted": 260.80199169618743,
+      "wire_max": 293
+    },
+    "whole": {
+      "hard_agree": 1.0,
+      "hard_correct": 0.9966254303611422,
+      "expected_agree": 1.0,
+      "expected_correct": 0.9966254303611422,
+      "raw_disagree": 0,
+      "ties": 32,
+      "payload_weighted": 33.97489298200017,
+      "payload_max": 61,
+      "wire_weighted": 258.80199169600166,
+      "wire_max": 291
+    }
+  },
+  "diamond_disagreements": {
+    "reference_right": 450,
+    "diamond_right": 387
+  },
+  "example": {
+    "weight": 0.001001001001001001,
+    "faults": [
+      [
+        "X",
+        [
+          1,
+          0
+        ],
+        1
+      ],
+      [
+        "X",
+        [
+          2,
+          1
+        ],
+        1
+      ]
+    ],
+    "onset": 1,
+    "truth": 1,
+    "decisions": {
+      "thick": {
+        "label": 1,
+        "p0": 0.4997506299092248,
+        "p1": 0.5002493700907752,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.5993570370941279,
+        "p1": 0.4006429629058721,
+        "tie": false
+      },
+      "diamond": {
+        "label": 0,
+        "p0": 0.5002493612142187,
+        "p1": 0.49975063878578135,
+        "tie": false
+      },
+      "whole": {
+        "label": 1,
+        "p0": 0.4997506299092248,
+        "p1": 0.5002493700907752,
+        "tie": false
+      }
+    }
+  },
+  "checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "duplicate_contribution_histories": 1038,
+  "elapsed_seconds": 91.19168329238892,
+  "query_counts": {
+    "thick": 40,
+    "thin": 0,
+    "diamond": 6,
+    "whole": 24
+  },
+  "reconstructed_old_values": {
+    "diamond": 6,
+    "whole": 24
+  },
+  "note": "Conjugate X-open edge (2,1); star {5,6,7} = 2 Z-arms + 1 X-arm; diamond query 6 readings. Reuses correction_2026-11-14 model unchanged.",
+  "cold_input": {
+    "thick": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "6489da4a68de4d5e48a7be5d3ec98ca4ae4b804264bb12161f194d3052ecb08f",
+      "bytes": 14507424
+    },
+    "thin": {
+      "unique_states": 5506,
+      "histories": 68128,
+      "sha256": "2ef6e19c0da3b5b3dc723b6ab1b066340f4fe35622df66deeb3cb49de759ebec",
+      "bytes": 2042726
+    },
+    "diamond": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "d81c1eb370ef5b6e3838b782bfc05bff7c1b565a53552e026a12ba28b65b4918",
+      "bytes": 11300625
+    },
+    "whole": {
+      "unique_states": 27792,
+      "histories": 68128,
+      "sha256": "8dc6ecaa7a9828af48e3d6b2779349d45801281c5f2ed9a7040b9612977638ff",
+      "bytes": 11245041
+    }
+  }
+}

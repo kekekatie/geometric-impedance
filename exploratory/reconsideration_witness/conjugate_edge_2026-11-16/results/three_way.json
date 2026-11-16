@@ -1,0 +1,166 @@
+{
+  "baseline_commit": "09a79c1",
+  "zopen_commit": "93cf914",
+  "conjugate_protocol": "9832cd1",
+  "logical_sector": "X-sector reads Z-stabs; Z-arms=logical readings, X-arms=onset readings",
+  "three_way": [
+    {
+      "label": "bulk (1,1) 2X+2Z",
+      "site": "1,1",
+      "star_arms": "2Z+2X",
+      "lip_bits": 8,
+      "thin_disagree": 3433,
+      "diamond_disagree": 341,
+      "diamond_agree": 0.999962,
+      "diamond_correct": 0.995891,
+      "thick_correct": 0.995901,
+      "diamond_split": {
+        "diamond_right": 123,
+        "reference_right": 218
+      },
+      "diamond_payload_max": 66,
+      "diamond_payload_mean": 36.4354
+    },
+    {
+      "label": "Z-open (1,2) 2X+1Z",
+      "site": "1,2",
+      "star_arms": "1Z+2X",
+      "lip_bits": 6,
+      "thin_disagree": 3280,
+      "diamond_disagree": 896,
+      "diamond_agree": 0.999572,
+      "diamond_correct": 0.995523,
+      "thick_correct": 0.995666,
+      "diamond_split": {
+        "diamond_right": 301,
+        "reference_right": 595
+      },
+      "diamond_payload_max": 61,
+      "diamond_payload_mean": 33.9749
+    },
+    {
+      "label": "X-open (2,1) 1X+2Z",
+      "site": "2,1",
+      "star_arms": "2Z+1X",
+      "lip_bits": 6,
+      "thin_disagree": 2545,
+      "diamond_disagree": 837,
+      "diamond_agree": 0.99903,
+      "diamond_correct": 0.996618,
+      "thick_correct": 0.996625,
+      "diamond_split": {
+        "reference_right": 450,
+        "diamond_right": 387
+      },
+      "diamond_payload_max": 61,
+      "diamond_payload_mean": 33.9749
+    }
+  ],
+  "conjugate_example": {
+    "weight": 0.001001001001001001,
+    "faults": [
+      [
+        "X",
+        [
+          1,
+          0
+        ],
+        1
+      ],
+      [
+        "X",
+        [
+          2,
+          1
+        ],
+        1
+      ]
+    ],
+    "onset": 1,
+    "truth": 1,
+    "decisions": {
+      "thick": {
+        "label": 1,
+        "p0": 0.4997506299092248,
+        "p1": 0.5002493700907752,
+        "tie": false
+      },
+      "thin": {
+        "label": 0,
+        "p0": 0.5993570370941279,
+        "p1": 0.4006429629058721,
+        "tie": false
+      },
+      "diamond": {
+        "label": 0,
+        "p0": 0.5002493612142187,
+        "p1": 0.49975063878578135,
+        "tie": false
+      },
+      "whole": {
+        "label": 1,
+        "p0": 0.4997506299092248,
+        "p1": 0.5002493700907752,
+        "tie": false
+      }
+    }
+  },
+  "conjugate_checks": {
+    "direct_roundtrip_checks": 272512,
+    "mismatches": 0,
+    "whole_thick_label_mismatches": 0,
+    "whole_thick_probabilities_within_1e_12": true,
+    "archive_dense_mismatches": 0,
+    "archive_arms_identical": true
+  },
+  "cold_restart": {
+    "thick": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+        "worker",
+        "thick"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 21.48755145072937
+    },
+    "thin": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+        "worker",
+        "thin"
+      ],
+      "exit_code": 0,
+      "unique_states": 5506,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 4.204629421234131
+    },
+    "diamond": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+        "worker",
+        "diamond"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 11.327288627624512
+    },
+    "whole": {
+      "command": [
+        "/usr/local/bin/python3",
+        "/home/user/geometric-impedance/exploratory/reconsideration_witness/conjugate_edge_2026-11-16/src/conjugate_run.py",
+        "worker",
+        "whole"
+      ],
+      "exit_code": 0,
+      "unique_states": 27792,
+      "max_probability_difference": 0.0,
+      "elapsed_seconds": 25.82306480407715
+    }
+  }
+}
