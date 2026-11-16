@@ -323,6 +323,135 @@ def stress():
     print('crossing geometry:', geom)
 
 
+# ---------------- cap sensitivity ----------------
+def _panel_fts(D):
+    """Fault-spec list for the (reduced) cap panel: first 250 triples x8 + all
+    weight-1 near-loss x8. REDUCTION (frozen before any cap outcome, per protocol):
+    the weight-2 near-loss configs are dropped from the CAP panel only, because
+    w_dec=4 marginals scan 47M configs per distinct full-detector evidence
+    (~200 ms/history, never cached for thick) and the full 48,840-history near-loss
+    census would take ~2 h per cap. The full weight<=2 near-loss is still covered by
+    the (3,3) stress census; the cap panel keeps the k=3 triples (where a 4th fault
+    most plausibly interacts with w=4) plus the weight-1 near-loss probes."""
+    s = D.s
+    prims = pass2_sample.primitives()
+    triples, _ = pass2_sample.draw()
+    fts_list = []; tag = []
+    for (a, b, c) in triples[:250]:
+        tp = [prims[a], prims[b], prims[c]]
+        for onset, vx, vz in variants():
+            fts_list.append(tuple(tp) + tuple(loss_contribs(onset, vx, vz))); tag.append('triple')
+    locp, _ = p_loc(s)
+    for prim in locp:                                        # weight-1 near-loss only
+        for onset, vx, vz in variants():
+            fts_list.append((prim,) + tuple(loss_contribs(onset, vx, vz))); tag.append('nearloss1')
+    return fts_list, tag
+
+
+def _decode_panel(Dc, sims):
+    """Decode all panel histories under decoder Dc. sims: list of (DZ,DX,truth)."""
+    recs = []
+    for DZ, DX, truth in sims:
+        dec = {a: Dc.direct(DZ, DX, a) for a in ARMS}
+        frames = Dc.observed_frames(DZ, DX)
+        absent = Dc.prefix_absent(DZ, DX) if hasattr(Dc, 'prefix_absent') else {'X': False, 'Z': False}
+        recs.append(dict(truth=truth,
+                         thick=(dec['thick']['label'], round(dec['thick']['p0'], 9), bool(dec['thick']['tie'])),
+                         thin=dec['thin']['label'], diamond=dec['diamond']['label'],
+                         frames=tuple(frames),
+                         frame0=(frames[0] == 0 or frames[1] == 0),
+                         absent=bool(absent['X'] or absent['Z'])))
+    return recs
+
+
+def _panel_margins(recs):
+    n = len(recs)
+    def cred(lbl, tie, truth):
+        return 0.5 if tie else (1.0 if lbl == truth else 0.0)
+    tt = dt = tk = 0.0
+    for r in recs:
+        ck = cred(r['thick'][0], r['thick'][2], r['truth'])
+        cn = 1.0 if r['thin'] == r['truth'] else 0.0            # thin tie flag not stored; hard
+        cd = 1.0 if r['diamond'] == r['truth'] else 0.0
+        tk += ck
+    return dict(thick_tie_truth=round(tk / n, 6))
+
+
+def caps():
+    import pass2_caps
+    base = make_decoder()
+    fts_list, tag = _panel_fts(base)
+    s = base.s
+    # simulate once (cap-independent)
+    sims = []
+    for fts in fts_list:
+        DZ, DX, truth, _ = s.simulate(*nd_run.compose(fts))
+        sims.append((DZ, DX, truth))
+    print('panel histories', len(sims), flush=True)
+    configs = [(3, 3), (4, 3), (3, 4)]
+    results = {}
+    for (wf, wd) in configs:
+        t0 = time.time()
+        Dc = base if (wf, wd) == (3, 3) else pass2_caps.CapDecoder(5, SITE, wf, wd, p=P)
+        recs = _decode_panel(Dc, sims)
+        results[(wf, wd)] = recs
+        print(f'cap ({wf},{wd}) decoded in {round(time.time()-t0,1)}s', flush=True)
+        if (wf, wd) != (3, 3):
+            del Dc
+    base_recs = results[(3, 3)]
+    out = dict(kind='caps', d=5, site=list(SITE), panel_n=len(sims),
+               cap250_sha256='cc8be35776d64ddca09dc534666a29ee8198b449b982b686d2ed9eda0eab5310',
+               comparisons={})
+    def compare(a, b):
+        n = len(a); frame_ch = post = flip = tie_ch = 0
+        for ra, rb in zip(a, b):
+            if ra['frames'] != rb['frames']:
+                frame_ch += 1
+            if abs(ra['thick'][1] - rb['thick'][1]) > nd_infer.EPS:
+                post += 1
+            if ra['thick'][0] != rb['thick'][0]:
+                flip += 1
+            if ra['thick'][2] != rb['thick'][2]:
+                tie_ch += 1
+        return dict(n=n, frame_changes=frame_ch, posterior_shifts=post, label_flips=flip,
+                    tie_changes=tie_ch,
+                    thick_tie_truth_base=_panel_margins(a)['thick_tie_truth'],
+                    thick_tie_truth_new=_panel_margins(b)['thick_tie_truth'])
+    for cfg in [(4, 3), (3, 4)]:
+        out['comparisons'][f'{cfg[0]}{cfg[1]}_vs_33'] = compare(base_recs, results[cfg])
+    # prefix-absence accounting per cap
+    out['prefix_absence'] = {}
+    for cfg in configs:
+        recs = results[cfg]
+        absent = sum(r['absent'] for r in recs)
+        frame0 = sum(r['frame0'] for r in recs)
+        fallback0 = sum(r['frame0'] and r['absent'] for r in recs)
+        out['prefix_absence'][f'{cfg[0]}{cfg[1]}'] = dict(
+            observed_prefix_absent=absent, frame_zero_outputs=frame0,
+            fallback_zeros=fallback0, supported_zeros=frame0 - fallback0)
+    # escalate to (4,4) if both individual changes flip any labels
+    esc = (out['comparisons']['43_vs_33']['label_flips'] > 0 and
+           out['comparisons']['34_vs_33']['label_flips'] > 0)
+    out['escalate_44'] = esc
+    if esc:
+        t0 = time.time()
+        D44 = pass2_caps.CapDecoder(5, SITE, 4, 4, p=P)
+        recs44 = _decode_panel(D44, sims); del D44
+        print(f'cap (4,4) decoded in {round(time.time()-t0,1)}s', flush=True)
+        out['comparisons']['44_vs_33'] = compare(base_recs, recs44)
+        absent = sum(r['absent'] for r in recs44); frame0 = sum(r['frame0'] for r in recs44)
+        fallback0 = sum(r['frame0'] and r['absent'] for r in recs44)
+        out['prefix_absence']['44'] = dict(observed_prefix_absent=absent, frame_zero_outputs=frame0,
+                                           fallback_zeros=fallback0, supported_zeros=frame0 - fallback0)
+    (R / 'pass2_caps.json').write_text(json.dumps(out, indent=2) + '\n')
+    for k, v in out['comparisons'].items():
+        print(k, 'frame_ch', v['frame_changes'], 'post', v['posterior_shifts'],
+              'flips', v['label_flips'], 'tie_ch', v['tie_changes'],
+              'thick_truth', v['thick_tie_truth_base'], '->', v['thick_tie_truth_new'])
+    print('prefix_absence', out['prefix_absence'])
+    print('escalate_44', esc)
+
+
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'primary'
     if cmd == 'primary':
@@ -330,5 +459,7 @@ if __name__ == '__main__':
         primary(lim)
     elif cmd == 'stress':
         stress()
+    elif cmd == 'caps':
+        caps()
     else:
         print('unknown or not-yet-implemented subcommand:', cmd)

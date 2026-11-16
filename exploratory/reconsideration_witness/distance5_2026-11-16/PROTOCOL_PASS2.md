@@ -116,6 +116,22 @@ k≤3 estimate, interval, and benchmark verdict), (ii) the stress panel, and
 and decoder bounds **(w_frame, w_dec)** actually tested, with **P(k≥4) = 0.000574**
 reported as untested residual.
 
+## Amendment A (2026-11-16, before any cap outcome): cap-panel reduction
+
+Frozen before running the cap comparison, per §4's shrink clause. The §4 cap panel
+specified the 250-triple subset **plus the entire stress panel** (48,840 near-loss
+histories). Measuring the w_dec=4 marginal showed it scans 47.24M configs per
+distinct full-detector evidence (~200 ms/history, and thick's full-detector
+evidence never caches), so the full near-loss census would cost ~2 h **per cap** —
+infeasible for (3,4) and (4,4). **Reduction:** the cap panel is the 250-triple
+subset (2,000 histories) **plus only the weight-1 near-loss configs** (110 × 8 =
+880), total **2,880 histories**. Rationale: the k=3 triples are where a 4th
+hypothesis fault most plausibly interacts with w=4; the weight-1 near-loss configs
+are the local probes; and the full weight-≤2 near-loss is already covered by the
+(3,3) stress census (which, separately, found **zero** ties and **zero** ambiguous
+record-groups in the loss neighbourhood — the d=5 seams are non-local). No cap
+outcome was inspected before fixing this.
+
 ## Replay (once results exist)
 
 ```sh
