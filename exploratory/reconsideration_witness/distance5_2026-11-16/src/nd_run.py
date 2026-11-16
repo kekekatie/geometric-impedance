@@ -33,12 +33,12 @@ def histories(s, site):
                         yield w, tuple(extra) + tuple(loss), onset
 
 
-def run(d, site, roundtrip=True, limit=None, p=1e-3):
+def run(d, site, roundtrip=True, rt_every=1, limit=None, p=1e-3):
     D = nd_infer.Decoder(d, site, p=p)
     s = D.s
     odds = p / (1 - p)
     start = time.time()
-    W = 0.0; n = 0; rt_mism = 0; whole_ne = 0
+    W = 0.0; n = 0; rt_mism = 0; rt_checked = 0; whole_ne = 0
     tot = {a: dict(raw=0, hard_agree=0.0, hard_correct=0.0, pay_max=0, pay_weighted=0.0)
            for a in nd_infer.ARMS}
     share = collections.Counter()
@@ -51,17 +51,18 @@ def run(d, site, roundtrip=True, limit=None, p=1e-3):
         weight = odds ** w
         W += weight
         DZ, DX, truth, _ = s.simulate(*compose(fts))
+        do_rt = roundtrip and (n % rt_every == 0)
+        if do_rt:
+            rt_checked += 1
         dec = {}
         for arm in nd_infer.ARMS:
             d_arm = D.direct(DZ, DX, arm)
-            if roundtrip:
-                st = D.serialize(DZ, DX, arm)
+            st = D.serialize(DZ, DX, arm)
+            if do_rt:
                 js = json.loads(json.dumps(st))      # force a JSON round-trip
                 if D.decode_state(js) != d_arm:
                     rt_mism += 1
-                bits = D.payload_bits(arm, st)
-            else:
-                bits = D.payload_bits(arm, D.serialize(DZ, DX, arm))
+            bits = D.payload_bits(arm, st)
             dec[arm] = d_arm
             tt = tot[arm]
             tt['pay_max'] = max(tt['pay_max'], bits)
@@ -91,6 +92,7 @@ def run(d, site, roundtrip=True, limit=None, p=1e-3):
                             payload_max=tot[a]['pay_max'],
                             payload_mean=round(tot[a]['pay_weighted'], 4)) for a in nd_infer.ARMS},
               diamond_split=dict(share), roundtrip_mismatches=rt_mism,
+              roundtrip_checked=rt_checked,
               whole_ne_thick=whole_ne, example=example, elapsed=round(time.time() - start, 1),
               frame_table_sizes={sec: len(D._frame_table[sec]) for sec in ('X', 'Z')},
               w_dec=D.w_dec, w_frame=D.w_frame, config_table_rows={sec: len(D._tab[sec]['ODDS']) for sec in ('X', 'Z')})
@@ -100,11 +102,13 @@ def run(d, site, roundtrip=True, limit=None, p=1e-3):
 if __name__ == '__main__':
     d = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     site = tuple(map(int, sys.argv[2].split(','))) if len(sys.argv) > 2 else (1, 1)
-    limit = int(sys.argv[3]) if len(sys.argv) > 3 else None
-    out = run(d, site, limit=limit)
+    limit = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3] not in ('', 'none') else None
+    rt_every = int(sys.argv[4]) if len(sys.argv) > 4 else 1
+    out = run(d, site, rt_every=rt_every, limit=limit)
     Path('../results').mkdir(exist_ok=True)
     tag = f'd{d}_{site[0]}_{site[1]}' + (f'_lim{limit}' if limit else '')
     Path(f'../results/{tag}.json').write_text(json.dumps(out, indent=2) + '\n')
     print(json.dumps({a: out['arms'][a]['raw_disagree'] for a in nd_infer.ARMS}),
-          'split', out['diamond_split'], 'roundtrip_mism', out['roundtrip_mismatches'],
+          'split', out['diamond_split'],
+          'roundtrip_mism', out['roundtrip_mismatches'], '/', out['roundtrip_checked'],
           'whole!=thick', out['whole_ne_thick'], 'elapsed', out['elapsed'])
