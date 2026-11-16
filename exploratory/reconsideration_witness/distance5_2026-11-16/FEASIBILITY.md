@@ -64,11 +64,19 @@ within **1×10⁻⁴**. The bounded-frame (`w_frame = w_dec = 3`) method meets t
   bounded-frame method validated above, `w_dec = w_frame = 3`.
 - **Site:** bulk **(2,2)** (recorded geometry above). **Onsets** {1,2}, **deadline** 4,
   **p = 1e-3**, five rounds, four arms — all unchanged from d=3.
-- **Ensemble:** the same shape — ≤ 2 ordinary faults + the loss at (2,2), two onsets, four
-  freed-value pairs — **68,128** contribution histories, XOR parity, Bernoulli-odds weights.
+- **Ensemble:** the same *shape* — ≤ 2 ordinary faults + the loss at (2,2), two onsets, four
+  freed-value pairs — XOR parity, Bernoulli-odds weights. **Ensemble size scales with the
+  code:** the single-fault pool is 370 at d=5 vs 130 at d=3 (25 data × 5 rounds × 2 sectors
+  + 24 measurement faults), so "≤ 2 extra faults" enumerates **549,088** histories at d=5
+  vs 68,128 at d=3 — about 8× more. (Corrected: an earlier draft of this line carried the
+  d=3 count 68,128; the probes' "est full 68128" was a placeholder, not the true d=5 count.)
 - **Comparison baseline:** the **same method at d=3** (diamond 331, the `nd` d=3 run),
   not Astra's exact 341, so d3-vs-d5 is like-with-like. Astra's exact 341 is the external
-  anchor the method was validated against.
+  anchor the method was validated against. **Because the ensembles differ in size, raw
+  disagreement *counts* are not directly comparable across distances; the fair cross-distance
+  comparison is the *weighted* metrics** (agreement / disagreement % / truth, each normalised
+  by total ensemble weight = the fault-model probability of that outcome). These are exactly
+  the metrics Sol asked to compare.
 - **Serialization:** full run scored via `direct`; JSON serialize/restore roundtrip
   validated on the d=5 probe (0 mismatches on 150 histories); a full cold
   fresh-process restart across distinct states is a follow-up (runtime), not this run.
@@ -80,6 +88,9 @@ within **1×10⁻⁴**. The bounded-frame (`w_frame = w_dec = 3`) method meets t
   - **M1 — whole == thick** at d=5 (0 disagreements). ~90%.
   - **M2 — storage** as measured: thick 120, thin 74, 7 bits/event, diamond max 116. ~90%.
   - **M3 — query 8** (four-neighbour bulk). ~98%.
-  - **M4 — OPEN (Sol):** whether the d=5 bulk diamond-vs-reference disagreement **grows or
-    shrinks** relative to d=3 bulk (331 under this method) is left open — it is exactly the
-    question of whether the bigger quilt gives distant evidence more chances to matter.
+  - **M4 — OPEN (Sol):** whether the d=5 bulk diamond-vs-reference **weighted** disagreement
+    **grows or shrinks** relative to d=3 bulk (0.0036% weighted, raw 331/68,128 under this
+    method) is left open. Two effects pull opposite ways: the bigger quilt gives *distant
+    evidence* more room to live outside the fixed 8-reading window (pushes the gap up), while
+    the shared thin record roughly triples (26 → 74 bits) and the logical is better protected
+    (pushes it down). Compared in weighted terms, since the ensembles differ 8× in size.
