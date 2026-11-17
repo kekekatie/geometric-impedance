@@ -1,0 +1,13 @@
+# Independent Pass 2 audit
+
+Pinned input: f8e15d863a141404f152629d279612236264472f. No pinned files or datasets are changed.
+
+Before audit decoding, freeze these additions:
+
+* Reconstruct exactly the published cap panel: first 250 sorted sampled triples (2,000 histories) and all 110 weight-one near-loss primitives (880 histories). Verify both published hashes. The sorted prefix is a diagnostic panel, not a representative sample of weight-three faults.
+* Retain full label, posterior and tie flag for all four arms at (3,3), (4,3), (3,4). Report half-credit truth and paired thick-minus-thin and diamond-minus-thin separately by panel component, including per-history changes and signed score sums.
+* The original protocol does not quantify 'materially'. Use a conservative operational trigger: run (4,4) if BOTH individual increases change either paired mean in either component by any nonzero amount. Report exact changes so a reader can apply another threshold. A zero mean does not establish per-history invariance.
+* Audit the entire 48,840-history near-loss census at (3,3), counting diamond/thick label, tie, posterior and truth-credit differences directly. Group exact detector-record tuples, not Python hash values. Compare published aggregate results, but do not infer individual agreement from aggregate equality.
+* Construct a small deterministic set of logical seam pairs at onsets 1 and 2. Use logical FAULT representatives that commute with the measured stabilizers and flip the relevant simulated logical truth. Split their four non-loss sites 2+2; assign erasure value 0 to one member and 1 to the other. Verify exact full-record equality, opposite sector truths, and every arm's output. Distinguish the decoder's scored Z-logical truth from the conjugate truth. These examples do not identify the cause of all global ensemble ties.
+* Preserve the pinned simulator, hypothesis enumeration, weights, frame map and scoring. An optional exact query accelerator may index candidate rows by live detectors and boundary parity, quantities already implied by every arm's evidence. Remaining filters and summation order must match the original. Validate against the unaccelerated marginal, including every changed cap-panel decision, and report validation counts and maximum posterior error. No candidates may be dropped on grounds of low probability.
+* Outputs and scripts remain in this new directory. Cache and logs may be local; committed results include reproducible per-history records. This audit adds reporting and repairs example construction, not the frozen scientific panel or decoder protocol.
