@@ -1,0 +1,675 @@
+{
+  "summary": {
+    "33": {
+      "triple": {
+        "n": 2000,
+        "arms": {
+          "thick": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "thin": {
+            "credit_sum": 1992.0,
+            "ties": 0,
+            "hard_correct": 1992,
+            "tie_truth": 0.996
+          },
+          "diamond": {
+            "credit_sum": 1993.0,
+            "ties": 0,
+            "hard_correct": 1993,
+            "tie_truth": 0.9965
+          },
+          "whole": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 6.0,
+            "mean": 0.003,
+            "positive": 6,
+            "negative": 0,
+            "zero": 1994
+          },
+          "diamond_minus_thin": {
+            "sum": 1.0,
+            "mean": 0.0005,
+            "positive": 2,
+            "negative": 1,
+            "zero": 1997
+          }
+        },
+        "prefix_absent": 128,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      },
+      "nearloss1": {
+        "n": 880,
+        "arms": {
+          "thick": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "thin": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "diamond": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "whole": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      }
+    },
+    "43": {
+      "triple": {
+        "n": 2000,
+        "arms": {
+          "thick": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "thin": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "diamond": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "whole": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 2000
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 2000
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      },
+      "nearloss1": {
+        "n": 880,
+        "arms": {
+          "thick": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "thin": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "diamond": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "whole": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      }
+    },
+    "34": {
+      "triple": {
+        "n": 2000,
+        "arms": {
+          "thick": {
+            "credit_sum": 1997.0,
+            "ties": 0,
+            "hard_correct": 1997,
+            "tie_truth": 0.9985
+          },
+          "thin": {
+            "credit_sum": 1992.0,
+            "ties": 0,
+            "hard_correct": 1992,
+            "tie_truth": 0.996
+          },
+          "diamond": {
+            "credit_sum": 1993.0,
+            "ties": 0,
+            "hard_correct": 1993,
+            "tie_truth": 0.9965
+          },
+          "whole": {
+            "credit_sum": 1997.0,
+            "ties": 0,
+            "hard_correct": 1997,
+            "tie_truth": 0.9985
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 5.0,
+            "mean": 0.0025,
+            "positive": 6,
+            "negative": 1,
+            "zero": 1993
+          },
+          "diamond_minus_thin": {
+            "sum": 1.0,
+            "mean": 0.0005,
+            "positive": 2,
+            "negative": 1,
+            "zero": 1997
+          }
+        },
+        "prefix_absent": 128,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      },
+      "nearloss1": {
+        "n": 880,
+        "arms": {
+          "thick": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "thin": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "diamond": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "whole": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      }
+    },
+    "44": {
+      "triple": {
+        "n": 2000,
+        "arms": {
+          "thick": {
+            "credit_sum": 1997.0,
+            "ties": 0,
+            "hard_correct": 1997,
+            "tie_truth": 0.9985
+          },
+          "thin": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "diamond": {
+            "credit_sum": 1998.0,
+            "ties": 0,
+            "hard_correct": 1998,
+            "tie_truth": 0.999
+          },
+          "whole": {
+            "credit_sum": 1997.0,
+            "ties": 0,
+            "hard_correct": 1997,
+            "tie_truth": 0.9985
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": -1.0,
+            "mean": -0.0005,
+            "positive": 0,
+            "negative": 1,
+            "zero": 1999
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 2000
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      },
+      "nearloss1": {
+        "n": 880,
+        "arms": {
+          "thick": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "thin": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "diamond": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          },
+          "whole": {
+            "credit_sum": 880.0,
+            "ties": 0,
+            "hard_correct": 880,
+            "tie_truth": 1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          },
+          "diamond_minus_thin": {
+            "sum": 0.0,
+            "mean": 0.0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 880
+          }
+        },
+        "prefix_absent": 0,
+        "whole_label_ne": 0,
+        "whole_post_ne": 0
+      }
+    }
+  },
+  "changes": {
+    "43": {
+      "triple": {
+        "frame_changes": 112,
+        "arms": {
+          "thick": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 0,
+            "credit_change": 0.0
+          },
+          "thin": {
+            "label_flips": 6,
+            "tie_changes": 0,
+            "posterior_shifts": 824,
+            "credit_change": 6.0
+          },
+          "diamond": {
+            "label_flips": 5,
+            "tie_changes": 0,
+            "posterior_shifts": 459,
+            "credit_change": 5.0
+          },
+          "whole": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 0,
+            "credit_change": 0.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": -6.0,
+            "mean_change": -0.003,
+            "histories_changed": 6
+          },
+          "diamond_minus_thin": {
+            "sum_change": -1.0,
+            "mean_change": -0.0005,
+            "histories_changed": 3
+          }
+        }
+      },
+      "nearloss1": {
+        "frame_changes": 0,
+        "arms": {
+          "thick": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 0,
+            "credit_change": 0.0
+          },
+          "thin": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 184,
+            "credit_change": 0.0
+          },
+          "diamond": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 79,
+            "credit_change": 0.0
+          },
+          "whole": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 0,
+            "credit_change": 0.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          },
+          "diamond_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          }
+        }
+      }
+    },
+    "34": {
+      "triple": {
+        "frame_changes": 0,
+        "arms": {
+          "thick": {
+            "label_flips": 1,
+            "tie_changes": 0,
+            "posterior_shifts": 1796,
+            "credit_change": -1.0
+          },
+          "thin": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 1904,
+            "credit_change": 0.0
+          },
+          "diamond": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 1890,
+            "credit_change": 0.0
+          },
+          "whole": {
+            "label_flips": 1,
+            "tie_changes": 0,
+            "posterior_shifts": 1796,
+            "credit_change": -1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": -1.0,
+            "mean_change": -0.0005,
+            "histories_changed": 1
+          },
+          "diamond_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          }
+        }
+      },
+      "nearloss1": {
+        "frame_changes": 0,
+        "arms": {
+          "thick": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "thin": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "diamond": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "whole": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          },
+          "diamond_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          }
+        }
+      }
+    },
+    "44": {
+      "triple": {
+        "frame_changes": 112,
+        "arms": {
+          "thick": {
+            "label_flips": 1,
+            "tie_changes": 0,
+            "posterior_shifts": 1796,
+            "credit_change": -1.0
+          },
+          "thin": {
+            "label_flips": 6,
+            "tie_changes": 0,
+            "posterior_shifts": 1912,
+            "credit_change": 6.0
+          },
+          "diamond": {
+            "label_flips": 5,
+            "tie_changes": 0,
+            "posterior_shifts": 1896,
+            "credit_change": 5.0
+          },
+          "whole": {
+            "label_flips": 1,
+            "tie_changes": 0,
+            "posterior_shifts": 1796,
+            "credit_change": -1.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": -7.0,
+            "mean_change": -0.0035,
+            "histories_changed": 7
+          },
+          "diamond_minus_thin": {
+            "sum_change": -1.0,
+            "mean_change": -0.0005,
+            "histories_changed": 3
+          }
+        }
+      },
+      "nearloss1": {
+        "frame_changes": 0,
+        "arms": {
+          "thick": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "thin": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "diamond": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          },
+          "whole": {
+            "label_flips": 0,
+            "tie_changes": 0,
+            "posterior_shifts": 880,
+            "credit_change": 0.0
+          }
+        },
+        "pairs": {
+          "thick_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          },
+          "diamond_minus_thin": {
+            "sum_change": 0.0,
+            "mean_change": 0.0,
+            "histories_changed": 0
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "33": {
+      "histories": 2880,
+      "arm_checks": 11520,
+      "max_posterior_error": 0.0,
+      "stock_builder_checks": 11520,
+      "stock_builder_max_error": 0.0
+    },
+    "43": {
+      "histories": 39,
+      "arm_checks": 156,
+      "max_posterior_error": 0.0
+    },
+    "34": {
+      "histories": 33,
+      "arm_checks": 132,
+      "max_posterior_error": 0.0
+    },
+    "44": {
+      "histories": 40,
+      "arm_checks": 160,
+      "max_posterior_error": 0.0
+    }
+  },
+  "escalate_44": true
+}

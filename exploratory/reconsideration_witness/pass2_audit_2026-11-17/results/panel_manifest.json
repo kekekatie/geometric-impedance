@@ -1,0 +1,9 @@
+{
+  "sample_sha256": "34aa495f75035da6b0be05d7dafeef3bbbe433b7e7df1b0e61d90b16b14ffb88",
+  "cap250_sha256": "cc8be35776d64ddca09dc534666a29ee8198b449b982b686d2ed9eda0eab5310",
+  "diagnostic_only": true,
+  "first_primitive_counts": {
+    "0": 194,
+    "1": 56
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "configs": 4,
+  "histories_per_config": 2880,
+  "paired_means_recomputed": true
+}

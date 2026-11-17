@@ -1,0 +1,14 @@
+{
+  "X": {
+    "min_weight": 5,
+    "count": 16,
+    "correct_syndrome_and_parity_checks": 32,
+    "old_representatives_with_nonzero_syndrome": 16
+  },
+  "Z": {
+    "min_weight": 5,
+    "count": 16,
+    "correct_syndrome_and_parity_checks": 32,
+    "old_representatives_with_nonzero_syndrome": 16
+  }
+}

@@ -1,2 +1,4 @@
 __pycache__/
 runtime/
+results/cap_*.json
+results/panel.json

@@ -1,0 +1,20 @@
+{
+  "43": {
+    "n": 2880,
+    "frame_changes": 112,
+    "posterior_shifts": 0,
+    "label_flips": 0,
+    "tie_changes": 0,
+    "thick_tie_truth_base": 0.999306,
+    "thick_tie_truth_new": 0.999306
+  },
+  "34": {
+    "n": 2880,
+    "frame_changes": 0,
+    "posterior_shifts": 2108,
+    "label_flips": 1,
+    "tie_changes": 0,
+    "thick_tie_truth_base": 0.999306,
+    "thick_tie_truth_new": 0.998958
+  }
+}

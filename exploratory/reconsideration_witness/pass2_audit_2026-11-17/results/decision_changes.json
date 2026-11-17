@@ -1,0 +1,1784 @@
+{
+  "43": [
+    {
+      "history": 526,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            1
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.4,
+          "p1": 0.6000000000000001,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.5714285714285715,
+          "p1": 0.4285714285714286,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 594,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980456026058632,
+          "p1": 0.0019543973941368075,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21176470588235288,
+          "p1": 0.788235294117647,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.18181818181818182,
+          "p1": 0.8181818181818182,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 595,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          1
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980436928205831,
+          "p1": 0.001956307179416842,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21176470577859044,
+          "p1": 0.7882352942214095,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.18181818181818182,
+          "p1": 0.8181818181818182,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 598,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980456026058632,
+          "p1": 0.0019543973941368075,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21176470588235288,
+          "p1": 0.788235294117647,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.1,
+          "p1": 0.9,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 599,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980436928205831,
+          "p1": 0.001956307179416842,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21176470577859044,
+          "p1": 0.7882352942214095,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.1,
+          "p1": 0.9,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 790,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.6000000000000001,
+          "p1": 0.4,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 791,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.6000000000000001,
+          "p1": 0.4,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      }
+    }
+  ],
+  "34": [
+    {
+      "history": 785,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.4997496239815548,
+          "p1": 0.5002503760184451,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.11475409836065574,
+          "p1": 0.8852459016393442,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.27979814005576,
+          "p1": 0.72020185994424,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.4997496239815548,
+          "p1": 0.5002503760184451,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 0,
+          "p0": 0.5001235986636766,
+          "p1": 0.49987640133632333,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.11583376826722343,
+          "p1": 0.8841662317327765,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.2806860346693699,
+          "p1": 0.7193139653306301,
+          "tie": false
+        },
+        "whole": {
+          "label": 0,
+          "p0": 0.5001235986636766,
+          "p1": 0.49987640133632333,
+          "tie": false
+        }
+      }
+    }
+  ],
+  "44": [
+    {
+      "history": 526,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            1
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.4,
+          "p1": 0.6000000000000001,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.5714285714285715,
+          "p1": 0.4285714285714286,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0039603960396039604,
+          "p1": 0.9960396039603961,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.002289190117239237,
+          "p1": 0.9977108098827606,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0015781167806485869,
+          "p1": 0.9984218832193513,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0039603960396039604,
+          "p1": 0.9960396039603961,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 594,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980456026058632,
+          "p1": 0.0019543973941368075,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.005952380952380951,
+          "p1": 0.9940476190476191,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21608754434416852,
+          "p1": 0.7839124556558315,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.18613451056354055,
+          "p1": 0.8138654894364595,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.005952380952380951,
+          "p1": 0.9940476190476191,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 595,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          1
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980436928205831,
+          "p1": 0.001956307179416842,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.005958286027568474,
+          "p1": 0.9940417139724315,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21608754424411158,
+          "p1": 0.7839124557558885,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.18622267500899745,
+          "p1": 0.8137773249910025,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.005958286027568474,
+          "p1": 0.9940417139724315,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 598,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980456026058632,
+          "p1": 0.0019543973941368075,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.005946481665014866,
+          "p1": 0.9940535183349851,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21608754434416852,
+          "p1": 0.7839124556558315,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.10764145824083463,
+          "p1": 0.8923585417591653,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.005946481665014866,
+          "p1": 0.9940535183349851,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 599,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            1,
+            2
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            1,
+            3
+          ],
+          2
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.9970854922279793,
+          "p1": 0.0029145077720207253,
+          "tie": false
+        },
+        "diamond": {
+          "label": 0,
+          "p0": 0.9980436928205831,
+          "p1": 0.001956307179416842,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0059553261033161034,
+          "p1": 0.9940446738966838,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.21608754424411158,
+          "p1": 0.7839124557558885,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.10776063158372132,
+          "p1": 0.8922393684162786,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0059553261033161034,
+          "p1": 0.9940446738966838,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 785,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          1
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.4997496239815548,
+          "p1": 0.5002503760184451,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.11475409836065574,
+          "p1": 0.8852459016393442,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.27979814005576,
+          "p1": 0.72020185994424,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.4997496239815548,
+          "p1": 0.5002503760184451,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 0,
+          "p0": 0.5001235986636766,
+          "p1": 0.49987640133632333,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.11730853653620875,
+          "p1": 0.8826914634637912,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.2816726167667665,
+          "p1": 0.7183273832332335,
+          "tie": false
+        },
+        "whole": {
+          "label": 0,
+          "p0": 0.5001235986636766,
+          "p1": 0.49987640133632333,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 790,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.6000000000000001,
+          "p1": 0.4,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0029791459781529296,
+          "p1": 0.9970208540218471,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.0035545904784568035,
+          "p1": 0.9964454095215431,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0019050774455498403,
+          "p1": 0.9980949225544502,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0029791459781529296,
+          "p1": 0.9970208540218471,
+          "tie": false
+        }
+      }
+    },
+    {
+      "history": 791,
+      "stratum": "triple",
+      "fault_contributions": [
+        [
+          "X",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "X",
+          [
+            2,
+            1
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            4
+          ],
+          1
+        ],
+        [
+          "X",
+          [
+            2,
+            2
+          ],
+          2
+        ],
+        [
+          "Z",
+          [
+            2,
+            2
+          ],
+          2
+        ]
+      ],
+      "baseline": {
+        "truth": 1,
+        "frames": [
+          0,
+          0
+        ],
+        "absent": {
+          "X": true,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "thin": {
+          "label": 0,
+          "p0": 0.6000000000000001,
+          "p1": 0.4,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0,
+          "p1": 1.0,
+          "tie": false
+        }
+      },
+      "raised": {
+        "truth": 1,
+        "frames": [
+          1,
+          0
+        ],
+        "absent": {
+          "X": false,
+          "Z": false
+        },
+        "thick": {
+          "label": 1,
+          "p0": 0.0019910428019494246,
+          "p1": 0.9980089571980506,
+          "tie": false
+        },
+        "thin": {
+          "label": 1,
+          "p0": 0.0035545904775191113,
+          "p1": 0.996445409522481,
+          "tie": false
+        },
+        "diamond": {
+          "label": 1,
+          "p0": 0.0013279400059164304,
+          "p1": 0.9986720599940836,
+          "tie": false
+        },
+        "whole": {
+          "label": 1,
+          "p0": 0.0019910428019494246,
+          "p1": 0.9980089571980506,
+          "tie": false
+        }
+      }
+    }
+  ]
+}

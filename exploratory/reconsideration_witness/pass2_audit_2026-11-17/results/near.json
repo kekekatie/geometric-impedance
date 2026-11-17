@@ -1,0 +1,36 @@
+{
+  "n": 48840,
+  "credit_sum": {
+    "thick": 48728.0,
+    "thin": 48704.0,
+    "diamond": 48728.0,
+    "whole": 48728.0
+  },
+  "tie_truth": {
+    "thick": 0.9977067977067977,
+    "thin": 0.9972153972153972,
+    "diamond": 0.9977067977067977,
+    "whole": 0.9977067977067977
+  },
+  "ties": {
+    "thick": 0,
+    "thin": 0,
+    "diamond": 0,
+    "whole": 0
+  },
+  "diamond_vs_thick": {
+    "label_ne": 0,
+    "tie_ne": 0,
+    "credit_ne": 0,
+    "post_ne": 41196,
+    "whole_label_ne": 0,
+    "whole_post_ne": 0
+  },
+  "max_posterior_difference": 0.17208944115098201,
+  "record_groups": 39511,
+  "ambiguous_record_groups": 0,
+  "ambiguous_histories": 0,
+  "examples": [],
+  "published_aggregate_reproduced": true,
+  "elapsed": 136.29555988311768
+}

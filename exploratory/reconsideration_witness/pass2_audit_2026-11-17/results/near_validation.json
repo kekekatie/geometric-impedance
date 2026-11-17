@@ -1,0 +1,9 @@
+{
+  "weight_two_probes": {
+    "histories": 256,
+    "arm_checks": 1024,
+    "max_posterior_error": 0.0
+  },
+  "seam_arm_checks": 32,
+  "seam_max_posterior_error": 0.0
+}
