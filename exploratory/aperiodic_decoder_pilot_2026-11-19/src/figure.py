@@ -65,15 +65,16 @@ def main():
             metric = {eid: r[key] for eid, r in rows.items()}
             draw(ax, fam, metric, short, norm)
             if j == 0:
-                ax.set_title(fam, fontsize=13, loc='left', fontweight='bold', x=-0.02)
+                ax.annotate(fam, (-0.04, 0.5), xycoords='axes fraction', ha='right',
+                            va='center', rotation=90, fontsize=13, fontweight='bold')
     for j, (_, lab) in enumerate(cols):
-        axes[0][j].annotate(lab, (0.5, 1.06), xycoords='axes fraction', ha='center',
+        axes[0][j].annotate(lab, (0.5, 1.10), xycoords='axes fraction', ha='center',
                             fontsize=11, fontweight='bold')
     sm = ScalarMappable(norm=norm, cmap=CMAP); sm.set_array([])
     cbar = fig.colorbar(sm, ax=axes, orientation='horizontal', fraction=0.035, pad=0.03,
                         aspect=46)
-    cbar.set_label('percentage points  (blue = archive/skin helps · red = hurts · white = 0)',
-                   fontsize=10)
+    cbar.set_label('percentage points   (red = forgetting is costly: full record / 8 readings '
+                   'beat thin · blue = thin beats the full record · white = 0)', fontsize=9.5)
     fig.suptitle('Delayed-erasure re-judgment across 18 certified loss edges\n'
                  'square (degree-fixed control) · Ammann–Beenker · Penrose',
                  fontsize=13.5, y=0.97)

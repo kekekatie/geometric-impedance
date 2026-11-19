@@ -1,0 +1,1822 @@
+{
+  "mode": "sampled",
+  "n_k2": 8000,
+  "k2_total": 47895,
+  "k2_sha256": "d0d11df9ce0c04576b43c9615e7825dfbd8fa8743c8132c619e73e253d938687",
+  "seed": 20261119,
+  "p": 0.001,
+  "caps": {
+    "w_frame": 3,
+    "w_dec": 3
+  },
+  "n_sites": 18,
+  "rows": [
+    {
+      "family": "square",
+      "edge_id": 9,
+      "lost_qubit": 5,
+      "incident_checks": [
+        "X1",
+        "X2",
+        "Z1",
+        "Z4"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        5,
+        6
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -1,
+        0
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 5,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9979922605311005,
+          "hard": 0.9979966769790654
+        },
+        "thin": {
+          "tie": 0.9979972290349993,
+          "hard": 0.9979751467953467
+        },
+        "diamond": {
+          "tie": 0.9980027495949272,
+          "hard": 0.9979806673552746
+        },
+        "whole": {
+          "tie": 0.9979922605311005,
+          "hard": 0.9979966769790654
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": -0.0004968503898787421,
+        "diamond_minus_thin": 0.0005520559927864741,
+        "thick_minus_diamond": -0.0010489063826652162,
+        "thick_minus_thin_hard": 0.0021530183718672493,
+        "diamond_minus_thin_hard": 0.0005520559927864741
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 4.361242342787289e-05,
+        "diamond": 3.809186350029406e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9969029658804679,
+        "diamond": 0.9963575345595949,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00015236745400117578,
+        "thin": 0.0018713816386385083,
+        "diamond": 0.0018713816386385083,
+        "whole": 0.00015236745400117578
+      },
+      "record_ambiguity": 0.0061749456277472355,
+      "n_record_groups": 52558,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 208.7
+    },
+    {
+      "family": "square",
+      "edge_id": 10,
+      "lost_qubit": 6,
+      "incident_checks": [
+        "X1",
+        "X5",
+        "Z3",
+        "Z4"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        5,
+        10
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -1,
+        0
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 6,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9979790111872745,
+          "hard": 0.9979850838032168
+        },
+        "thin": {
+          "tie": 0.9979895002511003,
+          "hard": 0.9979674180114477
+        },
+        "diamond": {
+          "tie": 0.9979950208110282,
+          "hard": 0.9979729385713756
+        },
+        "whole": {
+          "tie": 0.9979790111872745,
+          "hard": 0.9979850838032168
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": -0.0010489063825834801,
+        "diamond_minus_thin": 0.0005520559927864741,
+        "thick_minus_diamond": -0.0016009623753699541,
+        "thick_minus_thin_hard": 0.0017665791769167173,
+        "diamond_minus_thin_hard": 0.0005520559927864741
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 5.9622047217851644e-05,
+        "diamond": 4.637270339166232e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9969747331595301,
+        "diamond": 0.9964265415586931,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.000146846894073597,
+        "thin": 0.0018713816386385083,
+        "diamond": 0.0018713816386385083,
+        "whole": 0.000146846894073597
+      },
+      "record_ambiguity": 0.0061743935717544765,
+      "n_record_groups": 52736,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 208.5
+    },
+    {
+      "family": "square",
+      "edge_id": 12,
+      "lost_qubit": 8,
+      "incident_checks": [
+        "X2",
+        "X6",
+        "Z4",
+        "Z5"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        6,
+        11
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        0,
+        1
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 8,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9979917084751095,
+          "hard": 0.997997781091051
+        },
+        "thin": {
+          "tie": 0.997992812587057,
+          "hard": 0.9979707303474044
+        },
+        "diamond": {
+          "tie": 0.9979994372589704,
+          "hard": 0.9979773550193178
+        },
+        "whole": {
+          "tie": 0.9979917084751095,
+          "hard": 0.997997781091051
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": -0.00011041119474839064,
+        "diamond_minus_thin": 0.000662467191343769,
+        "thick_minus_diamond": -0.0007728783860921596,
+        "thick_minus_thin_hard": 0.0027050743646537235,
+        "diamond_minus_thin_hard": 0.000662467191343769
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 4.8028871369935986e-05,
+        "diamond": 3.9195975485809825e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9969040699924534,
+        "diamond": 0.9963128180241791,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00014022222216050244,
+        "thin": 0.0018713816386385083,
+        "diamond": 0.0018713816386385083,
+        "whole": 0.00014022222216050244
+      },
+      "record_ambiguity": 0.0061981319794430665,
+      "n_record_groups": 52673,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 203.8
+    },
+    {
+      "family": "square",
+      "edge_id": 15,
+      "lost_qubit": 11,
+      "incident_checks": [
+        "X4",
+        "X5",
+        "Z3",
+        "Z6"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        9,
+        10
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -1,
+        0
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 11,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9979883961391518,
+          "hard": 0.9979911564191375
+        },
+        "thin": {
+          "tie": 0.9979939166990422,
+          "hard": 0.9979729385713756
+        },
+        "diamond": {
+          "tie": 0.9980010934269488,
+          "hard": 0.9979790111872961
+        },
+        "whole": {
+          "tie": 0.9979883961391518,
+          "hard": 0.9979911564191375
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": -0.0005520559890429588,
+        "diamond_minus_thin": 0.0007176727906551109,
+        "thick_minus_diamond": -0.0012697287796980697,
+        "thick_minus_thin_hard": 0.0018217847761953646,
+        "diamond_minus_thin_hard": 0.0006072615920651215
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 6.238232718164109e-05,
+        "diamond": 4.3060367435115006e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9968764671928141,
+        "diamond": 0.9964281977266715,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.000146846894073597,
+        "thin": 0.001873589862609539,
+        "diamond": 0.0018713816386385083,
+        "whole": 0.000146846894073597
+      },
+      "record_ambiguity": 0.0061743935717544765,
+      "n_record_groups": 52721,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 202.8
+    },
+    {
+      "family": "square",
+      "edge_id": 17,
+      "lost_qubit": 13,
+      "incident_checks": [
+        "X5",
+        "X6",
+        "Z4",
+        "Z7"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        10,
+        11
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        0,
+        1
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 13,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9979895002511372,
+          "hard": 0.9979922605311231
+        },
+        "thin": {
+          "tie": 0.9979895002511003,
+          "hard": 0.9979674180114477
+        },
+        "diamond": {
+          "tie": 0.997988396139114,
+          "hard": 0.997964105675491
+        },
+        "whole": {
+          "tie": 0.9979895002511372,
+          "hard": 0.9979922605311231
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 3.694473588073653e-12,
+        "diamond_minus_thin": -0.00011041119862268374,
+        "thick_minus_diamond": 0.00011041120231715733,
+        "thick_minus_thin_hard": 0.0024842519675391337,
+        "diamond_minus_thin_hard": -0.0003312335956718845
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 5.1341207326483315e-05,
+        "diamond": 4.140419945684136e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.996933881016064,
+        "diamond": 0.9964878197738924,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00014795100605911275,
+        "thin": 0.0018713816386385083,
+        "diamond": 0.00187579808658057,
+        "whole": 0.00014795100605911275
+      },
+      "record_ambiguity": 0.0061727374037762045,
+      "n_record_groups": 52591,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 202.6
+    },
+    {
+      "family": "square",
+      "edge_id": 18,
+      "lost_qubit": 14,
+      "incident_checks": [
+        "X5",
+        "X9",
+        "Z6",
+        "Z7"
+      ],
+      "endpoint_degrees": [
+        4,
+        4
+      ],
+      "endpoint_vertices": [
+        10,
+        14
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        0,
+        1
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 14,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9970433203679447,
+          "hard": 0.9970460806479308
+        },
+        "thin": {
+          "tie": 0.9959002055313995,
+          "hard": 0.9958803315157186
+        },
+        "diamond": {
+          "tie": 0.9970598820476909,
+          "hard": 0.9970366956960535
+        },
+        "whole": {
+          "tie": 0.9970433203679447,
+          "hard": 0.9970460806479308
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.11431148365453557,
+        "diamond_minus_thin": 0.11596765162915147,
+        "thick_minus_diamond": -0.0016561679746159071,
+        "thick_minus_thin_hard": 0.1165749132212166,
+        "diamond_minus_thin_hard": 0.11563641803347958
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 0.0012242670674321714,
+        "diamond": 0.0004595645697682873,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9970625100623832,
+        "diamond": 0.9968212615935355,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.0001490551180446285,
+        "thin": 0.00187579808658057,
+        "diamond": 0.00187579808658057,
+        "whole": 0.0001490551180446285
+      },
+      "record_ambiguity": 0.008624763340341046,
+      "n_record_groups": 52591,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 206.0
+    },
+    {
+      "family": "AB",
+      "edge_id": 8,
+      "lost_qubit": 4,
+      "incident_checks": [
+        "X0",
+        "X2",
+        "Z2",
+        "Z3"
+      ],
+      "endpoint_degrees": [
+        3,
+        4
+      ],
+      "endpoint_vertices": [
+        4,
+        7
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          -1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -2,
+        -1
+      ],
+      "endpoint_source_mod5": [
+        3,
+        4
+      ],
+      "site": 4,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9971032184431569,
+          "hard": 0.9971007341912167
+        },
+        "thin": {
+          "tie": 0.9970769957835068,
+          "hard": 0.9970736834475701
+        },
+        "diamond": {
+          "tie": 0.9970883129313579,
+          "hard": 0.9970885889593754
+        },
+        "whole": {
+          "tie": 0.9971032184431569,
+          "hard": 0.9971007341912167
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0026222659649919535,
+        "diamond_minus_thin": 0.001131714785106015,
+        "thick_minus_diamond": 0.0014905511798859383,
+        "thick_minus_thin_hard": 0.0027050743646537235,
+        "diamond_minus_thin_hard": 0.0014905511805234802
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 6.790288710921997e-05,
+        "diamond": 4.526859140614654e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977724540691065,
+        "diamond": 0.9973346736668269,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00018493875757389077,
+        "thin": 0.00013470166223292367,
+        "diamond": 0.0001418783901387761,
+        "whole": 0.00018493875757389077
+      },
+      "record_ambiguity": 0.007456402964276945,
+      "n_record_groups": 53057,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 209.2
+    },
+    {
+      "family": "AB",
+      "edge_id": 10,
+      "lost_qubit": 6,
+      "incident_checks": [
+        "X1",
+        "X2",
+        "Z2",
+        "Z4"
+      ],
+      "endpoint_degrees": [
+        3,
+        4
+      ],
+      "endpoint_vertices": [
+        6,
+        7
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          -1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -2,
+        -1
+      ],
+      "endpoint_source_mod5": [
+        3,
+        4
+      ],
+      "site": 6,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9971123273670394,
+          "hard": 0.997110119143094
+        },
+        "thin": {
+          "tie": 0.9971090150310878,
+          "hard": 0.9971145355910364
+        },
+        "diamond": {
+          "tie": 0.9971001821352028,
+          "hard": 0.9970963177432743
+        },
+        "whole": {
+          "tie": 0.9971123273670394,
+          "hard": 0.997110119143094
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0003312335951487732,
+        "diamond_minus_thin": -0.0008832895885074004,
+        "thick_minus_diamond": 0.0012145231836561735,
+        "thick_minus_thin_hard": -0.0004416447942291793,
+        "diamond_minus_thin_hard": -0.0018217847761953646
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 7.949606295713562e-05,
+        "diamond": 3.1467191587199456e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9974461889773698,
+        "diamond": 0.9967590283024598,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00017444969371149092,
+        "thin": 0.00013911811017498668,
+        "diamond": 0.00014243044613153395,
+        "whole": 0.00017444969371149092
+      },
+      "record_ambiguity": 0.006980351232775682,
+      "n_record_groups": 53143,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 205.3
+    },
+    {
+      "family": "AB",
+      "edge_id": 12,
+      "lost_qubit": 8,
+      "incident_checks": [
+        "X2",
+        "X3",
+        "Z3",
+        "Z5"
+      ],
+      "endpoint_degrees": [
+        4,
+        5
+      ],
+      "endpoint_vertices": [
+        7,
+        8
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -1,
+        0
+      ],
+      "endpoint_source_mod5": [
+        4,
+        0
+      ],
+      "site": 8,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9971101191430664,
+          "hard": 0.9971062547511446
+        },
+        "thin": {
+          "tie": 0.9970968697992475,
+          "hard": 0.9970924533513249
+        },
+        "diamond": {
+          "tie": 0.9971051506391385,
+          "hard": 0.9970990780232383
+        },
+        "whole": {
+          "tie": 0.9971101191430664,
+          "hard": 0.9971062547511446
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0013249343818865238,
+        "diamond_minus_thin": 0.000828083989097975,
+        "thick_minus_diamond": 0.0004968503927885487,
+        "thick_minus_thin_hard": 0.0013801399819661853,
+        "diamond_minus_thin_hard": 0.000662467191343769
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 4.8028871369935986e-05,
+        "diamond": 3.367541555823099e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9975875153115231,
+        "diamond": 0.9970961854779431,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00018659492555216447,
+        "thin": 0.00013249343826189216,
+        "diamond": 0.00013801399818947092,
+        "whole": 0.00018659492555216447
+      },
+      "record_ambiguity": 0.006990288240645323,
+      "n_record_groups": 53163,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 212.8
+    },
+    {
+      "family": "AB",
+      "edge_id": 13,
+      "lost_qubit": 9,
+      "incident_checks": [
+        "X2",
+        "X6",
+        "Z4",
+        "Z5"
+      ],
+      "endpoint_degrees": [
+        4,
+        6
+      ],
+      "endpoint_vertices": [
+        7,
+        13
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        -1,
+        0
+      ],
+      "endpoint_source_mod5": [
+        4,
+        0
+      ],
+      "site": 9,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9970838964834096,
+          "hard": 0.9970836204554403
+        },
+        "thin": {
+          "tie": 0.9970140614003364,
+          "hard": 0.9970195819602771
+        },
+        "diamond": {
+          "tie": 0.9970554655997909,
+          "hard": 0.997053257375837
+        },
+        "whole": {
+          "tie": 0.9970838964834096,
+          "hard": 0.9970836204554403
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0069835083073185155,
+        "diamond_minus_thin": 0.0041404199454408335,
+        "thick_minus_diamond": 0.0028430883618776816,
+        "thick_minus_thin_hard": 0.0064038495163231,
+        "diamond_minus_thin_hard": 0.0033675415559974923
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 0.00012807699031982912,
+        "diamond": 6.238232718164109e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9981241137365116,
+        "diamond": 0.9977095196859289,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.0001827305336028592,
+        "thin": 8.612073487023028e-05,
+        "diamond": 0.00011703587046467155,
+        "whole": 0.0001827305336028592
+      },
+      "record_ambiguity": 0.007485661931893112,
+      "n_record_groups": 53276,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 214.6
+    },
+    {
+      "family": "AB",
+      "edge_id": 15,
+      "lost_qubit": 11,
+      "incident_checks": [
+        "X3",
+        "X7",
+        "Z5",
+        "Z6"
+      ],
+      "endpoint_degrees": [
+        3,
+        5
+      ],
+      "endpoint_vertices": [
+        8,
+        14
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        0,
+        1
+      ],
+      "endpoint_source_mod5": [
+        0,
+        1
+      ],
+      "site": 11,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9970960417152511,
+          "hard": 0.9970963177432743
+        },
+        "thin": {
+          "tie": 0.9970560176557859,
+          "hard": 0.9970538094318298
+        },
+        "diamond": {
+          "tie": 0.9970687149436146,
+          "hard": 0.9970648505516855
+        },
+        "whole": {
+          "tie": 0.9970960417152511,
+          "hard": 0.9970963177432743
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.004002405946516763,
+        "diamond_minus_thin": 0.001269728782869432,
+        "thick_minus_diamond": 0.0027326771636473316,
+        "thick_minus_thin_hard": 0.004250831144455851,
+        "diamond_minus_thin_hard": 0.0011041119855729482
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 8.225634292092507e-05,
+        "diamond": 6.569466313818842e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977851513569407,
+        "diamond": 0.9972375118120965,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00018162642161734339,
+        "thin": 0.00010157830266745095,
+        "diamond": 0.00013801399818947092,
+        "whole": 0.00018162642161734339
+      },
+      "record_ambiguity": 0.007455298852291429,
+      "n_record_groups": 53156,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 210.9
+    },
+    {
+      "family": "AB",
+      "edge_id": 22,
+      "lost_qubit": 16,
+      "incident_checks": [
+        "X6",
+        "X7",
+        "Z5",
+        "Z9"
+      ],
+      "endpoint_degrees": [
+        3,
+        6
+      ],
+      "endpoint_vertices": [
+        13,
+        14
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        null,
+        null
+      ],
+      "endpoint_integer_sum": [
+        0,
+        1
+      ],
+      "endpoint_source_mod5": [
+        0,
+        1
+      ],
+      "site": 16,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9971007341911892,
+          "hard": 0.9970996300792311
+        },
+        "thin": {
+          "tie": 0.9970560176557839,
+          "hard": 0.9970604341037432
+        },
+        "diamond": {
+          "tie": 0.9970753396155289,
+          "hard": 0.9970720272795918
+        },
+        "whole": {
+          "tie": 0.9971007341911892,
+          "hard": 0.9970996300792311
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.004471653540524218,
+        "diamond_minus_thin": 0.0019321959744911037,
+        "thick_minus_diamond": 0.002539457566033114,
+        "thick_minus_thin_hard": 0.0039195975487839665,
+        "diamond_minus_thin_hard": 0.0011593175848515957
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 7.342344703679886e-05,
+        "diamond": 6.0726159203367416e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977553403333302,
+        "diamond": 0.9972612502197863,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.0001854908135666487,
+        "thin": 0.00011482764649364004,
+        "diamond": 0.00013249343826189216,
+        "whole": 0.0001854908135666487
+      },
+      "record_ambiguity": 0.007454194740305913,
+      "n_record_groups": 53166,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 213.8
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 4,
+      "lost_qubit": 2,
+      "incident_checks": [
+        "X0",
+        "X1",
+        "Z2",
+        "Z3"
+      ],
+      "endpoint_degrees": [
+        4,
+        5
+      ],
+      "endpoint_vertices": [
+        2,
+        3
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        1,
+        2
+      ],
+      "endpoint_integer_sum": [
+        1,
+        2
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 2,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969058584257351,
+          "hard": 0.9968799117941021
+        },
+        "thin": {
+          "tie": 0.9968467884345222,
+          "hard": 0.9968429240425853
+        },
+        "diamond": {
+          "tie": 0.996877703570113,
+          "hard": 0.9968688706742463
+        },
+        "whole": {
+          "tie": 0.9969058584257351,
+          "hard": 0.9968799117941021
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.005906999121278633,
+        "diamond_minus_thin": 0.003091513559064797,
+        "thick_minus_diamond": 0.002815485562213837,
+        "thick_minus_thin_hard": 0.0036987751516693768,
+        "diamond_minus_thin_hard": 0.0025946631660964284
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 0.00011979615042846094,
+        "diamond": 5.5205599275788536e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9980192230978822,
+        "diamond": 0.9975665371837972,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00018880314952319607,
+        "thin": 8.501662288471451e-05,
+        "diamond": 0.00012145231840673457,
+        "whole": 0.00018880314952319607
+      },
+      "record_ambiguity": 0.00796889039130023,
+      "n_record_groups": 54237,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 219.5
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 5,
+      "lost_qubit": 3,
+      "incident_checks": [
+        "X0",
+        "X2",
+        "Z2",
+        "Z4"
+      ],
+      "endpoint_degrees": [
+        3,
+        4
+      ],
+      "endpoint_vertices": [
+        2,
+        4
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        1,
+        2
+      ],
+      "endpoint_integer_sum": [
+        1,
+        2
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 3,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969367735613315,
+          "hard": 0.9969075145937414
+        },
+        "thin": {
+          "tie": 0.9969566475770383,
+          "hard": 0.9969180036576043
+        },
+        "diamond": {
+          "tie": 0.9969323571133957,
+          "hard": 0.9969196598255827
+        },
+        "whole": {
+          "tie": 0.9969367735613315,
+          "hard": 0.9969075145937414
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": -0.0019874015706801253,
+        "diamond_minus_thin": -0.002429046364255415,
+        "thick_minus_diamond": 0.00044164479357529016,
+        "thick_minus_thin_hard": -0.0010489063862943009,
+        "diamond_minus_thin_hard": 0.00016561679783594224
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 5.4653543283030644e-05,
+        "diamond": 2.9811023608925805e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9973766299222787,
+        "diamond": 0.9967132076550584,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00018659492555216447,
+        "thin": 0.0018868392064357248,
+        "diamond": 0.00014243044613153395,
+        "whole": 0.00018659492555216447
+      },
+      "record_ambiguity": 0.007044389727935596,
+      "n_record_groups": 54124,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 220.2
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 6,
+      "lost_qubit": 4,
+      "incident_checks": [
+        "X0",
+        "X4",
+        "Z4",
+        "Z5"
+      ],
+      "endpoint_degrees": [
+        3,
+        4
+      ],
+      "endpoint_vertices": [
+        2,
+        6
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        1,
+        2
+      ],
+      "endpoint_integer_sum": [
+        1,
+        2
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 4,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969262844974663,
+          "hard": 0.9968964734738857
+        },
+        "thin": {
+          "tie": 0.9969080666497159,
+          "hard": 0.9968926090819361
+        },
+        "diamond": {
+          "tie": 0.9969191077695699,
+          "hard": 0.9969047543137775
+        },
+        "whole": {
+          "tie": 0.9969262844974663,
+          "hard": 0.9968964734738857
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0018217847750510586,
+        "diamond_minus_thin": 0.001104111985409476,
+        "thick_minus_diamond": 0.0007176727896415827,
+        "thick_minus_thin_hard": 0.0003864391949505319,
+        "diamond_minus_thin_hard": 0.001214523184130243
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 7.011111108025152e-05,
+        "diamond": 5.68617672540622e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977542362213446,
+        "diamond": 0.9973120393711227,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00020094838136386985,
+        "thin": 0.0001236605423777661,
+        "diamond": 0.00013470166223292367,
+        "whole": 0.00020094838136386985
+      },
+      "record_ambiguity": 0.007510504451567217,
+      "n_record_groups": 54171,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 215.4
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 7,
+      "lost_qubit": 5,
+      "incident_checks": [
+        "X0",
+        "X5",
+        "Z3",
+        "Z5"
+      ],
+      "endpoint_degrees": [
+        4,
+        5
+      ],
+      "endpoint_vertices": [
+        2,
+        9
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "endpoint_layer": [
+        1,
+        2
+      ],
+      "endpoint_integer_sum": [
+        1,
+        2
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 5,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969362215053359,
+          "hard": 0.9969053063697703
+        },
+        "thin": {
+          "tie": 0.9969235242175132,
+          "hard": 0.9969124830976764
+        },
+        "diamond": {
+          "tie": 0.9969340132813742,
+          "hard": 0.996916347489626
+        },
+        "whole": {
+          "tie": 0.9969362215053359,
+          "hard": 0.9969053063697703
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0012697287822645846,
+        "diamond_minus_thin": 0.0010489063860981342,
+        "thick_minus_diamond": 0.00022082239616645041,
+        "thick_minus_thin_hard": -0.0007176727906224164,
+        "diamond_minus_thin_hard": 0.0003864391949505319
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 4.582064739890443e-05,
+        "diamond": 3.312335956547311e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9975190603684175,
+        "diamond": 0.9970586456704337,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00020536482930593302,
+        "thin": 0.00012807699031982912,
+        "diamond": 0.0001413263341460182,
+        "whole": 0.00020536482930593302
+      },
+      "record_ambiguity": 0.007033348608080438,
+      "n_record_groups": 54220,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 215.1
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 9,
+      "lost_qubit": 7,
+      "incident_checks": [
+        "X1",
+        "X6",
+        "Z3",
+        "Z6"
+      ],
+      "endpoint_degrees": [
+        3,
+        5
+      ],
+      "endpoint_vertices": [
+        3,
+        10
+      ],
+      "d_rough": 1,
+      "d_smooth": 1,
+      "endpoint_lift": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        2,
+        3
+      ],
+      "endpoint_integer_sum": [
+        2,
+        3
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 7,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969083426777009,
+          "hard": 0.9968843282420443
+        },
+        "thin": {
+          "tie": 0.9968788076821006,
+          "hard": 0.9968738391781814
+        },
+        "diamond": {
+          "tie": 0.9968870885219896,
+          "hard": 0.9968760474021525
+        },
+        "whole": {
+          "tie": 0.9969083426777009,
+          "hard": 0.9968843282420443
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.002953499560026296,
+        "diamond_minus_thin": 0.0008280839889018083,
+        "thick_minus_diamond": 0.0021254155711244874,
+        "thick_minus_thin_hard": 0.0010489063862943009,
+        "diamond_minus_thin_hard": 0.00022082239711458966
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 7.452755902231463e-05,
+        "diamond": 6.017410321060953e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977183525818135,
+        "diamond": 0.9971944514446591,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00020039632537111193,
+        "thin": 0.00010709886259502974,
+        "diamond": 0.0001258687663487976,
+        "whole": 0.00020039632537111193
+      },
+      "record_ambiguity": 0.007042181503964564,
+      "n_record_groups": 54268,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 215.7
+    },
+    {
+      "family": "Penrose",
+      "edge_id": 18,
+      "lost_qubit": 14,
+      "incident_checks": [
+        "X5",
+        "X6",
+        "Z3",
+        "Z9"
+      ],
+      "endpoint_degrees": [
+        3,
+        5
+      ],
+      "endpoint_vertices": [
+        9,
+        10
+      ],
+      "d_rough": 1,
+      "d_smooth": 0,
+      "endpoint_lift": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "endpoint_layer": [
+        2,
+        3
+      ],
+      "endpoint_integer_sum": [
+        2,
+        3
+      ],
+      "endpoint_source_mod5": [
+        null,
+        null
+      ],
+      "site": 14,
+      "n": 66488,
+      "W": 10.86640995351604,
+      "truth": {
+        "thick": {
+          "tie": 0.9969251803854812,
+          "hard": 0.9968975775858713
+        },
+        "thin": {
+          "tie": 0.9968887446899721,
+          "hard": 0.9968793597381093
+        },
+        "diamond": {
+          "tie": 0.9969014419778013,
+          "hard": 0.996887640578001
+        },
+        "whole": {
+          "tie": 0.9969251803854812,
+          "hard": 0.9968975775858713
+        }
+      },
+      "paired_pp": {
+        "thick_minus_thin": 0.0036435695509031314,
+        "diamond_minus_thin": 0.0012697287829184737,
+        "thick_minus_diamond": 0.002373840767984658,
+        "thick_minus_thin_hard": 0.0018217847761953646,
+        "diamond_minus_thin_hard": 0.0008280839891797112
+      },
+      "disagree_with_thick": {
+        "thick": 0.0,
+        "thin": 8.115223093540929e-05,
+        "diamond": 5.8517935232335865e-05,
+        "whole": 0.0
+      },
+      "posterior_diff_from_thick": {
+        "thick": 0.0,
+        "thin": 0.9977956404208036,
+        "diamond": 0.9972192939643345,
+        "whole": 0.0
+      },
+      "tie_rate": {
+        "thick": 0.00019874015739283825,
+        "thin": 9.826596671090368e-05,
+        "diamond": 0.0001313893262763764,
+        "whole": 0.00019874015739283825
+      },
+      "record_ambiguity": 0.0075000153877048175,
+      "n_record_groups": 54228,
+      "whole_ne_thick": 0,
+      "roundtrip_mismatches": 0,
+      "roundtrip_checked": 66,
+      "archive_max": 8,
+      "query_read": 8,
+      "elapsed": 217.7
+    }
+  ],
+  "elapsed_total": 3851.5
+}
