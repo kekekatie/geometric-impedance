@@ -75,5 +75,56 @@ def draw_prediction():
     print('WROTE results/prediction.png, results/prediction.svg')
 
 
+def draw_result():
+    """Pencil-mark prediction (left) beside the measured thick-thin map (right), per patch.
+    Same orientation + edge IDs; shared zero-centred scale; untested edges grey."""
+    res = json.loads((RESULTS / 'paired_results.json').read_text())
+    gmap = {}
+    for k, v in res['edges'].items():
+        gmap.setdefault(v['patch'], {})[v['edge']] = v['G_thick_thin']
+    vmax = max((abs(g) for p in gmap.values() for g in p.values()), default=1e-3) or 1e-3
+    norm = TwoSlopeNorm(vmin=-vmax, vcenter=0.0, vmax=vmax)
+    cmap = plt.get_cmap('RdBu_r')
+    fig, axes = plt.subplots(3, 2, figsize=(9.5, 13))
+    for i, name in enumerate(PATCHES):
+        d, xy, ends = _geom(name)
+        # left: prediction mark
+        axL = axes[i][0]; _skeleton(axL, d, xy, ends)
+        pp = d['route']['predicted_pair']; on, off = pp['on_route_edge'], pp['off_route_edge']
+        for eid, col, ls, lab in ((on, '#b2182b', '-', 'ON'), (off, '#4d4d4d', (0, (2, 1.4)), 'OFF')):
+            u, v = ends[eid]
+            axL.plot([xy[u][0], xy[v][0]], [xy[u][1], xy[v][1]], color=col, lw=4.2, ls=ls,
+                     zorder=4, solid_capstyle='round')
+        ux, uy = _mid(xy, ends, on)
+        axL.add_patch(Circle((ux, uy), 0.42, fill=False, ec='#b2182b', lw=2, zorder=5))
+        axL.set_title(f'{name} — prediction', fontsize=10, loc='left')
+        # right: measured map
+        axR = axes[i][1]; _skeleton(axR, d, xy, ends)
+        for e in d['eligible']:
+            eid = e['edge']; g = gmap.get(name, {}).get(eid)
+            if g is None:
+                continue
+            u, v = ends[eid]
+            axR.plot([xy[u][0], xy[v][0]], [xy[u][1], xy[v][1]], color=cmap(norm(g)), lw=5.2,
+                     zorder=3, solid_capstyle='round')
+            mx, my = _mid(xy, ends, eid)
+            mk = '●' if eid == on else ('■' if eid == off else '')
+            axR.annotate(f'e{eid}{mk}', (mx, my), fontsize=7.5, ha='center', va='center', zorder=5,
+                         bbox=dict(boxstyle='round,pad=0.1', fc='white', ec='none', alpha=0.75))
+        axR.set_title(f'{name} — measured thick−thin', fontsize=10, loc='left')
+    sm = ScalarMappable(norm=norm, cmap=cmap); sm.set_array([])
+    cbar = fig.colorbar(sm, ax=axes, orientation='horizontal', fraction=0.03, pad=0.03, aspect=46)
+    cbar.set_label('thick − thin (pp)   red = archive helps · ●=predicted on-route · ■=matched off-route',
+                   fontsize=9)
+    fig.suptitle('Route prediction vs measured archive benefit', fontsize=13, y=0.95)
+    fig.savefig(RESULTS / 'result.png', dpi=140, bbox_inches='tight')
+    fig.savefig(RESULTS / 'result.svg', bbox_inches='tight')
+    print('WROTE results/result.png, results/result.svg  vmax=%.4g pp' % vmax)
+
+
 if __name__ == '__main__':
-    draw_prediction()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == 'result':
+        draw_result()
+    else:
+        draw_prediction()
