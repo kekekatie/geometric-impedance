@@ -1,0 +1,28 @@
+{
+  "tested_commit": "a788d08618af3ec9e163d2805c3e72afe8c2bc93",
+  "command": "python3 exploratory/aperiodic_qec_geometry_2026-11-19/pilot.py",
+  "exit_code": 0,
+  "clean_checkout": true,
+  "post_replay_git_status_clean": true,
+  "byte_identical_output_files": 12,
+  "sha256": {
+    "AB.json": "bb277a55a0267979dd58b292de1e50e4fb250370199b4161242fdb5b1f22f0de",
+    "AB.png": "0b9b4baa6d85fafacb7003453f189765c04fe7c239a9363ad178a33613a5b5f3",
+    "AB_certificate.json": "28dc873a3725eb396f6eb302c1d543c427953e18c7c7b528c0a0d5efe27f7953",
+    "comparison.json": "0c19b81ca6361d46f68e061f1f02448fb11477db7911b393bfc44ffc220f9556",
+    "patches.png": "0e0b6a84669d0534a9d63f8ee874697001b1898167eabcb2f6d0a1981f94aa48",
+    "patches.svg": "c5baba27cc79302b11bff35375c9179aba33f942f18239af813a2471a64eca8c",
+    "Penrose.json": "c67714a63512fcb812f0ec8eec6be0abcbcce428c68323ebcbbd33b4a9ef6222",
+    "Penrose.png": "6a266fd0539cea105caa6549ebc5ee7f4085dbf349cd48f4eabf8c06a8648bb6",
+    "Penrose_certificate.json": "df8596d2309f511db6aa93b128a126ea8c9a321af0b744da75b7b10e28bc92d3",
+    "square.json": "86b6831f8570f4fc6ca90492b2172b887fcee683652fcbe50f71459770f01b68",
+    "square.png": "6cc62e304da3f52d27cbd28317273d0a05f6479540936308042e08473863c9e4",
+    "square_certificate.json": "0ba7a999d4c679cee870ad3dbd7c514c8c4aac76b7d187730c3ac4f9ee8b774a"
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.6"
+  },
+  "additional_invalid_record_rejections": 9
+}

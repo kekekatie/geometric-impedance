@@ -1,0 +1,9 @@
+square disk cuts 3648
+square selected (0, -6, -1, (0, 1, 0, 10), (6, 9, 15, 19)) stats {'disks': 3648, 'checked': 24600, 'targets': 1680}
+AB disk cuts 3662
+AB selected (0, -6, -5, (0, 1, 0, 10), (6, 9, 15, 19)) stats {'disks': 3662, 'checked': 17467, 'targets': 1282}
+Penrose disk cuts 3722
+Penrose selected (0, -6, -3, (3, 2, 1, 10), (6, 10, 13, 15)) stats {'disks': 3722, 'checked': 15963, 'targets': 1791}
+CERTIFIED square 21 6 [(4, 4)]
+CERTIFIED AB 21 6 [(3, 4), (3, 5), (3, 6), (4, 5), (4, 6)]
+CERTIFIED Penrose 21 6 [(3, 4), (3, 5), (4, 5)]
