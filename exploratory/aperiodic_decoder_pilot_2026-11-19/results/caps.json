@@ -1,0 +1,706 @@
+{
+  "panel": {
+    "seed": 20261119,
+    "s1": 8,
+    "s2": 6,
+    "k1": [
+      10,
+      110,
+      130,
+      185,
+      227,
+      246,
+      264,
+      289
+    ],
+    "k2": [
+      [
+        10,
+        262
+      ],
+      [
+        11,
+        282
+      ],
+      [
+        65,
+        71
+      ],
+      [
+        182,
+        277
+      ],
+      [
+        217,
+        245
+      ],
+      [
+        226,
+        253
+      ]
+    ]
+  },
+  "caps": {
+    "33": {
+      "square_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e17": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e8": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e13": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e22": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e4": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e5": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e6": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e7": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      }
+    },
+    "43": {
+      "square_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e17": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e8": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e13": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e22": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e4": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e5": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e6": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e7": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      }
+    },
+    "34": {
+      "square_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e17": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e8": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e13": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e22": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e4": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e5": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e6": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e7": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      }
+    },
+    "44": {
+      "square_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e17": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "square_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e8": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e10": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e12": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e13": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e15": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "AB_e22": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e4": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e5": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e6": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e7": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e9": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      },
+      "Penrose_e18": {
+        "n": 120,
+        "benefits": {
+          "thick_minus_thin": 0.0,
+          "diamond_minus_thin": 0.0,
+          "thick_minus_diamond": 0.0
+        },
+        "prefix_absent": 0
+      }
+    }
+  },
+  "by_edge": {
+    "43_vs_33": [],
+    "34_vs_33": [],
+    "44_vs_33": []
+  }
+}
