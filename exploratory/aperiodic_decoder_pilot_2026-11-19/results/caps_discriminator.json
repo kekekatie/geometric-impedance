@@ -1,0 +1,116 @@
+{
+  "square_e18": {
+    "n_disc": 692,
+    "W": 10.86640995351604,
+    "caps": {
+      "33": {
+        "benefits": {
+          "thick_minus_thin": 0.11657,
+          "diamond_minus_thin": 0.11586,
+          "thick_minus_diamond": 0.00072
+        },
+        "label_flips_vs_33": 0
+      },
+      "43": {
+        "benefits": {
+          "thick_minus_thin": 0.11591,
+          "diamond_minus_thin": 0.11531,
+          "thick_minus_diamond": 0.00061
+        },
+        "label_flips_vs_33": 18
+      },
+      "34": {
+        "benefits": {
+          "thick_minus_thin": 0.11696,
+          "diamond_minus_thin": 0.11613,
+          "thick_minus_diamond": 0.00083
+        },
+        "label_flips_vs_33": 83
+      },
+      "44": {
+        "benefits": {
+          "thick_minus_thin": 0.1163,
+          "diamond_minus_thin": 0.11553,
+          "thick_minus_diamond": 0.00077
+        },
+        "label_flips_vs_33": 102
+      }
+    }
+  },
+  "AB_e22": {
+    "n_disc": 145,
+    "W": 10.86640995351604,
+    "caps": {
+      "33": {
+        "benefits": {
+          "thick_minus_thin": 0.00409,
+          "diamond_minus_thin": 0.00116,
+          "thick_minus_diamond": 0.00293
+        },
+        "label_flips_vs_33": 0
+      },
+      "43": {
+        "benefits": {
+          "thick_minus_thin": 0.00342,
+          "diamond_minus_thin": 0.00116,
+          "thick_minus_diamond": 0.00226
+        },
+        "label_flips_vs_33": 32
+      },
+      "34": {
+        "benefits": {
+          "thick_minus_thin": 0.00381,
+          "diamond_minus_thin": 0.00116,
+          "thick_minus_diamond": 0.00265
+        },
+        "label_flips_vs_33": 4
+      },
+      "44": {
+        "benefits": {
+          "thick_minus_thin": 0.00315,
+          "diamond_minus_thin": 0.00116,
+          "thick_minus_diamond": 0.00199
+        },
+        "label_flips_vs_33": 36
+      }
+    }
+  },
+  "Penrose_e2": {
+    "n_disc": 101,
+    "W": 10.86640995351604,
+    "caps": {
+      "33": {
+        "benefits": {
+          "thick_minus_thin": -0.00099,
+          "diamond_minus_thin": 0.00014,
+          "thick_minus_diamond": -0.00113
+        },
+        "label_flips_vs_33": 0
+      },
+      "43": {
+        "benefits": {
+          "thick_minus_thin": -0.00066,
+          "diamond_minus_thin": 0.00036,
+          "thick_minus_diamond": -0.00102
+        },
+        "label_flips_vs_33": 24
+      },
+      "34": {
+        "benefits": {
+          "thick_minus_thin": -0.00094,
+          "diamond_minus_thin": 6e-05,
+          "thick_minus_diamond": -0.00099
+        },
+        "label_flips_vs_33": 18
+      },
+      "44": {
+        "benefits": {
+          "thick_minus_thin": -0.00061,
+          "diamond_minus_thin": 0.00028,
+          "thick_minus_diamond": -0.00088
+        },
+        "label_flips_vs_33": 34
+      }
+    }
+  }
+}

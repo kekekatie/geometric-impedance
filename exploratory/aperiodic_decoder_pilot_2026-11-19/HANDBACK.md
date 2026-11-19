@@ -8,10 +8,11 @@ from the audited bounded engine; **no tiling, geometry, or decoder source edited
 
 - Protocol: `c1dab63` (+ amendment `607ed43`)
 - Adapter + validation: `0563573`; downstream code: `eea2b0f`
-- Primary results + figure: `9adb298`; caps + this handback: final commit
+- Primary results + figure: `9adb298`; frozen caps + discriminator test: `<this commit>`
 - Figure: [`results/heatmap.png`](results/heatmap.png) (+ `.svg`); table:
-  [`results/edges.csv`](results/edges.csv) / [`edges.json`](results/edges.json)
-- Replay (one command): `cd src && PYTHONPATH=. python3 validate.py && PYTHONPATH=. python3 run_all.py && PYTHONPATH=. python3 aggregate.py && PYTHONPATH=. python3 figure.py && PYTHONPATH=. python3 caps.py`
+  [`results/edges.csv`](results/edges.csv) / [`edges.json`](results/edges.json); caps:
+  [`results/caps.json`](results/caps.json), [`results/caps_discriminator.json`](results/caps_discriminator.json)
+- Replay (one command): `cd src && PYTHONPATH=. python3 validate.py && PYTHONPATH=. python3 run_all.py && PYTHONPATH=. python3 aggregate.py && PYTHONPATH=. python3 figure.py && PYTHONPATH=. python3 caps.py && PYTHONPATH=. python3 caps_disc.py`
 
 ## Validation (all pass, before interpreting sites)
 
@@ -99,9 +100,44 @@ re-judgment**, not tie-breaking.
 
 ## C. Cap sensitivity — (3,3) vs (4,3) vs (3,4) vs (4,4)
 
-_Pending the cap panel (running). Fills on completion: unsupported frame prefixes per cap,
-and changes in the paired benefits thick−thin / diamond−thin / thick−diamond vs (3,3),
-flagging any edge whose feature moves or changes sign._
+Two panels, because the first was uninformative and saying so matters (this is exactly the
+pitfall the d=5 paired-cap audit flagged — never claim cap-robustness from a panel that
+contains no discriminating history).
+
+**(i) Frozen seeded panel — a prefix-coverage check only.** The pre-registered seeded
+panel (per site: k=0 + seeded k=1 + seeded k=2, ×8 = 120 histories; 2,160 across the 18
+sites) was replayed at all four caps via the audited chunked builder (which reproduces the
+stock decoder at `(3,3)`, 0 mismatches). Every arm agreed on every panel history, so every
+paired benefit is **identically 0 at every cap**, and `prefix_absent = 0` at every cap.
+This confirms **full frame-prefix coverage** (no fallback zeros on typical histories at
+`w_frame=3`) but, having no arm-discriminating history, it provides **no test of the
+benefits' cap-sensitivity**. `results/caps.json`. (Deviation from the §4 "exhaustive k≤1"
+wording: the panel used a seeded k=1 subset for `w=4` feasibility; it is superseded below.)
+
+**(ii) Discriminator panel — the real cap test.** For the signal-carrying edges we
+collected, at `(3,3)`, **every** history on which the four arms disagree (the only
+histories that carry any paired benefit) and re-decoded exactly those at all four caps.
+Reconstructing the benefit from the discriminators (true weights / full `W`) reproduces the
+primary `(3,3)` benefit to ≤0.002 pp — a built-in check — and its movement at higher caps
+is the actual cap-sensitivity:
+
+| edge | discrim. histories | thick − thin across (3,3)/(4,3)/(3,4)/(4,4) (pp) | span | diamond − thin | label flips vs (3,3) |
+|---|---:|---|---:|---|---:|
+| **square_e18** (on-logical) | 692 | +0.1166 / +0.1159 / +0.1170 / +0.1163 | **0.0011** | +0.1159 → +0.1155 (flat) | 0 / 18 / 83 / 102 |
+| AB_e22 (off-logical) | 145 | +0.0041 / +0.0034 / +0.0038 / +0.0032 | 0.0009 | +0.00116 (flat) | 0 / 32 / 4 / 36 |
+| Penrose_e2 (off-logical) | 101 | −0.0010 / −0.0007 / −0.0009 / −0.0006 | 0.0004 | ~0 | 0 / 24 / 18 / 34 |
+
+**The archive benefit is cap-stable.** At the on-logical `square_e18` — where the whole
+signal lives — thick−thin moves by **<0.0011 pp (<1% of its 0.116 pp value)** across all
+four caps; the label flips grow with the caps but **cancel in the net benefit**, and
+`diamond−thin` is equally flat. No edge changes the **sign** of any benefit at any cap.
+
+This is the **opposite** of the d=5 diagnostic-panel finding (where raising `w_frame` let
+the thin decoder catch up and collapsed the margin): here raising the caps does **not**
+erase the advantage, because the patch benefit is a genuine **on-logical, distance-limited**
+effect, not a bounded-decoder artifact. The faint d=5-style "richer frame lets thin catch
+up" drift is visible **only** at the tiny off-logical benefits (AB_e22 loses ~¼ of its
+0.004 pp as `w_frame`→4) and is negligible in absolute terms. `results/caps_discriminator.json`.
 
 ## Plain-language answer
 
