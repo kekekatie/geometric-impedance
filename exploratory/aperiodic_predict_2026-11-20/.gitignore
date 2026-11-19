@@ -1,0 +1,5 @@
+_ckpt/
+_capckpt/
+__pycache__/
+*.pyc
+*.out

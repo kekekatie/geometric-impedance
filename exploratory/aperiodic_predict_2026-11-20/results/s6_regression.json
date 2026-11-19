@@ -1,0 +1,26 @@
+{
+  "square": {
+    "n_weight3_x_supports": 1,
+    "eligible": 6,
+    "on_route_edges": [
+      18
+    ]
+  },
+  "AB": {
+    "n_weight3_x_supports": 1,
+    "eligible": 6,
+    "on_route_edges": []
+  },
+  "Penrose": {
+    "n_weight3_x_supports": 1,
+    "eligible": 6,
+    "on_route_edges": []
+  },
+  "unique_on_route_across_18": [
+    [
+      "square",
+      18
+    ]
+  ],
+  "regression_pass": true
+}

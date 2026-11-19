@@ -1,0 +1,181 @@
+{
+  "rule": "frozen (see module docstring)",
+  "families": {
+    "AB": {
+      "n_candidates": 38,
+      "selected": [
+        {
+          "name": "AB_1",
+          "predicted_pair": {
+            "on_route_edge": 14,
+            "off_route_edge": 8,
+            "on": {
+              "edge": 14,
+              "qubit": 10,
+              "n_supports": 2,
+              "endpoint_degrees": [
+                5,
+                5
+              ],
+              "d_rough": 1,
+              "d_smooth": 0
+            },
+            "off": {
+              "edge": 8,
+              "qubit": 6,
+              "n_supports": 0,
+              "endpoint_degrees": [
+                3,
+                5
+              ],
+              "d_rough": 1,
+              "d_smooth": 0
+            },
+            "degree_mismatch": 1,
+            "dist_mismatch": 0
+          },
+          "n_weight3_x_supports": 4,
+          "selection_spec": {
+            "centre": [
+              0,
+              1,
+              2,
+              -1
+            ],
+            "aspect": 0.8,
+            "angle": 0.7853981633974483,
+            "spec": [
+              22,
+              2,
+              2,
+              9
+            ],
+            "corners": [
+              4,
+              7,
+              13,
+              15
+            ]
+          }
+        }
+      ],
+      "discovery_excluded": true
+    },
+    "Penrose": {
+      "n_candidates": 197,
+      "selected": [
+        {
+          "name": "Penrose_1",
+          "predicted_pair": {
+            "on_route_edge": 14,
+            "off_route_edge": 13,
+            "on": {
+              "edge": 14,
+              "qubit": 10,
+              "n_supports": 1,
+              "endpoint_degrees": [
+                3,
+                6
+              ],
+              "d_rough": 1,
+              "d_smooth": 1
+            },
+            "off": {
+              "edge": 13,
+              "qubit": 9,
+              "n_supports": 0,
+              "endpoint_degrees": [
+                3,
+                6
+              ],
+              "d_rough": 1,
+              "d_smooth": 1
+            },
+            "degree_mismatch": 0,
+            "dist_mismatch": 0
+          },
+          "n_weight3_x_supports": 2,
+          "selection_spec": {
+            "centre": [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "aspect": 1.0,
+            "angle": 0.0,
+            "spec": [
+              7,
+              0,
+              0,
+              9
+            ],
+            "corners": [
+              3,
+              6,
+              11,
+              12
+            ]
+          }
+        },
+        {
+          "name": "Penrose_2",
+          "predicted_pair": {
+            "on_route_edge": 4,
+            "off_route_edge": 0,
+            "on": {
+              "edge": 4,
+              "qubit": 4,
+              "n_supports": 1,
+              "endpoint_degrees": [
+                3,
+                5
+              ],
+              "d_rough": 1,
+              "d_smooth": 1
+            },
+            "off": {
+              "edge": 0,
+              "qubit": 0,
+              "n_supports": 0,
+              "endpoint_degrees": [
+                3,
+                5
+              ],
+              "d_rough": 1,
+              "d_smooth": 0
+            },
+            "degree_mismatch": 0,
+            "dist_mismatch": 1
+          },
+          "n_weight3_x_supports": 1,
+          "selection_spec": {
+            "centre": [
+              1,
+              -1,
+              0,
+              1,
+              1
+            ],
+            "aspect": 1.25,
+            "angle": 0.0,
+            "spec": [
+              20,
+              1,
+              0,
+              9
+            ],
+            "corners": [
+              1,
+              3,
+              8,
+              10
+            ]
+          }
+        }
+      ],
+      "discovery_excluded": true
+    }
+  }
+}

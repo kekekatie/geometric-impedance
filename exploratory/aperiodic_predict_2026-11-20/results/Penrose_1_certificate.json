@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "anticommutation": 1,
+    "area_matches": true,
+    "commutation": true,
+    "disk": true,
+    "eight_coordinates": true,
+    "exhaustive_short_supports": {
+      "X": {
+        "1": 21,
+        "2": 210
+      },
+      "Z": {
+        "1": 21,
+        "2": 210
+      }
+    },
+    "larger_parent_stars_and_faces": true,
+    "no_overlap": true,
+    "relative_boundary": true,
+    "unit_rhombi": true,
+    "weight_three_witnesses": true
+  },
+  "dX": 3,
+  "dZ": 3,
+  "eligible_edges": 3,
+  "endpoint_degree_pairs": [
+    [
+      3,
+      6
+    ]
+  ],
+  "family": "Penrose",
+  "k": 1,
+  "logical_X": [
+    17,
+    10,
+    1
+  ],
+  "logical_Z": [
+    8,
+    10,
+    16
+  ],
+  "n": 21,
+  "rank_X": 11,
+  "rank_Z": 9
+}
