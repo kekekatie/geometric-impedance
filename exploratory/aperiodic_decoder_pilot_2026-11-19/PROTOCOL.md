@@ -213,5 +213,19 @@ if any, deserves a test on fresh patches.
 
 ## Amendment (ensemble choice — recorded before any score is read)
 
-_To be filled with the benchmark result and the committed exhaustive/sampled choice and
-`N`, before the scoring run is examined._
+Benchmark (one square site, end-to-end, `(3,3)`): **4.6 ms/history**. Extrapolated
+exhaustive `≤2`-fault total = **8.9 h** over 18 sites, which exceeds the 4 h threshold, so
+per the decision rule we use the **seeded `k=2` fallback**. Among `N ∈ {2000,4000,6000,
+8000}`, the largest with extrapolated total `≤ 3 h` is **`N = 8000`** (1.53 h total). Thus:
+
+- **Mode: sampled.** Exhaustive `k ∈ {0,1}` (`311` configs); seeded `k = 2` sample of
+  **`N = 8000`** of the `C(310,2) = 47,895` index pairs, `random.Random(20261119)`,
+  uniform without replacement, the **same sample reused at all 18 sites**.
+- **Sample SHA-256** (sorted `a,b;…` pairs):
+  `d0d11df9ce0c04576b43c9615e7825dfbd8fa8743c8132c619e73e253d938687`.
+- Horvitz–Thompson inflation on sampled `k=2` configs: `odds² · (47,895 / 8,000)`; `W`
+  uses the exact `47,895 · odds²` for the `k=2` stratum. Per site: `8,311` configs `× 8 =
+  **66,488** histories.
+- Results are labelled **sampled**; the record-ambiguity fraction (Metric B) is an
+  **observed lower bound**. The timing-only benchmark above examined no truth/benefit
+  score; this amendment is committed before the scoring run.

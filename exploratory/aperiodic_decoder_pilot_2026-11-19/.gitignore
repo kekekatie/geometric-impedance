@@ -1,3 +1,4 @@
+_ckpt/
 _ckpt_*.json
 __pycache__/
 *.pyc
