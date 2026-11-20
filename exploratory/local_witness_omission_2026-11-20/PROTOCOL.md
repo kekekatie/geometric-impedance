@@ -1,0 +1,15 @@
+# Frozen leave-one-check-out protocol
+
+Start SHA: `1f85f7921bf9615bfa87173eb2d77d9159e211d3`. Branch: `experiment/local-witness-omission-2026-11-20`. Preserve all original experiment files. Use the audit's CorrectedPatchCode, patch-aware ID mapping and matrix-incidence assertion.
+
+Only AB_1 e14, Penrose_1 e14 and Penrose_2 e4. Enumerate all four omissions per site in `results/arms.json`; there is no predicted winner and no selection after scoring. Freeze this protocol, all twelve definitions and `results/geometry.png` before new scores. Verify the exact six retained coordinates against the certificate's named geometry and HX/HZ incidence columns before decoding.
+
+Each omission removes both archived readings at rounds 1 and 2 of one named check. That check still physically operated. Preserve all thin-state boundary parities, committed frames and live rounds 3/4, including those of the omitted check. Omitted readings are absent conditioning coordinates, not zero-valued observations. Do not reconstruct or supply round 0 of the omitted check. Other three checks contribute their normal six archived readings. All queries use the same site-independent archive record.
+
+Use unchanged `(3,3)` decoder caps, p=.001, each patch's fixed scored logical, shared-onset sector combination, XOR simulator, original exhaustive 310-fault pool with zero/one/two ordinary faults and eight onset/free-value variants: 385,648 histories per site. Tie-aware truth credit is .5 on the original decoder's tie tolerance. Histories and weights are paired across all arms.
+
+Primary signed cost in percentage points: 100 times weighted mean(intact credit minus omission credit). Also report omission gain over thin and full-archive gain. Separately report weighted credit lost = 100 weighted mean(max(intact−omission,0)) and gained = 100 weighted mean(max(omission−intact,0)); cost = lost−gained. Preserve negative/zero values. Record unweighted label/tie-status change counts and weighted fractions. No new bootstrap intervals, family-wide claims, address rescue or report-lag changes.
+
+Reproduce thin, intact local and thick/whole baselines against the preceding audit. Verify whole versus thick on every history. Every 2,003rd history, independently construct direct evidence from simulator outputs, leaving omitted readings free; compare all omissions to the original unaccelerated marginal with empty caches. Assert the exact retained coordinate set, including presence of known zeros and absence of withheld coordinates, on that sample. The archive replay itself only reads saved state, never simulator truth. Keep the already verified necessary-evidence prefilter and original candidate order. Save completed-site checkpoints and per-configuration paired credit, gain/loss and change statistics.
+
+Result picture: three geometry panels, circled loss edges, endpoint markers and adjacent faces colored by omission cost on one shared diverging scale centered visibly at zero. Identify named check/type/role/weight. Report all twelve rows and compare least/most costly witnesses separately per patch, without generalizing over tiling families.

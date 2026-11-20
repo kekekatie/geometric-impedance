@@ -1,0 +1,952 @@
+{
+  "starting_sha": "1f85f7921bf9615bfa87173eb2d77d9159e211d3",
+  "sites": [
+    {
+      "patch": "AB_1",
+      "edge": 14,
+      "qubit": 10,
+      "intact_indices": [
+        4,
+        5,
+        14,
+        17
+      ],
+      "scored_logical_Z": [
+        8,
+        10,
+        2
+      ],
+      "arms": [
+        {
+          "omitted": "X4",
+          "index": 4,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 5,
+          "withheld": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              14,
+              2
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              17,
+              2
+            ]
+          ],
+          "retained_indices": [
+            5,
+            14,
+            17
+          ]
+        },
+        {
+          "omitted": "X5",
+          "index": 5,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 5,
+          "withheld": [
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              14,
+              2
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              17,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            14,
+            17
+          ]
+        },
+        {
+          "omitted": "Z3",
+          "index": 14,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              17,
+              1
+            ],
+            [
+              17,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            5,
+            17
+          ]
+        },
+        {
+          "omitted": "Z6",
+          "index": 17,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              14,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            5,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 14,
+      "qubit": 10,
+      "intact_indices": [
+        4,
+        6,
+        12,
+        18
+      ],
+      "scored_logical_Z": [
+        8,
+        10,
+        16
+      ],
+      "arms": [
+        {
+          "omitted": "X4",
+          "index": 4,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 6,
+          "withheld": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              18,
+              1
+            ],
+            [
+              18,
+              2
+            ]
+          ],
+          "retained_indices": [
+            6,
+            12,
+            18
+          ]
+        },
+        {
+          "omitted": "X6",
+          "index": 6,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 3,
+          "withheld": [
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              18,
+              1
+            ],
+            [
+              18,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            12,
+            18
+          ]
+        },
+        {
+          "omitted": "Z1",
+          "index": 12,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              18,
+              1
+            ],
+            [
+              18,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            6,
+            18
+          ]
+        },
+        {
+          "omitted": "Z7",
+          "index": 18,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ]
+          ],
+          "retained_indices": [
+            4,
+            6,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 4,
+      "qubit": 4,
+      "intact_indices": [
+        0,
+        5,
+        12,
+        15
+      ],
+      "scored_logical_Z": [
+        6,
+        0,
+        2
+      ],
+      "arms": [
+        {
+          "omitted": "X0",
+          "index": 0,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 5,
+          "withheld": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ],
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              15,
+              2
+            ]
+          ],
+          "retained_indices": [
+            5,
+            12,
+            15
+          ]
+        },
+        {
+          "omitted": "X5",
+          "index": 5,
+          "type": "X",
+          "role": "endpoint",
+          "weight": 3,
+          "withheld": [
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ],
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              15,
+              2
+            ]
+          ],
+          "retained_indices": [
+            0,
+            12,
+            15
+          ]
+        },
+        {
+          "omitted": "Z1",
+          "index": 12,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              15,
+              2
+            ]
+          ],
+          "retained_indices": [
+            0,
+            5,
+            15
+          ]
+        },
+        {
+          "omitted": "Z4",
+          "index": 15,
+          "type": "Z",
+          "role": "face",
+          "weight": 4,
+          "withheld": [
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ],
+          "retained_coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ],
+          "numeric_coordinates": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              2
+            ]
+          ],
+          "retained_indices": [
+            0,
+            5,
+            12
+          ]
+        }
+      ]
+    }
+  ],
+  "primary": "100 * (weighted intact truth credit - weighted omission truth credit)",
+  "gained": "100 * weighted mean max(omission credit - intact credit, 0)",
+  "lost": "100 * weighted mean max(intact credit - omission credit, 0)",
+  "tie_credit": 0.5,
+  "selection": "all four incident checks at each frozen site; no preselected winner"
+}
