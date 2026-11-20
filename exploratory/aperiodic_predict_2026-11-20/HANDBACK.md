@@ -69,10 +69,34 @@ reproduced (`results/s6_regression.json`).
 
 ## Cap sensitivity
 
-_Running: a preselected, outcome-independent panel on the six pair edges (all zero-/
-one-fault configs + a seeded two-fault sample, baseline-agreeing histories included),
-replayed at (3,3)/(4,3)/(3,4)/(4,4). Section fills on completion: unsupported frame
-prefixes per cap and any change/sign-flip in the paired benefits._
+Preselected, outcome-independent panel on the six pair edges (all zero-/one-fault configs
++ a seeded 120 two-fault sample, baseline-agreeing histories included), `results/caps_pairs.json`.
+The panel is k≤1-heavy, so its per-edge `G` is larger than the population `G` of §above;
+the point is the on/off **contrast** and its **stability across caps**, not the level.
+
+**Frame cap (3,3) → (4,3):** the on-route benefit is stable; the off-route edges stay at
+exactly zero; frame-prefix coverage is complete (prefix-absent = 0 at both caps).
+
+| edge | panel G (3,3) | panel G (4,3) | label flips | prefix-absent |
+|---|---:|---:|---:|---:|
+| AB_1 on e14 | +0.5655 | +0.5075 | 4 (cancel) | 0 |
+| AB_1 off e8 | 0.0000 | 0.0000 | 0 | 0 |
+| Penrose_1 on e14 | +0.5220 | +0.4640 | 11 (cancel) | 0 |
+| Penrose_1 off e13 | 0.0000 | 0.0000 | 0 | 0 |
+| Penrose_2 on e4 | +0.2320 | +0.2320 | 8 (cancel) | 0 |
+| Penrose_2 off e0 | 0.0000 | 0.0000 | 0 | 0 |
+
+Raising the frame cap changes the on-route benefit by ≤11% of its panel value (label flips
+grow but cancel in the net), leaves every off-route edge at exactly zero, and introduces no
+fallback-prefix effects. **The on > off contrast — hence `Δ_patch > 0` — is robust to the
+frame cap at all three patches.**
+
+**Marginal cap (w_dec = 4):** the `(3,4)`/`(4,4)` panels were **not completed** — their
+per-edge 20.6M-row `w_dec=4` builds (~20 min each) were repeatedly interrupted by container
+restarts, a run-environment limit, not a result. The one point that did complete before a
+restart — AB_1 on-route e14 at `(3,4)` — gives panel `G = +0.551` vs `+0.566` at `(3,3)`
+(0 flips), i.e. the marginal cap is also stable there. A full `w_dec=4` cap panel is left as
+a follow-up to run in a stable environment.
 
 ## Plain-language answer, pointing at the pictures
 
