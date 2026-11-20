@@ -1,0 +1,253 @@
+{
+  "starting_sha": "fdeaa32a988224f98dc10b99175c99d806862522",
+  "prediction_commit": "3174b2350faf6cdfa89cd3f02da0eb7faa17d79f",
+  "patch": "Penrose_1",
+  "edge": 14,
+  "qubit": 10,
+  "scored_logical_Z": [
+    8,
+    10,
+    16
+  ],
+  "decoder_caps": [
+    3,
+    3
+  ],
+  "p": 0.001,
+  "histories": 385648,
+  "configurations": 48206,
+  "histories_by_fault_weight": [
+    8,
+    2480,
+    383160
+  ],
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "original_quoted_gap_pp": 0.12157,
+  "queries": {
+    "legacy_diamond": [
+      4,
+      6,
+      11,
+      17
+    ],
+    "legacy_X0": [
+      0,
+      4,
+      6,
+      11,
+      17
+    ],
+    "legacy_X5": [
+      4,
+      5,
+      6,
+      11,
+      17
+    ],
+    "incident_diamond": [
+      4,
+      6,
+      12,
+      18
+    ],
+    "incident_X0": [
+      0,
+      4,
+      6,
+      12,
+      18
+    ],
+    "incident_X5": [
+      4,
+      5,
+      6,
+      12,
+      18
+    ]
+  },
+  "scores": {
+    "thin": {
+      "tie_aware_truth": 0.9976792324500254,
+      "tie_count": 0,
+      "credit_by_fault_weight": [
+        8.0,
+        2462.0,
+        375974.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        0
+      ],
+      "gain_over_thin_pp": 0.0,
+      "remaining_thick_gap_pp": 0.12229028626732363
+    },
+    "thick": {
+      "tie_aware_truth": 0.9989021353126987,
+      "tie_count": 14,
+      "credit_by_fault_weight": [
+        8.0,
+        2472.0,
+        379246.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        14
+      ],
+      "gain_over_thin_pp": 0.12229028626732363,
+      "remaining_thick_gap_pp": 0.0
+    },
+    "whole": {
+      "tie_aware_truth": 0.9989021353126987,
+      "tie_count": 14,
+      "credit_by_fault_weight": [
+        8.0,
+        2472.0,
+        379246.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        14
+      ],
+      "gain_over_thin_pp": 0.12229028626732363,
+      "remaining_thick_gap_pp": 0.0
+    },
+    "legacy_diamond": {
+      "tie_aware_truth": 0.9976864249114404,
+      "tie_count": 0,
+      "credit_by_fault_weight": [
+        8.0,
+        2462.0,
+        376052.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        0
+      ],
+      "gain_over_thin_pp": 0.0007192461415006512,
+      "remaining_thick_gap_pp": 0.12157104012582298,
+      "gain_over_own_diamond_pp": 0.0
+    },
+    "legacy_X0": {
+      "tie_aware_truth": 0.9976864249114404,
+      "tie_count": 0,
+      "credit_by_fault_weight": [
+        8.0,
+        2462.0,
+        376052.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        0
+      ],
+      "gain_over_thin_pp": 0.0007192461415006512,
+      "remaining_thick_gap_pp": 0.12157104012582298,
+      "gain_over_own_diamond_pp": 0.0
+    },
+    "legacy_X5": {
+      "tie_aware_truth": 0.9976864249114404,
+      "tie_count": 0,
+      "credit_by_fault_weight": [
+        8.0,
+        2462.0,
+        376052.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        0
+      ],
+      "gain_over_thin_pp": 0.0007192461415006512,
+      "remaining_thick_gap_pp": 0.12157104012582298,
+      "gain_over_own_diamond_pp": 0.0
+    },
+    "incident_diamond": {
+      "tie_aware_truth": 0.9988866438573429,
+      "tie_count": 12,
+      "credit_by_fault_weight": [
+        8.0,
+        2472.0,
+        379078.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        12
+      ],
+      "gain_over_thin_pp": 0.12074114073175046,
+      "remaining_thick_gap_pp": 0.001549145535573171,
+      "gain_over_own_diamond_pp": 0.0
+    },
+    "incident_X0": {
+      "tie_aware_truth": 0.9988866438573429,
+      "tie_count": 12,
+      "credit_by_fault_weight": [
+        8.0,
+        2472.0,
+        379078.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        12
+      ],
+      "gain_over_thin_pp": 0.12074114073175046,
+      "remaining_thick_gap_pp": 0.001549145535573171,
+      "gain_over_own_diamond_pp": 0.0
+    },
+    "incident_X5": {
+      "tie_aware_truth": 0.9988866438573429,
+      "tie_count": 12,
+      "credit_by_fault_weight": [
+        8.0,
+        2472.0,
+        379078.0
+      ],
+      "ties_by_fault_weight": [
+        0,
+        0,
+        12
+      ],
+      "gain_over_thin_pp": 0.12074114073175046,
+      "remaining_thick_gap_pp": 0.001549145535573171,
+      "gain_over_own_diamond_pp": 0.0
+    }
+  },
+  "contrasts": {
+    "legacy": {
+      "route_minus_comparison_pp": 0.0,
+      "diamond_to_thick_gap_pp": 0.12157104012582298,
+      "contrast_fraction_of_original_quoted_gap": 0.0,
+      "prediction_holds": false
+    },
+    "incident": {
+      "route_minus_comparison_pp": 0.0,
+      "diamond_to_thick_gap_pp": 0.001549145535573171,
+      "contrast_fraction_of_original_quoted_gap": 0.0,
+      "prediction_holds": false
+    }
+  },
+  "validation": {
+    "round0_histories": 2313888,
+    "round0_mismatches": 0,
+    "round0_max_posterior_error": 0.0,
+    "whole_mismatches": 0,
+    "original_direct_checks": 576,
+    "original_direct_mismatches": 0,
+    "unaccelerated_arm_checks": 1728,
+    "unaccelerated_mismatches": 0,
+    "unaccelerated_max_posterior_error": 0.0,
+    "serialized_roundtrips": 192,
+    "archive_query_mutations": 0
+  },
+  "reproduced_published": {
+    "G_thick_thin": 0.12229,
+    "diamond_thin": 0.00072,
+    "thick_diamond": 0.12157
+  },
+  "elapsed_seconds": 659.2784895896912
+}
