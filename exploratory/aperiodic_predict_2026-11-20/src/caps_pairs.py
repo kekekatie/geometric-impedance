@@ -21,7 +21,9 @@ import paired_run as pr              # FreshPatchCode, ordinary_pool, VARIANTS
 
 RESULTS = Path(__file__).resolve().parents[1] / 'results'
 CKPT = RESULTS / '_capckpt'
-CAPS = [(3, 3), (4, 3), (3, 4), (4, 4)]
+CAPS = [(3, 3), (4, 3)]   # frame-cap comparison (w_dec=3; fast, restart-safe). w_dec=4
+# caps ((3,4),(4,4)) were dropped from the automated panel after repeated container restarts
+# kept interrupting their ~20-min-per-edge 20.6M-row builds; see HANDBACK section C.
 SEED = 20261120
 N_K2 = 120
 EPS = pd.EPS
