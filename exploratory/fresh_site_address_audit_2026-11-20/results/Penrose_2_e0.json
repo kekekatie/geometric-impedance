@@ -1,0 +1,155 @@
+{
+  "queries": {
+    "patch": "Penrose_2",
+    "edge": 0,
+    "qubit": 0,
+    "nx": 11,
+    "nz": 9,
+    "geometric_checks": [
+      "X0",
+      "X1",
+      "Z0",
+      "Z1"
+    ],
+    "matrix_incident_checks": [
+      "X0",
+      "X1",
+      "Z0",
+      "Z1"
+    ],
+    "legacy_indices": [
+      0,
+      1,
+      10,
+      11
+    ],
+    "legacy_actual_checks": [
+      "X0",
+      "X1",
+      "X10",
+      "Z0"
+    ],
+    "corrected_indices": [
+      0,
+      1,
+      11,
+      12
+    ],
+    "affected": true
+  },
+  "decoder_caps": [
+    3,
+    3
+  ],
+  "p": 0.001,
+  "scored_logical_Z": [
+    6,
+    0,
+    2
+  ],
+  "histories": 385648,
+  "histories_by_weight": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "scores": {
+    "thin": {
+      "truth_credit": 0.9989202086772806,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379442.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        24
+      ],
+      "gain_over_thin_pp": 0.0,
+      "remaining_thick_gap_pp": 0.0031905021149580826
+    },
+    "thick": {
+      "truth_credit": 0.9989521136984302,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379788.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        52
+      ],
+      "gain_over_thin_pp": 0.0031905021149580826,
+      "remaining_thick_gap_pp": 0.0
+    },
+    "whole": {
+      "truth_credit": 0.9989521136984302,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379788.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        52
+      ],
+      "gain_over_thin_pp": 0.0031905021149580826,
+      "remaining_thick_gap_pp": 0.0
+    },
+    "legacy_diamond": {
+      "truth_credit": 0.9989278621939147,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379525.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        38
+      ],
+      "gain_over_thin_pp": 0.0007653516634120727,
+      "remaining_thick_gap_pp": 0.00242515045154601
+    },
+    "corrected_diamond": {
+      "truth_credit": 0.9989368988762055,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379623.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        44
+      ],
+      "gain_over_thin_pp": 0.0016690198924917965,
+      "remaining_thick_gap_pp": 0.001521482222466286
+    }
+  },
+  "validation": {
+    "whole_mismatches": 0,
+    "round0_comparisons": 385648,
+    "round0_mismatches": 0,
+    "json_roundtrips": 192,
+    "direct_checks": 576,
+    "direct_mismatches": 0,
+    "fullscan_checks": 960,
+    "fullscan_mismatches": 0,
+    "max_fullscan_posterior_error": 0.0,
+    "changed_labels": 378,
+    "changed_ties": 46,
+    "changed_truth_credit": 420
+  },
+  "reproduced_original": {
+    "G_thick_thin": 0.00319,
+    "diamond_thin": 0.00077,
+    "thick_diamond": 0.00243
+  },
+  "elapsed_seconds": 748.9283101558685
+}

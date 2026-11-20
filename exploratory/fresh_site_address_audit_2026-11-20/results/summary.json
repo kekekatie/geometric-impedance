@@ -1,0 +1,164 @@
+{
+  "starting_sha": "5506cd138495b62d50af2765ba1615718cd262b2",
+  "protocol_commit": "91430382f41b5236832a378a55b5c4c2379e9dbe",
+  "sites": 10,
+  "histories": 3856480,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "decimal_csv_rows_verified": 482060,
+  "rows": [
+    {
+      "patch": "AB_1",
+      "edge": 8,
+      "qubit": 6,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.003116733279928674,
+      "legacy_diamond_thin_pp": 0.0007930149765522643,
+      "corrected_diamond_thin_pp": 0.0014845978049238262,
+      "corrected_thick_gap_pp": 0.0016321354750048478,
+      "correction_gain_pp": 0.0006915828283715619,
+      "archive_gain_recovered_percent": 47.633136094269865
+    },
+    {
+      "patch": "AB_1",
+      "edge": 14,
+      "qubit": 10,
+      "on_route_pair": true,
+      "thick_thin_pp": 0.10310116805573033,
+      "legacy_diamond_thin_pp": 0.0012356279867176134,
+      "corrected_diamond_thin_pp": 0.10027028901152812,
+      "corrected_thick_gap_pp": 0.002830879044202206,
+      "correction_gain_pp": 0.09903466102481051,
+      "archive_gain_recovered_percent": 97.2542706376789
+    },
+    {
+      "patch": "AB_1",
+      "edge": 15,
+      "qubit": 11,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.0028769845660803206,
+      "legacy_diamond_thin_pp": 0.0006362562021133833,
+      "corrected_diamond_thin_pp": 0.0013093968217359198,
+      "corrected_thick_gap_pp": 0.0015675877443444008,
+      "correction_gain_pp": 0.0006731406196225365,
+      "archive_gain_recovered_percent": 45.512820512620145
+    },
+    {
+      "patch": "AB_1",
+      "edge": 16,
+      "qubit": 12,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.004094170344037806,
+      "legacy_diamond_thin_pp": 0.0,
+      "corrected_diamond_thin_pp": 0.0021946228420777203,
+      "corrected_thick_gap_pp": 0.001899547501960086,
+      "correction_gain_pp": 0.0021946228420777203,
+      "archive_gain_recovered_percent": 53.603603603686665
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 2,
+      "qubit": 2,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.002047085172018903,
+      "legacy_diamond_thin_pp": 0.00040572859264509376,
+      "corrected_diamond_thin_pp": 0.0009589948553601069,
+      "corrected_thick_gap_pp": 0.0010880903166587963,
+      "correction_gain_pp": 0.0005532662627150131,
+      "archive_gain_recovered_percent": 46.84684684684196
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 13,
+      "qubit": 9,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.0030060800273901123,
+      "legacy_diamond_thin_pp": 0.0,
+      "corrected_diamond_thin_pp": 0.0017243465187832818,
+      "corrected_thick_gap_pp": 0.0012817335086068304,
+      "correction_gain_pp": 0.0017243465187832818,
+      "archive_gain_recovered_percent": 57.3619631903268
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 14,
+      "qubit": 10,
+      "on_route_pair": true,
+      "thick_thin_pp": 0.12229028626732363,
+      "legacy_diamond_thin_pp": 0.0007192461415006512,
+      "corrected_diamond_thin_pp": 0.12074114073175046,
+      "corrected_thick_gap_pp": 0.001549145535573171,
+      "correction_gain_pp": 0.12002189459024981,
+      "archive_gain_recovered_percent": 98.7332227416765
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 0,
+      "qubit": 0,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.0031905021149580826,
+      "legacy_diamond_thin_pp": 0.0007653516634120727,
+      "corrected_diamond_thin_pp": 0.0016690198924917965,
+      "corrected_thick_gap_pp": 0.001521482222466286,
+      "correction_gain_pp": 0.0009036682290797238,
+      "archive_gain_recovered_percent": 52.312138727847994
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 1,
+      "qubit": 1,
+      "on_route_pair": false,
+      "thick_thin_pp": 0.0007008039327738302,
+      "legacy_diamond_thin_pp": 0.0003872863838960683,
+      "corrected_diamond_thin_pp": 0.0,
+      "corrected_thick_gap_pp": 0.0007008039327738302,
+      "correction_gain_pp": -0.0003872863838960683,
+      "archive_gain_recovered_percent": 0.0
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 4,
+      "qubit": 4,
+      "on_route_pair": true,
+      "thick_thin_pp": 0.07234878495352426,
+      "legacy_diamond_thin_pp": 0.0003504019663869151,
+      "corrected_diamond_thin_pp": 0.07160187549887231,
+      "corrected_thick_gap_pp": 0.000746909454651945,
+      "correction_gain_pp": 0.0712514735324854,
+      "archive_gain_recovered_percent": 98.96762681621848
+    }
+  ],
+  "pairs": {
+    "AB_1": {
+      "on_edge": 14,
+      "off_edge": 8,
+      "thick_thin_on_minus_off_pp": 0.09998443477580166,
+      "corrected_diamond_thin_on_minus_off_pp": 0.0987856912066043
+    },
+    "Penrose_1": {
+      "on_edge": 14,
+      "off_edge": 13,
+      "thick_thin_on_minus_off_pp": 0.11928420623993352,
+      "corrected_diamond_thin_on_minus_off_pp": 0.11901679421296718
+    },
+    "Penrose_2": {
+      "on_edge": 4,
+      "off_edge": 0,
+      "thick_thin_on_minus_off_pp": 0.06915828283856618,
+      "corrected_diamond_thin_on_minus_off_pp": 0.06993285560638052
+    }
+  },
+  "validation_totals": {
+    "whole_mismatches": 0,
+    "round0_comparisons": 3856480,
+    "round0_mismatches": 0,
+    "json_roundtrips": 1920,
+    "direct_checks": 5760,
+    "direct_mismatches": 0,
+    "fullscan_checks": 9600,
+    "fullscan_mismatches": 0,
+    "max_fullscan_posterior_error": 0,
+    "changed_labels": 14096,
+    "changed_ties": 190,
+    "changed_truth_credit": 14206
+  }
+}
