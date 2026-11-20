@@ -1,0 +1,388 @@
+{
+  "starting_sha": "5506cd138495b62d50af2765ba1615718cd262b2",
+  "original_result_sha": "fdeaa32a988224f98dc10b99175c99d806862522",
+  "sites": [
+    {
+      "patch": "AB_1",
+      "edge": 8,
+      "qubit": 6,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X2",
+        "X4",
+        "Z2",
+        "Z3"
+      ],
+      "matrix_incident_checks": [
+        "X2",
+        "X4",
+        "Z2",
+        "Z3"
+      ],
+      "legacy_indices": [
+        2,
+        4,
+        12,
+        13
+      ],
+      "legacy_actual_checks": [
+        "X2",
+        "X4",
+        "Z1",
+        "Z2"
+      ],
+      "corrected_indices": [
+        2,
+        4,
+        13,
+        14
+      ],
+      "affected": true
+    },
+    {
+      "patch": "AB_1",
+      "edge": 14,
+      "qubit": 10,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X4",
+        "X5",
+        "Z3",
+        "Z6"
+      ],
+      "matrix_incident_checks": [
+        "X4",
+        "X5",
+        "Z3",
+        "Z6"
+      ],
+      "legacy_indices": [
+        4,
+        5,
+        13,
+        16
+      ],
+      "legacy_actual_checks": [
+        "X4",
+        "X5",
+        "Z2",
+        "Z5"
+      ],
+      "corrected_indices": [
+        4,
+        5,
+        14,
+        17
+      ],
+      "affected": true
+    },
+    {
+      "patch": "AB_1",
+      "edge": 15,
+      "qubit": 11,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X4",
+        "X6",
+        "Z6",
+        "Z7"
+      ],
+      "matrix_incident_checks": [
+        "X4",
+        "X6",
+        "Z6",
+        "Z7"
+      ],
+      "legacy_indices": [
+        4,
+        6,
+        16,
+        17
+      ],
+      "legacy_actual_checks": [
+        "X4",
+        "X6",
+        "Z5",
+        "Z6"
+      ],
+      "corrected_indices": [
+        4,
+        6,
+        17,
+        18
+      ],
+      "affected": true
+    },
+    {
+      "patch": "AB_1",
+      "edge": 16,
+      "qubit": 12,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X4",
+        "X9",
+        "Z5",
+        "Z7"
+      ],
+      "matrix_incident_checks": [
+        "X4",
+        "X9",
+        "Z5",
+        "Z7"
+      ],
+      "legacy_indices": [
+        4,
+        9,
+        15,
+        17
+      ],
+      "legacy_actual_checks": [
+        "X4",
+        "X9",
+        "Z4",
+        "Z6"
+      ],
+      "corrected_indices": [
+        4,
+        9,
+        16,
+        18
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 2,
+      "qubit": 2,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X0",
+        "X4",
+        "Z0",
+        "Z1"
+      ],
+      "matrix_incident_checks": [
+        "X0",
+        "X4",
+        "Z0",
+        "Z1"
+      ],
+      "legacy_indices": [
+        0,
+        4,
+        10,
+        11
+      ],
+      "legacy_actual_checks": [
+        "X0",
+        "X4",
+        "X10",
+        "Z0"
+      ],
+      "corrected_indices": [
+        0,
+        4,
+        11,
+        12
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 13,
+      "qubit": 9,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X4",
+        "X5",
+        "Z0",
+        "Z5"
+      ],
+      "matrix_incident_checks": [
+        "X4",
+        "X5",
+        "Z0",
+        "Z5"
+      ],
+      "legacy_indices": [
+        4,
+        5,
+        10,
+        15
+      ],
+      "legacy_actual_checks": [
+        "X4",
+        "X5",
+        "X10",
+        "Z4"
+      ],
+      "corrected_indices": [
+        4,
+        5,
+        11,
+        16
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_1",
+      "edge": 14,
+      "qubit": 10,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X4",
+        "X6",
+        "Z1",
+        "Z7"
+      ],
+      "matrix_incident_checks": [
+        "X4",
+        "X6",
+        "Z1",
+        "Z7"
+      ],
+      "legacy_indices": [
+        4,
+        6,
+        11,
+        17
+      ],
+      "legacy_actual_checks": [
+        "X4",
+        "X6",
+        "Z0",
+        "Z6"
+      ],
+      "corrected_indices": [
+        4,
+        6,
+        12,
+        18
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 0,
+      "qubit": 0,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X0",
+        "X1",
+        "Z0",
+        "Z1"
+      ],
+      "matrix_incident_checks": [
+        "X0",
+        "X1",
+        "Z0",
+        "Z1"
+      ],
+      "legacy_indices": [
+        0,
+        1,
+        10,
+        11
+      ],
+      "legacy_actual_checks": [
+        "X0",
+        "X1",
+        "X10",
+        "Z0"
+      ],
+      "corrected_indices": [
+        0,
+        1,
+        11,
+        12
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 1,
+      "qubit": 1,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X0",
+        "X2",
+        "Z0",
+        "Z2"
+      ],
+      "matrix_incident_checks": [
+        "X0",
+        "X2",
+        "Z0",
+        "Z2"
+      ],
+      "legacy_indices": [
+        0,
+        2,
+        10,
+        12
+      ],
+      "legacy_actual_checks": [
+        "X0",
+        "X2",
+        "X10",
+        "Z1"
+      ],
+      "corrected_indices": [
+        0,
+        2,
+        11,
+        13
+      ],
+      "affected": true
+    },
+    {
+      "patch": "Penrose_2",
+      "edge": 4,
+      "qubit": 4,
+      "nx": 11,
+      "nz": 9,
+      "geometric_checks": [
+        "X0",
+        "X5",
+        "Z1",
+        "Z4"
+      ],
+      "matrix_incident_checks": [
+        "X0",
+        "X5",
+        "Z1",
+        "Z4"
+      ],
+      "legacy_indices": [
+        0,
+        5,
+        11,
+        14
+      ],
+      "legacy_actual_checks": [
+        "X0",
+        "X5",
+        "Z0",
+        "Z3"
+      ],
+      "corrected_indices": [
+        0,
+        5,
+        12,
+        15
+      ],
+      "affected": true
+    }
+  ],
+  "sites_checked": 10,
+  "affected_sites": 10
+}

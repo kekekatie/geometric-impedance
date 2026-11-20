@@ -1,0 +1,13 @@
+# Fresh-site query-address audit and corrected local replay
+
+Start from published follow-up `5506cd138495b62d50af2765ba1615718cd262b2`, which contains the original fresh-patch result at `fdeaa32a988224f98dc10b99175c99d806862522`. Work on `audit/fresh-site-addresses-2026-11-20`. Preserve all original files and scores; place the corrected adapter and results here.
+
+Before new scores, cross-check all eligible fresh sites in AB_1, Penrose_1 and Penrose_2: endpoint and adjacent-face check names, HX/HZ columns, certificate row counts, intended eight query coordinates, and actual old decoder addresses. Use the geometry-derived X-row count for the Z offset; assert corrected STAR equals the complete set of matrix checks incident to the lost qubit. Certifying four checks/eight coordinates alone did not validate the old numeric addresses.
+
+Replay **every affected eligible site**, including Penrose_1 e14 as a regression, with the original `(3,3)` decoder and all original zero-/one-/two-ordinary-fault configurations, each with eight onset/free-value variants (385,648 histories per site). Preserve p=.001, fixed scored observable per patch, original XOR simulator, saved frames, shared-onset inference and half credit on ties. Reuse the previously checked exact necessary-evidence prefilter; compare sampled outputs to original unaccelerated marginals with empty caches.
+
+Score thin, thick, whole archive, legacy diamond and corrected diamond on identical histories. Only the corrected diamond query addresses change. Both diamond arms obtain rounds 1 and 2 of four checks from the same site-independent archive. Verify whole/thick and inferred round-0 redundancy throughout; sample JSON round trips and direct/unaccelerated comparisons every 2,003rd history. Reproduce the original rounded per-site gains and prior corrected Penrose_1 e14 result.
+
+Write resumable per-site JSON and per-configuration compressed CSV. Report corrected diamond−thin, thick−diamond, change from the legacy diamond and fraction of thick−thin recovered for every site. Recalculate the fixed on/off point contrasts for thick−thin and corrected diamond−thin. Do not invent new confidence intervals or reinterpret the original fixed-patch bootstrap as generalization over geometry. No cap escalation, new geometry selection, or new check search in this audit. The three original geometric comparisons remain selected before scoring.
+
+Protocol and address-audit result are committed before the corrected ensemble replay. The correction is implemented in a new adapter, leaving the frozen source and result directories untouched. Later consumers should import the corrected adapter rather than the old hardcoded helper.
