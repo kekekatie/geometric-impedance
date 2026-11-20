@@ -48,7 +48,7 @@ def draw(plan, costs=None, filename='geometry'):
     from matplotlib.colors import TwoSlopeNorm
     from matplotlib.cm import ScalarMappable
     plt.rcParams['svg.hashsalt']='local-witness-omission'
-    fig,axes=plt.subplots(1,3,figsize=(13.5,5.6))
+    fig,axes=plt.subplots(1,3,figsize=(13.5,7) if costs is not None else (13.5,5.6))
     if costs is not None:
         extent=max(abs(v) for v in costs.values()) or 1e-6
         norm=TwoSlopeNorm(vmin=-extent,vcenter=0,vmax=extent); cmap=plt.get_cmap('PuOr_r')
@@ -68,7 +68,11 @@ def draw(plan, costs=None, filename='geometry'):
         for f in d['faces']:
             c=f['zcheck']
             if c in arms:
-                p=xy[f['vertices']].mean(0);ax.text(*p,label(c),ha='center',va='center',fontsize=9,fontweight='bold',bbox=dict(fc='white',ec='none',alpha=.8),zorder=6)
+                p=xy[f['vertices']].mean(0)
+                if costs is not None:
+                    shift={('AB_1','Z6'):(.18,.10),('Penrose_1','Z1'):(-.35,-.06),('Penrose_1','Z7'):(.30,.12)}.get((site['patch'],c),(0,0))
+                    p=p+np.array(shift)
+                ax.text(*p,label(c),ha='center',va='center',fontsize=9,fontweight='bold',bbox=dict(fc='white',ec='none',alpha=.8),zorder=6)
         for v in d['vertices']:
             c=v['xcheck']
             if c in arms:
@@ -76,14 +80,16 @@ def draw(plan, costs=None, filename='geometry'):
                 offsets={'AB_1':{'X4':(20,-40),'X5':(-70,30)},'Penrose_1':{'X4':(25,-40),'X6':(-70,30)},'Penrose_2':{'X0':(-75,-35),'X5':(30,30)}}
                 ax.annotate(label(c),xy[v['id']],xytext=offsets[site['patch']][c],textcoords='offset points',fontsize=9,fontweight='bold',bbox=dict(fc='white',ec='none',alpha=.85),arrowprops=dict(arrowstyle='-',color='#555'),zorder=8)
         ax.set_aspect('equal');ax.axis('off');ax.margins(.22)
-        ax.set_title(f"{site['patch']} · loss e{site['edge']} / q{site['qubit']}",fontsize=12)
+        title=f"{site['patch']} · loss e{site['edge']} / q{site['qubit']}"
+        if costs is None:ax.set_title(title,fontsize=12)
+        else:fig.text([.17,.5,.83][list(axes).index(ax)],.88,title,ha='center',fontsize=12)
     fig.suptitle('Withhold both old readings from one witness; keep its thin state',fontsize=14,y=.98)
     if costs is not None:
-        cax=fig.add_axes([.22,.10,.56,.025]);cb=fig.colorbar(ScalarMappable(norm=norm,cmap=cmap),cax=cax,orientation='horizontal')
+        cax=fig.add_axes([.22,.16,.56,.022]);cb=fig.colorbar(ScalarMappable(norm=norm,cmap=cmap),cax=cax,orientation='horizontal')
         cb.set_ticks([-extent,0,extent]);cb.set_ticklabels([f'{-extent:.4f}','0',f'{extent:.4f}'])
         cb.set_label('Intact minus six-reading truth credit (pp): positive = withholding hurt',fontsize=10)
     fig.text(.5,.02,'Red circle: loss edge · X markers: endpoint checks · Z faces: adjacent checks · w: check weight'+('\nGeometry only: all four omissions per site; no predicted winner.' if costs is None else '\nShared signed scale; negative costs mean improved aggregate truth credit.'),ha='center',fontsize=10)
-    fig.subplots_adjust(left=.02,right=.98,top=.86,bottom=.23 if costs is not None else .12,wspace=.12)
+    fig.subplots_adjust(left=.02,right=.98,top=.83 if costs is not None else .86,bottom=.29 if costs is not None else .12,wspace=.12)
     fig.savefig(ROOT/f'results/{filename}.png',dpi=180)
     svg=ROOT/f'results/{filename}.svg';fig.savefig(svg,metadata={'Date':None});plt.close(fig)
     svg.write_text('\n'.join(x.rstrip() for x in svg.read_text().splitlines())+'\n')

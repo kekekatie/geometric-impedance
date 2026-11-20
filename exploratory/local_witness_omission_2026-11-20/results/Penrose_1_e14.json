@@ -1,0 +1,877 @@
+{
+  "site": {
+    "patch": "Penrose_1",
+    "edge": 14,
+    "qubit": 10,
+    "intact_indices": [
+      4,
+      6,
+      12,
+      18
+    ],
+    "scored_logical_Z": [
+      8,
+      10,
+      16
+    ],
+    "arms": [
+      {
+        "omitted": "X4",
+        "index": 4,
+        "type": "X",
+        "role": "endpoint",
+        "weight": 6,
+        "withheld": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ]
+        ],
+        "retained_coordinates": [
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ],
+        "numeric_coordinates": [
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "retained_indices": [
+          6,
+          12,
+          18
+        ]
+      },
+      {
+        "omitted": "X6",
+        "index": 6,
+        "type": "X",
+        "role": "endpoint",
+        "weight": 3,
+        "withheld": [
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ]
+        ],
+        "retained_coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ],
+        "numeric_coordinates": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "retained_indices": [
+          4,
+          12,
+          18
+        ]
+      },
+      {
+        "omitted": "Z1",
+        "index": 12,
+        "type": "Z",
+        "role": "face",
+        "weight": 4,
+        "withheld": [
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ]
+        ],
+        "retained_coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ],
+        "numeric_coordinates": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            18,
+            1
+          ],
+          [
+            18,
+            2
+          ]
+        ],
+        "retained_indices": [
+          4,
+          6,
+          18
+        ]
+      },
+      {
+        "omitted": "Z7",
+        "index": 18,
+        "type": "Z",
+        "role": "face",
+        "weight": 4,
+        "withheld": [
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ],
+        "retained_coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ]
+        ],
+        "numeric_coordinates": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "retained_indices": [
+          4,
+          6,
+          12
+        ]
+      }
+    ]
+  },
+  "decoder_caps": [
+    3,
+    3
+  ],
+  "p": 0.001,
+  "histories": 385648,
+  "histories_by_weight": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "scores": {
+    "thin": {
+      "truth_credit": 0.9976792324500254,
+      "credits_by_weight": [
+        8.0,
+        2462.0,
+        375974.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        0
+      ]
+    },
+    "intact": {
+      "truth_credit": 0.9988866438573429,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379078.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        12
+      ]
+    },
+    "thick": {
+      "truth_credit": 0.9989021353126987,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379246.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        14
+      ]
+    },
+    "whole": {
+      "truth_credit": 0.9989021353126987,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379246.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        14
+      ]
+    },
+    "X4": {
+      "truth_credit": 0.9988864594352553,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379076.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        0
+      ]
+    },
+    "X6": {
+      "truth_credit": 0.9988864594352553,
+      "credits_by_weight": [
+        8.0,
+        2472.0,
+        379076.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        0
+      ]
+    },
+    "Z1": {
+      "truth_credit": 0.9986295594672709,
+      "credits_by_weight": [
+        8.0,
+        2470.0,
+        378288.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        8
+      ]
+    },
+    "Z7": {
+      "truth_credit": 0.9986271619801326,
+      "credits_by_weight": [
+        8.0,
+        2470.0,
+        378262.0
+      ],
+      "ties_by_weight": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "omissions": [
+    {
+      "omitted": "X4",
+      "index": 4,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 6,
+      "withheld": [
+        [
+          "X4",
+          1
+        ],
+        [
+          "X4",
+          2
+        ]
+      ],
+      "retained_coordinates": [
+        [
+          "X6",
+          1
+        ],
+        [
+          "X6",
+          2
+        ],
+        [
+          "Z1",
+          1
+        ],
+        [
+          "Z1",
+          2
+        ],
+        [
+          "Z7",
+          1
+        ],
+        [
+          "Z7",
+          2
+        ]
+      ],
+      "numeric_coordinates": [
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          18,
+          2
+        ]
+      ],
+      "retained_indices": [
+        6,
+        12,
+        18
+      ],
+      "cost_pp": 1.84422087601277e-05,
+      "gain_over_thin_pp": 0.12072269852299033,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "intact_gain_pp": 0.12074114073175046,
+      "truth_gained_pp": 0.021051781296059415,
+      "truth_lost_pp": 0.021070223504816365,
+      "label_changes": 570,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.04206667817460493,
+      "tie_changes_weighted_percent": 0.0001106532525417052,
+      "movements_by_weight": {
+        "gained": [
+          0.0,
+          2.0,
+          285.0
+        ],
+        "lost": [
+          0.0,
+          2.0,
+          287.0
+        ],
+        "labels": [
+          0.0,
+          4.0,
+          566.0
+        ],
+        "ties": [
+          0.0,
+          0.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "omitted": "X6",
+      "index": 6,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 3,
+      "withheld": [
+        [
+          "X6",
+          1
+        ],
+        [
+          "X6",
+          2
+        ]
+      ],
+      "retained_coordinates": [
+        [
+          "X4",
+          1
+        ],
+        [
+          "X4",
+          2
+        ],
+        [
+          "Z1",
+          1
+        ],
+        [
+          "Z1",
+          2
+        ],
+        [
+          "Z7",
+          1
+        ],
+        [
+          "Z7",
+          2
+        ]
+      ],
+      "numeric_coordinates": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          18,
+          2
+        ]
+      ],
+      "retained_indices": [
+        4,
+        12,
+        18
+      ],
+      "cost_pp": 1.84422087601277e-05,
+      "gain_over_thin_pp": 0.12072269852299033,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "intact_gain_pp": 0.12074114073175046,
+      "truth_gained_pp": 0.02106100240043789,
+      "truth_lost_pp": 0.021079444609194843,
+      "label_changes": 572,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.04208512038336188,
+      "tie_changes_weighted_percent": 0.0001106532525417052,
+      "movements_by_weight": {
+        "gained": [
+          0.0,
+          2.0,
+          286.0
+        ],
+        "lost": [
+          0.0,
+          2.0,
+          288.0
+        ],
+        "labels": [
+          0.0,
+          4.0,
+          568.0
+        ],
+        "ties": [
+          0.0,
+          0.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "omitted": "Z1",
+      "index": 12,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "withheld": [
+        [
+          "Z1",
+          1
+        ],
+        [
+          "Z1",
+          2
+        ]
+      ],
+      "retained_coordinates": [
+        [
+          "X4",
+          1
+        ],
+        [
+          "X4",
+          2
+        ],
+        [
+          "X6",
+          1
+        ],
+        [
+          "X6",
+          2
+        ],
+        [
+          "Z7",
+          1
+        ],
+        [
+          "Z7",
+          2
+        ]
+      ],
+      "numeric_coordinates": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          18,
+          2
+        ]
+      ],
+      "retained_indices": [
+        4,
+        6,
+        18
+      ],
+      "cost_pp": 0.025708439007199324,
+      "gain_over_thin_pp": 0.09503270172455114,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "intact_gain_pp": 0.12074114073175046,
+      "truth_gained_pp": 0.015463792042703301,
+      "truth_lost_pp": 0.041172231049892816,
+      "label_changes": 2152,
+      "tie_status_changes": 4,
+      "label_changes_weighted_percent": 0.05665446530135306,
+      "tie_changes_weighted_percent": 3.6884417513901735e-05,
+      "movements_by_weight": {
+        "gained": [
+          0.0,
+          1.0,
+          678.0
+        ],
+        "lost": [
+          0.0,
+          3.0,
+          1468.0
+        ],
+        "labels": [
+          0.0,
+          4.0,
+          2148.0
+        ],
+        "ties": [
+          0.0,
+          0.0,
+          4.0
+        ]
+      }
+    },
+    {
+      "omitted": "Z7",
+      "index": 18,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "withheld": [
+        [
+          "Z7",
+          1
+        ],
+        [
+          "Z7",
+          2
+        ]
+      ],
+      "retained_coordinates": [
+        [
+          "X4",
+          1
+        ],
+        [
+          "X4",
+          2
+        ],
+        [
+          "X6",
+          1
+        ],
+        [
+          "X6",
+          2
+        ],
+        [
+          "Z1",
+          1
+        ],
+        [
+          "Z1",
+          2
+        ]
+      ],
+      "numeric_coordinates": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          2
+        ]
+      ],
+      "retained_indices": [
+        4,
+        6,
+        12
+      ],
+      "cost_pp": 0.025948187721036575,
+      "gain_over_thin_pp": 0.09479295301071389,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "intact_gain_pp": 0.12074114073175046,
+      "truth_gained_pp": 0.058203610836936946,
+      "truth_lost_pp": 0.08415179855796681,
+      "label_changes": 3468,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.1424107360211746,
+      "tie_changes_weighted_percent": 0.0001106532525417052,
+      "movements_by_weight": {
+        "gained": [
+          0.0,
+          5.0,
+          1317.0
+        ],
+        "lost": [
+          0.0,
+          7.0,
+          2133.0
+        ],
+        "labels": [
+          0.0,
+          12.0,
+          3456.0
+        ],
+        "ties": [
+          0.0,
+          0.0,
+          12.0
+        ]
+      }
+    }
+  ],
+  "preflight": {
+    "comparisons": 768,
+    "mismatches": 0,
+    "known_zero_readings": 3408,
+    "max_posterior_error": 0.0
+  },
+  "validation": {
+    "whole_mismatches": 0,
+    "json_roundtrips": 192,
+    "direct_fullscan_checks": 1536,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0,
+    "omission_coordinate_checks": 768,
+    "retained_zero_readings_checked": 3408
+  },
+  "elapsed_seconds": 951.2206833362579
+}

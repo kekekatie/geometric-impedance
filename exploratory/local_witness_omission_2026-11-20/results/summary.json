@@ -1,0 +1,333 @@
+{
+  "starting_sha": "1f85f7921bf9615bfa87173eb2d77d9159e211d3",
+  "protocol_commit": "9434ea1d04c87ce28c77d1b059d3cde207e95911",
+  "histories": 1156944,
+  "config_rows_verified": 144618,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "baselines": {
+    "AB_1_e14": {
+      "thin": 0.9975678415091334,
+      "intact": 0.9985705443992486,
+      "thick": 0.9985988531896907,
+      "whole": 0.9985988531896907
+    },
+    "Penrose_1_e14": {
+      "thin": 0.9976792324500254,
+      "intact": 0.9988866438573429,
+      "thick": 0.9989021353126987,
+      "whole": 0.9989021353126987
+    },
+    "Penrose_2_e4": {
+      "thin": 0.9972814340071379,
+      "intact": 0.9979974527621266,
+      "thick": 0.9980049218566731,
+      "whole": 0.9980049218566731
+    }
+  },
+  "rows": [
+    {
+      "site": "AB_1_e14",
+      "patch": "AB_1",
+      "edge": 14,
+      "omitted": "X4",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "cost_pp": 0.00018442208755686806,
+      "six_reading_gain_pp": 0.10008586692397126,
+      "intact_gain_pp": 0.10027028901152812,
+      "full_archive_gain_pp": 0.10310116805573033,
+      "archive_gain_recovered_percent": 97.07539576066763,
+      "truth_lost_pp": 0.000488718532059198,
+      "truth_gained_pp": 0.0003042964444896893,
+      "label_changes": 82,
+      "tie_status_changes": 8,
+      "label_changes_weighted_percent": 0.0007561305590349856,
+      "tie_changes_weighted_percent": 7.376883502780347e-05
+    },
+    {
+      "site": "AB_1_e14",
+      "patch": "AB_1",
+      "edge": 14,
+      "omitted": "X5",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "cost_pp": 0.00018442208755686806,
+      "six_reading_gain_pp": 0.10008586692397126,
+      "intact_gain_pp": 0.10027028901152812,
+      "full_archive_gain_pp": 0.10310116805573033,
+      "archive_gain_recovered_percent": 97.07539576066763,
+      "truth_lost_pp": 0.0005256029495730997,
+      "truth_gained_pp": 0.000341180862003591,
+      "label_changes": 90,
+      "tie_status_changes": 8,
+      "label_changes_weighted_percent": 0.000829899394062789,
+      "tie_changes_weighted_percent": 7.376883502780347e-05
+    },
+    {
+      "site": "AB_1_e14",
+      "patch": "AB_1",
+      "edge": 14,
+      "omitted": "Z3",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.08425323070612167,
+      "six_reading_gain_pp": 0.01601705830540645,
+      "intact_gain_pp": 0.10027028901152812,
+      "full_archive_gain_pp": 0.10310116805573033,
+      "archive_gain_recovered_percent": 15.5352830694882,
+      "truth_lost_pp": 0.1332172949558346,
+      "truth_gained_pp": 0.04896406424970455,
+      "label_changes": 4785,
+      "tie_status_changes": 4,
+      "label_changes_weighted_percent": 0.18216291699678222,
+      "tie_changes_weighted_percent": 3.6884417513901735e-05
+    },
+    {
+      "site": "AB_1_e14",
+      "patch": "AB_1",
+      "edge": 14,
+      "omitted": "Z6",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.0052191450781946536,
+      "six_reading_gain_pp": 0.09505114393333347,
+      "intact_gain_pp": 0.10027028901152812,
+      "full_archive_gain_pp": 0.10310116805573033,
+      "archive_gain_recovered_percent": 92.19211161793483,
+      "truth_lost_pp": 0.0307431619978371,
+      "truth_gained_pp": 0.025524016919620002,
+      "label_changes": 2112,
+      "tie_status_changes": 4,
+      "label_changes_weighted_percent": 0.056285621126214054,
+      "tie_changes_weighted_percent": 3.6884417513901735e-05
+    },
+    {
+      "site": "Penrose_1_e14",
+      "patch": "Penrose_1",
+      "edge": 14,
+      "omitted": "X4",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 6,
+      "cost_pp": 1.84422087601277e-05,
+      "six_reading_gain_pp": 0.12072269852299033,
+      "intact_gain_pp": 0.12074114073175046,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "archive_gain_recovered_percent": 98.71814206002708,
+      "truth_lost_pp": 0.021070223504816365,
+      "truth_gained_pp": 0.021051781296059415,
+      "label_changes": 570,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.04206667817460493,
+      "tie_changes_weighted_percent": 0.0001106532525417052
+    },
+    {
+      "site": "Penrose_1_e14",
+      "patch": "Penrose_1",
+      "edge": 14,
+      "omitted": "X6",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 3,
+      "cost_pp": 1.84422087601277e-05,
+      "six_reading_gain_pp": 0.12072269852299033,
+      "intact_gain_pp": 0.12074114073175046,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "archive_gain_recovered_percent": 98.71814206002708,
+      "truth_lost_pp": 0.021079444609194843,
+      "truth_gained_pp": 0.02106100240043789,
+      "label_changes": 572,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.04208512038336188,
+      "tie_changes_weighted_percent": 0.0001106532525417052
+    },
+    {
+      "site": "Penrose_1_e14",
+      "patch": "Penrose_1",
+      "edge": 14,
+      "omitted": "Z1",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.025708439007199324,
+      "six_reading_gain_pp": 0.09503270172455114,
+      "intact_gain_pp": 0.12074114073175046,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "archive_gain_recovered_percent": 77.7107525260117,
+      "truth_lost_pp": 0.041172231049892816,
+      "truth_gained_pp": 0.015463792042703301,
+      "label_changes": 2152,
+      "tie_status_changes": 4,
+      "label_changes_weighted_percent": 0.05665446530135306,
+      "tie_changes_weighted_percent": 3.6884417513901735e-05
+    },
+    {
+      "site": "Penrose_1_e14",
+      "patch": "Penrose_1",
+      "edge": 14,
+      "omitted": "Z7",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.025948187721036575,
+      "six_reading_gain_pp": 0.09479295301071389,
+      "intact_gain_pp": 0.12074114073175046,
+      "full_archive_gain_pp": 0.12229028626732363,
+      "archive_gain_recovered_percent": 77.51470366460568,
+      "truth_lost_pp": 0.08415179855796681,
+      "truth_gained_pp": 0.058203610836936946,
+      "label_changes": 3468,
+      "tie_status_changes": 12,
+      "label_changes_weighted_percent": 0.1424107360211746,
+      "tie_changes_weighted_percent": 0.0001106532525417052
+    },
+    {
+      "site": "Penrose_2_e4",
+      "patch": "Penrose_2",
+      "edge": 4,
+      "omitted": "X0",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "cost_pp": 0.0,
+      "six_reading_gain_pp": 0.07160187549887231,
+      "intact_gain_pp": 0.07160187549887231,
+      "full_archive_gain_pp": 0.07234878495352426,
+      "archive_gain_recovered_percent": 98.96762681621848,
+      "truth_lost_pp": 8.760049159551663e-05,
+      "truth_gained_pp": 8.760049159551663e-05,
+      "label_changes": 18,
+      "tie_status_changes": 2,
+      "label_changes_weighted_percent": 0.0001659798788125578,
+      "tie_changes_weighted_percent": 1.8442208756950868e-05
+    },
+    {
+      "site": "Penrose_2_e4",
+      "patch": "Penrose_2",
+      "edge": 4,
+      "omitted": "X5",
+      "type": "X",
+      "role": "endpoint",
+      "weight": 3,
+      "cost_pp": 0.0,
+      "six_reading_gain_pp": 0.07160187549887231,
+      "intact_gain_pp": 0.07160187549887231,
+      "full_archive_gain_pp": 0.07234878495352426,
+      "archive_gain_recovered_percent": 98.96762681621848,
+      "truth_lost_pp": 0.00020747484851569724,
+      "truth_gained_pp": 0.00020747484851569724,
+      "label_changes": 44,
+      "tie_status_changes": 2,
+      "label_changes_weighted_percent": 0.0004057285926529191,
+      "tie_changes_weighted_percent": 1.8442208756950868e-05
+    },
+    {
+      "site": "Penrose_2_e4",
+      "patch": "Penrose_2",
+      "edge": 4,
+      "omitted": "Z1",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.01313085263496827,
+      "six_reading_gain_pp": 0.05847102286390404,
+      "intact_gain_pp": 0.07160187549887231,
+      "full_archive_gain_pp": 0.07234878495352426,
+      "archive_gain_recovered_percent": 80.81825133824283,
+      "truth_lost_pp": 0.026672044414740192,
+      "truth_gained_pp": 0.013541191779791175,
+      "label_changes": 1368,
+      "tie_status_changes": 14,
+      "label_changes_weighted_percent": 0.040222457298909844,
+      "tie_changes_weighted_percent": 0.0001290954612986561
+    },
+    {
+      "site": "Penrose_2_e4",
+      "patch": "Penrose_2",
+      "edge": 4,
+      "omitted": "Z4",
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "cost_pp": 0.012909546129868943,
+      "six_reading_gain_pp": 0.05869232936900337,
+      "intact_gain_pp": 0.07160187549887231,
+      "full_archive_gain_pp": 0.07234878495352426,
+      "archive_gain_recovered_percent": 81.12413968901677,
+      "truth_lost_pp": 0.05930553281016475,
+      "truth_gained_pp": 0.04639598668029915,
+      "label_changes": 2480,
+      "tie_status_changes": 10,
+      "label_changes_weighted_percent": 0.10569229838608545,
+      "tie_changes_weighted_percent": 9.221104378475433e-05
+    }
+  ],
+  "rankings": {
+    "AB_1_e14": {
+      "most_affordable": [
+        "X4",
+        "X5"
+      ],
+      "least_affordable": [
+        "Z3"
+      ],
+      "minimum_cost_pp": 0.00018442208755686806,
+      "maximum_cost_pp": 0.08425323070612167
+    },
+    "Penrose_1_e14": {
+      "most_affordable": [
+        "X4",
+        "X6"
+      ],
+      "least_affordable": [
+        "Z7"
+      ],
+      "minimum_cost_pp": 1.84422087601277e-05,
+      "maximum_cost_pp": 0.025948187721036575
+    },
+    "Penrose_2_e4": {
+      "most_affordable": [
+        "X0",
+        "X5"
+      ],
+      "least_affordable": [
+        "Z1"
+      ],
+      "minimum_cost_pp": 0.0,
+      "maximum_cost_pp": 0.01313085263496827
+    }
+  },
+  "preflight": {
+    "AB_1_e14": {
+      "comparisons": 768,
+      "mismatches": 0,
+      "known_zero_readings": 3390,
+      "max_posterior_error": 0.0
+    },
+    "Penrose_1_e14": {
+      "comparisons": 768,
+      "mismatches": 0,
+      "known_zero_readings": 3408,
+      "max_posterior_error": 0.0
+    },
+    "Penrose_2_e4": {
+      "comparisons": 768,
+      "mismatches": 0,
+      "known_zero_readings": 3369,
+      "max_posterior_error": 0.0
+    }
+  },
+  "validation": {
+    "whole_mismatches": 0,
+    "json_roundtrips": 576,
+    "direct_fullscan_checks": 4608,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0,
+    "omission_coordinate_checks": 2304,
+    "retained_zero_readings_checked": 10167
+  }
+}
