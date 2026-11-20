@@ -1,0 +1,174 @@
+{
+  "edges": {
+    "AB_1_e14": {
+      "patch": "AB_1",
+      "edge": 14,
+      "qubit": 10,
+      "G_thick_thin": 0.1031,
+      "diamond_thin": 0.00124,
+      "thick_diamond": 0.10187,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "AB_1_e15": {
+      "patch": "AB_1",
+      "edge": 15,
+      "qubit": 11,
+      "G_thick_thin": 0.00288,
+      "diamond_thin": 0.00064,
+      "thick_diamond": 0.00224,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "AB_1_e16": {
+      "patch": "AB_1",
+      "edge": 16,
+      "qubit": 12,
+      "G_thick_thin": 0.00409,
+      "diamond_thin": 0.0,
+      "thick_diamond": 0.00409,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "AB_1_e8": {
+      "patch": "AB_1",
+      "edge": 8,
+      "qubit": 6,
+      "G_thick_thin": 0.00312,
+      "diamond_thin": 0.00079,
+      "thick_diamond": 0.00232,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_1_e13": {
+      "patch": "Penrose_1",
+      "edge": 13,
+      "qubit": 9,
+      "G_thick_thin": 0.00301,
+      "diamond_thin": 0.0,
+      "thick_diamond": 0.00301,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_1_e14": {
+      "patch": "Penrose_1",
+      "edge": 14,
+      "qubit": 10,
+      "G_thick_thin": 0.12229,
+      "diamond_thin": 0.00072,
+      "thick_diamond": 0.12157,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_1_e2": {
+      "patch": "Penrose_1",
+      "edge": 2,
+      "qubit": 2,
+      "G_thick_thin": 0.00205,
+      "diamond_thin": 0.00041,
+      "thick_diamond": 0.00164,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_2_e0": {
+      "patch": "Penrose_2",
+      "edge": 0,
+      "qubit": 0,
+      "G_thick_thin": 0.00319,
+      "diamond_thin": 0.00077,
+      "thick_diamond": 0.00243,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_2_e1": {
+      "patch": "Penrose_2",
+      "edge": 1,
+      "qubit": 1,
+      "G_thick_thin": 0.0007,
+      "diamond_thin": 0.00039,
+      "thick_diamond": 0.00031,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    },
+    "Penrose_2_e4": {
+      "patch": "Penrose_2",
+      "edge": 4,
+      "qubit": 4,
+      "G_thick_thin": 0.07235,
+      "diamond_thin": 0.00035,
+      "thick_diamond": 0.072,
+      "whole_ne": 0,
+      "rt_mism": 0,
+      "rt_checked": 192,
+      "n": 385648
+    }
+  },
+  "patches": {
+    "AB_1": {
+      "on_edge": 14,
+      "off_edge": 8,
+      "G_on": 0.1031,
+      "G_off": 0.00312,
+      "delta": 0.09998,
+      "ci": [
+        0.02915,
+        0.55753
+      ],
+      "prediction_holds": true,
+      "ci_excludes_zero": true,
+      "diamond_thin_on": 0.00124,
+      "thick_diamond_on": 0.10187,
+      "diamond_thin_off": 0.00079
+    },
+    "Penrose_1": {
+      "on_edge": 14,
+      "off_edge": 13,
+      "G_on": 0.12229,
+      "G_off": 0.00301,
+      "delta": 0.11928,
+      "ci": [
+        0.03144,
+        0.69946
+      ],
+      "prediction_holds": true,
+      "ci_excludes_zero": true,
+      "diamond_thin_on": 0.00072,
+      "thick_diamond_on": 0.12157,
+      "diamond_thin_off": 0.0
+    },
+    "Penrose_2": {
+      "on_edge": 4,
+      "off_edge": 0,
+      "G_on": 0.07235,
+      "G_off": 0.00319,
+      "delta": 0.06916,
+      "ci": [
+        0.00607,
+        0.48379
+      ],
+      "prediction_holds": true,
+      "ci_excludes_zero": true,
+      "diamond_thin_on": 0.00035,
+      "thick_diamond_on": 0.072,
+      "diamond_thin_off": 0.00077
+    }
+  }
+}
