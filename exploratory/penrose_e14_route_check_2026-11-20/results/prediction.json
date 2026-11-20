@@ -1,0 +1,533 @@
+{
+  "starting_sha": "fdeaa32a988224f98dc10b99175c99d806862522",
+  "patch": "Penrose_1",
+  "loss_edge": 14,
+  "loss_qubit": 10,
+  "existing_checks": [
+    "X4",
+    "X6",
+    "Z1",
+    "Z7"
+  ],
+  "minimum_X_weight": 3,
+  "all_minimum_X_supports_containing_loss": [
+    [
+      1,
+      10,
+      17
+    ]
+  ],
+  "route_union": [
+    1,
+    10,
+    17
+  ],
+  "candidates": [
+    {
+      "check": "X0",
+      "type": "X",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [
+        1
+      ],
+      "classification": "route",
+      "qubits": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "check": "X1",
+      "type": "X",
+      "weight": 3,
+      "distance": 5,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "check": "X2",
+      "type": "X",
+      "weight": 2,
+      "distance": 7,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        3,
+        5
+      ]
+    },
+    {
+      "check": "X3",
+      "type": "X",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [
+        1
+      ],
+      "classification": "route",
+      "qubits": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "check": "X5",
+      "type": "X",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        4,
+        9,
+        15
+      ]
+    },
+    {
+      "check": "X7",
+      "type": "X",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [
+        17
+      ],
+      "classification": "route",
+      "qubits": [
+        11,
+        17,
+        18
+      ]
+    },
+    {
+      "check": "X8",
+      "type": "X",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        12,
+        19,
+        20
+      ]
+    },
+    {
+      "check": "X9",
+      "type": "X",
+      "weight": 2,
+      "distance": 5,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        14,
+        19
+      ]
+    },
+    {
+      "check": "X10",
+      "type": "X",
+      "weight": 2,
+      "distance": 5,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        18,
+        20
+      ]
+    },
+    {
+      "check": "Z0",
+      "type": "Z",
+      "weight": 4,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        0,
+        2,
+        4,
+        9
+      ]
+    },
+    {
+      "check": "Z2",
+      "type": "Z",
+      "weight": 4,
+      "distance": 5,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        3,
+        4,
+        5,
+        15
+      ]
+    },
+    {
+      "check": "Z3",
+      "type": "Z",
+      "weight": 3,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        6,
+        7,
+        16
+      ]
+    },
+    {
+      "check": "Z4",
+      "type": "Z",
+      "weight": 1,
+      "distance": 5,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        13
+      ]
+    },
+    {
+      "check": "Z5",
+      "type": "Z",
+      "weight": 4,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        8,
+        9,
+        13,
+        15
+      ]
+    },
+    {
+      "check": "Z6",
+      "type": "Z",
+      "weight": 4,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        8,
+        12,
+        14,
+        19
+      ]
+    },
+    {
+      "check": "Z8",
+      "type": "Z",
+      "weight": 4,
+      "distance": 3,
+      "route_qubits": [],
+      "classification": "comparison",
+      "qubits": [
+        11,
+        12,
+        18,
+        20
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "route": "X0",
+      "comparison": "X5",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        0,
+        "X",
+        5
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "X8",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        0,
+        "X",
+        8
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "X5",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        3,
+        "X",
+        5
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "X8",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        3,
+        "X",
+        8
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "X5",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        7,
+        "X",
+        5
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "X8",
+      "ranking": [
+        false,
+        0,
+        3,
+        "X",
+        7,
+        "X",
+        8
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "Z3",
+      "ranking": [
+        true,
+        0,
+        3,
+        "X",
+        0,
+        "Z",
+        3
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "Z3",
+      "ranking": [
+        true,
+        0,
+        3,
+        "X",
+        3,
+        "Z",
+        3
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "Z3",
+      "ranking": [
+        true,
+        0,
+        3,
+        "X",
+        7,
+        "Z",
+        3
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "Z0",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        0,
+        "Z",
+        0
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "Z5",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        0,
+        "Z",
+        5
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "Z6",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        0,
+        "Z",
+        6
+      ]
+    },
+    {
+      "route": "X0",
+      "comparison": "Z8",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        0,
+        "Z",
+        8
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "Z0",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        3,
+        "Z",
+        0
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "Z5",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        3,
+        "Z",
+        5
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "Z6",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        3,
+        "Z",
+        6
+      ]
+    },
+    {
+      "route": "X3",
+      "comparison": "Z8",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        3,
+        "Z",
+        8
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "Z0",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        7,
+        "Z",
+        0
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "Z5",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        7,
+        "Z",
+        5
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "Z6",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        7,
+        "Z",
+        6
+      ]
+    },
+    {
+      "route": "X7",
+      "comparison": "Z8",
+      "ranking": [
+        true,
+        1,
+        3,
+        "X",
+        7,
+        "Z",
+        8
+      ]
+    }
+  ],
+  "selected": {
+    "route": "X0",
+    "comparison": "X5",
+    "ranking": [
+      false,
+      0,
+      3,
+      "X",
+      0,
+      "X",
+      5
+    ]
+  },
+  "distance_definition": "Shortest unweighted path from lost-qubit node to check node in the bipartite retained-check/data-qubit incidence graph, including both X and Z checks.",
+  "ranking_definition": "Require exact distance match; prefer same type, then smallest absolute weight difference, then shorter distance; tie by route type/index then comparison type/index.",
+  "predicted_direction": "route extension minus comparison extension > 0 (tie-aware truth percentage points)",
+  "scope": "one patch, one loss site, deterministic geometry-only matched pair; no population inference"
+}
