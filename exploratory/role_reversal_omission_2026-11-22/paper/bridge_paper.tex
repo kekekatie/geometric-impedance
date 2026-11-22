@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=blue!60!black,
+    citecolor=blue!60!black
+}
+
+\title{\textbf{Which Old Readings Matter?}\\
+\large Local Geometry, Load-Bearing Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes}
+\author{K.~T.~Niedzwiecki\\
+\small Independent Researcher, South Australia}
+\date{23 November 2026 \quad \textit{(Draft v0.2 --- Overleaf-ready working manuscript)}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms a memoryless (``thin'') decoder---especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: \textbf{which specific archived readings actually carry that decoding advantage, and what determines how the load is shared?} Using exhaustive zero-, one-, and two-fault evaluation ($385{,}648$ histories per site; bounded $(3,3)$ decoder, $p = 0.001$) across five $n=21$, distance-$(3,3)$ Ammann--Beenker (AB) and Penrose patches, we find four results:
+\begin{itemize}
+    \item \textbf{The ``Narrow Now'' holds across both tilings.} Once an indexing bug in the original adapter is corrected (11-check address audit), keeping just \textbf{eight} archived readings---two early rounds from the four stabilizer checks incident to the lost edge---recovers \textbf{97.25--99.26\%} of the full-archive accuracy gain across all five tested sites.
+    \item \textbf{Hidden load-bearing faces.} Withholding just two archived readings from a single adjacent $Z$-face reveals a striking split on \texttt{AB\_1 (e14)}: omitting face \texttt{Z3} collapses surviving gain to \textbf{15.54\%} ($+0.08425$~pp cost), whereas omitting its partner \texttt{Z6} retains \textbf{92.19\%} ($+0.00522$~pp cost)---a \textbf{16.14$\times$} cost ratio between two weight-4 $Z$-checks sharing the same lost edge. By contrast, \texttt{Penrose\_1 (e14)} (\textbf{77.51\%} vs.\ \textbf{77.71\%}) and \texttt{Penrose\_2 (e4)} (\textbf{80.82\%} vs.\ \textbf{81.12\%}) share the load nearly 50/50.
+    \item \textbf{Local geometry---not tiling family---drives the collapse ($2\times 2$ role reversal).} A complete census of all $1{,}220$ on-route eligible edges in the frozen $n=21$, $d=(3,3)$ AB and Penrose pools shows that \textbf{only two} local face-pair geometries occur in either family: \emph{Mirror Middle Yards} ($86.5\%$ in AB, $91.1\%$ in Penrose) and \emph{Hallway vs.\ Corner Ear} ($13.5\%$ in AB, $8.9\%$ in Penrose). In a pre-registered $2\times 2$ role reversal: (i)~adding \textbf{one extra tile} to \texttt{AB\_1} (\texttt{AB\_bal}) fills in \texttt{Z6}'s corner ear, lifting \texttt{Z3}'s surviving gain from \textbf{15.54\% $\to$ 72.59\%} and cutting the face cost ratio by more than $8\times$ (\textbf{16.14$\times$ $\to$ 1.96$\times$}); (ii)~selecting a Penrose cut with a degree-2 corner ear (\texttt{Penrose\_ear}) reproduces and sharpens the collapse: omitting hallway \texttt{Z7} crashes surviving gain to \textbf{14.23\%}, while omitting corner ear \texttt{Z6} retains \textbf{95.66\%} (\textbf{26.67$\times$} cost ratio).
+    \item \textbf{Zero-net-cost decision steering.} On \texttt{Penrose\_2 (e4)}, withholding endpoint $X$-check \texttt{X5} produces \textbf{0.00000000~pp} net accuracy change while flipping \textbf{44 individual decoding decisions} (credit lost exactly equals credit gained). A flat aggregate score does not mean a witness is inert.
+\end{itemize}
+\end{abstract}
+
+\section{Introduction}
+A fault-tolerant decoder with a finite memory budget faces a concrete version of a broader question: \emph{what from the past must be kept so that the present can still decide accurately?} In a recent prospective study on fresh aperiodic surface-code patches (\texttt{AB\_1}, \texttt{Penrose\_1}, \texttt{Penrose\_2}), we confirmed that full-archive memory helps most when a lost edge lies on a shortest $X$-logical route---producing a $22$--$40\times$ brighter archive advantage on-route than at matched off-route edges.
+
+At first glance, that study appeared to carry a puzzling second result: keeping only the eight local archived readings touching the lost edge (the ``diamond'' bracket) seemed to recover almost none of the on-route advantage. An independent address audit revealed why: on $11\times 9$ ($H_X \times H_Z$) patches, the legacy adapter had mapped $Z$-check indices assuming $10$ $X$-rows, silently querying the wrong checks. Once the address map was fixed, the picture flipped completely: \textbf{97.25--98.97\%} of the full-archive benefit lived right inside the four checks touching the lost edge.
+
+That sharp localization opened an immediate, surgical follow-up: if nearly the entire memory advantage lives inside four local checks (two incident $Z$-faces and two endpoint $X$-checks), \emph{do those four witnesses share the load equally, or does the local patch geometry concentrate the burden on one of them?}
+
+\section{Experimental Setup and Pre-Registered Lineage}
+All experiments share the same pinned geometry generator, XOR syndrome simulator, shared-onset erasure inference, and bounded $(3,3)$ decoder ($w_{\mathrm{dec}} = 3$, $w_{\mathrm{frame}} = 3$, physical error rate $p = 0.001$), evaluated exhaustively over all zero-, one-, and two-fault ordinary configurations ($48{,}206$ configurations $\times$ $8$ onset/free-value variants = \textbf{385,648 histories per site}).
+
+\begin{itemize}
+    \item \textbf{Corrected local bracket (``intact''):} Retains rounds $t \in \{1, 2\}$ of the four checks geometrically incident to the lost edge (8 archived coordinates), plus live rounds $t \in \{3, 4\}$ of all checks and the thin-state boundary parity.
+    \item \textbf{Single-witness omission:} Removes rounds $t \in \{1, 2\}$ of one named incident check (leaving 6 archived coordinates). Withheld coordinates are strictly \textbf{absent}, never zero-filled; live rounds and boundary parities remain untouched.
+    \item \textbf{Primary score:} Weighted tie-aware truth credit (ties receive $0.5$ credit), reported in percentage points (pp). Omission cost is $100 \times (\text{intact credit} - \text{omission credit})$; positive cost means withholding hurt. Weighted credit \emph{lost} and \emph{gained} are tracked separately alongside unweighted label and tie-status flips.
+    \item \textbf{Validation:} Every site completed a deterministic unaccelerated full-scan verification sample (every $2{,}003$rd history) with \textbf{0 mismatches} and $\max |\Delta p_0| = 0.0$.
+\end{itemize}
+
+\section{Pillar 1 --- The ``Narrow Now'' Baseline}
+Across the three original fresh cuts and the two new role-reversal cuts, retaining only the four local witnesses touching the lost edge captures nearly the entire full-archive gain (Table~\ref{tab:narrow} and Figure~\ref{fig:narrow}).
+
+\begin{table}[h]
+\centering
+\caption{Local 8-reading (``intact'') recovery of full-archive gain across all five tested sites.}
+\label{tab:narrow}
+\begin{tabular}{llrrr}
+\toprule
+Site & Tiling & Full gain (pp) & Intact gain (pp) & Recovery (\% of full) \\
+\midrule
+\texttt{AB\_1 (e14)} & Ammann--Beenker & $+0.103101$ & $+0.100270$ & \textbf{97.25\%} \\
+\texttt{Penrose\_1 (e14)} & Penrose & $+0.122290$ & $+0.120741$ & \textbf{98.73\%} \\
+\texttt{Penrose\_2 (e4)} & Penrose & $+0.072349$ & $+0.071602$ & \textbf{98.97\%} \\
+\texttt{AB\_bal (e14)} \textit{(new)} & Ammann--Beenker & $+0.096195$ & $+0.095485$ & \textbf{99.26\%} \\
+\texttt{Penrose\_ear (e13)} \textit{(new)} & Penrose & $+0.099118$ & $+0.097956$ & \textbf{98.83\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/fig1_narrow_now_recovery.png}
+\caption{Corrected local 8-reading recovery across the original fresh cuts (\texttt{audit/fresh-site-addresses-2026-11-20}).}
+\label{fig:narrow}
+\end{figure}
+
+\section{Pillar 2 --- The Witness-Omission Stress Test}
+Withholding one incident check at a time across the three original sites (12 omission arms total; Figure~\ref{fig:omission} and Table~\ref{tab:omission}) revealed a stark asymmetry on \texttt{AB\_1} alongside balanced load-sharing on both Penrose patches. On \texttt{AB\_1}, \texttt{Z3} and \texttt{Z6} are both weight-4 $Z$-checks sitting on opposite sides of the exact same lost edge \texttt{e14}, yet omitting \texttt{Z3} costs \textbf{16.14$\times$} more than omitting \texttt{Z6}.
+
+\begin{table}[h]
+\centering
+\caption{Twelve-arm witness-omission results across \texttt{AB\_1}, \texttt{Penrose\_1}, and \texttt{Penrose\_2}.}
+\label{tab:omission}
+\begin{tabular}{lllrrrr}
+\toprule
+Site & Omitted & Role / wt & Cost (pp) & Surviving (\% full) & Label flips & Tie flips \\
+\midrule
+\texttt{AB\_1 (e14)} & \texttt{X4} / \texttt{X5} & endpoint / 5 & $+0.000184$ & 97.08\% & 82 / 90 & 8 / 8 \\
+\texttt{AB\_1 (e14)} & \textbf{\texttt{Z3}} & \textbf{face / 4} & $\mathbf{+0.084253}$ & \textbf{15.54\%} & \textbf{4,785} & 4 \\
+\texttt{AB\_1 (e14)} & \texttt{Z6} & face / 4 & $+0.005219$ & \textbf{92.19\%} & 2,112 & 4 \\
+\texttt{Penrose\_1 (e14)} & \texttt{X4} / \texttt{X6} & endpoint / 6, 3 & $+0.000018$ & 98.72\% & 570 / 572 & 12 / 12 \\
+\texttt{Penrose\_1 (e14)} & \texttt{Z1} & face / 4 & $+0.025708$ & \textbf{77.71\%} & 2,152 & 4 \\
+\texttt{Penrose\_1 (e14)} & \texttt{Z7} & face / 4 & $+0.025948$ & \textbf{77.51\%} & 3,468 & 12 \\
+\texttt{Penrose\_2 (e4)} & \texttt{X0} / \texttt{X5} & endpoint / 5, 3 & $\mathbf{0.000000}$ & 98.97\% & \textbf{18 / 44} & 2 / 2 \\
+\texttt{Penrose\_2 (e4)} & \texttt{Z1} & face / 4 & $+0.013131$ & \textbf{80.82\%} & 1,368 & 14 \\
+\texttt{Penrose\_2 (e4)} & \texttt{Z4} & face / 4 & $+0.012910$ & \textbf{81.12\%} & 2,480 & 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig2_witness_omission_costs.png}
+\caption{Three-panel omission cost map across \texttt{AB\_1}, \texttt{Penrose\_1}, and \texttt{Penrose\_2} (\texttt{experiment/local-witness-omission-2026-11-20}).}
+\label{fig:omission}
+\end{figure}
+
+\section{Pillar 3 --- Local Bottleneck vs.\ Corner Ear and the $2\times 2$ Role Reversal}
+\subsection{Structural diagnosis and complete pool census}
+Read-only graph inspection of the sealed patch definitions explains the \texttt{AB\_1} split geometrically:
+\begin{itemize}
+    \item On \texttt{AB\_1 (e14)}, \texttt{Z3} ($\{5, 6, 7, 10\}$) is an \textbf{interior bridge (``hallway'')} with $1$ smooth boundary edge (\texttt{q5}), $3$ interior edges, $3$ neighboring $Z$-faces (\texttt{Z0, Z2, Z6}), and corner degrees $(3, 3, 5, 5)$. Both shortest (weight-3) $X$-logicals through \texttt{e14} ($\{5, 10, 14\}$ and $\{5, 10, 15\}$) funnel through \texttt{q5}. By contrast, \texttt{Z6} ($\{10, 11, 14, 15\}$) is a \textbf{protruding corner ear} with $2$ exposed smooth boundary edges (\texttt{q14, q15}) meeting at a \textbf{degree-2 corner tip} (\texttt{v12}, weight-2 check $\texttt{X7} = \{14, 15\}$), only $2$ interior edges, and only $2$ neighboring $Z$-faces (\texttt{Z3, Z7}). The two shortest $X$-logicals fork across \texttt{q14} vs.\ \texttt{q15} modulo \texttt{X7}.
+    \item On \texttt{Penrose\_1} (\texttt{Z7} vs.\ \texttt{Z1}) and \texttt{Penrose\_2} (\texttt{Z1} vs.\ \texttt{Z4}), every face in both pairs is a \textbf{middle yard}: $1$ smooth boundary edge, $3$ interior edges, $3$ neighboring $Z$-faces, identical sorted corner degrees ($(3, 3, 3, 6)$ and $(3, 3, 4, 5)$), and a single symmetric $X$-logical exit.
+\end{itemize}
+
+Enumerating all on-route eligible edges in the frozen $n=21$, $d=(3,3)$ disk-cut generator shows that \textbf{only these two} local face-pair geometries occur in either tiling family: in AB ($1{,}282$ cuts, $503$ on-route edges), $435$ ($86.5\%$) are Mirror Middle Yards and $68$ ($13.5\%$) are Hallway + Corner Ear; in Penrose ($1{,}791$ cuts, $717$ on-route edges), $653$ ($91.1\%$) are Mirror Middle Yards and $64$ ($8.9\%$) are Hallway + Corner Ear.
+
+\subsection{Pre-registered $2\times 2$ role reversal}
+To separate local geometry from tiling family, we selected two role-reversal cuts from the frozen pool \emph{before} running the decoder:
+\begin{enumerate}
+    \item \texttt{AB\_bal} (\texttt{spec=(22, 2, 2, 10)}, \texttt{corners=(2, 5, 11, 15)}, \texttt{e14}): literally \texttt{AB\_1} plus \textbf{one extra tile} filling in \texttt{Z6}'s corner ear so \texttt{Z3} and \texttt{Z6} become locally matched middle yards (corner degrees $(3,3,5,5)$, unique weight-3 $X$-logical).
+    \item \texttt{Penrose\_ear} (\texttt{spec=(7, 1, 3, 10)}, \texttt{corners=(0, 4, 9, 13)}, \texttt{e13}): exact structural twin of \texttt{AB\_1}, pairing hallway \texttt{Z7} ($1$ smooth boundary edge, $3$ $Z$-neighbors) with protruding degree-2 corner ear \texttt{Z6} ($2$ smooth boundary edges, $2$ $Z$-neighbors, forked exits).
+\end{enumerate}
+
+Both predictions held cleanly (Table~\ref{tab:2x2} and Figure~\ref{fig:2x2}): giving Penrose a corner ear triggers an even sharper \textbf{26.67$\times$} collapse (\texttt{Z7} $\to 14.23\%$ vs.\ \texttt{Z6} $\to 95.66\%$), while filling in \texttt{AB\_1}'s corner ear with one tile eliminates the collapse (\texttt{Z3} jumps from $15.54\% \to 72.59\%$, ratio dropping $8\times$ from $16.14\times$ to $1.96\times$).
+
+\begin{table}[h]
+\centering
+\caption{Measured $2\times 2$ role-reversal matrix across all five sites (surviving \% of full-archive gain and face-cost ratio).}
+\label{tab:2x2}
+\begin{tabular}{lll}
+\toprule
+Local shape around loss edge & Ammann--Beenker & Penrose \\
+\midrule
+\textbf{Two Middle Yards} & \texttt{AB\_bal (e14)} \textit{[new]}: & \texttt{Penrose\_1 (e14)}: 77.51\% vs.\ 77.71\% (1.01$\times$) \\
+\textit{(1 bnd edge, 3 $Z$-nbrs each)} & \texttt{Z3} 72.59\% vs.\ \texttt{Z6} 85.69\% (\textbf{1.96$\times$}) & \texttt{Penrose\_2 (e4)}: 80.82\% vs.\ 81.12\% (1.02$\times$) \\
+\addlinespace
+\textbf{Hallway vs.\ Corner Ear} & \texttt{AB\_1 (e14)}: & \texttt{Penrose\_ear (e13)} \textit{[new]}: \\
+\textit{(deg-2 tip on ear)} & \texttt{Z3} 15.54\% vs.\ \texttt{Z6} 92.19\% (\textbf{16.14$\times$}) & \texttt{Z7} 14.23\% vs.\ \texttt{Z6} 95.66\% (\textbf{26.67$\times$}) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig3_role_reversal_2x2.png}
+\caption{Measured $2\times 2$ role-reversal comparison showing that local hallway-vs.-corner-ear geometry drives the catastrophic collapse across both tiling families.}
+\label{fig:2x2}
+\end{figure}
+
+\section{Pillar 4 --- Zero-Net-Cost Decision Steering}
+Aggregate accuracy can conceal active decision-level movement. On \texttt{Penrose\_2 (e4)}, withholding endpoint \texttt{X5} incurs \textbf{0.00000000~pp} net cost---weighted credit lost ($0.00020747$~pp) exactly cancels credit gained ($0.00020747$~pp)---yet \textbf{44 individual histories flip their decoded label} (plus $2$ tie-status changes). Withholding \texttt{X0} similarly yields exact zero net cost while flipping $18$ labels ($+2$ tie changes). On \texttt{Penrose\_1 (e14)}, \texttt{X4} and \texttt{X6} incur tiny net costs ($+0.00001844$~pp) while flipping $570$ and $572$ decisions, respectively. By contrast, on \texttt{AB\_bal (e14)}, \texttt{X2} and \texttt{X3} exhibit true invariance ($0.00000000$~pp cost, $0$ label flips). Zero net cost is therefore not synonymous with zero causal influence on individual decoding trajectories.
+
+\section{Guardrails, Caveats, and Scope}
+\begin{enumerate}
+    \item \textbf{$Z$-check vs.\ $X$-check caveat:} Adjacent faces are $Z$-checks directly measuring the syndrome of $X$ faults that flip the scored $Z$ logical, whereas endpoints are $X$-checks (entering primarily through shared-onset inference). This naturally explains why faces outweigh endpoints overall, while leaving every \emph{face-vs.-face} comparison (\texttt{Z3} vs.\ \texttt{Z6}, \texttt{Z7} vs.\ \texttt{Z1}, \texttt{Z1} vs.\ \texttt{Z4}, \texttt{Z7} vs.\ \texttt{Z6}) strictly controlled.
+    \item \textbf{Local geometry vs.\ global/observable asymmetry:} The $16$--$27\times$ collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. Follow-up inspection of \texttt{AB\_bal} confirms that \texttt{Z3} and \texttt{Z6} are exact local mirror twins through both first and second neighbor rings (identical first-ring neighbor types, identical $(3,3,5,5)$ corner degrees, and identical 4-vs.-4 overlap with weight-4 $X$-logicals through \texttt{q9}). Its mild residual \textbf{1.96$\times$} ratio ($72.59\%$ vs.\ $85.69\%$) instead reflects global patch asymmetry and the placement of the fixed \texttt{scored\_logical\_Z} representative ($[3, 1, 0]$), which threads \texttt{Z3}'s boundary edge (\texttt{q3}) and immediate neighbor \texttt{Z0} (\texttt{q0, q1}) while having zero overlap with \texttt{Z6} or \texttt{Z7}. Thus first-ring corner-ear geometry drives the order-of-magnitude collapse, while global/observable placement can still produce a $\sim 2\times$ tilt.
+    \item \textbf{Scope and strict separation:} Results are established for bounded $(3,3)$ decoding, exhaustive $k \le 2$ ordinary faults at $p = 0.001$, across five $n=21$, $d=(3,3)$ cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (\texttt{norm\_identity\_check.py}).
+\end{enumerate}
+
+\section{Provenance and Reproducibility}
+All scripts, patch JSONs, verification logs, and figures are archived in the \texttt{geometric-impedance} repository across four pinned branches:
+\begin{itemize}
+    \item Prospective route prediction \& patch JSONs: \texttt{claude/aperiodic-predict-2026-11-20} (\texttt{fdeaa32})
+    \item 11-check address audit (``Narrow Now''): \texttt{audit/fresh-site-addresses-2026-11-20}
+    \item 12-arm witness-omission stress test: \texttt{experiment/local-witness-omission-2026-11-20} (\texttt{1922a7b})
+    \item $2\times 2$ role-reversal test (\texttt{AB\_bal}, \texttt{Penrose\_ear}): \texttt{experiment/role-reversal-omission-2026-11-22} (\texttt{6236920})
+\end{itemize}
+
+\section*{Acknowledgements}
+\textit{[Placeholder --- to be written in K.~T.~Niedzwiecki's own voice before final submission.]}
+
+\end{document}

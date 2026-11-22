@@ -52,11 +52,15 @@ Across the three original fresh cuts (from `audit/fresh-site-addresses-2026-11-2
 | `AB_bal (e14)` *(new)* | Ammann–Beenker | +0.096195 | +0.095485 | **99.26%** |
 | `Penrose_ear (e13)` *(new)* | Penrose | +0.099118 | +0.097956 | **98.83%** |
 
+![Figure 1: Corrected local 8-reading recovery across the fresh sites](figures/fig1_narrow_now_recovery.png)
+
 ---
 
 ## 4. Pillar 2 — The Witness-Omission Stress Test
 
 Withholding one incident check at a time across the three original sites (12 omission arms total; `experiment/local-witness-omission-2026-11-20`, commit `1922a7b`) revealed a stark asymmetry on `AB_1` alongside balanced load-sharing on both Penrose patches:
+
+![Figure 2: Cost of withholding each local witness across AB_1, Penrose_1, and Penrose_2](figures/fig2_witness_omission_costs.png)
 
 | Site | Omitted check | Role / weight | Cost (`pp`) | Surviving gain (% of full) | Label flips | Tie flips |
 |---|---|---|---:|---:|---:|---:|
@@ -94,7 +98,7 @@ To separate local geometry from tiling family, we selected two role-reversal cut
 1. **`AB_bal` (`spec=(22, 2, 2, 10)`, `corners=(2, 5, 11, 15)`, `e14`):** `AB_1` plus **one extra tile** filling in `Z6`'s corner ear so `Z3` and `Z6` become locally matched middle yards (both 1 smooth boundary edge, 3 Z-neighbors, corner degrees `(3, 3, 5, 5)`, unique weight-3 X-logical).
 2. **`Penrose_ear` (`spec=(7, 1, 3, 10)`, `corners=(0, 4, 9, 13)`, `e13`):** exact structural twin of `AB_1`, pairing hallway `Z7` (1 smooth boundary edge, 3 Z-neighbors) with corner ear `Z6` (2 smooth boundary edges meeting at a degree-2 tip, 2 Z-neighbors, forked exits).
 
-![Measured 2x2 role-reversal result](../results/role_reversal_2x2.png)
+![Figure 3: Measured 2x2 role-reversal result](figures/fig3_role_reversal_2x2.png)
 
 | Local shape around the loss edge | Ammann–Beenker | Penrose |
 |---|---|---|
@@ -114,7 +118,7 @@ Aggregate accuracy can conceal active decision-level movement. On `Penrose_2 (e4
 ## 7. Guardrails, Caveats, and Scope
 
 1. **Z-check vs. X-check caveat:** Adjacent faces are Z-checks directly measuring the syndrome of X faults that flip the scored Z logical, whereas endpoints are X-checks (entering mainly through shared-onset inference). This naturally explains why faces outweigh endpoints overall, while leaving every **face-vs.-face** comparison (`Z3` vs. `Z6`, `Z7` vs. `Z1`, `Z1` vs. `Z4`, `Z7` vs. `Z6`) strictly controlled.
-2. **Local geometry, not a universal family law:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose separation. Moreover, `AB_bal`'s residual **1.96×** ratio (`72.59%` vs. `85.69%`) shows that while the corner ear drives the order-of-magnitude collapse, milder ~2× asymmetries can still arise from wider second-ring patch structure.
+2. **Local geometry, not a universal family law:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose separation. Moreover, follow-up inspection of `AB_bal` shows that `Z3` and `Z6` are exact local mirror twins through both the first and second neighbor rings (identical `(w4 smooth, w2 rough, w4 smooth)` first-ring neighbors, identical `(3, 3, 5, 5)` corner degrees, and identical 4-vs.-4 overlap with weight-4 X-logicals through `q9`). Its mild residual **1.96×** ratio (`72.59%` vs. `85.69%`) instead reflects global patch asymmetry and the placement of the fixed `scored_logical_Z` representative (`[3, 1, 0]`), which threads `Z3`'s boundary edge (`q3`) and immediate neighbor `Z0` (`q0, q1`) while having zero overlap with `Z6` or `Z7`. Thus first-ring corner-ear geometry drives the order-of-magnitude (~16–27×) collapse, while global/observable placement can still produce a ~2× tilt.
 3. **Scope and strict separation:** Results are established for bounded `(3,3)` decoding, exhaustive `k <= 2` ordinary faults at $p = 0.001$, across five `n=21, d=(3,3)` cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (`norm_identity_check.py` / the unwritten July skeleton).
 
 ---
@@ -127,3 +131,9 @@ Aggregate accuracy can conceal active decision-level movement. On `Penrose_2 (e4
 | 11-check address audit ("Narrow Now") | `audit/fresh-site-addresses-2026-11-20` | `exploratory/fresh_site_address_audit_2026-11-20/HANDBACK.md`, `results/table.md`, `results/corrected_recovery.png` |
 | 12-arm witness-omission stress test | `experiment/local-witness-omission-2026-11-20` (`1922a7b`) | `exploratory/local_witness_omission_2026-11-20/HANDBACK.md`, `results/table.md`, `results/omission_costs.png` |
 | 2×2 role-reversal test (`AB_bal`, `Penrose_ear`) | `experiment/role-reversal-omission-2026-11-22` (`6236920`) | `exploratory/role_reversal_omission_2026-11-22/HANDBACK.md`, `results/table.md`, `results/role_reversal_2x2.png`, `run_role_reversal.py` |
+
+---
+
+## Acknowledgements
+
+*[Placeholder — to be written in K. T. Niedzwiecki's own voice before final submission.]*
