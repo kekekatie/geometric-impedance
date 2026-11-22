@@ -1,0 +1,126 @@
+{
+  "name": "Penrose_ear",
+  "config": {
+    "family": "Penrose",
+    "spec": [
+      7,
+      1,
+      3,
+      10
+    ],
+    "corners": [
+      0,
+      4,
+      9,
+      13
+    ],
+    "edge": 13
+  },
+  "qubit": 9,
+  "scored_logical_Z": [
+    1,
+    9,
+    15
+  ],
+  "histories": 385648,
+  "config_stream_sha256": "b096c5bfb05ce20337d9e31833f58f9bd2c261221f7f9ac1698b66cf3b7bed09",
+  "full_archive_gain_pp": 0.09911765096420888,
+  "intact_gain_pp": 0.09795579181253178,
+  "intact_pct_of_full": 98.82779793470222,
+  "omissions": [
+    {
+      "omitted": "X2",
+      "index": 2,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 6,
+      "retained_indices": [
+        6,
+        16,
+        17
+      ],
+      "cost_pp": 0.00014753767005881713,
+      "gain_over_thin_pp": 0.09780825414247296,
+      "surviving_pct_of_full": 98.67894687878676,
+      "full_archive_gain_pp": 0.09911765096420888,
+      "intact_gain_pp": 0.09795579181253178,
+      "intact_pct_of_full": 98.82779793470222,
+      "truth_gained_pp": 0.0006270350977363294,
+      "truth_lost_pp": 0.0007745727677919365,
+      "label_changes": 146,
+      "tie_status_changes": 20
+    },
+    {
+      "omitted": "X6",
+      "index": 6,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        2,
+        16,
+        17
+      ],
+      "cost_pp": 0.00018442208757907252,
+      "gain_over_thin_pp": 0.0977713697249527,
+      "surviving_pct_of_full": 98.6417341148023,
+      "full_archive_gain_pp": 0.09911765096420888,
+      "intact_gain_pp": 0.09795579181253178,
+      "intact_pct_of_full": 98.82779793470222,
+      "truth_gained_pp": 0.0004426130101668208,
+      "truth_lost_pp": 0.0006270350977363294,
+      "label_changes": 110,
+      "tie_status_changes": 20
+    },
+    {
+      "omitted": "Z6",
+      "index": 16,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        6,
+        17
+      ],
+      "cost_pp": 0.0031443965930688655,
+      "gain_over_thin_pp": 0.09481139521946291,
+      "surviving_pct_of_full": 95.65540980556435,
+      "full_archive_gain_pp": 0.09911765096420888,
+      "intact_gain_pp": 0.09795579181253178,
+      "intact_pct_of_full": 98.82779793470222,
+      "truth_gained_pp": 0.046981526808332334,
+      "truth_lost_pp": 0.05012592340139246,
+      "label_changes": 2555,
+      "tie_status_changes": 24
+    },
+    {
+      "omitted": "Z7",
+      "index": 17,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        6,
+        16
+      ],
+      "cost_pp": 0.08384750211347658,
+      "gain_over_thin_pp": 0.014108289699055199,
+      "surviving_pct_of_full": 14.233882221593069,
+      "full_archive_gain_pp": 0.09911765096420888,
+      "intact_gain_pp": 0.09795579181253178,
+      "intact_pct_of_full": 98.82779793470222,
+      "truth_gained_pp": 0.03817537212688829,
+      "truth_lost_pp": 0.12202287424036543,
+      "label_changes": 4401,
+      "tie_status_changes": 28
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1344,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 491.23
+}

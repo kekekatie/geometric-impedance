@@ -1,0 +1,126 @@
+{
+  "name": "AB_bal",
+  "config": {
+    "family": "AB",
+    "spec": [
+      22,
+      2,
+      2,
+      10
+    ],
+    "corners": [
+      2,
+      5,
+      11,
+      15
+    ],
+    "edge": 14
+  },
+  "qubit": 9,
+  "scored_logical_Z": [
+    3,
+    1,
+    0
+  ],
+  "histories": 385648,
+  "config_stream_sha256": "b096c5bfb05ce20337d9e31833f58f9bd2c261221f7f9ac1698b66cf3b7bed09",
+  "full_archive_gain_pp": 0.09619456087625045,
+  "intact_gain_pp": 0.09548453583911876,
+  "intact_pct_of_full": 99.2618865030788,
+  "omissions": [
+    {
+      "omitted": "X2",
+      "index": 2,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        3,
+        13,
+        16
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09548453583911876,
+      "surviving_pct_of_full": 99.2618865030788,
+      "full_archive_gain_pp": 0.09619456087625045,
+      "intact_gain_pp": 0.09548453583911876,
+      "intact_pct_of_full": 99.2618865030788,
+      "truth_gained_pp": 0.0,
+      "truth_lost_pp": 0.0,
+      "label_changes": 0,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "X3",
+      "index": 3,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        2,
+        13,
+        16
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09548453583911876,
+      "surviving_pct_of_full": 99.2618865030788,
+      "full_archive_gain_pp": 0.09619456087625045,
+      "intact_gain_pp": 0.09548453583911876,
+      "intact_pct_of_full": 99.2618865030788,
+      "truth_gained_pp": 0.0,
+      "truth_lost_pp": 0.0,
+      "label_changes": 0,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "Z3",
+      "index": 13,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        3,
+        16
+      ],
+      "cost_pp": 0.025653112380930043,
+      "gain_over_thin_pp": 0.06983142345818871,
+      "surviving_pct_of_full": 72.59394171778942,
+      "full_archive_gain_pp": 0.09619456087625045,
+      "intact_gain_pp": 0.09548453583911876,
+      "intact_pct_of_full": 99.2618865030788,
+      "truth_gained_pp": 0.03729936721093314,
+      "truth_lost_pp": 0.06295247959185178,
+      "label_changes": 2886,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "Z6",
+      "index": 16,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        3,
+        13
+      ],
+      "cost_pp": 0.013057083799916658,
+      "gain_over_thin_pp": 0.0824274520392021,
+      "surviving_pct_of_full": 85.68826687118094,
+      "full_archive_gain_pp": 0.09619456087625045,
+      "intact_gain_pp": 0.09548453583911876,
+      "intact_pct_of_full": 99.2618865030788,
+      "truth_gained_pp": 0.02336627849505675,
+      "truth_lost_pp": 0.03642336229497796,
+      "label_changes": 1494,
+      "tie_status_changes": 6
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1344,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 504.53
+}
