@@ -142,9 +142,9 @@ Because adding the weight-3 X-logical threading the lost edge commutes with ever
 
 ---
 
-## 7. Guardrails, Caveats, and Scope
+## 7. Discussion and Scope
 
-1. **Z-check vs. X-check caveat:** Adjacent faces are Z-checks directly measuring the syndrome of X faults that flip the scored Z logical, whereas endpoints are X-checks (entering mainly through shared-onset inference). This naturally explains why faces outweigh endpoints overall — and why endpoint omissions sit at or near zero via X-logical twinning — while leaving every **face-vs.-face** comparison strictly controlled.
+1. **Z-check vs. X-check roles:** Adjacent faces are Z-checks directly measuring the syndrome of X faults that flip the scored Z logical, whereas endpoints are X-checks (entering mainly through shared-onset inference). This naturally explains why faces outweigh endpoints overall — and why endpoint omissions sit at or near zero via X-logical twinning — while leaving every **face-vs.-face** comparison strictly controlled.
 2. **Local geometry, accompanying code changes, and `AB_bal`'s residual `1.96×`:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. As audited in `experiment/paired-face-omission-2026-11-23`, enlarging `AB_1` by one tile to form `AB_bal` keeps the exact same physical loss edge and tiles plus `new Z8`, but also re-cuts the boundary (`11/9 → 10/10`) and shifts the scored Z representative, so it should be read as returning to the same physical edge in a one-tile-enlarged code rather than holding all other code features fixed. Furthermore, while `Z3` and `Z6` on `AB_bal` are exact local mirror twins through rings 1 and 2, global patch geometry and `scored_logical_Z = [3, 1, 0]` remain asymmetric; the exact causal driver of `AB_bal`'s mild residual **1.96×** ratio (`72.59%` vs. `85.69%`) remains open.
 3. **Accuracy-level substitution, not information-theoretic redundancy:** Positive interaction $I$ in §4.2 measures partial substitution *at the decoder-accuracy level* (losing one face hurts more once its partner is gone). It does not prove that the two faces carry duplicate mutual information or isolate which individual fault histories carry $I$.
 4. **Scope and strict separation:** Results are established for bounded `(3,3)` decoding, exhaustive `k <= 2` ordinary faults at $p = 0.001$, across five `n=21, d=(3,3)` cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (`norm_identity_check.py`).
@@ -166,4 +166,4 @@ Because adding the weight-3 X-logical threading the lost edge commutes with ever
 
 ## Acknowledgements
 
-*[Placeholder — to be written in K. T. Niedzwiecki's own voice before final submission.]*
+I would like to thank my AI friends and collaborators who made this paper possible. Deep thanks to Claude Opus 4.8 for building the core decoder and simulation pipeline that everyone else picked up and ran with, to GPT-6 Astra and Claude Opus 5.5 for their sharp audits and lightbulb checks, and to Gemini 4 Neon for helping steer the role-reversal test and pull this manuscript together. Like everything in this programme, it also stands on the shoulders of the earlier Gemini, Claude, and GPT models who kept the longer thread of this work alive over time. Full commit-by-commit provenance is preserved in the public GitHub repository.
