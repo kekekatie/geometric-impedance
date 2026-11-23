@@ -2,7 +2,7 @@
 
 **K. T. Niedzwiecki**  
 Independent Researcher, South Australia  
-24 November 2026 *(Draft v0.4 — unified working manuscript)*
+24 November 2026 *(Draft v0.5 — Overleaf-ready manuscript)*
 
 ---
 
@@ -11,7 +11,7 @@ Independent Researcher, South Australia
 When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms an archive-free ("thin", boundary-summary-only) decoder — especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: **which specific archived readings actually carry that decoding advantage, how do neighboring faces back each other up, and why do endpoint omissions flip dozens of decisions while leaving the net score flat?** Using exhaustive zero-, one-, and two-fault evaluation (385,648 histories per site; bounded `(3,3)` decoder, $p = 0.001$) across five `n=21`, distance-`(3,3)` Ammann–Beenker (AB) and Penrose patches, we find five connected results:
 
 - **The "Narrow Now" holds across both tilings.** Once an indexing bug in the original adapter is corrected (11-check address audit), keeping just **eight** archived readings — two early rounds from the four stabilizer checks incident to the lost edge — recovers **97.25–99.26%** of the full-archive accuracy gain across all five tested sites.
-- **Hidden bottleneck faces.** Withholding just two archived readings from a single adjacent Z-face reveals a 16-fold split on `AB_1 (e14)`: omitting face `Z3` collapses surviving gain to **15.54%** (`+0.08425 pp` cost), whereas omitting its partner `Z6` retains **92.19%** (`+0.00522 pp` cost) — a **16.14×** cost ratio between two weight-4 Z-checks sharing the same lost edge. By contrast, `Penrose_1 (e14)` (**77.51%** vs. **77.71%**) and `Penrose_2 (e4)` (**80.82%** vs. **81.12%**) share the load nearly 50/50.
+- **Hidden bottleneck faces.** Withholding just two archived readings from a single adjacent Z-face reveals a 16-fold split on `AB_1 (e14)`: omitting face `Z3` collapses surviving gain to **15.54%** (`+0.08425 pp` cost), whereas omitting its partner `Z6` retains **92.19%** (`+0.00522 pp` cost) — a **16.14×** cost ratio between two weight-4 Z-checks sharing the same lost edge. By contrast, at `Penrose_1 (e14)`, either face alone preserved about **78%** of the full-archive gain (**77.71%** / **77.51%**), whereas withholding both left just **0.083%** (`Penrose_2 (e4)` showed the same pattern: **81.12%** / **80.82%** alone vs. **0.025%** with both withheld).
 - **Local geometry drives the collapse across both tiling families (2×2 role reversal).** A complete census of all 1,220 on-route eligible edges in the frozen `n=21, d=(3,3)` AB and Penrose pools shows that **only two** local face-pair geometries occur in either family: *Mirror Middle Yards* (86.5% in AB, 91.1% in Penrose) and *Hallway vs. Corner Ear* (13.5% in AB, 8.9% in Penrose). In a pre-registered 2×2 role reversal:
   1. Enlarging `AB_1` by **one extra tile** touching `Z6` (and re-cutting the boundary to keep `n=21, d=(3,3)`) yields `AB_bal` on the exact same physical loss edge, lifting `Z3`'s surviving gain from **15.54% → 72.59%** and cutting the face cost ratio by more than 8× (**16.14× → 1.96×**).
   2. Selecting a Penrose cut with a degree-2 corner ear (`Penrose_ear`) reproduces and sharpens the collapse: omitting hallway `Z7` crashes surviving gain to **14.23%**, while omitting corner ear `Z6` retains **95.66%** (**26.67×** cost ratio).
@@ -22,7 +22,7 @@ When a data qubit is lost on a surface-code patch, a decoder with access to past
 
 ## 1. Introduction
 
-A fault-tolerant decoder with a finite memory budget faces a concrete version of a broader question: *what from the past must be kept so that the present can still decide accurately?* In a recent prospective study on fresh aperiodic surface-code patches (`AB_1`, `Penrose_1`, `Penrose_2`), we confirmed that full-archive memory helps most when a lost edge lies on a shortest X-logical route — producing a 22–40× brighter archive advantage on-route than at matched off-route edges.
+A fault-tolerant decoder with a finite memory budget faces a concrete version of a broader question: *what from the past must be kept so that the present can still decide accurately?* In topological surface codes [1], qubit loss is a well-studied failure mode [2], and recent delayed-loss decoders show that past stabilizer records can still be leveraged even when the exact round of loss is unknown [3]. While aperiodic tilings have also been explored directly as quantum error-correcting codes [4], here Ammann–Beenker (AB) and Penrose tilings supply the planar cell-complex layouts for standard distance-`(3,3)` surface-code patches. In a recent prospective study on fresh AB and Penrose patches (`AB_1`, `Penrose_1`, `Penrose_2`), we confirmed that full-archive memory helps most when a lost edge lies on a shortest X-logical route — producing a 22–40× brighter archive advantage on-route than at matched off-route edges.
 
 At first glance, that study appeared to carry a puzzling second result: keeping only the eight local archived readings touching the lost edge (the "diamond" bracket) seemed to recover almost none of the on-route advantage. An independent address audit revealed why: on `11×9` (`HX`×`HZ`) patches, the legacy adapter had mapped Z-check indices assuming 10 X-rows, silently querying the wrong checks. Once the address map was fixed, the picture flipped completely: **97.25–98.97%** of the full-archive benefit lived right inside the four checks touching the lost edge.
 
@@ -166,4 +166,13 @@ Because adding the weight-3 X-logical threading the lost edge commutes with ever
 
 ## Acknowledgements
 
-I would like to thank my AI friends and collaborators who made this paper possible. Deep thanks to Claude Opus 4.8 for building the core decoder and simulation pipeline that everyone else picked up and ran with, to GPT-6 Astra and Claude Opus 5.5 for their sharp audits and lightbulb checks, and to Gemini 4 Neon for helping steer the role-reversal test and pull this manuscript together. Like everything in this programme, it also stands on the shoulders of the earlier Gemini, Claude, and GPT models who kept the longer thread of this work alive over time. Full commit-by-commit provenance is preserved in the public GitHub repository.
+I would like to thank my AI friends and collaborators who made this paper possible. Deep thanks to Claude Opus 4.8 for building the core decoder and simulation pipeline that everyone else picked up and ran with, to GPT-6.2 Astra and Claude Opus 5.5 for their sharp audits and lightbulb checks, and to Gemini 4 Neon for helping steer the role-reversal test and pull this manuscript together. Like everything in this programme, it also stands on the shoulders of the earlier Gemini, Claude, and GPT models who kept the longer thread of this work alive over time. Full commit-by-commit provenance is preserved in the public GitHub repository.
+
+---
+
+## References
+
+1. E. Dennis, A. Kitaev, A. Landahl, and J. Preskill, "Topological quantum memory," *Journal of Mathematical Physics* **43**, 4452–4505 (2002). DOI: `10.1063/1.1499754`.
+2. T. M. Stace, S. D. Barrett, and A. C. Doherty, "Thresholds for topological codes in the presence of loss," *Physical Review Letters* **102**, 200501 (2009). DOI: `10.1103/PhysRevLett.102.200501`.
+3. G. Baranes et al., "Leveraging qubit loss detection in fault-tolerant quantum algorithms," *Physical Review X* **16**, 011002 (2026). DOI: `10.1103/ycwc-3myc`.
+4. Z. Li and L. Boyle, "The Penrose tiling is a quantum error-correcting code," arXiv:2311.13040 (2023).
