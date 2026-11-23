@@ -1,0 +1,899 @@
+{
+  "starting_sha": "6236920f087a223ca3c0d701640afbe2a89ce5e7",
+  "sites": [
+    {
+      "name": "AB_1",
+      "edge": 14,
+      "qubit": 10,
+      "A": "Z3",
+      "A_role": "hallway",
+      "B": "Z6",
+      "B_role": "corner ear",
+      "endpoints": [
+        "X4",
+        "X5"
+      ],
+      "nx": 11,
+      "nz": 9,
+      "arms": {
+        "AB": {
+          "checks": [
+            "X4",
+            "X5",
+            "Z3",
+            "Z6"
+          ],
+          "indices": [
+            4,
+            5,
+            14,
+            17
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "A": {
+          "checks": [
+            "X4",
+            "X5",
+            "Z3"
+          ],
+          "indices": [
+            4,
+            5,
+            14
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ]
+          ]
+        },
+        "B": {
+          "checks": [
+            "X4",
+            "X5",
+            "Z6"
+          ],
+          "indices": [
+            4,
+            5,
+            17
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "0": {
+          "checks": [
+            "X4",
+            "X5"
+          ],
+          "indices": [
+            4,
+            5
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ]
+          ]
+        }
+      },
+      "scored_logical_Z": [
+        8,
+        10,
+        2
+      ],
+      "patch_lf_sha256": "6fc7bff2662a611ce9a67b3a96dae61ff1ac9a445960a3cb6734c289ccb04df9",
+      "baseline_mode": "sealed per-configuration reuse plus deterministic replay",
+      "baseline_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783"
+    },
+    {
+      "name": "AB_bal",
+      "edge": 14,
+      "qubit": 9,
+      "A": "Z3",
+      "A_role": "middle yard",
+      "B": "Z6",
+      "B_role": "middle yard",
+      "endpoints": [
+        "X2",
+        "X3"
+      ],
+      "nx": 10,
+      "nz": 10,
+      "arms": {
+        "AB": {
+          "checks": [
+            "X2",
+            "X3",
+            "Z3",
+            "Z6"
+          ],
+          "indices": [
+            2,
+            3,
+            13,
+            16
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X3",
+              1
+            ],
+            [
+              "X3",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "A": {
+          "checks": [
+            "X2",
+            "X3",
+            "Z3"
+          ],
+          "indices": [
+            2,
+            3,
+            13
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X3",
+              1
+            ],
+            [
+              "X3",
+              2
+            ],
+            [
+              "Z3",
+              1
+            ],
+            [
+              "Z3",
+              2
+            ]
+          ]
+        },
+        "B": {
+          "checks": [
+            "X2",
+            "X3",
+            "Z6"
+          ],
+          "indices": [
+            2,
+            3,
+            16
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X3",
+              1
+            ],
+            [
+              "X3",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "0": {
+          "checks": [
+            "X2",
+            "X3"
+          ],
+          "indices": [
+            2,
+            3
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X3",
+              1
+            ],
+            [
+              "X3",
+              2
+            ]
+          ]
+        }
+      },
+      "scored_logical_Z": [
+        3,
+        1,
+        0
+      ],
+      "patch_lf_sha256": "06dd7e77b5bb4fce9e6728ad57f91ff959869c1c8b651de8a605228c58500d07",
+      "baseline_mode": "full baseline replay",
+      "baseline_commit": "6236920f087a223ca3c0d701640afbe2a89ce5e7"
+    },
+    {
+      "name": "Penrose_1",
+      "edge": 14,
+      "qubit": 10,
+      "A": "Z7",
+      "A_role": "middle yard",
+      "B": "Z1",
+      "B_role": "middle yard",
+      "endpoints": [
+        "X4",
+        "X6"
+      ],
+      "nx": 11,
+      "nz": 9,
+      "arms": {
+        "AB": {
+          "checks": [
+            "X4",
+            "X6",
+            "Z7",
+            "Z1"
+          ],
+          "indices": [
+            4,
+            6,
+            12,
+            18
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ]
+        },
+        "A": {
+          "checks": [
+            "X4",
+            "X6",
+            "Z7"
+          ],
+          "indices": [
+            4,
+            6,
+            18
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ]
+        },
+        "B": {
+          "checks": [
+            "X4",
+            "X6",
+            "Z1"
+          ],
+          "indices": [
+            4,
+            6,
+            12
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ]
+        },
+        "0": {
+          "checks": [
+            "X4",
+            "X6"
+          ],
+          "indices": [
+            4,
+            6
+          ],
+          "coordinates": [
+            [
+              "X4",
+              1
+            ],
+            [
+              "X4",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ]
+          ]
+        }
+      },
+      "scored_logical_Z": [
+        8,
+        10,
+        16
+      ],
+      "patch_lf_sha256": "53083396f402e2f1ac4c1571661fbfe7d7914c4d15ec5fad66714bd18ee7ea46",
+      "baseline_mode": "sealed per-configuration reuse plus deterministic replay",
+      "baseline_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783"
+    },
+    {
+      "name": "Penrose_2",
+      "edge": 4,
+      "qubit": 4,
+      "A": "Z1",
+      "A_role": "middle yard",
+      "B": "Z4",
+      "B_role": "middle yard",
+      "endpoints": [
+        "X0",
+        "X5"
+      ],
+      "nx": 11,
+      "nz": 9,
+      "arms": {
+        "AB": {
+          "checks": [
+            "X0",
+            "X5",
+            "Z1",
+            "Z4"
+          ],
+          "indices": [
+            0,
+            5,
+            12,
+            15
+          ],
+          "coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ],
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ]
+        },
+        "A": {
+          "checks": [
+            "X0",
+            "X5",
+            "Z1"
+          ],
+          "indices": [
+            0,
+            5,
+            12
+          ],
+          "coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z1",
+              1
+            ],
+            [
+              "Z1",
+              2
+            ]
+          ]
+        },
+        "B": {
+          "checks": [
+            "X0",
+            "X5",
+            "Z4"
+          ],
+          "indices": [
+            0,
+            5,
+            15
+          ],
+          "coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ],
+            [
+              "Z4",
+              1
+            ],
+            [
+              "Z4",
+              2
+            ]
+          ]
+        },
+        "0": {
+          "checks": [
+            "X0",
+            "X5"
+          ],
+          "indices": [
+            0,
+            5
+          ],
+          "coordinates": [
+            [
+              "X0",
+              1
+            ],
+            [
+              "X0",
+              2
+            ],
+            [
+              "X5",
+              1
+            ],
+            [
+              "X5",
+              2
+            ]
+          ]
+        }
+      },
+      "scored_logical_Z": [
+        6,
+        0,
+        2
+      ],
+      "patch_lf_sha256": "f2923c1af62c6a2b132f05d24f5820cb674570cb8ff131e4ee47ddb1dd4c2fa6",
+      "baseline_mode": "sealed per-configuration reuse plus deterministic replay",
+      "baseline_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783"
+    },
+    {
+      "name": "Penrose_ear",
+      "edge": 13,
+      "qubit": 9,
+      "A": "Z7",
+      "A_role": "hallway",
+      "B": "Z6",
+      "B_role": "corner ear",
+      "endpoints": [
+        "X2",
+        "X6"
+      ],
+      "nx": 10,
+      "nz": 10,
+      "arms": {
+        "AB": {
+          "checks": [
+            "X2",
+            "X6",
+            "Z7",
+            "Z6"
+          ],
+          "indices": [
+            2,
+            6,
+            16,
+            17
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "A": {
+          "checks": [
+            "X2",
+            "X6",
+            "Z7"
+          ],
+          "indices": [
+            2,
+            6,
+            17
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z7",
+              1
+            ],
+            [
+              "Z7",
+              2
+            ]
+          ]
+        },
+        "B": {
+          "checks": [
+            "X2",
+            "X6",
+            "Z6"
+          ],
+          "indices": [
+            2,
+            6,
+            16
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ],
+            [
+              "Z6",
+              1
+            ],
+            [
+              "Z6",
+              2
+            ]
+          ]
+        },
+        "0": {
+          "checks": [
+            "X2",
+            "X6"
+          ],
+          "indices": [
+            2,
+            6
+          ],
+          "coordinates": [
+            [
+              "X2",
+              1
+            ],
+            [
+              "X2",
+              2
+            ],
+            [
+              "X6",
+              1
+            ],
+            [
+              "X6",
+              2
+            ]
+          ]
+        }
+      },
+      "scored_logical_Z": [
+        1,
+        9,
+        15
+      ],
+      "patch_lf_sha256": "29df1662d1c8dbb38e3d486465c12e3fcff35d5aa8cbd73ca593958ce5d7a70c",
+      "baseline_mode": "full baseline replay",
+      "baseline_commit": "6236920f087a223ca3c0d701640afbe2a89ce5e7"
+    }
+  ],
+  "p": 0.001,
+  "caps": [
+    3,
+    3
+  ],
+  "histories_per_site": 385648,
+  "directional_prediction": null,
+  "interaction": "G_A + G_B - G_AB - G_0",
+  "interpretation": "Positive interaction: losing either face costs more when its partner is absent, on decoder truth credit only."
+}

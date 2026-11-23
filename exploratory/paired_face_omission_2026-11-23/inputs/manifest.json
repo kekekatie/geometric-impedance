@@ -1,0 +1,44 @@
+[
+  {
+    "local": "inputs/AB_1_e14.json",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/AB_1_e14.json",
+    "git_blob": "7c4a7f191d51ec458a988c5b42971e4725f95e71",
+    "sha256": "b3a11c7a26c4bd7137872f9416e10a365d3a99dee48184b4a3ddd7c6cb26763e"
+  },
+  {
+    "local": "inputs/AB_1_e14.csv.gz",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/AB_1_e14.csv.gz",
+    "git_blob": "1b0563afee98994b7adb91dde4408eec1e4d00e0",
+    "sha256": "57d1fb10a511f72cbaf2c15eee080558a192601d2b5d356d1dbc83f7bad076d9"
+  },
+  {
+    "local": "inputs/Penrose_1_e14.json",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/Penrose_1_e14.json",
+    "git_blob": "31ee93438582407fdcd1700c092ee31751d80269",
+    "sha256": "5cc73c2c0d65bf6f5f7315d19e8b5663005623a63be31b14152781fddc6b7a67"
+  },
+  {
+    "local": "inputs/Penrose_1_e14.csv.gz",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/Penrose_1_e14.csv.gz",
+    "git_blob": "d65934915070913141613c80997acb6bff01e2f0",
+    "sha256": "b3918e906db5f2f57b00f31be7415f57e25df7332a76ed990df617e27d0b0d57"
+  },
+  {
+    "local": "inputs/Penrose_2_e4.json",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/Penrose_2_e4.json",
+    "git_blob": "5e35d8410f7effcb89146bf1af777e7cc577ba90",
+    "sha256": "c1ef10cd1a0588fcf16af6e2c23997e9bdee6e0a67fa0a95957aa773a3a613e0"
+  },
+  {
+    "local": "inputs/Penrose_2_e4.csv.gz",
+    "source_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783",
+    "source_path": "exploratory/local_witness_omission_2026-11-20/results/Penrose_2_e4.csv.gz",
+    "git_blob": "6a534958310b625d194d7a6d99efd7cdff091961",
+    "sha256": "f66226e2a3e3f3f9bf0f992c0bad1a5f92ad4d8bf455012a24c96e438cde10ff"
+  }
+]
