@@ -1,0 +1,512 @@
+{
+  "Penrose_1_e14": {
+    "patch": "Penrose_1",
+    "edge": 14,
+    "qubit": 10,
+    "checks": {
+      "X4": {
+        "flips": 570,
+        "tie_changes": 12,
+        "lost_pp": 0.021070223504816365,
+        "gained_pp": 0.021051781296059415,
+        "net_pp": 1.8442208756949685e-05,
+        "n_lost": 292,
+        "n_gained": 290,
+        "weight_matched": false,
+        "variant_swap_bijections": [],
+        "structural": {
+          "n_movers": 582,
+          "pairs": 279,
+          "unpaired": 24,
+          "record_groups": 244,
+          "symmetric_difference_weights": {
+            "3": 259,
+            "4": 18,
+            "2": 2
+          },
+          "pairs_differing_by_weight3_xlogical": 259,
+          "pairs_not_weight3_xlogical": 20,
+          "unpaired_records": [
+            {
+              "cid": 2353,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 322,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 396,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 0
+            },
+            {
+              "cid": 397,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 0
+            },
+            {
+              "cid": 2656,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 3800,
+              "onset": 1,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 1
+            },
+            {
+              "cid": 2354,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 4096,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9151,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9196,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 16118,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23393,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 16120,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23394,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 2500,
+              "onset": 2,
+              "vx": 0,
+              "vz": 0,
+              "k": 2,
+              "delta": 0.5,
+              "truth": 0
+            },
+            {
+              "cid": 9430,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9475,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 16371,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23616,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 16304,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            }
+          ]
+        }
+      },
+      "X6": {
+        "flips": 572,
+        "tie_changes": 12,
+        "lost_pp": 0.021079444609194843,
+        "gained_pp": 0.02106100240043789,
+        "net_pp": 1.8442208756953155e-05,
+        "n_lost": 293,
+        "n_gained": 291,
+        "weight_matched": false,
+        "variant_swap_bijections": [],
+        "structural": {
+          "n_movers": 584,
+          "pairs": 280,
+          "unpaired": 24,
+          "record_groups": 245,
+          "symmetric_difference_weights": {
+            "3": 260,
+            "4": 18,
+            "2": 2
+          },
+          "pairs_differing_by_weight3_xlogical": 260,
+          "pairs_not_weight3_xlogical": 20,
+          "unpaired_records": [
+            {
+              "cid": 2353,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 322,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 396,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 0
+            },
+            {
+              "cid": 397,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 0
+            },
+            {
+              "cid": 2656,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 3800,
+              "onset": 1,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 1
+            },
+            {
+              "cid": 2354,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 4096,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9151,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9196,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 16118,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23393,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 16120,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23394,
+              "onset": 1,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 2500,
+              "onset": 2,
+              "vx": 0,
+              "vz": 0,
+              "k": 2,
+              "delta": 0.5,
+              "truth": 0
+            },
+            {
+              "cid": 9430,
+              "onset": 2,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 9475,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            },
+            {
+              "cid": 16371,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 23616,
+              "onset": 2,
+              "vx": 0,
+              "vz": 1,
+              "k": 2,
+              "delta": 1.0,
+              "truth": 0
+            },
+            {
+              "cid": 16294,
+              "onset": 1,
+              "vx": 1,
+              "vz": 1,
+              "k": 2,
+              "delta": -1.0,
+              "truth": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Penrose_2_e4": {
+    "patch": "Penrose_2",
+    "edge": 4,
+    "qubit": 4,
+    "checks": {
+      "X0": {
+        "flips": 18,
+        "tie_changes": 2,
+        "lost_pp": 8.760049159551663e-05,
+        "gained_pp": 8.760049159551663e-05,
+        "net_pp": 0.0,
+        "n_lost": 10,
+        "n_gained": 10,
+        "weight_matched": true,
+        "variant_swap_bijections": [],
+        "structural": {
+          "n_movers": 20,
+          "pairs": 9,
+          "unpaired": 2,
+          "record_groups": 11,
+          "symmetric_difference_weights": {
+            "3": 9
+          },
+          "pairs_differing_by_weight3_xlogical": 9,
+          "pairs_not_weight3_xlogical": 0,
+          "unpaired_records": [
+            {
+              "cid": 9453,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": -0.5,
+              "truth": 1
+            },
+            {
+              "cid": 14541,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 0.5,
+              "truth": 0
+            }
+          ]
+        }
+      },
+      "X5": {
+        "flips": 44,
+        "tie_changes": 2,
+        "lost_pp": 0.00020747484851569727,
+        "gained_pp": 0.00020747484851569727,
+        "net_pp": 0.0,
+        "n_lost": 23,
+        "n_gained": 23,
+        "weight_matched": true,
+        "variant_swap_bijections": [],
+        "structural": {
+          "n_movers": 46,
+          "pairs": 22,
+          "unpaired": 2,
+          "record_groups": 22,
+          "symmetric_difference_weights": {
+            "3": 22
+          },
+          "pairs_differing_by_weight3_xlogical": 22,
+          "pairs_not_weight3_xlogical": 0,
+          "unpaired_records": [
+            {
+              "cid": 9453,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": -0.5,
+              "truth": 1
+            },
+            {
+              "cid": 14541,
+              "onset": 2,
+              "vx": 1,
+              "vz": 0,
+              "k": 2,
+              "delta": 0.5,
+              "truth": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}
