@@ -18,18 +18,19 @@
 \large Local Geometry, Bottleneck Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes}
 \author{K.~T.~Niedzwiecki\\
 \small Independent Researcher, South Australia}
-\date{23 November 2026 \quad \textit{(Draft v0.3 --- Overleaf-ready working manuscript)}}
+\date{24 November 2026 \quad \textit{(Draft v0.4 --- unified Overleaf-ready manuscript)}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms an archive-free (``thin'', boundary-summary-only) decoder---especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: \textbf{which specific archived readings actually carry that decoding advantage, and what determines how the load is shared?} Using exhaustive zero-, one-, and two-fault evaluation ($385{,}648$ histories per site; bounded $(3,3)$ decoder, $p = 0.001$) across five $n=21$, distance-$(3,3)$ Ammann--Beenker (AB) and Penrose patches, we find four results:
+When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms an archive-free (``thin'', boundary-summary-only) decoder---especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: \textbf{which specific archived readings actually carry that decoding advantage, how do neighboring faces back each other up, and why do endpoint omissions flip dozens of decisions while leaving the net score flat?} Using exhaustive zero-, one-, and two-fault evaluation ($385{,}648$ histories per site; bounded $(3,3)$ decoder, $p = 0.001$) across five $n=21$, distance-$(3,3)$ Ammann--Beenker (AB) and Penrose patches, we find five connected results:
 \begin{itemize}
     \item \textbf{The ``Narrow Now'' holds across both tilings.} Once an indexing bug in the original adapter is corrected (11-check address audit), keeping just \textbf{eight} archived readings---two early rounds from the four stabilizer checks incident to the lost edge---recovers \textbf{97.25--99.26\%} of the full-archive accuracy gain across all five tested sites.
     \item \textbf{Hidden bottleneck faces.} Withholding just two archived readings from a single adjacent $Z$-face reveals a 16-fold split on \texttt{AB\_1 (e14)}: omitting face \texttt{Z3} collapses surviving gain to \textbf{15.54\%} ($+0.08425$~pp cost), whereas omitting its partner \texttt{Z6} retains \textbf{92.19\%} ($+0.00522$~pp cost)---a \textbf{16.14$\times$} cost ratio between two weight-4 $Z$-checks sharing the same lost edge. By contrast, \texttt{Penrose\_1 (e14)} (\textbf{77.51\%} vs.\ \textbf{77.71\%}) and \texttt{Penrose\_2 (e4)} (\textbf{80.82\%} vs.\ \textbf{81.12\%}) share the load nearly 50/50.
-    \item \textbf{Local geometry drives the collapse across both tiling families ($2\times 2$ role reversal).} A complete census of all $1{,}220$ on-route eligible edges in the frozen $n=21$, $d=(3,3)$ AB and Penrose pools shows that \textbf{only two} local face-pair geometries occur in either family: \emph{Mirror Middle Yards} ($86.5\%$ in AB, $91.1\%$ in Penrose) and \emph{Hallway vs.\ Corner Ear} ($13.5\%$ in AB, $8.9\%$ in Penrose). In a pre-registered $2\times 2$ role reversal: (i)~adding \textbf{one extra tile} to \texttt{AB\_1} touching \texttt{Z6} and re-cutting the boundary to keep $n=21$, $d=(3,3)$ (\texttt{AB\_bal}, preserving the exact same physical loss-edge endpoints) fills in \texttt{Z6}'s corner ear, lifting \texttt{Z3}'s surviving gain from \textbf{15.54\% $\to$ 72.59\%} and cutting the face cost ratio by more than $8\times$ (\textbf{16.14$\times$ $\to$ 1.96$\times$}); (ii)~selecting a Penrose cut with a degree-2 corner ear (\texttt{Penrose\_ear}) reproduces and sharpens the collapse: omitting hallway \texttt{Z7} crashes surviving gain to \textbf{14.23\%}, while omitting corner ear \texttt{Z6} retains \textbf{95.66\%} (\textbf{26.67$\times$} cost ratio).
-    \item \textbf{Zero-net-cost decision steering.} On \texttt{Penrose\_2 (e4)}, withholding endpoint $X$-check \texttt{X5} produces \textbf{0.00000000~pp} net accuracy change while flipping \textbf{44 individual decoding decisions} (credit lost exactly equals credit gained). A flat aggregate score does not mean a witness is inert.
+    \item \textbf{Local geometry drives the collapse across both tiling families ($2\times 2$ role reversal).} A complete census of all $1{,}220$ on-route eligible edges in the frozen $n=21$, $d=(3,3)$ AB and Penrose pools shows that \textbf{only two} local face-pair geometries occur in either family: \emph{Mirror Middle Yards} ($86.5\%$ in AB, $91.1\%$ in Penrose) and \emph{Hallway vs.\ Corner Ear} ($13.5\%$ in AB, $8.9\%$ in Penrose). In a pre-registered $2\times 2$ role reversal: (i)~enlarging \texttt{AB\_1} by \textbf{one extra tile} touching \texttt{Z6} (and re-cutting the boundary to keep $n=21$, $d=(3,3)$) yields \texttt{AB\_bal} on the exact same physical loss edge, lifting \texttt{Z3}'s surviving gain from \textbf{15.54\% $\to$ 72.59\%} and cutting the face cost ratio by more than $8\times$ (\textbf{16.14$\times$ $\to$ 1.96$\times$}); (ii)~selecting a Penrose cut with a degree-2 corner ear (\texttt{Penrose\_ear}) reproduces and sharpens the collapse: omitting hallway \texttt{Z7} crashes surviving gain to \textbf{14.23\%}, while omitting corner ear \texttt{Z6} retains \textbf{95.66\%} (\textbf{26.67$\times$} cost ratio).
+    \item \textbf{Middle yards back each other up; corner ears cannot (5-site paired-face omission).} Covering \textbf{both} adjacent faces at once (retaining only the two endpoint $X$-checks) collapses surviving gain to \textbf{0.019--0.112\%} across all five sites. The substitution interaction $I$---how much extra it costs to lose one face once its partner is already gone---jumps $\sim 5$--$6\times$ with local shape across both tilings: \textbf{$I = +0.0455$ to $+0.0690$~pp} ($\sim 56$--$63\%$ of full gain) for all three middle-yard pairs (\texttt{Penrose\_1}, \texttt{Penrose\_2}, \texttt{AB\_bal}), versus just \textbf{$I = +0.0107$ to $+0.0109$~pp} ($\sim 10$--$11\%$) for both hallway-vs.-corner-ear pairs (\texttt{AB\_1}, \texttt{Penrose\_ear}).
+    \item \textbf{Zero-net-cost decision steering comes from exact $X$-logical twinning.} On \texttt{Penrose\_2 (e4)}, withholding endpoint $X$-check \texttt{X5} (\texttt{X0}) yields \textbf{0.00000000~pp} net cost while flipping \textbf{44} (\textbf{18}) individual decoding decisions. Exhaustive flip-pairing analysis proves this zero is an exact structural symmetry: every single flipped history belongs to a same-record twin pair ($22/22$ on \texttt{X5}, $9/9$ on \texttt{X0}) whose total $X$-faults differ by the exact on-route weight-3 $X$-logical $\{4, 6, 10\}$---identical syndrome, identical decoder decision, opposite truth. On \texttt{Penrose\_1 (e14)}, the same $\{1, 10, 17\}$ twinning accounts for nearly all $570+$ flips, leaving $24$ unpaired movers that carry the tiny $+0.00001844$~pp residue.
 \end{itemize}
 \end{abstract}
 
@@ -38,16 +39,16 @@ A fault-tolerant decoder with a finite memory budget faces a concrete version of
 
 At first glance, that study appeared to carry a puzzling second result: keeping only the eight local archived readings touching the lost edge (the ``diamond'' bracket) seemed to recover almost none of the on-route advantage. An independent address audit revealed why: on $11\times 9$ ($H_X \times H_Z$) patches, the legacy adapter had mapped $Z$-check indices assuming $10$ $X$-rows, silently querying the wrong checks. Once the address map was fixed, the picture flipped completely: \textbf{97.25--98.97\%} of the full-archive benefit lived right inside the four checks touching the lost edge.
 
-That sharp localization opened an immediate, surgical follow-up: if nearly the entire memory advantage lives inside four local checks (two incident $Z$-faces and two endpoint $X$-checks), \emph{do those four witnesses share the load equally, or does the local patch geometry concentrate the burden on one of them?}
+That sharp localization opened three interlocking questions: if nearly the entire memory advantage lives inside four local checks (two adjacent $Z$-faces and two endpoint $X$-checks), \emph{(1) how is the load split between the two faces, (2) how much can one face stand in when the other is lost, and (3) why can omitting an endpoint flip dozens of decisions while leaving the net score untouched?} As the experiments below show, all three answers trace back to the same local object: the shortest weight-3 $X$-logical threading the lost edge and the boundary geometry immediately flanking it.
 
 \section{Experimental Setup and Pre-Registered Lineage}
 All experiments share the same pinned geometry generator, XOR syndrome simulator, shared-onset erasure inference, and bounded $(3,3)$ decoder ($w_{\mathrm{dec}} = 3$, $w_{\mathrm{frame}} = 3$, physical error rate $p = 0.001$), evaluated exhaustively over all zero-, one-, and two-fault ordinary configurations ($48{,}206$ configurations $\times$ $8$ onset/free-value variants = \textbf{385,648 histories per site}).
 
 \begin{itemize}
-    \item \textbf{Corrected local bracket (``intact''):} Retains rounds $t \in \{1, 2\}$ of the four checks geometrically incident to the lost edge (8 archived coordinates), plus live rounds $t \in \{3, 4\}$ of all checks and the thin-state boundary parity.
-    \item \textbf{Single-witness omission:} Removes rounds $t \in \{1, 2\}$ of one named incident check (leaving 6 archived coordinates). Withheld coordinates are strictly \textbf{absent}, never zero-filled; live rounds and boundary parities remain untouched.
+    \item \textbf{Corrected local bracket (``intact''):} Retains rounds $t \in \{1, 2\}$ of the four checks geometrically incident to the lost edge (8 archived coordinates), plus live rounds $t \in \{3, 4\}$ of all checks, thin-state boundary parities, and the committed frame.
+    \item \textbf{Single- and paired-witness omission:} Removes rounds $t \in \{1, 2\}$ of one named incident check (leaving 6 archived coordinates) or both adjacent $Z$-faces simultaneously (arm~$0$, leaving only the 4 early endpoint $X$-readings). Withheld coordinates are strictly \textbf{absent}, never zero-filled; live rounds, boundary parities, and frame remain untouched.
     \item \textbf{Primary score:} Weighted tie-aware truth credit (ties receive $0.5$ credit), reported in percentage points (pp). Omission cost is $100 \times (\text{intact credit} - \text{omission credit})$; positive cost means withholding hurt. Weighted credit \emph{lost} and \emph{gained} are tracked separately alongside unweighted label and tie-status flips.
-    \item \textbf{Validation:} Every site completed a deterministic unaccelerated full-scan verification sample (every $2{,}003$rd history) with \textbf{0 mismatches} and $\max |\Delta p_0| = 0.0$.
+    \item \textbf{Validation:} Every site completed deterministic unaccelerated full-scan verification samples with \textbf{0 mismatches} and $\max |\Delta p_0| = 0.0$, plus exact rational half-credit re-aggregation across all $1{,}928{,}240$ paired-face site-histories.
 \end{itemize}
 
 \section{Pillar 1 --- The ``Narrow Now'' Baseline}
@@ -77,8 +78,9 @@ Site & Tiling & Full gain (pp) & Intact gain (pp) & Recovery (\% of full) \\
 \label{fig:narrow}
 \end{figure}
 
-\section{Pillar 2 --- The Witness-Omission Stress Test}
-Withholding one incident check at a time across the three original sites (12 omission arms total; Figure~\ref{fig:omission} and Table~\ref{tab:omission}) revealed a stark asymmetry on \texttt{AB\_1} alongside balanced load-sharing on both Penrose patches. On \texttt{AB\_1}, \texttt{Z3} and \texttt{Z6} are both weight-4 $Z$-checks sitting on opposite sides of the exact same lost edge \texttt{e14}, yet omitting \texttt{Z3} costs \textbf{16.14$\times$} more than omitting \texttt{Z6}.
+\section{Pillar 2 --- Single-Witness Omission and Paired-Face Backup}
+\subsection{The 12-arm single-witness stress test}
+Withholding one incident check at a time across the three original sites (Figure~\ref{fig:omission} and Table~\ref{tab:omission}) exposed a 16-fold asymmetry on \texttt{AB\_1} alongside balanced load-sharing on both Penrose patches. On \texttt{AB\_1}, \texttt{Z3} and \texttt{Z6} are both weight-4 $Z$-checks sitting on opposite sides of the exact same lost edge \texttt{e14}, yet omitting \texttt{Z3} costs \textbf{16.14$\times$} more than omitting \texttt{Z6}.
 
 \begin{table}[h]
 \centering
@@ -108,6 +110,35 @@ Site & Omitted & Role / wt & Cost (pp) & Surviving (\% full) & Label flips & Tie
 \label{fig:omission}
 \end{figure}
 
+\subsection{Covering both faces: mutual backup vs.\ single-face bottlenecks}
+A natural follow-up asks what survives when \textbf{both} adjacent $Z$-faces are covered simultaneously, leaving only the two endpoint $X$-checks (\texttt{experiment/paired-face-omission-2026-11-23}). Let $G_{AB}, G_A, G_B, G_0$ be the gains (over \texttt{thin}) when keeping both faces, $A$ only, $B$ only, or neither face, and let $I = (G_A - G_0) - (G_{AB} - G_B) = (G_B - G_0) - (G_{AB} - G_A)$ measure how much extra it costs to lose a face once its partner is already absent (Table~\ref{tab:paired} and Figure~\ref{fig:paired}).
+
+\begin{table}[h]
+\centering
+\caption{Five-site paired-face retention arms and substitution interaction $I$ (\texttt{9515df3}).}
+\label{tab:paired}
+\begin{tabular}{llrrrrrr}
+\toprule
+Site ($A$ / $B$) & Shape & Both & $A$ only & $B$ only & Neither $G_0$ & $I$ (pp) & $I$/Full \\
+\midrule
+\texttt{AB\_1} (\texttt{Z3}/\texttt{Z6}) & Hallway / Ear & 97.25\% & 92.19\% & 15.54\% & \textbf{0.107\%} & $+0.01069$ & \textbf{10.4\%} \\
+\texttt{Penrose\_ear} (\texttt{Z7}/\texttt{Z6}) & Hallway / Ear & 98.83\% & 95.66\% & 14.23\% & \textbf{0.112\%} & $+0.01085$ & \textbf{10.9\%} \\
+\texttt{AB\_bal} (\texttt{Z3}/\texttt{Z6}) & Middle yards & 99.26\% & 85.69\% & 72.59\% & \textbf{0.019\%} & $+0.05676$ & \textbf{59.0\%} \\
+\texttt{Penrose\_1} (\texttt{Z7}/\texttt{Z1}) & Middle yards & 98.73\% & 77.71\% & 77.51\% & \textbf{0.083\%} & $+0.06898$ & \textbf{56.4\%} \\
+\texttt{Penrose\_2} (\texttt{Z1}/\texttt{Z4}) & Middle yards & 98.97\% & 81.12\% & 80.82\% & \textbf{0.025\%} & $+0.04554$ & \textbf{62.9\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\linewidth]{figures/fig4_paired_face_backup.png}
+\caption{Four-arm paired-face retention comparison across all five sites (\texttt{experiment/paired-face-omission-2026-11-23}).}
+\label{fig:paired}
+\end{figure}
+
+Across all five sites, covering both faces wipes out $>99.88\%$ of local recovery ($0.019$--$0.112\%$ surviving). Yet the interaction $I$ cleanly splits the five sites into two regimes: when both neighbors are middle yards (\texttt{Penrose\_1}, \texttt{Penrose\_2}, \texttt{AB\_bal}), either face can stand in for \textbf{56--63\%} of the full-archive gain while its partner is absent; when one neighbor is a corner ear (\texttt{AB\_1}, \texttt{Penrose\_ear}), mutual backup collapses by $\sim 5$--$6\times$ to just \textbf{10--11\%}.
+
 \section{Pillar 3 --- Local Bottleneck vs.\ Corner Ear and the $2\times 2$ Role Reversal}
 \subsection{Structural diagnosis and complete pool census}
 Read-only graph inspection of the sealed patch definitions explains the \texttt{AB\_1} split geometrically:
@@ -121,25 +152,25 @@ Enumerating all on-route eligible edges in the frozen $n=21$, $d=(3,3)$ disk-cut
 \subsection{Pre-registered $2\times 2$ role reversal}
 To separate local geometry from tiling family, we selected two role-reversal cuts from the frozen pool \emph{before} running the decoder:
 \begin{enumerate}
-    \item \texttt{AB\_bal} (\texttt{spec=(22, 2, 2, 10)}, \texttt{corners=(2, 5, 11, 15)}, \texttt{e14}): \texttt{AB\_1} plus \textbf{one extra tile} (new \texttt{Z8}, sharing an edge with \texttt{Z6} and meeting \texttt{Z3} at a vertex) together with the boundary re-cut needed to maintain $n=21$, $d=(3,3)$ (four boundary edges swap rough/smooth assignment, two become interior, check split shifts from $11\,X / 9\,Z$ to $10\,X / 10\,Z$). The physical loss-edge endpoints are identical (\texttt{q10} $\to$ \texttt{q9}), one of the two shortest $X$-logicals through the loss disappears while the other survives physically, and \texttt{Z3} and \texttt{Z6} become locally matched middle yards (corner degrees $(3,3,5,5)$).
+    \item \texttt{AB\_bal} (\texttt{spec=(22, 2, 2, 10)}, \texttt{corners=(2, 5, 11, 15)}, \texttt{e14}): \texttt{AB\_1} enlarged by \textbf{one extra tile} (new \texttt{Z8}, sharing an edge with \texttt{Z6} and meeting \texttt{Z3} at a vertex) together with the boundary re-cut needed to maintain $n=21$, $d=(3,3)$ (four boundary edges swap rough/smooth assignment, two become interior, check split shifts $11\,X / 9\,Z \to 10\,X / 10\,Z$, and the scored $Z$ representative shifts physically). The physical loss-edge endpoints $(0,1,2,-1)$ and $(0,1,2,0)$ are identical (\texttt{q10} $\to$ \texttt{q9}), one of the two shortest $X$-logicals through the loss disappears while the other survives physically, and \texttt{Z3} and \texttt{Z6} become locally matched middle yards (corner degrees $(3,3,5,5)$).
     \item \texttt{Penrose\_ear} (\texttt{spec=(7, 1, 3, 10)}, \texttt{corners=(0, 4, 9, 13)}, \texttt{e13}): exact structural twin of \texttt{AB\_1}, pairing hallway \texttt{Z7} ($1$ smooth boundary edge, $3$ $Z$-neighbors) with protruding degree-2 corner ear \texttt{Z6} ($2$ smooth boundary edges, $2$ $Z$-neighbors, forked exits).
 \end{enumerate}
 
-Both predictions held cleanly (Table~\ref{tab:2x2} and Figure~\ref{fig:2x2}): giving Penrose a corner ear triggers an even sharper \textbf{26.67$\times$} collapse (\texttt{Z7} $\to 14.23\%$ vs.\ \texttt{Z6} $\to 95.66\%$), while filling in \texttt{AB\_1}'s corner ear with one tile eliminates the collapse (\texttt{Z3} jumps from $15.54\% \to 72.59\%$, ratio dropping $8\times$ from $16.14\times$ to $1.96\times$).
+Both predictions held cleanly (Table~\ref{tab:2x2} and Figure~\ref{fig:2x2}): giving Penrose a corner ear triggers an even sharper \textbf{26.67$\times$} collapse (\texttt{Z7} $\to 14.23\%$ vs.\ \texttt{Z6} $\to 95.66\%$), while enlarging \texttt{AB\_1} by one tile to fill in \texttt{Z6}'s corner ear eliminates the collapse (\texttt{Z3} jumps $15.54\% \to 72.59\%$, cost ratio drops $8\times$ from $16.14\times$ to $1.96\times$, and mutual backup $I$ jumps from $10.4\%$ to $59.0\%$).
 
 \begin{table}[h]
 \centering
-\caption{Measured $2\times 2$ role-reversal matrix across all five sites (surviving \% of full-archive gain and face-cost ratio).}
+\caption{Measured $2\times 2$ role-reversal matrix across all five sites (surviving \% of full-archive gain, face-cost ratio, and mutual backup $I$/Full).}
 \label{tab:2x2}
 \begin{tabular}{lll}
 \toprule
 Local shape around loss edge & Ammann--Beenker & Penrose \\
 \midrule
-\textbf{Two Middle Yards} & \texttt{AB\_bal (e14)} \textit{[new]}: & \texttt{Penrose\_1 (e14)}: 77.51\% vs.\ 77.71\% (1.01$\times$) \\
-\textit{(1 bnd edge, 3 $Z$-nbrs each)} & \texttt{Z3} 72.59\% vs.\ \texttt{Z6} 85.69\% (\textbf{1.96$\times$}) & \texttt{Penrose\_2 (e4)}: 80.82\% vs.\ 81.12\% (1.02$\times$) \\
+\textbf{Two Middle Yards} & \texttt{AB\_bal (e14)} \textit{[new]}: & \texttt{Penrose\_1 (e14)}: 77.51\% vs.\ 77.71\% (1.01$\times$, $I{=}56.4\%$) \\
+\textit{(1 bnd edge, 3 $Z$-nbrs each)} & \texttt{Z3} 72.59\% vs.\ \texttt{Z6} 85.69\% (\textbf{1.96$\times$}, $I{=}59.0\%$) & \texttt{Penrose\_2 (e4)}: 80.82\% vs.\ 81.12\% (1.02$\times$, $I{=}62.9\%$) \\
 \addlinespace
 \textbf{Hallway vs.\ Corner Ear} & \texttt{AB\_1 (e14)}: & \texttt{Penrose\_ear (e13)} \textit{[new]}: \\
-\textit{(deg-2 tip on ear)} & \texttt{Z3} 15.54\% vs.\ \texttt{Z6} 92.19\% (\textbf{16.14$\times$}) & \texttt{Z7} 14.23\% vs.\ \texttt{Z6} 95.66\% (\textbf{26.67$\times$}) \\
+\textit{(deg-2 tip on ear)} & \texttt{Z3} 15.54\% vs.\ \texttt{Z6} 92.19\% (\textbf{16.14$\times$}, $I{=}10.4\%$) & \texttt{Z7} 14.23\% vs.\ \texttt{Z6} 95.66\% (\textbf{26.67$\times$}, $I{=}10.9\%$) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -151,23 +182,46 @@ Local shape around loss edge & Ammann--Beenker & Penrose \\
 \label{fig:2x2}
 \end{figure}
 
-\section{Pillar 4 --- Zero-Net-Cost Decision Steering}
-Aggregate accuracy can conceal active decision-level movement. On \texttt{Penrose\_2 (e4)}, withholding endpoint \texttt{X5} incurs \textbf{0.00000000~pp} net cost---weighted credit lost ($0.00020747$~pp) exactly cancels credit gained ($0.00020747$~pp)---yet \textbf{44 individual histories flip their decoded label} (plus $2$ tie-status changes). Withholding \texttt{X0} similarly yields exact zero net cost while flipping $18$ labels ($+2$ tie changes). On \texttt{Penrose\_1 (e14)}, \texttt{X4} and \texttt{X6} incur tiny net costs ($+0.00001844$~pp) while flipping $570$ and $572$ decisions, respectively. By contrast, on \texttt{AB\_bal (e14)}, \texttt{X2} and \texttt{X3} exhibit true invariance ($0.00000000$~pp cost, $0$ label flips). Zero net cost is therefore not synonymous with zero causal influence on individual decoding trajectories.
+\section{Pillar 4 --- Zero-Net-Cost Decision Steering and Exact $X$-Logical Twinning}
+Aggregate accuracy can conceal active decision-level movement. On \texttt{Penrose\_2 (e4)}, withholding endpoint \texttt{X5} incurs \textbf{0.00000000~pp} net cost---weighted credit lost ($0.00020747$~pp) exactly equals credit gained ($0.00020747$~pp)---yet \textbf{44 individual histories flip their decoded label} (plus $2$ tie-status changes). Withholding \texttt{X0} similarly yields exact zero net cost while flipping $18$ labels ($+2$ tie changes). On \texttt{Penrose\_1 (e14)}, \texttt{X4} and \texttt{X6} incur tiny net costs ($+0.00001844$~pp) while flipping $570$ and $572$ decisions, respectively. By contrast, on \texttt{AB\_bal (e14)}, \texttt{X2} and \texttt{X3} exhibit true invariance ($0.00000000$~pp cost, $0$ label flips).
+
+A dedicated flip-pairing audit (\texttt{experiment/zero-net-pairing-2026-11-24}, \texttt{03dc321}) proves that \texttt{Penrose\_2}'s exact zero is not numerical coincidence, but a \textbf{structural symmetry generated by the on-route weight-3 $X$-logical} (Table~\ref{tab:pairing}):
+
+\begin{table}[h]
+\centering
+\caption{Exact flip-pairing decomposition for endpoint $X$-check omissions (\texttt{03dc321}).}
+\label{tab:pairing}
+\begin{tabular}{lrrrll}
+\toprule
+Site $\cdot$ check & Movers (flips+ties) & Net (pp) & Record-paired & Weight-3 $X$-logical diff & Unpaired remainder \\
+\midrule
+\texttt{Penrose\_2 $\cdot$ X5} & 46 (44+2) & \textbf{0.00000000} & \textbf{22 / 22} & \textbf{22 / 22} $\{4,6,10\}$ & 2 equal-wt ties (cancel) \\
+\texttt{Penrose\_2 $\cdot$ X0} & 20 (18+2) & \textbf{0.00000000} & \textbf{9 / 9} & \textbf{9 / 9} $\{4,6,10\}$ & 2 equal-wt ties (cancel) \\
+\texttt{Penrose\_1 $\cdot$ X4} & 582 (570+12) & $+0.00001844$ & 279 pairs & 259 / 279 $\{1,10,17\}$ & \textbf{24 of 582} (residue) \\
+\texttt{Penrose\_1 $\cdot$ X6} & 584 (572+12) & $+0.00001844$ & 280 pairs & 260 / 280 $\{1,10,17\}$ & \textbf{24 of 584} (residue) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Because adding the weight-3 $X$-logical threading the lost edge commutes with every stabilizer, two fault histories differing by that logical produce the \textbf{exact same detector record}---and therefore the exact same posterior and decoder decision---while having \textbf{opposite true $Z$-logical outcomes}. Whenever omitting an endpoint $X$-check flips one twin from right to wrong, it flips its twin from wrong to right by the exact same weight. On \texttt{Penrose\_2}, that twinning is $100\%$ complete (exact zero); on \texttt{Penrose\_1}, a small unpaired remainder of $24$ movers carries the genuine $+0.00001844$~pp residue.
 
 \section{Guardrails, Caveats, and Scope}
 \begin{enumerate}
-    \item \textbf{$Z$-check vs.\ $X$-check caveat:} Adjacent faces are $Z$-checks directly measuring the syndrome of $X$ faults that flip the scored $Z$ logical, whereas endpoints are $X$-checks (entering primarily through shared-onset inference). This naturally explains why faces outweigh endpoints overall, while leaving every \emph{face-vs.-face} comparison (\texttt{Z3} vs.\ \texttt{Z6}, \texttt{Z7} vs.\ \texttt{Z1}, \texttt{Z1} vs.\ \texttt{Z4}, \texttt{Z7} vs.\ \texttt{Z6}) strictly controlled.
-    \item \textbf{Local geometry vs.\ global/observable asymmetry:} The $16$--$27\times$ collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. Follow-up inspection of \texttt{AB\_bal} confirms that \texttt{Z3} and \texttt{Z6} are exact local mirror twins through both first and second neighbor rings (identical first-ring neighbor types, identical $(3,3,5,5)$ corner degrees, and identical 4-vs.-4 overlap with weight-4 $X$-logicals through \texttt{q9}), while global patch geometry and the placement of the fixed \texttt{scored\_logical\_Z} representative ($[3, 1, 0]$, threading \texttt{Z3} and \texttt{Z0} while bypassing \texttt{Z6} and \texttt{Z7}) remain asymmetric. Thus first-ring corner-ear geometry drives the order-of-magnitude collapse, while the exact causal driver of \texttt{AB\_bal}'s mild residual \textbf{1.96$\times$} ratio ($72.59\%$ vs.\ $85.69\%$) remains open.
+    \item \textbf{$Z$-check vs.\ $X$-check caveat:} Adjacent faces are $Z$-checks directly measuring the syndrome of $X$ faults that flip the scored $Z$ logical, whereas endpoints are $X$-checks (entering primarily through shared-onset inference). This naturally explains why faces outweigh endpoints overall---and why endpoint omissions sit at or near zero via $X$-logical twinning---while leaving every \emph{face-vs.-face} comparison strictly controlled.
+    \item \textbf{Local geometry, accompanying code changes, and \texttt{AB\_bal}'s residual $1.96\times$:} The $16$--$27\times$ collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. As audited in \texttt{experiment/paired-face-omission-2026-11-23}, enlarging \texttt{AB\_1} by one tile to form \texttt{AB\_bal} keeps the exact same physical loss edge and tiles plus new \texttt{Z8}, but also re-cuts the boundary ($11/9 \to 10/10$) and shifts the scored $Z$ representative; it should therefore be read as returning to the same physical edge in a one-tile-enlarged code rather than holding all other code features fixed. Furthermore, while \texttt{Z3} and \texttt{Z6} on \texttt{AB\_bal} are exact local mirror twins through rings 1 and 2, global patch geometry and \texttt{scored\_logical\_Z} ($[3,1,0]$) remain asymmetric; the exact causal driver of \texttt{AB\_bal}'s mild residual \textbf{1.96$\times$} ratio ($72.59\%$ vs.\ $85.69\%$) remains open.
+    \item \textbf{Accuracy-level substitution, not information-theoretic redundancy:} Positive interaction $I$ in Section~4.2 measures partial substitution \emph{at the decoder-accuracy level} (losing one face hurts more once its partner is gone). It does not prove that the two faces carry duplicate mutual information or isolate which individual fault histories carry $I$.
     \item \textbf{Scope and strict separation:} Results are established for bounded $(3,3)$ decoding, exhaustive $k \le 2$ ordinary faults at $p = 0.001$, across five $n=21$, $d=(3,3)$ cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (\texttt{norm\_identity\_check.py}).
 \end{enumerate}
 
 \section{Provenance and Reproducibility}
-All scripts, patch JSONs, verification logs, and figures are archived in the \texttt{geometric-impedance} repository across four pinned branches:
+All scripts, patch JSONs, verification logs, and figures are archived in the \texttt{geometric-impedance} repository across six pinned branches:
 \begin{itemize}
     \item Prospective route prediction \& patch JSONs: \texttt{claude/aperiodic-predict-2026-11-20} (\texttt{fdeaa32})
-    \item 11-check address audit (``Narrow Now''): \texttt{audit/fresh-site-addresses-2026-11-20}
+    \item 11-check address audit (``Narrow Now''): \texttt{audit/fresh-site-addresses-2026-11-20} (\texttt{1f85f79})
     \item 12-arm witness-omission stress test: \texttt{experiment/local-witness-omission-2026-11-20} (\texttt{1922a7b})
     \item $2\times 2$ role-reversal test (\texttt{AB\_bal}, \texttt{Penrose\_ear}): \texttt{experiment/role-reversal-omission-2026-11-22} (\texttt{6236920})
+    \item 5-site paired-face omission \& geometry audit: \texttt{experiment/paired-face-omission-2026-11-23} (\texttt{9515df3})
+    \item Exact $X$-logical twin-pairing proof: \texttt{experiment/zero-net-pairing-2026-11-24} (\texttt{03dc321})
 \end{itemize}
 
 \section*{Acknowledgements}
