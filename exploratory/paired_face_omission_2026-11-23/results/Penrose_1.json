@@ -1,0 +1,258 @@
+{
+  "site": {
+    "name": "Penrose_1",
+    "edge": 14,
+    "qubit": 10,
+    "A": "Z7",
+    "A_role": "middle yard",
+    "B": "Z1",
+    "B_role": "middle yard",
+    "endpoints": [
+      "X4",
+      "X6"
+    ],
+    "nx": 11,
+    "nz": 9,
+    "arms": {
+      "AB": {
+        "checks": [
+          "X4",
+          "X6",
+          "Z7",
+          "Z1"
+        ],
+        "indices": [
+          4,
+          6,
+          12,
+          18
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ],
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ]
+        ]
+      },
+      "A": {
+        "checks": [
+          "X4",
+          "X6",
+          "Z7"
+        ],
+        "indices": [
+          4,
+          6,
+          18
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ]
+      },
+      "B": {
+        "checks": [
+          "X4",
+          "X6",
+          "Z1"
+        ],
+        "indices": [
+          4,
+          6,
+          12
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z1",
+            1
+          ],
+          [
+            "Z1",
+            2
+          ]
+        ]
+      },
+      "0": {
+        "checks": [
+          "X4",
+          "X6"
+        ],
+        "indices": [
+          4,
+          6
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ]
+        ]
+      }
+    },
+    "scored_logical_Z": [
+      8,
+      10,
+      16
+    ],
+    "patch_lf_sha256": "53083396f402e2f1ac4c1571661fbfe7d7914c4d15ec5fad66714bd18ee7ea46",
+    "baseline_mode": "sealed per-configuration reuse plus deterministic replay",
+    "baseline_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783"
+  },
+  "histories": 385648,
+  "counts": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "credits": {
+    "thin": [
+      8.0,
+      2462.0,
+      375974.0
+    ],
+    "thick": [
+      8.0,
+      2472.0,
+      379246.0
+    ],
+    "AB": [
+      8.0,
+      2472.0,
+      379078.0
+    ],
+    "A": [
+      8.0,
+      2470.0,
+      378288.0
+    ],
+    "B": [
+      8.0,
+      2470.0,
+      378262.0
+    ],
+    "0": [
+      8.0,
+      2462.0,
+      375985.0
+    ]
+  },
+  "scores": {
+    "thin": 0.9976792324500254,
+    "thick": 0.9989021353126987,
+    "AB": 0.9988866438573429,
+    "A": 0.9986295594672709,
+    "B": 0.9986271619801326,
+    "0": 0.9976802467715069
+  },
+  "gains_pp": {
+    "thin": 0.0,
+    "thick": 0.12229028626732363,
+    "AB": 0.12074114073175046,
+    "A": 0.09503270172455114,
+    "B": 0.09479295301071389,
+    "0": 0.00010143214814739565
+  },
+  "recovered_percent": {
+    "AB": 98.7332227416765,
+    "A": 77.7107525260117,
+    "B": 77.51470366460568,
+    "0": 0.08294374904452133
+  },
+  "costs_pp": {
+    "A_loss_B_present": 0.025948187721036575,
+    "A_loss_B_absent": 0.09493126957640374,
+    "B_loss_A_present": 0.025708439007199324,
+    "B_loss_A_absent": 0.09469152086256649,
+    "I": 0.06898308185536717
+  },
+  "validation": {
+    "new_arm_fullscan_checks": 192,
+    "new_arm_mismatches": 0,
+    "max_posterior_difference": 0.0,
+    "baseline_configuration_checks": 965,
+    "baseline_configuration_mismatches": 0,
+    "coordinate_assertions": 192
+  },
+  "baseline_equality": "exact sealed credit totals and binary-float scores; sampled per-config replay",
+  "elapsed_seconds": 374.4663050174713
+}

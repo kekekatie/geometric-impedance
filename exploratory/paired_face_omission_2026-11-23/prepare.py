@@ -1,5 +1,6 @@
 """Frozen A/B labels, exact archive coordinates, and immutable input provenance."""
 import hashlib,json,sys
+sys.dont_write_bytecode=True
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 ROLE=ROOT.parent/'role_reversal_omission_2026-11-22'

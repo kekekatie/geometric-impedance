@@ -1,0 +1,298 @@
+{
+  "site": {
+    "name": "AB_bal",
+    "edge": 14,
+    "qubit": 9,
+    "A": "Z3",
+    "A_role": "middle yard",
+    "B": "Z6",
+    "B_role": "middle yard",
+    "endpoints": [
+      "X2",
+      "X3"
+    ],
+    "nx": 10,
+    "nz": 10,
+    "arms": {
+      "AB": {
+        "checks": [
+          "X2",
+          "X3",
+          "Z3",
+          "Z6"
+        ],
+        "indices": [
+          2,
+          3,
+          13,
+          16
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X3",
+            1
+          ],
+          [
+            "X3",
+            2
+          ],
+          [
+            "Z3",
+            1
+          ],
+          [
+            "Z3",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "A": {
+        "checks": [
+          "X2",
+          "X3",
+          "Z3"
+        ],
+        "indices": [
+          2,
+          3,
+          13
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X3",
+            1
+          ],
+          [
+            "X3",
+            2
+          ],
+          [
+            "Z3",
+            1
+          ],
+          [
+            "Z3",
+            2
+          ]
+        ]
+      },
+      "B": {
+        "checks": [
+          "X2",
+          "X3",
+          "Z6"
+        ],
+        "indices": [
+          2,
+          3,
+          16
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X3",
+            1
+          ],
+          [
+            "X3",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "0": {
+        "checks": [
+          "X2",
+          "X3"
+        ],
+        "indices": [
+          2,
+          3
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X3",
+            1
+          ],
+          [
+            "X3",
+            2
+          ]
+        ]
+      }
+    },
+    "scored_logical_Z": [
+      3,
+      1,
+      0
+    ],
+    "patch_lf_sha256": "06dd7e77b5bb4fce9e6728ad57f91ff959869c1c8b651de8a605228c58500d07",
+    "baseline_mode": "full baseline replay",
+    "baseline_commit": "6236920f087a223ca3c0d701640afbe2a89ce5e7"
+  },
+  "histories": 385648,
+  "counts": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "b096c5bfb05ce20337d9e31833f58f9bd2c261221f7f9ac1698b66cf3b7bed09",
+  "credits": {
+    "thin": [
+      8.0,
+      2448.0,
+      372724.0
+    ],
+    "thick": [
+      8.0,
+      2456.0,
+      375164.0
+    ],
+    "AB": [
+      8.0,
+      2456.0,
+      375087.0
+    ],
+    "A": [
+      8.0,
+      2455.0,
+      374670.0
+    ],
+    "B": [
+      8.0,
+      2454.0,
+      374303.0
+    ],
+    "0": [
+      8.0,
+      2448.0,
+      372726.0
+    ]
+  },
+  "scores": {
+    "thin": 0.9960898828993513,
+    "thick": 0.9970518285081138,
+    "AB": 0.9970447282577425,
+    "A": 0.9969141574197432,
+    "B": 0.9967881971339332,
+    "0": 0.9960900673214389
+  },
+  "gains_pp": {
+    "thin": 0.0,
+    "thick": 0.09619456087625045,
+    "AB": 0.09548453583911876,
+    "A": 0.082427452039191,
+    "B": 0.06983142345818871,
+    "0": 1.84422087601277e-05
+  },
+  "recovered_percent": {
+    "AB": 99.2618865030788,
+    "A": 85.6882668711694,
+    "B": 72.59394171778942,
+    "0": 0.019171779144407854
+  },
+  "costs_pp": {
+    "A_loss_B_present": 0.025653112380930043,
+    "A_loss_B_absent": 0.08240900983043087,
+    "B_loss_A_present": 0.01305708379992776,
+    "B_loss_A_absent": 0.06981298124942859,
+    "I": 0.056755897449500825
+  },
+  "validation": {
+    "new_arm_fullscan_checks": 192,
+    "new_arm_mismatches": 0,
+    "max_posterior_difference": 0.0,
+    "baseline_configuration_checks": 965,
+    "baseline_configuration_mismatches": 0,
+    "coordinate_assertions": 192,
+    "recovery_joint_configuration_checks": 193
+  },
+  "baseline_equality": "same exact weighted half-credit score; last-bit float differences disclosed",
+  "baseline_precision": {
+    "method": "unique exact weighted half-credit lattice point; last-bit float differences disclosed",
+    "score_quantum_pp": 4.610552189237717e-06,
+    "comparisons": {
+      "thick": {
+        "sealed_gain_pp": 0.09619456087625045,
+        "replayed_gain_pp": 0.09619456087625045,
+        "difference_pp": 0.0,
+        "literal_float_equal": true,
+        "exact_gain_fraction": "65200/677793",
+        "doubled_weighted_credit_difference": 20864
+      },
+      "AB": {
+        "sealed_gain_pp": 0.09548453583911876,
+        "replayed_gain_pp": 0.09548453583911876,
+        "difference_pp": 0.0,
+        "literal_float_equal": true,
+        "exact_gain_fraction": "258875/2711172",
+        "doubled_weighted_credit_difference": 20710
+      },
+      "A": {
+        "sealed_gain_pp": 0.0824274520392021,
+        "replayed_gain_pp": 0.082427452039191,
+        "difference_pp": -1.1102230246251565e-14,
+        "literal_float_equal": false,
+        "exact_gain_fraction": "223475/2711172",
+        "doubled_weighted_credit_difference": 17878
+      },
+      "B": {
+        "sealed_gain_pp": 0.06983142345818871,
+        "replayed_gain_pp": 0.06983142345818871,
+        "difference_pp": 0.0,
+        "literal_float_equal": true,
+        "exact_gain_fraction": "189325/2711172",
+        "doubled_weighted_credit_difference": 15146
+      }
+    }
+  },
+  "recovered_complete_csv": true,
+  "elapsed_seconds": 32.573493242263794
+}

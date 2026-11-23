@@ -1,0 +1,288 @@
+{
+  "starting_sha": "6236920f087a223ca3c0d701640afbe2a89ce5e7",
+  "protocol_commit": "1b95282be3837da01ae8ac859f561b99f38b0ef7",
+  "histories": 1928240,
+  "csv_rows_verified": 241030,
+  "sites": [
+    {
+      "site": "AB_1",
+      "edge": 14,
+      "A": "Z3",
+      "A_role": "hallway",
+      "B": "Z6",
+      "B_role": "corner ear",
+      "full_gain_pp": 0.10310116805573033,
+      "gains_pp": {
+        "AB": 0.10027028901152812,
+        "A": 0.09505114393333347,
+        "B": 0.01601705830540645,
+        "0": 0.00011065325253856173
+      },
+      "recovered_percent": {
+        "AB": 97.2542706376789,
+        "A": 92.19211161793483,
+        "B": 15.5352830694882,
+        "0": 0.10732492621106794
+      },
+      "costs_pp": {
+        "A_loss_B_present": 0.08425323070612167,
+        "A_loss_B_absent": 0.09494049068079491,
+        "B_loss_A_present": 0.0052191450781946536,
+        "B_loss_A_absent": 0.01590640505286789,
+        "I": 0.010687259974673236
+      },
+      "baseline_equality": "exact sealed credit totals and binary-float scores; sampled per-config replay",
+      "baseline_precision": null,
+      "recovered_complete_csv": false,
+      "validation": {
+        "new_arm_fullscan_checks": 192,
+        "new_arm_mismatches": 0,
+        "max_posterior_difference": 0.0,
+        "baseline_configuration_checks": 965,
+        "baseline_configuration_mismatches": 0,
+        "coordinate_assertions": 192
+      }
+    },
+    {
+      "site": "AB_bal",
+      "edge": 14,
+      "A": "Z3",
+      "A_role": "middle yard",
+      "B": "Z6",
+      "B_role": "middle yard",
+      "full_gain_pp": 0.09619456087625045,
+      "gains_pp": {
+        "AB": 0.09548453583911876,
+        "A": 0.082427452039191,
+        "B": 0.06983142345818871,
+        "0": 1.84422087601277e-05
+      },
+      "recovered_percent": {
+        "AB": 99.2618865030788,
+        "A": 85.6882668711694,
+        "B": 72.59394171778942,
+        "0": 0.019171779144407854
+      },
+      "costs_pp": {
+        "A_loss_B_present": 0.025653112380930043,
+        "A_loss_B_absent": 0.08240900983043087,
+        "B_loss_A_present": 0.01305708379992776,
+        "B_loss_A_absent": 0.06981298124942859,
+        "I": 0.056755897449500825
+      },
+      "baseline_equality": "same exact weighted half-credit score; last-bit float differences disclosed",
+      "baseline_precision": {
+        "method": "unique exact weighted half-credit lattice point; last-bit float differences disclosed",
+        "score_quantum_pp": 4.610552189237717e-06,
+        "comparisons": {
+          "thick": {
+            "sealed_gain_pp": 0.09619456087625045,
+            "replayed_gain_pp": 0.09619456087625045,
+            "difference_pp": 0.0,
+            "literal_float_equal": true,
+            "exact_gain_fraction": "65200/677793",
+            "doubled_weighted_credit_difference": 20864
+          },
+          "AB": {
+            "sealed_gain_pp": 0.09548453583911876,
+            "replayed_gain_pp": 0.09548453583911876,
+            "difference_pp": 0.0,
+            "literal_float_equal": true,
+            "exact_gain_fraction": "258875/2711172",
+            "doubled_weighted_credit_difference": 20710
+          },
+          "A": {
+            "sealed_gain_pp": 0.0824274520392021,
+            "replayed_gain_pp": 0.082427452039191,
+            "difference_pp": -1.1102230246251565e-14,
+            "literal_float_equal": false,
+            "exact_gain_fraction": "223475/2711172",
+            "doubled_weighted_credit_difference": 17878
+          },
+          "B": {
+            "sealed_gain_pp": 0.06983142345818871,
+            "replayed_gain_pp": 0.06983142345818871,
+            "difference_pp": 0.0,
+            "literal_float_equal": true,
+            "exact_gain_fraction": "189325/2711172",
+            "doubled_weighted_credit_difference": 15146
+          }
+        }
+      },
+      "recovered_complete_csv": true,
+      "validation": {
+        "new_arm_fullscan_checks": 192,
+        "new_arm_mismatches": 0,
+        "max_posterior_difference": 0.0,
+        "baseline_configuration_checks": 965,
+        "baseline_configuration_mismatches": 0,
+        "coordinate_assertions": 192,
+        "recovery_joint_configuration_checks": 193
+      }
+    },
+    {
+      "site": "Penrose_1",
+      "edge": 14,
+      "A": "Z7",
+      "A_role": "middle yard",
+      "B": "Z1",
+      "B_role": "middle yard",
+      "full_gain_pp": 0.12229028626732363,
+      "gains_pp": {
+        "AB": 0.12074114073175046,
+        "A": 0.09503270172455114,
+        "B": 0.09479295301071389,
+        "0": 0.00010143214814739565
+      },
+      "recovered_percent": {
+        "AB": 98.7332227416765,
+        "A": 77.7107525260117,
+        "B": 77.51470366460568,
+        "0": 0.08294374904452133
+      },
+      "costs_pp": {
+        "A_loss_B_present": 0.025948187721036575,
+        "A_loss_B_absent": 0.09493126957640374,
+        "B_loss_A_present": 0.025708439007199324,
+        "B_loss_A_absent": 0.09469152086256649,
+        "I": 0.06898308185536717
+      },
+      "baseline_equality": "exact sealed credit totals and binary-float scores; sampled per-config replay",
+      "baseline_precision": null,
+      "recovered_complete_csv": false,
+      "validation": {
+        "new_arm_fullscan_checks": 192,
+        "new_arm_mismatches": 0,
+        "max_posterior_difference": 0.0,
+        "baseline_configuration_checks": 965,
+        "baseline_configuration_mismatches": 0,
+        "coordinate_assertions": 192
+      }
+    },
+    {
+      "site": "Penrose_2",
+      "edge": 4,
+      "A": "Z1",
+      "A_role": "middle yard",
+      "B": "Z4",
+      "B_role": "middle yard",
+      "full_gain_pp": 0.07234878495352426,
+      "gains_pp": {
+        "AB": 0.07160187549887231,
+        "A": 0.05869232936900337,
+        "B": 0.05847102286390404,
+        "0": 1.84422087601277e-05
+      },
+      "recovered_percent": {
+        "AB": 98.96762681621848,
+        "A": 81.12413968901677,
+        "B": 80.81825133824283,
+        "0": 0.02549069590038684
+      },
+      "costs_pp": {
+        "A_loss_B_present": 0.01313085263496827,
+        "A_loss_B_absent": 0.05867388716024324,
+        "B_loss_A_present": 0.012909546129868943,
+        "B_loss_A_absent": 0.058452580655143915,
+        "I": 0.04554303452527497
+      },
+      "baseline_equality": "exact sealed credit totals and binary-float scores; sampled per-config replay",
+      "baseline_precision": null,
+      "recovered_complete_csv": false,
+      "validation": {
+        "new_arm_fullscan_checks": 192,
+        "new_arm_mismatches": 0,
+        "max_posterior_difference": 0.0,
+        "baseline_configuration_checks": 965,
+        "baseline_configuration_mismatches": 0,
+        "coordinate_assertions": 192
+      }
+    },
+    {
+      "site": "Penrose_ear",
+      "edge": 13,
+      "A": "Z7",
+      "A_role": "hallway",
+      "B": "Z6",
+      "B_role": "corner ear",
+      "full_gain_pp": 0.09911765096423109,
+      "gains_pp": {
+        "AB": 0.09795579181253178,
+        "A": 0.09481139521948512,
+        "B": 0.014108289699055199,
+        "0": 0.00011065325253856173
+      },
+      "recovered_percent": {
+        "AB": 98.82779793468008,
+        "A": 95.65540980556533,
+        "B": 14.23388222158988,
+        "0": 0.11163829193096347
+      },
+      "costs_pp": {
+        "A_loss_B_present": 0.08384750211347658,
+        "A_loss_B_absent": 0.09470074196694656,
+        "B_loss_A_present": 0.003144396593046661,
+        "B_loss_A_absent": 0.013997636446516637,
+        "I": 0.010853239853469976
+      },
+      "baseline_equality": "same exact weighted half-credit score; last-bit float differences disclosed",
+      "baseline_precision": {
+        "method": "unique exact weighted half-credit lattice point; last-bit float differences disclosed",
+        "score_quantum_pp": 4.610552189237717e-06,
+        "comparisons": {
+          "thick": {
+            "sealed_gain_pp": 0.09911765096420888,
+            "replayed_gain_pp": 0.09911765096423109,
+            "difference_pp": 2.220446049250313e-14,
+            "literal_float_equal": false,
+            "exact_gain_fraction": "89575/903724",
+            "doubled_weighted_credit_difference": 21498
+          },
+          "AB": {
+            "sealed_gain_pp": 0.09795579181253178,
+            "replayed_gain_pp": 0.09795579181253178,
+            "difference_pp": 0.0,
+            "literal_float_equal": true,
+            "exact_gain_fraction": "88525/903724",
+            "doubled_weighted_credit_difference": 21246
+          },
+          "A": {
+            "sealed_gain_pp": 0.09481139521946291,
+            "replayed_gain_pp": 0.09481139521948512,
+            "difference_pp": 2.220446049250313e-14,
+            "literal_float_equal": false,
+            "exact_gain_fraction": "128525/1355586",
+            "doubled_weighted_credit_difference": 20564
+          },
+          "B": {
+            "sealed_gain_pp": 0.014108289699055199,
+            "replayed_gain_pp": 0.014108289699055199,
+            "difference_pp": 0.0,
+            "literal_float_equal": true,
+            "exact_gain_fraction": "6375/451862",
+            "doubled_weighted_credit_difference": 3060
+          }
+        }
+      },
+      "recovered_complete_csv": true,
+      "validation": {
+        "new_arm_fullscan_checks": 192,
+        "new_arm_mismatches": 0,
+        "max_posterior_difference": 0.0,
+        "baseline_configuration_checks": 965,
+        "baseline_configuration_mismatches": 0,
+        "coordinate_assertions": 192,
+        "recovery_joint_configuration_checks": 193
+      }
+    }
+  ],
+  "validation_totals": {
+    "new_arm_fullscan_checks": 960,
+    "new_arm_mismatches": 0,
+    "max_posterior_difference": 0,
+    "baseline_configuration_checks": 4825,
+    "baseline_configuration_mismatches": 0,
+    "coordinate_assertions": 960,
+    "recovery_joint_configuration_checks": 386
+  }
+}

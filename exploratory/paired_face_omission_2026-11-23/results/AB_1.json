@@ -1,0 +1,258 @@
+{
+  "site": {
+    "name": "AB_1",
+    "edge": 14,
+    "qubit": 10,
+    "A": "Z3",
+    "A_role": "hallway",
+    "B": "Z6",
+    "B_role": "corner ear",
+    "endpoints": [
+      "X4",
+      "X5"
+    ],
+    "nx": 11,
+    "nz": 9,
+    "arms": {
+      "AB": {
+        "checks": [
+          "X4",
+          "X5",
+          "Z3",
+          "Z6"
+        ],
+        "indices": [
+          4,
+          5,
+          14,
+          17
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X5",
+            1
+          ],
+          [
+            "X5",
+            2
+          ],
+          [
+            "Z3",
+            1
+          ],
+          [
+            "Z3",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "A": {
+        "checks": [
+          "X4",
+          "X5",
+          "Z3"
+        ],
+        "indices": [
+          4,
+          5,
+          14
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X5",
+            1
+          ],
+          [
+            "X5",
+            2
+          ],
+          [
+            "Z3",
+            1
+          ],
+          [
+            "Z3",
+            2
+          ]
+        ]
+      },
+      "B": {
+        "checks": [
+          "X4",
+          "X5",
+          "Z6"
+        ],
+        "indices": [
+          4,
+          5,
+          17
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X5",
+            1
+          ],
+          [
+            "X5",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "0": {
+        "checks": [
+          "X4",
+          "X5"
+        ],
+        "indices": [
+          4,
+          5
+        ],
+        "coordinates": [
+          [
+            "X4",
+            1
+          ],
+          [
+            "X4",
+            2
+          ],
+          [
+            "X5",
+            1
+          ],
+          [
+            "X5",
+            2
+          ]
+        ]
+      }
+    },
+    "scored_logical_Z": [
+      8,
+      10,
+      2
+    ],
+    "patch_lf_sha256": "6fc7bff2662a611ce9a67b3a96dae61ff1ac9a445960a3cb6734c289ccb04df9",
+    "baseline_mode": "sealed per-configuration reuse plus deterministic replay",
+    "baseline_commit": "1922a7b7ff7e30f0ead0781ac6aaf3b924038783"
+  },
+  "histories": 385648,
+  "counts": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "5858ae28389037b8a95d26b3148d82c80cf7cb0226f8aed03b6ebe828eac279c",
+  "credits": {
+    "thin": [
+      8.0,
+      2462.0,
+      374766.0
+    ],
+    "thick": [
+      8.0,
+      2470.0,
+      377955.0
+    ],
+    "AB": [
+      8.0,
+      2470.0,
+      377648.0
+    ],
+    "A": [
+      8.0,
+      2470.0,
+      377082.0
+    ],
+    "B": [
+      8.0,
+      2463.0,
+      375504.0
+    ],
+    "0": [
+      8.0,
+      2462.0,
+      374778.0
+    ]
+  },
+  "scores": {
+    "thin": 0.9975678415091334,
+    "thick": 0.9985988531896907,
+    "AB": 0.9985705443992486,
+    "A": 0.9985183529484667,
+    "B": 0.9977280120921874,
+    "0": 0.9975689480416587
+  },
+  "gains_pp": {
+    "thin": 0.0,
+    "thick": 0.10310116805573033,
+    "AB": 0.10027028901152812,
+    "A": 0.09505114393333347,
+    "B": 0.01601705830540645,
+    "0": 0.00011065325253856173
+  },
+  "recovered_percent": {
+    "AB": 97.2542706376789,
+    "A": 92.19211161793483,
+    "B": 15.5352830694882,
+    "0": 0.10732492621106794
+  },
+  "costs_pp": {
+    "A_loss_B_present": 0.08425323070612167,
+    "A_loss_B_absent": 0.09494049068079491,
+    "B_loss_A_present": 0.0052191450781946536,
+    "B_loss_A_absent": 0.01590640505286789,
+    "I": 0.010687259974673236
+  },
+  "validation": {
+    "new_arm_fullscan_checks": 192,
+    "new_arm_mismatches": 0,
+    "max_posterior_difference": 0.0,
+    "baseline_configuration_checks": 965,
+    "baseline_configuration_mismatches": 0,
+    "coordinate_assertions": 192
+  },
+  "baseline_equality": "exact sealed credit totals and binary-float scores; sampled per-config replay",
+  "elapsed_seconds": 372.2936141490936
+}

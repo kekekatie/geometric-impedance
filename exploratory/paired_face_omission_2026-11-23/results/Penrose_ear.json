@@ -1,0 +1,298 @@
+{
+  "site": {
+    "name": "Penrose_ear",
+    "edge": 13,
+    "qubit": 9,
+    "A": "Z7",
+    "A_role": "hallway",
+    "B": "Z6",
+    "B_role": "corner ear",
+    "endpoints": [
+      "X2",
+      "X6"
+    ],
+    "nx": 10,
+    "nz": 10,
+    "arms": {
+      "AB": {
+        "checks": [
+          "X2",
+          "X6",
+          "Z7",
+          "Z6"
+        ],
+        "indices": [
+          2,
+          6,
+          16,
+          17
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "A": {
+        "checks": [
+          "X2",
+          "X6",
+          "Z7"
+        ],
+        "indices": [
+          2,
+          6,
+          17
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z7",
+            1
+          ],
+          [
+            "Z7",
+            2
+          ]
+        ]
+      },
+      "B": {
+        "checks": [
+          "X2",
+          "X6",
+          "Z6"
+        ],
+        "indices": [
+          2,
+          6,
+          16
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ],
+          [
+            "Z6",
+            1
+          ],
+          [
+            "Z6",
+            2
+          ]
+        ]
+      },
+      "0": {
+        "checks": [
+          "X2",
+          "X6"
+        ],
+        "indices": [
+          2,
+          6
+        ],
+        "coordinates": [
+          [
+            "X2",
+            1
+          ],
+          [
+            "X2",
+            2
+          ],
+          [
+            "X6",
+            1
+          ],
+          [
+            "X6",
+            2
+          ]
+        ]
+      }
+    },
+    "scored_logical_Z": [
+      1,
+      9,
+      15
+    ],
+    "patch_lf_sha256": "29df1662d1c8dbb38e3d486465c12e3fcff35d5aa8cbd73ca593958ce5d7a70c",
+    "baseline_mode": "full baseline replay",
+    "baseline_commit": "6236920f087a223ca3c0d701640afbe2a89ce5e7"
+  },
+  "histories": 385648,
+  "counts": [
+    8,
+    2480,
+    383160
+  ],
+  "configurations": 48206,
+  "config_stream_sha256": "b096c5bfb05ce20337d9e31833f58f9bd2c261221f7f9ac1698b66cf3b7bed09",
+  "credits": {
+    "thin": [
+      8.0,
+      2462.0,
+      376152.0
+    ],
+    "thick": [
+      8.0,
+      2470.0,
+      378909.0
+    ],
+    "AB": [
+      8.0,
+      2470.0,
+      378783.0
+    ],
+    "A": [
+      8.0,
+      2470.0,
+      378442.0
+    ],
+    "B": [
+      8.0,
+      2463.0,
+      376683.0
+    ],
+    "0": [
+      8.0,
+      2462.0,
+      376164.0
+    ]
+  },
+  "scores": {
+    "thin": 0.9976956460158191,
+    "thick": 0.9986868225254614,
+    "AB": 0.9986752039339444,
+    "A": 0.9986437599680139,
+    "B": 0.9978367289128096,
+    "0": 0.9976967525483444
+  },
+  "gains_pp": {
+    "thin": 0.0,
+    "thick": 0.09911765096423109,
+    "AB": 0.09795579181253178,
+    "A": 0.09481139521948512,
+    "B": 0.014108289699055199,
+    "0": 0.00011065325253856173
+  },
+  "recovered_percent": {
+    "AB": 98.82779793468008,
+    "A": 95.65540980556533,
+    "B": 14.23388222158988,
+    "0": 0.11163829193096347
+  },
+  "costs_pp": {
+    "A_loss_B_present": 0.08384750211347658,
+    "A_loss_B_absent": 0.09470074196694656,
+    "B_loss_A_present": 0.003144396593046661,
+    "B_loss_A_absent": 0.013997636446516637,
+    "I": 0.010853239853469976
+  },
+  "validation": {
+    "new_arm_fullscan_checks": 192,
+    "new_arm_mismatches": 0,
+    "max_posterior_difference": 0.0,
+    "baseline_configuration_checks": 965,
+    "baseline_configuration_mismatches": 0,
+    "coordinate_assertions": 192,
+    "recovery_joint_configuration_checks": 193
+  },
+  "baseline_equality": "same exact weighted half-credit score; last-bit float differences disclosed",
+  "baseline_precision": {
+    "method": "unique exact weighted half-credit lattice point; last-bit float differences disclosed",
+    "score_quantum_pp": 4.610552189237717e-06,
+    "comparisons": {
+      "thick": {
+        "sealed_gain_pp": 0.09911765096420888,
+        "replayed_gain_pp": 0.09911765096423109,
+        "difference_pp": 2.220446049250313e-14,
+        "literal_float_equal": false,
+        "exact_gain_fraction": "89575/903724",
+        "doubled_weighted_credit_difference": 21498
+      },
+      "AB": {
+        "sealed_gain_pp": 0.09795579181253178,
+        "replayed_gain_pp": 0.09795579181253178,
+        "difference_pp": 0.0,
+        "literal_float_equal": true,
+        "exact_gain_fraction": "88525/903724",
+        "doubled_weighted_credit_difference": 21246
+      },
+      "A": {
+        "sealed_gain_pp": 0.09481139521946291,
+        "replayed_gain_pp": 0.09481139521948512,
+        "difference_pp": 2.220446049250313e-14,
+        "literal_float_equal": false,
+        "exact_gain_fraction": "128525/1355586",
+        "doubled_weighted_credit_difference": 20564
+      },
+      "B": {
+        "sealed_gain_pp": 0.014108289699055199,
+        "replayed_gain_pp": 0.014108289699055199,
+        "difference_pp": 0.0,
+        "literal_float_equal": true,
+        "exact_gain_fraction": "6375/451862",
+        "doubled_weighted_credit_difference": 3060
+      }
+    }
+  },
+  "recovered_complete_csv": true,
+  "elapsed_seconds": 32.92477083206177
+}

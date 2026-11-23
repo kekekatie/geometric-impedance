@@ -1,0 +1,1974 @@
+{
+  "identity": "exact integer parent-lattice lift tuples; common projected coordinates agree within 1e-12",
+  "same_lost_physical_edge": true,
+  "old": {
+    "name": "AB_1",
+    "n": 21,
+    "nx": 11,
+    "nz": 9,
+    "faces": 9,
+    "vertices": 18,
+    "edges": 26,
+    "loss": {
+      "edge": 14,
+      "qubit": 10,
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ],
+      "xy": [
+        [
+          1.4142135623730951,
+          2.0
+        ],
+        [
+          0.7071067811865477,
+          2.7071067811865475
+        ]
+      ],
+      "endpoint_checks": [
+        "X4",
+        "X5"
+      ]
+    },
+    "incident_faces": {
+      "Z3": {
+        "face_id": 3,
+        "physical_vertices": [
+          [
+            0,
+            0,
+            2,
+            -1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            -1
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ]
+        ],
+        "xy": [
+          [
+            0.7071067811865476,
+            1.2928932188134525
+          ],
+          [
+            1.4142135623730951,
+            2.0
+          ],
+          [
+            0.7071067811865477,
+            2.7071067811865475
+          ],
+          [
+            1.2246467991473532e-16,
+            2.0
+          ]
+        ],
+        "data_support": [
+          5,
+          6,
+          7,
+          10
+        ],
+        "physical_data_edges": [
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        ],
+        "neighbours": [
+          "Z0",
+          "Z2",
+          "Z6"
+        ],
+        "boundary_edges": [
+          {
+            "edge": 7,
+            "qubit": 5,
+            "kind": "smooth",
+            "physical_edge": [
+              [
+                0,
+                0,
+                2,
+                -1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ]
+            ]
+          }
+        ],
+        "corner_graph_degrees": [
+          3,
+          3,
+          5,
+          5
+        ]
+      },
+      "Z6": {
+        "face_id": 6,
+        "physical_vertices": [
+          [
+            0,
+            1,
+            2,
+            -1
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            2,
+            -1
+          ],
+          [
+            0,
+            2,
+            2,
+            0
+          ]
+        ],
+        "xy": [
+          [
+            1.4142135623730951,
+            2.0
+          ],
+          [
+            2.121320343559643,
+            2.7071067811865475
+          ],
+          [
+            1.4142135623730954,
+            3.414213562373095
+          ],
+          [
+            0.7071067811865477,
+            2.7071067811865475
+          ]
+        ],
+        "data_support": [
+          10,
+          11,
+          14,
+          15
+        ],
+        "physical_data_edges": [
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              2,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ]
+        ],
+        "neighbours": [
+          "Z3",
+          "Z7"
+        ],
+        "boundary_edges": [
+          {
+            "edge": 18,
+            "qubit": 14,
+            "kind": "smooth",
+            "physical_edge": [
+              [
+                0,
+                1,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                2,
+                0
+              ]
+            ]
+          },
+          {
+            "edge": 19,
+            "qubit": 15,
+            "kind": "smooth",
+            "physical_edge": [
+              [
+                0,
+                2,
+                2,
+                -1
+              ],
+              [
+                0,
+                2,
+                2,
+                0
+              ]
+            ]
+          }
+        ],
+        "corner_graph_degrees": [
+          2,
+          3,
+          5,
+          5
+        ]
+      }
+    },
+    "shortest_X_through_loss": [
+      {
+        "qubits": [
+          5,
+          10,
+          14
+        ],
+        "edges": [
+          7,
+          14,
+          18
+        ],
+        "physical_edges": [
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "qubits": [
+          5,
+          10,
+          15
+        ],
+        "edges": [
+          7,
+          14,
+          19
+        ],
+        "physical_edges": [
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              2,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ]
+        ]
+      }
+    ],
+    "scored_logical_Z": [
+      8,
+      10,
+      2
+    ],
+    "scored_logical_Z_physical": [
+      [
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ]
+    ]
+  },
+  "new": {
+    "name": "AB_bal",
+    "n": 21,
+    "nx": 10,
+    "nz": 10,
+    "faces": 10,
+    "vertices": 19,
+    "edges": 28,
+    "loss": {
+      "edge": 14,
+      "qubit": 9,
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ],
+      "xy": [
+        [
+          1.4142135623730951,
+          2.0
+        ],
+        [
+          0.7071067811865477,
+          2.7071067811865475
+        ]
+      ],
+      "endpoint_checks": [
+        "X2",
+        "X3"
+      ]
+    },
+    "incident_faces": {
+      "Z3": {
+        "face_id": 3,
+        "physical_vertices": [
+          [
+            0,
+            0,
+            2,
+            -1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            -1
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ]
+        ],
+        "xy": [
+          [
+            0.7071067811865476,
+            1.2928932188134525
+          ],
+          [
+            1.4142135623730951,
+            2.0
+          ],
+          [
+            0.7071067811865477,
+            2.7071067811865475
+          ],
+          [
+            1.2246467991473532e-16,
+            2.0
+          ]
+        ],
+        "data_support": [
+          3,
+          4,
+          5,
+          9
+        ],
+        "physical_data_edges": [
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        ],
+        "neighbours": [
+          "Z0",
+          "Z2",
+          "Z6"
+        ],
+        "boundary_edges": [
+          {
+            "edge": 7,
+            "qubit": 3,
+            "kind": "smooth",
+            "physical_edge": [
+              [
+                0,
+                0,
+                2,
+                -1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ]
+            ]
+          }
+        ],
+        "corner_graph_degrees": [
+          3,
+          3,
+          5,
+          5
+        ]
+      },
+      "Z6": {
+        "face_id": 6,
+        "physical_vertices": [
+          [
+            0,
+            1,
+            2,
+            -1
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            2,
+            -1
+          ],
+          [
+            0,
+            2,
+            2,
+            0
+          ]
+        ],
+        "xy": [
+          [
+            1.4142135623730951,
+            2.0
+          ],
+          [
+            2.121320343559643,
+            2.7071067811865475
+          ],
+          [
+            1.4142135623730954,
+            3.414213562373095
+          ],
+          [
+            0.7071067811865477,
+            2.7071067811865475
+          ]
+        ],
+        "data_support": [
+          9,
+          10,
+          13,
+          14
+        ],
+        "physical_data_edges": [
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              -1
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              2,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ]
+        ],
+        "neighbours": [
+          "Z3",
+          "Z7",
+          "Z8"
+        ],
+        "boundary_edges": [
+          {
+            "edge": 20,
+            "qubit": 14,
+            "kind": "smooth",
+            "physical_edge": [
+              [
+                0,
+                2,
+                2,
+                -1
+              ],
+              [
+                0,
+                2,
+                2,
+                0
+              ]
+            ]
+          }
+        ],
+        "corner_graph_degrees": [
+          3,
+          3,
+          5,
+          5
+        ]
+      }
+    },
+    "shortest_X_through_loss": [
+      {
+        "qubits": [
+          3,
+          9,
+          14
+        ],
+        "edges": [
+          7,
+          14,
+          20
+        ],
+        "physical_edges": [
+          [
+            [
+              0,
+              0,
+              2,
+              -1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              2,
+              2,
+              -1
+            ],
+            [
+              0,
+              2,
+              2,
+              0
+            ]
+          ]
+        ]
+      }
+    ],
+    "scored_logical_Z": [
+      3,
+      1,
+      0
+    ],
+    "scored_logical_Z_physical": [
+      [
+        [
+          0,
+          0,
+          2,
+          -1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      [
+        [
+          -1,
+          0,
+          2,
+          0
+        ],
+        [
+          -1,
+          1,
+          2,
+          0
+        ]
+      ]
+    ]
+  },
+  "added_tiles": [
+    {
+      "face_id": 8,
+      "check": "Z8",
+      "physical_vertices": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          0
+        ]
+      ],
+      "xy": [
+        [
+          0.7071067811865477,
+          2.7071067811865475
+        ],
+        [
+          1.4142135623730954,
+          3.414213562373095
+        ],
+        [
+          1.4142135623730954,
+          4.414213562373095
+        ],
+        [
+          0.7071067811865478,
+          3.7071067811865475
+        ]
+      ],
+      "all_face_neighbours": [
+        "Z1",
+        "Z6"
+      ],
+      "incident_faces_touched_by_edge": [
+        {
+          "check": "Z6",
+          "shared_physical_edges": [
+            [
+              [
+                0,
+                1,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                2,
+                0
+              ]
+            ]
+          ]
+        }
+      ],
+      "incident_vertex_contacts": {
+        "Z3": [
+          [
+            0,
+            1,
+            2,
+            0
+          ]
+        ],
+        "Z6": [
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            2,
+            0
+          ]
+        ]
+      }
+    }
+  ],
+  "removed_tiles": [],
+  "exactly_one_added_tile": true,
+  "boundary_assignment_changes": [
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 5,
+      "new_edge": 5,
+      "old_q": 3,
+      "new_q": null,
+      "before": "smooth",
+      "after": "rough"
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "old_edge": 6,
+      "new_edge": 6,
+      "old_q": 4,
+      "new_q": null,
+      "before": "smooth",
+      "after": "rough"
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          1,
+          -2
+        ]
+      ],
+      "old_edge": 11,
+      "new_edge": 11,
+      "old_q": null,
+      "new_q": 6,
+      "before": "rough",
+      "after": "smooth"
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ]
+      ],
+      "old_edge": 17,
+      "new_edge": 17,
+      "old_q": 13,
+      "new_q": 12,
+      "before": "smooth",
+      "after": "interior"
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 18,
+      "new_edge": 18,
+      "old_q": 14,
+      "new_q": 13,
+      "before": "smooth",
+      "after": "interior"
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          2,
+          -2
+        ]
+      ],
+      "old_edge": 22,
+      "new_edge": 24,
+      "old_q": null,
+      "new_q": 17,
+      "before": "rough",
+      "after": "smooth"
+    }
+  ],
+  "edge_qubit_renumbering": [
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 5,
+      "new_edge": 5,
+      "old_q": 3,
+      "new_q": null
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "old_edge": 6,
+      "new_edge": 6,
+      "old_q": 4,
+      "new_q": null
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          2,
+          -1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 7,
+      "new_edge": 7,
+      "old_q": 5,
+      "new_q": 3
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 8,
+      "new_edge": 8,
+      "old_q": 6,
+      "new_q": 4
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 9,
+      "new_edge": 9,
+      "old_q": 7,
+      "new_q": 5
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          1,
+          -2
+        ]
+      ],
+      "old_edge": 11,
+      "new_edge": 11,
+      "old_q": null,
+      "new_q": 6
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 12,
+      "new_edge": 12,
+      "old_q": 8,
+      "new_q": 7
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "old_edge": 13,
+      "new_edge": 13,
+      "old_q": 9,
+      "new_q": 8
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 14,
+      "new_edge": 14,
+      "old_q": 10,
+      "new_q": 9
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          2,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 15,
+      "new_edge": 15,
+      "old_q": 11,
+      "new_q": 10
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          1,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 16,
+      "new_edge": 16,
+      "old_q": 12,
+      "new_q": 11
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ]
+      ],
+      "old_edge": 17,
+      "new_edge": 17,
+      "old_q": 13,
+      "new_q": 12
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 18,
+      "new_edge": 18,
+      "old_q": 14,
+      "new_q": 13
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          2,
+          2,
+          -1
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "old_edge": 19,
+      "new_edge": 20,
+      "old_q": 15,
+      "new_q": 14
+    },
+    {
+      "physical_edge": [
+        [
+          0,
+          2,
+          2,
+          -1
+        ],
+        [
+          1,
+          2,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 20,
+      "new_edge": 21,
+      "old_q": 16,
+      "new_q": 15
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "old_edge": 21,
+      "new_edge": 23,
+      "old_q": 17,
+      "new_q": 16
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          2,
+          -2
+        ]
+      ],
+      "old_edge": 22,
+      "new_edge": 24,
+      "old_q": null,
+      "new_q": 17
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 23,
+      "new_edge": 25,
+      "old_q": 18,
+      "new_q": 18
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          2,
+          -2
+        ],
+        [
+          1,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 24,
+      "new_edge": 26,
+      "old_q": 19,
+      "new_q": 19
+    },
+    {
+      "physical_edge": [
+        [
+          1,
+          1,
+          2,
+          -1
+        ],
+        [
+          1,
+          2,
+          2,
+          -1
+        ]
+      ],
+      "old_edge": 25,
+      "new_edge": 27,
+      "old_q": 20,
+      "new_q": 20
+    }
+  ],
+  "vertex_boundary_or_check_changes": [
+    {
+      "lift": [
+        0,
+        0,
+        1,
+        -1
+      ],
+      "old_id": 3,
+      "new_id": 3,
+      "old_rough": false,
+      "new_rough": true,
+      "old_check": "X1",
+      "new_check": null
+    },
+    {
+      "lift": [
+        0,
+        0,
+        2,
+        -1
+      ],
+      "old_id": 4,
+      "new_id": 4,
+      "old_rough": false,
+      "new_rough": true,
+      "old_check": "X2",
+      "new_check": null
+    },
+    {
+      "lift": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "old_id": 5,
+      "new_id": 5,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X3",
+      "new_check": "X1"
+    },
+    {
+      "lift": [
+        0,
+        1,
+        2,
+        -1
+      ],
+      "old_id": 8,
+      "new_id": 8,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X4",
+      "new_check": "X2"
+    },
+    {
+      "lift": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "old_id": 9,
+      "new_id": 9,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X5",
+      "new_check": "X3"
+    },
+    {
+      "lift": [
+        0,
+        2,
+        2,
+        -1
+      ],
+      "old_id": 11,
+      "new_id": 11,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X6",
+      "new_check": "X4"
+    },
+    {
+      "lift": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "old_id": 12,
+      "new_id": 12,
+      "old_rough": false,
+      "new_rough": true,
+      "old_check": "X7",
+      "new_check": null
+    },
+    {
+      "lift": [
+        1,
+        1,
+        1,
+        -2
+      ],
+      "old_id": 13,
+      "new_id": 14,
+      "old_rough": true,
+      "new_rough": false,
+      "old_check": null,
+      "new_check": "X5"
+    },
+    {
+      "lift": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "old_id": 14,
+      "new_id": 15,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X8",
+      "new_check": "X6"
+    },
+    {
+      "lift": [
+        1,
+        1,
+        2,
+        -2
+      ],
+      "old_id": 15,
+      "new_id": 16,
+      "old_rough": true,
+      "new_rough": false,
+      "old_check": null,
+      "new_check": "X7"
+    },
+    {
+      "lift": [
+        1,
+        1,
+        2,
+        -1
+      ],
+      "old_id": 16,
+      "new_id": 17,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X9",
+      "new_check": "X8"
+    },
+    {
+      "lift": [
+        1,
+        2,
+        2,
+        -1
+      ],
+      "old_id": 17,
+      "new_id": 18,
+      "old_rough": false,
+      "new_rough": false,
+      "old_check": "X10",
+      "new_check": "X9"
+    }
+  ],
+  "common_face_changes": [
+    {
+      "physical_vertices": [
+        [
+          -1,
+          1,
+          2,
+          0
+        ],
+        [
+          -1,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ]
+      ],
+      "old_check": "Z1",
+      "new_check": "Z1",
+      "old_neighbours": [
+        "Z0"
+      ],
+      "new_neighbours": [
+        "Z0",
+        "Z8"
+      ],
+      "physical_neighbours_changed": true,
+      "old_data_weight": 2,
+      "new_data_weight": 2,
+      "physical_data_support_changed": false
+    },
+    {
+      "physical_vertices": [
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_check": "Z2",
+      "new_check": "Z2",
+      "old_neighbours": [
+        "Z3",
+        "Z5"
+      ],
+      "new_neighbours": [
+        "Z3",
+        "Z5"
+      ],
+      "physical_neighbours_changed": false,
+      "old_data_weight": 4,
+      "new_data_weight": 2,
+      "physical_data_support_changed": true
+    },
+    {
+      "physical_vertices": [
+        [
+          0,
+          1,
+          1,
+          -2
+        ],
+        [
+          0,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "old_check": "Z4",
+      "new_check": "Z4",
+      "old_neighbours": [
+        "Z5",
+        "Z8"
+      ],
+      "new_neighbours": [
+        "Z5",
+        "Z9"
+      ],
+      "physical_neighbours_changed": false,
+      "old_data_weight": 2,
+      "new_data_weight": 3,
+      "physical_data_support_changed": true
+    },
+    {
+      "physical_vertices": [
+        [
+          0,
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          -1
+        ],
+        [
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      "old_check": "Z6",
+      "new_check": "Z6",
+      "old_neighbours": [
+        "Z3",
+        "Z7"
+      ],
+      "new_neighbours": [
+        "Z3",
+        "Z7",
+        "Z8"
+      ],
+      "physical_neighbours_changed": true,
+      "old_data_weight": 4,
+      "new_data_weight": 4,
+      "physical_data_support_changed": false
+    },
+    {
+      "physical_vertices": [
+        [
+          1,
+          1,
+          1,
+          -2
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          2,
+          -2
+        ],
+        [
+          1,
+          1,
+          2,
+          -1
+        ]
+      ],
+      "old_check": "Z8",
+      "new_check": "Z9",
+      "old_neighbours": [
+        "Z4",
+        "Z5"
+      ],
+      "new_neighbours": [
+        "Z4",
+        "Z5"
+      ],
+      "physical_neighbours_changed": false,
+      "old_data_weight": 3,
+      "new_data_weight": 4,
+      "physical_data_support_changed": true
+    }
+  ],
+  "logical_support_comparison": {
+    "common": 1,
+    "old_only": 1,
+    "new_only": 0
+  }
+}
