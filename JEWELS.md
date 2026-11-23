@@ -70,6 +70,48 @@ again.*
     (`10.5281/zenodo.21200994`), *Address or Weave* (`10.5281/zenodo.20322776`), *Silent
     Corruption* (`10.5281/zenodo.20405271`).
 
+## November 2026 — the quantum-memory turn
+
+*The programme crossed from classical aperiodic substrates into **surface-code quantum
+memory**: when a streaming decoder prunes old syndrome rounds, can it still re-judge a
+delayed atom-loss (erasure) report? Newest-first within each group. To read a file,
+`git show origin/<branch>:<path>`.*
+
+### The decoder line — "the skin outlives the archive"
+
+| what | branch | path |
+|---|---|---|
+| **Paired-face omission** (newest): frozen face-A/face-B comparisons (hallway vs corner ear vs middle yards), no directional prediction | `experiment/paired-face-omission-2026-11-23` | `exploratory/paired_face_omission_2026-11-23/PROTOCOL.md` |
+| **Role-reversal 2×2**: a local Z-face bottleneck vs a corner "ear" — AB_1 shows a **16×** face-omission split; `AB_bal` is the balanced control | `experiment/role-reversal-omission-2026-11-22` | `exploratory/role_reversal_omission_2026-11-22/HANDBACK.md` |
+| **Local witness omission**: leave-one-check-out — *which single old reading matters?* A Z-type adjacent face can carry far more load than its twin; endpoint (X) omissions have ~zero net cost yet still flip dozens of decisions in both directions (the seed for Job 1, the zero-net-pairing question) | `experiment/local-witness-omission-2026-11-20` (`1922a7b`) | `exploratory/local_witness_omission_2026-11-20/HANDBACK.md` |
+| **Fresh-site address audit**: the ten fresh sites had **wrong** numeric local-query addresses; corrected, the four incident checks recover **97–99%** of the full-archive gain — reversing the earlier "local bracket recovers almost none" sub-claim. The *route* prediction (where forgetting hurts) survives | `audit/fresh-site-addresses-2026-11-20` | `exploratory/fresh_site_address_audit_2026-11-20/HANDBACK.md` |
+| **Aperiodic route prediction** (pre-registered): on a fresh AB/Penrose patch the archive helps more at a loss edge on a shortest X-logical route than off it. **Held on all three fresh pairs** (Δ up to +0.12 pp; CIs exclude zero), cleanest on the degree-matched Penrose pair — so it is logical incidence, not endpoint degree | `claude/aperiodic-predict-2026-11-20` | `exploratory/aperiodic_predict_2026-11-20/HANDBACK.md` |
+| **18-site decoder pilot**: cost of forgetting is set by **logical incidence, not vertex degree** — the degree-fixed square control is flat except at its one on-logical edge (S6, +0.11 pp) | `claude/aperiodic-decoder-pilot-2026-11-19` | `exploratory/aperiodic_decoder_pilot_2026-11-19/HANDBACK.md` |
+| **Certified patches**: matched square / Ammann–Beenker / Penrose edge-qubit patches (21 data, `(3,3)`, k=1, six eligible loss edges each) with independent certificates | `exploratory/aperiodic-qec-geometry-2026-11-19` | `exploratory/aperiodic_qec_geometry_2026-11-19/HANDBACK.md` |
+| **Pass-2 paired cap audit** (independent): raising decoder caps can *erase* the archive margin on the diagnostic panel; the "sentences you may / may not use" discipline | `audit/pass2-paired-2026-11-17` | `exploratory/reconsideration_witness/pass2_audit_2026-11-17/HANDBACK.md` |
+| **Distance-5 feasibility + the manuscript**: a tractable bounded-`(3,3)` decoder scaled to d=5; the archive's truth advantage **collapses ~126×** and the *thin* record (not the local bracket) catches up; Pass 1 (within-stratum, ties) and Pass 2 (k=3 re-awakening); full manuscript *The Skin Outlives the Archive* | `claude/distance5-feasibility-2026-11-16` | `exploratory/reconsideration_witness/distance5_2026-11-16/` (`HANDBACK_D5/PASS1/PASS2.md`), `.../manuscript/MANUSCRIPT.md` |
+| **Distance-3 geometry trio**: bulk-vs-edge (the local diamond weakens at the edge), conjugate edge (degradation set by bracket **size**, not sector), corner (non-monotonic — the two-check **corner beats the three-check edges**: position, not count) | `claude/distance3-edge-loss-2026-11-15`, `claude/distance3-conjugate-edge-2026-11-16`, `claude/distance3-corner-2026-11-16` | `exploratory/reconsideration_witness/{edge_loss_2026-11-15,conjugate_edge_2026-11-16,corner_2026-11-16}/HANDBACK_*.md` |
+| **Corrected d=3 bulk landmark** (Astra's `E_frame` correction + cold restart): the audited decoder the whole aperiodic line reuses | `fix/distance3-bulk-audit-2026-11-14` | `exploratory/reconsideration_witness/correction_2026-11-14/src/model.py` |
+
+*Deposit: the distance-5 manuscript **The Skin Outlives the Archive** was deposited on
+Zenodo (per Katie; DOI not yet recorded in a branch). The decoder branches otherwise cite,
+but do not themselves deposit, the programme's prior papers.*
+
+### The "theorem thing" — kept separate from the decoder papers
+
+| what | branch | path |
+|---|---|---|
+| **Unit-norm conjugacy identity**: *protection radius × memory quantum = 1* — a clean algebraic bridge between the code-distance work and the memory programme; planned paper **"The Code That Cannot Remember."** Deliberately kept apart from the decoder experiments | `gemini/norm-identity-check` | `exploratory/norm_identity_check/norm_identity_check.py`, `docs/BRIDGE_PAPER_BLUEPRINT.md` |
+
+### The scar trilogy and follow-up (classical substrate; on `retention-paper`)
+
+| what | branch | path |
+|---|---|---|
+| **Address re-query**: can the skin's hidden (perpendicular-space) address re-judge a dormant scar? | `claude/address-requery-2026-11-10` (consolidated on `retention-paper`) | `exploratory/accretion_pilot/address_requery_2026-11-10/HANDBACK.md` |
+| **Address gap-fill**: what does the hidden address put in the gap a scar leaves? | `claude/address-gapfill-2026-11-10` (on `retention-paper`) | `exploratory/accretion_pilot/address_gapfill_2026-11-10/HANDBACK.md` |
+| **Scar heal** — with its correction note: *"healing is forgetting wearing a nicer name"* | `claude/scar-heal-2026-11-10` (on `retention-paper`) | `exploratory/accretion_pilot/scar_heal_2026-11-10/HANDBACK.md` |
+| The retention paper that gathers the scar line + the matched-scale *Silent Corruption* (AB address `AUC 0.986` vs Penrose `0.661`) | `retention-paper` | `README.md`, `silent_corruption/` |
+
 ## Already on the front page (`master`)
 
 `exploratory/accretion_pilot/` (the accretion and tiling trail; the transmission paper),
