@@ -1,19 +1,19 @@
-# Which Old Readings Matter? Local Geometry, Load-Bearing Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes
+# Which Old Readings Matter? Local Geometry, Bottleneck Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes
 
 **K. T. Niedzwiecki**  
 Independent Researcher, South Australia  
-22 November 2026 *(Draft v0.1 — working manuscript)*
+23 November 2026 *(Draft v0.3 — working manuscript)*
 
 ---
 
 ## Abstract
 
-When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms a memoryless ("thin") decoder — especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: **which specific archived readings actually carry that decoding advantage, and what determines how the load is shared?** Using exhaustive zero-, one-, and two-fault evaluation (385,648 histories per site; bounded `(3,3)` decoder, $p = 0.001$) across five `n=21`, distance-`(3,3)` Ammann–Beenker (AB) and Penrose patches, we find four results:
+When a data qubit is lost on a surface-code patch, a decoder with access to past stabilizer readings outperforms an archive-free ("thin", boundary-summary-only) decoder — especially when the lost edge sits on a shortest logical route. Here we ask a sharper follow-up question: **which specific archived readings actually carry that decoding advantage, and what determines how the load is shared?** Using exhaustive zero-, one-, and two-fault evaluation (385,648 histories per site; bounded `(3,3)` decoder, $p = 0.001$) across five `n=21`, distance-`(3,3)` Ammann–Beenker (AB) and Penrose patches, we find four results:
 
 - **The "Narrow Now" holds across both tilings.** Once an indexing bug in the original adapter is corrected (11-check address audit), keeping just **eight** archived readings — two early rounds from the four stabilizer checks incident to the lost edge — recovers **97.25–99.26%** of the full-archive accuracy gain across all five tested sites.
-- **Hidden load-bearing faces.** Withholding just two archived readings from a single adjacent Z-face reveals a striking split on `AB_1 (e14)`: omitting face `Z3` collapses surviving gain to **15.54%** (`+0.08425 pp` cost), whereas omitting its partner `Z6` retains **92.19%** (`+0.00522 pp` cost) — a **16.14×** cost ratio between two weight-4 Z-checks sharing the same lost edge. By contrast, `Penrose_1 (e14)` (**77.51%** vs. **77.71%**) and `Penrose_2 (e4)` (**80.82%** vs. **81.12%**) share the load nearly 50/50.
-- **Local geometry — not tiling family — drives the collapse (2×2 role reversal).** A complete census of all 1,220 on-route eligible edges in the frozen `n=21, d=(3,3)` AB and Penrose pools shows that **only two** local face-pair geometries occur in either family: *Mirror Middle Yards* (both faces have 1 smooth boundary edge and 3 neighboring Z-faces; 86.5% in AB, 91.1% in Penrose) and *Hallway vs. Corner Ear* (one middle-yard bridge paired with a protruding 2-boundary-edge ear terminating in a degree-2 corner vertex; 13.5% in AB, 8.9% in Penrose). In a pre-registered 2×2 role reversal:
-  1. Adding **one extra tile** to `AB_1` (`AB_bal`) fills in `Z6`'s corner ear, lifting `Z3`'s surviving gain from **15.54% → 72.59%** and cutting the face cost ratio by more than 8× (**16.14× → 1.96×**).
+- **Hidden bottleneck faces.** Withholding just two archived readings from a single adjacent Z-face reveals a 16-fold split on `AB_1 (e14)`: omitting face `Z3` collapses surviving gain to **15.54%** (`+0.08425 pp` cost), whereas omitting its partner `Z6` retains **92.19%** (`+0.00522 pp` cost) — a **16.14×** cost ratio between two weight-4 Z-checks sharing the same lost edge. By contrast, `Penrose_1 (e14)` (**77.51%** vs. **77.71%**) and `Penrose_2 (e4)` (**80.82%** vs. **81.12%**) share the load nearly 50/50.
+- **Local geometry drives the collapse across both tiling families (2×2 role reversal).** A complete census of all 1,220 on-route eligible edges in the frozen `n=21, d=(3,3)` AB and Penrose pools shows that **only two** local face-pair geometries occur in either family: *Mirror Middle Yards* (both faces have 1 smooth boundary edge and 3 neighboring Z-faces; 86.5% in AB, 91.1% in Penrose) and *Hallway vs. Corner Ear* (one middle-yard bridge paired with a protruding 2-boundary-edge ear terminating in a degree-2 corner vertex; 13.5% in AB, 8.9% in Penrose). In a pre-registered 2×2 role reversal:
+  1. Adding **one extra tile** to `AB_1` touching `Z6` and re-cutting the boundary to keep `n=21, d=(3,3)` (`AB_bal`, preserving the exact same physical loss-edge endpoints) fills in `Z6`'s corner ear, lifting `Z3`'s surviving gain from **15.54% → 72.59%** and cutting the face cost ratio by more than 8× (**16.14× → 1.96×**).
   2. Selecting a Penrose cut with a degree-2 corner ear (`Penrose_ear`) reproduces and sharpens the collapse: omitting hallway `Z7` crashes surviving gain to **14.23%**, while omitting corner ear `Z6` retains **95.66%** (**26.67×** cost ratio).
 - **Zero-net-cost decision steering.** On `Penrose_2 (e4)`, withholding endpoint X-check `X5` produces **0.00000000 pp** net accuracy change while flipping **44 individual decoding decisions** (credit lost exactly equals credit gained). A flat aggregate score does not mean a witness is inert.
 
@@ -76,6 +76,8 @@ Withholding one incident check at a time across the three original sites (12 omi
 
 On `AB_1`, `Z3` and `Z6` are both weight-4 Z-checks sitting on opposite sides of the exact same lost edge `e14`, yet omitting `Z3` costs **16.14×** more than omitting `Z6`.
 
+*[Slot reserved for paired-face ("keep neither face") omission synergy table from `experiment/paired-face-omission-2026-11-23` — e.g., on `Penrose_1`, keeping either face retains ~78% while omitting both leaves 0.083%, interaction `+0.06898 pp`.]*
+
 ---
 
 ## 5. Pillar 3 — Local Bottleneck vs. Corner Ear, and the 2×2 Role-Reversal Test
@@ -95,7 +97,7 @@ Enumerating every on-route eligible edge in the frozen disk-cut generator shows 
 
 ### 5.3 Pre-registered 2×2 role reversal
 To separate local geometry from tiling family, we selected two role-reversal cuts from the frozen pool **before** running the decoder:
-1. **`AB_bal` (`spec=(22, 2, 2, 10)`, `corners=(2, 5, 11, 15)`, `e14`):** `AB_1` plus **one extra tile** filling in `Z6`'s corner ear so `Z3` and `Z6` become locally matched middle yards (both 1 smooth boundary edge, 3 Z-neighbors, corner degrees `(3, 3, 5, 5)`, unique weight-3 X-logical).
+1. **`AB_bal` (`spec=(22, 2, 2, 10)`, `corners=(2, 5, 11, 15)`, `e14`):** `AB_1` plus **one extra tile** (new `Z8`, sharing an edge with `Z6` and meeting `Z3` at a vertex) together with the boundary re-cut needed to maintain `n=21, d=(3,3)` (4 boundary edges swap rough/smooth assignment, 2 become interior, check split shifts from `11 X / 9 Z` to `10 X / 10 Z`). The physical loss-edge endpoints are identical (`q10 → q9`), one of the two shortest X-logicals through the loss disappears while the other survives physically, and `Z3` and `Z6` become locally matched middle yards (both 1 smooth boundary edge, 3 Z-neighbors, corner degrees `(3, 3, 5, 5)`).
 2. **`Penrose_ear` (`spec=(7, 1, 3, 10)`, `corners=(0, 4, 9, 13)`, `e13`):** exact structural twin of `AB_1`, pairing hallway `Z7` (1 smooth boundary edge, 3 Z-neighbors) with corner ear `Z6` (2 smooth boundary edges meeting at a degree-2 tip, 2 Z-neighbors, forked exits).
 
 ![Figure 3: Measured 2x2 role-reversal result](figures/fig3_role_reversal_2x2.png)
@@ -118,7 +120,7 @@ Aggregate accuracy can conceal active decision-level movement. On `Penrose_2 (e4
 ## 7. Guardrails, Caveats, and Scope
 
 1. **Z-check vs. X-check caveat:** Adjacent faces are Z-checks directly measuring the syndrome of X faults that flip the scored Z logical, whereas endpoints are X-checks (entering mainly through shared-onset inference). This naturally explains why faces outweigh endpoints overall, while leaving every **face-vs.-face** comparison (`Z3` vs. `Z6`, `Z7` vs. `Z1`, `Z1` vs. `Z4`, `Z7` vs. `Z6`) strictly controlled.
-2. **Local geometry, not a universal family law:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose separation. Moreover, follow-up inspection of `AB_bal` shows that `Z3` and `Z6` are exact local mirror twins through both the first and second neighbor rings (identical `(w4 smooth, w2 rough, w4 smooth)` first-ring neighbors, identical `(3, 3, 5, 5)` corner degrees, and identical 4-vs.-4 overlap with weight-4 X-logicals through `q9`). Its mild residual **1.96×** ratio (`72.59%` vs. `85.69%`) instead reflects global patch asymmetry and the placement of the fixed `scored_logical_Z` representative (`[3, 1, 0]`), which threads `Z3`'s boundary edge (`q3`) and immediate neighbor `Z0` (`q0, q1`) while having zero overlap with `Z6` or `Z7`. Thus first-ring corner-ear geometry drives the order-of-magnitude (~16–27×) collapse, while global/observable placement can still produce a ~2× tilt.
+2. **Local geometry, not a universal family law:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose separation. Follow-up inspection of `AB_bal` confirms that `Z3` and `Z6` are exact local mirror twins through both the first and second neighbor rings (identical `(w4 smooth, w2 rough, w4 smooth)` first-ring neighbors, identical `(3, 3, 5, 5)` corner degrees, and identical 4-vs.-4 overlap with weight-4 X-logicals through `q9`), while global patch geometry and the placement of the fixed `scored_logical_Z` representative (`[3, 1, 0]`, threading `Z3` and `Z0` while bypassing `Z6` and `Z7`) remain asymmetric. Thus first-ring corner-ear geometry drives the order-of-magnitude (~16–27×) collapse, while the exact causal driver of `AB_bal`'s mild residual **1.96×** ratio (`72.59%` vs. `85.69%`) remains open.
 3. **Scope and strict separation:** Results are established for bounded `(3,3)` decoding, exhaustive `k <= 2` ordinary faults at $p = 0.001$, across five `n=21, d=(3,3)` cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (`norm_identity_check.py` / the unwritten July skeleton).
 
 ---
