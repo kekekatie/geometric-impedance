@@ -1,0 +1,111 @@
+{
+  "tag": "Penrose_center_LZ",
+  "meta": {
+    "tag": "Penrose_center_LZ",
+    "bucket_key": "((3, 7), 1, 1, ((3, 3, 3, 7), (3, 3, 3, 7)), 10, 10)",
+    "min_margin": 0.5278640450148826,
+    "mean_margin": 0.609423525324115,
+    "spec": [
+      15,
+      1,
+      0,
+      10
+    ],
+    "corners": [
+      7,
+      12,
+      16,
+      18
+    ],
+    "edge": 4,
+    "qubit": 3,
+    "logical_Z": [
+      12,
+      3,
+      0
+    ]
+  },
+  "full_archive_gain_pp": 0.09973546495759544,
+  "intact_gain_pp": 0.09886868114601377,
+  "intact_pct_of_full": 99.13091715975837,
+  "neither_face_gain_pp": 9.221104377843403e-05,
+  "neither_face_pct_of_full": 0.0924556212954333,
+  "interaction_I_pp": 0.04757167748854485,
+  "interaction_I_pct_of_full": 47.6978550295734,
+  "omissions": [
+    {
+      "omitted": "X0",
+      "index": 0,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 3,
+      "retained_indices": [
+        6,
+        11,
+        12
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09886868114601377,
+      "surviving_pct_of_full": 99.13091715975837,
+      "label_changes": 0,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "X6",
+      "index": 6,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 7,
+      "retained_indices": [
+        0,
+        11,
+        12
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09886868114601377,
+      "surviving_pct_of_full": 99.13091715975837,
+      "label_changes": 0,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "Z1",
+      "index": 11,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        0,
+        6,
+        12
+      ],
+      "cost_pp": 0.02567155458967907,
+      "gain_over_thin_pp": 0.0731971265563347,
+      "surviving_pct_of_full": 73.39127218934202,
+      "label_changes": 2768,
+      "tie_status_changes": 20
+    },
+    {
+      "omitted": "Z2",
+      "index": 12,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        0,
+        6,
+        11
+      ],
+      "cost_pp": 0.025533238024011418,
+      "gain_over_thin_pp": 0.07333544312200235,
+      "surviving_pct_of_full": 73.52995562128517,
+      "label_changes": 2709,
+      "tie_status_changes": 24
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1536,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 704.32
+}
