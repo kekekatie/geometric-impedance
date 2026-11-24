@@ -1,0 +1,112 @@
+{
+  "tag": "Penrose_35_center",
+  "meta": {
+    "tag": "Penrose_35_center",
+    "family": "Penrose",
+    "bucket_key": "((3, 5), 1, 1, ((3, 3, 4, 5), (3, 3, 4, 5)), 11, 9)",
+    "min_margin": 0.42705098314989487,
+    "mean_margin": 0.47745751410000004,
+    "spec": [
+      14,
+      1,
+      0,
+      9
+    ],
+    "corners": [
+      11,
+      14,
+      19,
+      20
+    ],
+    "edge": 14,
+    "qubit": 11,
+    "logical_Z": [
+      4,
+      11,
+      19
+    ]
+  },
+  "full_archive_gain_pp": 0.12144194466451319,
+  "intact_gain_pp": 0.11967149262384069,
+  "intact_pct_of_full": 98.54214123006395,
+  "neither_face_gain_pp": 6.454773064934471e-05,
+  "neither_face_pct_of_full": 0.05315110098710923,
+  "interaction_I_pp": 0.06924127277795344,
+  "interaction_I_pct_of_full": 57.01594533028471,
+  "omissions": [
+    {
+      "omitted": "X3",
+      "index": 3,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 3,
+      "retained_indices": [
+        10,
+        15,
+        16
+      ],
+      "cost_pp": 3.6884417498050937e-05,
+      "gain_over_thin_pp": 0.11963460820634264,
+      "surviving_pct_of_full": 98.51176917237008,
+      "label_changes": 110,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "X10",
+      "index": 10,
+      "type": "X",
+      "role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        3,
+        15,
+        16
+      ],
+      "cost_pp": 3.6884417498050937e-05,
+      "gain_over_thin_pp": 0.11963460820634264,
+      "surviving_pct_of_full": 98.51176917237008,
+      "label_changes": 94,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "Z4",
+      "index": 15,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        3,
+        10,
+        16
+      ],
+      "cost_pp": 0.024795549673728434,
+      "gain_over_thin_pp": 0.09487594295011226,
+      "surviving_pct_of_full": 78.12452543658597,
+      "label_changes": 2207,
+      "tie_status_changes": 28
+    },
+    {
+      "omitted": "Z5",
+      "index": 16,
+      "type": "Z",
+      "role": "face",
+      "weight": 4,
+      "retained_indices": [
+        3,
+        10,
+        15
+      ],
+      "cost_pp": 0.02557012244150947,
+      "gain_over_thin_pp": 0.09410137018233122,
+      "surviving_pct_of_full": 77.4867122247498,
+      "label_changes": 3605,
+      "tie_status_changes": 16
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1536,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 951.27
+}

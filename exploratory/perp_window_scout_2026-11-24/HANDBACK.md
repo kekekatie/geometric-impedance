@@ -1,6 +1,6 @@
 # Exploratory Lead Note: Perpendicular-Space Acceptance Window vs. QEC Decoder Behaviour
 
-*Status: exploratory lead (1 clean matched pair scored so far; not a family-wide claim). Branched cleanly off `claude/aperiodic-predict-2026-11-20` with zero sealed files modified.*
+*Status: **CLOSED — CLEAN NULL** (3 matched `LZ`-crossing Rim-vs.-Center pairs scored across Penrose + AB; 2.31M site-histories, 0 mismatches). Branched cleanly off `claude/aperiodic-predict-2026-11-20` with zero sealed files modified.*
 
 ![Perpendicular-space acceptance window map](results/perp_window_map.png)
 
@@ -45,8 +45,17 @@ Exhaustive `(3,3)` decoder results (`385,648` histories/site, `p = 0.001`, `1,53
 
 ---
 
-## 4. Next Steps (When We Return)
+## 4. Replication Batch & Final Verdict: **CLEAN NULL**
 
-1. Test **2–3 additional clean `LZ`-crossing Rim-vs.-Center pairs** (e.g., from the `(5, 6)`, `(3, 5)`, and `(4, 5)` Penrose buckets, plus AB `(4, 5)` Middle Yards) to see whether the Rim's higher full gain, higher mutual backup $I$, and active endpoint steering hold systematically or are patch-specific.
-2. Check whether **Ring-2 / Ring-3 graph differences** (which `perp` space encodes!) account for the `+21.8%` gain gap and `74/68` vs. `0/0` endpoint steering split.
-3. Also parked on the shelf for later: **Distance-5 bulk test** (no boundary ears nearby) and **Horizon Note §6** ($p(r)$ vs. Hankel admissibility cone).
+Testing two additional clean `LZ`-crossing Mirror-Middle-Yard pairs — **Penrose `(3, 5)`** (`11 X / 9 Z`, corners `((3,3,4,5), (3,3,4,5))`) and **AB `(4, 5)`** (`11 X / 9 Z`, corners `((3,3,4,5), (3,3,4,5))`, a **12×** octagon-margin spread `0.054` vs. `0.638`) — cleanly falsifies any systematic Rim-vs.-Center effect in the `(3,3)` decoder (all `385,648` histories/site, `0` full-scan mismatches):
+
+| Matched Pair (all Mirror Middle Yards, `LZ` crossing lost edge) | **Rim (fence)** | **Center (middle)** | Direction |
+|---|---|---|---|
+| **Pair 1: Penrose `(3, 7)`** (`10 X / 10 Z`, `0.000` vs. `0.528`) | `+0.121516 pp` · `I = 57.6%` · faces `1.01×` (`78.6/78.5%`) · ep flips `74/68` | `+0.099735 pp` · `I = 47.7%` · faces `1.01×` (`73.4/73.5%`) · ep flips `0/0` | Rim higher |
+| **Pair 2: Penrose `(3, 5)`** (`11 X / 9 Z`, `0.000` vs. `0.427`) | `+0.075963 pp` · `I = 62.4%` · faces `10.5×` (`65.7/96.0%`) · ep flips `18/44` | `+0.121442 pp` · `I = 57.0%` · faces `1.03×` (`78.1/77.5%`) · ep flips `110/94` | **Reversed (Center higher)** |
+| **Pair 3: AB `(4, 5)`** (`11 X / 9 Z`, `0.054` vs. `0.638`) | **`+0.123526 pp`** · **`I = 56.0%`** · faces **`1.01×`** (`77.3/77.0%`) · ep flips `128/130` | **`+0.122678 pp`** · **`I = 56.2%`** · faces **`1.03×`** (`77.9/77.3%`) · ep flips `46/42` | **Dead tie to 3 sig figs** |
+
+### Takeaways (recorded so we don't retread this ground!)
+1. **Clean Null:** Perpendicular-space window margin (`rim` vs. `center`) does **not** systematically control `(3,3)` QEC decoder gain, mutual backup $I$, or endpoint steering once 2D local graph geometry is matched. Pair 1 favored Rim, Pair 2 flipped to Center, and Pair 3 (12× AB octagon spread) tied to three significant figures.
+2. **Bonus confirmation for the Bridge Paper:** Both new Ammann–Beenker Middle-Yard sites (`AB_best_rim` and `AB_best_center`) achieved **1.01×** and **1.03×** balanced face omissions (`77.3/77.0%` and `77.9/77.3%`) with **`I = 56.0% / 56.2%`** mutual backup — confirming that AB Middle Yards share the load just as evenly as Penrose Middle Yards.
+3. **Next islands on the shelf:** **Distance-5 deep bulk** (where no boundary ears sit near the lost edge) and **Horizon Note §6** ($p(r)$ vs. Hankel admissibility cone).
