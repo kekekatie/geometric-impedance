@@ -17,8 +17,9 @@
 \title{\textbf{Which Old Readings Matter?}\\
 \large Local Geometry, Bottleneck Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes}
 \author{K.~T.~Niedzwiecki\\
-\small Independent Researcher, South Australia}
-\date{24 November 2026 \quad \textit{(Draft v0.5 --- Overleaf-ready manuscript)}}
+\small Independent Researcher, South Australia\\
+\small \texttt{niedzkatie@gmail.com}}
+\date{24 November 2026}
 
 \begin{document}
 \maketitle
@@ -210,11 +211,11 @@ Because adding the weight-3 $X$-logical threading the lost edge commutes with ev
     \item \textbf{$Z$-check vs.\ $X$-check roles:} Adjacent faces are $Z$-checks directly measuring the syndrome of $X$ faults that flip the scored $Z$ logical, whereas endpoints are $X$-checks (entering primarily through shared-onset inference). This naturally explains why faces outweigh endpoints overall---and why endpoint omissions sit at or near zero via $X$-logical twinning---while leaving every \emph{face-vs.-face} comparison strictly controlled.
     \item \textbf{Local geometry, accompanying code changes, and \texttt{AB\_bal}'s residual $1.96\times$:} The $16$--$27\times$ collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. As audited in \texttt{experiment/paired-face-omission-2026-11-23}, enlarging \texttt{AB\_1} by one tile to form \texttt{AB\_bal} keeps the exact same physical loss edge and tiles plus new \texttt{Z8}, but also re-cuts the boundary ($11/9 \to 10/10$) and shifts the scored $Z$ representative; it should therefore be read as returning to the same physical edge in a one-tile-enlarged code rather than holding all other code features fixed. Furthermore, while \texttt{Z3} and \texttt{Z6} on \texttt{AB\_bal} are exact local mirror twins through rings 1 and 2, global patch geometry and \texttt{scored\_logical\_Z} ($[3,1,0]$) remain asymmetric; the exact causal driver of \texttt{AB\_bal}'s mild residual \textbf{1.96$\times$} ratio ($72.59\%$ vs.\ $85.69\%$) remains open.
     \item \textbf{Accuracy-level substitution, not information-theoretic redundancy:} Positive interaction $I$ in Section~4.2 measures partial substitution \emph{at the decoder-accuracy level} (losing one face hurts more once its partner is gone). It does not prove that the two faces carry duplicate mutual information or isolate which individual fault histories carry $I$.
-    \item \textbf{Scope and strict separation:} Results are established for bounded $(3,3)$ decoding, exhaustive $k \le 2$ ordinary faults at $p = 0.001$, across five $n=21$, $d=(3,3)$ cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (\texttt{norm\_identity\_check.py}).
+    \item \textbf{Scope:} Results are established for bounded $(3,3)$ decoding, exhaustive $k \le 2$ ordinary faults at $p = 0.001$, across five $n=21$, $d=(3,3)$ cuts.
 \end{enumerate}
 
 \section{Provenance and Reproducibility}
-All scripts, patch JSONs, verification logs, and figures are archived in the \texttt{geometric-impedance} repository across six pinned branches:
+All scripts, patch JSONs, verification logs, and figures are archived in the public repository at \url{https://github.com/kekekatie/geometric-impedance} across six pinned branches:
 \begin{itemize}
     \item Prospective route prediction \& patch JSONs: \texttt{claude/aperiodic-predict-2026-11-20} (\texttt{fdeaa32})
     \item 11-check address audit (``Narrow Now''): \texttt{audit/fresh-site-addresses-2026-11-20} (\texttt{1f85f79})

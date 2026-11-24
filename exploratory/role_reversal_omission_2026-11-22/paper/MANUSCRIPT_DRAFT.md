@@ -1,8 +1,8 @@
 # Which Old Readings Matter? Local Geometry, Bottleneck Faces, and Zero-Net-Cost Steering in Aperiodic Surface Codes
 
 **K. T. Niedzwiecki**  
-Independent Researcher, South Australia  
-24 November 2026 *(Draft v0.5 — Overleaf-ready manuscript)*
+Independent Researcher, South Australia (`niedzkatie@gmail.com`)  
+24 November 2026
 
 ---
 
@@ -81,7 +81,7 @@ On `AB_1`, `Z3` and `Z6` are both weight-4 Z-checks sitting on opposite sides of
 ### 4.2 Covering both faces: mutual backup vs. single-face bottlenecks
 A natural follow-up asks what survives when **both** adjacent Z-faces are covered simultaneously, leaving only the two endpoint X-checks (`experiment/paired-face-omission-2026-11-23`, commit `9515df3`). Let $G_{AB}, G_A, G_B, G_0$ be the gains (over `thin`) when keeping both faces, face $A$ only, face $B$ only, or neither face, and let $I = (G_A - G_0) - (G_{AB} - G_B) = (G_B - G_0) - (G_{AB} - G_A)$ measure how much extra it costs to lose a face once its partner is already absent:
 
-![Figure 4: Four-arm paired-face retention comparison across all five sites](figures/fig4_paired_face_backup.png)
+![Figure 3: Four-arm paired-face retention comparison across all five sites](figures/fig4_paired_face_backup.png)
 
 | Site (`A` / `B`) | Local shape | Both (`%`) | `A` only (`%`) | `B` only (`%`) | Neither $G_0$ (`%`) | Interaction $I$ (`pp`) | $I$ as % of full gain |
 |---|---|---:|---:|---:|---:|---:|---:|
@@ -114,7 +114,7 @@ To separate local geometry from tiling family, we selected two role-reversal cut
 1. **`AB_bal` (`spec=(22, 2, 2, 10)`, `corners=(2, 5, 11, 15)`, `e14`):** `AB_1` enlarged by **one extra tile** (new `Z8`, sharing an edge with `Z6` and meeting `Z3` at a vertex) together with the boundary re-cut needed to maintain `n=21, d=(3,3)` (4 boundary edges swap rough/smooth assignment, 2 become interior, check split shifts `11 X / 9 Z → 10 X / 10 Z`, and the scored Z representative shifts physically). The physical loss-edge endpoints `(0,1,2,-1)` and `(0,1,2,0)` are identical (`q10 → q9`), one of the two shortest X-logicals through the loss disappears while the other survives physically, and `Z3` and `Z6` become locally matched middle yards (corner degrees `(3, 3, 5, 5)`).
 2. **`Penrose_ear` (`spec=(7, 1, 3, 10)`, `corners=(0, 4, 9, 13)`, `e13`):** exact structural twin of `AB_1`, pairing hallway `Z7` (1 smooth boundary edge, 3 Z-neighbors) with protruding degree-2 corner ear `Z6` (2 smooth boundary edges, 2 Z-neighbors, forked exits).
 
-![Figure 3: Measured 2x2 role-reversal result](figures/fig3_role_reversal_2x2.png)
+![Figure 4: Measured 2x2 role-reversal result](figures/fig3_role_reversal_2x2.png)
 
 | Local shape around the loss edge | Ammann–Beenker | Penrose |
 |---|---|---|
@@ -147,11 +147,13 @@ Because adding the weight-3 X-logical threading the lost edge commutes with ever
 1. **Z-check vs. X-check roles:** Adjacent faces are Z-checks directly measuring the syndrome of X faults that flip the scored Z logical, whereas endpoints are X-checks (entering mainly through shared-onset inference). This naturally explains why faces outweigh endpoints overall — and why endpoint omissions sit at or near zero via X-logical twinning — while leaving every **face-vs.-face** comparison strictly controlled.
 2. **Local geometry, accompanying code changes, and `AB_bal`'s residual `1.96×`:** The 16–27× collapse is a local bottleneck-vs.-corner-ear effect shared by both tilings, not an intrinsic AB-vs.-Penrose law. As audited in `experiment/paired-face-omission-2026-11-23`, enlarging `AB_1` by one tile to form `AB_bal` keeps the exact same physical loss edge and tiles plus `new Z8`, but also re-cuts the boundary (`11/9 → 10/10`) and shifts the scored Z representative, so it should be read as returning to the same physical edge in a one-tile-enlarged code rather than holding all other code features fixed. Furthermore, while `Z3` and `Z6` on `AB_bal` are exact local mirror twins through rings 1 and 2, global patch geometry and `scored_logical_Z = [3, 1, 0]` remain asymmetric; the exact causal driver of `AB_bal`'s mild residual **1.96×** ratio (`72.59%` vs. `85.69%`) remains open.
 3. **Accuracy-level substitution, not information-theoretic redundancy:** Positive interaction $I$ in §4.2 measures partial substitution *at the decoder-accuracy level* (losing one face hurts more once its partner is gone). It does not prove that the two faces carry duplicate mutual information or isolate which individual fault histories carry $I$.
-4. **Scope and strict separation:** Results are established for bounded `(3,3)` decoding, exhaustive `k <= 2` ordinary faults at $p = 0.001$, across five `n=21, d=(3,3)` cuts. This manuscript stands solely on these verified QEC decoder artifacts and is kept strictly separate from the algebraic unit-norm conjugacy work (`norm_identity_check.py`).
+4. **Scope:** Results are established for bounded `(3,3)` decoding, exhaustive `k <= 2` ordinary faults at $p = 0.001$, across five `n=21, d=(3,3)` cuts.
 
 ---
 
 ## 8. Provenance and Reproducibility
+
+All scripts, patch JSONs, verification logs, and figures are archived in the public repository at <https://github.com/kekekatie/geometric-impedance>:
 
 | Component | Branch / Commit | Key Paths |
 |---|---|---|
