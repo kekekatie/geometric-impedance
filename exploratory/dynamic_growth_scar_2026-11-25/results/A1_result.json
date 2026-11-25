@@ -1,0 +1,139 @@
+{
+  "step": "A1",
+  "meta": {
+    "step": "A1",
+    "label": "Half-swallow Ear (+762)",
+    "family": "AB",
+    "base": "AB_1",
+    "add_tiles": [
+      762
+    ],
+    "n_tiles": 10,
+    "n_qubits": 18,
+    "nx": 7,
+    "nz": 10,
+    "d": [
+      3,
+      3
+    ],
+    "corners": [
+      3,
+      8,
+      11,
+      16
+    ],
+    "edge": 14,
+    "qubit": 8,
+    "n_w3_on": 1,
+    "hallway_zcheck": "Z3",
+    "ear_zcheck": "Z6",
+    "scored_logical_Z": [
+      2,
+      3,
+      0
+    ]
+  },
+  "pool_size": 265,
+  "histories": 281968,
+  "histories_by_weight": [
+    8,
+    2120,
+    279840
+  ],
+  "config_stream_sha256": "9db7aea2f3a2dfd2c62b08b5630a633c82b7982adf591c45b6c1c66eeeaea926",
+  "full_archive_gain_pp": 0.09799909995715783,
+  "intact_gain_pp": 0.09670837070668847,
+  "intact_pct_of_full": 98.68291724002198,
+  "neither_face_gain_pp": 9.632307829132714e-06,
+  "neither_face_pct_of_full": 0.009828975810332605,
+  "interaction_I_pp": 0.057225540873373504,
+  "interaction_I_pct_of_full": 58.39394535091724,
+  "omissions": [
+    {
+      "omitted": "X2",
+      "index": 2,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        3,
+        10,
+        13
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09670837070668847,
+      "surviving_pct_of_full": 98.68291724002198,
+      "truth_gained_pp": 1.9264615678623058e-05,
+      "truth_lost_pp": 1.9264615678623058e-05,
+      "label_changes": 0,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "X3",
+      "index": 3,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        2,
+        10,
+        13
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.09670837070668847,
+      "surviving_pct_of_full": 98.68291724002198,
+      "truth_gained_pp": 1.9264615678623058e-05,
+      "truth_lost_pp": 1.9264615678623058e-05,
+      "label_changes": 0,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "Z3",
+      "index": 10,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "hallway",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        3,
+        13
+      ],
+      "cost_pp": 0.02585311424070369,
+      "gain_over_thin_pp": 0.07085525646598478,
+      "surviving_pct_of_full": 72.30194613722014,
+      "truth_gained_pp": 0.0380957775044771,
+      "truth_lost_pp": 0.06394889174518924,
+      "label_changes": 2576,
+      "tie_status_changes": 196
+    },
+    {
+      "omitted": "Z6",
+      "index": 13,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "ear",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        3,
+        10
+      ],
+      "cost_pp": 0.013620083284782147,
+      "gain_over_thin_pp": 0.08308828742190633,
+      "surviving_pct_of_full": 84.78474542952941,
+      "truth_gained_pp": 0.02437937114129748,
+      "truth_lost_pp": 0.03799945442608398,
+      "label_changes": 1474,
+      "tie_status_changes": 126
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1120,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 358.69
+}

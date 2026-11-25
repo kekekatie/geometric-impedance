@@ -1,0 +1,140 @@
+{
+  "step": "B2",
+  "meta": {
+    "step": "B2",
+    "label": "Extend outer ring (+158,+156)",
+    "family": "Penrose",
+    "base": "Penrose_ear",
+    "add_tiles": [
+      158,
+      156
+    ],
+    "n_tiles": 12,
+    "n_qubits": 23,
+    "nx": 10,
+    "nz": 12,
+    "d": [
+      3,
+      3
+    ],
+    "corners": [
+      9,
+      13,
+      18,
+      25
+    ],
+    "edge": 18,
+    "qubit": 11,
+    "n_w3_on": 1,
+    "hallway_zcheck": "Z9",
+    "ear_zcheck": "Z8",
+    "scored_logical_Z": [
+      17,
+      11,
+      0
+    ]
+  },
+  "pool_size": 340,
+  "histories": 463768,
+  "histories_by_weight": [
+    8,
+    2720,
+    461040
+  ],
+  "config_stream_sha256": "bc2b84e340b6cb398c73c71deb123771a7313611c77234940dd39aa3f5c1d21b",
+  "full_archive_gain_pp": 0.12110376975126291,
+  "intact_gain_pp": 0.12035123855883567,
+  "intact_pct_of_full": 99.37860630269984,
+  "neither_face_gain_pp": 8.062834204736191e-05,
+  "neither_face_pct_of_full": 0.06657789614061216,
+  "interaction_I_pp": 0.06965392882199994,
+  "interaction_I_pct_of_full": 57.51590471961635,
+  "omissions": [
+    {
+      "omitted": "X2",
+      "index": 2,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 6,
+      "retained_indices": [
+        6,
+        18,
+        19
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.12035123855883567,
+      "surviving_pct_of_full": 99.37860630269984,
+      "truth_gained_pp": 0.00033147207285075296,
+      "truth_lost_pp": 0.00033147207285075296,
+      "label_changes": 74,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "X6",
+      "index": 6,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        2,
+        18,
+        19
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.12035123855883567,
+      "surviving_pct_of_full": 99.37860630269984,
+      "truth_gained_pp": 0.00027771984482090117,
+      "truth_lost_pp": 0.00027771984482090117,
+      "label_changes": 62,
+      "tie_status_changes": 8
+    },
+    {
+      "omitted": "Z8",
+      "index": 18,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "ear",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        6,
+        19
+      ],
+      "cost_pp": 0.024967909919870745,
+      "gain_over_thin_pp": 0.09538332863896493,
+      "surviving_pct_of_full": 78.76165113181395,
+      "truth_gained_pp": 0.0588228548740012,
+      "truth_lost_pp": 0.08379076479386738,
+      "label_changes": 3947,
+      "tie_status_changes": 10
+    },
+    {
+      "omitted": "Z9",
+      "index": 19,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "hallway",
+      "weight": 4,
+      "retained_indices": [
+        2,
+        6,
+        18
+      ],
+      "cost_pp": 0.02564877147491762,
+      "gain_over_thin_pp": 0.09470246708391805,
+      "surviving_pct_of_full": 78.19943778664286,
+      "truth_gained_pp": 0.02541584515344828,
+      "truth_lost_pp": 0.05106461662835925,
+      "label_changes": 2543,
+      "tie_status_changes": 20
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1848,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 762.08
+}

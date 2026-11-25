@@ -1,0 +1,33 @@
+{
+  "step": "B1-H",
+  "label": "Bury Hallway (+289)",
+  "family": "Penrose",
+  "base": "Penrose_ear",
+  "add_tiles": [
+    289
+  ],
+  "n_tiles": 11,
+  "n_qubits": 24,
+  "nx": 12,
+  "nz": 11,
+  "d": [
+    3,
+    3
+  ],
+  "corners": [
+    1,
+    6,
+    11,
+    13
+  ],
+  "edge": 13,
+  "qubit": 8,
+  "n_w3_on": 0,
+  "hallway_zcheck": "Z7",
+  "ear_zcheck": "Z6",
+  "scored_logical_Z": [
+    5,
+    8,
+    14
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "step": "B2",
+  "label": "Extend outer ring (+158,+156)",
+  "family": "Penrose",
+  "base": "Penrose_ear",
+  "add_tiles": [
+    158,
+    156
+  ],
+  "n_tiles": 12,
+  "n_qubits": 23,
+  "nx": 10,
+  "nz": 12,
+  "d": [
+    3,
+    3
+  ],
+  "corners": [
+    9,
+    13,
+    18,
+    25
+  ],
+  "edge": 18,
+  "qubit": 11,
+  "n_w3_on": 1,
+  "hallway_zcheck": "Z9",
+  "ear_zcheck": "Z8",
+  "scored_logical_Z": [
+    17,
+    11,
+    0
+  ]
+}

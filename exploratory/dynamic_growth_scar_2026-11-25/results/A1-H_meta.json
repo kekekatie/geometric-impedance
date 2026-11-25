@@ -1,0 +1,33 @@
+{
+  "step": "A1-H",
+  "label": "Bury Hallway (+755)",
+  "family": "AB",
+  "base": "AB_1",
+  "add_tiles": [
+    755
+  ],
+  "n_tiles": 10,
+  "n_qubits": 19,
+  "nx": 8,
+  "nz": 10,
+  "d": [
+    3,
+    3
+  ],
+  "corners": [
+    13,
+    16,
+    20,
+    26
+  ],
+  "edge": 16,
+  "qubit": 11,
+  "n_w3_on": 0,
+  "hallway_zcheck": "Z4",
+  "ear_zcheck": "Z7",
+  "scored_logical_Z": [
+    1,
+    11,
+    9
+  ]
+}

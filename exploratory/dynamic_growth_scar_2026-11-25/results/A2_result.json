@@ -1,0 +1,140 @@
+{
+  "step": "A2",
+  "meta": {
+    "step": "A2",
+    "label": "Full-bury Ear (+762,+764)",
+    "family": "AB",
+    "base": "AB_1",
+    "add_tiles": [
+      762,
+      764
+    ],
+    "n_tiles": 11,
+    "n_qubits": 23,
+    "nx": 11,
+    "nz": 11,
+    "d": [
+      3,
+      3
+    ],
+    "corners": [
+      3,
+      8,
+      12,
+      14
+    ],
+    "edge": 14,
+    "qubit": 10,
+    "n_w3_on": 0,
+    "hallway_zcheck": "Z3",
+    "ear_zcheck": "Z6",
+    "scored_logical_Z": [
+      8,
+      10,
+      13
+    ]
+  },
+  "pool_size": 340,
+  "histories": 463768,
+  "histories_by_weight": [
+    8,
+    2720,
+    461040
+  ],
+  "config_stream_sha256": "67abeb3c4072e6ae48c7b638dca38df0ed47416582e85bba787f40b4d0b9324d",
+  "full_archive_gain_pp": 0.008618273894123174,
+  "intact_gain_pp": 0.005697736171161871,
+  "intact_pct_of_full": 66.1122661122104,
+  "neither_face_gain_pp": 4.4793523357178344e-05,
+  "neither_face_pct_of_full": 0.5197505197383339,
+  "interaction_I_pp": -0.00038522430088061554,
+  "interaction_I_pct_of_full": -4.469854469852729,
+  "omissions": [
+    {
+      "omitted": "X4",
+      "index": 4,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        5,
+        14,
+        17
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.005697736171161871,
+      "surviving_pct_of_full": 66.1122661122104,
+      "truth_gained_pp": 4.479352335820986e-06,
+      "truth_lost_pp": 4.479352335820986e-06,
+      "label_changes": 0,
+      "tie_status_changes": 2
+    },
+    {
+      "omitted": "X5",
+      "index": 5,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        4,
+        14,
+        17
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.005697736171161871,
+      "surviving_pct_of_full": 66.1122661122104,
+      "truth_gained_pp": 4.479352335820986e-06,
+      "truth_lost_pp": 4.479352335820986e-06,
+      "label_changes": 0,
+      "tie_status_changes": 2
+    },
+    {
+      "omitted": "Z3",
+      "index": 14,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "hallway",
+      "weight": 4,
+      "retained_indices": [
+        4,
+        5,
+        17
+      ],
+      "cost_pp": 0.003099711816390016,
+      "gain_over_thin_pp": 0.002598024354771855,
+      "surviving_pct_of_full": 30.145530145467475,
+      "truth_gained_pp": 0.0019082040950597404,
+      "truth_lost_pp": 0.005007915911447863,
+      "label_changes": 774,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "Z6",
+      "index": 17,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "ear",
+      "weight": 4,
+      "retained_indices": [
+        4,
+        5,
+        14
+      ],
+      "cost_pp": 0.0029384551322952923,
+      "gain_over_thin_pp": 0.002759281038866579,
+      "surviving_pct_of_full": 32.016632016628535,
+      "truth_gained_pp": 0.0017738235249851108,
+      "truth_lost_pp": 0.004712278657283678,
+      "label_changes": 726,
+      "tie_status_changes": 4
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1848,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 796.6
+}

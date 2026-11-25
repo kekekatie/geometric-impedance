@@ -1,0 +1,33 @@
+{
+  "step": "A1",
+  "label": "Half-swallow Ear (+762)",
+  "family": "AB",
+  "base": "AB_1",
+  "add_tiles": [
+    762
+  ],
+  "n_tiles": 10,
+  "n_qubits": 18,
+  "nx": 7,
+  "nz": 10,
+  "d": [
+    3,
+    3
+  ],
+  "corners": [
+    3,
+    8,
+    11,
+    16
+  ],
+  "edge": 14,
+  "qubit": 8,
+  "n_w3_on": 1,
+  "hallway_zcheck": "Z3",
+  "ear_zcheck": "Z6",
+  "scored_logical_Z": [
+    2,
+    3,
+    0
+  ]
+}

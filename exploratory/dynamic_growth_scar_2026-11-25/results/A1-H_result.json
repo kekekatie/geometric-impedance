@@ -1,0 +1,139 @@
+{
+  "step": "A1-H",
+  "meta": {
+    "step": "A1-H",
+    "label": "Bury Hallway (+755)",
+    "family": "AB",
+    "base": "AB_1",
+    "add_tiles": [
+      755
+    ],
+    "n_tiles": 10,
+    "n_qubits": 19,
+    "nx": 8,
+    "nz": 10,
+    "d": [
+      3,
+      3
+    ],
+    "corners": [
+      13,
+      16,
+      20,
+      26
+    ],
+    "edge": 16,
+    "qubit": 11,
+    "n_w3_on": 0,
+    "hallway_zcheck": "Z4",
+    "ear_zcheck": "Z7",
+    "scored_logical_Z": [
+      1,
+      11,
+      9
+    ]
+  },
+  "pool_size": 280,
+  "histories": 314728,
+  "histories_by_weight": [
+    8,
+    2240,
+    312480
+  ],
+  "config_stream_sha256": "3279e79e9dbdaad603e9ab92cbfa9bf2bc06a57c591464981e4ddef57d20ba0d",
+  "full_archive_gain_pp": 0.0077936270344025615,
+  "intact_gain_pp": 0.0051451228412324745,
+  "intact_pct_of_full": 66.01705237524092,
+  "neither_face_gain_pp": 1.8985693139850213e-05,
+  "neither_face_pct_of_full": 0.2436053593024625,
+  "interaction_I_pp": -0.0006834849530901188,
+  "interaction_I_pct_of_full": -8.769792935600913,
+  "omissions": [
+    {
+      "omitted": "X4",
+      "index": 4,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        5,
+        12,
+        15
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.0051451228412324745,
+      "surviving_pct_of_full": 66.01705237524092,
+      "truth_gained_pp": 0.0,
+      "truth_lost_pp": 0.0,
+      "label_changes": 0,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "X5",
+      "index": 5,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 5,
+      "retained_indices": [
+        4,
+        12,
+        15
+      ],
+      "cost_pp": 0.0,
+      "gain_over_thin_pp": 0.0051451228412324745,
+      "surviving_pct_of_full": 66.01705237524092,
+      "truth_gained_pp": 0.0,
+      "truth_lost_pp": 0.0,
+      "label_changes": 0,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "Z4",
+      "index": 12,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "hallway",
+      "weight": 4,
+      "retained_indices": [
+        4,
+        5,
+        15
+      ],
+      "cost_pp": 0.002800389738311093,
+      "gain_over_thin_pp": 0.0023447331029213814,
+      "surviving_pct_of_full": 30.08526187577723,
+      "truth_gained_pp": 0.0017941480018317396,
+      "truth_lost_pp": 0.00459453774014054,
+      "label_changes": 673,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "Z7",
+      "index": 15,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "ear",
+      "weight": 4,
+      "retained_indices": [
+        4,
+        5,
+        12
+      ],
+      "cost_pp": 0.00300923236287165,
+      "gain_over_thin_pp": 0.0021358904783608246,
+      "surviving_pct_of_full": 27.405602923165237,
+      "truth_gained_pp": 0.001984004933242506,
+      "truth_lost_pp": 0.004993237296103149,
+      "label_changes": 739,
+      "tie_status_changes": 8
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1256,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 422.05
+}

@@ -1,0 +1,33 @@
+{
+  "step": "B1",
+  "label": "Half-swallow Ear (+158)",
+  "family": "Penrose",
+  "base": "Penrose_ear",
+  "add_tiles": [
+    158
+  ],
+  "n_tiles": 11,
+  "n_qubits": 21,
+  "nx": 9,
+  "nz": 11,
+  "d": [
+    3,
+    3
+  ],
+  "corners": [
+    9,
+    13,
+    17,
+    23
+  ],
+  "edge": 15,
+  "qubit": 9,
+  "n_w3_on": 1,
+  "hallway_zcheck": "Z8",
+  "ear_zcheck": "Z7",
+  "scored_logical_Z": [
+    15,
+    9,
+    0
+  ]
+}
