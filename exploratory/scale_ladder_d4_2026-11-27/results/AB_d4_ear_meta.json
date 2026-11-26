@@ -1,0 +1,33 @@
+{
+  "site": "AB_d4_ear",
+  "family": "AB",
+  "n_tiles": 13,
+  "n_qubits": 28,
+  "nx": 14,
+  "nz": 13,
+  "d": [
+    4,
+    4
+  ],
+  "corners": [
+    16,
+    20,
+    26,
+    29
+  ],
+  "edge": 22,
+  "qubit": 18,
+  "lz_hit": false,
+  "target_bndS": [
+    0,
+    2
+  ],
+  "bulk_zcheck": "Z9",
+  "boundary_zcheck": "Z7",
+  "scored_logical_Z": [
+    2,
+    7,
+    14,
+    15
+  ]
+}

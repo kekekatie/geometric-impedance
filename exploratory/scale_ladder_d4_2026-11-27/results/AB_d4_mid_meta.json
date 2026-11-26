@@ -1,0 +1,33 @@
+{
+  "site": "AB_d4_mid",
+  "family": "AB",
+  "n_tiles": 13,
+  "n_qubits": 26,
+  "nx": 12,
+  "nz": 13,
+  "d": [
+    4,
+    4
+  ],
+  "corners": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "edge": 8,
+  "qubit": 5,
+  "lz_hit": false,
+  "target_bndS": [
+    0,
+    1
+  ],
+  "bulk_zcheck": "Z3",
+  "boundary_zcheck": "Z2",
+  "scored_logical_Z": [
+    10,
+    8,
+    3,
+    0
+  ]
+}

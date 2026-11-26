@@ -1,0 +1,33 @@
+{
+  "site": "Pen_d4_ear",
+  "family": "Penrose",
+  "n_tiles": 13,
+  "n_qubits": 26,
+  "nx": 12,
+  "nz": 13,
+  "d": [
+    4,
+    4
+  ],
+  "corners": [
+    4,
+    9,
+    14,
+    19
+  ],
+  "edge": 21,
+  "qubit": 15,
+  "lz_hit": true,
+  "target_bndS": [
+    0,
+    2
+  ],
+  "bulk_zcheck": "Z8",
+  "boundary_zcheck": "Z10",
+  "scored_logical_Z": [
+    14,
+    15,
+    21,
+    7
+  ]
+}

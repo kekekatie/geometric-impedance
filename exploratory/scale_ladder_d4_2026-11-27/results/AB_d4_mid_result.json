@@ -1,0 +1,144 @@
+{
+  "site": "AB_d4_mid",
+  "meta": {
+    "site": "AB_d4_mid",
+    "family": "AB",
+    "n_tiles": 13,
+    "n_qubits": 26,
+    "nx": 12,
+    "nz": 13,
+    "d": [
+      4,
+      4
+    ],
+    "corners": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "edge": 8,
+    "qubit": 5,
+    "lz_hit": false,
+    "target_bndS": [
+      0,
+      1
+    ],
+    "bulk_zcheck": "Z3",
+    "boundary_zcheck": "Z2",
+    "scored_logical_Z": [
+      10,
+      8,
+      3,
+      0
+    ]
+  },
+  "pool_size": 385,
+  "histories": 594448,
+  "histories_by_weight": [
+    8,
+    3080,
+    591360
+  ],
+  "config_stream_sha256": "f9d591180b0bd85300130d1eb25f1297fab28974ec531d1d53fdc745c9049a57",
+  "full_archive_gain_pp": 0.0042824207571956485,
+  "intact_gain_pp": 0.0029178818786501637,
+  "intact_pct_of_full": 68.13627254508603,
+  "neither_face_gain_pp": 0.0,
+  "neither_face_pct_of_full": 0.0,
+  "interaction_I_pp": 8.582005525438438e-06,
+  "interaction_I_pct_of_full": 0.200400801603119,
+  "I_by_k_pp": [
+    0.0,
+    0.0,
+    8.582005525438438e-06
+  ],
+  "omissions": [
+    {
+      "omitted": "X1",
+      "index": 1,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 4,
+      "retained_indices": [
+        5,
+        14,
+        15
+      ],
+      "cost_pp": 1.716401104578935e-05,
+      "gain_over_thin_pp": 0.0029007178676043743,
+      "surviving_pct_of_full": 67.73547094199859,
+      "truth_gained_pp": 0.00016305810498333032,
+      "truth_lost_pp": 0.00018022211603420718,
+      "label_changes": 42,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "X5",
+      "index": 5,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 6,
+      "retained_indices": [
+        1,
+        14,
+        15
+      ],
+      "cost_pp": 1.716401104578935e-05,
+      "gain_over_thin_pp": 0.0029007178676043743,
+      "surviving_pct_of_full": 67.73547094199859,
+      "truth_gained_pp": 0.00016305810498333032,
+      "truth_lost_pp": 0.00018022211603420718,
+      "label_changes": 42,
+      "tie_status_changes": 4
+    },
+    {
+      "omitted": "Z2",
+      "index": 14,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "boundary",
+      "weight": 4,
+      "retained_indices": [
+        1,
+        5,
+        15
+      ],
+      "cost_pp": 0.0015962530277247033,
+      "gain_over_thin_pp": 0.0013216288509254603,
+      "surviving_pct_of_full": 30.861723447065756,
+      "truth_gained_pp": 0.043386328933854024,
+      "truth_lost_pp": 0.04498258196158557,
+      "label_changes": 650,
+      "tie_status_changes": 3746
+    },
+    {
+      "omitted": "Z3",
+      "index": 15,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "bulk",
+      "weight": 4,
+      "retained_indices": [
+        1,
+        5,
+        14
+      ],
+      "cost_pp": 0.0013130468453859123,
+      "gain_over_thin_pp": 0.0016048350332642514,
+      "surviving_pct_of_full": 37.47494989995286,
+      "truth_gained_pp": 0.0015490519973416382,
+      "truth_lost_pp": 0.002862098842733719,
+      "label_changes": 563,
+      "tie_status_changes": 230
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1584,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 1257.27
+}

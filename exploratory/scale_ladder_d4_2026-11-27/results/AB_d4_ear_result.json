@@ -1,0 +1,144 @@
+{
+  "site": "AB_d4_ear",
+  "meta": {
+    "site": "AB_d4_ear",
+    "family": "AB",
+    "n_tiles": 13,
+    "n_qubits": 28,
+    "nx": 14,
+    "nz": 13,
+    "d": [
+      4,
+      4
+    ],
+    "corners": [
+      16,
+      20,
+      26,
+      29
+    ],
+    "edge": 22,
+    "qubit": 18,
+    "lz_hit": false,
+    "target_bndS": [
+      0,
+      2
+    ],
+    "bulk_zcheck": "Z9",
+    "boundary_zcheck": "Z7",
+    "scored_logical_Z": [
+      2,
+      7,
+      14,
+      15
+    ]
+  },
+  "pool_size": 415,
+  "histories": 690568,
+  "histories_by_weight": [
+    8,
+    3320,
+    687240
+  ],
+  "config_stream_sha256": "78fc6651a9706d80c433391f89362c1f4a5ff455791c40c42066fc66872fdab8",
+  "full_archive_gain_pp": 0.005230261643218714,
+  "intact_gain_pp": 0.002986337588950505,
+  "intact_pct_of_full": 57.09728867622589,
+  "neither_face_gain_pp": 1.6683450221322005e-05,
+  "neither_face_pct_of_full": 0.3189792664187823,
+  "interaction_I_pp": -1.6683450217585556e-05,
+  "interaction_I_pct_of_full": -0.31897926634734325,
+  "I_by_k_pp": [
+    0.0,
+    0.0,
+    -1.6683450217585556e-05
+  ],
+  "omissions": [
+    {
+      "omitted": "X7",
+      "index": 7,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 6,
+      "retained_indices": [
+        11,
+        21,
+        23
+      ],
+      "cost_pp": 3.336690043154178e-05,
+      "gain_over_thin_pp": 0.0029529706885189633,
+      "surviving_pct_of_full": 56.459330143600596,
+      "truth_gained_pp": 0.00010010070130551333,
+      "truth_lost_pp": 0.00013346760174068445,
+      "label_changes": 28,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "X11",
+      "index": 11,
+      "type": "X",
+      "role": "endpoint",
+      "physical_role": "endpoint",
+      "weight": 4,
+      "retained_indices": [
+        7,
+        21,
+        23
+      ],
+      "cost_pp": 3.336690043154178e-05,
+      "gain_over_thin_pp": 0.0029529706885189633,
+      "surviving_pct_of_full": 56.459330143600596,
+      "truth_gained_pp": 0.00010010070130551333,
+      "truth_lost_pp": 0.00013346760174068445,
+      "label_changes": 28,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "Z7",
+      "index": 21,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "boundary",
+      "weight": 4,
+      "retained_indices": [
+        7,
+        11,
+        23
+      ],
+      "cost_pp": 0.00135135946761622,
+      "gain_over_thin_pp": 0.001634978121334285,
+      "surviving_pct_of_full": 31.259968102248056,
+      "truth_gained_pp": 0.0016766867468673485,
+      "truth_lost_pp": 0.0030280462144917785,
+      "label_changes": 564,
+      "tie_status_changes": 0
+    },
+    {
+      "omitted": "Z9",
+      "index": 23,
+      "type": "Z",
+      "role": "face",
+      "physical_role": "bulk",
+      "weight": 4,
+      "retained_indices": [
+        7,
+        11,
+        21
+      ],
+      "cost_pp": 0.0016349781213231829,
+      "gain_over_thin_pp": 0.0013513594676273222,
+      "surviving_pct_of_full": 25.8373205741901,
+      "truth_gained_pp": 0.001317992567189259,
+      "truth_lost_pp": 0.0029529706885126432,
+      "label_changes": 508,
+      "tie_status_changes": 8
+    }
+  ],
+  "validation": {
+    "direct_fullscan_checks": 1840,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 1417.72
+}

@@ -1,0 +1,33 @@
+{
+  "site": "Pen_d4_mid",
+  "family": "Penrose",
+  "n_tiles": 13,
+  "n_qubits": 26,
+  "nx": 12,
+  "nz": 13,
+  "d": [
+    4,
+    4
+  ],
+  "corners": [
+    6,
+    10,
+    14,
+    18
+  ],
+  "edge": 7,
+  "qubit": 3,
+  "lz_hit": false,
+  "target_bndS": [
+    0,
+    1
+  ],
+  "bulk_zcheck": "Z4",
+  "boundary_zcheck": "Z3",
+  "scored_logical_Z": [
+    2,
+    1,
+    7,
+    12
+  ]
+}
