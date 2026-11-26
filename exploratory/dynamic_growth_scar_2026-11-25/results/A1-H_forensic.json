@@ -1,0 +1,1367 @@
+{
+  "step": "A1-H",
+  "meta": {
+    "step": "A1-H",
+    "label": "Bury Hallway (+755)",
+    "family": "AB",
+    "base": "AB_1",
+    "add_tiles": [
+      755
+    ],
+    "n_tiles": 10,
+    "n_qubits": 19,
+    "nx": 8,
+    "nz": 10,
+    "d": [
+      3,
+      3
+    ],
+    "corners": [
+      13,
+      16,
+      20,
+      26
+    ],
+    "edge": 16,
+    "qubit": 11,
+    "n_w3_on": 0,
+    "hallway_zcheck": "Z4",
+    "ear_zcheck": "Z7",
+    "scored_logical_Z": [
+      1,
+      11,
+      9
+    ]
+  },
+  "hall_qubits": [
+    6,
+    7,
+    8,
+    11
+  ],
+  "ear_qubits": [
+    11,
+    12,
+    15,
+    16
+  ],
+  "detour_w3_xlogicals": [
+    [
+      0,
+      1,
+      14
+    ]
+  ],
+  "archived_I_pp": -0.0006834849530901188,
+  "reproduced_I_pp": -0.000683484953078758,
+  "I_by_k_pp": [
+    0.0,
+    0.0,
+    -0.000683484953078758
+  ],
+  "syn_by_k_pp": [
+    0.0,
+    0.0,
+    -0.003597788850234018
+  ],
+  "red_by_k_pp": [
+    0.0,
+    0.0,
+    0.00291430389715526
+  ],
+  "syn_history_counts_by_k": [
+    0,
+    0,
+    371
+  ],
+  "red_history_counts_by_k": [
+    0,
+    0,
+    303
+  ],
+  "top_synergy_patterns": [
+    [
+      2,
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      130
+    ],
+    [
+      2,
+      [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      130
+    ],
+    [
+      2,
+      [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      128
+    ],
+    [
+      2,
+      [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      72
+    ],
+    [
+      2,
+      [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      69
+    ],
+    [
+      2,
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      55
+    ],
+    [
+      2,
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      38
+    ],
+    [
+      2,
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      28
+    ],
+    [
+      2,
+      [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      10
+    ],
+    [
+      2,
+      [
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      6
+    ],
+    [
+      2,
+      [
+        1.0,
+        0.5,
+        1.0,
+        1.0
+      ],
+      4
+    ],
+    [
+      2,
+      [
+        0.0,
+        0.5,
+        0.0,
+        0.0
+      ],
+      4
+    ]
+  ],
+  "top_synergy_configs": [
+    {
+      "cid": 5705,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          4,
+          0
+        ],
+        [
+          "X",
+          11,
+          0
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 8262,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          0
+        ],
+        [
+          "X",
+          15,
+          2
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 8267,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          0
+        ],
+        [
+          "X",
+          16,
+          2
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 8411,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          0
+        ],
+        [
+          "MZ",
+          15,
+          1
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 8755,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          2
+        ],
+        [
+          "X",
+          15,
+          0
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 8760,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          2
+        ],
+        [
+          "X",
+          16,
+          0
+        ]
+      ],
+      "cfg_dI": -5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -4.746423285269153e-05
+    },
+    {
+      "cid": 335,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          0,
+          0
+        ],
+        [
+          "X",
+          11,
+          0
+        ]
+      ],
+      "cfg_dI": -4.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        }
+      ],
+      "weighted_dI_pp": -3.797138628215322e-05
+    },
+    {
+      "cid": 613,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          0,
+          1
+        ],
+        [
+          "X",
+          11,
+          0
+        ]
+      ],
+      "cfg_dI": -4.0,
+      "variants": [
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -2.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -2.0
+        }
+      ],
+      "weighted_dI_pp": -3.797138628215322e-05
+    },
+    {
+      "cid": 3874,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          2,
+          3
+        ],
+        [
+          "X",
+          11,
+          3
+        ]
+      ],
+      "cfg_dI": -4.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.5,
+            "ear_only": 1.0,
+            "neither": 1.0
+          },
+          "dI": -0.5
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 1.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.5,
+            "ear_only": 1.0,
+            "neither": 1.0
+          },
+          "dI": -0.5
+        }
+      ],
+      "weighted_dI_pp": -3.797138628215322e-05
+    },
+    {
+      "cid": 5963,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          4,
+          1
+        ],
+        [
+          "X",
+          11,
+          0
+        ]
+      ],
+      "cfg_dI": -4.0,
+      "variants": [
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -2.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 0.0,
+            "ear_only": 0.0,
+            "neither": 1.0
+          },
+          "dI": -2.0
+        }
+      ],
+      "weighted_dI_pp": -3.797138628215322e-05
+    }
+  ],
+  "top_redundancy_configs": [
+    {
+      "cid": 9490,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          7,
+          0
+        ],
+        [
+          "X",
+          15,
+          0
+        ]
+      ],
+      "cfg_dI": 5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 1.0
+          },
+          "dI": 1.0
+        }
+      ],
+      "weighted_dI_pp": 4.746423285269153e-05
+    },
+    {
+      "cid": 9495,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          7,
+          0
+        ],
+        [
+          "X",
+          16,
+          0
+        ]
+      ],
+      "cfg_dI": 5.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 1.0
+          },
+          "dI": 1.0
+        }
+      ],
+      "weighted_dI_pp": 4.746423285269153e-05
+    },
+    {
+      "cid": 8387,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          0
+        ],
+        [
+          "MZ",
+          10,
+          2
+        ]
+      ],
+      "cfg_dI": 4.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        }
+      ],
+      "weighted_dI_pp": 3.797138628215322e-05
+    },
+    {
+      "cid": 8635,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          1
+        ],
+        [
+          "MZ",
+          10,
+          2
+        ]
+      ],
+      "cfg_dI": 4.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        }
+      ],
+      "weighted_dI_pp": 3.797138628215322e-05
+    },
+    {
+      "cid": 9004,
+      "k": 2,
+      "extra": [
+        [
+          "X",
+          6,
+          3
+        ],
+        [
+          "X",
+          15,
+          3
+        ]
+      ],
+      "cfg_dI": 4.0,
+      "variants": [
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.5,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": 0.5
+        },
+        {
+          "onset": 1,
+          "vx": 0,
+          "vz": 1,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 1.0,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 0,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 1,
+          "vx": 1,
+          "vz": 1,
+          "truth": 1,
+          "credits": {
+            "both": 1.0,
+            "hall_only": 1.0,
+            "ear_only": 1.0,
+            "neither": 0.0
+          },
+          "dI": 1.0
+        },
+        {
+          "onset": 2,
+          "vx": 0,
+          "vz": 0,
+          "truth": 0,
+          "credits": {
+            "both": 0.0,
+            "hall_only": 0.5,
+            "ear_only": 0.0,
+            "neither": 0.0
+          },
+          "dI": 0.5
+        }
+      ],
+      "weighted_dI_pp": 3.797138628215322e-05
+    }
+  ],
+  "elapsed_seconds": 353.77
+}
