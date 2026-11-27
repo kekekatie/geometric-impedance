@@ -1,0 +1,145 @@
+{
+  "site": "Pen_d4_mid",
+  "meta": {
+    "site": "Pen_d4_mid",
+    "family": "Penrose",
+    "n_tiles": 13,
+    "n_qubits": 26,
+    "nx": 12,
+    "nz": 13,
+    "d": [
+      4,
+      4
+    ],
+    "corners": [
+      6,
+      10,
+      14,
+      18
+    ],
+    "edge": 7,
+    "qubit": 3,
+    "lz_hit": false,
+    "target_bndS": [
+      0,
+      1
+    ],
+    "bulk_zcheck": "Z4",
+    "boundary_zcheck": "Z3",
+    "scored_logical_Z": [
+      2,
+      1,
+      7,
+      12
+    ]
+  },
+  "ring_info": {
+    "nx": 12,
+    "nz": 13,
+    "r1_z": [
+      "Z3",
+      "Z4"
+    ],
+    "r1_x": [
+      "X1",
+      "X2"
+    ],
+    "r2_z": [
+      "Z5",
+      "Z6",
+      "Z7",
+      "Z8",
+      "Z10"
+    ],
+    "r2_x": [
+      "X3",
+      "X4",
+      "X7",
+      "X8"
+    ],
+    "r3_z": [
+      "Z0",
+      "Z2",
+      "Z9",
+      "Z11",
+      "Z12"
+    ],
+    "z_rings_by_dist": {
+      "1": [
+        "Z3",
+        "Z4"
+      ],
+      "2": [
+        "Z5",
+        "Z6",
+        "Z7",
+        "Z8",
+        "Z10"
+      ],
+      "3": [
+        "Z0",
+        "Z2",
+        "Z9",
+        "Z11",
+        "Z12"
+      ],
+      "4": [
+        "Z1"
+      ]
+    },
+    "subset_check_counts": {
+      "thin": 0,
+      "ring1": 4,
+      "ring2_z": 9,
+      "ring2_xz": 13,
+      "ring3_z": 14,
+      "all_z": 15
+    }
+  },
+  "histories": 594448,
+  "histories_by_weight": [
+    8,
+    3080,
+    591360
+  ],
+  "config_stream_sha256": "f9d591180b0bd85300130d1eb25f1297fab28974ec531d1d53fdc745c9049a57",
+  "full_archive_gain_pp": 0.004196600701944497,
+  "radial_ladder": {
+    "ring1": {
+      "gain_pp": 0.002308559486352557,
+      "pct_of_full": 55.01022494903756,
+      "n_checks": 4
+    },
+    "ring2_z": {
+      "gain_pp": 0.004059288613533774,
+      "pct_of_full": 96.7280163598338,
+      "n_checks": 9
+    },
+    "ring2_xz": {
+      "gain_pp": 0.004059288613533774,
+      "pct_of_full": 96.7280163598338,
+      "n_checks": 13
+    },
+    "ring3_z": {
+      "gain_pp": 0.004196600701944497,
+      "pct_of_full": 100.0,
+      "n_checks": 14
+    },
+    "all_z": {
+      "gain_pp": 0.004196600701944497,
+      "pct_of_full": 100.0,
+      "n_checks": 15
+    },
+    "thick": {
+      "gain_pp": 0.004196600701944497,
+      "pct_of_full": 100.0,
+      "n_checks": 25
+    }
+  },
+  "validation": {
+    "direct_fullscan_checks": 1386,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 2579.16
+}

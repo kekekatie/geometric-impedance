@@ -1,0 +1,142 @@
+{
+  "site": "AB_d4_mid",
+  "meta": {
+    "site": "AB_d4_mid",
+    "family": "AB",
+    "n_tiles": 13,
+    "n_qubits": 26,
+    "nx": 12,
+    "nz": 13,
+    "d": [
+      4,
+      4
+    ],
+    "corners": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "edge": 8,
+    "qubit": 5,
+    "lz_hit": false,
+    "target_bndS": [
+      0,
+      1
+    ],
+    "bulk_zcheck": "Z3",
+    "boundary_zcheck": "Z2",
+    "scored_logical_Z": [
+      10,
+      8,
+      3,
+      0
+    ]
+  },
+  "ring_info": {
+    "nx": 12,
+    "nz": 13,
+    "r1_z": [
+      "Z2",
+      "Z3"
+    ],
+    "r1_x": [
+      "X1",
+      "X5"
+    ],
+    "r2_z": [
+      "Z0",
+      "Z1",
+      "Z4",
+      "Z5",
+      "Z9"
+    ],
+    "r2_x": [
+      "X0",
+      "X3",
+      "X6"
+    ],
+    "r3_z": [
+      "Z6",
+      "Z7",
+      "Z10"
+    ],
+    "z_rings_by_dist": {
+      "1": [
+        "Z2",
+        "Z3"
+      ],
+      "2": [
+        "Z0",
+        "Z1",
+        "Z4",
+        "Z5",
+        "Z9"
+      ],
+      "3": [
+        "Z6",
+        "Z7",
+        "Z10"
+      ],
+      "4": [
+        "Z8",
+        "Z11",
+        "Z12"
+      ]
+    },
+    "subset_check_counts": {
+      "thin": 0,
+      "ring1": 4,
+      "ring2_z": 9,
+      "ring2_xz": 12,
+      "ring3_z": 12,
+      "all_z": 15
+    }
+  },
+  "histories": 594448,
+  "histories_by_weight": [
+    8,
+    3080,
+    591360
+  ],
+  "config_stream_sha256": "f9d591180b0bd85300130d1eb25f1297fab28974ec531d1d53fdc745c9049a57",
+  "full_archive_gain_pp": 0.0042824207571956485,
+  "radial_ladder": {
+    "ring1": {
+      "gain_pp": 0.0029178818786501637,
+      "pct_of_full": 68.13627254508603,
+      "n_checks": 4
+    },
+    "ring2_z": {
+      "gain_pp": 0.004248092735092968,
+      "pct_of_full": 99.19839679356588,
+      "n_checks": 9
+    },
+    "ring2_xz": {
+      "gain_pp": 0.004248092735092968,
+      "pct_of_full": 99.19839679356588,
+      "n_checks": 12
+    },
+    "ring3_z": {
+      "gain_pp": 0.0042824207571956485,
+      "pct_of_full": 100.0,
+      "n_checks": 12
+    },
+    "all_z": {
+      "gain_pp": 0.0042824207571956485,
+      "pct_of_full": 100.0,
+      "n_checks": 15
+    },
+    "thick": {
+      "gain_pp": 0.0042824207571956485,
+      "pct_of_full": 100.0,
+      "n_checks": 25
+    }
+  },
+  "validation": {
+    "direct_fullscan_checks": 1386,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 2559.12
+}

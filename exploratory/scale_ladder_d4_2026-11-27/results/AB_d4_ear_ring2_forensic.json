@@ -1,0 +1,1432 @@
+{
+  "site": "AB_d4_ear",
+  "meta": {
+    "site": "AB_d4_ear",
+    "family": "AB",
+    "n_tiles": 13,
+    "n_qubits": 28,
+    "nx": 14,
+    "nz": 13,
+    "d": [
+      4,
+      4
+    ],
+    "corners": [
+      16,
+      20,
+      26,
+      29
+    ],
+    "edge": 22,
+    "qubit": 18,
+    "lz_hit": false,
+    "target_bndS": [
+      0,
+      2
+    ],
+    "bulk_zcheck": "Z9",
+    "boundary_zcheck": "Z7",
+    "scored_logical_Z": [
+      2,
+      7,
+      14,
+      15
+    ]
+  },
+  "ring_info": {
+    "nx": 14,
+    "nz": 13,
+    "r1_z": [
+      "Z7",
+      "Z9"
+    ],
+    "r1_x": [
+      "X7",
+      "X11"
+    ],
+    "r2_z": [
+      "Z8",
+      "Z10",
+      "Z11",
+      "Z12"
+    ],
+    "r2_x": [
+      "X6",
+      "X9",
+      "X12"
+    ],
+    "r3_z": [
+      "Z4",
+      "Z5",
+      "Z6"
+    ],
+    "z_rings_by_dist": {
+      "1": [
+        "Z7",
+        "Z9"
+      ],
+      "2": [
+        "Z8",
+        "Z10",
+        "Z11",
+        "Z12"
+      ],
+      "3": [
+        "Z4",
+        "Z5",
+        "Z6"
+      ],
+      "4": [
+        "Z1",
+        "Z2",
+        "Z3"
+      ],
+      "5": [
+        "Z0"
+      ]
+    },
+    "subset_check_counts": {
+      "thin": 0,
+      "ring1": 4,
+      "ring2_z": 8,
+      "ring2_xz": 11,
+      "ring3_z": 11,
+      "all_z": 15
+    }
+  },
+  "histories": 690568,
+  "histories_by_weight": [
+    8,
+    3320,
+    687240
+  ],
+  "config_stream_sha256": "78fc6651a9706d80c433391f89362c1f4a5ff455791c40c42066fc66872fdab8",
+  "full_archive_gain_pp": 0.005230261643218714,
+  "radial_ladder": {
+    "ring1": {
+      "gain_pp": 0.002986337588950505,
+      "pct_of_full": 57.09728867622589,
+      "n_checks": 4
+    },
+    "ring2_z": {
+      "gain_pp": 0.00519689474277607,
+      "pct_of_full": 99.36204146716244,
+      "n_checks": 8
+    },
+    "ring2_xz": {
+      "gain_pp": 0.00519689474277607,
+      "pct_of_full": 99.36204146716244,
+      "n_checks": 11
+    },
+    "ring3_z": {
+      "gain_pp": 0.005230261643218714,
+      "pct_of_full": 100.0,
+      "n_checks": 11
+    },
+    "all_z": {
+      "gain_pp": 0.005230261643218714,
+      "pct_of_full": 100.0,
+      "n_checks": 15
+    },
+    "thick": {
+      "gain_pp": 0.005230261643218714,
+      "pct_of_full": 100.0,
+      "n_checks": 27
+    }
+  },
+  "validation": {
+    "direct_fullscan_checks": 2300,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 0.0
+  },
+  "elapsed_seconds": 3092.64,
+  "forensic": {
+    "four_terms_gain_pp": {
+      "both_kept": 0.002986337588950505,
+      "bulk_only": 0.001634978121334285,
+      "bnd_only": 0.0013513594676273222,
+      "neither_face": 1.6683450221322005e-05
+    },
+    "I_pp": -1.6683450210219775e-05,
+    "I_pct_of_full": -0.3189792662065132,
+    "total_nonzero_dI_histories": 476,
+    "modes": [
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "count": 107,
+        "raw_dI_sum": -107.0,
+        "weighted_dI_pp": -0.0008925645866408272,
+        "pct_of_full": -17.065390749582864
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "count": 93,
+        "raw_dI_sum": 93.0,
+        "weighted_dI_pp": 0.0007757804351177283,
+        "pct_of_full": 14.832535885151461
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "count": 83,
+        "raw_dI_sum": 83.0,
+        "weighted_dI_pp": 0.0006923631840298006,
+        "pct_of_full": 13.237639553414747
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "count": 54,
+        "raw_dI_sum": -54.0,
+        "weighted_dI_pp": -0.00045045315587481,
+        "pct_of_full": -8.612440191378267
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "count": 48,
+        "raw_dI_sum": -48.0,
+        "weighted_dI_pp": -0.0004004028052220534,
+        "pct_of_full": -7.655502392336239
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "count": 34,
+        "raw_dI_sum": 34.0,
+        "weighted_dI_pp": 0.0002836186536989544,
+        "pct_of_full": 5.422647527904835
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "count": 12,
+        "raw_dI_sum": -24.0,
+        "weighted_dI_pp": -0.0002002014026110267,
+        "pct_of_full": -3.8277511961681197
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "count": 17,
+        "raw_dI_sum": 17.0,
+        "weighted_dI_pp": 0.0001418093268494772,
+        "pct_of_full": 2.7113237639524175
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "count": 8,
+        "raw_dI_sum": 16.0,
+        "weighted_dI_pp": 0.00013346760174068445,
+        "pct_of_full": 2.551834130778746
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "count": 12,
+        "raw_dI_sum": -12.0,
+        "weighted_dI_pp": -0.00010010070130551334,
+        "pct_of_full": -1.9138755980840598
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          0.0,
+          1.0,
+          0.5,
+          1.0
+        ],
+        "count": 4,
+        "raw_dI_sum": 2.0,
+        "weighted_dI_pp": 1.6683450217585556e-05,
+        "pct_of_full": 0.31897926634734325
+      },
+      {
+        "k": 2,
+        "pattern_intact_bulk_bnd_neither": [
+          1.0,
+          0.0,
+          0.5,
+          0.0
+        ],
+        "count": 4,
+        "raw_dI_sum": -2.0,
+        "weighted_dI_pp": -1.6683450217585556e-05,
+        "pct_of_full": -0.31897926634734325
+      }
+    ],
+    "top_synergy_configs": [
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 18,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z9"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 5,
+        "raw_dI_sum": -5.0,
+        "weighted_dI_pp": -4.1708625543963885e-05,
+        "pct_of_full": -0.797448165868358,
+        "modes": {
+          "[0.0, 0.0, 0.0, 1.0]": 4,
+          "[1.0, 0.0, 0.0, 0.0]": 1
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 18,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z9"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -4.0,
+        "weighted_dI_pp": -3.336690043517111e-05,
+        "pct_of_full": -0.6379585326946865,
+        "modes": {
+          "[1.0, 0.0, 0.0, 1.0]": 2
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 18,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z9"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": -4.0,
+        "weighted_dI_pp": -3.336690043517111e-05,
+        "pct_of_full": -0.6379585326946865,
+        "modes": {
+          "[0.0, 0.0, 0.0, 1.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 18,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z9"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -4.0,
+        "weighted_dI_pp": -3.336690043517111e-05,
+        "pct_of_full": -0.6379585326946865,
+        "modes": {
+          "[1.0, 0.0, 0.0, 1.0]": 2
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 3,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 1.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 15,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 15,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 15,
+            "round": 3,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 0.0, 1.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 18,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z9"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": -3.0,
+        "weighted_dI_pp": -2.5025175326378336e-05,
+        "pct_of_full": -0.47846889952101496,
+        "modes": {
+          "[1.0, 1.0, 0.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 1,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -2.0,
+        "weighted_dI_pp": -1.6683450217585556e-05,
+        "pct_of_full": -0.31897926634734325,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 2
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 1,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -2.0,
+        "weighted_dI_pp": -1.6683450217585556e-05,
+        "pct_of_full": -0.31897926634734325,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 2
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 1,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -2.0,
+        "weighted_dI_pp": -1.6683450217585556e-05,
+        "pct_of_full": -0.31897926634734325,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 2
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 1,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 2,
+        "raw_dI_sum": -2.0,
+        "weighted_dI_pp": -1.6683450217585556e-05,
+        "pct_of_full": -0.31897926634734325,
+        "modes": {
+          "[1.0, 0.0, 0.0, 0.0]": 2
+        }
+      }
+    ],
+    "top_redundancy_configs": [
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 5,
+        "raw_dI_sum": 5.0,
+        "weighted_dI_pp": 4.1708625543963885e-05,
+        "pct_of_full": 0.797448165868358,
+        "modes": {
+          "[0.0, 0.0, 1.0, 0.0]": 2,
+          "[1.0, 1.0, 1.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 5,
+        "raw_dI_sum": 5.0,
+        "weighted_dI_pp": 4.1708625543963885e-05,
+        "pct_of_full": 0.797448165868358,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 5
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 15,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 5,
+        "raw_dI_sum": 5.0,
+        "weighted_dI_pp": 4.1708625543963885e-05,
+        "pct_of_full": 0.797448165868358,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4,
+          "[0.0, 1.0, 1.0, 1.0]": 1
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 5,
+        "raw_dI_sum": 5.0,
+        "weighted_dI_pp": 4.1708625543963885e-05,
+        "pct_of_full": 0.797448165868358,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4,
+          "[0.0, 1.0, 1.0, 1.0]": 1
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": 4.0,
+        "weighted_dI_pp": 3.336690043517111e-05,
+        "pct_of_full": 0.6379585326946865,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": 4.0,
+        "weighted_dI_pp": 3.336690043517111e-05,
+        "pct_of_full": 0.6379585326946865,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 26,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z10"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": 4.0,
+        "weighted_dI_pp": 3.336690043517111e-05,
+        "pct_of_full": 0.6379585326946865,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 15,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": 4.0,
+        "weighted_dI_pp": 3.336690043517111e-05,
+        "pct_of_full": 0.6379585326946865,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 14,
+            "round": 0,
+            "on_scored_LZ": true,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 4,
+        "raw_dI_sum": 4.0,
+        "weighted_dI_pp": 3.336690043517111e-05,
+        "pct_of_full": 0.6379585326946865,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 4
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 24,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z12"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 27,
+            "round": 3,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 23,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z11"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 25,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z11",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[0.0, 1.0, 1.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 23,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z11"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 25,
+            "round": 1,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z11",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[0.0, 1.0, 1.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 23,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": true,
+            "ring": 1,
+            "zfaces": [
+              "Z7",
+              "Z11"
+            ]
+          },
+          {
+            "pauli": "X",
+            "qubit": 25,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": false,
+            "on_bnd_face": false,
+            "ring": 2,
+            "zfaces": [
+              "Z11",
+              "Z12"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[0.0, 1.0, 1.0, 1.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 3
+        }
+      },
+      {
+        "k": 2,
+        "faults": [
+          {
+            "pauli": "X",
+            "qubit": 21,
+            "round": 0,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          },
+          {
+            "pauli": "MZ",
+            "qubit": 21,
+            "round": 2,
+            "on_scored_LZ": false,
+            "on_bulk_face": true,
+            "on_bnd_face": false,
+            "ring": 1,
+            "zfaces": [
+              "Z9",
+              "Z10"
+            ]
+          }
+        ],
+        "n_nonzero_variants": 3,
+        "raw_dI_sum": 3.0,
+        "weighted_dI_pp": 2.5025175326378336e-05,
+        "pct_of_full": 0.47846889952101496,
+        "modes": {
+          "[1.0, 1.0, 1.0, 0.0]": 3
+        }
+      }
+    ]
+  }
+}
