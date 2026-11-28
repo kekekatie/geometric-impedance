@@ -38,6 +38,27 @@
 
 ---
 
+## Follow-Up: Known-Onset ($t_0$) Ablation (Astra's Timing-vs.-Space Test)
+
+*Pre-registered checks (`T1`, `T2`) frozen before scoring in [`PROTOCOL_KNOWN_T0.md`](./PROTOCOL_KNOWN_T0.md) (`7a7ad60`). Exact replay over **15,869,656** known-$t_0$ histories (**7,200 full-table + Z-sector spot checks**, **0 mismatches**, `max_posterior_difference = 2.22e-16`).*
+
+### Side-by-Side Comparison: Unknown $t_0$ vs. Known $t_0$
+
+| Pair (Shared Bridges $\le 6$) | Unknown $t_0$: $G(A)+G(B)$ | Unknown $t_0$: $G(A,B)$ | Unknown $t_0$: **$R_{AB}$** ($\Delta G_{AB}$) | Known $t_0$: $G(A)+G(B)$ | Known $t_0$: $G(A,B)$ | Known $t_0$: **$R_{AB}$** ($\Delta G_{AB}$) | Timing Slice Removed (`pp`, `%` of $\Delta G$) | Known-$t_0$ Union **R1 → R2** |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| **`Pen_sep`** `(q9, q11)` (`0`) | `0.006797` | `0.007724` | **`1.136×`** (`+0.000927`) | `0.007175` | `0.007818` | **`1.090×`** (`+0.000644`) | **`-0.000283 pp` (`30.6%`)** | `66.63% → 99.34%` |
+| **`Pen_touch`** `(q3, q9)` (`0`) | `0.007938` | `0.008314` | **`1.047×`** (`+0.000375`) | `0.008273` | `0.008359` | **`1.010×`** (`+0.000086`) | **`-0.000289 pp` (`77.1%`)** | `72.90% → 98.77%` |
+| **`AB_sep`** `(q12, q18)` (`0`) | `0.004430` | `0.005998` | **`1.354×`** (`+0.001567`) | `0.004814` | `0.006094` | **`1.266×`** (`+0.001279`) | **`-0.000288 pp` (`18.4%`)** | `61.15% → 94.62%` |
+| **`AB_touch`** `(q5, q12)` (`2× w5`) | `0.006006` | `0.009550` | **`1.590×`** (`+0.003545`) | `0.006477` | `0.009764` | **`1.507×`** (`+0.003287`) | **`-0.000258 pp` (`7.3%`)** | `76.09% → 93.12%` |
+
+### Verdicts Against Pre-Registered Checks (`7a7ad60`)
+
+1. **Universal Shared-Clock Floor (`~0.00026–0.00029 pp`):** Across all four pairs in both tilings, revealing $t_0$ removes an almost identical shared-clock timing slice (`0.000258` to `0.000289 pp`) — proving that shared timing creates a clean, tiling-independent coupling floor between simultaneous losses.
+2. **T2 (Spatial Bridge Residual on `AB_touch`) — CONFIRMED:** With $t_0$ known, **`92.7%`** of `AB_touch`'s excess survives (`+0.003287 pp`, **`R_AB = 1.507×`**), directly isolating the pure spatial contribution of its 2 shared weight-5 $X$-logical bridges. By contrast, `Pen_touch` (3 shared Ring-2 Z-faces but **0** shared bridges $\le 6$) collapses by `77.1%` straight down to **`1.010×`** (`+0.000086 pp`).
+3. **T1 (Timing Link at a Distance on `Pen_sep`, `AB_sep`) — PARTIALLY CONFIRMED + NON-LOCAL RESIDUAL:** Revealing $t_0$ removes the exact same `~0.00028–0.00029 pp` timing slice (`30.6%` on `Pen_sep`, `18.4%` on `AB_sep`), yet a genuine non-timing residual survives even when $t_0$ is known and `ovR12 = 0` (`1.090×` on `Pen_sep`, `1.266×` on `AB_sep`). Even without overlapping Ring-2 Z-faces or short bridges, two simultaneous erasures on the same patch still interact through the global `thin` logical-parity / committed-frame inference.
+
+---
+
 ## Replay
 
 ```sh
@@ -46,4 +67,6 @@ python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_two_scar.py --singles P
 python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_two_scar.py --pair Pen_sep
 python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_two_scar.py --pair Pen_touch
 python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_two_scar.py --pair Pen_coll
+python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_known_t0_ablation.py --selftest
+python3 exploratory/two_scar_lightcone_d4_2026-11-28/run_known_t0_ablation.py --pair AB_touch
 ```

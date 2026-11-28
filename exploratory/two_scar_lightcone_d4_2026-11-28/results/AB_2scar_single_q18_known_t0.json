@@ -1,0 +1,75 @@
+{
+  "mode": "single_known_t0",
+  "patch": "AB_2scar",
+  "qubit": 18,
+  "n_qubits": 31,
+  "histories": 848248,
+  "histories_by_weight": [
+    8,
+    3680,
+    844560
+  ],
+  "config_stream_sha256": "0258e1b0829f4436be5ed1609c08779c93ae2e34b7b10c0e6dd4d0746b37afb9",
+  "ring_info": {
+    "per_qubit": {
+      "18": {
+        "r1_z": [
+          "Z8",
+          "Z9"
+        ],
+        "r2_z": [
+          "Z7",
+          "Z11",
+          "Z12",
+          "Z13"
+        ],
+        "r1_x": [
+          "X8",
+          "X13"
+        ]
+      }
+    },
+    "ring1_n_checks": 4,
+    "ring2_z_n_checks": 8,
+    "union_r1_z": [
+      "Z8",
+      "Z9"
+    ],
+    "union_r12_z": [
+      "Z7",
+      "Z8",
+      "Z9",
+      "Z11",
+      "Z12",
+      "Z13"
+    ]
+  },
+  "full_gain_pp": 0.0016953370554073643,
+  "ring1_gain_pp": 0.0010875747147864878,
+  "ring2_z_gain_pp": 0.0016953370554073643,
+  "ring1_pct_of_full": 64.15094339604107,
+  "ring2_z_pct_of_full": 100.0,
+  "gain_by_k_pp": {
+    "ring1": [
+      0.0,
+      0.0,
+      0.001087574714783531
+    ],
+    "ring2_z": [
+      0.0,
+      0.0,
+      0.0016953370553978572
+    ],
+    "thick": [
+      0.0,
+      0.0,
+      0.0016953370553978572
+    ]
+  },
+  "validation": {
+    "direct_fullscan_checks": 848,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 2.220446049250313e-16
+  },
+  "elapsed_seconds": 1271.39
+}

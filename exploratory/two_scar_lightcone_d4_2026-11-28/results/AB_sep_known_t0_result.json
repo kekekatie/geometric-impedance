@@ -1,0 +1,102 @@
+{
+  "mode": "pair_known_t0",
+  "pair": "AB_sep",
+  "patch": "AB_2scar",
+  "regime": "Separated Control",
+  "qubits": [
+    12,
+    18
+  ],
+  "n_qubits": 31,
+  "histories": 3392992,
+  "histories_by_weight": [
+    32,
+    14720,
+    3378240
+  ],
+  "config_stream_sha256": "0258e1b0829f4436be5ed1609c08779c93ae2e34b7b10c0e6dd4d0746b37afb9",
+  "ring_info": {
+    "per_qubit": {
+      "12": {
+        "r1_z": [
+          "Z5",
+          "Z6"
+        ],
+        "r2_z": [
+          "Z3",
+          "Z4",
+          "Z10"
+        ],
+        "r1_x": [
+          "X4",
+          "X10"
+        ]
+      },
+      "18": {
+        "r1_z": [
+          "Z8",
+          "Z9"
+        ],
+        "r2_z": [
+          "Z7",
+          "Z11",
+          "Z12",
+          "Z13"
+        ],
+        "r1_x": [
+          "X8",
+          "X13"
+        ]
+      }
+    },
+    "ring1_n_checks": 8,
+    "ring2_z_n_checks": 15,
+    "union_r1_z": [
+      "Z5",
+      "Z6",
+      "Z8",
+      "Z9"
+    ],
+    "union_r12_z": [
+      "Z3",
+      "Z4",
+      "Z5",
+      "Z6",
+      "Z7",
+      "Z8",
+      "Z9",
+      "Z10",
+      "Z11",
+      "Z12",
+      "Z13"
+    ]
+  },
+  "full_gain_pp": 0.0060936171519587745,
+  "ring1_gain_pp": 0.0037265427727195544,
+  "ring2_z_gain_pp": 0.0057657453629289535,
+  "ring1_pct_of_full": 61.1548556430341,
+  "ring2_z_pct_of_full": 94.6194225719542,
+  "gain_by_k_pp": {
+    "ring1": [
+      0.0,
+      0.0,
+      0.0037265427727141576
+    ],
+    "ring2_z": [
+      0.0,
+      0.0,
+      0.005765745362933279
+    ],
+    "thick": [
+      0.0,
+      0.0,
+      0.006093617151948901
+    ]
+  },
+  "validation": {
+    "direct_fullscan_checks": 848,
+    "direct_fullscan_mismatches": 0,
+    "max_posterior_difference": 2.220446049250313e-16
+  },
+  "elapsed_seconds": 4403.33
+}
